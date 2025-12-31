@@ -2,15 +2,46 @@ import { NextResponse } from "next/server";
 
 export function middleware(req) {
   const path = req.nextUrl.pathname;
+  const token = req.cookies.get("auth")?.value;
 
+  // ✅ ADMIN (unchanged)
   if (path.startsWith("/admin")) {
     return NextResponse.next();
   }
+
+  // 🔒 PROTECT CHECKOUT (ALL variants)
+  if (path.startsWith("/checkout")) {
+    if (!token) {
+      const loginUrl = new URL("/login", req.url);
+      loginUrl.searchParams.set("redirect", "/checkout");
+      return NextResponse.redirect(loginUrl);
+    }
+  }
+
+  return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/checkout/:path*", "/admin/:path*"],
 };
+
+
+
+
+
+// import { NextResponse } from "next/server";
+
+// export function middleware(req) {
+//   const path = req.nextUrl.pathname;
+
+//   if (path.startsWith("/admin")) {
+//     return NextResponse.next();
+//   }
+// }
+
+// export const config = {
+//   matcher: ["/admin/:path*"],
+// };
 
 
 

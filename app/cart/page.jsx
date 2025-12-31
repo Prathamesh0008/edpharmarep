@@ -5,17 +5,67 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCart } from "../components/CartContext";
 import { getLoggedInUser } from "@/lib/auth";
-
-import { ShoppingCart, Trash2, IndianRupee, Package } from "lucide-react";
+import { useState, useEffect } from "react";
+import LoginPopup from "../components/LoginPopup"; // Adjust path as needed
+import { ShoppingCart, Trash2, IndianRupee, Package, LogIn } from "lucide-react";
 
 export default function CartPage() {
   const router = useRouter();
   const { cartItems, updateQty, removeFromCart, totals } = useCart();
+  const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   const hasItems = cartItems.length > 0;
 
+  // Check if user is logged in
+  useEffect(() => {
+    const checkAuth = async () => {
+      try {
+        const user = await getLoggedInUser();
+        setIsUserLoggedIn(!!user);
+      } catch (error) {
+        console.error("Auth check failed:", error);
+        setIsUserLoggedIn(false);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    
+    checkAuth();
+  }, []);
+
+  const handleCheckout = () => {
+    if (!isUserLoggedIn) {
+      setShowLoginPopup(true);
+      return;
+    }
+    router.push("/checkout");
+  };
+
+  // Handle successful login from popup
+  const handleLoginSuccess = (user) => {
+    console.log("Login successful", user);
+    setIsUserLoggedIn(true);
+    setShowLoginPopup(false);
+    // Redirect to checkout after successful login
+    router.push("/checkout");
+  };
+
+  // Close login popup
+  const handleCloseLoginPopup = () => {
+    setShowLoginPopup(false);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#f5f9ff] via-[#edf3ff] to-[#e6eeff] ">
+    <div className="min-h-screen bg-gradient-to-br from-[#f5f9ff] via-[#edf3ff] to-[#e6eeff] relative">
+      {/* Login Popup */}
+      <LoginPopup 
+        isOpen={showLoginPopup}
+        onClose={handleCloseLoginPopup}
+        onLoginSuccess={handleLoginSuccess}
+      />
+      
       <div className="max-w-7xl mx-auto px-4 py-6 md:py-8">
         {/* ===== PAGE TITLE ===== */}
         <div className="flex items-center justify-between gap-3 mb-6 md:mb-8">
@@ -181,15 +231,27 @@ export default function CartPage() {
                     />
                   </div>
 
+                  {/* Login prompt for non-logged in users */}
+                  {!isLoading && !isUserLoggedIn && (
+                    <div className="mb-4 p-3 bg-yellow-50 border border-yellow-100 rounded-lg">
+                      <div className="flex items-center gap-2 text-yellow-800 mb-2">
+                        <LogIn size={16} />
+                        <span className="text-sm font-medium">Login required</span>
+                      </div>
+                      <p className="text-xs text-yellow-700">
+                        Please login to proceed with checkout
+                      </p>
+                      <button
+                        onClick={() => setShowLoginPopup(true)}
+                        className="mt-2 inline-block text-xs font-medium text-[#0A4C89] hover:underline"
+                      >
+                        Click here to login
+                      </button>
+                    </div>
+                  )}
+
                   <button
-                    onClick={() => {
-                      const user = getLoggedInUser();
-                      if (!user) {
-                        alert("Please login to continue checkout");
-                        return;
-                      }
-                      router.push("/checkout");
-                    }}
+                    onClick={handleCheckout}
                     className={[
                       "mt-5 w-full py-3.5 rounded-xl text-sm sm:text-base font-semibold",
                       "bg-gradient-to-r from-[#0A4C89] via-[#0D5FA8] to-[#1B78D1]",
@@ -197,9 +259,16 @@ export default function CartPage() {
                       "hover:shadow-xl hover:shadow-[#0A4C89]/35 hover:translate-y-0.5",
                       "transition-transform duration-150",
                       "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0A4C89]",
+                      isLoading ? "opacity-70 cursor-not-allowed" : "",
                     ].join(" ")}
                   >
-                    Proceed to checkout
+                    {isLoading ? (
+                      "Checking authentication..."
+                    ) : isUserLoggedIn ? (
+                      "Proceed to checkout"
+                    ) : (
+                      "Login to checkout"
+                    )}
                   </button>
 
                   <Link

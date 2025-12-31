@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Menu, X, Download, Search } from "lucide-react";
+import { Menu, X, Download, Search, LogOut } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { useCart } from "./CartContext";
@@ -320,7 +320,7 @@ export default function Navbar() {
               Download PDF
             </a>
 
-            {!username && (
+            {!username ? (
               <button
                 onClick={() => {
                   setMenuOpen(false);
@@ -329,6 +329,25 @@ export default function Navbar() {
                 className="text-blue-600 font-semibold text-left"
               >
                 Log In
+              </button>
+            ) : (
+              <button
+                onClick={async () => {
+                  setMenuOpen(false);
+
+                  await fetch("/api/auth/logout", {
+                    method: "POST",
+                    credentials: "include",
+                  });
+
+                  localStorage.removeItem("bio-user");
+                  setUsername("");
+                  router.push("/");
+                }}
+                className="flex items-center gap-2 text-red-600 font-semibold"
+              >
+                <LogOut size={18} />
+                Logout
               </button>
             )}
           </div>

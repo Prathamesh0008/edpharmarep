@@ -8,9 +8,27 @@ import {
   ArrowRight,
   ClipboardList,
 } from "lucide-react";
+import { useEffect, useState } from "react";
+import { useCart } from "../../components/CartContext"; // Adjust path as needed
 
 export default function OrderSuccessPage() {
   const { orderId } = useParams();
+  const { clearCart } = useCart();
+  const [cartCleared, setCartCleared] = useState(false);
+
+  // Clear the cart when this page loads (order was successful)
+  useEffect(() => {
+    // Only clear cart once when component mounts
+    if (!cartCleared) {
+      clearCart();
+      setCartCleared(true);
+      
+      // Also clear from localStorage to be safe
+      localStorage.removeItem("cart");
+      
+      console.log("Cart cleared after successful order");
+    }
+  }, []); // Empty dependency array - runs only once on mount
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#f5f9ff] via-[#edf3ff] to-[#e6eeff] px-4">
@@ -58,7 +76,7 @@ export default function OrderSuccessPage() {
 
         {/* FOOTER NOTE */}
         <p className="mt-6 text-[11px] sm:text-xs text-gray-500">
-          You can track your order status anytime from the “My Orders” section.
+          You can track your order status anytime from the "My Orders" section.
         </p>
       </div>
     </div>

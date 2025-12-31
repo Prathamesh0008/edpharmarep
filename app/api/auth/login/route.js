@@ -38,18 +38,23 @@ export async function POST(req) {
     const response = NextResponse.json({
       success: true,
       user: {
+        _id: user._id.toString(),  // ✅ ADD THIS
+        id: user._id.toString(),   // ✅ ADD THIS (for compatibility)
+        username: user.username,   // ✅ ADD THIS
         email: user.email,
         role: user.role,
       },
     });
 
-    // ✅ CORRECT COOKIE SETTING
-    response.cookies.set("auth", token, {
+    // ✅ IMPROVED COOKIE SETTINGS
+    response.cookies.set({
+      name: "auth",
+      value: token,
       httpOnly: true,
-      secure: false,
+      secure: process.env.NODE_ENV === "production", // Auto secure in production
       sameSite: "lax",
       path: "/",
-      maxAge: 60 * 60 * 24 * 7,
+      maxAge: 60 * 60 * 24 * 7, // 7 days
     });
 
     return response;
@@ -61,7 +66,6 @@ export async function POST(req) {
     );
   }
 }
-
 
 
 

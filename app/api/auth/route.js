@@ -1,28 +1,27 @@
 import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { jwtVerify } from "jose";
 import dbConnect from "@/lib/db";
 import User from "../../models/User";
 
-
-/* =======================
-   GET → FETCH PROFILE
-   /api/auth?email=abc@gmail.com
-======================= */
-export async function GET(req) {
+export async function GET() {
   try {
-    await dbConnect();
-
-    const { searchParams } = new URL(req.url);
-    const email = searchParams.get("email");
-
-    if (!email) {
+    const token = cookies().get("auth")?.value;
+    if (!token) {
       return NextResponse.json(
-        { success: false, message: "Email required" },
-        { status: 400 }
+        { success: false, message: "Unauthorized" },
+        { status: 401 }
       );
     }
 
-    const user = await User.findOne({ email }).select("-password");
+    const { payload } = await jwtVerify(
+      token,
+      new TextEncoder().encode(process.env.JWT_SECRET)
+    );
 
+    await dbConnect();
+
+    const user = await User.findById(payload.id).select("-password");
     if (!user) {
       return NextResponse.json(
         { success: false, message: "User not found" },
@@ -43,20 +42,30 @@ export async function GET(req) {
       },
     });
   } catch (err) {
-    console.error("GET /api/auth error:", err);
     return NextResponse.json(
-      { success: false, message: "Server error" },
-      { status: 500 }
+      { success: false, message: "Session expired" },
+      { status: 401 }
     );
   }
 }
 
+
 export async function PUT(req) {
   try {
-    await dbConnect();
+    const token = cookies().get("auth")?.value;
+    if (!token) {
+      return NextResponse.json(
+        { success: false, message: "Unauthorized" },
+        { status: 401 }
+      );
+    }
+
+    const { payload } = await jwtVerify(
+      token,
+      new TextEncoder().encode(process.env.JWT_SECRET)
+    );
 
     const {
-      email,
       username,
       street,
       city,
@@ -65,34 +74,18 @@ export async function PUT(req) {
       gender,
     } = await req.json();
 
-    if (!email) {
-      return NextResponse.json(
-        { success: false, message: "Email required" },
-        { status: 400 }
-      );
-    }
+    await dbConnect();
 
-    const updatedUser = await User.findOneAndUpdate(
-      { email }, // ✅ EMAIL used
+    const updatedUser = await User.findByIdAndUpdate(
+      payload.id,
       {
         username,
         mobile,
         gender,
-        address: {
-          street: street || "",
-          city: city || "",
-          pincode: pincode || "",
-        },
+        address: { street, city, pincode },
       },
       { new: true }
     ).select("-password");
-
-    if (!updatedUser) {
-      return NextResponse.json(
-        { success: false, message: "User not found" },
-        { status: 404 }
-      );
-    }
 
     return NextResponse.json({
       success: true,
@@ -106,11 +99,10 @@ export async function PUT(req) {
         pincode: updatedUser.address?.pincode || "",
       },
     });
-  } catch (err) {
-    console.error("PUT /api/auth error:", err);
+  } catch {
     return NextResponse.json(
-      { success: false, message: "Server error" },
-      { status: 500 }
+      { success: false, message: "Session expired" },
+      { status: 401 }
     );
   }
 }

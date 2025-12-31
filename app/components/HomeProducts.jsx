@@ -110,14 +110,14 @@ export default function HomeProducts({
               style={{ borderColor: "rgba(10,42,115,0.15)" }}
             >
               {/* IMAGE */}
-              <div className="relative h-44 rounded-t-3xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden">
-                <Image
-                  src={p.image}
-                  alt={p.name}
-                  fill
-                  className="object-contain p-6 transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+              <div className="relative h-80 md:h-96 rounded-t-3xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden">
+  <Image
+    src={p.image}
+    alt={p.name}
+    fill
+    className="object-contain p-4 transition-transform duration-300 group-hover:scale-105"
+  />
+</div>
 
               {/* CONTENT */}
               <div className="p-5 flex flex-col gap-4">
