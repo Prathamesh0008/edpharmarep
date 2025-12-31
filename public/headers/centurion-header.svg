@@ -1,0 +1,24 @@
+<svg width="1400" height="80" viewBox="0 0 1400 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="centurionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4C29A"/>
+      <stop offset="100%" stop-color="#BFA87B"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Center strip -->
+  <rect x="70" y="10" width="1260" height="60" fill="url(#centurionGradient)"/>
+
+  <!-- Left vertical stripes -->
+  <rect x="10" y="10" width="6" height="60" fill="#F3E6C4"/>
+  <rect x="20" y="10" width="6" height="60" fill="#F3E6C4"/>
+  <rect x="30" y="10" width="6" height="60" fill="#F3E6C4"/>
+
+  <!-- Right vertical stripes -->
+  <rect x="1360" y="10" width="6" height="60" fill="#F3E6C4"/>
+  <rect x="1370" y="10" width="6" height="60" fill="#F3E6C4"/>
+  <rect x="1380" y="10" width="6" height="60" fill="#F3E6C4"/>
+
+  <!-- Soft diagonal highlight -->
+  <line x1="220" y1="8" x2="620" y2="72" stroke="#EBDFC1" stroke-width="2" opacity="0.6"/>
+</svg>

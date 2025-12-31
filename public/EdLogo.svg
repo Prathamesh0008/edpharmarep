@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 570.62 157.65">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        font-family: BankGothicBT-Medium, 'BankGothic Md BT';
+        font-size: 90px;
+        font-weight: 500;
+        letter-spacing: -.02em;
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="22.88" y1="81.31" x2="71.44" y2="81.31" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#353893"/>
+      <stop offset="1" stop-color="#5a9fd8"/>
+    </linearGradient>
+  </defs>
+  <polygon class="cls-3" points="71.44 25.63 71.44 43.35 42.17 43.35 41.61 71.27 65.39 71.27 65.39 89.1 41.61 89.1 41.61 119.16 71.44 119.16 71.44 136.99 22.88 136.99 22.88 25.63 71.44 25.63"/>
+  <path d="M70.42,25.5h37.58c1.95.5,6.69,1.99,10.74,6.4,4.78,5.2,5.55,11.12,5.71,13.02.23,22.92.46,45.85.69,68.77-.02,2.07-.36,8.68-5.26,14.74-5.96,7.38-14.29,8.49-15.99,8.68h-33.47V25.5Z"/>
+  <path class="cls-1" d="M89.62,43.18v76.26h13.12c.76-.7,1.83-1.84,2.69-3.48,1.7-3.23,1.5-6.39,1.46-7.4-.23-4.96-.1-27.94,0-59.66-.15-.63-.66-2.44-2.36-3.93-1.62-1.42-3.38-1.72-4.04-1.79h-10.88Z"/>
+  <text class="cls-2" transform="translate(125.14 106.43)"><tspan x="0" y="0">PHARMA</tspan></text>
+</svg>
