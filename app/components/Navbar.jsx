@@ -21,7 +21,7 @@ export default function Navbar() {
   }, []);
 
   const router = useRouter();
-  const { cartItems } = useCart();
+  const { cartItems, getCartBadgeCount } = useCart(); // Use getCartBadgeCount
   const searchRef = useRef(null);
 
   /* ---------- STATES ---------- */
@@ -34,7 +34,7 @@ export default function Navbar() {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
 
-  const cartCount = cartItems.reduce((s, i) => s + i.qty, 0);
+  const cartCount = getCartBadgeCount(); // This now shows 1, 2, 3...
 
   /* ---------- HANDLERS ---------- */
   const handleLoginSuccess = (user) => {
@@ -49,6 +49,7 @@ export default function Navbar() {
     setProfileMenuOpen(false);
     router.push("/");
   };
+  
   const handleSearchChange = (value) => {
     setQuery(value);
 
@@ -102,37 +103,6 @@ export default function Navbar() {
             <NavLink href="/contact">Contact</NavLink>
             <NavLink href="/orders">My Orders</NavLink>
 
-            {/* ================= SEARCH (DESKTOP) ================= */}
-            {/* <div className="relative">
-              {!searchOpen && (
-                <button
-                  onClick={() => setSearchOpen(true)}
-                  className="p-2 rounded-full hover:bg-blue-50 transition"
-                >
-                  <Search size={20} className="text-blue-700" />
-                </button>
-              )}
-
-              {searchOpen && (
-                <div className="absolute right-0 top-1/2 -translate-y-1/2 flex items-center bg-white border border-gray-200 rounded-full shadow-md px-3 py-1.5 w-[280px]">
-                  <Search size={16} className="text-gray-400 mr-2" />
-
-                  <input
-                    autoFocus
-                    type="text"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    placeholder="Search products..."
-                    className="flex-1 text-sm outline-none"
-                  />
-
-                  <button onClick={() => setSearchOpen(false)}>
-                    <X size={16} className="text-gray-400 hover:text-black" />
-                  </button>
-                </div>
-              )}
-            </div> */}
-
             {/* ✅ DOWNLOAD PDF BUTTON */}
             <a
               href="/ED.pdf"
@@ -150,7 +120,7 @@ export default function Navbar() {
             >
               🛒
               {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-2 py-0.5">
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
@@ -204,7 +174,6 @@ export default function Navbar() {
           </div>
 
           {/* ================= MOBILE ================= */}
-
           <div className="flex items-center gap-4 md:hidden">
             <button
               onClick={() => setMobileSearchOpen((p) => !p)}
@@ -219,7 +188,7 @@ export default function Navbar() {
             >
               🛒
               {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] rounded-full px-2 py-0.5">
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   {cartCount}
                 </span>
               )}
@@ -233,7 +202,6 @@ export default function Navbar() {
       </nav>
 
       {/* ================= MOBILE SEARCH ================= */}
-      {/* ================= MOBILE SEARCH BAR — BELOW NAVBAR ================= */}
       {mobileSearchOpen && (
         <div className="md:hidden bg-white border-b border-gray-200 px-4 py-3 relative z-[998]">
           <div ref={searchRef} className="relative">

@@ -9,6 +9,7 @@ import Testimonials from "../app/components/Testimonials";
 import Compliance from "../app/components/Compliance";
 import HomeProducts from "../app/components/HomeProducts";
 import { useState,useEffect } from "react";
+import ScrollProgressLine from "../app/components/ScrollProgressLine"; 
   
 
 export default function Home() {
@@ -18,6 +19,9 @@ export default function Home() {
   return (
     <>
       <Navbar  />
+
+      {/* Add ScrollProgressLine here - positioned right after Navbar */}
+      <ScrollProgressLine />
 
       {/* HERO */}
       
@@ -90,7 +94,7 @@ export default function Home() {
       </section>
       <Compliance />
 <Testimonials />
-      <Footer />
+      
       
     </>
   );

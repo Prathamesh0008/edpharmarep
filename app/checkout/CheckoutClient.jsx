@@ -58,19 +58,20 @@ const getUserAddressKey = (userId) => {
 // Function to save address to localStorage (user-specific)
 const saveAddressToUser = (form, userId) => {
   if (!userId) return;
-  
+
   try {
     const key = getUserAddressKey(userId);
     const addresses = getUserAddresses(userId);
-    
+
     // Check if address already exists
-    const existingIndex = addresses.findIndex(addr => 
-      addr.fullName === form.fullName &&
-      addr.phone === form.phone &&
-      addr.address === form.address &&
-      addr.pincode === form.pincode
+    const existingIndex = addresses.findIndex(
+      (addr) =>
+        addr.fullName === form.fullName &&
+        addr.phone === form.phone &&
+        addr.address === form.address &&
+        addr.pincode === form.pincode
     );
-    
+
     // If it's a new address, add it (limit to 3 addresses)
     if (existingIndex === -1) {
       addresses.unshift(form);
@@ -86,7 +87,7 @@ const saveAddressToUser = (form, userId) => {
 // Function to get saved addresses for a specific user
 const getUserAddresses = (userId) => {
   if (!userId) return [];
-  
+
   try {
     const key = getUserAddressKey(userId);
     const addressesStr = localStorage.getItem(key);
@@ -100,7 +101,7 @@ const getUserAddresses = (userId) => {
 // Function to delete a saved address for a specific user
 const deleteUserAddress = (userId, index) => {
   if (!userId) return [];
-  
+
   try {
     const key = getUserAddressKey(userId);
     const addresses = getUserAddresses(userId);
@@ -137,10 +138,10 @@ export default function CheckoutClient() {
     const loadUserAndAddresses = async () => {
       try {
         setIsLoading(true);
-        
+
         // Get current logged in user
         const user = getLoggedInUser();
-        
+
         if (!user || !user._id) {
           // User is not logged in - show alert and redirect
           setTimeout(() => {
@@ -149,31 +150,33 @@ export default function CheckoutClient() {
           }, 100);
           return;
         }
-        
+
         console.log("Current user:", user);
         setCurrentUser(user);
-        
+
         // Load user-specific addresses
         const addresses = getUserAddresses(user._id);
         setSavedAddresses(addresses);
-        
+
         // If there are saved addresses, pre-fill with the most recent one
         if (addresses.length > 0) {
           setForm(addresses[0]);
           setShowAddressList(true);
         }
-        
       } catch (error) {
         console.error("Error loading user/addresses:", error);
       } finally {
         setIsLoading(false);
       }
     };
-    
+
     loadUserAndAddresses();
   }, []);
 
-  const isDisabled = validateForm(form, cartItems, payment) !== null || isLoading || !currentUser;
+  const isDisabled =
+    validateForm(form, cartItems, payment) !== null ||
+    isLoading ||
+    !currentUser;
 
   const onChange = (k) => (e) =>
     setForm((p) => ({ ...p, [k]: e.target.value }));
@@ -212,10 +215,10 @@ export default function CheckoutClient() {
   // Function to delete a saved address
   const handleDeleteAddress = (index) => {
     if (!currentUser?._id) return;
-    
+
     const newAddresses = deleteUserAddress(currentUser._id, index);
     setSavedAddresses(newAddresses);
-    
+
     // If we deleted the current address, clear the form
     if (JSON.stringify(form) === JSON.stringify(savedAddresses[index])) {
       setForm({
@@ -236,13 +239,13 @@ export default function CheckoutClient() {
       alert("Please login to save addresses");
       return;
     }
-    
+
     saveAddressToUser(form, currentUser._id);
-    
+
     // Refresh addresses list
     const updatedAddresses = getUserAddresses(currentUser._id);
     setSavedAddresses(updatedAddresses);
-    
+
     // Show success message
     alert("Address saved successfully!");
   };
@@ -295,7 +298,7 @@ export default function CheckoutClient() {
         return;
       }
 
-    //   clearCart();
+         clearCart();
       window.location.href = `/order-success/${data.orderId}`;
     } catch (error) {
       console.error("Order placement error:", error);
@@ -385,10 +388,11 @@ export default function CheckoutClient() {
                         onClick={() => setShowAddressList(!showAddressList)}
                         className="text-xs text-[#0A4C89] hover:text-[#0D5FA8] font-medium"
                       >
-                        {showAddressList ? "Hide" : "Show"} ({savedAddresses.length})
+                        {showAddressList ? "Hide" : "Show"} (
+                        {savedAddresses.length})
                       </button>
                     </div>
-                    
+
                     {showAddressList && (
                       <div className="space-y-3 mb-4">
                         {savedAddresses.map((address, index) => (
@@ -413,7 +417,8 @@ export default function CheckoutClient() {
                                 {address.address}
                               </p>
                               <p className="text-xs text-gray-500">
-                                {address.city}, {address.pincode}, {address.country}
+                                {address.city}, {address.pincode},{" "}
+                                {address.country}
                               </p>
                             </div>
                             <div className="flex gap-2 ml-2">
@@ -512,18 +517,20 @@ export default function CheckoutClient() {
                     onClick={handleSaveAddress}
                     disabled={!currentUser}
                     className={`text-xs px-3 py-1.5 rounded-lg font-medium ${
-                      currentUser 
-                        ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200" 
+                      currentUser
+                        ? "bg-emerald-100 text-emerald-700 hover:bg-emerald-200"
                         : "bg-gray-100 text-gray-400 cursor-not-allowed"
                     }`}
                   >
                     Save Address
                   </button>
                 </div>
-                
+
                 {currentUser && (
                   <div className="mt-2 text-xs text-gray-500">
-                    <span className="font-medium">Note:</span> Addresses are saved only for your account and won't be visible to other users.
+                    <span className="font-medium">Note:</span> Addresses are
+                    saved only for your account and won't be visible to other
+                    users.
                   </div>
                 )}
               </Card>
@@ -605,8 +612,10 @@ export default function CheckoutClient() {
                           <p className="font-semibold text-slate-800 truncate">
                             {i.name}
                           </p>
+                          {/* UPDATE THIS LINE: Show bulk quantity */}
                           <p className="mt-0.5 text-xs text-gray-500">
-                            Qty: {i.qty}
+                            Qty: {i.qty} units ({Math.ceil(i.qty / 50)} batch
+                            {Math.ceil(i.qty / 50) > 1 ? "es" : ""})
                           </p>
                         </div>
                         <p className="font-semibold text-slate-900">
@@ -618,7 +627,12 @@ export default function CheckoutClient() {
 
                   <div className="mt-5 border-t border-slate-100 pt-4 space-y-2 text-sm">
                     <Row label="Items" value={totals.totalDistinct} />
-                    <Row label="Total quantity" value={totals.totalQty} />
+                    {/* ADD THESE TWO LINES: */}
+                    <Row label="Total Units" value={totals.totalQty} />
+                    <Row
+                      label="Total Batches"
+                      value={`${totals.totalBulkUnits}`}
+                    />
                     <Row
                       label="Total amount"
                       value={`₹${totals.totalPrice}`}
