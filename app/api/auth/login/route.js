@@ -1,15 +1,24 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/db";
-import User from "@/app/models/User";
+import User from "@/app/models/User"; // ✅ CORRECT PATH
 import jwt from "jsonwebtoken";
 
 export async function POST(req) {
   try {
     const { email, password } = await req.json();
+
+    if (!email || !password) {
+      return NextResponse.json(
+        { success: false, message: "Email and password are required" },
+        { status: 400 }
+      );
+    }
+
     await dbConnect();
 
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }).lean();
+
     if (!user) {
       return NextResponse.json(
         { success: false, message: "Invalid credentials" },
@@ -18,6 +27,7 @@ export async function POST(req) {
     }
 
     const match = await bcrypt.compare(password, user.password);
+
     if (!match) {
       return NextResponse.json(
         { success: false, message: "Invalid credentials" },
@@ -29,7 +39,7 @@ export async function POST(req) {
       {
         id: user._id.toString(),
         email: user.email,
-        role: user.role,
+        role: user.role || "user",
       },
       process.env.JWT_SECRET,
       { expiresIn: "7d" }
@@ -38,22 +48,25 @@ export async function POST(req) {
     const response = NextResponse.json({
       success: true,
       user: {
-        _id: user._id.toString(),  // ✅ ADD THIS
-        id: user._id.toString(),   // ✅ ADD THIS (for compatibility)
-        username: user.username,   // ✅ ADD THIS
+        _id: user._id.toString(),
+        id: user._id.toString(),
+        username:
+          user.username ||
+          user.name ||
+          user.fullName ||
+          user.email.split("@")[0],
         email: user.email,
-        role: user.role,
+        role: user.role || "user",
       },
     });
 
-    // ✅ IMPROVED COOKIE SETTINGS
     response.cookies.set({
       name: "auth",
       value: token,
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production", // Auto secure in production
+      secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      path: "/",
+      path: "/",                // 🔥 REQUIRED
       maxAge: 60 * 60 * 24 * 7, // 7 days
     });
 
@@ -66,6 +79,8 @@ export async function POST(req) {
     );
   }
 }
+
+
 
 
 

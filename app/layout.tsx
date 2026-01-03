@@ -53,7 +53,7 @@ export default function RootLayout({
   <div
     className="fixed inset-0 -z-10 opacity-100 "
     style={{
-      backgroundImage: "url('/bg/banner.svg')",
+      backgroundImage: "url('/bg/ED-banner (2).svg')",//ed_pharma\public\bg\ED-banner (2).svg
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center",
       backgroundSize: "cover",

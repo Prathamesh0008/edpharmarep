@@ -21,6 +21,9 @@ import {
   Printer,
   ChevronRight,
   Sparkles,
+  AlertTriangle,
+  Ban,
+  X,
 } from "lucide-react";
 import Image from "next/image";
 
@@ -89,12 +92,12 @@ function statusMeta(status) {
       border: "border-green-200",
       glow: "shadow-[0_0_20px_rgba(34,197,94,0.1)]",
     };
-  if (s.includes("cancel"))
+  if (s.includes("cancel") || s.includes("reject"))
     return {
-      label: "Cancelled",
-      icon: <XCircle className="w-4 h-4" />,
+      label: "Rejected",
+      icon: <X className="w-4 h-4" />, // Changed to X icon
       color: "text-rose-600",
-      bg: "bg-gradient-to-r from-rose-50/80 to-pink-50/80",
+      bg: "bg-gradient-to-r from-rose-50/80 to-red-50/80",
       border: "border-rose-200",
       glow: "shadow-[0_0_20px_rgba(244,63,94,0.1)]",
     };
@@ -370,6 +373,10 @@ export default function OrderDetailsPage() {
   const meta = statusMeta(order.status);
   const totalItems =
     order.items?.reduce((sum, item) => sum + (item.qty || 0), 0) || 0;
+    
+  // Check if order is rejected
+  const isRejected = order.status?.toLowerCase().includes("cancel") || 
+                    order.status?.toLowerCase().includes("reject");
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-6 pb-20">
@@ -471,115 +478,219 @@ export default function OrderDetailsPage() {
           </div>
         </div>
 
-        {/* Order Timeline Progress */}
-        <div className="bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl border border-slate-200/50 rounded-2xl p-6 mb-8 shadow-lg shadow-blue-500/5">
-          <h2 className="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-2">
-            <Clock className="w-5 h-5 text-blue-600" />
-            Order Progress
-          </h2>
+        {/* Order Progress / Rejected State */}
+        {isRejected ? (
+          /* REJECTED ORDER PROGRESS BAR */
+          <div className="bg-gradient-to-br from-rose to-red backdrop-blur-xl border border-rose-200/50 rounded-2xl p-6 mb-8 shadow-lg shadow-rose-500/10">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-3">
+                <div className="p-2 bg-gradient-to-br from-rose-100 to-rose-50 rounded-xl">
+                  <AlertTriangle className="w-5 h-5 text-rose-600" />
+                </div>
+                <h2 className="text-lg font-semibold text-rose-900">
+                  Order Rejected
+                </h2>
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-xs font-medium bg-rose-600 text-white px-3 py-1.5 rounded-full">
+                <Ban className="w-3.5 h-3.5" />
+                Cancelled
+              </span>
+            </div>
 
-          <div className="relative">
-            {/* Progress line */}
-            <div className="absolute left-0 right-0 top-4 h-1 bg-slate-200"></div>
-            <div
-              className={`absolute left-0 top-4 h-1 ${meta.color.replace(
-                "text-",
-                "bg-"
-              )} transition-all duration-1000`}
-              style={{
-                width:
-                  order.status === "Pending"
-                    ? "25%"
-                    : order.status === "Processing"
-                    ? "50%"
-                    : order.status === "Shipped"
-                    ? "75%"
-                    : "100%",
-              }}
-            ></div>
+            {/* Rejected Flow */}
+            <div className="relative">
+              {/* Red progress line */}
+              <div className="absolute left-0 right-0 top-4 h-1 bg-rose-200/50"></div>
+              <div className="absolute left-0 top-4 h-1 bg-gradient-to-r from-rose-500 to-rose-600 transition-all duration-1000" style={{ width: "50%" }}></div>
 
-            <div className="flex justify-between relative z-10">
-              {["Ordered", "Processing", "Shipped", "Delivered"].map(
-                (step, index) => {
-                  const isActive =
-                    step === "Ordered" ||
-                    (step === "Processing" &&
-                      ["Processing", "Shipped", "Delivered"].includes(
-                        order.status
-                      )) ||
-                    (step === "Shipped" &&
-                      ["Shipped", "Delivered"].includes(order.status)) ||
-                    (step === "Delivered" && order.status === "Delivered");
-
-                  const isCurrent =
-                    (step === "Ordered" && order.status === "Pending") ||
-                    (step === "Processing" && order.status === "Processing") ||
-                    (step === "Shipped" && order.status === "Shipped") ||
-                    (step === "Delivered" && order.status === "Delivered");
+              <div className="flex justify-between relative z-10">
+                {["Order Placed", "Review", "Rejected"].map((step, index) => {
+                  const isActive = step === "Order Placed" || step === "Review" || step === "Rejected";
+                  const isCurrent = step === "Rejected";
+                  const isRedStep = step === "Rejected";
 
                   return (
                     <div
                       key={step}
-                      className="flex flex-col items-center text-center w-20"
+                      className="flex flex-col items-center text-center w-24"
                     >
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center mb-2 ${
-                          isActive
-                            ? "bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-lg"
-                            : "bg-slate-200 text-slate-400"
-                        } ${isCurrent ? "ring-4 ring-blue-200" : ""}`}
+                        className={`
+                          w-10 h-10 rounded-full flex items-center justify-center mb-3
+                          ${isRedStep 
+                            ? "bg-gradient-to-br from-rose-500 to-rose-600 text-white shadow-lg shadow-rose-500/30" 
+                            : isActive 
+                              ? "bg-gradient-to-br from-rose-400 to-rose-500 text-white shadow-md"
+                              : "bg-rose-200 text-rose-400"
+                          }
+                          ${isCurrent ? "ring-4 ring-rose-200/50 animate-pulse" : ""}
+                        `}
                       >
-                        {isActive ? "✓" : index + 1}
+                        {isRedStep ? (
+                          <X className="w-5 h-5" />
+                        ) : isActive ? (
+                          "✓"
+                        ) : (
+                          index + 1
+                        )}
                       </div>
                       <span
                         className={`text-xs font-medium ${
-                          isActive ? "text-slate-900" : "text-slate-400"
+                          isActive ? "text-rose-900" : "text-rose-400"
                         }`}
                       >
                         {step}
                       </span>
                       {isCurrent && (
-                        <span className="text-xs text-blue-600 font-medium mt-1 animate-pulse">
-                          Current
+                        <span className="text-xs text-rose-600 font-medium mt-1 animate-pulse">
+                          Order Stopped
                         </span>
                       )}
                     </div>
                   );
-                }
-              )}
+                })}
+              </div>
             </div>
-          </div>
 
-          {/* Estimated Delivery */}
-          <div className="mt-6 p-4 bg-gradient-to-r from-blue-50/50 to-cyan-50/30 rounded-xl border border-blue-100/50">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <Truck className="w-5 h-5 text-blue-600" />
-                <div>
-                  <p className="font-medium text-slate-900">
-                    Estimated Delivery
+            {/* Rejection Message */}
+            <div className="mt-8 p-5 bg-gradient-to-r from-rose to-red-50/40 rounded-xl border border-rose-200/50">
+              <div className="flex items-start gap-4">
+                <XCircle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-0.5" />
+                <div className="flex-1">
+                  <h3 className="font-semibold text-rose-900 mb-2">Order Cannot Be Processed</h3>
+                  <p className="text-sm text-rose-700 leading-relaxed">
+                    This order has been rejected and will not be processed further. 
+                    {order.paymentMethod === "cod" 
+                      ? " No payment was required since this was a Cash on Delivery order."
+                      : " If any payment was made, it will be refunded within 5-7 business days."
+                    }
                   </p>
-                  <p className="text-sm text-slate-600">
-                    {order.status === "Delivered"
-                      ? "Delivered on "
-                      : "Expected by "}
-                    <span className="font-medium">
-                      {formatShortDate(
-                        new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
-                      )}
-                    </span>
-                  </p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <button className="text-sm font-medium text-rose-700 hover:text-rose-800 bg-white/50 hover:bg-white/70 px-4 py-2 rounded-lg border border-rose-200 transition-all duration-200">
+                      Contact Support
+                    </button>
+                    <Link
+                      href="/products"
+                      className="text-sm font-medium text-white bg-gradient-to-r from-rose-600 to-red-500 hover:from-rose-600 hover:to-red-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
+                    >
+                      Shop Again
+                    </Link>
+                  </div>
                 </div>
               </div>
-              {order.status === "Delivered" && (
-                <div className="flex items-center gap-2 text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full">
-                  <CheckCircle className="w-4 h-4" />
-                  <span className="text-sm font-medium">Delivered</span>
-                </div>
-              )}
             </div>
           </div>
-        </div>
+        ) : (
+          /* NORMAL ORDER PROGRESS BAR */
+          <div className="bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl border border-slate-200/50 rounded-2xl p-6 mb-8 shadow-lg shadow-blue-500/5">
+            <h2 className="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-2">
+              <Clock className="w-5 h-5 text-blue-600" />
+              Order Progress
+            </h2>
+
+            <div className="relative">
+              {/* Progress line */}
+              <div className="absolute left-0 right-0 top-4 h-1 bg-slate-200"></div>
+              <div
+                className={`absolute left-0 top-4 h-1 ${meta.color.replace(
+                  "text-",
+                  "bg-"
+                )} transition-all duration-1000`}
+                style={{
+                  width:
+                    order.status === "Pending"
+                      ? "25%"
+                      : order.status === "Processing"
+                      ? "50%"
+                      : order.status === "Shipped"
+                      ? "75%"
+                      : "100%",
+                }}
+              ></div>
+
+              <div className="flex justify-between relative z-10">
+                {["Ordered", "Processing", "Shipped", "Delivered"].map(
+                  (step, index) => {
+                    const isActive =
+                      step === "Ordered" ||
+                      (step === "Processing" &&
+                        ["Processing", "Shipped", "Delivered"].includes(
+                          order.status
+                        )) ||
+                      (step === "Shipped" &&
+                        ["Shipped", "Delivered"].includes(order.status)) ||
+                      (step === "Delivered" && order.status === "Delivered");
+
+                    const isCurrent =
+                      (step === "Ordered" && order.status === "Pending") ||
+                      (step === "Processing" && order.status === "Processing") ||
+                      (step === "Shipped" && order.status === "Shipped") ||
+                      (step === "Delivered" && order.status === "Delivered");
+
+                    return (
+                      <div
+                        key={step}
+                        className="flex flex-col items-center text-center w-20"
+                      >
+                        <div
+                          className={`w-8 h-8 rounded-full flex items-center justify-center mb-2 ${
+                            isActive
+                              ? "bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-lg"
+                              : "bg-slate-200 text-slate-400"
+                          } ${isCurrent ? "ring-4 ring-blue-200" : ""}`}
+                        >
+                          {isActive ? "✓" : index + 1}
+                        </div>
+                        <span
+                          className={`text-xs font-medium ${
+                            isActive ? "text-slate-900" : "text-slate-400"
+                          }`}
+                        >
+                          {step}
+                        </span>
+                        {isCurrent && (
+                          <span className="text-xs text-blue-600 font-medium mt-1 animate-pulse">
+                            Current
+                          </span>
+                        )}
+                      </div>
+                    );
+                  }
+                )}
+              </div>
+            </div>
+
+            {/* Estimated Delivery */}
+            <div className="mt-6 p-4 bg-gradient-to-r from-blue-50/50 to-cyan-50/30 rounded-xl border border-blue-100/50">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <Truck className="w-5 h-5 text-blue-600" />
+                  <div>
+                    <p className="font-medium text-slate-900">
+                      Estimated Delivery
+                    </p>
+                    <p className="text-sm text-slate-600">
+                      {order.status === "Delivered"
+                        ? "Delivered on "
+                        : "Expected by "}
+                      <span className="font-medium">
+                        {formatShortDate(
+                          new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+                        )}
+                      </span>
+                    </p>
+                  </div>
+                </div>
+                {order.status === "Delivered" && (
+                  <div className="flex items-center gap-2 text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full">
+                    <CheckCircle className="w-4 h-4" />
+                    <span className="text-sm font-medium">Delivered</span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Order Items Section */}
@@ -604,14 +715,22 @@ export default function OrderDetailsPage() {
                     className="group relative bg-gradient-to-r from-white to-slate-50/50 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-5 hover:border-blue-200/70 hover:shadow-md transition-all duration-300 hover:-translate-y-0.5"
                   >
                     {/* Item number badge */}
-                    <div className="absolute -left-2 -top-2 w-7 h-7 bg-gradient-to-br from-blue-500 to-cyan-500 text-white rounded-full flex items-center justify-center text-xs font-bold shadow-lg">
+                    <div className={`absolute -left-2 -top-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shadow-lg ${
+                      isRejected 
+                        ? "bg-gradient-to-br from-rose-500 to-red-500" 
+                        : "bg-gradient-to-br from-blue-500 to-cyan-500"
+                    } text-white`}>
                       {index + 1}
                     </div>
 
                     <div className="flex gap-5">
                       {/* Product Image */}
                       <div className="flex-shrink-0 relative">
-                        <div className="w-20 h-20 rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden shadow-sm group-hover:shadow-md transition-shadow">
+                        <div className={`w-20 h-20 rounded-xl overflow-hidden shadow-sm group-hover:shadow-md transition-shadow ${
+                          isRejected 
+                            ? "bg-gradient-to-br from-rose-100 to-red-100" 
+                            : "bg-gradient-to-br from-slate-100 to-slate-200"
+                        }`}>
                           {i.image ? (
                             <Image
                               src={i.image}
@@ -622,8 +741,12 @@ export default function OrderDetailsPage() {
                               priority={index === 0}
                             />
                           ) : (
-                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100/50 to-indigo-100/50">
-                              <ImageIcon className="w-8 h-8 text-slate-400" />
+                            <div className={`w-full h-full flex items-center justify-center ${
+                              isRejected 
+                                ? "bg-gradient-to-br from-rose-100/50 to-red-100/50" 
+                                : "bg-gradient-to-br from-blue-100/50 to-indigo-100/50"
+                            }`}>
+                              <ImageIcon className={`w-8 h-8 ${isRejected ? 'text-rose-400' : 'text-slate-400'}`} />
                             </div>
                           )}
                         </div>
@@ -638,14 +761,20 @@ export default function OrderDetailsPage() {
                             </h3>
                             <p className="text-xs text-slate-500 mt-2 flex items-center gap-1.5">
                               <span>Quantity:</span>
-                              <span className="font-medium text-slate-700 bg-slate-100 px-2 py-0.5 rounded">
+                              <span className={`font-medium px-2 py-0.5 rounded ${
+                                isRejected 
+                                  ? "bg-rose-100 text-rose-700" 
+                                  : "bg-slate-100 text-slate-700"
+                              }`}>
                                 {i.qty}
                               </span>
                             </p>
                           </div>
 
                           <div className="text-right">
-                            <p className="font-bold text-lg text-slate-900">
+                            <p className={`font-bold text-lg ${
+                              isRejected ? 'text-rose-700' : 'text-slate-900'
+                            }`}>
                               ₹{Number(i.price || 0) * Number(i.qty || 0)}
                             </p>
                             <p className="text-xs text-slate-500">
@@ -666,8 +795,12 @@ export default function OrderDetailsPage() {
             {/* Order Summary */}
             <div className="bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl border border-slate-200/50 rounded-2xl p-7 shadow-lg shadow-blue-500/5">
               <div className="flex items-center gap-3 mb-7">
-                <div className="p-2 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl">
-                  <CreditCard className="w-5 h-5 text-emerald-600" />
+                <div className={`p-2 rounded-xl ${
+                  isRejected 
+                    ? "bg-gradient-to-br from-rose-100 to-rose-50" 
+                    : "bg-gradient-to-br from-emerald-100 to-emerald-50"
+                }`}>
+                  <CreditCard className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-emerald-600'}`} />
                 </div>
                 <h2 className="text-xl font-bold text-slate-900">
                   Order Summary
@@ -677,14 +810,16 @@ export default function OrderDetailsPage() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
                   <span className="text-slate-600">Subtotal</span>
-                  <span className="font-medium text-slate-900">
+                  <span className={`font-medium ${isRejected ? 'text-rose-700' : 'text-slate-900'}`}>
                     ₹{order.totals?.totalPrice ?? 0}
                   </span>
                 </div>
 
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
                   <span className="text-slate-600">Shipping</span>
-                  <span className="font-medium text-emerald-600">FREE</span>
+                  <span className={`font-medium ${isRejected ? 'text-rose-600' : 'text-emerald-600'}`}>
+                    {isRejected ? "N/A" : "FREE"}
+                  </span>
                 </div>
 
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
@@ -698,11 +833,13 @@ export default function OrderDetailsPage() {
                       Total
                     </span>
                     <p className="text-xs text-slate-500">
-                      Inclusive of all taxes
+                      {isRejected ? "Order not processed" : "Inclusive of all taxes"}
                     </p>
                   </div>
                   <div className="text-right">
-                    <span className="font-bold text-2xl text-[#0A4C89]">
+                    <span className={`font-bold text-2xl ${
+                      isRejected ? 'text-rose-700' : 'text-[#0A4C89]'
+                    }`}>
                       ₹{order.totals?.totalPrice ?? 0}
                     </span>
                     <p className="text-xs text-slate-500">
@@ -716,18 +853,26 @@ export default function OrderDetailsPage() {
             {/* Delivery Address */}
             <div className="bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl border border-slate-200/50 rounded-2xl p-7 shadow-lg shadow-blue-500/5">
               <div className="flex items-center gap-3 mb-7">
-                <div className="p-2 bg-gradient-to-br from-violet-100 to-violet-50 rounded-xl">
-                  <MapPin className="w-5 h-5 text-violet-600" />
+                <div className={`p-2 rounded-xl ${
+                  isRejected 
+                    ? "bg-gradient-to-br from-rose-100 to-rose-50" 
+                    : "bg-gradient-to-br from-violet-100 to-violet-50"
+                }`}>
+                  <MapPin className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-violet-600'}`} />
                 </div>
                 <h2 className="text-xl font-bold text-slate-900">
-                  Delivery Address
+                  {isRejected ? "Billing Address" : "Delivery Address"}
                 </h2>
               </div>
 
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-gradient-to-br from-blue-50 to-blue-100/30 rounded-xl">
-                    <User className="w-5 h-5 text-blue-600" />
+                  <div className={`p-3 rounded-xl ${
+                    isRejected 
+                      ? "bg-gradient-to-br from-rose-50 to-rose-100/30" 
+                      : "bg-gradient-to-br from-blue-50 to-blue-100/30"
+                  }`}>
+                    <User className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-blue-600'}`} />
                   </div>
                   <div>
                     <p className="font-semibold text-slate-900 text-lg">
@@ -737,9 +882,13 @@ export default function OrderDetailsPage() {
                   </div>
                 </div>
 
-                <div className="p-5 bg-gradient-to-r from-blue-50/50 to-indigo-50/30 rounded-xl border border-blue-100/50">
+                <div className={`p-5 rounded-xl border ${
+                  isRejected 
+                    ? "bg-gradient-to-r from-rose-50/50 to-red-50/30 border-rose-100/50" 
+                    : "bg-gradient-to-r from-blue-50/50 to-indigo-50/30 border-blue-100/50"
+                }`}>
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 mt-0.5 text-blue-500 flex-shrink-0" />
+                    <MapPin className={`w-5 h-5 mt-0.5 ${isRejected ? 'text-rose-500' : 'text-blue-500'} flex-shrink-0`} />
                     <div>
                       <p className="text-slate-700 font-medium leading-relaxed">
                         {order.address?.address}
@@ -755,9 +904,13 @@ export default function OrderDetailsPage() {
                   </div>
                 </div>
 
-                <div className="p-4 bg-gradient-to-r from-emerald-50/50 to-teal-50/30 rounded-xl border border-emerald-100/50">
+                <div className={`p-4 rounded-xl border ${
+                  isRejected 
+                    ? "bg-gradient-to-r from-rose-50/50 to-red-50/30 border-rose-100/50" 
+                    : "bg-gradient-to-r from-emerald-50/50 to-teal-50/30 border-emerald-100/50"
+                }`}>
                   <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-emerald-500 flex-shrink-0" />
+                    <Phone className={`w-5 h-5 ${isRejected ? 'text-rose-500' : 'text-emerald-500'} flex-shrink-0`} />
                     <div>
                       <span className="font-semibold text-slate-900">
                         {order.address?.phone}
@@ -774,8 +927,12 @@ export default function OrderDetailsPage() {
             {/* Payment Details */}
             <div className="bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl border border-slate-200/50 rounded-2xl p-7 shadow-lg shadow-blue-500/5">
               <div className="flex items-center gap-3 mb-7">
-                <div className="p-2 bg-gradient-to-br from-amber-100 to-amber-50 rounded-xl">
-                  <CreditCard className="w-5 h-5 text-amber-600" />
+                <div className={`p-2 rounded-xl ${
+                  isRejected 
+                    ? "bg-gradient-to-br from-rose-100 to-rose-50" 
+                    : "bg-gradient-to-br from-amber-100 to-amber-50"
+                }`}>
+                  <CreditCard className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-amber-600'}`} />
                 </div>
                 <h2 className="text-xl font-bold text-slate-900">
                   Payment Information
@@ -784,9 +941,13 @@ export default function OrderDetailsPage() {
 
               <div className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="p-4 bg-gradient-to-r from-amber-50/50 to-orange-50/30 rounded-xl border border-amber-100/50">
+                  <div className={`p-4 rounded-xl border ${
+                    isRejected 
+                      ? "bg-gradient-to-r from-rose-50/50 to-red-50/30 border-rose-100/50" 
+                      : "bg-gradient-to-r from-amber-50/50 to-orange-50/30 border-amber-100/50"
+                  }`}>
                     <div className="flex items-center gap-3 mb-2">
-                      <CreditCard className="w-5 h-5 text-amber-600" />
+                      <CreditCard className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-amber-600'}`} />
                       <span className="font-medium text-slate-900">
                         Payment Method
                       </span>
@@ -798,15 +959,33 @@ export default function OrderDetailsPage() {
                     </p>
                   </div>
 
-                  <div className="p-4 bg-gradient-to-r from-emerald-50/50 to-teal-50/30 rounded-xl border border-emerald-100/50">
+                  <div className={`p-4 rounded-xl border ${
+                    isRejected 
+                      ? "bg-gradient-to-r from-rose-50/50 to-red-50/30 border-rose-100/50" 
+                      : "bg-gradient-to-r from-emerald-50/50 to-teal-50/30 border-emerald-100/50"
+                  }`}>
                     <div className="flex items-center gap-3 mb-2">
-                      <CheckCircle className="w-5 h-5 text-emerald-600" />
+                      {isRejected ? (
+                        <XCircle className="w-5 h-5 text-rose-600" />
+                      ) : (
+                        <CheckCircle className="w-5 h-5 text-emerald-600" />
+                      )}
                       <span className="font-medium text-slate-900">
                         Payment Status
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
-                      {order.paymentMethod === "cod" ? (
+                      {isRejected ? (
+                        <>
+                          <XCircle className="w-5 h-5 text-rose-500" />
+                          <span className="text-lg font-semibold text-rose-600">
+                            Cancelled
+                          </span>
+                          <span className="text-sm text-slate-500">
+                            Order rejected
+                          </span>
+                        </>
+                      ) : order.paymentMethod === "cod" ? (
                         <>
                           <Clock className="w-5 h-5 text-amber-500" />
                           <span className="text-lg font-semibold text-amber-600">
@@ -831,7 +1010,7 @@ export default function OrderDetailsPage() {
                   </div>
                 </div>
 
-                {order.paymentMethod === "cod" && (
+                {order.paymentMethod === "cod" && !isRejected && (
                   <div className="p-4 bg-gradient-to-r from-blue-50/50 to-indigo-50/30 rounded-xl border border-blue-100/50">
                     <div className="flex items-center gap-3">
                       <Sparkles className="w-5 h-5 text-blue-600" />
@@ -847,6 +1026,25 @@ export default function OrderDetailsPage() {
                     </div>
                   </div>
                 )}
+
+                {isRejected && (
+                  <div className="p-4 bg-gradient-to-r from-rose-50/50 to-red-50/30 rounded-xl border border-rose-100/50">
+                    <div className="flex items-center gap-3">
+                      <AlertTriangle className="w-5 h-5 text-rose-600" />
+                      <div>
+                        <p className="font-medium text-rose-900">
+                          Payment Note
+                        </p>
+                        <p className="text-sm text-rose-700 mt-1">
+                          {order.paymentMethod === "cod" 
+                            ? "No payment was required for this Cash on Delivery order."
+                            : "Any payment made will be refunded automatically."
+                          }
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -854,26 +1052,59 @@ export default function OrderDetailsPage() {
 
         {/* Customer Support */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 text-white">
+          <div className={`rounded-2xl p-6 text-white ${
+            isRejected 
+              ? "bg-gradient-to-br from-rose-600 to-rose-700" 
+              : "bg-gradient-to-br from-blue-600 to-blue-700"
+          }`}>
             <div className="flex items-center gap-3 mb-4">
               <Phone className="w-6 h-6" />
-              <h3 className="text-lg font-semibold">Call Support</h3>
+              <h3 className="text-lg font-semibold">
+                {isRejected ? "Issue Resolution" : "Call Support"}
+              </h3>
             </div>
-            <p className="text-sm opacity-90 mb-2">24/7 Customer Support</p>
+            <p className="text-sm opacity-90 mb-2">
+              {isRejected ? "Need help with rejected order?" : "24/7 Customer Support"}
+            </p>
             <p className="text-xl font-bold">+91-9876543210</p>
-            <p className="text-xs opacity-80 mt-2">Available 9 AM - 9 PM</p>
+            <p className="text-xs opacity-80 mt-2">
+              {isRejected ? "Fast issue resolution" : "Available 9 AM - 9 PM"}
+            </p>
           </div>
 
-          <div className="bg-gradient-to-br from-emerald-600 to-emerald-700 rounded-2xl p-6 text-white">
+          <div className={`rounded-2xl p-6 text-white ${
+            isRejected 
+              ? "bg-gradient-to-br from-orange-600 to-orange-700" 
+              : "bg-gradient-to-br from-emerald-600 to-emerald-700"
+          }`}>
             <div className="flex items-center gap-3 mb-4">
-              <Package className="w-6 h-6" />
-              <h3 className="text-lg font-semibold">Track Order</h3>
+              {isRejected ? (
+                <Package className="w-6 h-6" />
+              ) : (
+                <Package className="w-6 h-6" />
+              )}
+              <h3 className="text-lg font-semibold">
+                {isRejected ? "Re-order Items" : "Track Order"}
+              </h3>
             </div>
-            <p className="text-sm opacity-90 mb-2">Live Tracking Available</p>
-            <p className="text-lg font-bold">Track #: TRK{order.orderId}</p>
-            <button className="text-xs bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded-lg mt-3 transition-colors">
-              Track Package
-            </button>
+            <p className="text-sm opacity-90 mb-2">
+              {isRejected ? "Quick re-order available" : "Live Tracking Available"}
+            </p>
+            {isRejected ? (
+              <Link
+                href="/products"
+                className="inline-block text-xs bg-white/20 hover:bg-white/30 px-4 py-2.5 rounded-lg mt-2 transition-colors"
+              >
+                Shop Again
+              </Link>
+            ) : (
+              <>
+                <p className="text-lg font-bold">Track #: TRK{order.orderId}</p>
+                <button className="text-xs bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded-lg mt-3 transition-colors">
+                  Track Package
+                </button>
+              </>
+            )}
           </div>
 
           <div className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-6 text-white">

@@ -253,34 +253,7 @@ export default function ProductsPage() {
       {/* Search Input - Full width on mobile */}
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8">
         {/* ✅ Search Input - DESKTOP ONLY */}
-  <div className="hidden md:block w-full">
-    <div className="relative">
-      <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
-        <svg
-          className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
-      </div>
-
-      <input
-        type="text"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder="Search products by name, composition, or description..."
-        className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all"
-        style={{ "--tw-ring-color": theme.primary }}
-      />
-    </div>
-  </div>
+  
 
         {/* Brand Logos at the Top - Made more responsive */}
         <div className="mb-6 sm:mb-8 mt-7">

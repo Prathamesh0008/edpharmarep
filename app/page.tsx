@@ -63,11 +63,11 @@ export default function Home() {
             Featured Products
           </h2>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 -mb-61">
             {products.slice(0, 3).map((product) => (
               <Link
                 key={product.id}
-                href={`/products/${product.slug}`}
+                href={`/product/${product.slug}`}
                 className="bg-white border rounded-xl shadow-sm hover:shadow-md transition"
               >
                 <div className="relative h-48">

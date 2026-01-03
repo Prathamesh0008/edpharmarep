@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation"; // ADD THIS IMPORT
 import { useCart } from "../components/CartContext";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
@@ -115,6 +116,7 @@ const deleteUserAddress = (userId, index) => {
 };
 
 export default function CheckoutClient() {
+  const router = useRouter(); // ADD THIS
   const { cartItems, totals, clearCart } = useCart();
 
   const [payment, setPayment] = useState("cod");
@@ -146,7 +148,7 @@ export default function CheckoutClient() {
           // User is not logged in - show alert and redirect
           setTimeout(() => {
             alert("Please login to continue checkout");
-            window.location.href = "/";
+            router.push("/"); // FIXED: Use router
           }, 100);
           return;
         }
@@ -171,7 +173,7 @@ export default function CheckoutClient() {
     };
 
     loadUserAndAddresses();
-  }, []);
+  }, [router]); // ADD router to dependencies
 
   const isDisabled =
     validateForm(form, cartItems, payment) !== null ||
@@ -256,7 +258,7 @@ export default function CheckoutClient() {
       const user = getLoggedInUser();
       if (!user || !user._id) {
         alert("Please login to continue checkout");
-        window.location.href = "/";
+        router.push("/"); // FIXED: Use router
         return;
       }
 
@@ -271,6 +273,8 @@ export default function CheckoutClient() {
       // Save address to user's localStorage
       saveAddressToUser(form, user._id);
 
+      console.log("Sending order request...");
+      
       const res = await fetch("/api/orders/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -283,14 +287,17 @@ export default function CheckoutClient() {
         }),
       });
 
+      console.log("Response status:", res.status);
+      
       if (res.status === 401) {
         alert("Session expired. Please login again.");
-        window.location.href = "/login";
+        router.push("/login"); // FIXED: Use router
         setIsLoading(false);
         return;
       }
 
       const data = await res.json();
+      console.log("Response data:", data);
 
       if (!res.ok || !data.ok) {
         alert(data.message || "Order failed");
@@ -298,8 +305,19 @@ export default function CheckoutClient() {
         return;
       }
 
-         clearCart();
-      window.location.href = `/order-success/${data.orderId}`;
+      if (!data.orderId) {
+        console.error("No orderId in response:", data);
+        alert("Order created but no order ID returned");
+        setIsLoading(false);
+        return;
+      }
+
+      console.log("Redirecting to order-success with ID:", data.orderId);
+      clearCart();
+      
+      // FIXED: Use router.push for Next.js navigation
+      router.push(`/order-success/${data.orderId}`);
+      
     } catch (error) {
       console.error("Order placement error:", error);
       alert("Network error. Please try again.");
@@ -529,7 +547,7 @@ export default function CheckoutClient() {
                 {currentUser && (
                   <div className="mt-2 text-xs text-gray-500">
                     <span className="font-medium">Note:</span> Addresses are
-                    saved only for your account and won't be visible to other
+                    saved only for your account and {`won't`} be visible to other
                     users.
                   </div>
                 )}
