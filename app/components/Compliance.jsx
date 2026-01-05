@@ -6,7 +6,7 @@ export default function Compliance() {
   const BRAND_BORDER = "rgba(10, 42, 115, 0.15)";
 
   return (
-    <section className="py-20 px-4 md:px-6  fade-up">
+    <section className=" px-4 md:px-6  fade-up">
       {/* Heading */}
       <h2
         className="text-3xl font-bold text-center mb-12"

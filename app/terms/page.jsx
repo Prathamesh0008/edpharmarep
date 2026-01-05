@@ -138,7 +138,7 @@ export default function TermsPage() {
 
   return (
     <div className="relative min-h-screen overflow-hidden text-slate-800 font-sans pt-24">
- <Navbar />
+ {/* <Navbar /> */}
  <ScrollProgressLine/>
       {/* BACKGROUND */}
       <div className="fixed inset-0 -z-10">
@@ -234,7 +234,7 @@ export default function TermsPage() {
         </section>
 
       </div>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

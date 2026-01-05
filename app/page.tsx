@@ -9,6 +9,8 @@ import Testimonials from "../app/components/Testimonials";
 import Compliance from "../app/components/Compliance";
 import HomeProducts from "../app/components/HomeProducts";
 import { useState,useEffect } from "react";
+import ScrollProgressLine from "../app/components/ScrollProgressLine"; 
+import FeaturedProducts from "./components/FeaturedProducts"
   
 
 export default function Home() {
@@ -19,32 +21,48 @@ export default function Home() {
     <>
       <Navbar  />
 
+      {/* Add ScrollProgressLine here - positioned right after Navbar */}
+      <ScrollProgressLine />
+
       {/* HERO */}
       
-<section className="max-w-7xl mx-auto px-6 pt-3  rounded-2xl ">
-  <div className="grid md:grid-cols-2 gap-12 items-center ">
-
+<section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+  <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+    
     {/* LEFT CONTENT */}
-    <div className="backdrop-blur p-2">
-      <h1 className="text-4xl md:text-5xl font-semibold text-[#0A2A73] leading-tight ">
-        Trusted Pharmaceutical Manufacturing & Global Distribution
-      </h1>
+    <div className="relative group">
+      {/* Border gradient fade */}
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-200/30 via-transparent to-transparent rounded-2xl blur opacity-50 group-hover:opacity-70 transition-opacity duration-300 -z-10" />
+      
+      {/* Subtle backdrop with soft edges */}
+      <div className="backdrop-blur-xs bg-white/50 p-6 md:p-8 rounded-2xl border border-blue-100/30 shadow-sm">
+        <div className="relative">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2A73] leading-tight">
+            Trusted Pharmaceutical Manufacturing & Global Distribution
+          </h1>
 
-      <p className="mt-6 text-lg text-slate-600 max-w-xl ">
-        ED Pharma delivers high-quality, GMP-compliant pharmaceutical
-        products across regulated international markets.
-      </p>
+          <p className="mt-6 text-base md:text-lg text-slate-600 max-w-xl">
+            ED Pharma delivers high-quality, GMP-compliant pharmaceutical
+            products across regulated international markets.
+          </p>
 
-      <Link
-        href="/products"
-        className="inline-block mt-8 px-6 py-3 rounded-xl bg-[#0A2A73] text-white font-medium shadow hover:opacity-90 transition"
-      >
-        View Products
-      </Link>
+          <Link
+            href="/products"
+            className="inline-block mt-8 px-6 py-3 rounded-xl bg-[#0A2A73] text-white font-medium shadow hover:shadow-md hover:bg-blue-800 transition-all duration-300"
+          >
+            View Products
+          </Link>
+        </div>
+      </div>
     </div>
 
-    {/* RIGHT IMAGE ROTATOR */}
-    <HeroProductImage />
+    {/* RIGHT IMAGE with soft border glow */}
+    <div className="relative">
+      <div className="" />
+      <div className="">
+        <HeroProductImage />
+      </div>
+    </div>
   </div>
 </section>
 
@@ -52,45 +70,11 @@ export default function Home() {
         activeBrand={activeBrand}
         setActiveBrand={setActiveBrand}
       />
-      {/* PRODUCT PREVIEW */}
-      <section className=" py-20">
-        <div className="max-w-7xl mx-auto px-6 ">
-          <h2 className="text-3xl font-semibold text-[#0A2A73] mb-10 backdrop-blur-lg">
-            Featured Products
-          </h2>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {products.slice(0, 3).map((product) => (
-              <Link
-                key={product.id}
-                href={`/products/${product.slug}`}
-                className="bg-white border rounded-xl shadow-sm hover:shadow-md transition"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={product.image || "/placeholder.jpg"}
-                    alt={product.name || "mc"}
-                    fill
-                    className="object-contain p-4"
-                  />
-                </div>
-
-                <div className="p-5">
-                  <h3 className="font-semibold text-lg text-[#0A2A73]">
-                    {product.name}
-                  </h3>
-                  <p className="text-sm text-slate-600 mt-1">
-                    {product.dosage} · {product.form}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeaturedProducts/>
+     
       <Compliance />
 <Testimonials />
-      <Footer />
+      
       
     </>
   );

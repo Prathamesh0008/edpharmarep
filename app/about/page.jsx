@@ -18,11 +18,11 @@ export default function AboutPage() {
 
       }}
     >
-      <Navbar/>
+      {/* <Navbar/> */}
       <ScrollProgressLIne/>
       <Offer/>
       {/* Hero section */}
-      <section className="mx-auto flex max-w-6xl flex-col gap-12 px-4 pb-16 -mt-100 pt-90 lg:flex-row lg:items-center">
+      <section className="mx-auto flex max-w-6xl flex-col gap-12 px-4  pb-16  pt-10 lg:flex-row lg:items-center">
 
         {/* Text column */}
         <div className="max-w-xl">
@@ -304,7 +304,7 @@ export default function AboutPage() {
      
     </div>
 
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

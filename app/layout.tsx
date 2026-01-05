@@ -8,8 +8,7 @@ import CartDrawer from "./components/CartDrawer";
 import Toast from "./components/Toast";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
-
+import ProgressBar from "./components/ProgressBar"; // Add this import
 
 /* ---------------- FONTS ---------------- */
 const geistSans = Geist({
@@ -50,21 +49,24 @@ export default function RootLayout({
         `}
       >
         {/* SVG Background */}
-  <div
-    className="fixed inset-0 -z-10 opacity-100 "
-    style={{
-      backgroundImage: "url('/bg/banner.svg')",
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center",
-      backgroundSize: "cover",
-    }}
-  />
+        <div
+          className="fixed inset-0 -z-10 opacity-100 "
+          style={{
+            backgroundImage: "url('/bg/ED-banner (2).svg')",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        />
         {/* GLOBAL BRAND BACKGROUND */}
         {/* <GlobalBrandBackground /> */}
 
         <CartProvider>
           {/* GLOBAL NAVBAR */}
           <Navbar />
+          
+          {/* PROGRESS BAR */}
+          <ProgressBar /> {/* Use the component here */}
 
           {/* CART DRAWER */}
           <CartDrawer />

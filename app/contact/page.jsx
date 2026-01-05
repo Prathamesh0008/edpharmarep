@@ -64,7 +64,7 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-[#eaf3f3] text-[#0f2f2f]">
-<Navbar/>
+{/* <Navbar/> */}
       {/* HERO */}
       <section className="text-center px-4 py-20">
         <h1 className="text-3xl md:text-4xl font-bold">
@@ -168,7 +168,7 @@ export default function ContactPage() {
         </form>
 
       </section>
-      <Footer/>
+      {/* <Footer/> */}
 
       {/* INLINE STYLES */}
       <style jsx>{`

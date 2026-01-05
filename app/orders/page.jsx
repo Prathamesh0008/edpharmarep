@@ -50,9 +50,9 @@ function statusMeta(status) {
       icon: <Truck className="w-3.5 h-3.5" />,
       pill: "bg-gradient-to-r from-emerald-50/80 to-teal-50/70 text-emerald-800 border-emerald-200/40 shadow-sm",
     };
-  if (s.includes("cancel"))
+  if (s.includes("cancel") || s.includes("reject"))
     return {
-      label: "Cancelled",
+      label: "Rejected",
       icon: <XCircle className="w-3.5 h-3.5" />,
       pill: "bg-gradient-to-r from-rose-50/80 to-pink-50/70 text-rose-800 border-rose-200/40 shadow-sm",
     };
@@ -72,48 +72,40 @@ export default function OrdersPage() {
   const [q, setQ] = useState("");
   const [statusFilter, setStatusFilter] = useState("All");
 
-  useEffect(() => {
+useEffect(() => {
   let mounted = true;
+
+  // 🔐 CLIENT AUTH CHECK (FAST)
+  const storedUser = localStorage.getItem("bio-user");
+
+  if (!storedUser) {
+    router.replace("/?login=1");// default login flow
+    return;
+  }
 
   (async () => {
     try {
       setLoading(true);
 
-      // const user = JSON.parse(localStorage.getItem("bio-user"));
-
-      // if (!user?._id && !user?.id) {
-      //   router.push("/");
-      //   return;
-      // }
-
-      // const res = await fetch("/api/orders/my", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({
-      //     userId: user._id || user.id, // ✅ safe fallback
-      //   }),
-      // });
-      
-
       const res = await fetch("/api/orders/my", {
-  method: "GET",
-  credentials: "include", // ✅ REQUIRED
-});
+        method: "GET",
+        credentials: "include", // ✅ REQUIRED
+      });
 
-if (res.status === 401) {
-  router.push("/login"); // or "/"
-  return;
-}
+      if (res.status === 401) {
+        localStorage.removeItem("bio-user"); // cleanup
+        router.replace("/?login=1");
 
-const data = await res.json();
-setOrders(data.ok ? data.orders : []);
+        return;
+      }
 
-
-      console.log("ORDERS:", data.ok ? data.orders : []);
+      const data = await res.json();
+      mounted && setOrders(data.ok ? data.orders : []);
     } catch {
-      setOrders([]);
+      mounted && setOrders([]);
     } finally {
       mounted && setLoading(false);
+      
     }
   })();
 
@@ -134,7 +126,8 @@ setOrders(data.ok ? data.orders : []);
 
       const matchStatus =
         statusFilter === "All" ||
-        String(o.status || "").toLowerCase() === statusFilter.toLowerCase();
+        String(o.status || "").toLowerCase() === statusFilter.toLowerCase() ||
+        (statusFilter === "Rejected" && (o.status?.toLowerCase().includes("cancel") || o.status?.toLowerCase().includes("reject")));
 
       return matchText && matchStatus;
     });
@@ -190,7 +183,7 @@ setOrders(data.ok ? data.orders : []);
                 <option>Pending</option>
                 <option>Processing</option>
                 <option>Shipped</option>
-                <option>Cancelled</option>
+                <option>Rejected</option>
               </select>
             </div>
           </div>
@@ -224,7 +217,7 @@ setOrders(data.ok ? data.orders : []);
               const itemsCount = Array.isArray(o.items) ? o.items.length : 0;
 
               return (
-                <Link key={o.orderId} href={`/orders/${o._id}`} className="block">
+                <Link key={o.orderId} href={`/orders/${o.orderId}`} className="block">
                   <div className="group bg-white/95 backdrop-blur-md border border-slate-100/70 rounded-xl p-6 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ring-1 ring-slate-100/50 hover:ring-slate-200/70">
                     <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                       {/* LEFT CONTENT */}
@@ -244,7 +237,7 @@ setOrders(data.ok ? data.orders : []);
                             </p>
                           </div>
                           
-                          {/* STATUS */}
+                          {/* STATUS - REJECTED will be red */}
                           <span className={`inline-flex items-center gap-1.5 text-xs font-medium border rounded-full px-3 py-1 ${meta.pill} backdrop-blur-sm hover:scale-105 transition-all duration-200 shadow-sm`}>
                             {meta.icon}
                             {meta.label}
