@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 import dbConnect from "@/lib/db";
-import User from "@/app/models/User"; // ✅ CORRECT PATH
+import User from "@/app/models/User";
 import jwt from "jsonwebtoken";
 
 export async function POST(req) {
@@ -35,6 +35,7 @@ export async function POST(req) {
       );
     }
 
+    // Create JWT token
     const token = jwt.sign(
       {
         id: user._id.toString(),
@@ -45,30 +46,31 @@ export async function POST(req) {
       { expiresIn: "7d" }
     );
 
+    console.log("✅ Token created for user:", user.email);
+
+    // Create response
     const response = NextResponse.json({
       success: true,
+      token: token, // 🔥 ALSO return token in response body
       user: {
         _id: user._id.toString(),
         id: user._id.toString(),
-        username:
-          user.username ||
-          user.name ||
-          user.fullName ||
-          user.email.split("@")[0],
+        username: user.username || user.email.split("@")[0],
         email: user.email,
         role: user.role || "user",
       },
     });
 
-    response.cookies.set({
-      name: "auth",
-      value: token,
+    // 🔥 CRITICAL FIX: Set cookie properly
+    response.cookies.set("auth", token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "lax",
-      path: "/",                // 🔥 REQUIRED
+      path: "/",
       maxAge: 60 * 60 * 24 * 7, // 7 days
     });
+
+    console.log("✅ Cookie should be set");
 
     return response;
   } catch (err) {

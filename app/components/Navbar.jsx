@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Menu, X, Download, Search, LogOut, ChevronRight, User } from "lucide-react";
+import { Menu, X, Download, Search, LogOut, ChevronRight, User, ChevronDown } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useRef } from "react";
 import { useCart } from "./CartContext";
@@ -14,8 +14,10 @@ import { products } from "@/app/data/products";
 export default function Navbar() {
   const router = useRouter();
   const { cartItems, getCartBadgeCount } = useCart();
-  const searchRef = useRef(null);
   const desktopSearchRef = useRef(null);
+  const mobileSearchRef = useRef(null);
+  const languageRef = useRef(null);
+  const mobileLanguageRef = useRef(null);
 
   /* ---------- STATES ---------- */
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,6 +25,9 @@ export default function Navbar() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [username, setUsername] = useState("");
   const [mounted, setMounted] = useState(false);
+  const [languageOpen, setLanguageOpen] = useState(false);
+  const [mobileLanguageOpen, setMobileLanguageOpen] = useState(false);
+  const [language, setLanguage] = useState("en");
 
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [showDesktopSearch, setShowDesktopSearch] = useState(false);
@@ -31,11 +36,31 @@ export default function Navbar() {
 
   const cartCount = getCartBadgeCount();
 
-  /* ---------- USER AUTH SYNC - FIXED ---------- */
+  /* ---------- LANGUAGES CONFIG ---------- */
+  const LANGUAGES = [
+    { code: "en", label: "English", flag: "us" },
+    { code: "nl", label: "Dutch", flag: "nl" },
+    { code: "fr", label: "French", flag: "fr" },
+    { code: "de", label: "German", flag: "de" },
+    { code: "es", label: "Spanish", flag: "es" },
+    { code: "ar", label: "Arabic", flag: "sa" },
+    { code: "zh", label: "Chinese", flag: "cn" },
+    { code: "ja", label: "Japanese", flag: "jp" },
+    { code: "pt", label: "Portuguese", flag: "pt" },
+    { code: "ro", label: "Romanian", flag: "ro" },
+    { code: "sq", label: "Albanian", flag: "al" },
+    { code: "el", label: "Greek", flag: "gr" },
+    { code: "bg", label: "Bulgarian", flag: "bg" },
+    { code: "mk", label: "Macedonian", flag: "mk" },
+    { code: "sr", label: "Serbian", flag: "rs" },
+    { code: "hr", label: "Croatian", flag: "hr" },
+    { code: "bs", label: "Bosnian", flag: "ba" },
+  ];
+
+  /* ---------- USER AUTH SYNC ---------- */
   useEffect(() => {
     setMounted(true);
     
-    // Function to load user from localStorage
     const loadUser = () => {
       try {
         const storedUser = localStorage.getItem("bio-user");
@@ -51,55 +76,37 @@ export default function Navbar() {
       }
     };
 
-    // Load initial user
     loadUser();
 
-    // Listen for storage changes (from other tabs/windows)
-    const handleStorageChange = (e) => {
-      if (e.key === "bio-user" || e.key === null) {
-        loadUser();
-      }
-    };
+    const savedLang = localStorage.getItem("ed-lang");
+    if (savedLang) {
+      setLanguage(savedLang);
+    }
 
-    // Listen for custom storage events (same tab)
-    const handleCustomStorageEvent = () => {
-      loadUser();
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('bio-user-updated', handleCustomStorageEvent);
-    
-    // Also check periodically (for same tab updates)
-    const interval = setInterval(loadUser, 500);
-    
-    // Listen for route changes
-    const handleRouteChange = () => {
-      loadUser();
-    };
-    
-    router.events?.on('routeChangeComplete', handleRouteChange);
+    window.addEventListener('storage', loadUser);
+    const interval = setInterval(loadUser, 1000);
     
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('bio-user-updated', handleCustomStorageEvent);
+      window.removeEventListener('storage', loadUser);
       clearInterval(interval);
-      router.events?.off('routeChangeComplete', handleRouteChange);
     };
-  }, [router]);
+  }, []);
 
   /* ---------- CLICK OUTSIDE HANDLER ---------- */
   useEffect(() => {
     const handleClickOutside = (event) => {
-      // Close desktop search
       if (desktopSearchRef.current && !desktopSearchRef.current.contains(event.target)) {
         setShowDesktopSearch(false);
+      }
+      if (mobileSearchRef.current && !mobileSearchRef.current.contains(event.target)) {
         setSuggestions([]);
       }
-      // Close mobile search
-      if (searchRef.current && !searchRef.current.contains(event.target)) {
-        setSuggestions([]);
+      if (languageOpen && languageRef.current && !languageRef.current.contains(event.target)) {
+        setLanguageOpen(false);
       }
-      // Close profile menu
+      if (mobileLanguageOpen && mobileLanguageRef.current && !mobileLanguageRef.current.contains(event.target)) {
+        setMobileLanguageOpen(false);
+      }
       if (profileMenuOpen && !event.target.closest('.profile-menu-container')) {
         setProfileMenuOpen(false);
       }
@@ -112,26 +119,18 @@ export default function Navbar() {
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, [profileMenuOpen]);
+  }, [profileMenuOpen, languageOpen, mobileLanguageOpen]);
 
-  /* ---------- HANDLERS ---------- */
-  const handleLoginSuccess = (user) => {
-    localStorage.setItem("bio-user", JSON.stringify(user));
-    // Dispatch custom event to notify navbar
-    window.dispatchEvent(new Event('bio-user-updated'));
-    setUsername(user.username || user.name || user.email || "User");
-    setIsPopupOpen(false);
+  /* ---------- LANGUAGE HANDLER ---------- */
+  const handleLanguageChange = (code) => {
+    setLanguage(code);
+    localStorage.setItem("ed-lang", code);
+    setLanguageOpen(false);
+    setMobileLanguageOpen(false);
+    setMenuOpen(false);
   };
 
-  const handleLogout = () => {
-    localStorage.removeItem("bio-user");
-    // Dispatch custom event
-    window.dispatchEvent(new Event('bio-user-updated'));
-    setUsername("");
-    setProfileMenuOpen(false);
-    router.push("/");
-  };
-  
+  /* ---------- SEARCH FUNCTIONS ---------- */
   const handleSearchChange = (value) => {
     setQuery(value);
 
@@ -171,19 +170,53 @@ export default function Navbar() {
     const searchQuery = query.trim();
     if (!searchQuery) return;
 
-    // Close search interfaces
     setShowDesktopSearch(false);
     setMobileSearchOpen(false);
     setSuggestions([]);
+    setQuery("");
     
-    // Navigate to search results page
     router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
+  };
+
+  // SIMPLIFIED: Handle suggestion click
+  const handleSuggestionClick = (item) => {
+    console.log("Suggestion clicked:", item);
+    
+    // Clear all search states
+    setQuery("");
+    setSuggestions([]);
+    setShowDesktopSearch(false);
+    setMobileSearchOpen(false);
+    
+    // Try to navigate to product page
+    if (item.slug) {
+      router.push(`/product/${item.slug}`);
+    } else if (item.id) {
+      // Try to find complete product data
+      const fullProduct = products.find(p => p.id === item.id);
+      if (fullProduct && fullProduct.slug) {
+        router.push(`/product/${fullProduct.slug}`);
+      } else if (fullProduct && fullProduct.name) {
+        const slug = fullProduct.name
+          .toLowerCase()
+          .replace(/[^\w\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .trim();
+        router.push(`/product/${slug}`);
+      }
+    } else if (item.name) {
+      const slug = item.name
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .trim();
+      router.push(`/product/${slug}`);
+    }
   };
 
   const toggleDesktopSearch = () => {
     setShowDesktopSearch(!showDesktopSearch);
     if (!showDesktopSearch) {
-      // Focus the input when opening
       setTimeout(() => {
         const input = desktopSearchRef.current?.querySelector('input');
         input?.focus();
@@ -194,33 +227,11 @@ export default function Navbar() {
     }
   };
 
-  const handleSuggestionClick = (item) => {
-    setQuery("");
-    setSuggestions([]);
-    setShowDesktopSearch(false);
-    setMobileSearchOpen(false);
-    
-    if (item.slug) {
-      router.push(`/product/${item.slug}`);
-    } else if (item.id) {
-      router.push(`/product/${item.id}`);
-    } else if (item.name) {
-      const slug = item.name
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .trim();
-      router.push(`/product/${slug}`);
-    } else {
-      router.push(`/products?search=${encodeURIComponent(item.name || query)}`);
-    }
-  };
-
   const toggleMobileSearch = () => {
     setMobileSearchOpen(!mobileSearchOpen);
     if (!mobileSearchOpen) {
       setTimeout(() => {
-        const input = searchRef.current?.querySelector('input');
+        const input = mobileSearchRef.current?.querySelector('input');
         input?.focus();
       }, 10);
     } else {
@@ -229,19 +240,22 @@ export default function Navbar() {
     }
   };
 
-  // Handle escape key for closing search
-  useEffect(() => {
-    const handleEscape = (e) => {
-      if (e.key === 'Escape') {
-        setShowDesktopSearch(false);
-        setMobileSearchOpen(false);
-        setSuggestions([]);
-      }
-    };
-    
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, []);
+  /* ---------- HANDLERS ---------- */
+  const handleLoginSuccess = (user) => {
+    localStorage.setItem("bio-user", JSON.stringify(user));
+    setUsername(user.username || user.name || user.email || "User");
+    setIsPopupOpen(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("bio-user");
+    setUsername("");
+    setProfileMenuOpen(false);
+    router.push("/");
+  };
+
+  // Get current language
+  const currentLanguage = LANGUAGES.find(lang => lang.code === language) || LANGUAGES[0];
 
   // Prevent hydration mismatch
   if (!mounted) {
@@ -249,11 +263,9 @@ export default function Navbar() {
       <>
         <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000] h-[60px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
-            {/* Logo placeholder */}
             <Link href="/" className="flex items-center">
               <div className="h-10 w-32 bg-gray-200 rounded animate-pulse"></div>
             </Link>
-            {/* Desktop menu placeholder */}
             <div className="hidden md:flex items-center gap-4">
               <div className="h-4 w-16 bg-gray-200 rounded animate-pulse"></div>
               <div className="h-4 w-16 bg-gray-200 rounded animate-pulse"></div>
@@ -287,45 +299,40 @@ export default function Navbar() {
             <NavLink href="/about">About</NavLink>
             <NavLink href="/terms">Terms</NavLink>
             <NavLink href="/contact">Contact</NavLink>
-            <NavLink href="/orders">My Orders</NavLink>
 
             {/* ================= DESKTOP SEARCH ================= */}
             <div className="flex items-center gap-4">
               <div ref={desktopSearchRef} className="relative">
-                {/* SEARCH ICON BUTTON */}
                 <button
                   onClick={toggleDesktopSearch}
-                  className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50 cursor-pointer"
+                  className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50"
                   title="Search products"
                 >
                   <Search size={22} />
                 </button>
 
-                {/* EXPANDABLE SEARCH BAR */}
                 {showDesktopSearch && (
-                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl cursor-pointer shadow-2xl border border-gray-200 p-3 w-96 z-50">
+                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 w-96 z-50">
                     <div className="flex items-center gap-2">
                       <div className="relative flex-1">
                         <Search
                           size={18}
-                          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"
+                          className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
                         />
                         <input
                           autoFocus
                           type="text"
-                          placeholder="Search medicines, products, brands..."
+                          placeholder="Search medicines..."
                           value={query}
                           onChange={(e) => handleSearchChange(e.target.value)}
                           onKeyDown={handleSearch}
                           className="w-full border border-gray-300 rounded-xl pl-11 pr-10 py-2.5 text-sm
-                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none
-                            transition-all duration-200"
+                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
                         />
                         {query && (
                           <button
                             onClick={() => setQuery("")}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600
-                              p-1 hover:bg-gray-100 rounded-full transition-colors cursor-pointer"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
                           >
                             <X size={16} />
                           </button>
@@ -334,122 +341,142 @@ export default function Navbar() {
                       <button
                         onClick={handleSearchSubmit}
                         disabled={!query.trim()}
-                        className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 py-2.5 rounded-xl 
-                          hover:from-blue-700 hover:to-blue-800 transition-all duration-200 
-                          disabled:from-gray-300 disabled:to-gray-400 disabled:cursor-not-allowed
-                          flex items-center justify-center shadow-md hover:shadow-lg cursor-pointer"
+                        className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 
+                          disabled:bg-gray-300"
                       >
                         <Search size={18} />
                       </button>
                     </div>
 
-                    {/* SEARCH SUGGESTIONS */}
                     {suggestions.length > 0 && (
-                      <div className="absolute cursor-pointer top-full left-0 w-full bg-white border border-gray-200 rounded-xl shadow-lg mt-2 z-50 max-h-80 overflow-y-auto">
-                        <div className="p-2">
-                          <p className="text-xs text-gray-500 font-medium px-2 py-1">Search Results</p>
-                          {suggestions.map((item) => (
-                            <button
-                              key={item.id || item.name}
-                              onClick={() => handleSuggestionClick(item)}
-                              className="w-full text-left px-4 py-3 text-sm hover:bg-blue-50 rounded-lg 
-                                flex items-center justify-between border-b last:border-b-0 transition-colors"
-                            >
-                              <div className="flex-1 min-w-0">
-                                <div className="font-medium text-gray-900 truncate">{item.name}</div>
-                                <div className="text-xs text-gray-500 truncate">
-                                  {item.strength || item.brand || item.composition || ''}
-                                </div>
+                      <div className="mt-2 border border-gray-200 rounded-xl shadow-lg max-h-80 overflow-y-auto">
+                        {suggestions.map((item) => (
+                          <button
+                            key={item.id || item.name}
+                            onClick={() => handleSuggestionClick(item)}
+                            className="w-full text-left px-4 py-3 text-sm hover:bg-blue-50 
+                              flex items-center justify-between border-b last:border-b-0"
+                          >
+                            <div>
+                              <div className="font-medium">{item.name}</div>
+                              <div className="text-xs text-gray-500">
+                                {item.strength || item.brand || ''}
                               </div>
-                              <ChevronRight size={16} className="text-gray-400 flex-shrink-0 ml-2" />
-                            </button>
-                          ))}
-                        </div>
+                            </div>
+                            <ChevronRight size={16} className="text-gray-400" />
+                          </button>
+                        ))}
                       </div>
                     )}
                   </div>
                 )}
               </div>
 
-              {/* ✅ DOWNLOAD PDF BUTTON */}
+              {/* DOWNLOAD PDF */}
               <a
                 href="/ED.pdf"
                 download
                 className="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-700 rounded-full 
-                  hover:bg-blue-50 transition-all duration-200 hover:shadow-sm font-medium text-sm"
+                  hover:bg-blue-50"
               >
                 <Download size={16} />
                 Download catalogue
               </a>
 
+              {/* LANGUAGE SELECTOR */}
+              <div ref={languageRef} className="relative">
+                <button
+                  onClick={() => setLanguageOpen(!languageOpen)}
+                  className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg 
+                    hover:border-blue-400 hover:bg-blue-50 min-w-[100px]"
+                >
+                  <img
+                    src={`https://flagcdn.com/w20/${currentLanguage.flag}.png`}
+                    alt={currentLanguage.label}
+                    className="w-6 h-4 rounded-sm"
+                  />
+                  <span className="text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
+                  <ChevronDown size={16} />
+                </button>
+
+                {languageOpen && (
+                  <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border z-[999] max-h-[400px] overflow-y-auto">
+                    <div className="p-3 border-b">
+                      <p className="font-semibold text-sm">Select Language</p>
+                    </div>
+                    <div className="p-2">
+                      {LANGUAGES.map((lang) => (
+                        <button
+                          key={lang.code}
+                          onClick={() => handleLanguageChange(lang.code)}
+                          className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
+                            ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'}`}
+                        >
+                          <img
+                            src={`https://flagcdn.com/w20/${lang.flag}.png`}
+                            alt={lang.label}
+                            className="w-5 h-4 rounded-sm"
+                          />
+                          <span>{lang.label}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* CART */}
               <button
                 onClick={() => router.push("/cart")}
-                className="relative text-2xl hover:scale-105 transition-transform p-1 cursor-pointer"
+                className="relative text-2xl hover:scale-105"
                 title="Cart"
               >
                 🛒
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold 
-                    rounded-full h-5 w-5 flex items-center justify-center shadow-md">
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                     {cartCount > 99 ? "99+" : cartCount}
                   </span>
                 )}
               </button>
 
-              {/* LOGIN / PROFILE - FIXED */}
+              {/* LOGIN / PROFILE */}
               {username ? (
                 <div className="relative profile-menu-container">
                   <button
                     onClick={() => setProfileMenuOpen(!profileMenuOpen)}
                     className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-200 
-                      text-blue-700 font-semibold hover:bg-blue-50 transition-all duration-200
-                      hover:shadow-sm min-w-[120px] justify-center cursor-pointer"
+                      text-blue-700 font-semibold hover:bg-blue-50 min-w-[120px] justify-center"
                   >
                     <User size={16} />
                     Hi, {username.length > 8 ? `${username.substring(0, 8)}...` : username}
                   </button>
 
                   {profileMenuOpen && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 z-[999] 
-                      overflow-hidden animate-in fade-in slide-in-from-top-2">
-                      <div className="p-3 border-b border-gray-100 bg-gradient-to-r from-blue-50 to-indigo-50">
-                        <p className="font-semibold text-gray-900 text-sm">{username}</p>
-                        <p className="text-xs text-gray-500 truncate">Welcome back!</p>
+                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border z-[999]">
+                      <div className="p-3 border-b">
+                        <p className="font-semibold text-sm">{username}</p>
                       </div>
-                      
                       <Link
                         href="/orders"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 
-                          transition-colors border-b border-gray-100 last:border-b-0"
+                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b"
                       >
-                        <div className="p-1.5 bg-blue-100 rounded-lg">
-                          <PackageIcon />
-                        </div>
+                        <PackageIcon />
                         <span>My Orders</span>
                       </Link>
-
                       <Link
                         href="/profile"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 
-                          transition-colors border-b border-gray-100 last:border-b-0"
+                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b"
                       >
-                        <div className="p-1.5 bg-green-100 rounded-lg">
-                          <User size={14} />
-                        </div>
+                        <User size={14} />
                         <span>My Profile</span>
                       </Link>
-
                       <button
                         onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 
-                          hover:bg-red-50 transition-colors"
+                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50"
                       >
-                        <div className="p-1.5 bg-red-100 rounded-lg">
-                          <LogOut size={14} />
-                        </div>
+                        <LogOut size={14} />
                         <span>Logout</span>
                       </button>
                     </div>
@@ -458,8 +485,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className="text-blue-600 font-semibold hover:text-blue-700 transition-colors
-                    px-4 py-2 rounded-full hover:bg-blue-50 border border-transparent hover:border-blue-200"
+                  className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-2"
                 >
                   Log In
                 </button>
@@ -469,25 +495,64 @@ export default function Navbar() {
 
           {/* ================= MOBILE ================= */}
           <div className="flex items-center gap-3 md:hidden">
-            {/* MOBILE SEARCH TOGGLE */}
+            {/* LANGUAGE */}
+            <div ref={mobileLanguageRef} className="relative">
+              <button
+                onClick={() => setMobileLanguageOpen(!mobileLanguageOpen)}
+                className="flex items-center gap-1 p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full"
+              >
+                <img
+                  src={`https://flagcdn.com/w20/${currentLanguage.flag}.png`}
+                  alt={currentLanguage.label}
+                  className="w-5 h-4 rounded-sm"
+                />
+                <ChevronDown size={16} />
+              </button>
+
+              {mobileLanguageOpen && (
+                <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border z-[1002] max-h-[350px] overflow-y-auto">
+                  <div className="p-3 border-b">
+                    <p className="font-semibold text-sm">Select Language</p>
+                  </div>
+                  <div className="p-2">
+                    {LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => handleLanguageChange(lang.code)}
+                        className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
+                          ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'}`}
+                      >
+                        <img
+                          src={`https://flagcdn.com/w20/${lang.flag}.png`}
+                          alt={lang.label}
+                          className="w-5 h-4 rounded-sm"
+                        />
+                        <span className="text-xs">{lang.label}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* SEARCH TOGGLE */}
             {!mobileSearchOpen && (
               <button
                 onClick={toggleMobileSearch}
-                className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50"
+                className="text-blue-700 hover:text-blue-800 p-2"
               >
                 <Search size={24} />
               </button>
             )}
 
-            {/* CART - MOBILE */}
+            {/* CART */}
             <button
               onClick={() => router.push("/cart")}
-              className="relative text-2xl text-blue-700 hover:text-blue-800 transition p-1"
+              className="relative text-2xl text-blue-700 hover:text-blue-800 p-1"
             >
               🛒
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold 
-                  rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
                   {cartCount > 9 ? "9+" : cartCount}
                 </span>
               )}
@@ -497,21 +562,17 @@ export default function Navbar() {
             {!mobileSearchOpen && (
               <button 
                 onClick={() => setMenuOpen(true)} 
-                className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50"
+                className="text-blue-700 hover:text-blue-800 p-2"
               >
                 <Menu size={28} />
               </button>
             )}
 
-            {/* MOBILE SEARCH BAR */}
+            {/* MOBILE SEARCH BAR - SIMPLIFIED */}
             {mobileSearchOpen && (
-              <div ref={searchRef} className="absolute top-0 left-0 right-0 h-[60px] bg-white px-4 
-                flex items-center gap-2 z-[1001] shadow-md">
+              <div ref={mobileSearchRef} className="absolute top-0 left-0 right-0 h-[60px] bg-white px-4 flex items-center gap-2 z-[1001] shadow-md">
                 <div className="relative flex-1">
-                  <Search
-                    size={18}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                  />
+                  <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                   <input
                     autoFocus
                     type="text"
@@ -519,13 +580,13 @@ export default function Navbar() {
                     value={query}
                     onChange={(e) => handleSearchChange(e.target.value)}
                     onKeyDown={handleSearch}
-                    className="w-full border border-gray-300 rounded-xl pl-11 pr-10 py-2.5 text-sm
-                      focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                    className="w-full border border-gray-300 rounded-xl pl-11 pr-10 py-2.5 text-base"
+                    style={{ fontSize: '16px' }}
                   />
                   {query && (
                     <button
                       onClick={() => setQuery("")}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
                     >
                       <X size={16} />
                     </button>
@@ -534,9 +595,7 @@ export default function Navbar() {
                 <button
                   onClick={handleSearchSubmit}
                   disabled={!query.trim()}
-                  className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 
-                    transition-all duration-200 disabled:bg-gray-300 disabled:cursor-not-allowed
-                    flex items-center justify-center"
+                  className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 disabled:bg-gray-300"
                 >
                   <Search size={18} />
                 </button>
@@ -551,24 +610,20 @@ export default function Navbar() {
                   <X size={24} />
                 </button>
 
-                {/* MOBILE SEARCH SUGGESTIONS */}
+                {/* MOBILE SUGGESTIONS - SIMPLIFIED */}
                 {suggestions.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 
-                    rounded-xl shadow-lg mt-1 z-50 max-h-60 overflow-y-auto">
+                  <div className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-xl shadow-lg z-50 max-h-60 overflow-y-auto">
                     {suggestions.map((item) => (
                       <button
                         key={item.id || item.name}
-                        onClick={() => handleSuggestionClick(item)}
-                        className="w-full text-left px-4 py-3 text-sm hover:bg-blue-50 
-                          flex items-center justify-between border-b last:border-b-0"
+                        onClick={() => {
+                          console.log("Mobile suggestion clicked");
+                          handleSuggestionClick(item);
+                        }}
+                        className="w-full text-left px-4 py-3 border-b last:border-b-0 hover:bg-blue-50 active:bg-blue-100"
                       >
-                        <div className="flex-1 min-w-0">
-                          <div className="font-medium text-gray-900 truncate">{item.name}</div>
-                          <div className="text-xs text-gray-500 truncate">
-                            {item.strength || item.brand || ''}
-                          </div>
-                        </div>
-                        <ChevronRight size={16} className="text-gray-400 flex-shrink-0 ml-2" />
+                        <div className="font-medium">{item.name}</div>
+                        <div className="text-xs text-gray-500">{item.strength || item.brand || ''}</div>
                       </button>
                     ))}
                   </div>
@@ -582,88 +637,71 @@ export default function Navbar() {
       {/* ================= MOBILE DRAWER ================= */}
       {menuOpen && (
         <>
-          <div
-            onClick={() => setMenuOpen(false)}
-            className="fixed inset-0 bg-black/40 z-[999] backdrop-blur-sm"
-          />
-
-          <div className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white z-[1001] shadow-2xl 
-            flex flex-col">
-            {/* DRAWER HEADER */}
-            <div className="p-5 border-b border-gray-100">
+          <div onClick={() => setMenuOpen(false)} className="fixed inset-0 bg-black/40 z-[999]" />
+          <div className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white z-[1001] shadow-2xl flex flex-col">
+            <div className="p-5 border-b">
               <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-blue-100 rounded-full">
-                    <User size={20} className="text-blue-600" />
-                  </div>
-                  <div>
-                    {username ? (
-                      <>
-                        <p className="font-semibold text-gray-900">
-                          Hi, {username.length > 12 ? `${username.substring(0, 12)}...` : username}
-                        </p>
-                        <p className="text-xs text-gray-500">Welcome!</p>
-                      </>
-                    ) : (
-                      <p className="font-semibold text-gray-900">Guest User</p>
-                    )}
-                  </div>
+                <div>
+                  {username ? (
+                    <p className="font-semibold">Hi, {username.length > 12 ? `${username.substring(0, 12)}...` : username}</p>
+                  ) : (
+                    <p className="font-semibold">Guest User</p>
+                  )}
                 </div>
-                <button
-                  onClick={() => setMenuOpen(false)}
-                  className="p-2 text-gray-500 hover:text-gray-700 hover:bg-gray-100 rounded-full"
-                >
+                <button onClick={() => setMenuOpen(false)} className="p-2">
                   <X size={24} />
                 </button>
               </div>
             </div>
 
-            {/* DRAWER CONTENT */}
             <div className="flex-1 overflow-y-auto p-5 space-y-1">
-              <MobileLink href="/" onClick={() => setMenuOpen(false)}>
-                Home
-              </MobileLink>
-              <MobileLink href="/products" onClick={() => setMenuOpen(false)}>
-                Products
-              </MobileLink>
-              <MobileLink href="/about" onClick={() => setMenuOpen(false)}>
-                About Us
-              </MobileLink>
-              <MobileLink href="/terms" onClick={() => setMenuOpen(false)}>
-                Terms & Conditions
-              </MobileLink>
-              <MobileLink href="/contact" onClick={() => setMenuOpen(false)}>
-                Contact Us
-              </MobileLink>
-              <MobileLink href="/orders" onClick={() => setMenuOpen(false)}>
-                My Orders
-              </MobileLink>
+              <MobileLink href="/" onClick={() => setMenuOpen(false)}>Home</MobileLink>
+              <MobileLink href="/products" onClick={() => setMenuOpen(false)}>Products</MobileLink>
+              <MobileLink href="/about" onClick={() => setMenuOpen(false)}>About Us</MobileLink>
+              <MobileLink href="/terms" onClick={() => setMenuOpen(false)}>Terms</MobileLink>
+              <MobileLink href="/contact" onClick={() => setMenuOpen(false)}>Contact</MobileLink>
+              <MobileLink href="/orders" onClick={() => setMenuOpen(false)}>My Orders</MobileLink>
 
-              {/* DOWNLOAD PDF - MOBILE */}
+              <div className="pt-4 border-t">
+                <p className="text-sm font-semibold mb-3">Language</p>
+                <div className="grid grid-cols-1 gap-1 max-h-60 overflow-y-auto">
+                  {LANGUAGES.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.code)}
+                      className={`flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
+                        ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'}`}
+                    >
+                      <img
+                        src={`https://flagcdn.com/w20/${lang.flag}.png`}
+                        alt={lang.label}
+                        className="w-5 h-4 rounded-sm"
+                      />
+                      <span>{lang.label}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <a
                 href="/ED.pdf"
                 download
-                className="flex items-center gap-3 px-4 py-3 text-blue-700 font-semibold 
-                  hover:text-blue-800 hover:bg-blue-50 rounded-xl transition-colors"
+                className="flex items-center gap-3 px-4 py-3 text-blue-700 font-semibold hover:bg-blue-50 rounded-xl"
                 onClick={() => setMenuOpen(false)}
               >
                 <Download size={20} />
                 Download PDF
               </a>
 
-              {/* USER ACTIONS */}
               {username ? (
                 <>
-                  <MobileLink href="/profile" onClick={() => setMenuOpen(false)}>
-                    My Profile
-                  </MobileLink>
+                  <MobileLink href="/profile" onClick={() => setMenuOpen(false)}>My Profile</MobileLink>
                   <button
                     onClick={() => {
                       setMenuOpen(false);
                       handleLogout();
                     }}
-                    className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold 
-                      hover:text-red-700 hover:bg-red-50 rounded-xl transition-colors w-full text-left"
+                    className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left"
                   >
                     <LogOut size={20} />
                     Logout
@@ -675,8 +713,7 @@ export default function Navbar() {
                     setMenuOpen(false);
                     setIsPopupOpen(true);
                   }}
-                  className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold 
-                    hover:text-blue-700 hover:bg-blue-50 rounded-xl transition-colors w-full text-left"
+                  className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left"
                 >
                   <User size={20} />
                   Login / Register
@@ -684,8 +721,7 @@ export default function Navbar() {
               )}
             </div>
 
-            {/* DRAWER FOOTER */}
-            <div className="p-5 border-t border-gray-100 bg-gray-50">
+            <div className="p-5 border-t bg-gray-50">
               <p className="text-xs text-gray-500 text-center">
                 © {new Date().getFullYear()} ED Pharma. All rights reserved.
               </p>
@@ -694,10 +730,10 @@ export default function Navbar() {
         </>
       )}
 
-      {/* Spacer for fixed navbar */}
+      {/* Spacer */}
       <div className="h-[64px]" />
 
-      {/* ================= LOGIN MODAL ================= */}
+      {/* LOGIN MODAL */}
       <LoginPopup
         isOpen={isPopupOpen}
         onClose={() => setIsPopupOpen(false)}
@@ -713,10 +749,7 @@ function NavLink({ href, children }) {
   return (
     <Link
       href={href}
-      className="relative text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors
-        after:absolute after:left-0 after:-bottom-1
-        after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-blue-600 after:to-blue-400
-        after:transition-all hover:after:w-full after:rounded-full"
+      className="text-sm font-medium text-gray-700 hover:text-blue-600"
     >
       {children}
     </Link>
@@ -728,8 +761,7 @@ function MobileLink({ href, children, onClick }) {
     <Link
       href={href}
       onClick={onClick}
-      className="block px-4 py-3 text-base font-semibold text-gray-900 
-        hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors"
+      className="block px-4 py-3 text-base font-semibold text-gray-900 hover:bg-blue-50 rounded-xl"
     >
       {children}
     </Link>

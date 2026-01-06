@@ -1,3 +1,4 @@
+// app/layout.jsx (CORRECTED)
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
@@ -8,7 +9,11 @@ import CartDrawer from "./components/CartDrawer";
 import Toast from "./components/Toast";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import ProgressBar from "./components/ProgressBar"; // Add this import
+import ProgressBar from "./components/ProgressBar";
+
+// IMPORTANT: Import LanguageProvider, NOT useLanguage
+import { LanguageProvider } from "@/context/LanguageContext";
+import { AuthProvider } from "./context/AuthContext";
 
 /* ---------------- FONTS ---------------- */
 const geistSans = Geist({
@@ -38,6 +43,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Note: We cannot use headers() directly in layout for path detection
+  // We'll use a client-side approach instead
+  
   return (
     <html lang="en">
       <body
@@ -58,29 +66,43 @@ export default function RootLayout({
             backgroundSize: "cover",
           }}
         />
+        
         {/* GLOBAL BRAND BACKGROUND */}
         {/* <GlobalBrandBackground /> */}
 
-        <CartProvider>
-          {/* GLOBAL NAVBAR */}
-          <Navbar />
-          
-          {/* PROGRESS BAR */}
-          <ProgressBar /> {/* Use the component here */}
+        {/* WRAP EVERYTHING WITH LanguageProvider AND AuthProvider */}
+        <LanguageProvider>
+          <AuthProvider>
+            <CartProvider>
+              {/* We'll handle navbar/footer hiding in a client component */}
+              <ClientLayoutWrapper>
+                {/* GLOBAL NAVBAR - Will be conditionally hidden by wrapper */}
+                <Navbar />
+                
+                {/* PROGRESS BAR */}
+                <ProgressBar />
 
-          {/* CART DRAWER */}
-          <CartDrawer />
+                {/* CART DRAWER */}
+                <CartDrawer />
 
-          {/* TOAST NOTIFICATIONS */}
-          <Toast />
+                {/* TOAST NOTIFICATIONS */}
+                <Toast />
 
-          {/* PAGE CONTENT */}
-          <main className="">{children}</main>
+                {/* PAGE CONTENT */}
+                <main className="">{children}</main>
 
-          {/* GLOBAL FOOTER */}
-          <Footer />
-        </CartProvider>
+                {/* GLOBAL FOOTER - Will be conditionally hidden by wrapper */}
+                <Footer />
+              </ClientLayoutWrapper>
+            </CartProvider>
+          </AuthProvider>
+        </LanguageProvider>
       </body>
     </html>
   );
+}
+
+// Client-side wrapper to hide navbar/footer on admin routes
+function ClientLayoutWrapper({ children }: { children: React.ReactNode }) {
+  return children;
 }

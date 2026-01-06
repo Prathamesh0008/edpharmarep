@@ -1,9 +1,12 @@
+// app/api/me/route.js - FIXED
 import { cookies } from "next/headers";
 import { jwtVerify } from "jose";
 
 export async function GET() {
   try {
-    const token = cookies().get("auth")?.value;
+    const cookieStore = await cookies(); // Note: await here!
+    const token = cookieStore.get("auth")?.value;
+    
     if (!token) {
       return Response.json({ ok: false }, { status: 401 });
     }

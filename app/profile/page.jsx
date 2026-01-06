@@ -171,39 +171,109 @@ export default function ProfilePage() {
   const isComplete = completion === 100;
 
   // ✅ FIRST: function declare करा
-const loadUserData = (email) => {
-  fetch(`/api/auth?email=${encodeURIComponent(email)}`)
-    .then((res) => res.json())
-    .then((data) => {
-      if (data.success && data.user) {
-        setProfile({
-          username: data.user.username || "",
-          email: data.user.email || "",
-          street: data.user.street || "",
-          city: data.user.city || "",
-          pincode: data.user.pincode || "",
-          mobile: data.user.mobile || "",
-          gender: data.user.gender || "",
-        });
+  const loadUserData = async () => {
+  try {
+    setLoading(true);
+    // First get local storage data
+    const stored = localStorage.getItem("bio-user");
+    if (!stored) {
+      router.push("/");
+      return;
+    }
+
+    const localUser = JSON.parse(stored);
+    const token = localStorage.getItem("auth_token");
+    
+    console.log("🔍 Loading user data...");
+    console.log("Local user:", localUser);
+    console.log("Token exists:", !!token);
+
+    // Try to fetch fresh data from API
+    let apiUser = null;
+    
+    try {
+      // Check if we have a token for authentication
+      const headers = { 'Content-Type': 'application/json' };
+      if (token) {
+        headers['Authorization'] = `Bearer ${token}`;
       }
-      setLoading(false);
-    })
-    .catch(() => setLoading(false));
+
+      const res = await fetch("/api/auth", {
+        method: 'GET',
+        headers: headers,
+        credentials: 'include'
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        console.log("API response data:", data);
+        
+        if (data.user) {
+          apiUser = data.user;
+        }
+      } else {
+        console.warn("API failed with status:", res.status);
+      }
+    } catch (apiError) {
+      console.warn("API fetch failed, using local data:", apiError);
+    }
+
+    // Use API data if available, otherwise use local storage data
+    const userData = apiUser || localUser;
+    
+    // Make sure we have all required fields with fallbacks
+    setProfile({
+      username: userData.username || localUser.username || "",
+      email: userData.email || localUser.email || "",
+      street: userData.street || userData.address?.street || "",
+      city: userData.city || userData.address?.city || "",
+      pincode: userData.pincode || userData.address?.pincode || "",
+      mobile: userData.mobile || userData.phone || "",
+      gender: userData.gender || "",
+    });
+
+    // Update localStorage with latest data
+    if (apiUser) {
+      localStorage.setItem("bio-user", JSON.stringify({
+        ...localUser,
+        ...apiUser
+      }));
+    }
+
+  } catch (error) {
+    console.error("❌ Error in loadUserData:", error);
+    
+    // Fallback to localStorage only
+    const stored = localStorage.getItem("bio-user");
+    if (stored) {
+      const user = JSON.parse(stored);
+      setProfile({
+        username: user.username || "",
+        email: user.email || "",
+        street: "",
+        city: "",
+        pincode: "",
+        mobile: "",
+        gender: "",
+      });
+    }
+  } finally {
+    setLoading(false);
+  }
 };
 
-// ✅ THEN: useEffect
-useEffect(() => {
-  const stored = localStorage.getItem("bio-user");
-  if (!stored) {
-    router.push("/");
-    return;
-  }
+  // Update useEffect:
+  useEffect(() => {
+    const stored = localStorage.getItem("bio-user");
+    if (!stored) {
+      router.push("/");
+      return;
+    }
 
-  const user = JSON.parse(stored);
-  setUsername(user.username);
-  loadUserData(user.email);
-}, [router]);
-
+    const user = JSON.parse(stored);
+    setUsername(user.username);
+    loadUserData(); // No email parameter
+  }, [router]);
 
   const handleLogout = () => {
     localStorage.removeItem("bio-user");
@@ -211,112 +281,180 @@ useEffect(() => {
   };
 
   const saveProfile = async () => {
-    setMessage("Processing...");
+  setMessage("Processing...");
 
-    try {
-      const res = await fetch("/api/auth", {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-  email: profile.email,        // ✅ identifier
-  username: profile.username,
-  street: profile.street,
-  city: profile.city,
-  pincode: profile.pincode,
-  mobile: profile.mobile,
-  gender: profile.gender,
-}),
+  // Get current user email from localStorage for the update
+  const stored = localStorage.getItem("bio-user");
+  if (!stored) {
+    setMessage("Error: No user session found");
+    return;
+  }
 
-      });
+  const localUser = JSON.parse(stored);
+  const userEmail = localUser.email;
 
-      const data = await res.json();
+  if (!userEmail) {
+    setMessage("Error: User email not found");
+    return;
+  }
 
-      if (!res.ok || !data.success) {
-        setMessage("Error: " + (data.message || "Failed to save."));
-        return;
-      }
+  try {
+    const updateData = {
+      email: userEmail, // Keep the email for identification
+      username: profile.username,
+      street: profile.street,
+      city: profile.city,
+      pincode: profile.pincode,
+      mobile: profile.mobile,
+      gender: profile.gender,
+    };
 
-      if (data.user?.username) {
-        // ✅ update localStorage bio-user after profile save
-        const stored = localStorage.getItem("bio-user");
-        if (stored) {
-          const u = JSON.parse(stored);
+    console.log("Sending update data:", updateData);
 
-          u.username = data.user.username;
-          u.email = data.user.email;
+    const res = await fetch("/api/auth", {
+      method: "PUT",
+      headers: { 
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${localStorage.getItem("auth_token")}`
+      },
+      body: JSON.stringify(updateData),
+    });
 
-          localStorage.setItem("bio-user", JSON.stringify(u));
-        }
+    console.log("Update response status:", res.status);
 
-        // update local state
-        setUsername(data.user.username);
-      }
-
-      setProfile({
-  username: data.user.username || "",
-  email: data.user.email || "",
-  street: data.user.street || "",
-  city: data.user.city || "",
-  pincode: data.user.pincode || "",
-  mobile: data.user.mobile || "",
-  gender: data.user.gender || "",
-});
-
-
-      setMessage("Success: Profile updated!");
-      setIsEditing(false);
-    } catch (err) {
-      setMessage("Error: Server connection failed.");
-    }
-
-    setTimeout(() => setMessage(""), 3000);
-  };
-
-  const changePassword = async () => {
-    setMessage("Processing...");
-
-    if (!pwd.currentPassword || !pwd.newPassword || !pwd.confirmNewPassword) {
-      setMessage("Error: Fill all password fields.");
+    // Handle unauthorized
+    if (res.status === 401) {
+      setMessage("Error: Session expired. Please login again.");
+      setTimeout(() => {
+        localStorage.removeItem("bio-user");
+        localStorage.removeItem("auth_token");
+        router.push("/");
+      }, 2000);
       return;
     }
 
-    if (pwd.newPassword !== pwd.confirmNewPassword) {
-      setMessage("Error: New passwords do not match.");
+    const data = await res.json();
+    console.log("Update response data:", data);
+
+    if (!res.ok || !data.success) {
+      setMessage("Error: " + (data.message || "Failed to save. Check console for details."));
       return;
     }
 
-    try {
-      const res = await fetch("/api/auth/password", {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          email: profile.email, // ✅ user identify
-          currentPassword: pwd.currentPassword,
-          newPassword: pwd.newPassword,
-        }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok || !data.success) {
-        setMessage("Error: " + (data.message || "Failed"));
-        return;
-      }
-
-      // clear fields
-      setPwd({
-        currentPassword: "",
-        newPassword: "",
-        confirmNewPassword: "",
-      });
-
-      setMessage("Success: Password updated!");
-    } catch (err) {
-      setMessage("Error: Server connection failed.");
+    // Update localStorage with new data
+    if (data.user) {
+      const updatedUser = {
+        ...localUser,
+        username: data.user.username || profile.username,
+        email: data.user.email || userEmail,
+        ...data.user
+      };
+      localStorage.setItem("bio-user", JSON.stringify(updatedUser));
+      
+      // Update state
+      setUsername(data.user.username || profile.username);
+      setProfile(prev => ({
+        ...prev,
+        username: data.user.username || profile.username,
+        email: data.user.email || userEmail,
+      }));
+    } else {
+      // If no user in response, update with what we sent
+      localUser.username = profile.username;
+      localStorage.setItem("bio-user", JSON.stringify(localUser));
     }
 
-    setTimeout(() => setMessage(""), 3000);
-  };
+    setMessage("Success: Profile updated!");
+    setIsEditing(false);
+    
+    // Reload data from API
+    setTimeout(() => {
+      loadUserData();
+    }, 500);
+
+  } catch (err) {
+    console.error("Save error:", err);
+    setMessage("Error: Server connection failed. " + err.message);
+  }
+
+  setTimeout(() => setMessage(""), 3000);
+};
+
+ // In your changePassword function
+const changePassword = async () => {
+  setMessage("Processing...");
+
+  if (!pwd.currentPassword || !pwd.newPassword || !pwd.confirmNewPassword) {
+    setMessage("Error: Fill all password fields.");
+    return;
+  }
+
+  if (pwd.newPassword !== pwd.confirmNewPassword) {
+    setMessage("Error: New passwords do not match.");
+    return;
+  }
+
+  try {
+    const token = localStorage.getItem("auth_token");
+    
+    console.log("🔐 Frontend: Token from localStorage:", token);
+    
+    if (!token) {
+      setMessage("Error: No authentication token found. Please login again.");
+      // Redirect to login
+      setTimeout(() => {
+        localStorage.removeItem("bio-user");
+        router.push("/");
+      }, 2000);
+      return;
+    }
+
+    const res = await fetch("/api/auth/password", {
+      method: "PUT",
+      headers: { 
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
+      },
+      body: JSON.stringify({
+        currentPassword: pwd.currentPassword,
+        newPassword: pwd.newPassword,
+      }),
+    });
+
+    console.log("🔐 Frontend: Response status:", res.status);
+    
+    const data = await res.json();
+    console.log("🔐 Frontend: Response data:", data);
+
+    if (!res.ok || !data.success) {
+      if (res.status === 401) {
+        setMessage("Error: Session expired. Please login again.");
+        setTimeout(() => {
+          localStorage.removeItem("bio-user");
+          localStorage.removeItem("auth_token");
+          router.push("/");
+        }, 2000);
+        return;
+      }
+      setMessage("Error: " + (data.message || "Failed to change password."));
+      return;
+    }
+
+    // Clear fields
+    setPwd({
+      currentPassword: "",
+      newPassword: "",
+      confirmNewPassword: "",
+    });
+
+    setMessage("Success: Password updated!");
+  } catch (err) {
+    console.error("🔐 Frontend: Network error:", err);
+    setMessage("Error: Server connection failed.");
+  }
+
+  setTimeout(() => setMessage(""), 3000);
+};
 
   if (loading)
     return (
@@ -345,6 +483,25 @@ useEffect(() => {
           >
             <Icons.Logout />
             Logout
+          </button>
+
+          {/* Add this button temporarily for debugging */}
+          <button
+            onClick={async () => {
+              console.log("Current profile state:", profile);
+              console.log(
+                "Current localStorage:",
+                localStorage.getItem("bio-user")
+              );
+
+              // Test the API
+              const res = await fetch("/api/auth");
+              const data = await res.json();
+              console.log("API response:", data);
+            }}
+            className="fixed bottom-4 right-4 bg-gray-800 text-white p-2 rounded text-sm"
+          >
+            Debug
           </button>
         </div>
       </div>
@@ -556,7 +713,7 @@ useEffect(() => {
                           </label>
                           <input
                             type="email"
-                            value={profile.email}
+                            value={profile.email || ""}
                             onChange={(e) =>
                               setProfile({ ...profile, email: e.target.value })
                             }
