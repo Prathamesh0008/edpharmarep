@@ -331,6 +331,101 @@ termsPage: {
     }
   ]
 },
+contactPage: {
+  hero: {
+    title: "联系我们",
+    subtitle: "如有任何咨询或支持需求，请与我们联系"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "如有问题或需要支持，请致电我们" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "商务咨询请发送邮件" 
+    },
+    { 
+      icon: "📍", 
+      title: "伦敦眼 伦敦", 
+      description: "我们的主要办公地点" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "邮箱 *",
+      phone: "电话 *",
+      name: "姓名 *",
+      message: "留言 *"
+    },
+    placeholders: {
+      email: "请输入您的邮箱地址",
+      phone: "请输入您的电话号码",
+      name: "请输入您的全名",
+      message: "请在此输入您的留言..."
+    },
+    submitButton: "提交留言",
+    successMessage: "✅ 留言发送成功！"
+  },
+  validation: {
+    email: {
+      required: "邮箱为必填项",
+      invalid: "邮箱格式无效"
+    },
+    phone: {
+      required: "电话为必填项",
+      invalid: "电话号码无效"
+    },
+    name: {
+      required: "姓名为必填项"
+    },
+    message: {
+      required: "留言为必填项"
+    }
+  }
+},
+productsPage: {
+  hero: {
+    suffix: "产品",
+    subtitle: "浏览我们全面的药品产品系列"
+  },
+  filters: {
+    searchPlaceholder: "按名称、成分或描述搜索产品...",
+    allCompounds: "所有化合物",
+    resetButton: "重置所有筛选器",
+    clearSearch: "清除搜索"
+  },
+  productCard: {
+    viewDetails: "查看详情",
+    addToCart: "加入购物车",
+    buyNow: "立即购买",
+    dosageLabel: "剂量:",
+    compositionLabel: "成分:",
+    packSizeLabel: "包装规格:",
+    skusAvailable: "SKU",
+    productsAvailable: "个产品可用",
+    productAvailable: "个产品可用"
+  },
+  emptyState: {
+    title: "未找到产品",
+    description: "未找到符合您搜索条件的产品。"
+  }
+},
+productDetail: {
+  notFound: "产品未找到",
+  backButton: "← 返回产品列表",
+  labels: {
+    category: "类别:",
+    brand: "品牌:",
+    price: "价格:",
+    overview: "概述"
+  },
+  sections: {
+    overview: "概述"
+  }
+},
 profilePage: {
   loading: "正在加载您的个人资料...",
   nav: {
@@ -513,6 +608,31 @@ homePage: {
   discount: "净享 5% 折扣",
   subDiscount: "仅限首张发票",
   buttonText: "索取目录"
+},
+featuredProducts: {
+  tag: "精选产品",
+  title: "特色产品",
+  subtitle: "药品",
+  description: "探索我们精心挑选的优质药品解决方案，深受全球医疗保健专业人士的信赖。",
+  viewAll: "查看所有产品",
+  featuredBadge: "特色产品",
+  categoryLabel: "类别:",
+  dosageLabel: "剂量:",
+  formLabel: "剂型:",
+  packLabel: "包装:",
+  viewDetails: "查看详情",
+  enquire: "咨询",
+  defaultCategory: "药品",
+  stats: {
+    products: "200+",
+    productsLabel: "产品",
+    countries: "40+",
+    countriesLabel: "国家",
+    gmp: "GMP",
+    gmpLabel: "认证",
+    support: "24/7",
+    supportLabel: "支持"
+  }
 },
 testimonials: {
   tag: "客户评价",

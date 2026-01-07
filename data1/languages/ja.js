@@ -273,6 +273,101 @@ termsPage: {
     }
   ]
 },
+contactPage: {
+  hero: {
+    title: "お問い合わせ",
+    subtitle: "ご質問やサポートについてはお気軽にお問い合わせください"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "ご質問やサポートはお電話ください" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "ビジネスに関するお問い合わせはメールで" 
+    },
+    { 
+      icon: "📍", 
+      title: "ロンドン・アイ ロンドン", 
+      description: "本社所在地" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "メールアドレス *",
+      phone: "電話番号 *",
+      name: "お名前 *",
+      message: "メッセージ *"
+    },
+    placeholders: {
+      email: "メールアドレスを入力してください",
+      phone: "電話番号を入力してください",
+      name: "氏名を入力してください",
+      message: "メッセージをこちらに入力してください..."
+    },
+    submitButton: "メッセージを送信",
+    successMessage: "✅ メッセージが送信されました！"
+  },
+  validation: {
+    email: {
+      required: "メールアドレスは必須です",
+      invalid: "メールアドレスが無効です"
+    },
+    phone: {
+      required: "電話番号は必須です",
+      invalid: "電話番号が無効です"
+    },
+    name: {
+      required: "お名前は必須です"
+    },
+    message: {
+      required: "メッセージは必須です"
+    }
+  }
+},
+productsPage: {
+  hero: {
+    suffix: "製品",
+    subtitle: "当社の包括的な医薬品ラインアップをご覧ください"
+  },
+  filters: {
+    searchPlaceholder: "製品名、成分、説明で検索...",
+    allCompounds: "すべての化合物",
+    resetButton: "すべてのフィルターをリセット",
+    clearSearch: "検索をクリア"
+  },
+  productCard: {
+    viewDetails: "詳細を見る",
+    addToCart: "カートに追加",
+    buyNow: "今すぐ購入",
+    dosageLabel: "用量:",
+    compositionLabel: "成分:",
+    packSizeLabel: "パックサイズ:",
+    skusAvailable: "SKU",
+    productsAvailable: "製品が利用可能",
+    productAvailable: "製品が利用可能"
+  },
+  emptyState: {
+    title: "製品が見つかりません",
+    description: "検索条件に一致する製品が見つかりませんでした。"
+  }
+},
+productDetail: {
+  notFound: "製品が見つかりません",
+  backButton: "← 製品に戻る",
+  labels: {
+    category: "カテゴリー:",
+    brand: "ブランド:",
+    price: "価格:",
+    overview: "概要"
+  },
+  sections: {
+    overview: "概要"
+  }
+},
 profilePage: {
   loading: "プロフィールを読み込み中...",
   nav: {
@@ -452,6 +547,31 @@ offer: {
   discount: "正味5％割引",
   subDiscount: "初回請求書のみ適用",
   buttonText: "カタログを請求"
+},
+featuredProducts: {
+  tag: "プレミアムセレクション",
+  title: "注目製品",
+  subtitle: "医薬品",
+  description: "世界中の医療専門家に信頼されている厳選されたプレミアム医薬品ソリューションのラインアップをご覧ください。",
+  viewAll: "すべての製品を見る",
+  featuredBadge: "注目製品",
+  categoryLabel: "カテゴリー:",
+  dosageLabel: "用量:",
+  formLabel: "剤形:",
+  packLabel: "包装:",
+  viewDetails: "詳細を見る",
+  enquire: "お問い合わせ",
+  defaultCategory: "医薬品",
+  stats: {
+    products: "200+",
+    productsLabel: "製品数",
+    countries: "40+",
+    countriesLabel: "国",
+    gmp: "GMP",
+    gmpLabel: "認定済み",
+    support: "24/7",
+    supportLabel: "サポート"
+  }
 },
 
 testimonials: {

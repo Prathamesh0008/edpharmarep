@@ -277,6 +277,101 @@ termsPage: {
     }
   ]
 },
+contactPage: {
+  hero: {
+    title: "Neem Contact Op",
+    subtitle: "Neem contact met ons op voor vragen of ondersteuning"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "Bel ons voor vragen of ondersteuning" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "E-mail ons voor zakelijke vragen" 
+    },
+    { 
+      icon: "📍", 
+      title: "London Eye Londen", 
+      description: "Onze hoofdlocatie" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "E-mail *",
+      phone: "Telefoon *",
+      name: "Naam *",
+      message: "Bericht *"
+    },
+    placeholders: {
+      email: "Voer uw e-mailadres in",
+      phone: "Voer uw telefoonnummer in",
+      name: "Voer uw volledige naam in",
+      message: "Typ hier uw bericht..."
+    },
+    submitButton: "Verstuur Bericht",
+    successMessage: "✅ Bericht succesvol verzonden!"
+  },
+  validation: {
+    email: {
+      required: "E-mail is verplicht",
+      invalid: "E-mail is ongeldig"
+    },
+    phone: {
+      required: "Telefoon is verplicht",
+      invalid: "Telefoonnummer is ongeldig"
+    },
+    name: {
+      required: "Naam is verplicht"
+    },
+    message: {
+      required: "Bericht is verplicht"
+    }
+  }
+},
+productsPage: {
+  hero: {
+    suffix: "Producten",
+    subtitle: "Bekijk ons uitgebreide assortiment farmaceutische producten"
+  },
+  filters: {
+    searchPlaceholder: "Zoek producten op naam, samenstelling of beschrijving...",
+    allCompounds: "Alle Verbindingen",
+    resetButton: "Alle Filters Resetten",
+    clearSearch: "Zoekopdracht Wissen"
+  },
+  productCard: {
+    viewDetails: "Bekijk Details",
+    addToCart: "Aan Winkelwagen Toevoegen",
+    buyNow: "Nu Kopen",
+    dosageLabel: "Dosering:",
+    compositionLabel: "Samenstelling:",
+    packSizeLabel: "Verpakking:",
+    skusAvailable: "SKU's",
+    productsAvailable: "producten beschikbaar",
+    productAvailable: "product beschikbaar"
+  },
+  emptyState: {
+    title: "Geen Producten Gevonden",
+    description: "We konden geen producten vinden die aan uw zoekcriteria voldoen."
+  }
+},
+productDetail: {
+  notFound: "Product niet gevonden",
+  backButton: "← Terug naar Producten",
+  labels: {
+    category: "Categorie:",
+    brand: "Merk:",
+    price: "Prijs:",
+    overview: "Overzicht"
+  },
+  sections: {
+    overview: "Overzicht"
+  }
+},
 profilePage: {
   loading: "Uw profiel laden...",
   nav: {
@@ -456,6 +551,31 @@ homePage: {
   discount: "5% netto korting",
   subDiscount: "Alleen op de eerste factuur",
   buttonText: "Catalogus aanvragen"
+},
+featuredProducts: {
+  tag: "Premium Selectie",
+  title: "Uitgelicht",
+  subtitle: "Farmaceutische Producten",
+  description: "Ontdek ons zorgvuldig geselecteerde assortiment premium farmaceutische oplossingen, vertrouwd door zorgprofessionals wereldwijd.",
+  viewAll: "Bekijk Alle Producten",
+  featuredBadge: "Uitgelicht",
+  categoryLabel: "Categorie:",
+  dosageLabel: "Dosering:",
+  formLabel: "Vorm:",
+  packLabel: "Verpakking:",
+  viewDetails: "Details Bekijken",
+  enquire: "Informeer",
+  defaultCategory: "Farmaceutisch",
+  stats: {
+    products: "200+",
+    productsLabel: "Producten",
+    countries: "40+",
+    countriesLabel: "Landen",
+    gmp: "GMP",
+    gmpLabel: "Gecertificeerd",
+    support: "24/7",
+    supportLabel: "Ondersteuning"
+  }
 },
 
 testimonials: {

@@ -1,45 +1,30 @@
-// app/api/auth/route.js - FIXED
 import { NextResponse } from "next/server";
-import { cookies } from "next/headers";
+import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import dbConnect from "@/lib/db";
 import User from "@/app/models/User";
 
+// GET - Get user profile
 export async function GET(req) {
   try {
-    console.log("🔐 Auth endpoint called");
+    console.log("🔐 GET Profile endpoint called");
     
-    // Try to get token from cookie first
-    const cookieStore = cookies(); // Fixed: get cookie store first
-    let token = cookieStore.get("auth")?.value; // Then get the cookie
-    console.log("🔐 Token from cookie:", token ? "Yes" : "No");
-    
-    // If no cookie, try Authorization header
-    if (!token) {
-      const authHeader = req.headers.get('authorization');
-      console.log("🔐 Authorization header:", authHeader);
-      if (authHeader && authHeader.startsWith('Bearer ')) {
-        token = authHeader.substring(7);
-        console.log("🔐 Using token from header");
-      }
-    }
-    
-    if (!token) {
-      console.log("🔐 No token found");
+    // Get token from Authorization header
+    const authHeader = req.headers.get('authorization');
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      console.log("🔐 No valid authorization header");
       return NextResponse.json(
         { success: false, message: "Unauthorized" },
         { status: 401 }
       );
     }
-
-    console.log("🔐 Token length:", token.length);
     
-    // Verify token
+    const token = authHeader.substring(7);
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log("🔐 Token decoded successfully for user:", decoded.email);
-
+    console.log("🔐 Token decoded for user:", decoded.email);
+    
     await dbConnect();
-
+    
     const user = await User.findById(decoded.id).select("-password");
     if (!user) {
       return NextResponse.json(
@@ -47,10 +32,11 @@ export async function GET(req) {
         { status: 404 }
       );
     }
-
+    
     return NextResponse.json({
       success: true,
       user: {
+        _id: user._id,
         username: user.username,
         email: user.email,
         mobile: user.mobile || "",
@@ -60,117 +46,119 @@ export async function GET(req) {
         pincode: user.address?.pincode || "",
       },
     });
+    
   } catch (err) {
-    console.error("🔐 Auth error:", err.message);
+    console.error("🔐 GET Profile error:", err.message);
+    
+    if (err.name === 'JsonWebTokenError') {
+      return NextResponse.json(
+        { success: false, message: "Invalid token" },
+        { status: 401 }
+      );
+    }
+    
     return NextResponse.json(
-      { success: false, message: "Session expired" },
-      { status: 401 }
+      { success: false, message: "Server error" },
+      { status: 500 }
     );
   }
 }
 
-// In your app/api/auth/route.js - PUT endpoint
+// PUT - Update user profile
+// In /app/api/auth/route.js - Only update the PUT function
 export async function PUT(req) {
   try {
-    console.log("🔐 Update endpoint called");
+    console.log("🔐 PUT: Profile update called");
     
-    // Get token from Authorization header first
+    // Get token from Authorization header
     const authHeader = req.headers.get('authorization');
-    let token;
-    
-    if (authHeader && authHeader.startsWith('Bearer ')) {
-      token = authHeader.substring(7);
-      console.log("🔐 Using token from header");
-    } else {
-      // Try cookies as fallback
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+      console.log("🔐 PUT: No valid authorization header");
+      // Also try cookies as fallback (for backward compatibility)
       try {
         const cookieStore = await cookies();
-        token = cookieStore.get("auth")?.value;
-        console.log("🔐 Using token from cookie:", token ? "Yes" : "No");
+        const cookieToken = cookieStore.get("auth")?.value;
+        if (!cookieToken) {
+          return NextResponse.json(
+            { success: false, message: "Unauthorized" },
+            { status: 401 }
+          );
+        }
+        // Use cookie token
+        var token = cookieToken;
       } catch (cookieError) {
-        console.log("🔐 Cookie error:", cookieError.message);
+        return NextResponse.json(
+          { success: false, message: "Unauthorized" },
+          { status: 401 }
+        );
       }
+    } else {
+      var token = authHeader.substring(7);
     }
     
-    if (!token) {
-      return NextResponse.json(
-        { success: false, message: "Unauthorized" },
-        { status: 401 }
-      );
-    }
-
+    console.log("🔐 PUT: Token received");
+    
+    // Verify token
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    console.log("🔐 Token decoded for user ID:", decoded.id);
+    console.log("🔐 PUT: Token decoded, user ID:", decoded.id);
     
     const body = await req.json();
-    console.log("🔐 Update request body:", body);
+    console.log("🔐 PUT: Request body:", body);
     
-    const {
-      username,
-      street,
-      city,
-      pincode,
-      mobile,
-      gender,
-    } = body;
-
-    console.log("🔐 Connecting to database...");
     await dbConnect();
-    console.log("🔐 Database connected");
-
-    console.log("🔐 Updating user with data:", {
-      username,
-      mobile,
-      gender,
-      address: { street, city, pincode }
-    });
-
-    // First, find the current user to see what's in DB
-    const currentUser = await User.findById(decoded.id);
-    console.log("🔐 Current user in DB before update:", {
-      username: currentUser?.username,
-      email: currentUser?.email,
-      mobile: currentUser?.mobile,
-      gender: currentUser?.gender,
-      address: currentUser?.address
-    });
-
-    // Update the user
-    const updatedUser = await User.findByIdAndUpdate(
-      decoded.id,
-      {
-        username,
-        mobile,
-        gender,
-        address: { street, city, pincode },
-      },
-      { 
-        new: true,
-        runValidators: true // Ensure validation runs
-      }
-    ).select("-password");
-
-    console.log("🔐 Updated user result:", updatedUser);
-
-    if (!updatedUser) {
-      console.log("🔐 User not found after update attempt");
+    
+    // Find user first
+    const user = await User.findById(decoded.id);
+    if (!user) {
       return NextResponse.json(
         { success: false, message: "User not found" },
         { status: 404 }
       );
     }
-
-    // Verify the update actually happened by fetching again
-    const verifyUser = await User.findById(decoded.id).select("-password");
-    console.log("🔐 Verification fetch:", {
-      username: verifyUser.username,
-      mobile: verifyUser.mobile,
-      gender: verifyUser.gender,
-      address: verifyUser.address
+    
+    console.log("🔐 PUT: Current user:", {
+      username: user.username,
+      mobile: user.mobile,
+      gender: user.gender,
+      address: user.address
     });
-
+    
+    // Update fields - Direct assignment (simpler)
+    if (body.username !== undefined) {
+      user.username = body.username;
+    }
+    if (body.mobile !== undefined) {
+      user.mobile = body.mobile;
+    }
+    if (body.gender !== undefined) {
+      user.gender = body.gender;
+    }
+    
+    // Update address
+    if (body.street !== undefined || body.city !== undefined || body.pincode !== undefined) {
+      user.address = {
+        street: body.street !== undefined ? body.street : (user.address?.street || ""),
+        city: body.city !== undefined ? body.city : (user.address?.city || ""),
+        pincode: body.pincode !== undefined ? body.pincode : (user.address?.pincode || ""),
+      };
+    }
+    
+    console.log("🔐 PUT: Saving user...");
+    await user.save();
+    
+    // Fetch fresh data to confirm
+    const updatedUser = await User.findById(decoded.id).select("-password");
+    
+    console.log("🔐 PUT: User after save:", {
+      username: updatedUser.username,
+      mobile: updatedUser.mobile,
+      gender: updatedUser.gender,
+      address: updatedUser.address
+    });
+    
     return NextResponse.json({
       success: true,
+      message: "Profile updated successfully",
       user: {
         username: updatedUser.username,
         email: updatedUser.email,
@@ -180,171 +168,28 @@ export async function PUT(req) {
         city: updatedUser.address?.city || "",
         pincode: updatedUser.address?.pincode || "",
       },
-      debug: {
-        updateApplied: verifyUser.username === username,
-        addressMatch: JSON.stringify(verifyUser.address) === JSON.stringify({ street, city, pincode })
-      }
     });
-  } catch (err) {
-    console.error("❌ Update error:", err);
-    console.error("❌ Error stack:", err.stack);
     
-    // Check for Mongoose validation errors
-    if (err.name === 'ValidationError') {
-      console.error("❌ Validation errors:", err.errors);
+  } catch (err) {
+    console.error("❌ PUT: Update error:", err);
+    
+    if (err.name === 'JsonWebTokenError') {
       return NextResponse.json(
-        { success: false, message: "Validation error: " + err.message },
+        { success: false, message: "Invalid token" },
+        { status: 401 }
+      );
+    }
+    
+    if (err.name === 'ValidationError') {
+      return NextResponse.json(
+        { success: false, message: "Validation error" },
         { status: 400 }
       );
     }
     
     return NextResponse.json(
-      { success: false, message: "Server error: " + err.message },
+      { success: false, message: "Server error" },
       { status: 500 }
     );
   }
 }
-
-// import { NextResponse } from "next/server";
-// import { cookies } from "next/headers";
-// import jwt from "jsonwebtoken";
-// import dbConnect from "@/lib/db";
-// import User from "@/app/models/User";
-
-// export async function GET(req) {
-//   try {
-//     console.log("🔐 Auth endpoint called");
-    
-//     // Try to get token from cookie first
-//     let token = cookies().get("auth")?.value;
-//     console.log("🔐 Token from cookie:", token ? "Yes" : "No");
-    
-//     // If no cookie, try Authorization header
-//     if (!token) {
-//       const authHeader = req.headers.get('authorization');
-//       console.log("🔐 Authorization header:", authHeader);
-//       if (authHeader && authHeader.startsWith('Bearer ')) {
-//         token = authHeader.substring(7);
-//         console.log("🔐 Using token from header");
-//       }
-//     }
-    
-//     if (!token) {
-//       console.log("🔐 No token found");
-//       return NextResponse.json(
-//         { success: false, message: "Unauthorized" },
-//         { status: 401 }
-//       );
-//     }
-
-//     console.log("🔐 Token length:", token.length);
-    
-//     // Verify token
-//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-//     console.log("🔐 Token decoded successfully for user:", decoded.email);
-
-//     await dbConnect();
-
-//     const user = await User.findById(decoded.id).select("-password");
-//     if (!user) {
-//       return NextResponse.json(
-//         { success: false, message: "User not found" },
-//         { status: 404 }
-//       );
-//     }
-
-//     return NextResponse.json({
-//       success: true,
-//       user: {
-//         username: user.username,
-//         email: user.email,
-//         mobile: user.mobile || "",
-//         gender: user.gender || "",
-//         street: user.address?.street || "",
-//         city: user.address?.city || "",
-//         pincode: user.address?.pincode || "",
-//       },
-//     });
-//   } catch (err) {
-//     console.error("🔐 Auth error:", err.message);
-//     return NextResponse.json(
-//       { success: false, message: "Session expired" },
-//       { status: 401 }
-//     );
-//   }
-// }
-
-// // PUT endpoint remains same but add header support too
-// export async function PUT(req) {
-//   try {
-//     console.log("🔐 Update endpoint called");
-    
-//     // Try to get token from cookie first
-//     let token = cookies().get("auth")?.value;
-    
-//     // If no cookie, try Authorization header
-//     if (!token) {
-//       const authHeader = req.headers.get('authorization');
-//       if (authHeader && authHeader.startsWith('Bearer ')) {
-//         token = authHeader.substring(7);
-//       }
-//     }
-    
-//     if (!token) {
-//       return NextResponse.json(
-//         { success: false, message: "Unauthorized" },
-//         { status: 401 }
-//       );
-//     }
-
-//     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    
-//     const {
-//       username,
-//       street,
-//       city,
-//       pincode,
-//       mobile,
-//       gender,
-//     } = await req.json();
-
-//     await dbConnect();
-
-//     const updatedUser = await User.findByIdAndUpdate(
-//       decoded.id,
-//       {
-//         username,
-//         mobile,
-//         gender,
-//         address: { street, city, pincode },
-//       },
-//       { new: true }
-//     ).select("-password");
-
-//     if (!updatedUser) {
-//       return NextResponse.json(
-//         { success: false, message: "User not found" },
-//         { status: 404 }
-//       );
-//     }
-
-//     return NextResponse.json({
-//       success: true,
-//       user: {
-//         username: updatedUser.username,
-//         email: updatedUser.email,
-//         mobile: updatedUser.mobile || "",
-//         gender: updatedUser.gender || "",
-//         street: updatedUser.address?.street || "",
-//         city: updatedUser.address?.city || "",
-//         pincode: updatedUser.address?.pincode || "",
-//       },
-//     });
-//   } catch (err) {
-//     console.error("Update error:", err.message);
-//     return NextResponse.json(
-//       { success: false, message: "Session expired" },
-//       { status: 401 }
-//     );
-//   }
-// }

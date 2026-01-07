@@ -1,24 +1,5 @@
 const es = {
-  home: "Inicio",
-  products: "Productos",
-  about: "Acerca de",
-  terms: "Términos",
-  contact: "Contacto",
-  orders: "Mis Pedidos",
-  download: "Descargar catálogo",
-  login: "Iniciar Sesión",
-  logout: "Cerrar Sesión",
-  profile: "Mi Perfil",
-  hi: "Hola",
-  language: "Idioma",
-  selectLanguage: "Seleccionar Idioma",
-  chooseLanguage: "Elija su idioma preferido",
-  current: "Actual",
-  welcomeBack: "¡Bienvenido de nuevo!",
-  welcome: "¡Bienvenido!",
-  guestUser: "Usuario Invitado",
-  loginRegister: "Iniciar Sesión / Registrarse",
-  rightsReserved: "Todos los derechos reservados.",
+ 
   about: {
     hero: {
       tag: "SOBRE NOSOTROS",
@@ -355,6 +336,101 @@ termsPage: {
       moreDetails: "Información Adicional:\n- El uso indebido de marcas comerciales puede dar lugar a acciones legales.\n- Los diseños del catálogo pueden cambiar sin previo aviso.\n- La marca personalizada requiere aprobación por escrito."
     }
   ]
+},
+contactPage: {
+  hero: {
+    title: "Contáctenos",
+    subtitle: "Póngase en contacto con nosotros para cualquier consulta o soporte"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "Llámenos para cualquier pregunta o soporte" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "Envíenos un correo para consultas comerciales" 
+    },
+    { 
+      icon: "📍", 
+      title: "London Eye Londres", 
+      description: "Nuestra ubicación principal" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "Correo Electrónico *",
+      phone: "Teléfono *",
+      name: "Nombre *",
+      message: "Mensaje *"
+    },
+    placeholders: {
+      email: "Ingrese su dirección de correo electrónico",
+      phone: "Ingrese su número de teléfono",
+      name: "Ingrese su nombre completo",
+      message: "Escriba su mensaje aquí..."
+    },
+    submitButton: "Enviar Mensaje",
+    successMessage: "✅ ¡Mensaje enviado con éxito!"
+  },
+  validation: {
+    email: {
+      required: "El correo electrónico es obligatorio",
+      invalid: "El correo electrónico no es válido"
+    },
+    phone: {
+      required: "El teléfono es obligatorio",
+      invalid: "El número de teléfono no es válido"
+    },
+    name: {
+      required: "El nombre es obligatorio"
+    },
+    message: {
+      required: "El mensaje es obligatorio"
+    }
+  }
+},
+productsPage: {
+  hero: {
+    suffix: "Productos",
+    subtitle: "Explore nuestra amplia gama de productos farmacéuticos"
+  },
+  filters: {
+    searchPlaceholder: "Buscar productos por nombre, composición o descripción...",
+    allCompounds: "Todos los Compuestos",
+    resetButton: "Restablecer Todos los Filtros",
+    clearSearch: "Limpiar Búsqueda"
+  },
+  productCard: {
+    viewDetails: "Ver Detalles",
+    addToCart: "Añadir al Carrito",
+    buyNow: "Comprar Ahora",
+    dosageLabel: "Dosis:",
+    compositionLabel: "Composición:",
+    packSizeLabel: "Tamaño del Paquete:",
+    skusAvailable: "SKUs",
+    productsAvailable: "productos disponibles",
+    productAvailable: "producto disponible"
+  },
+  emptyState: {
+    title: "No se encontraron productos",
+    description: "No pudimos encontrar productos que coincidan con sus criterios de búsqueda."
+  }
+},
+productDetail: {
+  notFound: "Producto no encontrado",
+  backButton: "← Volver a Productos",
+  labels: {
+    category: "Categoría:",
+    brand: "Marca:",
+    price: "Precio:",
+    overview: "Resumen"
+  },
+  sections: {
+    overview: "Resumen"
+  }
 },
 profilePage: {
   loading: "Cargando su perfil...",

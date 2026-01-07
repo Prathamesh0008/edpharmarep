@@ -171,96 +171,56 @@ export default function ProfilePage() {
   const isComplete = completion === 100;
 
   // ✅ FIRST: function declare करा
+  // In ProfilePage.jsx - Update loadUserData
   const loadUserData = async () => {
-  try {
-    setLoading(true);
-    // First get local storage data
-    const stored = localStorage.getItem("bio-user");
-    if (!stored) {
-      router.push("/");
-      return;
-    }
-
-    const localUser = JSON.parse(stored);
-    const token = localStorage.getItem("auth_token");
-    
-    console.log("🔍 Loading user data...");
-    console.log("Local user:", localUser);
-    console.log("Token exists:", !!token);
-
-    // Try to fetch fresh data from API
-    let apiUser = null;
-    
     try {
-      // Check if we have a token for authentication
-      const headers = { 'Content-Type': 'application/json' };
-      if (token) {
-        headers['Authorization'] = `Bearer ${token}`;
+      setLoading(true);
+
+      const token = localStorage.getItem("auth_token");
+      if (!token) {
+        router.push("/");
+        return;
       }
+
+      console.log(
+        "🔍 Loading user data with token:",
+        token.substring(0, 20) + "..."
+      );
 
       const res = await fetch("/api/auth", {
-        method: 'GET',
-        headers: headers,
-        credentials: 'include'
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
       });
 
-      if (res.ok) {
-        const data = await res.json();
-        console.log("API response data:", data);
-        
-        if (data.user) {
-          apiUser = data.user;
-        }
+      const data = await res.json();
+      console.log("✅ API response:", data);
+
+      if (data.success && data.user) {
+        setProfile({
+          username: data.user.username,
+          email: data.user.email,
+          mobile: data.user.mobile || "",
+          gender: data.user.gender || "",
+          street: data.user.street || "",
+          city: data.user.city || "",
+          pincode: data.user.pincode || "",
+        });
+
+        // Update localStorage
+        localStorage.setItem("bio-user", JSON.stringify(data.user));
+        setUsername(data.user.username);
       } else {
-        console.warn("API failed with status:", res.status);
+        console.error("❌ Failed to load user data:", data.message);
       }
-    } catch (apiError) {
-      console.warn("API fetch failed, using local data:", apiError);
+    } catch (error) {
+      console.error("❌ Error loading user data:", error);
+    } finally {
+      setLoading(false);
     }
-
-    // Use API data if available, otherwise use local storage data
-    const userData = apiUser || localUser;
-    
-    // Make sure we have all required fields with fallbacks
-    setProfile({
-      username: userData.username || localUser.username || "",
-      email: userData.email || localUser.email || "",
-      street: userData.street || userData.address?.street || "",
-      city: userData.city || userData.address?.city || "",
-      pincode: userData.pincode || userData.address?.pincode || "",
-      mobile: userData.mobile || userData.phone || "",
-      gender: userData.gender || "",
-    });
-
-    // Update localStorage with latest data
-    if (apiUser) {
-      localStorage.setItem("bio-user", JSON.stringify({
-        ...localUser,
-        ...apiUser
-      }));
-    }
-
-  } catch (error) {
-    console.error("❌ Error in loadUserData:", error);
-    
-    // Fallback to localStorage only
-    const stored = localStorage.getItem("bio-user");
-    if (stored) {
-      const user = JSON.parse(stored);
-      setProfile({
-        username: user.username || "",
-        email: user.email || "",
-        street: "",
-        city: "",
-        pincode: "",
-        mobile: "",
-        gender: "",
-      });
-    }
-  } finally {
-    setLoading(false);
-  }
-};
+  };
 
   // Update useEffect:
   useEffect(() => {
@@ -280,182 +240,147 @@ export default function ProfilePage() {
     router.push("/");
   };
 
+  // Update saveProfile function
   const saveProfile = async () => {
-  setMessage("Processing...");
+    setMessage("Saving...");
+    console.log("🔄 Starting profile save");
 
-  // Get current user email from localStorage for the update
-  const stored = localStorage.getItem("bio-user");
-  if (!stored) {
-    setMessage("Error: No user session found");
-    return;
-  }
+    try {
+      // Get token from localStorage OR from context
+      const token = localStorage.getItem("auth_token");
 
-  const localUser = JSON.parse(stored);
-  const userEmail = localUser.email;
+      console.log("🔄 Token available:", !!token);
 
-  if (!userEmail) {
-    setMessage("Error: User email not found");
-    return;
-  }
+      if (!token) {
+        // Try to get from cookies via API
+        console.log("🔄 No token in localStorage, trying cookie auth");
+      }
 
-  try {
-    const updateData = {
-      email: userEmail, // Keep the email for identification
-      username: profile.username,
-      street: profile.street,
-      city: profile.city,
-      pincode: profile.pincode,
-      mobile: profile.mobile,
-      gender: profile.gender,
-    };
-
-    console.log("Sending update data:", updateData);
-
-    const res = await fetch("/api/auth", {
-      method: "PUT",
-      headers: { 
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${localStorage.getItem("auth_token")}`
-      },
-      body: JSON.stringify(updateData),
-    });
-
-    console.log("Update response status:", res.status);
-
-    // Handle unauthorized
-    if (res.status === 401) {
-      setMessage("Error: Session expired. Please login again.");
-      setTimeout(() => {
-        localStorage.removeItem("bio-user");
-        localStorage.removeItem("auth_token");
-        router.push("/");
-      }, 2000);
-      return;
-    }
-
-    const data = await res.json();
-    console.log("Update response data:", data);
-
-    if (!res.ok || !data.success) {
-      setMessage("Error: " + (data.message || "Failed to save. Check console for details."));
-      return;
-    }
-
-    // Update localStorage with new data
-    if (data.user) {
-      const updatedUser = {
-        ...localUser,
-        username: data.user.username || profile.username,
-        email: data.user.email || userEmail,
-        ...data.user
+      const updateData = {
+        username: profile.username,
+        mobile: profile.mobile,
+        gender: profile.gender,
+        street: profile.street,
+        city: profile.city,
+        pincode: profile.pincode,
       };
-      localStorage.setItem("bio-user", JSON.stringify(updatedUser));
-      
-      // Update state
-      setUsername(data.user.username || profile.username);
-      setProfile(prev => ({
-        ...prev,
-        username: data.user.username || profile.username,
-        email: data.user.email || userEmail,
-      }));
-    } else {
-      // If no user in response, update with what we sent
-      localUser.username = profile.username;
-      localStorage.setItem("bio-user", JSON.stringify(localUser));
-    }
 
-    setMessage("Success: Profile updated!");
-    setIsEditing(false);
-    
-    // Reload data from API
-    setTimeout(() => {
-      loadUserData();
-    }, 500);
+      console.log("🔄 Update data:", updateData);
 
-  } catch (err) {
-    console.error("Save error:", err);
-    setMessage("Error: Server connection failed. " + err.message);
-  }
+      // Use the existing /api/auth endpoint (PUT method)
+      const res = await fetch("/api/auth", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          ...(token && { Authorization: `Bearer ${token}` }),
+        },
+        body: JSON.stringify(updateData),
+      });
 
-  setTimeout(() => setMessage(""), 3000);
-};
+      console.log("🔄 Response status:", res.status);
 
- // In your changePassword function
-const changePassword = async () => {
-  setMessage("Processing...");
+      const data = await res.json();
+      console.log("🔄 Response data:", data);
 
-  if (!pwd.currentPassword || !pwd.newPassword || !pwd.confirmNewPassword) {
-    setMessage("Error: Fill all password fields.");
-    return;
-  }
-
-  if (pwd.newPassword !== pwd.confirmNewPassword) {
-    setMessage("Error: New passwords do not match.");
-    return;
-  }
-
-  try {
-    const token = localStorage.getItem("auth_token");
-    
-    console.log("🔐 Frontend: Token from localStorage:", token);
-    
-    if (!token) {
-      setMessage("Error: No authentication token found. Please login again.");
-      // Redirect to login
-      setTimeout(() => {
-        localStorage.removeItem("bio-user");
-        router.push("/");
-      }, 2000);
-      return;
-    }
-
-    const res = await fetch("/api/auth/password", {
-      method: "PUT",
-      headers: { 
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`
-      },
-      body: JSON.stringify({
-        currentPassword: pwd.currentPassword,
-        newPassword: pwd.newPassword,
-      }),
-    });
-
-    console.log("🔐 Frontend: Response status:", res.status);
-    
-    const data = await res.json();
-    console.log("🔐 Frontend: Response data:", data);
-
-    if (!res.ok || !data.success) {
-      if (res.status === 401) {
-        setMessage("Error: Session expired. Please login again.");
-        setTimeout(() => {
-          localStorage.removeItem("bio-user");
-          localStorage.removeItem("auth_token");
-          router.push("/");
-        }, 2000);
+      if (!res.ok || !data.success) {
+        setMessage("Error: " + (data.message || "Failed to save profile"));
         return;
       }
-      setMessage("Error: " + (data.message || "Failed to change password."));
+
+      // ✅ CRITICAL: Update localStorage with new data
+      const stored = localStorage.getItem("bio-user");
+      if (stored) {
+        const user = JSON.parse(stored);
+        const updatedUser = { ...user, ...data.user };
+        localStorage.setItem("bio-user", JSON.stringify(updatedUser));
+      }
+
+      // Update state
+      setUsername(data.user.username);
+      setProfile({
+        username: data.user.username,
+        email: data.user.email,
+        mobile: data.user.mobile || "",
+        gender: data.user.gender || "",
+        street: data.user.street || "",
+        city: data.user.city || "",
+        pincode: data.user.pincode || "",
+      });
+
+      setMessage("✅ Profile updated successfully!");
+      setIsEditing(false);
+
+      // Optional: Reload data
+      setTimeout(() => {
+        console.log("🔄 Reloading user data...");
+        loadUserData();
+      }, 500);
+    } catch (err) {
+      console.error("❌ Save error:", err);
+      setMessage("❌ Server connection failed. Please try again.");
+    }
+
+    setTimeout(() => setMessage(""), 3000);
+  };
+
+  // Update changePassword function
+  const changePassword = async () => {
+    setMessage("Processing...");
+
+    // Validation
+    if (!pwd.currentPassword || !pwd.newPassword || !pwd.confirmNewPassword) {
+      setMessage("❌ Please fill all password fields");
       return;
     }
 
-    // Clear fields
-    setPwd({
-      currentPassword: "",
-      newPassword: "",
-      confirmNewPassword: "",
-    });
+    if (pwd.newPassword !== pwd.confirmNewPassword) {
+      setMessage("❌ New passwords do not match");
+      return;
+    }
 
-    setMessage("Success: Password updated!");
-  } catch (err) {
-    console.error("🔐 Frontend: Network error:", err);
-    setMessage("Error: Server connection failed.");
-  }
+    try {
+      const token = localStorage.getItem("auth_token");
 
-  setTimeout(() => setMessage(""), 3000);
-};
+      console.log("🔐 Password change - Token:", !!token);
 
+      // Use existing /api/auth/password endpoint
+      const res = await fetch("/api/auth/password", {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+          ...(token && { Authorization: `Bearer ${token}` }),
+        },
+        body: JSON.stringify({
+          currentPassword: pwd.currentPassword,
+          newPassword: pwd.newPassword,
+        }),
+      });
+
+      console.log("🔐 Response status:", res.status);
+
+      const data = await res.json();
+      console.log("🔐 Response:", data);
+
+      if (!res.ok || !data.success) {
+        setMessage("❌ " + (data.message || "Failed to change password"));
+        return;
+      }
+
+      // Clear fields
+      setPwd({
+        currentPassword: "",
+        newPassword: "",
+        confirmNewPassword: "",
+      });
+
+      setMessage("✅ Password updated successfully!");
+    } catch (err) {
+      console.error("🔐 Error:", err);
+      setMessage("❌ Server connection failed");
+    }
+
+    setTimeout(() => setMessage(""), 3000);
+  };
   if (loading)
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50">

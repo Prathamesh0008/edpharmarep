@@ -1,11 +1,17 @@
-//Ed_Pharma\app\contact\page.jsx
+// app/contact/page.jsx
 "use client";
 
 import { useState } from "react";
-import Navbar  from "../components/Navbar";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactPage() {
+  const { t, language } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
+  
+  console.log("DEBUG Contact: Current language:", language);
+  console.log("DEBUG Contact: Contact translations:", t?.contactPage);
+
   const [form, setForm] = useState({
     email: "",
     phone: "",
@@ -17,6 +23,70 @@ export default function ContactPage() {
   const [errors, setErrors] = useState({});
   const [shake, setShake] = useState(false);
 
+  // Get translations from context, fallback to English structure
+  const contactTranslations = t?.contactPage || {
+    hero: {
+      title: "Contact Us",
+      subtitle: "Get in touch with us for any inquiries or support"
+    },
+    contactInfo: [
+      { 
+        icon: "📞", 
+        title: "(+91)-9525446820", 
+        description: "Call us for any questions or support" 
+      },
+      { 
+        icon: "✉️", 
+        title: "mail@influenca.id", 
+        description: "Email us for business inquiries" 
+      },
+      { 
+        icon: "📍", 
+        title: "London Eye London", 
+        description: "Our main office location" 
+      },
+    ],
+    form: {
+      labels: {
+        email: "Email *",
+        phone: "Phone *",
+        name: "Name *",
+        message: "Message *"
+      },
+      placeholders: {
+        email: "Enter your email address",
+        phone: "Enter your phone number",
+        name: "Enter your full name",
+        message: "Type your message here..."
+      },
+      submitButton: "Submit Message",
+      successMessage: "✅ Message sent successfully!"
+    },
+    validation: {
+      email: {
+        required: "Email is required",
+        invalid: "Email is invalid"
+      },
+      phone: {
+        required: "Phone is required",
+        invalid: "Phone number is invalid"
+      },
+      name: {
+        required: "Name is required"
+      },
+      message: {
+        required: "Message is required"
+      }
+    }
+  };
+
+  const hero = contactTranslations?.hero || {};
+  const contactInfo = contactTranslations?.contactInfo || [];
+  const formLabels = contactTranslations?.form?.labels || {};
+  const formPlaceholders = contactTranslations?.form?.placeholders || {};
+  const formButtons = contactTranslations?.form || {};
+  const validation = contactTranslations?.validation || {};
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
     if (errors[e.target.name]) {
@@ -26,15 +96,15 @@ export default function ContactPage() {
 
   const validate = () => {
     let newErrors = {};
-    if (!form.email) newErrors.email = "Email is required";
-    else if (!/\S+@\S+\.\S+/.test(form.email)) newErrors.email = "Email is invalid";
+    if (!form.email) newErrors.email = validation.email?.required || "Email is required";
+    else if (!/\S+@\S+\.\S+/.test(form.email)) newErrors.email = validation.email?.invalid || "Email is invalid";
 
-    if (!form.phone) newErrors.phone = "Phone is required";
-    else if (!/^\+?[\d\s\-()]{7,}$/.test(form.phone)) newErrors.phone = "Phone number is invalid";
+    if (!form.phone) newErrors.phone = validation.phone?.required || "Phone is required";
+    else if (!/^\+?[\d\s\-()]{7,}$/.test(form.phone)) newErrors.phone = validation.phone?.invalid || "Phone number is invalid";
 
-    if (!form.name) newErrors.name = "Name is required";
+    if (!form.name) newErrors.name = validation.name?.required || "Name is required";
 
-    if (!form.message) newErrors.message = "Message is required";
+    if (!form.message) newErrors.message = validation.message?.required || "Message is required";
 
     return newErrors;
   };
@@ -64,34 +134,66 @@ export default function ContactPage() {
 
   return (
     <main className="min-h-screen bg-[#eaf3f3] text-[#0f2f2f]">
-{/* <Navbar/> */}
+      {/* Debug banner - remove this after testing */}
+      <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
+        <div>Lang: {language}</div>
+        <div>Has contactPage: {t?.contactPage ? "Yes" : "No"}</div>
+      </div>
+      
+      {/* <Navbar/> */}
+      
       {/* HERO */}
       <section className="text-center px-4 py-20">
         <h1 className="text-3xl md:text-4xl font-bold">
-          Contact Us
+          {hero.title || "Contact Us"}
         </h1>
-        <p className="mt-2 max-w-xl mx-auto text-gray-600"></p>
+        <p className="mt-2 max-w-xl mx-auto text-gray-600">
+          {hero.subtitle || "Get in touch with us for any inquiries or support"}
+        </p>
       </section>
 
       {/* 2-Column Layout */}
       <section className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 mb-20">
-
-
         {/* LEFT SIDE - INFO CARDS */}
         <div className="flex flex-col gap-4">
-          {[
-            { icon: "📞", title: "(+91)-9525446820", desc: "Lorem ipsum dolor sit amet." },
-            { icon: "✉️", title: "mail@influenca.id", desc: "Lorem ipsum dolor sit amet." },
-            { icon: "📍", title: "London Eye London", desc: "Lorem ipsum dolor sit amet." },
-          ].map((item, i) => (
-            <div key={i} className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
-              <div className="text-3xl sm:text-4xl">{item.icon}</div>
-              <div>
-                <h4 className="font-semibold">{item.title}</h4>
-                <p className="text-sm text-gray-600 mt-1">{item.desc}</p>
+          {contactInfo.length > 0 ? (
+            contactInfo.map((item, i) => (
+              <div key={i} className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
+                <div className="text-3xl sm:text-4xl">{item.icon || "📞"}</div>
+                <div>
+                  <h4 className="font-semibold">{item.title || "Contact Info"}</h4>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {item.description || "Contact description"}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            // Fallback if no contact info
+            <>
+              <div className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
+                <div className="text-3xl sm:text-4xl">📞</div>
+                <div>
+                  <h4 className="font-semibold">(+91)-9525446820</h4>
+                  <p className="text-sm text-gray-600 mt-1">Call us for any questions or support</p>
+                </div>
+              </div>
+              <div className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
+                <div className="text-3xl sm:text-4xl">✉️</div>
+                <div>
+                  <h4 className="font-semibold">mail@influenca.id</h4>
+                  <p className="text-sm text-gray-600 mt-1">Email us for business inquiries</p>
+                </div>
+              </div>
+              <div className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
+                <div className="text-3xl sm:text-4xl">📍</div>
+                <div>
+                  <h4 className="font-semibold">London Eye London</h4>
+                  <p className="text-sm text-gray-600 mt-1">Our main office location</p>
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         {/* RIGHT SIDE - CONTACT FORM */}
@@ -102,7 +204,9 @@ export default function ContactPage() {
         >
           <div className="grid md:grid-cols-2 gap-3">
             <div>
-              <label className="field-label">Email *</label>
+              <label className="field-label">
+                {formLabels.email || "Email *"}
+              </label>
               <input
                 type="email"
                 name="email"
@@ -110,12 +214,15 @@ export default function ContactPage() {
                 onChange={handleChange}
                 className={`field-input ${errors.email ? "input-error" : ""}`}
                 aria-invalid={errors.email ? "true" : "false"}
+                placeholder={formPlaceholders.email || "Enter your email address"}
               />
               {errors.email && <p className="error-text">{errors.email}</p>}
             </div>
 
             <div>
-              <label className="field-label">Phone *</label>
+              <label className="field-label">
+                {formLabels.phone || "Phone *"}
+              </label>
               <input
                 type="tel"
                 name="phone"
@@ -123,13 +230,16 @@ export default function ContactPage() {
                 onChange={handleChange}
                 className={`field-input ${errors.phone ? "input-error" : ""}`}
                 aria-invalid={errors.phone ? "true" : "false"}
+                placeholder={formPlaceholders.phone || "Enter your phone number"}
               />
               {errors.phone && <p className="error-text">{errors.phone}</p>}
             </div>
           </div>
 
           <div className="mt-3">
-            <label className="field-label">Name *</label>
+            <label className="field-label">
+              {formLabels.name || "Name *"}
+            </label>
             <input
               type="text"
               name="name"
@@ -137,18 +247,22 @@ export default function ContactPage() {
               onChange={handleChange}
               className={`field-input ${errors.name ? "input-error" : ""}`}
               aria-invalid={errors.name ? "true" : "false"}
+              placeholder={formPlaceholders.name || "Enter your full name"}
             />
             {errors.name && <p className="error-text">{errors.name}</p>}
           </div>
 
           <div className="mt-3">
-            <label className="field-label">Message *</label>
+            <label className="field-label">
+              {formLabels.message || "Message *"}
+            </label>
             <textarea
               name="message"
               value={form.message}
               onChange={handleChange}
               className={`field-input h-28 resize-none ${errors.message ? "input-error" : ""}`}
               aria-invalid={errors.message ? "true" : "false"}
+              placeholder={formPlaceholders.message || "Type your message here..."}
             />
             {errors.message && <p className="error-text">{errors.message}</p>}
           </div>
@@ -157,16 +271,15 @@ export default function ContactPage() {
             type="submit"
             className="btn-primary mt-4 w-full sm:w-auto hover:scale-105 transition-transform duration-300"
           >
-            Submit Button
+            {formButtons.submitButton || "Submit Message"}
           </button>
 
           {submitted && (
             <p className="mt-3 text-green-700 text-sm">
-              ✅ Message sent successfully!
+              {formButtons.successMessage || "✅ Message sent successfully!"}
             </p>
           )}
         </form>
-
       </section>
       {/* <Footer/> */}
 
@@ -233,6 +346,5 @@ export default function ContactPage() {
         }
       `}</style>
     </main>
-    
   );
 }

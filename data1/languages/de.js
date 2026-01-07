@@ -1,25 +1,6 @@
 //data\languages\de.jsx
 const de = {
-  home: "Startseite",
-  products: "Produkte",
-  about: "Über uns",
-  terms: "Bedingungen",
-  contact: "Kontakt",
-  orders: "Meine Bestellungen",
-  download: "Katalog herunterladen",
-  login: "Anmelden",
-  logout: "Abmelden",
-  profile: "Mein Profil",
-  hi: "Hallo",
-  language: "Sprache",
-  selectLanguage: "Sprache auswählen",
-  chooseLanguage: "Wählen Sie Ihre bevorzugte Sprache",
-  current: "Aktuell",
-  welcomeBack: "Willkommen zurück!",
-  welcome: "Willkommen!",
-  guestUser: "Gastbenutzer",
-  loginRegister: "Anmelden / Registrieren",
-  rightsReserved: "Alle Rechte vorbehalten.",
+  
   about: {
     hero: {
       tag: "ÜBER UNS",
@@ -353,6 +334,101 @@ termsPage: {
     }
   ]
 },
+contactPage: {
+  hero: {
+    title: "Kontaktieren Sie Uns",
+    subtitle: "Kontaktieren Sie uns bei Fragen oder Supportanfragen"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "Rufen Sie uns bei Fragen oder Support an" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "E-Mail uns für geschäftliche Anfragen" 
+    },
+    { 
+      icon: "📍", 
+      title: "London Eye London", 
+      description: "Unser Hauptstandort" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "E-Mail *",
+      phone: "Telefon *",
+      name: "Name *",
+      message: "Nachricht *"
+    },
+    placeholders: {
+      email: "Geben Sie Ihre E-Mail-Adresse ein",
+      phone: "Geben Sie Ihre Telefonnummer ein",
+      name: "Geben Sie Ihren vollständigen Namen ein",
+      message: "Geben Sie hier Ihre Nachricht ein..."
+    },
+    submitButton: "Nachricht Senden",
+    successMessage: "✅ Nachricht erfolgreich gesendet!"
+  },
+  validation: {
+    email: {
+      required: "E-Mail ist erforderlich",
+      invalid: "E-Mail ist ungültig"
+    },
+    phone: {
+      required: "Telefon ist erforderlich",
+      invalid: "Telefonnummer ist ungültig"
+    },
+    name: {
+      required: "Name ist erforderlich"
+    },
+    message: {
+      required: "Nachricht ist erforderlich"
+    }
+  }
+},
+productsPage: {
+  hero: {
+    suffix: "Produkte",
+    subtitle: "Durchsuchen Sie unser umfassendes Sortiment an pharmazeutischen Produkten"
+  },
+  filters: {
+    searchPlaceholder: "Produkte nach Name, Zusammensetzung oder Beschreibung suchen...",
+    allCompounds: "Alle Verbindungen",
+    resetButton: "Alle Filter Zurücksetzen",
+    clearSearch: "Suche Löschen"
+  },
+  productCard: {
+    viewDetails: "Details Anzeigen",
+    addToCart: "In den Warenkorb",
+    buyNow: "Jetzt Kaufen",
+    dosageLabel: "Dosierung:",
+    compositionLabel: "Zusammensetzung:",
+    packSizeLabel: "Packungsgröße:",
+    skusAvailable: "SKUs",
+    productsAvailable: "Produkte verfügbar",
+    productAvailable: "Produkt verfügbar"
+  },
+  emptyState: {
+    title: "Keine Produkte Gefunden",
+    description: "Wir konnten keine Produkte finden, die Ihren Suchkriterien entsprechen."
+  }
+},
+productDetail: {
+  notFound: "Produkt nicht gefunden",
+  backButton: "← Zurück zu den Produkten",
+  labels: {
+    category: "Kategorie:",
+    brand: "Marke:",
+    price: "Preis:",
+    overview: "Übersicht"
+  },
+  sections: {
+    overview: "Übersicht"
+  }
+},
 profilePage: {
   loading: "Ihr Profil wird geladen...",
   nav: {
@@ -534,7 +610,31 @@ offer: {
   subDiscount: "Nur auf die erste Rechnung",
   buttonText: "Katalog anfordern"
 },
-
+featuredProducts: {
+  tag: "Premium Auswahl",
+  title: "Empfohlen",
+  subtitle: "Pharmazeutische Produkte",
+  description: "Entdecken Sie unser sorgfältig ausgewähltes Sortiment an Premium-Pharmalösungen, die von Gesundheitsfachkräften weltweit vertraut werden.",
+  viewAll: "Alle Produkte Anzeigen",
+  featuredBadge: "Empfohlen",
+  categoryLabel: "Kategorie:",
+  dosageLabel: "Dosierung:",
+  formLabel: "Form:",
+  packLabel: "Verpackung:",
+  viewDetails: "Details Anzeigen",
+  enquire: "Anfragen",
+  defaultCategory: "Pharmazeutisch",
+  stats: {
+    products: "200+",
+    productsLabel: "Produkte",
+    countries: "40+",
+    countriesLabel: "Länder",
+    gmp: "GMP",
+    gmpLabel: "Zertifiziert",
+    support: "24/7",
+    supportLabel: "Support"
+  }
+},
 testimonials: {
   tag: "KUNDENSTIMMEN",
   title: "Was unsere Kunden sagen",

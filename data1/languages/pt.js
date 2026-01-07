@@ -1,4 +1,4 @@
-const pt = {
+  const pt = {
   about: {
     hero: {
       tag: "SOBRE NÓS",
@@ -336,6 +336,101 @@ termsPage: {
     }
   ]
 },
+contactPage: {
+  hero: {
+    title: "Contacte-Nos",
+    subtitle: "Entre em contacto connosco para quaisquer perguntas ou suporte"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "Ligue-nos para quaisquer perguntas ou suporte" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "Envie-nos email para consultas comerciais" 
+    },
+    { 
+      icon: "📍", 
+      title: "London Eye Londres", 
+      description: "Nossa localização principal" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "Email *",
+      phone: "Telefone *",
+      name: "Nome *",
+      message: "Mensagem *"
+    },
+    placeholders: {
+      email: "Insira o seu endereço de email",
+      phone: "Insira o seu número de telefone",
+      name: "Insira o seu nome completo",
+      message: "Digite sua mensagem aqui..."
+    },
+    submitButton: "Enviar Mensagem",
+    successMessage: "✅ Mensagem enviada com sucesso!"
+  },
+  validation: {
+    email: {
+      required: "Email é obrigatório",
+      invalid: "Email é inválido"
+    },
+    phone: {
+      required: "Telefone é obrigatório",
+      invalid: "Número de telefone é inválido"
+    },
+    name: {
+      required: "Nome é obrigatório"
+    },
+    message: {
+      required: "Mensagem é obrigatória"
+    }
+  }
+},
+productsPage: {
+  hero: {
+    suffix: "Produtos",
+    subtitle: "Navegue pela nossa abrangente gama de produtos farmacêuticos"
+  },
+  filters: {
+    searchPlaceholder: "Pesquisar produtos por nome, composição ou descrição...",
+    allCompounds: "Todos os Compostos",
+    resetButton: "Redefinir Todos os Filtros",
+    clearSearch: "Limpar Pesquisa"
+  },
+  productCard: {
+    viewDetails: "Ver Detalhes",
+    addToCart: "Adicionar ao Carrinho",
+    buyNow: "Comprar Agora",
+    dosageLabel: "Dosagem:",
+    compositionLabel: "Composição:",
+    packSizeLabel: "Tamanho da Embalagem:",
+    skusAvailable: "SKUs",
+    productsAvailable: "produtos disponíveis",
+    productAvailable: "produto disponível"
+  },
+  emptyState: {
+    title: "Nenhum Produto Encontrado",
+    description: "Não conseguimos encontrar produtos que correspondam aos seus critérios de pesquisa."
+  }
+},
+productDetail: {
+  notFound: "Produto não encontrado",
+  backButton: "← Voltar aos Produtos",
+  labels: {
+    category: "Categoria:",
+    brand: "Marca:",
+    price: "Preço:",
+    overview: "Visão Geral"
+  },
+  sections: {
+    overview: "Visão Geral"
+  }
+},
 profilePage: {
   loading: "A carregar o seu perfil...",
   nav: {
@@ -501,6 +596,31 @@ productsPage: {
   discount: "5% de desconto líquido",
   subDiscount: "Apenas na primeira fatura",
   buttonText: "Solicitar catálogo"
+},
+featuredProducts: {
+  tag: "Seleção Premium",
+  title: "Destacados",
+  subtitle: "Produtos Farmacêuticos",
+  description: "Explore nossa gama cuidadosamente selecionada de soluções farmacêuticas premium, confiadas por profissionais de saúde em todo o mundo.",
+  viewAll: "Ver Todos os Produtos",
+  featuredBadge: "Destacado",
+  categoryLabel: "Categoria:",
+  dosageLabel: "Dosagem:",
+  formLabel: "Forma:",
+  packLabel: "Embalagem:",
+  viewDetails: "Ver Detalhes",
+  enquire: "Consultar",
+  defaultCategory: "Farmacêutico",
+  stats: {
+    products: "200+",
+    productsLabel: "Produtos",
+    countries: "40+",
+    countriesLabel: "Países",
+    gmp: "GMP",
+    gmpLabel: "Certificado",
+    support: "24/7",
+    supportLabel: "Suporte"
+  }
 },
 
 testimonials: {

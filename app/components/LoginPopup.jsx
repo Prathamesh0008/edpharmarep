@@ -28,34 +28,35 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
   const [cityError, setCityError] = useState("");
   const [isMobile, setIsMobile] = useState(false);
   const [viewportHeight, setViewportHeight] = useState("100vh");
-  
+
   const router = useRouter();
-    const { login } = useAuth();
+  const { login } = useAuth();
   const abortControllerRef = useRef(null);
   const modalRef = useRef(null);
 
   // Admin credentials from environment variables
-  const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin@edpharma.com";
+  const ADMIN_EMAIL =
+    process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin@edpharma.com";
   const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "admin@123";
 
   // Check if mobile device and handle iOS viewport issues
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
-      
+
       // Fix for iOS viewport height issues
       const vh = window.innerHeight * 0.01;
       setViewportHeight(`${vh}px`);
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
     };
-    
+
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    window.addEventListener('orientationchange', checkMobile);
-    
+    window.addEventListener("resize", checkMobile);
+    window.addEventListener("orientationchange", checkMobile);
+
     return () => {
-      window.removeEventListener('resize', checkMobile);
-      window.removeEventListener('orientationchange', checkMobile);
+      window.removeEventListener("resize", checkMobile);
+      window.removeEventListener("orientationchange", checkMobile);
     };
   }, []);
 
@@ -65,16 +66,18 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
       const viewportMeta = document.querySelector('meta[name="viewport"]');
       if (viewportMeta && isMobile) {
         // Store original content
-        const originalContent = viewportMeta.getAttribute('content');
-        viewportMeta.setAttribute('content', 
-          'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-        
+        const originalContent = viewportMeta.getAttribute("content");
+        viewportMeta.setAttribute(
+          "content",
+          "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        );
+
         return () => {
-          viewportMeta.setAttribute('content', originalContent);
+          viewportMeta.setAttribute("content", originalContent);
         };
       }
     };
-    
+
     if (isOpen && isMobile) {
       return handleViewportMeta();
     }
@@ -94,21 +97,21 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
         confirmPassword: "",
       });
       setAddrDetails({ street: "", city: "", pincode: "" });
-      
+
       // Prevent background scrolling on mobile
       if (isMobile) {
-        document.body.style.overflow = 'hidden';
-        document.body.style.position = 'fixed';
-        document.body.style.width = '100%';
+        document.body.style.overflow = "hidden";
+        document.body.style.position = "fixed";
+        document.body.style.width = "100%";
       }
     } else {
       const timer = setTimeout(() => setIsVisible(false), 300);
       return () => {
         clearTimeout(timer);
         // Restore scrolling
-        document.body.style.overflow = '';
-        document.body.style.position = '';
-        document.body.style.width = '';
+        document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
       };
     }
   }, [isOpen, isMobile]);
@@ -124,13 +127,13 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
   // Handle escape key
   useEffect(() => {
     const handleEscape = (e) => {
-      if (e.key === 'Escape' && isOpen) {
+      if (e.key === "Escape" && isOpen) {
         onClose();
       }
     };
-    
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
+
+    window.addEventListener("keydown", handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
   }, [isOpen, onClose]);
 
   // Handle click outside
@@ -140,15 +143,15 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
         onClose();
       }
     };
-    
+
     if (isOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('touchstart', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
     }
-    
+
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      document.removeEventListener('touchstart', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [isOpen, onClose]);
 
@@ -174,53 +177,57 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  console.log('🔍 LoginPopup: Form submitted');
-  console.log('🔍 LoginPopup: Email entered:', formData.email);
-  console.log('🔍 LoginPopup: Password entered:', formData.password);
+    console.log("🔍 LoginPopup: Form submitted");
+    console.log("🔍 LoginPopup: Email entered:", formData.email);
+    console.log("🔍 LoginPopup: Password entered:", formData.password);
 
-  // Admin credentials from environment variables
-  const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin@edpharma.com";
-  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "admin@123";
-  
-  console.log('🔍 LoginPopup: Admin email from env:', ADMIN_EMAIL);
-  console.log('🔍 LoginPopup: Admin password from env:', ADMIN_PASSWORD);
+    // Admin credentials from environment variables
+    const ADMIN_EMAIL =
+      process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin@edpharma.com";
+    const ADMIN_PASSWORD =
+      process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "admin@123";
 
-  // Check if admin credentials are entered
-  if (isLogin && formData.email === ADMIN_EMAIL && 
-      formData.password === ADMIN_PASSWORD) {
-    
-    console.log('🔍 LoginPopup: ADMIN CREDENTIALS MATCHED!');
-    
-    // Create admin user object
-    const adminUser = {
-      _id: "admin",
-      username: "Admin",
-      email: ADMIN_EMAIL,
-      role: "admin"
-    };
+    console.log("🔍 LoginPopup: Admin email from env:", ADMIN_EMAIL);
+    console.log("🔍 LoginPopup: Admin password from env:", ADMIN_PASSWORD);
 
-    console.log('🔍 LoginPopup: Admin user object created:', adminUser);
+    // Check if admin credentials are entered
+    if (
+      isLogin &&
+      formData.email === ADMIN_EMAIL &&
+      formData.password === ADMIN_PASSWORD
+    ) {
+      console.log("🔍 LoginPopup: ADMIN CREDENTIALS MATCHED!");
 
-    // Store in context and localStorage
-    login(adminUser);
-    
-    // Call success callback if provided
-    if (onLoginSuccess) {
-      onLoginSuccess(adminUser);
+      // Create admin user object
+      const adminUser = {
+        _id: "admin",
+        username: "Admin",
+        email: ADMIN_EMAIL,
+        role: "admin",
+      };
+
+      console.log("🔍 LoginPopup: Admin user object created:", adminUser);
+
+      // Store in context and localStorage
+      login(adminUser);
+
+      // Call success callback if provided
+      if (onLoginSuccess) {
+        onLoginSuccess(adminUser);
+      }
+
+      // Close popup
+      onClose();
+
+      console.log("🔍 LoginPopup: Redirecting to /admin/dashboard");
+
+      // Redirect to admin panel
+      router.push("/admin/dashboard");
+
+      return;
     }
-    
-    // Close popup
-    onClose();
-    
-    console.log('🔍 LoginPopup: Redirecting to /admin/dashboard');
-    
-    // Redirect to admin panel
-    router.push("/admin/dashboard");
-    
-    return;
-  }
 
     if (!isLogin && formData.password !== formData.confirmPassword) {
       setMessage("Passwords do not match");
@@ -270,29 +277,42 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
       }
 
       if (isLogin) {
+        // ✅ CRITICAL: Store token in localStorage
+        if (data.token) {
+          localStorage.setItem("auth_token", data.token);
+        }
+
         const userObj = {
-          _id: data.user._id || data.user.id,
-          username:
-            data.user.username ||
-            data.user.name ||
-            data.user.fullName ||
-            data.user.email?.split("@")[0],
+          _id: data.user._id,
+          username: data.user.username,
           email: data.user.email,
+          mobile: data.user.mobile,
+          gender: data.user.gender,
+          street: data.user.street,
+          city: data.user.city,
+          pincode: data.user.pincode,
         };
 
         // Store in localStorage
-        loginUser(userObj);
-        
+        localStorage.setItem("bio-user", JSON.stringify(userObj));
+
+        // Update context
+        if (login) {
+          login(userObj);
+        }
+
         if (onLoginSuccess) {
           onLoginSuccess(userObj);
         }
-        
+
         onClose();
+
+        // Redirect to profile
+        router.push("/profile");
       } else {
         setMessage("Account created! Please login.");
         setIsLogin(true);
       }
-
     } catch (err) {
       if (err.name === "AbortError") return;
       setMessage("Server error. Please try again.");
@@ -322,37 +342,38 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
       className={`
         fixed inset-0 z-[9999] flex justify-center items-start sm:items-center 
         transition-all duration-300 ease-in-out px-4
-        ${isOpen
-          ? "bg-[#0f172a]/90 backdrop-blur-sm opacity-100"
-          : "bg-transparent opacity-0 pointer-events-none"
+        ${
+          isOpen
+            ? "bg-[#0f172a]/90 backdrop-blur-sm opacity-100"
+            : "bg-transparent opacity-0 pointer-events-none"
         }
       `}
-      style={{ 
-        height: isMobile ? '100vh' : '100%',
-        minHeight: isMobile ? '-webkit-fill-available' : '100%'
+      style={{
+        height: isMobile ? "100vh" : "100%",
+        minHeight: isMobile ? "-webkit-fill-available" : "100%",
       }}
     >
       <div
         ref={modalRef}
         className={`
           bg-white w-full
-          ${isMobile 
-            ? 'max-w-full rounded-t-2xl rounded-b-none mt-12' 
-            : 'max-w-[500px] rounded-2xl'
+          ${
+            isMobile
+              ? "max-w-full rounded-t-2xl rounded-b-none mt-12"
+              : "max-w-[500px] rounded-2xl"
           }
           shadow-2xl relative flex flex-col 
           transition-all duration-300 ease-out
           transform overflow-y-auto
-          ${isMobile ? 'p-6' : 'p-8'}
-          ${isOpen
-            ? "translate-y-0 opacity-100"
-            : "translate-y-full opacity-0"
-          }
+          ${isMobile ? "p-6" : "p-8"}
+          ${isOpen ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"}
         `}
         style={{
-          maxHeight: isMobile ? `calc(${viewportHeight} * 90)` : 'calc(100vh - 4rem)',
-          height: isMobile ? 'auto' : 'auto',
-          minHeight: isMobile ? '60vh' : 'auto',
+          maxHeight: isMobile
+            ? `calc(${viewportHeight} * 90)`
+            : "calc(100vh - 4rem)",
+          height: isMobile ? "auto" : "auto",
+          minHeight: isMobile ? "60vh" : "auto",
         }}
       >
         {/* Close Button - Mobile optimized */}
@@ -375,10 +396,10 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
             onClose();
           }}
           className={`
-            absolute ${isMobile ? 'top-4 right-4' : 'top-6 right-6'}
+            absolute ${isMobile ? "top-4 right-4" : "top-6 right-6"}
             text-gray-400 hover:text-[#2f609b] 
             transition-colors duration-200 
-            ${isMobile ? 'text-2xl w-10 h-10' : 'text-xl w-12 h-12'}
+            ${isMobile ? "text-2xl w-10 h-10" : "text-xl w-12 h-12"}
             flex items-center justify-center
             z-10
             active:bg-gray-100 rounded-full
@@ -390,28 +411,30 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
 
         {/* Brand Header */}
         <div className="text-center mb-6 sm:mb-8 mt-0 sm:mt-2 flex flex-col items-center justify-center">
-          <h2 className={`
+          <h2
+            className={`
             font-extrabold tracking-tight text-transparent 
             bg-clip-text bg-gradient-to-r from-[#1d275e] to-[#2f609b]
-            ${isMobile ? 'text-2xl mb-2' : 'text-3xl mb-3'}
-          `}>
+            ${isMobile ? "text-2xl mb-2" : "text-3xl mb-3"}
+          `}
+          >
             {isLogin ? "Welcome Back" : "Join EdPharma"}
           </h2>
-          <p className={`
+          <p
+            className={`
             text-gray-400 font-medium uppercase tracking-wide
-            ${isMobile ? 'text-xs' : 'text-sm'}
-          `}>
+            ${isMobile ? "text-xs" : "text-sm"}
+          `}
+          >
             {isLogin
               ? "Access your medical dashboard"
               : "Create your secure account"}
           </p>
-          
+
           {/* Admin Login Hint (only in login mode) */}
           {isLogin && (
             <div className="mt-2">
-              <p className="text-xs text-gray-500">
-                Admin access available
-              </p>
+              <p className="text-xs text-gray-500">Admin access available</p>
             </div>
           )}
         </div>
@@ -455,11 +478,13 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
             <>
               {/* Address Section */}
               <div className="pt-2 pb-1">
-                <label className={`
+                <label
+                  className={`
                   block font-bold text-[#2f609b] 
                   uppercase tracking-wider mb-3
-                  ${isMobile ? 'text-xs' : 'text-sm'}
-                `}>
+                  ${isMobile ? "text-xs" : "text-sm"}
+                `}
+                >
                   Pharmacy Address
                 </label>
                 <div className="space-y-3">
@@ -472,7 +497,11 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
                       setAddrDetails({ ...addrDetails, street: e.target.value })
                     }
                   />
-                  <div className={`grid ${isMobile ? 'grid-cols-1 gap-3' : 'grid-cols-2 gap-4'}`}>
+                  <div
+                    className={`grid ${
+                      isMobile ? "grid-cols-1 gap-3" : "grid-cols-2 gap-4"
+                    }`}
+                  >
                     {/* City */}
                     <div>
                       <input
@@ -538,7 +567,11 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
               </div>
 
               {/* Mobile & Gender */}
-              <div className={`grid ${isMobile ? 'grid-cols-1 gap-3' : 'grid-cols-2 gap-4'}`}>
+              <div
+                className={`grid ${
+                  isMobile ? "grid-cols-1 gap-3" : "grid-cols-2 gap-4"
+                }`}
+              >
                 <div>
                   <input
                     type="tel"
@@ -583,8 +616,18 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
                     <option value="Other">Other</option>
                   </select>
                   <div className="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    <svg
+                      className="w-5 h-5 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </div>
                 </div>
@@ -630,7 +673,7 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
               hover:shadow-lg hover:to-[#1d275e] 
               active:scale-[0.98] transition-all duration-300 
               rounded-lg
-              ${isMobile ? 'py-4 text-base' : 'py-4 text-base'}
+              ${isMobile ? "py-4 text-base" : "py-4 text-base"}
               mt-4
               min-height: 48px
               touch-action: manipulation
@@ -645,10 +688,11 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
             className={`
               mt-4 p-3 rounded-lg text-sm font-medium 
               text-center border
-              ${message.toLowerCase().includes("success") ||
+              ${
+                message.toLowerCase().includes("success") ||
                 message.toLowerCase().includes("created")
-                ? "bg-green-50 text-green-700 border-green-200"
-                : "bg-red-50 text-red-700 border-red-200"
+                  ? "bg-green-50 text-green-700 border-green-200"
+                  : "bg-red-50 text-red-700 border-red-200"
               }
             `}
           >
@@ -656,14 +700,18 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
           </div>
         )}
 
-        <div className={`
+        <div
+          className={`
           mt-6 text-center pt-4
           border-t border-gray-100
-        `}>
-          <p className={`
+        `}
+        >
+          <p
+            className={`
             text-gray-400 font-medium
-            ${isMobile ? 'text-sm' : 'text-sm'}
-          `}>
+            ${isMobile ? "text-sm" : "text-sm"}
+          `}
+          >
             {isLogin
               ? "Don't have an account yet?"
               : "Already have an account?"}

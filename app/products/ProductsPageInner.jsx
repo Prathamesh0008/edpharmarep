@@ -8,6 +8,7 @@ import { products } from "../data/products";
 import { COMPOUNDS } from "../data/compounds";
 import { useSearchParams } from "next/navigation";
 import { useCart } from "../components/CartContext";
+import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
 
 // BRAND THEMES (unchanged)
 const BRAND_THEMES = {
@@ -57,6 +58,44 @@ export default function ProductsPage() {
   const { addToCart } = useCart();
   const searchParams = useSearchParams();
   const brandFromUrl = searchParams.get("brand");
+  const { t, language } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
+
+  console.log("DEBUG Products: Current language:", language);
+  console.log("DEBUG Products: Products translations:", t?.productsPage);
+
+  // Get translations from context, fallback to English structure
+  const productsTranslations = t?.productsPage || {
+    hero: {
+      suffix: "Products",
+      subtitle: "Browse through our comprehensive range of pharmaceutical products"
+    },
+    filters: {
+      searchPlaceholder: "Search products by name, composition, or description...",
+      allCompounds: "All Compounds",
+      resetButton: "Reset All Filters",
+      clearSearch: "Clear Search"
+    },
+    productCard: {
+      viewDetails: "View Details",
+      addToCart: "Add to Cart",
+      buyNow: "Buy Now",
+      dosageLabel: "Dosage:",
+      compositionLabel: "Composition:",
+      packSizeLabel: "Pack Size:",
+      skusAvailable: "SKUs",
+      productsAvailable: "products available",
+      productAvailable: "product available"
+    },
+    emptyState: {
+      title: "No Products Found",
+      description: "We couldn't find any products matching your search criteria."
+    }
+  };
+
+  const hero = productsTranslations?.hero || {};
+  const filters = productsTranslations?.filters || {};
+  const productCard = productsTranslations?.productCard || {};
+  const emptyState = productsTranslations?.emptyState || {};
 
   const [selectedBrand, setSelectedBrand] = useState(
     BRAND_THEMES[brandFromUrl] ? brandFromUrl : "ED Ajanta Pharma"
@@ -177,15 +216,12 @@ export default function ProductsPage() {
 
     return items.length > 0;
   });
+
   return (
-    // UPDATED: Changed 'min-h-screen' to 'min-h-0' or 'w-full'.
-    // Also removed the bg-gradient class from here (moved to the fixed div below).
     <div className="w-full relative">
       <Navbar />
 
       {/* Background Pattern & Gradient */}
-      {/* UPDATED: Added 'bg-gradient-to-b' here so the background stays fixed 
-          and full-screen, even if the content is short. */}
       <div className="fixed inset-0 -z-10 bg-gradient-to-b from-gray-50 to-white">
         <div
           className="absolute inset-0 opacity-[0.03]"
@@ -194,6 +230,12 @@ export default function ProductsPage() {
             backgroundSize: "50px 50px",
           }}
         ></div>
+      </div>
+
+      {/* Debug banner - remove this after testing */}
+      <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
+        <div>Lang: {language}</div>
+        <div>Has productsPage: {t?.productsPage ? "Yes" : "No"}</div>
       </div>
 
       {/* Floating Brand Selector - Medium Size & Responsive */}
@@ -252,9 +294,6 @@ export default function ProductsPage() {
 
       {/* Search Input - Full width on mobile */}
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8">
-        {/* ✅ Search Input - DESKTOP ONLY */}
-  
-
         {/* Brand Logos at the Top - Made more responsive */}
         <div className="mb-6 sm:mb-8 mt-7">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
@@ -274,7 +313,6 @@ export default function ProductsPage() {
                     setSearch("");
                     setCategoryFilter("All");
                   }}
-                  // UPDATED: Fixed height (h-48) matches desktop view on all screens
                   className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-48 transition-all duration-500 transform hover:scale-[1.02] ${
                     isActive
                       ? "ring-2 sm:ring-4 ring-offset-1 sm:ring-offset-2 scale-[1.02]"
@@ -296,7 +334,6 @@ export default function ProductsPage() {
                   )}
 
                   <div className="flex items-center justify-center h-full w-full cursor-pointer">
-                    {/* UPDATED: Fixed width/height classes matching the original lg: values */}
                     <div
                       className={`relative flex items-center justify-center transition-all duration-300 
                       ${isFirstLogo ? "w-40 h-40" : ""}
@@ -319,10 +356,10 @@ export default function ProductsPage() {
             })}
           </div>
         </div>
+
         {/* Hero Section Below Logos */}
         <div className="mb-8 sm:mb-12">
           <div className="text-center mb-6 sm:mb-10">
-            {/* UPDATED: Increased base size from text-2xl to text-3xl for mobile */}
             <h1 className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-4">
               <span
                 className="bg-clip-text text-transparent"
@@ -331,39 +368,39 @@ export default function ProductsPage() {
                 {theme.name}
               </span>{" "}
               <span className="text-2xl xs:text-2xl sm:text-5xl block sm:inline">
-                Products
+                {hero.suffix || "Products"}
               </span>
             </h1>
 
-            {/* UPDATED: Increased base size from text-sm to text-base for mobile */}
             <p className="text-base xs:text-lg sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-              Browse through our comprehensive range of pharmaceutical products
+              {hero.subtitle || "Browse through our comprehensive range of pharmaceutical products"}
             </p>
           </div>
+
           {/* Advanced Filters - Made responsive */}
           <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 mb-6 sm:mb-8">
             <div className="flex flex-col gap-4 sm:gap-6">
               {/* Search Input - Full width on mobile */}
-              {/* <div className="w-full">
-      <div className="relative">
-        <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
-          <svg className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
-        <input
-          type="text"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search products by name, composition, or description..."
-          className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all"
-          style={{ '--tw-ring-color': theme.primary }}
-        />
-      </div>
-    </div> */}
+              <div className="w-full">
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
+                    <svg className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    placeholder={filters.searchPlaceholder || "Search products by name, composition, or description..."}
+                    className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all"
+                    style={{ '--tw-ring-color': theme.primary }}
+                  />
+                </div>
+              </div>
 
               {/* Filters Row - Stack on mobile, row on sm+ */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap阿 4">
                 {/* Compound Select */}
                 <div className="relative flex-1">
                   <select
@@ -375,7 +412,7 @@ export default function ProductsPage() {
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all appearance-none bg-white"
                     style={{ "--tw-ring-color": theme.primary }}
                   >
-                    <option value="">All Compounds</option>
+                    <option value="">{filters.allCompounds || "All Compounds"}</option>
                     {compoundNames.map((c) => (
                       <option key={c} value={c}>
                         {c}
@@ -477,8 +514,7 @@ export default function ProductsPage() {
                         {compound}
                       </h2>
                       <p className="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2">
-                        {items.length} product{items.length !== 1 ? "s" : ""}{" "}
-                        available
+                        {items.length} {items.length !== 1 ? productCard.productsAvailable || "products available" : productCard.productAvailable || "product available"}
                       </p>
                     </div>
                     <div
@@ -488,7 +524,7 @@ export default function ProductsPage() {
                         color: theme.primary,
                       }}
                     >
-                      {slugs.length} SKUs
+                      {slugs.length} {productCard.skusAvailable || "SKUs"}
                     </div>
                   </div>
                   <div
@@ -526,12 +562,6 @@ export default function ProductsPage() {
                                     sizes="60vw"
                                   />
                                 </div>
-                                {/* <div className="text-center mt-3">
-                                  <span className="px-2 py-1 text-xs font-medium rounded"
-                                        style={{ backgroundColor: `${theme.primary}15`, color: theme.primary }}>
-                                    {p.category}
-                                  </span>
-                                </div> */}
                               </div>
 
                               {/* Product Details */}
@@ -547,7 +577,7 @@ export default function ProductsPage() {
                                   {p.dosage && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
-                                        Dosage:
+                                        {productCard.dosageLabel || "Dosage:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
                                         {p.dosage}
@@ -557,7 +587,7 @@ export default function ProductsPage() {
                                   {p.composition && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
-                                        Composition:
+                                        {productCard.compositionLabel || "Composition:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
                                         {p.composition}
@@ -567,7 +597,7 @@ export default function ProductsPage() {
                                   {p.pack_size && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
-                                        Pack Size:
+                                        {productCard.packSizeLabel || "Pack Size:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
                                         {p.pack_size}
@@ -592,7 +622,7 @@ export default function ProductsPage() {
                                       color: theme.primary,
                                     }}
                                   >
-                                    View Details
+                                    {productCard.viewDetails || "View Details"}
                                   </Link>
 
                                   <button
@@ -604,7 +634,7 @@ export default function ProductsPage() {
                                       backgroundColor: theme.primary,
                                     }}
                                   >
-                                    Add to Cart
+                                    {productCard.addToCart || "Add to Cart"}
                                   </button>
                                 </div>
                               </div>
@@ -631,12 +661,6 @@ export default function ProductsPage() {
                                         sizes="40vw"
                                       />
                                     </div>
-                                    <div className="text-center mt-4">
-                                      {/* <span className="px-3 py-1 rounded-full text-xs font-semibold text-white"
-                                            style={{ backgroundColor: theme.primary }}>
-                                        {p.category}
-                                      </span> */}
-                                    </div>
                                   </div>
                                 </div>
 
@@ -652,7 +676,7 @@ export default function ProductsPage() {
                                       {p.dosage && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            Dosage:
+                                            {productCard.dosageLabel || "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.dosage}
@@ -662,7 +686,7 @@ export default function ProductsPage() {
                                       {p.composition && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            Composition:
+                                            {productCard.compositionLabel || "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.composition}
@@ -672,7 +696,7 @@ export default function ProductsPage() {
                                       {p.pack_size && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            Pack Size:
+                                            {productCard.packSizeLabel || "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.pack_size}
@@ -699,7 +723,7 @@ export default function ProductsPage() {
                                           color: theme.primary,
                                         }}
                                       >
-                                        View Details
+                                        {productCard.viewDetails || "View Details"}
                                       </Link>
 
                                       <button
@@ -711,7 +735,7 @@ export default function ProductsPage() {
                                           backgroundColor: theme.primary,
                                         }}
                                       >
-                                        Add to Cart
+                                        {productCard.addToCart || "Add to Cart"}
                                       </button>
                                     </div>
                                   </div>
@@ -731,7 +755,7 @@ export default function ProductsPage() {
                                       {p.dosage && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            Dosage:
+                                            {productCard.dosageLabel || "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.dosage}
@@ -741,7 +765,7 @@ export default function ProductsPage() {
                                       {p.composition && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            Composition:
+                                            {productCard.compositionLabel || "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.composition}
@@ -751,7 +775,7 @@ export default function ProductsPage() {
                                       {p.pack_size && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            Pack Size:
+                                            {productCard.packSizeLabel || "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.pack_size}
@@ -778,7 +802,7 @@ export default function ProductsPage() {
                                           color: theme.primary,
                                         }}
                                       >
-                                        View Details
+                                        {productCard.viewDetails || "View Details"}
                                       </Link>
 
                                       <button
@@ -790,7 +814,7 @@ export default function ProductsPage() {
                                           backgroundColor: theme.primary,
                                         }}
                                       >
-                                        Add to Cart
+                                        {productCard.addToCart || "Add to Cart"}
                                       </button>
                                     </div>
                                   </div>
@@ -811,16 +835,6 @@ export default function ProductsPage() {
                                         className="object-cover"
                                         sizes="50vw"
                                       />
-                                    </div>
-                                    <div className="text-center mt-4">
-                                      <span
-                                        className="px-3 py-1 rounded-full text-xs font-semibold text-white"
-                                        style={{
-                                          backgroundColor: theme.primary,
-                                        }}
-                                      >
-                                        {p.category}
-                                      </span>
                                     </div>
                                   </div>
                                 </div>
@@ -862,32 +876,20 @@ export default function ProductsPage() {
                 </svg>
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2 sm:mb-3">
-                No Products Found
+                {emptyState.title || "No Products Found"}
               </h3>
               <p className="text-gray-600 text-sm sm:text-base max-w-md mx-auto mb-6 sm:mb-8">
-                We couldn't find any products matching your search criteria.
+                {emptyState.description || "We couldn't find any products matching your search criteria."}
               </p>
 
               {/* UPDATED CONTAINER: Stacks on mobile (col), Row on Desktop (sm:row) */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full">
                 <button
                   onClick={() => setSearch("")}
-                  // UPDATED: w-full on mobile, w-auto on sm+ (desktop)
-                  className="
-                    w-full sm:w-auto
-                    px-6
-                    py-2.5
-                    rounded-lg
-                    border
-                    font-medium
-                    text-sm
-                    transition-all
-                    hover:bg-gray-50
-                    whitespace-nowrap
-                  "
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-lg border font-medium text-sm transition-all hover:bg-gray-50 whitespace-nowrap"
                   style={{ borderColor: theme.primary, color: theme.primary }}
                 >
-                  Clear Search
+                  {filters.clearSearch || "Clear Search"}
                 </button>
 
                 <button
@@ -896,22 +898,10 @@ export default function ProductsPage() {
                     setCategoryFilter("All");
                     setSelectedCompound(compoundNames[0]);
                   }}
-                  // UPDATED: w-full on mobile, w-auto on sm+ (desktop)
-                  className="
-                    w-full sm:w-auto
-                    px-6
-                    py-2.5
-                    rounded-lg
-                    font-medium
-                    text-sm
-                    text-white
-                    transition-all
-                    hover:shadow-md
-                    whitespace-nowrap
-                  "
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-lg font-medium text-sm text-white transition-all hover:shadow-md whitespace-nowrap"
                   style={{ background: theme.gradient }}
                 >
-                  Reset All Filters
+                  {filters.resetButton || "Reset All Filters"}
                 </button>
               </div>
             </div>

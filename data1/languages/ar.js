@@ -343,7 +343,101 @@ termsPage: {
     }
   ]
 },
-
+contactPage: {
+  hero: {
+    title: "اتصل بنا",
+    subtitle: "تواصل معنا لأي استفسارات أو دعم"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "اتصل بنا لأي أسئلة أو دعم" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "راسلنا عبر البريد الإلكتروني للاستفسارات التجارية" 
+    },
+    { 
+      icon: "📍", 
+      title: "لندن آي لندن", 
+      description: "موقع مكتبنا الرئيسي" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "البريد الإلكتروني *",
+      phone: "الهاتف *",
+      name: "الاسم *",
+      message: "الرسالة *"
+    },
+    placeholders: {
+      email: "أدخل عنوان بريدك الإلكتروني",
+      phone: "أدخل رقم هاتفك",
+      name: "أدخل اسمك الكامل",
+      message: "اكتب رسالتك هنا..."
+    },
+    submitButton: "إرسال الرسالة",
+    successMessage: "✅ تم إرسال الرسالة بنجاح!"
+  },
+  validation: {
+    email: {
+      required: "البريد الإلكتروني مطلوب",
+      invalid: "البريد الإلكتروني غير صالح"
+    },
+    phone: {
+      required: "الهاتف مطلوب",
+      invalid: "رقم الهاتف غير صالح"
+    },
+    name: {
+      required: "الاسم مطلوب"
+    },
+    message: {
+      required: "الرسالة مطلوبة"
+    }
+  }
+},
+productsPage: {
+  hero: {
+    suffix: "المنتجات",
+    subtitle: "تصفح مجموعة منتجاتنا الصيدلانية الشاملة"
+  },
+  filters: {
+    searchPlaceholder: "ابحث عن المنتجات بالاسم أو التركيبة أو الوصف...",
+    allCompounds: "جميع المركبات",
+    resetButton: "إعادة تعيين جميع الفلاتر",
+    clearSearch: "مسح البحث"
+  },
+  productCard: {
+    viewDetails: "عرض التفاصيل",
+    addToCart: "إضافة إلى السلة",
+    buyNow: "شراء الآن",
+    dosageLabel: "الجرعة:",
+    compositionLabel: "التركيبة:",
+    packSizeLabel: "حجم العبوة:",
+    skusAvailable: "وحدات SKU",
+    productsAvailable: "منتجات متاحة",
+    productAvailable: "منتج متاح"
+  },
+  emptyState: {
+    title: "لم يتم العثور على منتجات",
+    description: "لم نتمكن من العثور على أي منتجات تطابق معايير البحث الخاصة بك."
+  }
+},
+productDetail: {
+  notFound: "المنتج غير موجود",
+  backButton: "← العودة إلى المنتجات",
+  labels: {
+    category: "الفئة:",
+    brand: "العلامة التجارية:",
+    price: "السعر:",
+    overview: "نظرة عامة"
+  },
+  sections: {
+    overview: "نظرة عامة"
+  }
+},
 profilePage: {
   loading: "جاري تحميل ملفك الشخصي...",
   nav: {
@@ -617,6 +711,31 @@ offer: {
   discount: "خصم صافي 5٪",
   subDiscount: "على الفاتورة الأولى فقط",
   buttonText: "طلب الكتالوج"
+},
+featuredProducts: {
+  tag: "اختيار مميز",
+  title: "متميز",
+  subtitle: "المنتجات الصيدلانية",
+  description: "اكتشف مجموعة مختارة بعناية من الحلول الصيدلانية المتميزة التي يثق بها المتخصصون في الرعاية الصحية في جميع أنحاء العالم.",
+  viewAll: "عرض جميع المنتجات",
+  featuredBadge: "متميز",
+  categoryLabel: "الفئة:",
+  dosageLabel: "الجرعة:",
+  formLabel: "الشكل:",
+  packLabel: "التعبئة:",
+  viewDetails: "عرض التفاصيل",
+  enquire: "استفسر",
+  defaultCategory: "صيدلاني",
+  stats: {
+    products: "200+",
+    productsLabel: "المنتجات",
+    countries: "40+",
+    countriesLabel: "الدول",
+    gmp: "GMP",
+    gmpLabel: "معتمد",
+    support: "24/7",
+    supportLabel: "الدعم"
+  }
 },
 testimonials: {
     tag: "شهادة العملاء",

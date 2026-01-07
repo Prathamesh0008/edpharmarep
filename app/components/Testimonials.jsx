@@ -1,44 +1,51 @@
-//Ed_Pharma\components\Testimonials.jsx
+// Ed_Pharma/components/Testimonials.jsx
 "use client";
+
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Testimonials() {
   // ✅ Online default avatar (no public folder)
   const DEFAULT_AVATAR =
     "https://ui-avatars.com/api/?name=User&background=eaeaea&color=555&size=128";
 
-  const testimonials = [
+  const { t } = useLanguage();
+
+  // Get translations from context or use defaults
+  const testimonialsData = t?.testimonials || {
+    tag: "TESTIMONIAL",
+    title: "What Our Client Says",
+    subtitle: "We build long-term pharmaceutical partnerships across Europe with trust, quality, and regulatory excellence.",
+    items: []
+  };
+
+  // Use translated items if available, otherwise use defaults
+  const testimonials = testimonialsData.items?.length > 0 ? testimonialsData.items : [
     {
       name: "Elizabeth",
       location: "Germany",
       rating: 5,
-      text:
-        "ED Pharma has been our most reliable Europe-to-Europe supplier. Quality compliance and documentation are always excellent.",
-      avatar:
-        "https://randomuser.me/api/portraits/women/44.jpg",
+      text: "ED Pharma has been our most reliable Europe-to-Europe supplier. Quality compliance and documentation are always excellent.",
+      avatar: "https://randomuser.me/api/portraits/women/44.jpg",
     },
     {
       name: "Catherine",
       location: "France",
       rating: 5,
-      text:
-        "Professional handling of bulk pharmaceutical exports with strong EU regulatory understanding.",
+      text: "Professional handling of bulk pharmaceutical exports with strong EU regulatory understanding.",
       avatar: "", // default online avatar
     },
     {
       name: "Victoria",
       location: "Netherlands",
       rating: 5,
-      text:
-        "Consistent deliveries, transparent communication, and ethical sourcing. Highly recommended pharma partner.",
-      avatar:
-        "https://randomuser.me/api/portraits/women/68.jpg",
+      text: "Consistent deliveries, transparent communication, and ethical sourcing. Highly recommended pharma partner.",
+      avatar: "https://randomuser.me/api/portraits/women/68.jpg",
     },
     {
       name: "Michael",
       location: "Spain",
       rating: 5,
-      text:
-        "ED Pharma provides dependable logistics and premium product quality across Europe.",
+      text: "ED Pharma provides dependable logistics and premium product quality across Europe.",
       avatar: "", // default online avatar
     },
   ];
@@ -167,18 +174,17 @@ export default function Testimonials() {
 
       {/* ===== CONTENT ===== */}
       <section className="testimonial-section">
-        <p className="testimonial-tag">TESTIMONIAL</p>
-        <h2 className="testimonial-title">What Our Client Says</h2>
+        <p className="testimonial-tag">{testimonialsData.tag}</p>
+        <h2 className="testimonial-title">{testimonialsData.title}</h2>
         <p className="testimonial-subtitle">
-          We build long-term pharmaceutical partnerships across Europe with trust,
-          quality, and regulatory excellence.
+          {testimonialsData.subtitle}
         </p>
 
         <div className="slider">
           <div className="track">
             {[...testimonials, ...testimonials].map((item, i) => (
               <div className="card" key={i}>
-                <div className="stars">★★★★★</div>
+                <div className="stars">{"★".repeat(item.rating || 5)}</div>
 
                 <p className="text">{item.text}</p>
 

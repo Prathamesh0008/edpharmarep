@@ -1,79 +1,93 @@
-import dbConnect from "@/lib/db";
-import User from "../../../models/User";
-import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
+import dbConnect from "@/lib/db";
+import User from "@/app/models/User";
 
-export async function POST(request) {
+export async function POST(req) {
   try {
     await dbConnect();
 
-    const body = await request.json();
+    const body = await req.json();
+    console.log("📝 Registration data:", body);
 
     const {
       username,
       email,
       password,
+      gender = "",
+      mobile = "",
       street = "",
       city = "",
       pincode = "",
-      gender = "",
-      mobile = "",
     } = body;
 
-    // 🔒 Basic validation
-    if (!username || !email || !password) {
+    // Check if user exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
       return NextResponse.json(
-        { success: false, message: "Username, email and password are required" },
+        { success: false, message: "User already exists" },
         { status: 400 }
       );
     }
 
-    const normalizedEmail = email.toLowerCase();
+    // Hash password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
 
-    const exists = await User.findOne({ email: normalizedEmail });
-    if (exists) {
-      return NextResponse.json(
-        { success: false, message: "User already exists" },
-        { status: 409 }
-      );
-    }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    // ✅ ADDRESS AS STRING (MATCHING YOUR SCHEMA)
-    const combinedAddress =
-      street || city || pincode
-        ? `${street}, ${city} - ${pincode}`
-        : "";
-
+    // Create new user with ALL fields
     const user = await User.create({
       username,
-      email: normalizedEmail,
+      email,
       password: hashedPassword,
-      address: combinedAddress,
-      street,
-      city,
-      pincode,
-      mobile,
       gender,
+      mobile,
+      address: {
+        street,
+        city,
+        pincode,
+      },
     });
 
-    return NextResponse.json(
-      {
-        success: true,
-        message: "Account created successfully",
-        user: {
-          username: user.username,
-          email: user.email,
-        },
-      },
-      { status: 201 }
+    // Generate JWT token
+    const token = jwt.sign(
+      { id: user._id, email: user.email },
+      process.env.JWT_SECRET,
+      { expiresIn: "30d" }
     );
-  } catch (err) {
-    console.error("REGISTER ERROR:", err);
 
+    const userResponse = {
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      mobile: user.mobile,
+      gender: user.gender,
+      street: user.address?.street || "",
+      city: user.address?.city || "",
+      pincode: user.address?.pincode || "",
+    };
+
+    const response = NextResponse.json({
+      success: true,
+      message: "User created successfully",
+      user: userResponse,
+      token,
+    });
+
+    // Set cookie
+    response.cookies.set("auth", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: "strict",
+      maxAge: 30 * 24 * 60 * 60, // 30 days
+    });
+
+    return response;
+
+  } catch (error) {
+    console.error("❌ Registration error:", error);
     return NextResponse.json(
-      { success: false, message: "Server error while registering user" },
+      { success: false, message: "Server error: " + error.message },
       { status: 500 }
     );
   }

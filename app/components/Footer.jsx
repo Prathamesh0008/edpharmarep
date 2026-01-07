@@ -12,21 +12,45 @@ import {
   FaGlobeAmericas,
   FaShieldAlt
 } from "react-icons/fa";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
-  const quickLinks = [
-    { name: "Home", href: "/" },
-    { name: "Products", href: "/products" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
+  const { t } = useLanguage();
 
-  const categories = [
-    "Ajanta Pharma",
-    "Centurion Remedies",
-    "Sunrise Remedies",
-    "ED Solutions",
-  ];
+  // Get footer translations or use defaults
+  const footerData = t?.footer || {
+    description: "Delivering trust, safety, and high-quality pharmaceutical formulations with global distribution capabilities.",
+    headers: {
+      quickLinks: "Quick Links",
+      categories: "Categories",
+      contact: "Contact"
+    },
+    links: [
+      { name: "Home", href: "/" },
+      { name: "Products", href: "/products" },
+      { name: "About", href: "/about" },
+      { name: "Contact", href: "/contact" }
+    ],
+    categories: [
+      "Ajanta Pharma",
+      "Centurion Remedies",
+      "Sunrise Remedies",
+      "ED Solutions"
+    ],
+    contactInfo: {
+      address: "Mumbai, India",
+      phone: "+91 98765 43210",
+      email: "support@edpharma.com"
+    },
+    social: {
+      followUs: "Follow Us"
+    },
+    copyright: "All Rights Reserved",
+    tagline: "Pharmaceuticals • Quality • Trust"
+  };
+
+  const quickLinks = footerData.links;
+  const categories = footerData.categories;
 
   const socialLinks = [
     { name: "LinkedIn", icon: <FaLinkedinIn />, color: "hover:bg-blue-700" },
@@ -47,9 +71,6 @@ export default function Footer() {
       <div className="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-blue-900/10 blur-3xl"></div>
       <div className="absolute -left-20 bottom-0 w-64 h-64 rounded-full bg-cyan-900/10 blur-3xl"></div>
 
-      {/* Feature highlights */}
-      
-
       {/* Main content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 pt-12 pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
         
@@ -62,13 +83,15 @@ export default function Footer() {
             <h2 className="text-2xl font-bold tracking-tight">ED Pharma</h2>
           </div>
           <p className="text-white/80 text-sm leading-relaxed">
-            Delivering trust, safety, and high-quality pharmaceutical formulations with global distribution capabilities.
+            {footerData.description}
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">Quick Links</h3>
+          <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">
+            {footerData.headers.quickLinks}
+          </h3>
           <ul className="space-y-3">
             {quickLinks.map((item) => (
               <li key={item.name}>
@@ -86,7 +109,9 @@ export default function Footer() {
 
         {/* Categories */}
         <div>
-          <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">Categories</h3>
+          <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">
+            {footerData.headers.categories}
+          </h3>
           <ul className="space-y-3">
             {categories.map((item) => (
               <li 
@@ -102,26 +127,28 @@ export default function Footer() {
         {/* Contact */}
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">Contact</h3>
+            <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">
+              {footerData.headers.contact}
+            </h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-white/80">
                 <FaMapMarkerAlt className="text-cyan-300 flex-shrink-0" />
-                <span>Mumbai, India</span>
+                <span>{footerData.contactInfo.address}</span>
               </li>
               <li className="flex items-center gap-3 text-white/80">
                 <FaPhoneAlt className="text-cyan-300 flex-shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>{footerData.contactInfo.phone}</span>
               </li>
               <li className="flex items-center gap-3 text-white/80">
                 <FaEnvelope className="text-cyan-300 flex-shrink-0" />
-                <span>support@edpharma.com</span>
+                <span>{footerData.contactInfo.email}</span>
               </li>
             </ul>
           </div>
 
           {/* Social Links */}
           <div>
-            <h4 className="font-medium mb-3">Follow Us</h4>
+            <h4 className="font-medium mb-3">{footerData.social?.followUs || "Follow Us"}</h4>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <a
@@ -144,10 +171,10 @@ export default function Footer() {
       <div className="relative border-t border-white/10 bg-black/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5">
           <p className="text-center text-white/70 text-sm">
-            © {new Date().getFullYear()} ED Pharma — All Rights Reserved.
+            © {new Date().getFullYear()} ED Pharma — {footerData.copyright}.
           </p>
           <p className="text-center text-white/50 text-xs mt-2">
-            Pharmaceuticals • Quality • Trust
+            {footerData.tagline}
           </p>
         </div>
       </div>

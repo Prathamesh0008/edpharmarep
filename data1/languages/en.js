@@ -1,25 +1,8 @@
 const en = {
   // NAVBAR TRANSLATIONS
-  home: "Home",
-  products: "Products",
-  about: "About",
-  terms: "Terms",
-  contact: "Contact",
-  orders: "My Orders",
-  download: "Download catalogue",
-  login: "Log In",
-  logout: "Logout",
-  profile: "My Profile",
-  hi: "Hi",
-  language: "Language",
-  selectLanguage: "Select Language",
-  chooseLanguage: "Choose your preferred language",
-  current: "Current",
-  welcomeBack: "Welcome back!",
-  welcome: "Welcome!",
-  guestUser: "Guest User",
-  loginRegister: "Login / Register",
-  rightsReserved: "All rights reserved.",
+
+  
+
   about: {
     hero: {
       tag: "ABOUT US",
@@ -285,6 +268,103 @@ termsPage: {
     }
   ]
 },
+// Add this to your en.js file
+contactPage: {
+  hero: {
+    title: "Contact Us",
+    subtitle: "Get in touch with us for any inquiries or support"
+  },
+  contactInfo: [
+    { 
+      icon: "📞", 
+      title: "(+91)-9525446820", 
+      description: "Call us for any questions or support" 
+    },
+    { 
+      icon: "✉️", 
+      title: "mail@influenca.id", 
+      description: "Email us for business inquiries" 
+    },
+    { 
+      icon: "📍", 
+      title: "London Eye London", 
+      description: "Our main office location" 
+    },
+  ],
+  form: {
+    labels: {
+      email: "Email *",
+      phone: "Phone *",
+      name: "Name *",
+      message: "Message *"
+    },
+    placeholders: {
+      email: "Enter your email address",
+      phone: "Enter your phone number",
+      name: "Enter your full name",
+      message: "Type your message here..."
+    },
+    submitButton: "Submit Message",
+    successMessage: "✅ Message sent successfully!"
+  },
+  validation: {
+    email: {
+      required: "Email is required",
+      invalid: "Email is invalid"
+    },
+    phone: {
+      required: "Phone is required",
+      invalid: "Phone number is invalid"
+    },
+    name: {
+      required: "Name is required"
+    },
+    message: {
+      required: "Message is required"
+    }
+  }
+},
+// Add this to your en.js file
+productsPage: {
+  hero: {
+    suffix: "Products",
+    subtitle: "Browse through our comprehensive range of pharmaceutical products"
+  },
+  filters: {
+    searchPlaceholder: "Search products by name, composition, or description...",
+    allCompounds: "All Compounds",
+    resetButton: "Reset All Filters",
+    clearSearch: "Clear Search"
+  },
+  productCard: {
+    viewDetails: "View Details",
+    addToCart: "Add to Cart",
+    buyNow: "Buy Now",
+    dosageLabel: "Dosage:",
+    compositionLabel: "Composition:",
+    packSizeLabel: "Pack Size:",
+    skusAvailable: "SKUs",
+    productsAvailable: "products available",
+    productAvailable: "product available"
+  },
+  emptyState: {
+    title: "No Products Found",
+    description: "We couldn't find any products matching your search criteria."
+  }
+},
+productDetail: {
+  notFound: "Product not found",
+  backButton: "← Back to Products",
+  labels: {
+    category: "Category:",
+    brand: "Brand:",
+    price: "Price:",
+    overview: "Overview"
+  },
+  sections: {
+    overview: "Overview"
+  }
+},  
 profilePage: {
   loading: "Loading your profile...",
   nav: {
@@ -454,11 +534,16 @@ homePage: {
     title: "Featured Products",
     productImageAltFallback: "Product image",
   },
+  
 
   heroRotator: {
     alt: "ED Pharma Product",
   },
+
+  
+
 },
+
 "en": {
     "home": "Home",
     "products": "Products",
@@ -483,6 +568,35 @@ homePage: {
   buttonText: "Request Catalog"
 },
 // Add this inside your exported 'en' object in data1/languages/en.jsx
+
+// Add this to your en.js file - updated version
+featuredProducts: {
+  tag: "Premium Selection",
+  title: "Featured",
+  subtitle: "Pharmaceutical Products",
+  description: "Explore our carefully selected range of premium pharmaceutical solutions trusted by healthcare professionals worldwide.",
+  viewAll: "View All Products",
+  featuredBadge: "Featured",
+  // Add these new labels for product details
+  categoryLabel: "Category:",
+  dosageLabel: "Dosage:",
+  formLabel: "Form:",
+  packLabel: "Pack:",
+  viewDetails: "View Details",
+  enquire: "Enquire",
+  // Add these default values that will be replaced by product translations
+  defaultCategory: "Pharmaceutical",
+  stats: {
+    products: "200+",
+    productsLabel: "Products",
+    countries: "40+",
+    countriesLabel: "Countries",
+    gmp: "GMP",
+    gmpLabel: "Certified",
+    support: "24/7",
+    supportLabel: "Support"
+  }
+},
 
 testimonials: {
   tag: "TESTIMONIAL",

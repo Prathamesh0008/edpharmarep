@@ -8,6 +8,7 @@ import { useRef } from "react";
 import { useCart } from "./CartContext";
 import LoginPopup from "./LoginPopup";
 import { products } from "@/app/data/products";
+import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
 
 /* ================= NAVBAR ================= */
 
@@ -27,7 +28,9 @@ export default function Navbar() {
   const [mounted, setMounted] = useState(false);
   const [languageOpen, setLanguageOpen] = useState(false);
   const [mobileLanguageOpen, setMobileLanguageOpen] = useState(false);
-  const [language, setLanguage] = useState("en");
+  
+  // REMOVE local language state and use LanguageContext instead
+  const { language, changeLanguage, availableLanguages, t } = useLanguage(); // ADD THIS
 
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [showDesktopSearch, setShowDesktopSearch] = useState(false);
@@ -37,25 +40,36 @@ export default function Navbar() {
   const cartCount = getCartBadgeCount();
 
   /* ---------- LANGUAGES CONFIG ---------- */
-  const LANGUAGES = [
-    { code: "en", label: "English", flag: "us" },
-    { code: "nl", label: "Dutch", flag: "nl" },
-    { code: "fr", label: "French", flag: "fr" },
-    { code: "de", label: "German", flag: "de" },
-    { code: "es", label: "Spanish", flag: "es" },
-    { code: "ar", label: "Arabic", flag: "sa" },
-    { code: "zh", label: "Chinese", flag: "cn" },
-    { code: "ja", label: "Japanese", flag: "jp" },
-    { code: "pt", label: "Portuguese", flag: "pt" },
-    { code: "ro", label: "Romanian", flag: "ro" },
-    { code: "sq", label: "Albanian", flag: "al" },
-    { code: "el", label: "Greek", flag: "gr" },
-    { code: "bg", label: "Bulgarian", flag: "bg" },
-    { code: "mk", label: "Macedonian", flag: "mk" },
-    { code: "sr", label: "Serbian", flag: "rs" },
-    { code: "hr", label: "Croatian", flag: "hr" },
-    { code: "bs", label: "Bosnian", flag: "ba" },
-  ];
+  // UPDATE THIS to use availableLanguages from context or create a mapping
+  const LANGUAGE_MAPPING = {
+    "en": { label: "English", flag: "us" },
+    "nl": { label: "Dutch", flag: "nl" },
+    "fr": { label: "French", flag: "fr" },
+    "de": { label: "German", flag: "de" },
+    "es": { label: "Spanish", flag: "es" },
+    "ar": { label: "Arabic", flag: "sa" },
+    "zh": { label: "Chinese", flag: "cn" },
+    "ja": { label: "Japanese", flag: "jp" },
+    "pt": { label: "Portuguese", flag: "pt" },
+    "ro": { label: "Romanian", flag: "ro" },
+    "sq": { label: "Albanian", flag: "al" },
+    "el": { label: "Greek", flag: "gr" },
+    "bg": { label: "Bulgarian", flag: "bg" },
+    "mk": { label: "Macedonian", flag: "mk" },
+    "sr": { label: "Serbian", flag: "rs" },
+    "hr": { label: "Croatian", flag: "hr" },
+    "bs": { label: "Bosnian", flag: "ba" },
+  };
+
+  // Get current language info
+  const currentLanguageInfo = LANGUAGE_MAPPING[language] || LANGUAGE_MAPPING.en;
+
+  // Create LANGUAGES array from mapping
+  const LANGUAGES = Object.entries(LANGUAGE_MAPPING).map(([code, info]) => ({
+    code,
+    label: info.label,
+    flag: info.flag
+  }));
 
   /* ---------- USER AUTH SYNC ---------- */
   useEffect(() => {
@@ -78,10 +92,11 @@ export default function Navbar() {
 
     loadUser();
 
-    const savedLang = localStorage.getItem("ed-lang");
-    if (savedLang) {
-      setLanguage(savedLang);
-    }
+    // REMOVE local language loading - LanguageContext handles this
+    // const savedLang = localStorage.getItem("ed-lang");
+    // if (savedLang) {
+    //   setLanguage(savedLang);
+    // }
 
     window.addEventListener('storage', loadUser);
     const interval = setInterval(loadUser, 1000);
@@ -123,8 +138,7 @@ export default function Navbar() {
 
   /* ---------- LANGUAGE HANDLER ---------- */
   const handleLanguageChange = (code) => {
-    setLanguage(code);
-    localStorage.setItem("ed-lang", code);
+    changeLanguage(code); // Use context function
     setLanguageOpen(false);
     setMobileLanguageOpen(false);
     setMenuOpen(false);
@@ -178,21 +192,17 @@ export default function Navbar() {
     router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
   };
 
-  // SIMPLIFIED: Handle suggestion click
   const handleSuggestionClick = (item) => {
     console.log("Suggestion clicked:", item);
     
-    // Clear all search states
     setQuery("");
     setSuggestions([]);
     setShowDesktopSearch(false);
     setMobileSearchOpen(false);
     
-    // Try to navigate to product page
     if (item.slug) {
       router.push(`/product/${item.slug}`);
     } else if (item.id) {
-      // Try to find complete product data
       const fullProduct = products.find(p => p.id === item.id);
       if (fullProduct && fullProduct.slug) {
         router.push(`/product/${fullProduct.slug}`);
@@ -254,9 +264,6 @@ export default function Navbar() {
     router.push("/");
   };
 
-  // Get current language
-  const currentLanguage = LANGUAGES.find(lang => lang.code === language) || LANGUAGES[0];
-
   // Prevent hydration mismatch
   if (!mounted) {
     return (
@@ -278,6 +285,22 @@ export default function Navbar() {
     );
   }
 
+  // Use translations from context
+  const navLinks = t?.en?.home ? t : { 
+    en: { home: "Home", products: "Products", about: "About", terms: "Terms", contact: "Contact" },
+    es: { home: "Inicio", products: "Productos", about: "Nosotros", terms: "Términos", contact: "Contacto" },
+    // Add other languages as needed
+  };
+
+  // Get current language translations
+  const currentTranslations = t?.en || { 
+    home: "Home", 
+    products: "Products", 
+    about: "About", 
+    terms: "Terms", 
+    contact: "Contact" 
+  };
+
   return (
     <>
       {/* ================= NAVBAR ================= */}
@@ -294,11 +317,11 @@ export default function Navbar() {
 
           {/* ================= DESKTOP MENU ================= */}
           <div className="hidden md:flex items-center gap-6 text-slate-700 font-medium">
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/products">Products</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/terms">Terms</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            <NavLink href="/">{currentTranslations.home || "Home"}</NavLink>
+            <NavLink href="/products">{currentTranslations.products || "Products"}</NavLink>
+            <NavLink href="/about">{currentTranslations.about || "About"}</NavLink>
+            <NavLink href="/terms">{currentTranslations.terms || "Terms"}</NavLink>
+            <NavLink href="/contact">{currentTranslations.contact || "Contact"}</NavLink>
 
             {/* ================= DESKTOP SEARCH ================= */}
             <div className="flex items-center gap-4">
@@ -322,7 +345,7 @@ export default function Navbar() {
                         <input
                           autoFocus
                           type="text"
-                          placeholder="Search medicines..."
+                          placeholder={t?.productsPage?.filters?.searchPlaceholder || "Search products..."}
                           value={query}
                           onChange={(e) => handleSearchChange(e.target.value)}
                           onKeyDown={handleSearch}
@@ -380,7 +403,7 @@ export default function Navbar() {
                   hover:bg-blue-50"
               >
                 <Download size={16} />
-                Download catalogue
+                {t?.en?.download || "Download catalogue"}
               </a>
 
               {/* LANGUAGE SELECTOR */}
@@ -391,11 +414,11 @@ export default function Navbar() {
                     hover:border-blue-400 hover:bg-blue-50 min-w-[100px]"
                 >
                   <img
-                    src={`https://flagcdn.com/w20/${currentLanguage.flag}.png`}
-                    alt={currentLanguage.label}
+                    src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
+                    alt={currentLanguageInfo.label}
                     className="w-6 h-4 rounded-sm"
                   />
-                  <span className="text-sm font-medium">{currentLanguage.code.toUpperCase()}</span>
+                  <span className="text-sm font-medium">{language.toUpperCase()}</span>
                   <ChevronDown size={16} />
                 </button>
 
@@ -448,7 +471,7 @@ export default function Navbar() {
                       text-blue-700 font-semibold hover:bg-blue-50 min-w-[120px] justify-center"
                   >
                     <User size={16} />
-                    Hi, {username.length > 8 ? `${username.substring(0, 8)}...` : username}
+                    {t?.en?.hi || "Hi"}, {username.length > 8 ? `${username.substring(0, 8)}...` : username}
                   </button>
 
                   {profileMenuOpen && (
@@ -462,7 +485,7 @@ export default function Navbar() {
                         className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b"
                       >
                         <PackageIcon />
-                        <span>My Orders</span>
+                        <span>{t?.en?.orders || "My Orders"}</span>
                       </Link>
                       <Link
                         href="/profile"
@@ -470,14 +493,14 @@ export default function Navbar() {
                         className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b"
                       >
                         <User size={14} />
-                        <span>My Profile</span>
+                        <span>{t?.en?.profile || "My Profile"}</span>
                       </Link>
                       <button
                         onClick={handleLogout}
                         className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50"
                       >
                         <LogOut size={14} />
-                        <span>Logout</span>
+                        <span>{t?.en?.logout || "Logout"}</span>
                       </button>
                     </div>
                   )}
@@ -487,7 +510,7 @@ export default function Navbar() {
                   onClick={() => setIsPopupOpen(true)}
                   className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-2"
                 >
-                  Log In
+                  {t?.en?.login || "Log In"}
                 </button>
               )}
             </div>
@@ -502,8 +525,8 @@ export default function Navbar() {
                 className="flex items-center gap-1 p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full"
               >
                 <img
-                  src={`https://flagcdn.com/w20/${currentLanguage.flag}.png`}
-                  alt={currentLanguage.label}
+                  src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
+                  alt={currentLanguageInfo.label}
                   className="w-5 h-4 rounded-sm"
                 />
                 <ChevronDown size={16} />
@@ -576,7 +599,7 @@ export default function Navbar() {
                   <input
                     autoFocus
                     type="text"
-                    placeholder="Search products..."
+                    placeholder={t?.productsPage?.filters?.searchPlaceholder || "Search products..."}
                     value={query}
                     onChange={(e) => handleSearchChange(e.target.value)}
                     onKeyDown={handleSearch}
@@ -643,7 +666,7 @@ export default function Navbar() {
               <div className="flex items-center justify-between">
                 <div>
                   {username ? (
-                    <p className="font-semibold">Hi, {username.length > 12 ? `${username.substring(0, 12)}...` : username}</p>
+                    <p className="font-semibold">{t?.en?.hi || "Hi"}, {username.length > 12 ? `${username.substring(0, 12)}...` : username}</p>
                   ) : (
                     <p className="font-semibold">Guest User</p>
                   )}
@@ -655,12 +678,12 @@ export default function Navbar() {
             </div>
 
             <div className="flex-1 overflow-y-auto p-5 space-y-1">
-              <MobileLink href="/" onClick={() => setMenuOpen(false)}>Home</MobileLink>
-              <MobileLink href="/products" onClick={() => setMenuOpen(false)}>Products</MobileLink>
-              <MobileLink href="/about" onClick={() => setMenuOpen(false)}>About Us</MobileLink>
-              <MobileLink href="/terms" onClick={() => setMenuOpen(false)}>Terms</MobileLink>
-              <MobileLink href="/contact" onClick={() => setMenuOpen(false)}>Contact</MobileLink>
-              <MobileLink href="/orders" onClick={() => setMenuOpen(false)}>My Orders</MobileLink>
+              <MobileLink href="/" onClick={() => setMenuOpen(false)}>{currentTranslations.home || "Home"}</MobileLink>
+              <MobileLink href="/products" onClick={() => setMenuOpen(false)}>{currentTranslations.products || "Products"}</MobileLink>
+              <MobileLink href="/about" onClick={() => setMenuOpen(false)}>{currentTranslations.about || "About Us"}</MobileLink>
+              <MobileLink href="/terms" onClick={() => setMenuOpen(false)}>{currentTranslations.terms || "Terms"}</MobileLink>
+              <MobileLink href="/contact" onClick={() => setMenuOpen(false)}>{currentTranslations.contact || "Contact"}</MobileLink>
+              <MobileLink href="/orders" onClick={() => setMenuOpen(false)}>{t?.en?.orders || "My Orders"}</MobileLink>
 
               <div className="pt-4 border-t">
                 <p className="text-sm font-semibold mb-3">Language</p>
@@ -690,12 +713,12 @@ export default function Navbar() {
                 onClick={() => setMenuOpen(false)}
               >
                 <Download size={20} />
-                Download PDF
+                {t?.en?.download || "Download PDF"}
               </a>
 
               {username ? (
                 <>
-                  <MobileLink href="/profile" onClick={() => setMenuOpen(false)}>My Profile</MobileLink>
+                  <MobileLink href="/profile" onClick={() => setMenuOpen(false)}>{t?.en?.profile || "My Profile"}</MobileLink>
                   <button
                     onClick={() => {
                       setMenuOpen(false);
@@ -704,7 +727,7 @@ export default function Navbar() {
                     className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left"
                   >
                     <LogOut size={20} />
-                    Logout
+                    {t?.en?.logout || "Logout"}
                   </button>
                 </>
               ) : (
@@ -716,7 +739,7 @@ export default function Navbar() {
                   className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left"
                 >
                   <User size={20} />
-                  Login / Register
+                  {t?.en?.login || "Login"} / Register
                 </button>
               )}
             </div>
