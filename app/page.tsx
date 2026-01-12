@@ -329,7 +329,7 @@ export default function Home() {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-200/30 via-transparent to-transparent rounded-2xl blur opacity-50 group-hover:opacity-70 transition-opacity duration-300 -z-10" />
             
             {/* Subtle backdrop with soft edges */}
-            <div className="backdrop-blur-xs bg-white/50 p-6 md:p-8 rounded-2xl border border-blue-100/30 shadow-sm">
+            <div className="backdrop-blur-xs bg-white/50 p-6 md:p-8 rounded-2xl border border-blue-100/30 shadow-sm -mt-15">
               <div className="relative">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2A73] leading-tight">
                   {hero.title || "Trusted Pharmaceutical Manufacturing & Global Distribution"}
