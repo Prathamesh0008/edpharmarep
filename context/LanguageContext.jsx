@@ -86,12 +86,41 @@ export function LanguageProvider({ children }) {
   };
 
   const getProductBySlug = (slug) => {
-    return (
-      PRODUCT_LANGUAGES[lang]?.[slug] ||
-      PRODUCT_LANGUAGES.en?.[slug] ||
-      null
-    );
-  };
+  console.log("🔍 Looking for slug:", slug, "in language:", lang);
+  
+  // Try to find the product in current language with language suffix
+  const productKey = `${slug}-${lang}`;
+  const productInCurrentLang = PRODUCT_LANGUAGES[lang]?.[productKey];
+  
+  if (productInCurrentLang) {
+    console.log("✅ Found in current language:", productInCurrentLang.name);
+    return productInCurrentLang;
+  }
+  
+  // Fallback to English version
+  const productKeyEn = `${slug}-en`;
+  const productInEnglish = PRODUCT_LANGUAGES.en?.[productKeyEn];
+  
+  if (productInEnglish) {
+    console.log("🔄 Found in English fallback:", productInEnglish.name);
+    return productInEnglish;
+  }
+  
+  // If still not found, search through all products in current language
+  const currentLangProducts = PRODUCT_LANGUAGES[lang];
+  if (currentLangProducts) {
+    for (const key in currentLangProducts) {
+      const product = currentLangProducts[key];
+      if (product.slug === slug) {
+        console.log("🔎 Found by slug match:", product.name);
+        return product;
+      }
+    }
+  }
+  
+  console.log("❌ Product not found for slug:", slug);
+  return null;
+};
 
   // Get available languages for selector
   const availableLanguages = [

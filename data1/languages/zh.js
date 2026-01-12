@@ -331,6 +331,388 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "您的购物车",
+    subtitle: "结账前查看商品",
+    b2bBadge: "B2B 批发",
+    batches: "批次",
+    batch: "批次",
+    totalUnits: "总单位数"
+  },
+  emptyState: {
+    title: "您的购物车是空的",
+    description: "添加商品以继续购物",
+    browseButton: "浏览商品"
+  },
+  items: {
+    unitPrice: "/ 单位",
+    remove: "删除",
+    removing: "删除中...",
+    bulkUnits: "批量单位：",
+    swipeTip: "提示：向左滑动删除商品"
+  },
+  summary: {
+    title: "订单摘要",
+    items: "商品",
+    itemsPlural: "商品",
+    bulkOrder: "批量订单",
+    unitsPerBatch: "单位/批次",
+    totalUnits: "总单位数",
+    totalBatches: "总批次数",
+    subtotal: "小计",
+    shipping: "运费",
+    shippingCalc: "结账时计算",
+    total: "总计",
+    loginRequired: "需要登录",
+    loginPrompt: "请登录以继续结账",
+    loginLink: "点击这里登录",
+    checkoutButton: "进行结账",
+    loginCheckoutButton: "登录结账",
+    continueShopping: "继续购物",
+    checkingAuth: "正在验证身份..."
+  },
+  buttons: {
+    increase: "按批量单位增加数量",
+    decrease: "按批量单位减少数量"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "安全结账",
+    subtitle: "快速 • 安全 • 保密",
+    steps: ["购物车", "地址", "支付", "确认"]
+  },
+  emptyState: {
+    title: "您的购物车是空的",
+    description: "添加商品以继续结账。",
+    browseButton: "浏览商品"
+  },
+  deliveryAddress: {
+    title: "配送地址",
+    savedAddresses: "您保存的地址",
+    show: "显示",
+    hide: "隐藏",
+    useAddress: "使用",
+    saveAddress: "保存地址",
+    note: "地址仅保存在您的账户中，其他用户不可见。",
+    saveForFuture: "保存此地址用于未来订单"
+  },
+  form: {
+    placeholders: {
+      fullName: "全名",
+      phone: "电话号码",
+      email: "电子邮件地址",
+      address: "完整地址",
+      city: "城市",
+      pincode: "邮政编码",
+      country: "国家"
+    }
+  },
+  payment: {
+    title: "支付方式",
+    cod: {
+      title: "货到付款",
+      subtitle: "收到货时支付"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "信用卡 / 借记卡",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "电子钱包",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "所有支付均加密安全"
+  },
+  orderSummary: {
+    title: "订单摘要",
+    secure: "安全与私密",
+    items: "商品",
+    totalUnits: "总单位数",
+    totalBatches: "总批次",
+    totalAmount: "总金额",
+    placeOrder: "提交安全订单",
+    processing: "处理中...",
+    trustedBy: "医疗专业人员信赖 • 隐私包装",
+    continueShopping: "继续购物"
+  },
+  validation: {
+    emptyCart: "您的购物车是空的",
+    fullName: {
+      required: "请输入有效的全名",
+      invalid: "全名只能包含字母"
+    },
+    email: "请输入有效的电子邮件地址",
+    phone: "电话号码必须为10位数字",
+    address: "请输入完整配送地址",
+    city: "城市是必填项",
+    pincode: "邮政编码必须为6位数字",
+    country: "国家是必填项",
+    payment: "请选择支付方式"
+  },
+  messages: {
+    loginRequired: "请登录以继续结账",
+    saveSuccess: "地址保存成功！",
+    sessionExpired: "会话已过期。请重新登录。",
+    orderFailed: "订单失败",
+    networkError: "网络错误。请重试。"
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "订单确认成功！",
+    subtitle: "感谢您的购买。我们已收到您的订单 #{orderId}，正在处理中。",
+    paymentStatus: "付款已确认 • 邮件已发送 • 订单处理中"
+  },
+  errorState: {
+    title: "订单错误",
+    viewOrders: "查看我的订单",
+    returnHome: "返回首页"
+  },
+  loadingState: {
+    title: "正在加载您的订单...",
+    subtitle: "正在准备订单确认信息"
+  },
+  orderSummary: {
+    title: "订单摘要",
+    orderNumber: "订单编号",
+    orderDate: "订单日期",
+    paymentMethod: "支付方式",
+    cashOnDelivery: "货到付款",
+    delivery: "配送",
+    standardDelivery: "标准 (2-3天)"
+  },
+  orderStatus: {
+    title: "订单状态",
+    steps: {
+      placed: {
+        title: "已下单",
+        description: "您的订单已收到",
+        time: "刚刚"
+      },
+      processing: {
+        title: "处理中",
+        description: "我们正在准备您的商品",
+        time: "今天"
+      },
+      shipping: {
+        title: "配送中",
+        description: "预计2-3天内送达",
+        time: "明天"
+      },
+      delivered: {
+        title: "已送达",
+        description: "将送达您家门口",
+        time: "2-3天"
+      }
+    },
+    statuses: {
+      complete: "已完成",
+      inProgress: "进行中"
+    }
+  },
+  actionButtons: {
+    viewDetails: "查看订单详情",
+    continueShopping: "继续购物",
+    downloadReceipt: "下载收据",
+    emailReceipt: "邮件发送收据"
+  },
+  supportCard: {
+    title: "需要帮助？",
+    description: "我们的支持团队随时为您解答订单相关问题。",
+    contactSupport: "联系客服"
+  },
+  quickActions: {
+    title: "快捷操作",
+    viewAllOrders: "查看所有订单",
+    accountSettings: "账户设置"
+  },
+  deliveryInfo: {
+    title: "配送更新",
+    subtitle: "我们将随时通知您",
+    estimatedDelivery: "预计送达时间",
+    trackingNumber: "追踪号码",
+    willBeProvided: "稍后提供"
+  },
+  footer: {
+    confirmed: "✓ 已确认",
+    confirmationMessage: "确认邮件已发送至您的注册邮箱地址。您可以随时在我的订单部分跟踪订单状态",
+    links: {
+      helpCenter: "帮助中心",
+      shippingPolicy: "配送政策",
+      returnsRefunds: "退货退款",
+      contactUs: "联系我们"
+    }
+  },
+  messages: {
+    receiptDownloaded: "收据下载成功！",
+    emailSubject: "您的订单确认 - {orderId}"
+  }
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "返回订单",
+    orderNumber: "订单 #{id}",
+    printInvoice: "打印发票",
+    downloadPDF: "下载PDF",
+    shareOrder: "分享订单"
+  },
+  orderHeader: {
+    orderId: "订单号",
+    orderDate: "订单日期",
+    items: "商品",
+    totalItems: "{count} {items}",
+    item: "件",
+    itemsPlural: "件"
+  },
+  status: {
+    pending: "待处理",
+    processing: "处理中",
+    shipped: "已发货",
+    delivered: "已送达",
+    rejected: "已拒绝",
+    cancelled: "已取消",
+    completed: "已完成"
+  },
+  orderProgress: {
+    title: "订单进度",
+    steps: ["已下单", "处理中", "已发货", "已送达"],
+    current: "当前",
+    estimatedDelivery: "预计送达",
+    delivered: "已送达",
+    deliveredOn: "送达于",
+    expectedBy: "预计于"
+  },
+  rejectedState: {
+    title: "订单被拒",
+    cancelled: "已取消",
+    orderStopped: "订单已停止",
+    cannotProcess: "订单无法处理",
+    codNote: "由于这是货到付款订单，无需付款。",
+    paymentNote: "如果已进行任何付款，将在5-7个工作日内退款。",
+    contactSupport: "联系客服",
+    shopAgain: "再次购物"
+  },
+  orderItems: {
+    title: "订单商品",
+    totalItems: "商品总数",
+    quantity: "数量:",
+    priceEach: "单价",
+    subtotal: "小计",
+    shipping: "运费",
+    shippingFree: "免费",
+    tax: "税费",
+    total: "总计",
+    inclusiveTax: "含所有税费",
+    distinctItems: "不同商品"
+  },
+  deliveryAddress: {
+    title: "配送地址",
+    billingAddress: "账单地址",
+    recipient: "收件人",
+    primaryContact: "主要联系人"
+  },
+  paymentInfo: {
+    title: "支付信息",
+    paymentMethod: "支付方式",
+    paymentStatus: "支付状态",
+    pending: "待处理",
+    paid: "已支付",
+    via: "通过",
+    codInstructions: "货到付款说明",
+    codNote: "请为 ₹{amount} 准备准确的零钱",
+    paymentNote: "支付备注",
+    codRefundNote: "此货到付款订单无需付款。",
+    regularRefundNote: "任何已支付的款项将自动退款。"
+  },
+  customerSupport: {
+    callSupport: "致电客服",
+    issueResolution: "问题解决",
+    needHelp: "需要被拒订单的帮助？",
+    fastResolution: "快速问题解决",
+    availableHours: "服务时间 9:00 - 21:00",
+    trackOrder: "跟踪订单",
+    reorderItems: "重新订购商品",
+    liveTracking: "实时跟踪可用",
+    quickReorder: "快速重新订购可用",
+    trackPackage: "跟踪包裹",
+    emailSupport: "发送邮件寻求帮助",
+    contactSupport: "联系客服"
+  },
+  footerNote: {
+    needHelp: "需要订单帮助？",
+    contactSupport: "联系我们的客服团队"
+  },
+  errorState: {
+    oops: "哎呀！",
+    orderNotFound: "订单未找到",
+    notExist: "您寻找的订单不存在或您没有查看权限。"
+  },
+  actions: {
+    contactSupport: "联系客服",
+    shopAgain: "再次购物"
+  }
+},
+ordersPage: {
+  header: {
+    title: "我的订单",
+    subtitle: "跟踪您的最近购买和订单状态"
+  },
+  search: {
+    placeholder: "搜索订单、姓名、电话...",
+    filterAll: "全部",
+    filterPending: "待处理",
+    filterProcessing: "处理中",
+    filterShipped: "已发货",
+    filterRejected: "已拒绝"
+  },
+  statuses: {
+    pending: "待处理",
+    processing: "处理中",
+    shipped: "已发货",
+    rejected: "已拒绝",
+    completed: "已完成"
+  },
+  orderItem: {
+    orderId: "订单号",
+    itemsCount: "{count} 件商品",
+    quantity: "数量: {qty}",
+    deliverTo: "配送至: {name}, {city}",
+    viewDetails: "查看详情"
+  },
+  emptyState: {
+    title: "暂无订单",
+    description: "您的订单历史将在此显示。开始购物以跟踪您的购买记录。",
+    startShopping: "开始购物 →"
+  },
+  loading: "正在加载您的订单..."
+},
+homeProducts: {
+  header: {
+    tag: "所有产品",
+    showingAll: "显示所有 {count} 个产品",
+    noProducts: "未找到以下产品:",
+    tryAnotherBrand: "请尝试选择其他品牌或稍后重试。",
+    viewBrandProducts: "查看 {brand} 产品"
+  },
+  productCard: {
+    category: "类别",
+    dosage: "剂量:",
+    form: "剂型:",
+    pack: "包装:",
+    details: "详情",
+    enquire: "咨询"
+  },
+  buttons: {
+    viewBrandProducts: "查看 {brand} 产品",
+    productsCount: "{count} 个产品"
+  }
+},
 contactPage: {
   hero: {
     title: "联系我们",

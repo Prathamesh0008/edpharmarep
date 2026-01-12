@@ -273,6 +273,388 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "カート",
+    subtitle: "チェックアウト前に商品を確認",
+    b2bBadge: "B2B 卸売",
+    batches: "バッチ",
+    batch: "バッチ",
+    totalUnits: "総ユニット数"
+  },
+  emptyState: {
+    title: "カートは空です",
+    description: "商品を追加してショッピングを続ける",
+    browseButton: "商品を閲覧"
+  },
+  items: {
+    unitPrice: "/ ユニット",
+    remove: "削除",
+    removing: "削除中...",
+    bulkUnits: "バルクユニット：",
+    swipeTip: "ヒント：左にスワイプして商品を削除"
+  },
+  summary: {
+    title: "注文概要",
+    items: "商品",
+    itemsPlural: "商品",
+    bulkOrder: "バルク注文",
+    unitsPerBatch: "ユニット/バッチ",
+    totalUnits: "総ユニット数",
+    totalBatches: "総バッチ数",
+    subtotal: "小計",
+    shipping: "配送",
+    shippingCalc: "チェックアウト時に計算",
+    total: "合計",
+    loginRequired: "ログイン必要",
+    loginPrompt: "チェックアウトするにはログインしてください",
+    loginLink: "ここをクリックしてログイン",
+    checkoutButton: "チェックアウトに進む",
+    loginCheckoutButton: "ログインしてチェックアウト",
+    continueShopping: "ショッピングを続ける",
+    checkingAuth: "認証を確認中..."
+  },
+  buttons: {
+    increase: "バルクユニットで数量を増やす",
+    decrease: "バルクユニットで数量を減らす"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "セキュアな決済",
+    subtitle: "高速 • 安全 • 機密",
+    steps: ["カート", "住所", "支払い", "確認"]
+  },
+  emptyState: {
+    title: "カートが空です",
+    description: "決済を続けるには商品を追加してください。",
+    browseButton: "商品を閲覧"
+  },
+  deliveryAddress: {
+    title: "配送先住所",
+    savedAddresses: "保存された住所",
+    show: "表示",
+    hide: "非表示",
+    useAddress: "使用",
+    saveAddress: "住所を保存",
+    note: "住所はあなたのアカウントにのみ保存され、他のユーザーには表示されません。",
+    saveForFuture: "この住所を今後の注文のために保存"
+  },
+  form: {
+    placeholders: {
+      fullName: "氏名",
+      phone: "電話番号",
+      email: "メールアドレス",
+      address: "住所全体",
+      city: "市区町村",
+      pincode: "郵便番号",
+      country: "国"
+    }
+  },
+  payment: {
+    title: "支払い方法",
+    cod: {
+      title: "代金引換",
+      subtitle: "受け取り時支払い"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "クレジット/デビットカード",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "ウォレット",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "すべての支払いは暗号化され安全です"
+  },
+  orderSummary: {
+    title: "注文の概要",
+    secure: "安全かつ非公開",
+    items: "商品",
+    totalUnits: "合計ユニット数",
+    totalBatches: "合計バッチ数",
+    totalAmount: "合計金額",
+    placeOrder: "安全な注文を確定",
+    processing: "処理中...",
+    trustedBy: "医療専門家から信頼 • 目立たない包装",
+    continueShopping: "買い物を続ける"
+  },
+  validation: {
+    emptyCart: "カートが空です",
+    fullName: {
+      required: "有効な氏名を入力してください",
+      invalid: "氏名はアルファベットのみで構成してください"
+    },
+    email: "有効なメールアドレスを入力してください",
+    phone: "電話番号は10桁で入力してください",
+    address: "配送先住所全体を入力してください",
+    city: "市区町村は必須です",
+    pincode: "郵便番号は6桁で入力してください",
+    country: "国は必須です",
+    payment: "支払い方法を選択してください"
+  },
+  messages: {
+    loginRequired: "決済を続けるにはログインしてください",
+    saveSuccess: "住所が正常に保存されました！",
+    sessionExpired: "セッションの有効期限が切れました。再度ログインしてください。",
+    orderFailed: "注文に失敗しました",
+    networkError: "ネットワークエラー。もう一度お試しください。"
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "注文が確定しました！",
+    subtitle: "ご購入ありがとうございます。注文 #{orderId} を受領し、現在処理中です。",
+    paymentStatus: "支払い確認済み • メール送信済み • 注文処理中"
+  },
+  errorState: {
+    title: "注文エラー",
+    viewOrders: "注文履歴を表示",
+    returnHome: "ホームに戻る"
+  },
+  loadingState: {
+    title: "注文を読み込んでいます...",
+    subtitle: "注文確認書を準備中"
+  },
+  orderSummary: {
+    title: "注文概要",
+    orderNumber: "注文番号",
+    orderDate: "注文日",
+    paymentMethod: "支払い方法",
+    cashOnDelivery: "代金引換",
+    delivery: "配送",
+    standardDelivery: "標準 (2-3日)"
+  },
+  orderStatus: {
+    title: "注文ステータス",
+    steps: {
+      placed: {
+        title: "注文済み",
+        description: "注文を受領しました",
+        time: "たった今"
+      },
+      processing: {
+        title: "処理中",
+        description: "商品を準備中です",
+        time: "今日"
+      },
+      shipping: {
+        title: "出荷中",
+        description: "2-3日以内に到着予定",
+        time: "明日"
+      },
+      delivered: {
+        title: "配達済み",
+        description: "ご自宅にお届けします",
+        time: "2-3日"
+      }
+    },
+    statuses: {
+      complete: "完了",
+      inProgress: "進行中"
+    }
+  },
+  actionButtons: {
+    viewDetails: "注文詳細を表示",
+    continueShopping: "買い物を続ける",
+    downloadReceipt: "領収書をダウンロード",
+    emailReceipt: "領収書をメール送信"
+  },
+  supportCard: {
+    title: "お困りですか？",
+    description: "サポートチームが注文に関するご質問にお答えします。",
+    contactSupport: "サポートに問い合わせ"
+  },
+  quickActions: {
+    title: "クイックアクション",
+    viewAllOrders: "すべての注文を表示",
+    accountSettings: "アカウント設定"
+  },
+  deliveryInfo: {
+    title: "配送更新情報",
+    subtitle: "最新情報をお知らせします",
+    estimatedDelivery: "到着予定日",
+    trackingNumber: "追跡番号",
+    willBeProvided: "後日提供"
+  },
+  footer: {
+    confirmed: "✓ 確認済み",
+    confirmationMessage: "確認メールが登録メールアドレスに送信されました。マイ注文履歴からいつでも注文状況を確認できます。",
+    links: {
+      helpCenter: "ヘルプセンター",
+      shippingPolicy: "配送ポリシー",
+      returnsRefunds: "返品・返金",
+      contactUs: "お問い合わせ"
+    }
+  },
+  messages: {
+    receiptDownloaded: "領収書のダウンロードが完了しました！",
+    emailSubject: "ご注文確認 - {orderId}"
+  }
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "注文履歴に戻る",
+    orderNumber: "注文 #{id}",
+    printInvoice: "請求書を印刷",
+    downloadPDF: "PDFをダウンロード",
+    shareOrder: "注文を共有"
+  },
+  orderHeader: {
+    orderId: "注文番号",
+    orderDate: "注文日",
+    items: "商品",
+    totalItems: "{count} {items}",
+    item: "点",
+    itemsPlural: "点"
+  },
+  status: {
+    pending: "保留中",
+    processing: "処理中",
+    shipped: "発送済み",
+    delivered: "配達済み",
+    rejected: "拒否",
+    cancelled: "キャンセル済み",
+    completed: "完了"
+  },
+  orderProgress: {
+    title: "注文の進捗",
+    steps: ["注文済み", "処理中", "発送済み", "配達済み"],
+    current: "現在",
+    estimatedDelivery: "到着予定日",
+    delivered: "配達済み",
+    deliveredOn: "配達日",
+    expectedBy: "到着予定"
+  },
+  rejectedState: {
+    title: "注文拒否",
+    cancelled: "キャンセル済み",
+    orderStopped: "注文停止",
+    cannotProcess: "注文を処理できません",
+    codNote: "代金引換注文だったため、支払いは必要ありませんでした。",
+    paymentNote: "支払いが行われた場合、5〜7営業日以内に返金されます。",
+    contactSupport: "サポートに問い合わせ",
+    shopAgain: "再び購入する"
+  },
+  orderItems: {
+    title: "注文商品",
+    totalItems: "合計商品数",
+    quantity: "数量:",
+    priceEach: "単価",
+    subtotal: "小計",
+    shipping: "配送料",
+    shippingFree: "無料",
+    tax: "税",
+    total: "合計",
+    inclusiveTax: "全税込み",
+    distinctItems: "異なる商品"
+  },
+  deliveryAddress: {
+    title: "配送先住所",
+    billingAddress: "請求先住所",
+    recipient: "受取人",
+    primaryContact: "主な連絡先"
+  },
+  paymentInfo: {
+    title: "支払い情報",
+    paymentMethod: "支払い方法",
+    paymentStatus: "支払い状況",
+    pending: "保留中",
+    paid: "支払済み",
+    via: "経由",
+    codInstructions: "代金引換指示",
+    codNote: "正確な金額 ₹{amount} をおつりのないように準備してください",
+    paymentNote: "支払いメモ",
+    codRefundNote: "この代金引換注文には支払いは必要ありませんでした。",
+    regularRefundNote: "行われた支払いは自動的に返金されます。"
+  },
+  customerSupport: {
+    callSupport: "サポートに電話",
+    issueResolution: "問題解決",
+    needHelp: "拒否された注文についてお困りですか？",
+    fastResolution: "迅速な問題解決",
+    availableHours: "対応時間 9:00 - 21:00",
+    trackOrder: "注文を追跡",
+    reorderItems: "商品を再注文",
+    liveTracking: "ライブ追跡可能",
+    quickReorder: "クイック再注文可能",
+    trackPackage: "荷物を追跡",
+    emailSupport: "お問い合わせはメールで",
+    contactSupport: "サポートに問い合わせ"
+  },
+  footerNote: {
+    needHelp: "注文についてお困りですか？",
+    contactSupport: "サポートチームにお問い合わせください"
+  },
+  errorState: {
+    oops: "おっと！",
+    orderNotFound: "注文が見つかりません",
+    notExist: "お探しの注文は存在しないか、表示する権限がありません。"
+  },
+  actions: {
+    contactSupport: "サポートに問い合わせ",
+    shopAgain: "再び購入する"
+  }
+},
+ordersPage: {
+  header: {
+    title: "マイ注文",
+    subtitle: "最近の購入と注文状況を追跡"
+  },
+  search: {
+    placeholder: "注文、名前、電話番号で検索...",
+    filterAll: "すべて",
+    filterPending: "保留中",
+    filterProcessing: "処理中",
+    filterShipped: "発送済み",
+    filterRejected: "拒否"
+  },
+  statuses: {
+    pending: "保留中",
+    processing: "処理中",
+    shipped: "発送済み",
+    rejected: "拒否",
+    completed: "完了"
+  },
+  orderItem: {
+    orderId: "注文ID",
+    itemsCount: "{count}点",
+    quantity: "数量: {qty}",
+    deliverTo: "配送先: {name}, {city}",
+    viewDetails: "詳細を表示"
+  },
+  emptyState: {
+    title: "注文がありません",
+    description: "注文履歴がここに表示されます。買い物を始めて購入を追跡しましょう。",
+    startShopping: "買い物を始める →"
+  },
+  loading: "注文を読み込んでいます..."
+},
+homeProducts: {
+  header: {
+    tag: "すべての商品",
+    showingAll: "{count}点の商品をすべて表示",
+    noProducts: "以下の商品は見つかりませんでした:",
+    tryAnotherBrand: "他のブランドを選択するか、後でもう一度確認してください。",
+    viewBrandProducts: "{brand}製品を見る"
+  },
+  productCard: {
+    category: "カテゴリー",
+    dosage: "用量:",
+    form: "形態:",
+    pack: "包装:",
+    details: "詳細",
+    enquire: "問い合わせる"
+  },
+  buttons: {
+    viewBrandProducts: "{brand}製品を見る",
+    productsCount: "{count}点の商品"
+  }
+},
 contactPage: {
   hero: {
     title: "お問い合わせ",

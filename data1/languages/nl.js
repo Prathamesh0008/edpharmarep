@@ -277,6 +277,367 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "Uw Winkelwagen",
+    subtitle: "Bekijk artikelen voor het afrekenen",
+    b2bBadge: "B2B Groothandel",
+    batches: "partijen",
+    batch: "partij",
+    totalUnits: "totaal aantal eenheden"
+  },
+  emptyState: {
+    title: "Uw winkelwagen is leeg",
+    description: "Voeg producten toe om door te gaan met winkelen",
+    browseButton: "Producten bekijken"
+  },
+  items: {
+    unitPrice: "/ eenheid",
+    remove: "Verwijderen",
+    removing: "Verwijderen...",
+    bulkUnits: "Grootverpakkingen:",
+    swipeTip: "Tip: Veeg naar links om artikelen te verwijderen"
+  },
+  summary: {
+    title: "Besteloverzicht",
+    items: "artikel",
+    itemsPlural: "artikelen",
+    bulkOrder: "Groothandelsbestelling",
+    unitsPerBatch: "eenheden/partij",
+    totalUnits: "Totaal Eenheden",
+    totalBatches: "Totaal Partijen",
+    subtotal: "Subtotaal",
+    shipping: "Verzending",
+    shippingCalc: "Berekend bij afrekenen",
+    total: "Totaal",
+    loginRequired: "Inloggen vereist",
+    loginPrompt: "Log in om door te gaan met afrekenen",
+    loginLink: "Klik hier om in te loggen",
+    checkoutButton: "Doorgaan naar Afrekenen",
+    loginCheckoutButton: "Inloggen om af te rekenen",
+    continueShopping: "Verder winkelen",
+    checkingAuth: "Authenticatie controleren..."
+  },
+  buttons: {
+    increase: "Aantal met grotereenheden verhogen",
+    decrease: "Aantal met grotereenheden verlagen"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Veilig Afrekenen",
+    subtitle: "Snel • Veilig • Vertrouwelijk",
+    steps: ["Winkelwagen", "Adres", "Betaling", "Bevestigen"]
+  },
+  emptyState: {
+    title: "Uw winkelwagen is leeg",
+    description: "Voeg producten toe om door te gaan met afrekenen.",
+    browseButton: "Producten bekijken"
+  },
+  deliveryAddress: {
+    title: "Bezorgadres",
+    savedAddresses: "Uw Opgeslagen Adressen",
+    show: "Tonen",
+    hide: "Verbergen",
+    useAddress: "Gebruiken",
+    saveAddress: "Adres Opslaan",
+    note: "Adressen worden alleen voor uw account opgeslagen en zijn niet zichtbaar voor andere gebruikers.",
+    saveForFuture: "Dit adres opslaan voor toekomstige bestellingen"
+  },
+  form: {
+    placeholders: {
+      fullName: "Volledige Naam",
+      phone: "Telefoonnummer",
+      email: "E-mailadres",
+      address: "Volledig Adres",
+      city: "Stad",
+      pincode: "Postcode",
+      country: "Land"
+    }
+  },
+  payment: {
+    title: "Betaalmethode",
+    cod: {
+      title: "Rembours",
+      subtitle: "Betaal bij ontvangst"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Credit / Debit Card",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Digitale Portemonnees",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Alle betalingen zijn versleuteld & veilig"
+  },
+  orderSummary: {
+    title: "Besteloverzicht",
+    secure: "Veilig & Privé",
+    items: "Artikelen",
+    totalUnits: "Totaal Aantal",
+    totalBatches: "Totaal Partijen",
+    totalAmount: "Totaalbedrag",
+    placeOrder: "Veilige Bestelling Plaatsen",
+    processing: "Verwerken...",
+    trustedBy: "Vertrouwd door zorgprofessionals • Discrete verpakking",
+    continueShopping: "Verder winkelen"
+  },
+  validation: {
+    emptyCart: "Uw winkelwagen is leeg",
+    fullName: {
+      required: "Voer een geldige volledige naam in",
+      invalid: "Volledige naam mag alleen letters bevatten"
+    },
+    email: "Voer een geldig e-mailadres in",
+    phone: "Telefoonnummer moet 10 cijfers zijn",
+    address: "Voer het volledige bezorgadres in",
+    city: "Stad is vereist",
+    pincode: "Postcode moet 6 cijfers zijn",
+    country: "Land is vereist",
+    payment: "Selecteer een betaalmethode"
+  },
+  messages: {
+    loginRequired: "Log in om door te gaan met afrekenen",
+    saveSuccess: "Adres succesvol opgeslagen!",
+    sessionExpired: "Sessie verlopen. Log opnieuw in.",
+    orderFailed: "Bestelling mislukt",
+    networkError: "Netwerkfout. Probeer het opnieuw."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Bestelling Bevestigd!",
+    subtitle: "Bedankt voor uw aankoop. We hebben uw bestelling #{orderId} ontvangen en deze wordt verwerkt.",
+    paymentStatus: "Betaling bevestigd • E-mail verzonden • Bestelling verwerken"
+  },
+  errorState: {
+    title: "Bestelingsfout",
+    viewOrders: "Mijn Bestellingen Bekijken",
+    returnHome: "Terug naar Home"
+  },
+  loadingState: {
+    title: "Uw Bestelling Laden...",
+    subtitle: "Uw orderbevestiging voorbereiden"
+  },
+  orderSummary: {
+    title: "Besteloverzicht",
+    orderNumber: "Bestelnummer",
+    orderDate: "Besteldatum",
+    paymentMethod: "Betaalmethode",
+    cashOnDelivery: "Rembours",
+    delivery: "Levering",
+    standardDelivery: "Standaard (2-3 dagen)"
+  },
+  orderStatus: {
+    title: "Bestelstatus",
+    steps: {
+      placed: {
+        title: "Bestelling Geplaatst",
+        description: "Uw bestelling is ontvangen",
+        time: "Zojuist"
+      },
+      processing: {
+        title: "Verwerken",
+        description: "We bereiden uw artikelen voor",
+        time: "Vandaag"
+      },
+      shipping: {
+        title: "Verzending",
+        description: "Geschatte levering in 2-3 dagen",
+        time: "Morgen"
+      },
+      delivered: {
+        title: "Geleverd",
+        description: "Komt bij u thuis aan",
+        time: "2-3 dagen"
+      }
+    },
+    statuses: {
+      complete: "Voltooid",
+      inProgress: "In Uitvoering"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Bestelgegevens Bekijken",
+    continueShopping: "Verder Winkelen",
+    downloadReceipt: "Bon Downloaden",
+    emailReceipt: "Bon per E-mail"
+  },
+  supportCard: {
+    title: "Hulp Nodig?",
+    description: "Ons supportteam staat klaar om te helpen met vragen over uw bestelling.",
+    contactSupport: "Contact Support"
+  },
+  quickActions: {
+    title: "Snelle Acties",
+    viewAllOrders: "Alle Bestellingen Bekijken",
+    accountSettings: "Accountinstellingen"
+  },
+  deliveryInfo: {
+    title: "Leveringsupdates",
+    subtitle: "We houden u op de hoogte",
+    estimatedDelivery: "Geschatte Levering",
+    trackingNumber: "Trackingnummer",
+    willBeProvided: "Wordt verstrekt"
+  },
+  footer: {
+    confirmed: "✓ Bevestigd",
+    confirmationMessage: "Er is een bevestigingsmail naar uw geregistreerde e-mailadres gestuurd. U kunt uw bestelstatus altijd volgen via het gedeelte Mijn Bestellingen.",
+    links: {
+      helpCenter: "Helpcentrum",
+      shippingPolicy: "Verzendbeleid",
+      returnsRefunds: "Retourneren & Terugbetaling",
+      contactUs: "Contacteer Ons"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Bon succesvol gedownload!",
+    emailSubject: "Uw Orderbevestiging - {orderId}"
+  }
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Terug naar Bestellingen",
+    orderNumber: "Bestelling #{id}",
+    printInvoice: "Factuur Afdrukken",
+    downloadPDF: "PDF Downloaden",
+    shareOrder: "Bestelling Delen"
+  },
+  orderHeader: {
+    orderId: "Bestelnummer",
+    orderDate: "Besteldatum",
+    items: "Artikelen",
+    totalItems: "{count} {items}",
+    item: "artikel",
+    itemsPlural: "artikelen"
+  },
+  status: {
+    pending: "In Afwachting",
+    processing: "In Verwerking",
+    shipped: "Verzonden",
+    delivered: "Geleverd",
+    rejected: "Afgewezen",
+    cancelled: "Geannuleerd",
+    completed: "Voltooid"
+  },
+  orderProgress: {
+    title: "Bestelvoortgang",
+    steps: ["Besteld", "Verwerking", "Verzonden", "Geleverd"],
+    current: "Huidig",
+    estimatedDelivery: "Geschatte Levering",
+    delivered: "Geleverd",
+    deliveredOn: "Geleverd op",
+    expectedBy: "Verwacht tegen"
+  },
+  rejectedState: {
+    title: "Bestelling Afgewezen",
+    cancelled: "Geannuleerd",
+    orderStopped: "Bestelling Gestopt",
+    cannotProcess: "Bestelling Kan Niet Worden Verwerkt",
+    codNote: "Er was geen betaling vereist omdat dit een Rembours-bestelling was.",
+    paymentNote: "Als er een betaling is gedaan, wordt deze binnen 5-7 werkdagen terugbetaald.",
+    contactSupport: "Contact Support",
+    shopAgain: "Opnieuw Winkelen"
+  },
+  orderItems: {
+    title: "Bestelde Artikelen",
+    totalItems: "totaal artikelen",
+    quantity: "Aantal:",
+    priceEach: "per stuk",
+    subtotal: "Subtotaal",
+    shipping: "Verzending",
+    shippingFree: "GRATIS",
+    tax: "Belasting",
+    total: "Totaal",
+    inclusiveTax: "Inclusief alle belastingen",
+    distinctItems: "verschillende artikelen"
+  },
+  deliveryAddress: {
+    title: "Bezorgadres",
+    billingAddress: "Factuuradres",
+    recipient: "Ontvanger",
+    primaryContact: "Primair contact"
+  },
+  paymentInfo: {
+    title: "Betalingsinformatie",
+    paymentMethod: "Betalingswijze",
+    paymentStatus: "Betalingsstatus",
+    pending: "In Afwachting",
+    paid: "Betaald",
+    via: "via",
+    codInstructions: "Rembours Instructies",
+    codNote: "Houdt exact wisselgeld klaar voor ₹{amount}",
+    paymentNote: "Betalingsnotitie",
+    codRefundNote: "Voor deze rembours-bestelling was geen betaling vereist.",
+    regularRefundNote: "Eventuele betaling wordt automatisch terugbetaald."
+  },
+  customerSupport: {
+    callSupport: "Bel Support",
+    issueResolution: "Probleem Oplossing",
+    needHelp: "Hulp nodig met afgewezen bestelling?",
+    fastResolution: "Snelle probleemoplossing",
+    availableHours: "Beschikbaar 9:00 - 21:00",
+    trackOrder: "Volg Bestelling",
+    reorderItems: "Artikelen Opnieuw Bestellen",
+    liveTracking: "Live Tracking Beschikbaar",
+    quickReorder: "Snelle herbestelling beschikbaar",
+    trackPackage: "Volg Pakket",
+    emailSupport: "Email ons voor hulp",
+    contactSupport: "Contact Support"
+  },
+  footerNote: {
+    needHelp: "Hulp nodig met uw bestelling?",
+    contactSupport: "Neem contact op met ons supportteam"
+  },
+  errorState: {
+    oops: "Oeps!",
+    orderNotFound: "Bestelling Niet Gevonden",
+    notExist: "De bestelling die u zoekt bestaat niet of u heeft geen toestemming om deze te bekijken."
+  },
+  actions: {
+    contactSupport: "Contact Support",
+    shopAgain: "Opnieuw Winkelen"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Mijn Bestellingen",
+    subtitle: "Volg uw recente aankopen en bestelstatus"
+  },
+  search: {
+    placeholder: "Zoek bestellingen, naam, telefoon...",
+    filterAll: "Alle",
+    filterPending: "In Afwachting",
+    filterProcessing: "In Verwerking",
+    filterShipped: "Verzonden",
+    filterRejected: "Afgewezen"
+  },
+  statuses: {
+    pending: "In Afwachting",
+    processing: "In Verwerking",
+    shipped: "Verzonden",
+    rejected: "Afgewezen",
+    completed: "Voltooid"
+  },
+  orderItem: {
+    orderId: "Bestelnummer",
+    itemsCount: "{count} artikel{n}",
+    quantity: "Aantal: {qty}",
+    deliverTo: "Bezorgen aan: {name}, {city}",
+    viewDetails: "Details Bekijken"
+  },
+  emptyState: {
+    title: "Nog geen bestellingen",
+    description: "Uw bestelgeschiedenis verschijnt hier. Begin met winkelen om uw aankopen te volgen.",
+    startShopping: "Begin met Winkelen →"
+  },
+  loading: "Uw bestellingen laden..."
+},
 contactPage: {
   hero: {
     title: "Neem Contact Op",
@@ -330,6 +691,27 @@ contactPage: {
     message: {
       required: "Bericht is verplicht"
     }
+  }
+},
+homeProducts: {
+  header: {
+    tag: "Alle Producten",
+    showingAll: "Toont alle {count} producten",
+    noProducts: "Geen producten gevonden voor",
+    tryAnotherBrand: "Probeer een ander merk te selecteren of kom later terug.",
+    viewBrandProducts: "Bekijk {brand} Producten"
+  },
+  productCard: {
+    category: "Categorie",
+    dosage: "Dosering:",
+    form: "Vorm:",
+    pack: "Verpakking:",
+    details: "Details",
+    enquire: "Vraag informatie"
+  },
+  buttons: {
+    viewBrandProducts: "Bekijk {brand} Producten",
+    productsCount: "{count} Producten"
   }
 },
 productsPage: {

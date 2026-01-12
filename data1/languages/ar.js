@@ -343,6 +343,388 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "سلة التسوق الخاصة بك",
+    subtitle: "راجع العناصر قبل الدفع",
+    b2bBadge: "B2B بالجملة",
+    batches: "دفعات",
+    batch: "دفعة",
+    totalUnits: "إجمالي الوحدات"
+  },
+  emptyState: {
+    title: "سلة التسوق فارغة",
+    description: "أضف منتجات للمواصلة",
+    browseButton: "تصفح المنتجات"
+  },
+  items: {
+    unitPrice: "/ وحدة",
+    remove: "حذف",
+    removing: "جاري الحذف...",
+    bulkUnits: "الوحدات بالجملة:",
+    swipeTip: "نصيحة: اسحب لليسار لحذف العناصر"
+  },
+  summary: {
+    title: "ملخص الطلب",
+    items: "عنصر",
+    itemsPlural: "عناصر",
+    bulkOrder: "طلب بالجملة",
+    unitsPerBatch: "وحدة/دفعة",
+    totalUnits: "إجمالي الوحدات",
+    totalBatches: "إجمالي الدفعات",
+    subtotal: "المجموع الفرعي",
+    shipping: "الشحن",
+    shippingCalc: "يتم حسابه عند الدفع",
+    total: "الإجمالي",
+    loginRequired: "تسجيل الدخول مطلوب",
+    loginPrompt: "الرجاء تسجيل الدخول للمتابعة",
+    loginLink: "انقر هنا لتسجيل الدخول",
+    checkoutButton: "المتابعة للدفع",
+    loginCheckoutButton: "تسجيل الدخول للدفع",
+    continueShopping: "مواصلة التسوق",
+    checkingAuth: "جاري التحقق من المصادقة..."
+  },
+  buttons: {
+    increase: "زيادة الكمية بوحدات بالجملة",
+    decrease: "تقليل الكمية بوحدات بالجملة"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "الدفع الآمن",
+    subtitle: "سريع • آمن • سري",
+    steps: ["السلة", "العنوان", "الدفع", "التأكيد"]
+  },
+  emptyState: {
+    title: "سلة التسوق الخاصة بك فارغة",
+    description: "أضف منتجات للمتابعة في الدفع.",
+    browseButton: "تصفح المنتجات"
+  },
+  deliveryAddress: {
+    title: "عنوان التوصيل",
+    savedAddresses: "عناوينك المحفوظة",
+    show: "إظهار",
+    hide: "إخفاء",
+    useAddress: "استخدام",
+    saveAddress: "حفظ العنوان",
+    note: "يتم حفظ العناوين لحسابك فقط ولن تكون مرئية للمستخدمين الآخرين.",
+    saveForFuture: "حفظ هذا العنوان للطلبات المستقبلية"
+  },
+  form: {
+    placeholders: {
+      fullName: "الاسم الكامل",
+      phone: "رقم الهاتف",
+      email: "عنوان البريد الإلكتروني",
+      address: "العنوان الكامل",
+      city: "المدينة",
+      pincode: "الرمز البريدي",
+      country: "البلد"
+    }
+  },
+  payment: {
+    title: "طريقة الدفع",
+    cod: {
+      title: "الدفع عند الاستلام",
+      subtitle: "ادفع عند استلام الطلب"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "بطاقة الائتمان / الخصم",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "المحافظ الإلكترونية",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "جميع المدفوعات مشفرة وآمنة"
+  },
+  orderSummary: {
+    title: "ملخص الطلب",
+    secure: "آمن وخاص",
+    items: "المنتجات",
+    totalUnits: "إجمالي الوحدات",
+    totalBatches: "إجمالي الدفعات",
+    totalAmount: "المبلغ الإجمالي",
+    placeOrder: "تقديم طلب آمن",
+    processing: "جارٍ المعالجة...",
+    trustedBy: "موثوق من قبل متخصصي الرعاية الصحية • تغليف سري",
+    continueShopping: "مواصلة التسوق"
+  },
+  validation: {
+    emptyCart: "سلة التسوق الخاصة بك فارغة",
+    fullName: {
+      required: "الرجاء إدخال اسم كامل صالح",
+      invalid: "يجب أن يحتوي الاسم الكامل على أحرف فقط"
+    },
+    email: "الرجاء إدخال عنوان بريد إلكتروني صالح",
+    phone: "يجب أن يتكون رقم الهاتف من 10 أرقام",
+    address: "الرجاء إدخال عنوان التوصيل الكامل",
+    city: "المدينة مطلوبة",
+    pincode: "يجب أن يتكون الرمز البريدي من 6 أرقام",
+    country: "البلد مطلوب",
+    payment: "الرجاء اختيار طريقة الدفع"
+  },
+  messages: {
+    loginRequired: "الرجاء تسجيل الدخول لمتابعة الدفع",
+    saveSuccess: "تم حفظ العنوان بنجاح!",
+    sessionExpired: "انتهت الجلسة. الرجاء تسجيل الدخول مرة أخرى.",
+    orderFailed: "فشل الطلب",
+    networkError: "خطأ في الشبكة. الرجاء المحاولة مرة أخرى."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "تم تأكيد الطلب!",
+    subtitle: "شكرًا لشرائك. لقد استلمنا طلبك #{orderId} وهو قيد المعالجة.",
+    paymentStatus: "تم تأكيد الدفع • تم إرسال البريد الإلكتروني • معالجة الطلب"
+  },
+  errorState: {
+    title: "خطأ في الطلب",
+    viewOrders: "عرض طلباتي",
+    returnHome: "العودة للصفحة الرئيسية"
+  },
+  loadingState: {
+    title: "جارٍ تحميل طلبك...",
+    subtitle: "جاري إعداد تأكيد طلبك"
+  },
+  orderSummary: {
+    title: "ملخص الطلب",
+    orderNumber: "رقم الطلب",
+    orderDate: "تاريخ الطلب",
+    paymentMethod: "طريقة الدفع",
+    cashOnDelivery: "الدفع عند الاستلام",
+    delivery: "التوصيل",
+    standardDelivery: "قياسي (2-3 أيام)"
+  },
+  orderStatus: {
+    title: "حالة الطلب",
+    steps: {
+      placed: {
+        title: "تم الطلب",
+        description: "تم استلام طلبك",
+        time: "الآن"
+      },
+      processing: {
+        title: "قيد المعالجة",
+        description: "نقوم بتحضير منتجاتك",
+        time: "اليوم"
+      },
+      shipping: {
+        title: "قيد الشحن",
+        description: "التوصيل المتوقع خلال 2-3 أيام",
+        time: "غدًا"
+      },
+      delivered: {
+        title: "تم التوصيل",
+        description: "سيصل إلى عتبة داركم",
+        time: "2-3 أيام"
+      }
+    },
+    statuses: {
+      complete: "مكتمل",
+      inProgress: "قيد التنفيذ"
+    }
+  },
+  actionButtons: {
+    viewDetails: "عرض تفاصيل الطلب",
+    continueShopping: "مواصلة التسوق",
+    downloadReceipt: "تحميل الإيصال",
+    emailReceipt: "إرسال الإيصال بالبريد"
+  },
+  supportCard: {
+    title: "بحاجة إلى مساعدة؟",
+    description: "فريق الدعم لدينا هنا لمساعدتك في أي أسئلة حول طلبك.",
+    contactSupport: "الاتصال بالدعم"
+  },
+  quickActions: {
+    title: "إجراءات سريعة",
+    viewAllOrders: "عرض جميع الطلبات",
+    accountSettings: "إعدادات الحساب"
+  },
+  deliveryInfo: {
+    title: "تحديثات التوصيل",
+    subtitle: "سنبقيك على اطلاع",
+    estimatedDelivery: "موعد التوصيل المتوقع",
+    trackingNumber: "رقم التتبع",
+    willBeProvided: "سيتم توفيره"
+  },
+  footer: {
+    confirmed: "✓ مؤكد",
+    confirmationMessage: "تم إرسال بريد تأكيد إلى عنوان بريدك الإلكتروني المسجل. يمكنك تتبع حالة طلبك في أي وقت من قسم طلباتي.",
+    links: {
+      helpCenter: "مركز المساعدة",
+      shippingPolicy: "سياسة الشحن",
+      returnsRefunds: "المرتجعات والاسترداد",
+      contactUs: "اتصل بنا"
+    }
+  },
+  messages: {
+    receiptDownloaded: "تم تحميل الإيصال بنجاح!",
+    emailSubject: "تأكيد طلبك - {orderId}"
+  }
+},
+ordersPage: {
+  header: {
+    title: "طلباتي",
+    subtitle: "تتبع مشترياتك الأخيرة وحالة الطلب"
+  },
+  search: {
+    placeholder: "ابحث في الطلبات، الاسم، الهاتف...",
+    filterAll: "الكل",
+    filterPending: "قيد الانتظار",
+    filterProcessing: "قيد المعالجة",
+    filterShipped: "تم الشحن",
+    filterRejected: "مرفوض"
+  },
+  statuses: {
+    pending: "قيد الانتظار",
+    processing: "قيد المعالجة",
+    shipped: "تم الشحن",
+    rejected: "مرفوض",
+    completed: "مكتمل"
+  },
+  orderItem: {
+    orderId: "رقم الطلب",
+    itemsCount: "{count} منتج{plural}",
+    quantity: "الكمية: {qty}",
+    deliverTo: "توصيل إلى: {name}, {city}",
+    viewDetails: "عرض التفاصيل"
+  },
+  emptyState: {
+    title: "لا توجد طلبات حتى الآن",
+    description: "سوف يظهر سجل طلباتك هنا. ابدأ التسوق لتتبع مشترياتك.",
+    startShopping: "ابدأ التسوق →"
+  },
+  loading: "جارٍ تحميل طلباتك..."
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "العودة إلى الطلبات",
+    orderNumber: "الطلب #{id}",
+    printInvoice: "طباعة الفاتورة",
+    downloadPDF: "تحميل PDF",
+    shareOrder: "مشاركة الطلب"
+  },
+  orderHeader: {
+    orderId: "رقم الطلب",
+    orderDate: "تاريخ الطلب",
+    items: "المنتجات",
+    totalItems: "{count} {items}",
+    item: "منتج",
+    itemsPlural: "منتجات"
+  },
+  status: {
+    pending: "قيد الانتظار",
+    processing: "قيد المعالجة",
+    shipped: "تم الشحن",
+    delivered: "تم التوصيل",
+    rejected: "مرفوض",
+    cancelled: "ملغي",
+    completed: "مكتمل"
+  },
+  orderProgress: {
+    title: "تقدم الطلب",
+    steps: ["تم الطلب", "قيد المعالجة", "تم الشحن", "تم التوصيل"],
+    current: "حالي",
+    estimatedDelivery: "التوصيل المتوقع",
+    delivered: "تم التوصيل",
+    deliveredOn: "تم التوصيل في",
+    expectedBy: "متوقع بحلول"
+  },
+  rejectedState: {
+    title: "الطلب مرفوض",
+    cancelled: "ملغي",
+    orderStopped: "تم إيقاف الطلب",
+    cannotProcess: "لا يمكن معالجة الطلب",
+    codNote: "لم تكن هناك حاجة للدفع لأن هذا الطلب كان نقدًا عند التسليم.",
+    paymentNote: "إذا تم أي دفع، فسيتم استرداده خلال 5-7 أيام عمل.",
+    contactSupport: "الاتصال بالدعم",
+    shopAgain: "تسوق مرة أخرى"
+  },
+  orderItems: {
+    title: "منتجات الطلب",
+    totalItems: "إجمالي المنتجات",
+    quantity: "الكمية:",
+    priceEach: "لكل",
+    subtotal: "المجموع الفرعي",
+    shipping: "الشحن",
+    shippingFree: "مجاني",
+    tax: "الضريبة",
+    total: "الإجمالي",
+    inclusiveTax: "شامل جميع الضرائب",
+    distinctItems: "منتجات مميزة"
+  },
+  deliveryAddress: {
+    title: "عنوان التوصيل",
+    billingAddress: "عنوان الفواتير",
+    recipient: "المستلم",
+    primaryContact: "جهة الاتصال الأساسية"
+  },
+  paymentInfo: {
+    title: "معلومات الدفع",
+    paymentMethod: "طريقة الدفع",
+    paymentStatus: "حالة الدفع",
+    pending: "قيد الانتظار",
+    paid: "مدفوع",
+    via: "عبر",
+    codInstructions: "تعليمات الدفع عند الاستلام",
+    codNote: "يرجى إبقاء المبلغ الدقيق جاهزًا ₹{amount}",
+    paymentNote: "ملاحظة الدفع",
+    codRefundNote: "لم تكن هناك حاجة للدفع لهذا الطلب نقدًا عند الاستلام.",
+    regularRefundNote: "سيتم استرداد أي دفعة تتم تلقائيًا."
+  },
+  customerSupport: {
+    callSupport: "اتصل بالدعم",
+    issueResolution: "حل المشكلات",
+    needHelp: "بحاجة إلى مساعدة مع طلب مرفوض؟",
+    fastResolution: "حل سريع للمشكلات",
+    availableHours: "متاح 9 صباحًا - 9 مساءً",
+    trackOrder: "تتبع الطلب",
+    reorderItems: "إعادة طلب المنتجات",
+    liveTracking: "تتبع مباشر متاح",
+    quickReorder: "إعادة طلب سريعة متاحة",
+    trackPackage: "تتبع الطرد",
+    emailSupport: "راسلنا للمساعدة",
+    contactSupport: "الاتصال بالدعم"
+  },
+  footerNote: {
+    needHelp: "بحاجة إلى مساعدة في طلبك؟",
+    contactSupport: "اتصل بفريق الدعم لدينا"
+  },
+  errorState: {
+    oops: "عفواً!",
+    orderNotFound: "الطلب غير موجود",
+    notExist: "الطلب الذي تبحث عنه غير موجود أو ليس لديك إذن لعرضه."
+  },
+  actions: {
+    contactSupport: "الاتصال بالدعم",
+    shopAgain: "تسوق مرة أخرى"
+  }
+},
+homeProducts: {
+  header: {
+    tag: "جميع المنتجات",
+    showingAll: "عرض جميع {count} منتج",
+    noProducts: "لم يتم العثور على منتجات لـ",
+    tryAnotherBrand: "يرجى محاولة اختيار علامة تجارية أخرى أو التحقق مرة أخرى لاحقًا.",
+    viewBrandProducts: "عرض منتجات {brand}"
+  },
+  productCard: {
+    category: "الفئة",
+    dosage: "الجرعة:",
+    form: "الشكل:",
+    pack: "التغليف:",
+    details: "التفاصيل",
+    enquire: "استعلام"
+  },
+  buttons: {
+    viewBrandProducts: "عرض منتجات {brand}",
+    productsCount: "{count} منتج"
+  }
+},
 contactPage: {
   hero: {
     title: "اتصل بنا",

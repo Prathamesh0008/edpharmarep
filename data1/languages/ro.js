@@ -235,6 +235,388 @@ const ro = {
       },
     ],
   },
+  cartPage: {
+  header: {
+    title: "Coșul tău",
+    subtitle: "Verifică produsele înainte de finalizare",
+    b2bBadge: "B2B Volum",
+    batches: "loturi",
+    batch: "lot",
+    totalUnits: "unități totale"
+  },
+  emptyState: {
+    title: "Coșul tău este gol",
+    description: "Adaugă produse pentru a continua cumpărăturile",
+    browseButton: "Răsfoiește produse"
+  },
+  items: {
+    unitPrice: "/ unitate",
+    remove: "Elimină",
+    removing: "Se elimină...",
+    bulkUnits: "Unități volum:",
+    swipeTip: "Sfat: Glisează spre stânga pe produse pentru a elimina"
+  },
+  summary: {
+    title: "Rezumat comandă",
+    items: "produs",
+    itemsPlural: "produse",
+    bulkOrder: "Comandă volum",
+    unitsPerBatch: "unități/lot",
+    totalUnits: "Total unități",
+    totalBatches: "Total loturi",
+    subtotal: "Subtotal",
+    shipping: "Livrare",
+    shippingCalc: "Calculat la finalizare",
+    total: "Total",
+    loginRequired: "Autentificare necesară",
+    loginPrompt: "Te rugăm să te autentifici pentru a finaliza comanda",
+    loginLink: "Clic aici pentru autentificare",
+    checkoutButton: "Finalizează comanda",
+    loginCheckoutButton: "Autentifică-te pentru finalizare",
+    continueShopping: "Continuă cumpărăturile",
+    checkingAuth: "Se verifică autentificarea..."
+  },
+  buttons: {
+    increase: "Crește cantitatea cu unități volum",
+    decrease: "Scade cantitatea cu unități volum"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Finalizare Sigură",
+    subtitle: "Rapid • Sigur • Confidențial",
+    steps: ["Coș", "Adresă", "Plată", "Confirmare"]
+  },
+  emptyState: {
+    title: "Coșul dvs. este gol",
+    description: "Adăugați produse pentru a continua finalizarea.",
+    browseButton: "Răsfoiți produse"
+  },
+  deliveryAddress: {
+    title: "Adresă de Livrare",
+    savedAddresses: "Adresele Salvate",
+    show: "Afișează",
+    hide: "Ascunde",
+    useAddress: "Folosește",
+    saveAddress: "Salvează Adresa",
+    note: "Adresele sunt salvate doar pentru contul dvs. și nu vor fi vizibile altor utilizatori.",
+    saveForFuture: "Salvează această adresă pentru comenzile viitoare"
+  },
+  form: {
+    placeholders: {
+      fullName: "Nume Complet",
+      phone: "Număr de Telefon",
+      email: "Adresă de Email",
+      address: "Adresă Completă",
+      city: "Oraș",
+      pincode: "Cod Poștal",
+      country: "Țară"
+    }
+  },
+  payment: {
+    title: "Metodă de Plată",
+    cod: {
+      title: "Plată la Livrare",
+      subtitle: "Plătește la primire"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Card Credit / Debit",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Portofele Electronice",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Toate plățile sunt criptate și sigure"
+  },
+  orderSummary: {
+    title: "Rezumat Comandă",
+    secure: "Sigur și Privat",
+    items: "Articole",
+    totalUnits: "Total Unități",
+    totalBatches: "Total Loturi",
+    totalAmount: "Valoare totală",
+    placeOrder: "Plasează Comanda Sigură",
+    processing: "Se procesează...",
+    trustedBy: "De încredere pentru profesioniști din sănătate • Ambalaj discret",
+    continueShopping: "Continuă cumpărăturile"
+  },
+  validation: {
+    emptyCart: "Coșul dvs. este gol",
+    fullName: {
+      required: "Vă rugăm să introduceți un nume complet valid",
+      invalid: "Numele complet trebuie să conțină doar litere"
+    },
+    email: "Vă rugăm să introduceți o adresă de email validă",
+    phone: "Numărul de telefon trebuie să aibă 10 cifre",
+    address: "Vă rugăm să introduceți adresa completă de livrare",
+    city: "Orașul este necesar",
+    pincode: "Codul poștal trebuie să aibă 6 cifre",
+    country: "Țara este necesară",
+    payment: "Vă rugăm să selectați o metodă de plată"
+  },
+  messages: {
+    loginRequired: "Vă rugăm să vă autentificați pentru a continua finalizarea",
+    saveSuccess: "Adresa salvată cu succes!",
+    sessionExpired: "Sesiune expirată. Vă rugăm să vă autentificați din nou.",
+    orderFailed: "Comanda a eșuat",
+    networkError: "Eroare de rețea. Vă rugăm să încercați din nou."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Comandă Confirmată!",
+    subtitle: "Vă mulțumim pentru achiziție. Am primit comanda dvs. #{orderId} și este în curs de procesare.",
+    paymentStatus: "Plată confirmată • Email trimis • Procesare comandă"
+  },
+  errorState: {
+    title: "Eroare Comandă",
+    viewOrders: "Vezi Comenzile Mele",
+    returnHome: "Înapoi la Pagina Principală"
+  },
+  loadingState: {
+    title: "Se încarcă Comanda Dvs....",
+    subtitle: "Se pregătește confirmarea comenzii"
+  },
+  orderSummary: {
+    title: "Rezumat Comandă",
+    orderNumber: "Număr Comandă",
+    orderDate: "Data Comenzii",
+    paymentMethod: "Metodă de Plată",
+    cashOnDelivery: "Plată la Livrare",
+    delivery: "Livrare",
+    standardDelivery: "Standard (2-3 zile)"
+  },
+  orderStatus: {
+    title: "Stare Comandă",
+    steps: {
+      placed: {
+        title: "Comandă Plasată",
+        description: "Comanda dvs. a fost primită",
+        time: "Chiar acum"
+      },
+      processing: {
+        title: "În Procesare",
+        description: "Pregătim articolele dvs.",
+        time: "Astăzi"
+      },
+      shipping: {
+        title: "Livrare",
+        description: "Livrare estimată în 2-3 zile",
+        time: "Mâine"
+      },
+      delivered: {
+        title: "Livrat",
+        description: "Va ajunge la ușa dvs.",
+        time: "2-3 zile"
+      }
+    },
+    statuses: {
+      complete: "Finalizat",
+      inProgress: "În Curs"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Vezi Detalii Comandă",
+    continueShopping: "Continuă Cumpărăturile",
+    downloadReceipt: "Descarcă Chitanța",
+    emailReceipt: "Trimite Chitanța pe Email"
+  },
+  supportCard: {
+    title: "Aveți Nevoie de Ajutor?",
+    description: "Echipa noastră de suport este aici pentru a vă ajuta cu orice întrebări despre comanda dvs.",
+    contactSupport: "Contactează Suport"
+  },
+  quickActions: {
+    title: "Acțiuni Rapide",
+    viewAllOrders: "Vezi Toate Comenzile",
+    accountSettings: "Setări Cont"
+  },
+  deliveryInfo: {
+    title: "Actualizări Livrare",
+    subtitle: "Vă vom ține la curent",
+    estimatedDelivery: "Livrare Estimativă",
+    trackingNumber: "Număr de Urmărire",
+    willBeProvided: "Va fi furnizat"
+  },
+  footer: {
+    confirmed: "✓ Confirmat",
+    confirmationMessage: "Un email de confirmare a fost trimis la adresa dvs. de email înregistrată. Puteți urmări starea comenzii dvs. oricând din secțiunea Mele Comenzi.",
+    links: {
+      helpCenter: "Centru de Ajutor",
+      shippingPolicy: "Politică de Livrare",
+      returnsRefunds: "Returnări & Rambursări",
+      contactUs: "Contactați-ne"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Chitanța descărcată cu succes!",
+    emailSubject: "Confirmarea Comenzii Dvs. - {orderId}"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Comenzile Mele",
+    subtitle: "Urmăriți achizițiile recente și starea comenzilor"
+  },
+  search: {
+    placeholder: "Căutați comenzi, nume, telefon...",
+    filterAll: "Toate",
+    filterPending: "În Așteptare",
+    filterProcessing: "În Procesare",
+    filterShipped: "Expediate",
+    filterRejected: "Respins"
+  },
+  statuses: {
+    pending: "În Așteptare",
+    processing: "În Procesare",
+    shipped: "Expediată",
+    rejected: "Respinsă",
+    completed: "Finalizată"
+  },
+  orderItem: {
+    orderId: "Număr Comandă",
+    itemsCount: "{count} articol{e}",
+    quantity: "Cant: {qty}",
+    deliverTo: "Livrare la: {name}, {city}",
+    viewDetails: "Vezi Detalii"
+  },
+  emptyState: {
+    title: "Nicio comandă încă",
+    description: "Istoricul comenzilor dvs. va apărea aici. Începeți cumpărăturile pentru a vă urmări achizițiile.",
+    startShopping: "Începeți Cumpărăturile →"
+  },
+  loading: "Se încarcă comenzile dvs...."
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Înapoi la Comenzi",
+    orderNumber: "Comanda #{id}",
+    printInvoice: "Tipărire Factură",
+    downloadPDF: "Descărcare PDF",
+    shareOrder: "Partajare Comandă"
+  },
+  orderHeader: {
+    orderId: "Număr Comandă",
+    orderDate: "Data Comenzii",
+    items: "Articole",
+    totalItems: "{count} {items}",
+    item: "articol",
+    itemsPlural: "articole"
+  },
+  status: {
+    pending: "În Așteptare",
+    processing: "În Procesare",
+    shipped: "Expediată",
+    delivered: "Livrată",
+    rejected: "Respinsă",
+    cancelled: "Anulată",
+    completed: "Finalizată"
+  },
+  orderProgress: {
+    title: "Progres Comandă",
+    steps: ["Comandată", "În Procesare", "Expediată", "Livrată"],
+    current: "Curent",
+    estimatedDelivery: "Livrare Estimativă",
+    delivered: "Livrată",
+    deliveredOn: "Livrată la",
+    expectedBy: "Estimat pentru"
+  },
+  rejectedState: {
+    title: "Comandă Respinsă",
+    cancelled: "Anulată",
+    orderStopped: "Comandă Oprire",
+    cannotProcess: "Comanda Nu Poate Fi Procesată",
+    codNote: "Nici o plată nu a fost necesară deoarece aceasta a fost o comandă cu Plată la Livrare.",
+    paymentNote: "Dacă a fost făcută vreo plată, aceasta va fi rambursată în 5-7 zile lucrătoare.",
+    contactSupport: "Contactează Suport",
+    shopAgain: "Cumpără Din Nou"
+  },
+  orderItems: {
+    title: "Articole Comandate",
+    totalItems: "total articole",
+    quantity: "Cantitate:",
+    priceEach: "fiecare",
+    subtotal: "Subtotal",
+    shipping: "Livrare",
+    shippingFree: "GRATUIT",
+    tax: "Taxă",
+    total: "Total",
+    inclusiveTax: "Inclusiv toate taxele",
+    distinctItems: "articole distincte"
+  },
+  deliveryAddress: {
+    title: "Adresă de Livrare",
+    billingAddress: "Adresă de Facturare",
+    recipient: "Destinatar",
+    primaryContact: "Contact principal"
+  },
+  paymentInfo: {
+    title: "Informații Plată",
+    paymentMethod: "Metodă de Plată",
+    paymentStatus: "Status Plată",
+    pending: "În Așteptare",
+    paid: "Plătită",
+    via: "via",
+    codInstructions: "Instrucțiuni Plată la Livrare",
+    codNote: "Vă rugăm să aveți schimbul exact pregătit pentru ₹{amount}",
+    paymentNote: "Notă Plată",
+    codRefundNote: "Nicio plată nu a fost necesară pentru această comandă cu Plată la Livrare.",
+    regularRefundNote: "Orice plată efectuată va fi rambursată automat."
+  },
+  customerSupport: {
+    callSupport: "Sună la Suport",
+    issueResolution: "Rezolvare Problemă",
+    needHelp: "Ai nevoie de ajutor pentru comandă respinsă?",
+    fastResolution: "Rezolvare rapidă a problemelor",
+    availableHours: "Disponibil 9:00 - 21:00",
+    trackOrder: "Urmărește Comanda",
+    reorderItems: "Comandă Din Nou Articole",
+    liveTracking: "Urmărire Live Disponibilă",
+    quickReorder: "Recomandare rapidă disponibilă",
+    trackPackage: "Urmărește Pachetul",
+    emailSupport: "Trimite-ne email pentru asistență",
+    contactSupport: "Contactează Suport"
+  },
+  footerNote: {
+    needHelp: "Ai nevoie de ajutor cu comanda?",
+    contactSupport: "Contactează echipa noastră de suport"
+  },
+  errorState: {
+    oops: "Oops!",
+    orderNotFound: "Comanda Nu a Fost Găsită",
+    notExist: "Comanda pe care o căutați nu există sau nu aveți permisiunea să o vizualizați."
+  },
+  actions: {
+    contactSupport: "Contactează Suport",
+    shopAgain: "Cumpără Din Nou"
+  }
+},
+homeProducts: {
+  header: {
+    tag: "Toate Produsele",
+    showingAll: "Se afișează toate cele {count} produse",
+    noProducts: "Niciun produs găsit pentru",
+    tryAnotherBrand: "Vă rugăm să încercați să selectați alt brand sau reveniți mai târziu.",
+    viewBrandProducts: "Vezi Produsele {brand}"
+  },
+  productCard: {
+    category: "Categorie",
+    dosage: "Doza:",
+    form: "Formă:",
+    pack: "Ambalaj:",
+    details: "Detalii",
+    enquire: "Solicită informații"
+  },
+  buttons: {
+    viewBrandProducts: "Vezi Produsele {brand}",
+    productsCount: "{count} Produse"
+  }
+},
   contactPage: {
   hero: {
     title: "Contactați-ne",

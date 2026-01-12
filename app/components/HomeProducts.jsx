@@ -1,9 +1,11 @@
+//app/components/HomeProducts.jsx
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { products as allProducts } from "../data/products";
 import React from "react";
+import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
 
 /* ---------------- BRANDS ---------------- */
 const brands = [
@@ -16,13 +18,13 @@ const brands = [
 ];
 
 /* ---------------- RESPONSIVE LOGO STRIP ---------------- */
-function LogoStrip({ activeBrand, setActiveBrand }) {
+function LogoStrip({ activeBrand, setActiveBrand, translations }) {
   const BRAND = "#0A2A73";
 
   return (
     <div className="w-full flex justify-center mt-6 sm:mt-8 md:mt-10">
       <div className="rounded-2xl md:rounded-3xl bg-white/95 backdrop-blur-md shadow-xl ring-1 ring-slate-100/50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 w-full max-w-5xl mx-2 sm:mx-4">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+        <div className="grid grid-cols-1 -mt-30 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {brands.map((b) => {
             const active = b.key === activeBrand;
 
@@ -74,7 +76,31 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
 
 /* ---------------- RESPONSIVE HOME PRODUCTS ---------------- */
 export default function HomeProducts({ activeBrand, setActiveBrand }) {
+  const { t } = useLanguage(); // ADD LANGUAGE CONTEXT
   const BRAND = "#0A2A73";
+
+  // Get translations from context, fallback to English
+  const homeProductsTranslations = t?.homeProducts || {
+    header: {
+      tag: "All Products",
+      showingAll: "Showing all {count} products",
+      noProducts: "No products found",
+      tryAnotherBrand: "Please try selecting another brand or check back later.",
+      viewBrandProducts: "View {brand} Products"
+    },
+    productCard: {
+      category: "Category",
+      dosage: "Dosage:",
+      form: "Form:",
+      pack: "Pack:",
+      details: "Details",
+      enquire: "Enquire"
+    },
+    buttons: {
+      viewBrandProducts: "View {brand} Products",
+      productsCount: "{count} Products"
+    }
+  };
 
   // Get ALL products for the selected brand (no limit)
   const brandProducts = allProducts.filter(
@@ -87,6 +113,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
         <LogoStrip
           activeBrand={activeBrand}
           setActiveBrand={setActiveBrand}
+          translations={homeProductsTranslations}
         />
 
         {/* HEADER - Responsive design */}
@@ -100,7 +127,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
               <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
                 <div className="w-6 h-0.5 sm:w-7 sm:h-1 md:w-8 md:h-1 bg-gradient-to-r from-[#0A2A73] to-blue-500 rounded-full"></div>
                 <span className="text-xs sm:text-sm font-semibold text-[#0A2A73] uppercase tracking-wide">
-                  All Products
+                  {homeProductsTranslations.header.tag}
                 </span>
               </div>
               
@@ -108,7 +135,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                 {activeBrand.replace("ED ", "")}
               </h2>
               <p className="mt-1 text-xs sm:text-sm text-slate-600">
-                Showing all {brandProducts.length} products
+                {homeProductsTranslations.header.showingAll.replace('{count}', brandProducts.length)}
               </p>
             </div>
 
@@ -116,7 +143,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
               {/* Product count badge - responsive */}
               <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-blue-50 border border-blue-100">
                 <span className="text-xs sm:text-sm font-semibold text-[#0A2A73] whitespace-nowrap">
-                  {brandProducts.length} Products
+                  {homeProductsTranslations.buttons.productsCount.replace('{count}', brandProducts.length)}
                 </span>
               </div>
             </div>
@@ -166,13 +193,13 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                   {/* META - Responsive text and spacing */}
                   <div className="flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 text-[10px] sm:text-[11px] md:text-[12px] text-slate-700">
                     <span className="rounded-full bg-slate-100 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 whitespace-nowrap">
-                      <span className="font-semibold">Dosage:</span> {p.dosage}
+                      <span className="font-semibold">{homeProductsTranslations.productCard.dosage}</span> {p.dosage}
                     </span>
                     <span className="rounded-full bg-slate-100 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 whitespace-nowrap">
-                      <span className="font-semibold">Form:</span> {p.form}
+                      <span className="font-semibold">{homeProductsTranslations.productCard.form}</span> {p.form}
                     </span>
                     <span className="rounded-full bg-slate-100 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 whitespace-nowrap">
-                      <span className="font-semibold">Pack:</span> {p.pack_size}
+                      <span className="font-semibold">{homeProductsTranslations.productCard.pack}</span> {p.pack_size}
                     </span>
                   </div>
 
@@ -183,7 +210,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       className="flex-1 text-center rounded-lg sm:rounded-xl md:rounded-2xl px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[10px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90"
                       style={{ backgroundColor: BRAND }}
                     >
-                      Details
+                      {homeProductsTranslations.productCard.details}
                     </Link>
 
                     <Link
@@ -191,7 +218,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       className="flex-1 text-center rounded-lg sm:rounded-xl md:rounded-2xl px-2 sm:px-3 md:px-4 py-1.5 sm:py-2 md:py-2.5 text-[10px] sm:text-xs md:text-sm font-semibold border bg-white transition hover:bg-slate-50"
                       style={{ borderColor: BRAND, color: BRAND }}
                     >
-                      Enquire
+                      {homeProductsTranslations.productCard.enquire}
                     </Link>
                   </div>
                 </div>
@@ -207,17 +234,17 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
               </svg>
             </div>
             <h3 className="text-base sm:text-lg md:text-xl font-semibold text-slate-900 mb-1 sm:mb-2">
-              No products found for {activeBrand}
+              {homeProductsTranslations.header.noProducts} {activeBrand}
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 mb-3 sm:mb-4">
-              Please try selecting another brand or check back later.
+              {homeProductsTranslations.header.tryAnotherBrand}
             </p>
             <button
               onClick={() => setActiveBrand(brands[0].key)}
               className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 text-xs sm:text-sm font-semibold text-white"
               style={{ backgroundColor: BRAND }}
             >
-              View {brands[0].key} Products
+              {homeProductsTranslations.buttons.viewBrandProducts.replace('{brand}', brands[0].key.replace("ED ", ""))}
             </button>
           </div>
         )}

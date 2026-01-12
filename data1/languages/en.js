@@ -269,6 +269,337 @@ termsPage: {
   ]
 },
 // Add this to your en.js file
+cartPage: {
+  header: {
+    title: "Your Cart",
+    subtitle: "Review items before checkout",
+    b2bBadge: "B2B Bulk",
+    batches: "batches",
+    batch: "batch",
+    totalUnits: "total units"
+  },
+  emptyState: {
+    title: "Your cart is empty",
+    description: "Add products to continue shopping",
+    browseButton: "Browse products"
+  },
+  items: {
+    unitPrice: "/ unit",
+    remove: "Remove",
+    removing: "Removing...",
+    bulkUnits: "Bulk units:",
+    swipeTip: "Tip: Swipe left on items to remove"
+  },
+  summary: {
+    title: "Order Summary",
+    items: "item",
+    itemsPlural: "items",
+    bulkOrder: "Bulk Order",
+    unitsPerBatch: "units/batch",
+    totalUnits: "Total Units",
+    totalBatches: "Total Batches",
+    subtotal: "Subtotal",
+    shipping: "Shipping",
+    shippingCalc: "Calculated at checkout",
+    total: "Total",
+    loginRequired: "Login required",
+    loginPrompt: "Please login to proceed with checkout",
+    loginLink: "Click here to login",
+    checkoutButton: "Proceed to checkout",
+    loginCheckoutButton: "Login to checkout",
+    continueShopping: "Continue shopping",
+    checkingAuth: "Checking authentication..."
+  },
+  buttons: {
+    increase: "Increase quantity by bulk units",
+    decrease: "Decrease quantity by bulk units"
+  }
+},
+// Add this to your en.js file
+checkoutPage: {
+  header: {
+    title: "Secure Checkout",
+    subtitle: "Fast • Safe • Confidential",
+    steps: ["Cart", "Address", "Payment", "Confirm"]
+  },
+  emptyState: {
+    title: "Your cart is empty",
+    description: "Add products to continue checkout.",
+    browseButton: "Browse products"
+  },
+  deliveryAddress: {
+    title: "Delivery Address",
+    savedAddresses: "Your Saved Addresses",
+    show: "Show",
+    hide: "Hide",
+    useAddress: "Use",
+    saveAddress: "Save Address",
+    note: "Addresses are saved only for your account and won't be visible to other users.",
+    saveForFuture: "Save this address for future orders"
+  },
+  form: {
+    placeholders: {
+      fullName: "Full Name",
+      phone: "Phone Number",
+      email: "Email Address",
+      address: "Full Address",
+      city: "City",
+      pincode: "Pincode",
+      country: "Country"
+    }
+  },
+  payment: {
+    title: "Payment Method",
+    cod: {
+      title: "Cash on Delivery",
+      subtitle: "Pay when you receive"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Credit / Debit Card",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Wallets",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "All payments are encrypted & secure"
+  },
+  orderSummary: {
+    title: "Order Summary",
+    secure: "Secure & Private",
+    items: "Items",
+    totalUnits: "Total Units",
+    totalBatches: "Total Batches",
+    totalAmount: "Total amount",
+    placeOrder: "Place Secure Order",
+    processing: "Processing...",
+    trustedBy: "Trusted by healthcare professionals • Discreet packaging",
+    continueShopping: "Continue shopping"
+  },
+  validation: {
+    emptyCart: "Your cart is empty",
+    fullName: {
+      required: "Please enter a valid full name",
+      invalid: "Full name must contain only alphabets"
+    },
+    email: "Please enter a valid email address",
+    phone: "Phone number must be 10 digits",
+    address: "Please enter full delivery address",
+    city: "City is required",
+    pincode: "Pincode must be 6 digits",
+    country: "Country is required",
+    payment: "Please select a payment method"
+  },
+  messages: {
+    loginRequired: "Please login to continue checkout",
+    saveSuccess: "Address saved successfully!",
+    sessionExpired: "Session expired. Please login again.",
+    orderFailed: "Order failed",
+    networkError: "Network error. Please try again."
+  }
+},
+// Add this to your en.js file
+orderSuccessPage: {
+  header: {
+    title: "Order Confirmed!",
+    subtitle: "Thank you for your purchase. We've received your order #{orderId} and it's being processed.",
+    paymentStatus: "Payment confirmed • Email sent • Processing order"
+  },
+  errorState: {
+    title: "Order Error",
+    viewOrders: "View My Orders",
+    returnHome: "Return to Home"
+  },
+  loadingState: {
+    title: "Loading Your Order...",
+    subtitle: "Preparing your order confirmation"
+  },
+  orderSummary: {
+    title: "Order Summary",
+    orderNumber: "Order Number",
+    orderDate: "Order Date",
+    paymentMethod: "Payment Method",
+    cashOnDelivery: "Cash on Delivery",
+    delivery: "Delivery",
+    standardDelivery: "Standard (2-3 days)"
+  },
+  orderStatus: {
+    title: "Order Status",
+    steps: {
+      placed: {
+        title: "Order Placed",
+        description: "Your order has been received",
+        time: "Just now"
+      },
+      processing: {
+        title: "Processing",
+        description: "We're preparing your items",
+        time: "Today"
+      },
+      shipping: {
+        title: "Shipping",
+        description: "Estimated delivery in 2-3 days",
+        time: "Tomorrow"
+      },
+      delivered: {
+        title: "Delivered",
+        description: "Will arrive at your doorstep",
+        time: "2-3 days"
+      }
+    },
+    statuses: {
+      complete: "Complete",
+      inProgress: "In Progress"
+    }
+  },
+  actionButtons: {
+    viewDetails: "View Order Details",
+    continueShopping: "Continue Shopping",
+    downloadReceipt: "Download Receipt",
+    emailReceipt: "Email Receipt"
+  },
+  supportCard: {
+    title: "Need Help?",
+    description: "Our support team is here to help with any questions about your order.",
+    contactSupport: "Contact Support"
+  },
+  quickActions: {
+    title: "Quick Actions",
+    viewAllOrders: "View All Orders",
+    accountSettings: "Account Settings"
+  },
+  deliveryInfo: {
+    title: "Delivery Updates",
+    subtitle: "We'll keep you posted",
+    estimatedDelivery: "Estimated Delivery",
+    trackingNumber: "Tracking Number",
+    willBeProvided: "Will be provided"
+  },
+  footer: {
+    confirmed: "✓ Confirmed",
+    confirmationMessage: "A confirmation email has been sent to your registered email address. You can track your order status anytime from the My Orders section.",
+    links: {
+      helpCenter: "Help Center",
+      shippingPolicy: "Shipping Policy",
+      returnsRefunds: "Returns & Refunds",
+      contactUs: "Contact Us"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Receipt downloaded successfully!",
+    emailSubject: "Your Order Confirmation - {orderId}"
+  }
+},
+// Add this to your en.js file
+orderDetailPage: {
+  header: {
+    backToOrders: "Back to Orders",
+    orderNumber: "Order #{id}",
+    printInvoice: "Print Invoice",
+    downloadPDF: "Download PDF",
+    shareOrder: "Share Order"
+  },
+  orderHeader: {
+    orderId: "Order ID",
+    orderDate: "Order Date",
+    items: "Items",
+    totalItems: "{count} {items}",
+    item: "item",
+    itemsPlural: "items"
+  },
+  status: {
+    pending: "Pending",
+    processing: "Processing",
+    shipped: "Shipped",
+    delivered: "Delivered",
+    rejected: "Rejected",
+    cancelled: "Cancelled",
+    completed: "Completed"
+  },
+  orderProgress: {
+    title: "Order Progress",
+    steps: ["Ordered", "Processing", "Shipped", "Delivered"],
+    current: "Current",
+    estimatedDelivery: "Estimated Delivery",
+    delivered: "Delivered",
+    deliveredOn: "Delivered on",
+    expectedBy: "Expected by"
+  },
+  rejectedState: {
+    title: "Order Rejected",
+    cancelled: "Cancelled",
+    orderStopped: "Order Stopped",
+    cannotProcess: "Order Cannot Be Processed",
+    codNote: "No payment was required since this was a Cash on Delivery order.",
+    paymentNote: "If any payment was made, it will be refunded within 5-7 business days.",
+    contactSupport: "Contact Support",
+    shopAgain: "Shop Again"
+  },
+  orderItems: {
+    title: "Order Items",
+    totalItems: "total items",
+    quantity: "Quantity:",
+    priceEach: "each",
+    subtotal: "Subtotal",
+    shipping: "Shipping",
+    shippingFree: "FREE",
+    tax: "Tax",
+    total: "Total",
+    inclusiveTax: "Inclusive of all taxes",
+    distinctItems: "distinct items"
+  },
+  deliveryAddress: {
+    title: "Delivery Address",
+    billingAddress: "Billing Address",
+    recipient: "Recipient",
+    primaryContact: "Primary contact"
+  },
+  paymentInfo: {
+    title: "Payment Information",
+    paymentMethod: "Payment Method",
+    paymentStatus: "Payment Status",
+    pending: "Pending",
+    paid: "Paid",
+    via: "via",
+    codInstructions: "COD Instructions",
+    codNote: "Please keep exact change ready for ₹{amount}",
+    paymentNote: "Payment Note",
+    codRefundNote: "No payment was required for this Cash on Delivery order.",
+    regularRefundNote: "Any payment made will be refunded automatically."
+  },
+  customerSupport: {
+    callSupport: "Call Support",
+    issueResolution: "Issue Resolution",
+    needHelp: "Need help with rejected order?",
+    fastResolution: "Fast issue resolution",
+    availableHours: "Available 9 AM - 9 PM",
+    trackOrder: "Track Order",
+    reorderItems: "Re-order Items",
+    liveTracking: "Live Tracking Available",
+    quickReorder: "Quick re-order available",
+    trackPackage: "Track Package",
+    emailSupport: "Email us for assistance",
+    contactSupport: "Contact Support"
+  },
+  footerNote: {
+    needHelp: "Need help with your order?",
+    contactSupport: "Contact our support team"
+  },
+  errorState: {
+    oops: "Oops!",
+    orderNotFound: "Order Not Found",
+    notExist: "The order you're looking for doesn't exist or you don't have permission to view it."
+  },
+  actions: {
+    contactSupport: "Contact Support",
+    shopAgain: "Shop Again"
+  }
+},
+// Add this to your en.js file
 contactPage: {
   hero: {
     title: "Contact Us",
@@ -324,6 +655,7 @@ contactPage: {
     }
   }
 },
+
 // Add this to your en.js file
 productsPage: {
   hero: {
@@ -363,6 +695,28 @@ productDetail: {
   },
   sections: {
     overview: "Overview"
+  }
+},
+// Add this to your en.js file
+homeProducts: {
+  header: {
+    tag: "All Products",
+    showingAll: "Showing all {count} products",
+    noProducts: "No products found for",
+    tryAnotherBrand: "Please try selecting another brand or check back later.",
+    viewBrandProducts: "View {brand} Products"
+  },
+  productCard: {
+    category: "Category",
+    dosage: "Dosage:",
+    form: "Form:",
+    pack: "Pack:",
+    details: "Details",
+    enquire: "Enquire"
+  },
+  buttons: {
+    viewBrandProducts: "View {brand} Products",
+    productsCount: "{count} Products"
   }
 },  
 profilePage: {
@@ -543,6 +897,7 @@ homePage: {
   
 
 },
+
 
 "en": {
     "home": "Home",

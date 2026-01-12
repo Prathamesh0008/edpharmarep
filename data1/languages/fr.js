@@ -335,6 +335,367 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "Votre Panier",
+    subtitle: "Examinez les articles avant le paiement",
+    b2bBadge: "B2B en Gros",
+    batches: "lots",
+    batch: "lot",
+    totalUnits: "unités totales"
+  },
+  emptyState: {
+    title: "Votre panier est vide",
+    description: "Ajoutez des produits pour continuer vos achats",
+    browseButton: "Parcourir les produits"
+  },
+  items: {
+    unitPrice: "/ unité",
+    remove: "Supprimer",
+    removing: "Suppression...",
+    bulkUnits: "Unités en gros:",
+    swipeTip: "Astuce: Glissez vers la gauche pour supprimer des articles"
+  },
+  summary: {
+    title: "Résumé de la Commande",
+    items: "article",
+    itemsPlural: "articles",
+    bulkOrder: "Commande en Gros",
+    unitsPerBatch: "unités/lot",
+    totalUnits: "Unités Totales",
+    totalBatches: "Lots Totaux",
+    subtotal: "Sous-total",
+    shipping: "Livraison",
+    shippingCalc: "Calculé à la caisse",
+    total: "Total",
+    loginRequired: "Connexion requise",
+    loginPrompt: "Veuillez vous connecter pour procéder au paiement",
+    loginLink: "Cliquez ici pour vous connecter",
+    checkoutButton: "Procéder au Paiement",
+    loginCheckoutButton: "Se connecter pour payer",
+    continueShopping: "Continuer les achats",
+    checkingAuth: "Vérification de l'authentification..."
+  },
+  buttons: {
+    increase: "Augmenter la quantité par unités en gros",
+    decrease: "Diminuer la quantité par unités en gros"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Paiement Sécurisé",
+    subtitle: "Rapide • Sûr • Confidentiel",
+    steps: ["Panier", "Adresse", "Paiement", "Confirmation"]
+  },
+  emptyState: {
+    title: "Votre panier est vide",
+    description: "Ajoutez des produits pour continuer le paiement.",
+    browseButton: "Parcourir les produits"
+  },
+  deliveryAddress: {
+    title: "Adresse de Livraison",
+    savedAddresses: "Vos Adresses Enregistrées",
+    show: "Afficher",
+    hide: "Masquer",
+    useAddress: "Utiliser",
+    saveAddress: "Enregistrer l'Adresse",
+    note: "Les adresses sont enregistrées uniquement pour votre compte et ne seront pas visibles par les autres utilisateurs.",
+    saveForFuture: "Enregistrer cette adresse pour les commandes futures"
+  },
+  form: {
+    placeholders: {
+      fullName: "Nom Complet",
+      phone: "Numéro de Téléphone",
+      email: "Adresse Email",
+      address: "Adresse Complète",
+      city: "Ville",
+      pincode: "Code Postal",
+      country: "Pays"
+    }
+  },
+  payment: {
+    title: "Méthode de Paiement",
+    cod: {
+      title: "Paiement à la Livraison",
+      subtitle: "Payez à la réception"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Carte de Crédit / Débit",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Portefeuilles",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Tous les paiements sont chiffrés & sécurisés"
+  },
+  orderSummary: {
+    title: "Résumé de la Commande",
+    secure: "Sécurisé & Privé",
+    items: "Articles",
+    totalUnits: "Total Unités",
+    totalBatches: "Total Lots",
+    totalAmount: "Montant total",
+    placeOrder: "Passer la Commande Sécurisée",
+    processing: "Traitement en cours...",
+    trustedBy: "Approuvé par les professionnels de santé • Emballage discret",
+    continueShopping: "Continuer les achats"
+  },
+  validation: {
+    emptyCart: "Votre panier est vide",
+    fullName: {
+      required: "Veuillez entrer un nom complet valide",
+      invalid: "Le nom complet doit contenir uniquement des lettres"
+    },
+    email: "Veuillez entrer une adresse email valide",
+    phone: "Le numéro de téléphone doit contenir 10 chiffres",
+    address: "Veuillez entrer l'adresse de livraison complète",
+    city: "La ville est requise",
+    pincode: "Le code postal doit contenir 6 chiffres",
+    country: "Le pays est requis",
+    payment: "Veuillez sélectionner une méthode de paiement"
+  },
+  messages: {
+    loginRequired: "Veuillez vous connecter pour continuer le paiement",
+    saveSuccess: "Adresse enregistrée avec succès !",
+    sessionExpired: "Session expirée. Veuillez vous reconnecter.",
+    orderFailed: "Échec de la commande",
+    networkError: "Erreur réseau. Veuillez réessayer."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Commande Confirmée !",
+    subtitle: "Merci pour votre achat. Nous avons reçu votre commande #{orderId} et elle est en cours de traitement.",
+    paymentStatus: "Paiement confirmé • E-mail envoyé • Traitement de la commande"
+  },
+  errorState: {
+    title: "Erreur de Commande",
+    viewOrders: "Voir Mes Commandes",
+    returnHome: "Retour à l'Accueil"
+  },
+  loadingState: {
+    title: "Chargement de Votre Commande...",
+    subtitle: "Préparation de votre confirmation de commande"
+  },
+  orderSummary: {
+    title: "Résumé de la Commande",
+    orderNumber: "Numéro de Commande",
+    orderDate: "Date de Commande",
+    paymentMethod: "Méthode de Paiement",
+    cashOnDelivery: "Paiement à la Livraison",
+    delivery: "Livraison",
+    standardDelivery: "Standard (2-3 jours)"
+  },
+  orderStatus: {
+    title: "Statut de la Commande",
+    steps: {
+      placed: {
+        title: "Commande Passée",
+        description: "Votre commande a été reçue",
+        time: "À l'instant"
+      },
+      processing: {
+        title: "Traitement",
+        description: "Nous préparons vos articles",
+        time: "Aujourd'hui"
+      },
+      shipping: {
+        title: "Expédition",
+        description: "Livraison estimée dans 2-3 jours",
+        time: "Demain"
+      },
+      delivered: {
+        title: "Livré",
+        description: "Arrivera à votre porte",
+        time: "2-3 jours"
+      }
+    },
+    statuses: {
+      complete: "Terminé",
+      inProgress: "En Cours"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Voir les Détails de la Commande",
+    continueShopping: "Continuer les Achats",
+    downloadReceipt: "Télécharger le Reçu",
+    emailReceipt: "Reçu par E-mail"
+  },
+  supportCard: {
+    title: "Besoin d'Aide ?",
+    description: "Notre équipe d'assistance est là pour vous aider avec toutes vos questions concernant votre commande.",
+    contactSupport: "Contacter le Support"
+  },
+  quickActions: {
+    title: "Actions Rapides",
+    viewAllOrders: "Voir Toutes les Commandes",
+    accountSettings: "Paramètres du Compte"
+  },
+  deliveryInfo: {
+    title: "Mises à Jour de Livraison",
+    subtitle: "Nous vous tiendrons informé",
+    estimatedDelivery: "Livraison Estimée",
+    trackingNumber: "Numéro de Suivi",
+    willBeProvided: "Sera fourni"
+  },
+  footer: {
+    confirmed: "✓ Confirmé",
+    confirmationMessage: "Un e-mail de confirmation a été envoyé à votre adresse e-mail enregistrée. Vous pouvez suivre l'état de votre commande à tout moment depuis la section Mes Commandes.",
+    links: {
+      helpCenter: "Centre d'Aide",
+      shippingPolicy: "Politique de Livraison",
+      returnsRefunds: "Retours & Remboursements",
+      contactUs: "Contactez-Nous"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Reçu téléchargé avec succès !",
+    emailSubject: "Votre Confirmation de Commande - {orderId}"
+  }
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Retour aux Commandes",
+    orderNumber: "Commande #{id}",
+    printInvoice: "Imprimer la Facture",
+    downloadPDF: "Télécharger PDF",
+    shareOrder: "Partager la Commande"
+  },
+  orderHeader: {
+    orderId: "Numéro de Commande",
+    orderDate: "Date de Commande",
+    items: "Articles",
+    totalItems: "{count} {items}",
+    item: "article",
+    itemsPlural: "articles"
+  },
+  status: {
+    pending: "En Attente",
+    processing: "En Traitement",
+    shipped: "Expédié",
+    delivered: "Livré",
+    rejected: "Rejeté",
+    cancelled: "Annulé",
+    completed: "Terminé"
+  },
+  orderProgress: {
+    title: "Progression de la Commande",
+    steps: ["Commandé", "Traitement", "Expédié", "Livré"],
+    current: "Actuel",
+    estimatedDelivery: "Livraison Estimée",
+    delivered: "Livré",
+    deliveredOn: "Livré le",
+    expectedBy: "Attendu pour"
+  },
+  rejectedState: {
+    title: "Commande Rejetée",
+    cancelled: "Annulé",
+    orderStopped: "Commande Arrêtée",
+    cannotProcess: "Commande Impossible à Traiter",
+    codNote: "Aucun paiement n'était requis car il s'agissait d'une commande en Paiement à la Livraison.",
+    paymentNote: "Si un paiement a été effectué, il sera remboursé dans les 5-7 jours ouvrables.",
+    contactSupport: "Contacter le Support",
+    shopAgain: "Acheter à Nouveau"
+  },
+  orderItems: {
+    title: "Articles Commandés",
+    totalItems: "articles totaux",
+    quantity: "Quantité :",
+    priceEach: "chacun",
+    subtotal: "Sous-total",
+    shipping: "Livraison",
+    shippingFree: "GRATUIT",
+    tax: "Taxe",
+    total: "Total",
+    inclusiveTax: "Toutes taxes incluses",
+    distinctItems: "articles distincts"
+  },
+  deliveryAddress: {
+    title: "Adresse de Livraison",
+    billingAddress: "Adresse de Facturation",
+    recipient: "Destinataire",
+    primaryContact: "Contact principal"
+  },
+  paymentInfo: {
+    title: "Informations de Paiement",
+    paymentMethod: "Méthode de Paiement",
+    paymentStatus: "Statut du Paiement",
+    pending: "En Attente",
+    paid: "Payé",
+    via: "via",
+    codInstructions: "Instructions Paiement à la Livraison",
+    codNote: "Veuillez préparer la monnaie exacte pour ₹{amount}",
+    paymentNote: "Note de Paiement",
+    codRefundNote: "Aucun paiement n'était requis pour cette commande en Paiement à la Livraison.",
+    regularRefundNote: "Tout paiement effectué sera automatiquement remboursé."
+  },
+  customerSupport: {
+    callSupport: "Appeler le Support",
+    issueResolution: "Résolution de Problème",
+    needHelp: "Besoin d'aide pour une commande rejetée?",
+    fastResolution: "Résolution rapide des problèmes",
+    availableHours: "Disponible 9h - 21h",
+    trackOrder: "Suivre la Commande",
+    reorderItems: "Commander à Nouveau",
+    liveTracking: "Suivi en Direct Disponible",
+    quickReorder: "Récommande rapide disponible",
+    trackPackage: "Suivre le Colis",
+    emailSupport: "Envoyez-nous un email pour assistance",
+    contactSupport: "Contacter le Support"
+  },
+  footerNote: {
+    needHelp: "Besoin d'aide avec votre commande?",
+    contactSupport: "Contactez notre équipe de support"
+  },
+  errorState: {
+    oops: "Oups !",
+    orderNotFound: "Commande Non Trouvée",
+    notExist: "La commande que vous recherchez n'existe pas ou vous n'avez pas l'autorisation de la voir."
+  },
+  actions: {
+    contactSupport: "Contacter le Support",
+    shopAgain: "Acheter à Nouveau"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Mes Commandes",
+    subtitle: "Suivez vos achats récents et le statut de vos commandes"
+  },
+  search: {
+    placeholder: "Rechercher commandes, nom, téléphone...",
+    filterAll: "Toutes",
+    filterPending: "En Attente",
+    filterProcessing: "En Traitement",
+    filterShipped: "Expédiées",
+    filterRejected: "Rejetées"
+  },
+  statuses: {
+    pending: "En Attente",
+    processing: "En Traitement",
+    shipped: "Expédiée",
+    rejected: "Rejetée",
+    completed: "Terminée"
+  },
+  orderItem: {
+    orderId: "Numéro de Commande",
+    itemsCount: "{count} article{s}",
+    quantity: "Qté: {qty}",
+    deliverTo: "Livrer à: {name}, {city}",
+    viewDetails: "Voir les Détails"
+  },
+  emptyState: {
+    title: "Aucune commande pour le moment",
+    description: "Votre historique de commandes apparaîtra ici. Commencez vos achats pour suivre vos commandes.",
+    startShopping: "Commencer les Achats →"
+  },
+  loading: "Chargement de vos commandes..."
+},
 contactPage: {
   hero: {
     title: "Contactez-Nous",
@@ -388,6 +749,27 @@ contactPage: {
     message: {
       required: "Le message est obligatoire"
     }
+  }
+},
+homeProducts: {
+  header: {
+    tag: "Tous les Produits",
+    showingAll: "Affichage de tous les {count} produits",
+    noProducts: "Aucun produit trouvé pour",
+    tryAnotherBrand: "Veuillez essayer de sélectionner une autre marque ou revenir plus tard.",
+    viewBrandProducts: "Voir les Produits {brand}"
+  },
+  productCard: {
+    category: "Catégorie",
+    dosage: "Dosage:",
+    form: "Forme:",
+    pack: "Conditionnement:",
+    details: "Détails",
+    enquire: "Demander des informations"
+  },
+  buttons: {
+    viewBrandProducts: "Voir les Produits {brand}",
+    productsCount: "{count} Produits"
   }
 },
 productsPage: {

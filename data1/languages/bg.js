@@ -236,6 +236,388 @@ const bg = {
       },
     ],
   },
+  cartPage: {
+  header: {
+    title: "Вашата количка",
+    subtitle: "Прегледайте продуктите преди плащане",
+    b2bBadge: "B2B Едро",
+    batches: "партиди",
+    batch: "партида",
+    totalUnits: "общо единици"
+  },
+  emptyState: {
+    title: "Вашата количка е празна",
+    description: "Добавете продукти, за да продължите пазаруването",
+    browseButton: "Разгледайте продуктите"
+  },
+  items: {
+    unitPrice: "/ единица",
+    remove: "Премахни",
+    removing: "Премахва се...",
+    bulkUnits: "Едро единици:",
+    swipeTip: "Съвет: Плъзнете наляво върху продуктите, за да ги премахнете"
+  },
+  summary: {
+    title: "Обобщение на поръчката",
+    items: "артикул",
+    itemsPlural: "артикули",
+    bulkOrder: "Едрова поръчка",
+    unitsPerBatch: "единици/партида",
+    totalUnits: "Общо единици",
+    totalBatches: "Общо партиди",
+    subtotal: "Междинна сума",
+    shipping: "Доставка",
+    shippingCalc: "Ще бъде изчислена при плащане",
+    total: "Общо",
+    loginRequired: "Изисква се вход",
+    loginPrompt: "Моля, влезте в профила си, за да продължите с плащането",
+    loginLink: "Кликнете тук за вход",
+    checkoutButton: "Продължи към плащане",
+    loginCheckoutButton: "Влезте, за да платите",
+    continueShopping: "Продължи пазаруването",
+    checkingAuth: "Проверка на удостоверяването..."
+  },
+  buttons: {
+    increase: "Увеличи количеството с едрови единици",
+    decrease: "Намали количеството с едрови единици"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Сигурно Плащане",
+    subtitle: "Бързо • Сигурно • Поверително",
+    steps: ["Количка", "Адрес", "Плащане", "Потвърждение"]
+  },
+  emptyState: {
+    title: "Вашата количка е празна",
+    description: "Добавете продукти, за да продължите плащането.",
+    browseButton: "Разгледайте продукти"
+  },
+  deliveryAddress: {
+    title: "Адрес за доставка",
+    savedAddresses: "Вашите запазени адреси",
+    show: "Покажи",
+    hide: "Скрий",
+    useAddress: "Използвай",
+    saveAddress: "Запази адрес",
+    note: "Адресите се запазват само за вашия акаунт и няма да бъдат видими за други потребители.",
+    saveForFuture: "Запазете този адрес за бъдещи поръчки"
+  },
+  form: {
+    placeholders: {
+      fullName: "Пълно име",
+      phone: "Телефонен номер",
+      email: "Имейл адрес",
+      address: "Пълен адрес",
+      city: "Град",
+      pincode: "Пощенски код",
+      country: "Държава"
+    }
+  },
+  payment: {
+    title: "Начин на плащане",
+    cod: {
+      title: "Наложен платеж",
+      subtitle: "Платете при получаване"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Кредитна / Дебитна карта",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Дигитални портфейли",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Всички плащания са криптирани и сигурни"
+  },
+  orderSummary: {
+    title: "Резюме на поръчката",
+    secure: "Сигурно и лично",
+    items: "Артикули",
+    totalUnits: "Общо единици",
+    totalBatches: "Общо партиди",
+    totalAmount: "Обща сума",
+    placeOrder: "Направете сигурна поръчка",
+    processing: "Обработва се...",
+    trustedBy: "Доверено от здравни специалисти • Дискретна опаковка",
+    continueShopping: "Продължете с пазаруването"
+  },
+  validation: {
+    emptyCart: "Вашата количка е празна",
+    fullName: {
+      required: "Моля, въведете валидно пълно име",
+      invalid: "Пълното име трябва да съдържа само букви"
+    },
+    email: "Моля, въведете валиден имейл адрес",
+    phone: "Телефонният номер трябва да бъде 10 цифри",
+    address: "Моля, въведете пълен адрес за доставка",
+    city: "Градът е задължителен",
+    pincode: "Пощенският код трябва да бъде 6 цифри",
+    country: "Държавата е задължителна",
+    payment: "Моля, изберете начин на плащане"
+  },
+  messages: {
+    loginRequired: "Моля, влезте в профила си, за да продължите плащането",
+    saveSuccess: "Адресът е запазен успешно!",
+    sessionExpired: "Сесията изтече. Моля, влезте отново.",
+    orderFailed: "Поръчката не бе успешна",
+    networkError: "Грешка в мрежата. Моля, опитайте отново."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Поръчката Потвърдена!",
+    subtitle: "Благодарим Ви за покупката. Получихме Вашата поръчка #{orderId} и тя се обработва.",
+    paymentStatus: "Плащането е потвърдено • Имейлът е изпратен • Поръчката се обработва"
+  },
+  errorState: {
+    title: "Грешка в Поръчката",
+    viewOrders: "Преглед на Моите Поръчки",
+    returnHome: "Връщане към Начало"
+  },
+  loadingState: {
+    title: "Зареждане на Вашата Поръчка...",
+    subtitle: "Подготовка на потвърждението за поръчка"
+  },
+  orderSummary: {
+    title: "Резюме на Поръчката",
+    orderNumber: "Номер на Поръчката",
+    orderDate: "Дата на Поръчката",
+    paymentMethod: "Начин на Плащане",
+    cashOnDelivery: "Наложен Платеж",
+    delivery: "Доставка",
+    standardDelivery: "Стандартна (2-3 дни)"
+  },
+  orderStatus: {
+    title: "Статус на Поръчката",
+    steps: {
+      placed: {
+        title: "Направена Поръчка",
+        description: "Вашата поръчка е получена",
+        time: "Току що"
+      },
+      processing: {
+        title: "Обработване",
+        description: "Подготвяме Вашите артикули",
+        time: "Днес"
+      },
+      shipping: {
+        title: "Доставка",
+        description: "Очаквана доставка след 2-3 дни",
+        time: "Утре"
+      },
+      delivered: {
+        title: "Доставена",
+        description: "Ще пристигне на Вашата врата",
+        time: "2-3 дни"
+      }
+    },
+    statuses: {
+      complete: "Завършено",
+      inProgress: "В Прогрес"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Преглед на Детайлите на Поръчката",
+    continueShopping: "Продължаване на Пазаруването",
+    downloadReceipt: "Изтегляне на Разписка",
+    emailReceipt: "Разписка по Имейл"
+  },
+  supportCard: {
+    title: "Нуждаете се от Помощ?",
+    description: "Нашият екип за поддръжка е тук, за да Ви помогне с въпроси относно поръчката Ви.",
+    contactSupport: "Свържете се с Поддръжката"
+  },
+  quickActions: {
+    title: "Бързи Действия",
+    viewAllOrders: "Преглед на Всички Поръчки",
+    accountSettings: "Настройки на Профила"
+  },
+  deliveryInfo: {
+    title: "Обновления за Доставката",
+    subtitle: "Ще Ви държим информирани",
+    estimatedDelivery: "Очаквана Доставка",
+    trackingNumber: "Проследим Номер",
+    willBeProvided: "Ще бъде предоставен"
+  },
+  footer: {
+    confirmed: "✓ Потвърдено",
+    confirmationMessage: "Потвърждаващ имейл е изпратен на регистрирания Ви имейл адрес. Можете да проследявате статуса на поръчката си по всяко време от секцията Мои Поръчки.",
+    links: {
+      helpCenter: "Център за Помощ",
+      shippingPolicy: "Политика за Доставка",
+      returnsRefunds: "Връщания & Възстановявания",
+      contactUs: "Свържете се с Нас"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Разписката е изтеглена успешно!",
+    emailSubject: "Потвърждението на Вашата Поръчка - {orderId}"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Моите Поръчки",
+    subtitle: "Проследявайте последните си покупки и статус на поръчките"
+  },
+  search: {
+    placeholder: "Търсене на поръчки, име, телефон...",
+    filterAll: "Всички",
+    filterPending: "Изчакване",
+    filterProcessing: "Обработва се",
+    filterShipped: "Изпратени",
+    filterRejected: "Отхвърлени"
+  },
+  statuses: {
+    pending: "Изчакване",
+    processing: "Обработва се",
+    shipped: "Изпратена",
+    rejected: "Отхвърлена",
+    completed: "Завършена"
+  },
+  orderItem: {
+    orderId: "Номер на Поръчка",
+    itemsCount: "{count} артикул{plural}",
+    quantity: "Кол: {qty}",
+    deliverTo: "Доставка до: {name}, {city}",
+    viewDetails: "Вижте Детайли"
+  },
+  emptyState: {
+    title: "Все още няма поръчки",
+    description: "Вашата история на поръчки ще се появи тук. Започнете да пазарувате, за да проследявате покупките си.",
+    startShopping: "Започнете да Пазарувате →"
+  },
+  loading: "Зареждане на вашите поръчки..."
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Назад към Поръчките",
+    orderNumber: "Поръчка #{id}",
+    printInvoice: "Отпечатване на Фактура",
+    downloadPDF: "Изтегляне на PDF",
+    shareOrder: "Споделяне на Поръчка"
+  },
+  orderHeader: {
+    orderId: "Номер на Поръчка",
+    orderDate: "Дата на Поръчка",
+    items: "Артикули",
+    totalItems: "{count} {items}",
+    item: "артикул",
+    itemsPlural: "артикула"
+  },
+  status: {
+    pending: "Изчакване",
+    processing: "Обработва се",
+    shipped: "Изпратена",
+    delivered: "Доставена",
+    rejected: "Отхвърлена",
+    cancelled: "Отменена",
+    completed: "Завършена"
+  },
+  orderProgress: {
+    title: "Напредък на Поръчката",
+    steps: ["Поръчана", "Обработва се", "Изпратена", "Доставена"],
+    current: "Текущ",
+    estimatedDelivery: "Очаквана Доставка",
+    delivered: "Доставена",
+    deliveredOn: "Доставена на",
+    expectedBy: "Очаква се до"
+  },
+  rejectedState: {
+    title: "Поръчката е Отхвърлена",
+    cancelled: "Отменена",
+    orderStopped: "Поръчката е Спряна",
+    cannotProcess: "Поръчката Не Може Да Бъде Обработена",
+    codNote: "Не беше необходимо плащане, тъй като това беше поръчка с Наложен Платеж.",
+    paymentNote: "Ако е направено плащане, то ще бъде възстановено в рамките на 5-7 работни дни.",
+    contactSupport: "Свържете се с Поддръжката",
+    shopAgain: "Пазарувайте Отново"
+  },
+  orderItems: {
+    title: "Артикули в Поръчката",
+    totalItems: "общо артикули",
+    quantity: "Количество:",
+    priceEach: "бр.",
+    subtotal: "Междинна сума",
+    shipping: "Доставка",
+    shippingFree: "БЕЗПЛАТНО",
+    tax: "Данък",
+    total: "Общо",
+    inclusiveTax: "Включва всички данъци",
+    distinctItems: "различни артикули"
+  },
+  deliveryAddress: {
+    title: "Адрес за Доставка",
+    billingAddress: "Адрес за Фактуриране",
+    recipient: "Получател",
+    primaryContact: "Основен контакт"
+  },
+  paymentInfo: {
+    title: "Информация за Плащане",
+    paymentMethod: "Начин на Плащане",
+    paymentStatus: "Статус на Плащане",
+    pending: "Изчакване",
+    paid: "Платено",
+    via: "чрез",
+    codInstructions: "Инструкции за Наложен Платеж",
+    codNote: "Моля, подгответе точна сума за ₹{amount}",
+    paymentNote: "Бележка за Плащане",
+    codRefundNote: "Не беше необходимо плащане за тази поръчка с Наложен Платеж.",
+    regularRefundNote: "Всяко плащане ще бъде автоматично възстановено."
+  },
+  customerSupport: {
+    callSupport: "Обадете се на Поддръжка",
+    issueResolution: "Разрешаване на Проблеми",
+    needHelp: "Нуждаете се от помощ за отхвърлена поръчка?",
+    fastResolution: "Бързо разрешаване на проблеми",
+    availableHours: "Достъпни 9:00 - 21:00",
+    trackOrder: "Проследяване на Поръчка",
+    reorderItems: "Повторна Поръчка на Артикули",
+    liveTracking: "На живо Проследяване Достъпно",
+    quickReorder: "Бърза повторна поръчка достъпна",
+    trackPackage: "Проследяване на Пратка",
+    emailSupport: "Изпратете ни имейл за помощ",
+    contactSupport: "Свържете се с Поддръжката"
+  },
+  footerNote: {
+    needHelp: "Нуждаете се от помощ с вашата поръчка?",
+    contactSupport: "Свържете се с нашия екип за поддръжка"
+  },
+  errorState: {
+    oops: "Опа!",
+    orderNotFound: "Поръчката Не Е Намерена",
+    notExist: "Поръчката, която търсите, не съществува или нямате разрешение да я видите."
+  },
+  actions: {
+    contactSupport: "Свържете се с Поддръжката",
+    shopAgain: "Пазарувайте Отново"
+  }
+},
+homeProducts: {
+  header: {
+    tag: "Всички Продукти",
+    showingAll: "Показване на всички {count} продукта",
+    noProducts: "Не са намерени продукти за",
+    tryAnotherBrand: "Моля, опитайте да изберете друга марка или проверете отново по-късно.",
+    viewBrandProducts: "Вижте Продукти {brand}"
+  },
+  productCard: {
+    category: "Категория",
+    dosage: "Доза:",
+    form: "Форма:",
+    pack: "Опаковка:",
+    details: "Подробности",
+    enquire: "Запитване"
+  },
+  buttons: {
+    viewBrandProducts: "Вижте Продукти {brand}",
+    productsCount: "{count} Продукти"
+  }
+},
   contactPage: {
   hero: {
     title: "Свържете се с Нас",

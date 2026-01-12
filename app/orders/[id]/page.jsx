@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
+import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
 import {
   Package,
   Clock,
@@ -27,168 +28,11 @@ import {
 } from "lucide-react";
 import Image from "next/image";
 
-/* ---------- helpers ---------- */
-function formatDate(d) {
-  try {
-    return new Date(d).toLocaleString(undefined, {
-      year: "numeric",
-      month: "short",
-      day: "2-digit",
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-  } catch {
-    return "";
-  }
-}
-
-function formatShortDate(d) {
-  try {
-    return new Date(d).toLocaleDateString(undefined, {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  } catch {
-    return "";
-  }
-}
-
-function statusMeta(status) {
-  const s = (status || "").toLowerCase();
-  if (s.includes("pending"))
-    return {
-      label: "Pending",
-      icon: <Clock className="w-4 h-4" />,
-      color: "text-amber-600",
-      bg: "bg-gradient-to-r from-amber-50/80 to-orange-50/80",
-      border: "border-amber-200",
-      glow: "shadow-[0_0_20px_rgba(245,158,11,0.1)]",
-    };
-  if (s.includes("processing"))
-    return {
-      label: "Processing",
-      icon: <Package className="w-4 h-4" />,
-      color: "text-blue-600",
-      bg: "bg-gradient-to-r from-blue-50/80 to-indigo-50/80",
-      border: "border-blue-200",
-      glow: "shadow-[0_0_20px_rgba(59,130,246,0.1)]",
-    };
-  if (s.includes("shipped"))
-    return {
-      label: "Shipped",
-      icon: <Truck className="w-4 h-4" />,
-      color: "text-emerald-600",
-      bg: "bg-gradient-to-r from-emerald-50/80 to-teal-50/80",
-      border: "border-emerald-200",
-      glow: "shadow-[0_0_20px_rgba(16,185,129,0.1)]",
-    };
-  if (s.includes("delivered"))
-    return {
-      label: "Delivered",
-      icon: <CheckCircle className="w-4 h-4" />,
-      color: "text-green-600",
-      bg: "bg-gradient-to-r from-green-50/80 to-emerald-50/80",
-      border: "border-green-200",
-      glow: "shadow-[0_0_20px_rgba(34,197,94,0.1)]",
-    };
-  if (s.includes("cancel") || s.includes("reject"))
-    return {
-      label: "Rejected",
-      icon: <X className="w-4 h-4" />, // Changed to X icon
-      color: "text-rose-600",
-      bg: "bg-gradient-to-r from-rose-50/80 to-red-50/80",
-      border: "border-rose-200",
-      glow: "shadow-[0_0_20px_rgba(244,63,94,0.1)]",
-    };
-  return {
-    label: status || "Pending",
-    icon: <Clock className="w-4 h-4" />,
-    color: "text-slate-600",
-    bg: "bg-gradient-to-r from-slate-50/80 to-gray-50/80",
-    border: "border-slate-200",
-    glow: "shadow-[0_0_20px_rgba(100,116,139,0.1)]",
-  };
-}
-
-// Enhanced loading skeleton
-function LoadingSkeleton() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-6 pb-16">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back button skeleton */}
-        <div className="h-5 w-32 bg-slate-200 rounded-lg animate-pulse mb-8"></div>
-
-        {/* Header skeleton */}
-        <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 mb-8 shadow-sm">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-            <div className="space-y-3 flex-1">
-              <div className="h-4 w-24 bg-slate-200 rounded animate-pulse"></div>
-              <div className="h-7 w-64 bg-slate-300 rounded animate-pulse"></div>
-              <div className="h-4 w-48 bg-slate-200 rounded animate-pulse"></div>
-            </div>
-            <div className="h-8 w-32 bg-slate-200 rounded-full animate-pulse"></div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Items skeleton */}
-          <div className="space-y-4">
-            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 shadow-sm">
-              <div className="h-6 w-32 bg-slate-300 rounded mb-6 animate-pulse"></div>
-              <div className="space-y-4">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="flex gap-4 p-4 rounded-xl border border-slate-100"
-                  >
-                    <div className="w-16 h-16 bg-slate-200 rounded-xl animate-pulse"></div>
-                    <div className="flex-1 space-y-2">
-                      <div className="h-4 w-48 bg-slate-300 rounded animate-pulse"></div>
-                      <div className="h-3 w-24 bg-slate-200 rounded animate-pulse"></div>
-                    </div>
-                    <div className="w-20 space-y-1">
-                      <div className="h-5 w-full bg-slate-300 rounded animate-pulse"></div>
-                      <div className="h-3 w-full bg-slate-200 rounded animate-pulse"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Summary and address skeleton */}
-          <div className="space-y-6">
-            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 shadow-sm">
-              <div className="h-6 w-32 bg-slate-300 rounded mb-6 animate-pulse"></div>
-              <div className="space-y-4">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="flex justify-between py-2">
-                    <div className="h-4 w-32 bg-slate-200 rounded animate-pulse"></div>
-                    <div className="h-4 w-16 bg-slate-300 rounded animate-pulse"></div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 shadow-sm">
-              <div className="h-6 w-48 bg-slate-300 rounded mb-6 animate-pulse"></div>
-              <div className="space-y-3">
-                <div className="h-5 w-40 bg-slate-300 rounded animate-pulse"></div>
-                <div className="h-20 w-full bg-slate-200 rounded-xl animate-pulse"></div>
-                <div className="h-10 w-full bg-slate-200 rounded-xl animate-pulse"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function OrderDetailsPage() {
   const params = useParams();
   const router = useRouter();
+  const { t, language } = useLanguage(); // ADD LANGUAGE CONTEXT
+  
   const [order, setOrder] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -196,10 +40,274 @@ export default function OrderDetailsPage() {
   const id = params?.id;
   const orderId = Array.isArray(id) ? id[0] : id;
 
+  // Get translations from context, fallback to English
+  const orderDetailTranslations = t?.orderDetailPage || {
+    header: {
+      backToOrders: "Back to Orders",
+      orderNumber: "Order #{id}",
+      printInvoice: "Print Invoice",
+      downloadPDF: "Download PDF",
+      shareOrder: "Share Order"
+    },
+    orderHeader: {
+      orderId: "Order ID",
+      orderDate: "Order Date",
+      items: "Items",
+      totalItems: "{count} {items}",
+      item: "item",
+      itemsPlural: "items"
+    },
+    status: {
+      pending: "Pending",
+      processing: "Processing",
+      shipped: "Shipped",
+      delivered: "Delivered",
+      rejected: "Rejected",
+      cancelled: "Cancelled",
+      completed: "Completed"
+    },
+    orderProgress: {
+      title: "Order Progress",
+      steps: ["Ordered", "Processing", "Shipped", "Delivered"],
+      current: "Current",
+      estimatedDelivery: "Estimated Delivery",
+      delivered: "Delivered",
+      deliveredOn: "Delivered on",
+      expectedBy: "Expected by"
+    },
+    rejectedState: {
+      title: "Order Rejected",
+      cancelled: "Cancelled",
+      orderStopped: "Order Stopped",
+      cannotProcess: "Order Cannot Be Processed",
+      codNote: "No payment was required since this was a Cash on Delivery order.",
+      paymentNote: "If any payment was made, it will be refunded within 5-7 business days.",
+      contactSupport: "Contact Support",
+      shopAgain: "Shop Again"
+    },
+    orderItems: {
+      title: "Order Items",
+      totalItems: "total items",
+      quantity: "Quantity:",
+      priceEach: "each",
+      subtotal: "Subtotal",
+      shipping: "Shipping",
+      shippingFree: "FREE",
+      tax: "Tax",
+      total: "Total",
+      inclusiveTax: "Inclusive of all taxes",
+      distinctItems: "distinct items"
+    },
+    deliveryAddress: {
+      title: "Delivery Address",
+      billingAddress: "Billing Address",
+      recipient: "Recipient",
+      primaryContact: "Primary contact"
+    },
+    paymentInfo: {
+      title: "Payment Information",
+      paymentMethod: "Payment Method",
+      paymentStatus: "Payment Status",
+      pending: "Pending",
+      paid: "Paid",
+      via: "via",
+      codInstructions: "COD Instructions",
+      codNote: "Please keep exact change ready for ₹{amount}",
+      paymentNote: "Payment Note",
+      codRefundNote: "No payment was required for this Cash on Delivery order.",
+      regularRefundNote: "Any payment made will be refunded automatically."
+    },
+    customerSupport: {
+      callSupport: "Call Support",
+      issueResolution: "Issue Resolution",
+      needHelp: "Need help with rejected order?",
+      fastResolution: "Fast issue resolution",
+      availableHours: "Available 9 AM - 9 PM",
+      trackOrder: "Track Order",
+      reorderItems: "Re-order Items",
+      liveTracking: "Live Tracking Available",
+      quickReorder: "Quick re-order available",
+      trackPackage: "Track Package",
+      emailSupport: "Email us for assistance",
+      contactSupport: "Contact Support"
+    },
+    footerNote: {
+      needHelp: "Need help with your order?",
+      contactSupport: "Contact our support team"
+    },
+    errorState: {
+      oops: "Oops!",
+      orderNotFound: "Order Not Found",
+      notExist: "The order you're looking for doesn't exist or you don't have permission to view it."
+    },
+    actions: {
+      contactSupport: "Contact Support",
+      shopAgain: "Shop Again"
+    }
+  };
+
+  /* ---------- helpers ---------- */
+  function formatDate(d) {
+    try {
+      return new Date(d).toLocaleString(language === 'en' ? 'en-US' : language, {
+        year: "numeric",
+        month: "short",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch {
+      return "";
+    }
+  }
+
+  function formatShortDate(d) {
+    try {
+      return new Date(d).toLocaleDateString(language === 'en' ? 'en-US' : language, {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      });
+    } catch {
+      return "";
+    }
+  }
+
+  function statusMeta(status) {
+    const s = (status || "").toLowerCase();
+    if (s.includes("pending"))
+      return {
+        label: orderDetailTranslations.status.pending,
+        icon: <Clock className="w-4 h-4" />,
+        color: "text-amber-600",
+        bg: "bg-gradient-to-r from-amber-50/80 to-orange-50/80",
+        border: "border-amber-200",
+        glow: "shadow-[0_0_20px_rgba(245,158,11,0.1)]",
+      };
+    if (s.includes("processing"))
+      return {
+        label: orderDetailTranslations.status.processing,
+        icon: <Package className="w-4 h-4" />,
+        color: "text-blue-600",
+        bg: "bg-gradient-to-r from-blue-50/80 to-indigo-50/80",
+        border: "border-blue-200",
+        glow: "shadow-[0_0_20px_rgba(59,130,246,0.1)]",
+      };
+    if (s.includes("shipped"))
+      return {
+        label: orderDetailTranslations.status.shipped,
+        icon: <Truck className="w-4 h-4" />,
+        color: "text-emerald-600",
+        bg: "bg-gradient-to-r from-emerald-50/80 to-teal-50/80",
+        border: "border-emerald-200",
+        glow: "shadow-[0_0_20px_rgba(16,185,129,0.1)]",
+      };
+    if (s.includes("delivered"))
+      return {
+        label: orderDetailTranslations.status.delivered,
+        icon: <CheckCircle className="w-4 h-4" />,
+        color: "text-green-600",
+        bg: "bg-gradient-to-r from-green-50/80 to-emerald-50/80",
+        border: "border-green-200",
+        glow: "shadow-[0_0_20px_rgba(34,197,94,0.1)]",
+      };
+    if (s.includes("cancel") || s.includes("reject"))
+      return {
+        label: orderDetailTranslations.status.rejected,
+        icon: <X className="w-4 h-4" />,
+        color: "text-rose-600",
+        bg: "bg-gradient-to-r from-rose-50/80 to-red-50/80",
+        border: "border-rose-200",
+        glow: "shadow-[0_0_20px_rgba(244,63,94,0.1)]",
+      };
+    return {
+      label: status || orderDetailTranslations.status.pending,
+      icon: <Clock className="w-4 h-4" />,
+      color: "text-slate-600",
+      bg: "bg-gradient-to-r from-slate-50/80 to-gray-50/80",
+      border: "border-slate-200",
+      glow: "shadow-[0_0_20px_rgba(100,116,139,0.1)]",
+    };
+  }
+
+  // Enhanced loading skeleton
+  function LoadingSkeleton() {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-6 pb-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back button skeleton */}
+          <div className="h-5 w-32 bg-slate-200 rounded-lg animate-pulse mb-8"></div>
+
+          {/* Header skeleton */}
+          <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 mb-8 shadow-sm">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+              <div className="space-y-3 flex-1">
+                <div className="h-4 w-24 bg-slate-200 rounded animate-pulse"></div>
+                <div className="h-7 w-64 bg-slate-300 rounded animate-pulse"></div>
+                <div className="h-4 w-48 bg-slate-200 rounded animate-pulse"></div>
+              </div>
+              <div className="h-8 w-32 bg-slate-200 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Items skeleton */}
+            <div className="space-y-4">
+              <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 shadow-sm">
+                <div className="h-6 w-32 bg-slate-300 rounded mb-6 animate-pulse"></div>
+                <div className="space-y-4">
+                  {[1, 2, 3].map((i) => (
+                    <div
+                      key={i}
+                      className="flex gap-4 p-4 rounded-xl border border-slate-100"
+                    >
+                      <div className="w-16 h-16 bg-slate-200 rounded-xl animate-pulse"></div>
+                      <div className="flex-1 space-y-2">
+                        <div className="h-4 w-48 bg-slate-300 rounded animate-pulse"></div>
+                        <div className="h-3 w-24 bg-slate-200 rounded animate-pulse"></div>
+                      </div>
+                      <div className="w-20 space-y-1">
+                        <div className="h-5 w-full bg-slate-300 rounded animate-pulse"></div>
+                        <div className="h-3 w-full bg-slate-200 rounded animate-pulse"></div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Summary and address skeleton */}
+            <div className="space-y-6">
+              <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 shadow-sm">
+                <div className="h-6 w-32 bg-slate-300 rounded mb-6 animate-pulse"></div>
+                <div className="space-y-4">
+                  {[1, 2, 3].map((i) => (
+                    <div key={i} className="flex justify-between py-2">
+                      <div className="h-4 w-32 bg-slate-200 rounded animate-pulse"></div>
+                      <div className="h-4 w-16 bg-slate-300 rounded animate-pulse"></div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white/80 backdrop-blur-sm border border-slate-200/50 rounded-2xl p-6 shadow-sm">
+                <div className="h-6 w-48 bg-slate-300 rounded mb-6 animate-pulse"></div>
+                <div className="space-y-3">
+                  <div className="h-5 w-40 bg-slate-300 rounded animate-pulse"></div>
+                  <div className="h-20 w-full bg-slate-200 rounded-xl animate-pulse"></div>
+                  <div className="h-10 w-full bg-slate-200 rounded-xl animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Download invoice function
   const downloadInvoice = async () => {
     try {
-      // Create invoice content
       const invoiceContent = `
         INVOICE #${order?.orderId || ''}
         Date: ${formatDate(order?.createdAt)}
@@ -228,7 +336,6 @@ export default function OrderDetailsPage() {
         ED Pharma
       `;
       
-      // Create and download file
       const blob = new Blob([invoiceContent], { type: 'text/plain' });
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
@@ -258,11 +365,9 @@ export default function OrderDetailsPage() {
         console.log('Error sharing:', error);
       }
     } else if (navigator.clipboard) {
-      // Fallback: copy to clipboard
       navigator.clipboard.writeText(window.location.href);
       alert('Link copied to clipboard!');
     } else {
-      // Last fallback: show URL
       alert(`Share this link: ${window.location.href}`);
     }
   };
@@ -338,7 +443,6 @@ export default function OrderDetailsPage() {
     return (
       <div className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
         <div className="relative bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl border border-slate-200/50 rounded-3xl p-10 text-center max-w-md w-full shadow-2xl shadow-blue-500/5">
-          {/* Decorative elements */}
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-xl"></div>
           <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-emerald-500/10 to-teal-500/10 rounded-full blur-xl"></div>
 
@@ -347,12 +451,10 @@ export default function OrderDetailsPage() {
               <Package className="w-10 h-10 text-slate-400" />
             </div>
             <h2 className="text-2xl font-bold text-slate-900 mb-3">
-              {error ? "Oops!" : "Order Not Found"}
+              {error ? orderDetailTranslations.errorState.oops : orderDetailTranslations.errorState.orderNotFound}
             </h2>
             <p className="text-sm text-slate-600 mb-8 leading-relaxed">
-              {error
-                ? error
-                : "The order you're looking for doesn't exist or you don't have permission to view it."}
+              {error || orderDetailTranslations.errorState.notExist}
             </p>
             <Link
               href="/orders"
@@ -362,7 +464,7 @@ export default function OrderDetailsPage() {
                 size={16}
                 className="group-hover:-translate-x-0.5 transition-transform"
               />
-              Back to Orders
+              {orderDetailTranslations.header.backToOrders}
             </Link>
           </div>
         </div>
@@ -371,8 +473,7 @@ export default function OrderDetailsPage() {
   }
 
   const meta = statusMeta(order.status);
-  const totalItems =
-    order.items?.reduce((sum, item) => sum + (item.qty || 0), 0) || 0;
+  const totalItems = order.items?.reduce((sum, item) => sum + (item.qty || 0), 0) || 0;
     
   // Check if order is rejected
   const isRejected = order.status?.toLowerCase().includes("cancel") || 
@@ -398,11 +499,11 @@ export default function OrderDetailsPage() {
                 size={18}
                 className="group-hover:-translate-x-0.5 transition-transform duration-200"
               />
-              Back to Orders
+              {orderDetailTranslations.header.backToOrders}
             </Link>
             <ChevronRight size={16} className="text-slate-300" />
             <span className="text-sm font-medium text-slate-500 truncate">
-              Order #{order.orderId}
+              {orderDetailTranslations.header.orderNumber.replace('{id}', order.orderId)}
             </span>
           </div>
           
@@ -412,7 +513,7 @@ export default function OrderDetailsPage() {
               className="group inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-[#0A4C89] px-4 py-2 rounded-lg hover:bg-slate-100/50 transition-all duration-200"
             >
               <Printer size={16} className="group-hover:rotate-12 transition-transform" />
-              Print Invoice
+              {orderDetailTranslations.header.printInvoice}
             </button>
             
             <button 
@@ -420,14 +521,14 @@ export default function OrderDetailsPage() {
               className="group inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-[#0A4C89] px-4 py-2 rounded-lg hover:bg-slate-100/50 transition-all duration-200"
             >
               <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
-              Download PDF
+              {orderDetailTranslations.header.downloadPDF}
             </button>
             
             <button 
               onClick={shareOrder}
               className="group inline-flex items-center gap-2 text-sm font-medium text-white bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
             >
-              <span>Share Order</span>
+              <span>{orderDetailTranslations.header.shareOrder}</span>
               <ChevronRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>
@@ -449,7 +550,7 @@ export default function OrderDetailsPage() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-slate-500">
                 <ShoppingBag size={16} />
-                <span>Order ID</span>
+                <span>{orderDetailTranslations.orderHeader.orderId}</span>
               </div>
               <h1 className="text-2xl font-bold text-slate-900">
                 {order.orderId}
@@ -459,7 +560,7 @@ export default function OrderDetailsPage() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-slate-500">
                 <Calendar size={16} />
-                <span>Order Date</span>
+                <span>{orderDetailTranslations.orderHeader.orderDate}</span>
               </div>
               <p className="text-lg font-semibold text-slate-900">
                 {formatDate(order.createdAt)}
@@ -469,10 +570,15 @@ export default function OrderDetailsPage() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm text-slate-500">
                 <Package size={16} />
-                <span>Items</span>
+                <span>{orderDetailTranslations.orderHeader.items}</span>
               </div>
               <p className="text-lg font-semibold text-slate-900">
-                {totalItems} {totalItems === 1 ? "item" : "items"}
+                {orderDetailTranslations.orderHeader.totalItems
+                  .replace('{count}', totalItems)
+                  .replace('{items}', totalItems === 1 
+                    ? orderDetailTranslations.orderHeader.item 
+                    : orderDetailTranslations.orderHeader.itemsPlural
+                  )}
               </p>
             </div>
           </div>
@@ -488,18 +594,17 @@ export default function OrderDetailsPage() {
                   <AlertTriangle className="w-5 h-5 text-rose-600" />
                 </div>
                 <h2 className="text-lg font-semibold text-rose-900">
-                  Order Rejected
+                  {orderDetailTranslations.rejectedState.title}
                 </h2>
               </div>
               <span className="inline-flex items-center gap-1.5 text-xs font-medium bg-rose-600 text-white px-3 py-1.5 rounded-full">
                 <Ban className="w-3.5 h-3.5" />
-                Cancelled
+                {orderDetailTranslations.rejectedState.cancelled}
               </span>
             </div>
 
             {/* Rejected Flow */}
             <div className="relative">
-              {/* Red progress line */}
               <div className="absolute left-0 right-0 top-4 h-1 bg-rose-200/50"></div>
               <div className="absolute left-0 top-4 h-1 bg-gradient-to-r from-rose-500 to-rose-600 transition-all duration-1000" style={{ width: "50%" }}></div>
 
@@ -543,7 +648,7 @@ export default function OrderDetailsPage() {
                       </span>
                       {isCurrent && (
                         <span className="text-xs text-rose-600 font-medium mt-1 animate-pulse">
-                          Order Stopped
+                          {orderDetailTranslations.rejectedState.orderStopped}
                         </span>
                       )}
                     </div>
@@ -557,23 +662,25 @@ export default function OrderDetailsPage() {
               <div className="flex items-start gap-4">
                 <XCircle className="w-6 h-6 text-rose-600 flex-shrink-0 mt-0.5" />
                 <div className="flex-1">
-                  <h3 className="font-semibold text-rose-900 mb-2">Order Cannot Be Processed</h3>
+                  <h3 className="font-semibold text-rose-900 mb-2">
+                    {orderDetailTranslations.rejectedState.cannotProcess}
+                  </h3>
                   <p className="text-sm text-rose-700 leading-relaxed">
-                    This order has been rejected and will not be processed further. 
+                    {orderDetailTranslations.rejectedState.cannotProcess}. 
                     {order.paymentMethod === "cod" 
-                      ? " No payment was required since this was a Cash on Delivery order."
-                      : " If any payment was made, it will be refunded within 5-7 business days."
+                      ? " " + orderDetailTranslations.rejectedState.codNote
+                      : " " + orderDetailTranslations.rejectedState.paymentNote
                     }
                   </p>
                   <div className="mt-4 flex flex-wrap gap-3">
                     <button className="text-sm font-medium text-rose-700 hover:text-rose-800 bg-white/50 hover:bg-white/70 px-4 py-2 rounded-lg border border-rose-200 transition-all duration-200">
-                      Contact Support
+                      {orderDetailTranslations.rejectedState.contactSupport}
                     </button>
                     <Link
                       href="/products"
                       className="text-sm font-medium text-white bg-gradient-to-r from-rose-600 to-red-500 hover:from-rose-600 hover:to-red-600 px-4 py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-200"
                     >
-                      Shop Again
+                      {orderDetailTranslations.rejectedState.shopAgain}
                     </Link>
                   </div>
                 </div>
@@ -585,7 +692,7 @@ export default function OrderDetailsPage() {
           <div className="bg-gradient-to-br from-white to-slate-50/90 backdrop-blur-xl border border-slate-200/50 rounded-2xl p-6 mb-8 shadow-lg shadow-blue-500/5">
             <h2 className="text-lg font-semibold text-slate-900 mb-6 flex items-center gap-2">
               <Clock className="w-5 h-5 text-blue-600" />
-              Order Progress
+              {orderDetailTranslations.orderProgress.title}
             </h2>
 
             <div className="relative">
@@ -609,7 +716,7 @@ export default function OrderDetailsPage() {
               ></div>
 
               <div className="flex justify-between relative z-10">
-                {["Ordered", "Processing", "Shipped", "Delivered"].map(
+                {orderDetailTranslations.orderProgress.steps.map(
                   (step, index) => {
                     const isActive =
                       step === "Ordered" ||
@@ -650,7 +757,7 @@ export default function OrderDetailsPage() {
                         </span>
                         {isCurrent && (
                           <span className="text-xs text-blue-600 font-medium mt-1 animate-pulse">
-                            Current
+                            {orderDetailTranslations.orderProgress.current}
                           </span>
                         )}
                       </div>
@@ -667,12 +774,12 @@ export default function OrderDetailsPage() {
                   <Truck className="w-5 h-5 text-blue-600" />
                   <div>
                     <p className="font-medium text-slate-900">
-                      Estimated Delivery
+                      {orderDetailTranslations.orderProgress.estimatedDelivery}
                     </p>
                     <p className="text-sm text-slate-600">
                       {order.status === "Delivered"
-                        ? "Delivered on "
-                        : "Expected by "}
+                        ? orderDetailTranslations.orderProgress.deliveredOn + " "
+                        : orderDetailTranslations.orderProgress.expectedBy + " "}
                       <span className="font-medium">
                         {formatShortDate(
                           new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
@@ -684,7 +791,9 @@ export default function OrderDetailsPage() {
                 {order.status === "Delivered" && (
                   <div className="flex items-center gap-2 text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-full">
                     <CheckCircle className="w-4 h-4" />
-                    <span className="text-sm font-medium">Delivered</span>
+                    <span className="text-sm font-medium">
+                      {orderDetailTranslations.orderProgress.delivered}
+                    </span>
                   </div>
                 )}
               </div>
@@ -701,10 +810,10 @@ export default function OrderDetailsPage() {
                   <div className="p-2 bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl">
                     <Package className="w-5 h-5 text-blue-600" />
                   </div>
-                  Order Items ({order.items?.length || 0})
+                  {orderDetailTranslations.orderItems.title} ({order.items?.length || 0})
                 </h2>
                 <span className="text-sm font-medium text-slate-500">
-                  {totalItems} total items
+                  {totalItems} {orderDetailTranslations.orderItems.totalItems}
                 </span>
               </div>
 
@@ -760,7 +869,7 @@ export default function OrderDetailsPage() {
                               {i.name}
                             </h3>
                             <p className="text-xs text-slate-500 mt-2 flex items-center gap-1.5">
-                              <span>Quantity:</span>
+                              <span>{orderDetailTranslations.orderItems.quantity}</span>
                               <span className={`font-medium px-2 py-0.5 rounded ${
                                 isRejected 
                                   ? "bg-rose-100 text-rose-700" 
@@ -778,7 +887,7 @@ export default function OrderDetailsPage() {
                               ₹{Number(i.price || 0) * Number(i.qty || 0)}
                             </p>
                             <p className="text-xs text-slate-500">
-                              ₹{i.price || 0} each
+                              ₹{i.price || 0} {orderDetailTranslations.orderItems.priceEach}
                             </p>
                           </div>
                         </div>
@@ -803,37 +912,37 @@ export default function OrderDetailsPage() {
                   <CreditCard className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-emerald-600'}`} />
                 </div>
                 <h2 className="text-xl font-bold text-slate-900">
-                  Order Summary
+                  {orderDetailTranslations.orderItems.title}
                 </h2>
               </div>
 
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
-                  <span className="text-slate-600">Subtotal</span>
+                  <span className="text-slate-600">{orderDetailTranslations.orderItems.subtotal}</span>
                   <span className={`font-medium ${isRejected ? 'text-rose-700' : 'text-slate-900'}`}>
                     ₹{order.totals?.totalPrice ?? 0}
                   </span>
                 </div>
 
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
-                  <span className="text-slate-600">Shipping</span>
+                  <span className="text-slate-600">{orderDetailTranslations.orderItems.shipping}</span>
                   <span className={`font-medium ${isRejected ? 'text-rose-600' : 'text-emerald-600'}`}>
-                    {isRejected ? "N/A" : "FREE"}
+                    {isRejected ? "N/A" : orderDetailTranslations.orderItems.shippingFree}
                   </span>
                 </div>
 
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
-                  <span className="text-slate-600">Tax</span>
+                  <span className="text-slate-600">{orderDetailTranslations.orderItems.tax}</span>
                   <span className="font-medium text-slate-900">₹0.00</span>
                 </div>
 
                 <div className="flex justify-between items-center pt-4 mt-2">
                   <div>
                     <span className="font-bold text-lg text-slate-900">
-                      Total
+                      {orderDetailTranslations.orderItems.total}
                     </span>
                     <p className="text-xs text-slate-500">
-                      {isRejected ? "Order not processed" : "Inclusive of all taxes"}
+                      {isRejected ? "Order not processed" : orderDetailTranslations.orderItems.inclusiveTax}
                     </p>
                   </div>
                   <div className="text-right">
@@ -843,7 +952,7 @@ export default function OrderDetailsPage() {
                       ₹{order.totals?.totalPrice ?? 0}
                     </span>
                     <p className="text-xs text-slate-500">
-                      {order.totals?.totalDistinct ?? 0} distinct items
+                      {order.totals?.totalDistinct ?? 0} {orderDetailTranslations.orderItems.distinctItems}
                     </p>
                   </div>
                 </div>
@@ -861,7 +970,9 @@ export default function OrderDetailsPage() {
                   <MapPin className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-violet-600'}`} />
                 </div>
                 <h2 className="text-xl font-bold text-slate-900">
-                  {isRejected ? "Billing Address" : "Delivery Address"}
+                  {isRejected 
+                    ? orderDetailTranslations.deliveryAddress.billingAddress 
+                    : orderDetailTranslations.deliveryAddress.title}
                 </h2>
               </div>
 
@@ -878,7 +989,9 @@ export default function OrderDetailsPage() {
                     <p className="font-semibold text-slate-900 text-lg">
                       {order.address?.fullName}
                     </p>
-                    <p className="text-sm text-slate-500 mt-1">Recipient</p>
+                    <p className="text-sm text-slate-500 mt-1">
+                      {orderDetailTranslations.deliveryAddress.recipient}
+                    </p>
                   </div>
                 </div>
 
@@ -916,7 +1029,7 @@ export default function OrderDetailsPage() {
                         {order.address?.phone}
                       </span>
                       <p className="text-xs text-slate-500 mt-1">
-                        Primary contact
+                        {orderDetailTranslations.deliveryAddress.primaryContact}
                       </p>
                     </div>
                   </div>
@@ -935,7 +1048,7 @@ export default function OrderDetailsPage() {
                   <CreditCard className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-amber-600'}`} />
                 </div>
                 <h2 className="text-xl font-bold text-slate-900">
-                  Payment Information
+                  {orderDetailTranslations.paymentInfo.title}
                 </h2>
               </div>
 
@@ -949,7 +1062,7 @@ export default function OrderDetailsPage() {
                     <div className="flex items-center gap-3 mb-2">
                       <CreditCard className={`w-5 h-5 ${isRejected ? 'text-rose-600' : 'text-amber-600'}`} />
                       <span className="font-medium text-slate-900">
-                        Payment Method
+                        {orderDetailTranslations.paymentInfo.paymentMethod}
                       </span>
                     </div>
                     <p className="text-lg font-semibold text-slate-900 capitalize">
@@ -971,7 +1084,7 @@ export default function OrderDetailsPage() {
                         <CheckCircle className="w-5 h-5 text-emerald-600" />
                       )}
                       <span className="font-medium text-slate-900">
-                        Payment Status
+                        {orderDetailTranslations.paymentInfo.paymentStatus}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -979,7 +1092,7 @@ export default function OrderDetailsPage() {
                         <>
                           <XCircle className="w-5 h-5 text-rose-500" />
                           <span className="text-lg font-semibold text-rose-600">
-                            Cancelled
+                            {orderDetailTranslations.status.cancelled}
                           </span>
                           <span className="text-sm text-slate-500">
                             Order rejected
@@ -989,7 +1102,7 @@ export default function OrderDetailsPage() {
                         <>
                           <Clock className="w-5 h-5 text-amber-500" />
                           <span className="text-lg font-semibold text-amber-600">
-                            Pending
+                            {orderDetailTranslations.paymentInfo.pending}
                           </span>
                           <span className="text-sm text-slate-500">
                             (Pay on delivery)
@@ -999,10 +1112,10 @@ export default function OrderDetailsPage() {
                         <>
                           <CheckCircle className="w-5 h-5 text-emerald-500" />
                           <span className="text-lg font-semibold text-emerald-600">
-                            Paid
+                            {orderDetailTranslations.paymentInfo.paid}
                           </span>
                           <span className="text-sm text-slate-500">
-                            via {order.paymentMethod}
+                            {orderDetailTranslations.paymentInfo.via} {order.paymentMethod}
                           </span>
                         </>
                       )}
@@ -1016,11 +1129,10 @@ export default function OrderDetailsPage() {
                       <Sparkles className="w-5 h-5 text-blue-600" />
                       <div>
                         <p className="font-medium text-slate-900">
-                          COD Instructions
+                          {orderDetailTranslations.paymentInfo.codInstructions}
                         </p>
                         <p className="text-sm text-slate-600 mt-1">
-                          Please keep exact change ready for ₹
-                          {order.totals?.totalPrice ?? 0}
+                          {orderDetailTranslations.paymentInfo.codNote.replace('{amount}', order.totals?.totalPrice ?? 0)}
                         </p>
                       </div>
                     </div>
@@ -1033,12 +1145,12 @@ export default function OrderDetailsPage() {
                       <AlertTriangle className="w-5 h-5 text-rose-600" />
                       <div>
                         <p className="font-medium text-rose-900">
-                          Payment Note
+                          {orderDetailTranslations.paymentInfo.paymentNote}
                         </p>
                         <p className="text-sm text-rose-700 mt-1">
                           {order.paymentMethod === "cod" 
-                            ? "No payment was required for this Cash on Delivery order."
-                            : "Any payment made will be refunded automatically."
+                            ? orderDetailTranslations.paymentInfo.codRefundNote
+                            : orderDetailTranslations.paymentInfo.regularRefundNote
                           }
                         </p>
                       </div>
@@ -1060,15 +1172,21 @@ export default function OrderDetailsPage() {
             <div className="flex items-center gap-3 mb-4">
               <Phone className="w-6 h-6" />
               <h3 className="text-lg font-semibold">
-                {isRejected ? "Issue Resolution" : "Call Support"}
+                {isRejected 
+                  ? orderDetailTranslations.customerSupport.issueResolution 
+                  : orderDetailTranslations.customerSupport.callSupport}
               </h3>
             </div>
             <p className="text-sm opacity-90 mb-2">
-              {isRejected ? "Need help with rejected order?" : "24/7 Customer Support"}
+              {isRejected 
+                ? orderDetailTranslations.customerSupport.needHelp
+                : orderDetailTranslations.customerSupport.callSupport}
             </p>
             <p className="text-xl font-bold">+91-9876543210</p>
             <p className="text-xs opacity-80 mt-2">
-              {isRejected ? "Fast issue resolution" : "Available 9 AM - 9 PM"}
+              {isRejected 
+                ? orderDetailTranslations.customerSupport.fastResolution
+                : orderDetailTranslations.customerSupport.availableHours}
             </p>
           </div>
 
@@ -1078,30 +1196,30 @@ export default function OrderDetailsPage() {
               : "bg-gradient-to-br from-emerald-600 to-emerald-700"
           }`}>
             <div className="flex items-center gap-3 mb-4">
-              {isRejected ? (
-                <Package className="w-6 h-6" />
-              ) : (
-                <Package className="w-6 h-6" />
-              )}
+              <Package className="w-6 h-6" />
               <h3 className="text-lg font-semibold">
-                {isRejected ? "Re-order Items" : "Track Order"}
+                {isRejected 
+                  ? orderDetailTranslations.customerSupport.reorderItems
+                  : orderDetailTranslations.customerSupport.trackOrder}
               </h3>
             </div>
             <p className="text-sm opacity-90 mb-2">
-              {isRejected ? "Quick re-order available" : "Live Tracking Available"}
+              {isRejected 
+                ? orderDetailTranslations.customerSupport.quickReorder
+                : orderDetailTranslations.customerSupport.liveTracking}
             </p>
             {isRejected ? (
               <Link
                 href="/products"
                 className="inline-block text-xs bg-white/20 hover:bg-white/30 px-4 py-2.5 rounded-lg mt-2 transition-colors"
               >
-                Shop Again
+                {orderDetailTranslations.customerSupport.reorderItems}
               </Link>
             ) : (
               <>
                 <p className="text-lg font-bold">Track #: TRK{order.orderId}</p>
                 <button className="text-xs bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded-lg mt-3 transition-colors">
-                  Track Package
+                  {orderDetailTranslations.customerSupport.trackPackage}
                 </button>
               </>
             )}
@@ -1110,12 +1228,16 @@ export default function OrderDetailsPage() {
           <div className="bg-gradient-to-br from-violet-600 to-violet-700 rounded-2xl p-6 text-white">
             <div className="flex items-center gap-3 mb-4">
               <CheckCircle className="w-6 h-6" />
-              <h3 className="text-lg font-semibold">Need Help?</h3>
+              <h3 className="text-lg font-semibold">
+                {orderDetailTranslations.customerSupport.needHelp}
+              </h3>
             </div>
-            <p className="text-sm opacity-90 mb-3">Email us for assistance</p>
+            <p className="text-sm opacity-90 mb-3">
+              {orderDetailTranslations.customerSupport.emailSupport}
+            </p>
             <p className="text-sm font-medium mb-2">support@edpharma.com</p>
             <button className="text-xs bg-white/20 hover:bg-white/30 px-3 py-1.5 rounded-lg transition-colors">
-              Contact Support
+              {orderDetailTranslations.customerSupport.contactSupport}
             </button>
           </div>
         </div>
@@ -1123,12 +1245,12 @@ export default function OrderDetailsPage() {
         {/* Footer Note */}
         <div className="mt-10 text-center">
           <p className="text-sm text-slate-500">
-            Need help with your order?{" "}
+            {orderDetailTranslations.footerNote.needHelp}{" "}
             <Link
               href="/contact"
               className="text-[#0A4C89] font-medium hover:underline"
             >
-              Contact our support team
+              {orderDetailTranslations.footerNote.contactSupport}
             </Link>
           </p>
         </div>

@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation"; // ADD THIS IMPORT
+import { useRouter } from "next/navigation";
 import { useCart } from "../components/CartContext";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { getLoggedInUser } from "@/lib/auth";
+import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
 
 import {
   MapPin,
@@ -19,37 +20,8 @@ import {
   Save,
   Clock,
   X,
+  ShoppingCart,
 } from "lucide-react";
-
-const validateForm = (form, cartItems, payment) => {
-  if (cartItems.length === 0) return "Your cart is empty";
-
-  if (!form.fullName || form.fullName.length < 3)
-    return "Please enter a valid full name";
-
-  if (!/^[A-Za-z ]+$/.test(form.fullName.trim()))
-    return "Full name must contain only alphabets";
-
-  if (!form.email || !/^\S+@\S+\.\S+$/.test(form.email))
-    return "Please enter a valid email address";
-
-  if (!form.phone || !/^\d{10}$/.test(form.phone))
-    return "Phone number must be 10 digits";
-
-  if (!form.address || form.address.length < 10)
-    return "Please enter full delivery address";
-
-  if (!form.city) return "City is required";
-
-  if (!form.pincode || !/^\d{6}$/.test(form.pincode))
-    return "Pincode must be 6 digits";
-
-  if (!form.country) return "Country is required";
-
-  if (!payment) return "Please select a payment method";
-
-  return null;
-};
 
 // Function to get user-specific address key
 const getUserAddressKey = (userId) => {
@@ -116,9 +88,10 @@ const deleteUserAddress = (userId, index) => {
 };
 
 export default function CheckoutClient() {
-  const router = useRouter(); // ADD THIS
+  const router = useRouter();
   const { cartItems, totals, clearCart } = useCart();
-
+  const { t, language } = useLanguage(); // ADD LANGUAGE CONTEXT
+  
   const [payment, setPayment] = useState("cod");
   const [savedAddresses, setSavedAddresses] = useState([]);
   const [showAddressList, setShowAddressList] = useState(false);
@@ -135,6 +108,124 @@ export default function CheckoutClient() {
     country: "India",
   });
 
+  // Get translations from context, fallback to English
+  const checkoutTranslations = t?.checkoutPage || {
+    header: {
+      title: "Secure Checkout",
+      subtitle: "Fast • Safe • Confidential",
+      steps: ["Cart", "Address", "Payment", "Confirm"]
+    },
+    emptyState: {
+      title: "Your cart is empty",
+      description: "Add products to continue checkout.",
+      browseButton: "Browse products"
+    },
+    deliveryAddress: {
+      title: "Delivery Address",
+      savedAddresses: "Your Saved Addresses",
+      show: "Show",
+      hide: "Hide",
+      useAddress: "Use",
+      saveAddress: "Save Address",
+      note: "Addresses are saved only for your account and won't be visible to other users.",
+      saveForFuture: "Save this address for future orders"
+    },
+    form: {
+      placeholders: {
+        fullName: "Full Name",
+        phone: "Phone Number",
+        email: "Email Address",
+        address: "Full Address",
+        city: "City",
+        pincode: "Pincode",
+        country: "Country"
+      }
+    },
+    payment: {
+      title: "Payment Method",
+      cod: {
+        title: "Cash on Delivery",
+        subtitle: "Pay when you receive"
+      },
+      upi: {
+        title: "UPI",
+        subtitle: "GPay • PhonePe • Paytm"
+      },
+      card: {
+        title: "Credit / Debit Card",
+        subtitle: "Visa • Mastercard"
+      },
+      wallet: {
+        title: "Wallets",
+        subtitle: "Paytm • Amazon Pay"
+      },
+      secure: "All payments are encrypted & secure"
+    },
+    orderSummary: {
+      title: "Order Summary",
+      secure: "Secure & Private",
+      items: "Items",
+      totalUnits: "Total Units",
+      totalBatches: "Total Batches",
+      totalAmount: "Total amount",
+      placeOrder: "Place Secure Order",
+      processing: "Processing...",
+      trustedBy: "Trusted by healthcare professionals • Discreet packaging",
+      continueShopping: "Continue shopping"
+    },
+    validation: {
+      emptyCart: "Your cart is empty",
+      fullName: {
+        required: "Please enter a valid full name",
+        invalid: "Full name must contain only alphabets"
+      },
+      email: "Please enter a valid email address",
+      phone: "Phone number must be 10 digits",
+      address: "Please enter full delivery address",
+      city: "City is required",
+      pincode: "Pincode must be 6 digits",
+      country: "Country is required",
+      payment: "Please select a payment method"
+    },
+    messages: {
+      loginRequired: "Please login to continue checkout",
+      saveSuccess: "Address saved successfully!",
+      sessionExpired: "Session expired. Please login again.",
+      orderFailed: "Order failed",
+      networkError: "Network error. Please try again."
+    }
+  };
+
+  const validateForm = (form, cartItems, payment) => {
+    if (cartItems.length === 0) return checkoutTranslations.validation.emptyCart;
+
+    if (!form.fullName || form.fullName.length < 3)
+      return checkoutTranslations.validation.fullName.required;
+
+    if (!/^[A-Za-z ]+$/.test(form.fullName.trim()))
+      return checkoutTranslations.validation.fullName.invalid;
+
+    if (!form.email || !/^\S+@\S+\.\S+$/.test(form.email))
+      return checkoutTranslations.validation.email;
+
+    if (!form.phone || !/^\d{10}$/.test(form.phone))
+      return checkoutTranslations.validation.phone;
+
+    if (!form.address || form.address.length < 10)
+      return checkoutTranslations.validation.address;
+
+    if (!form.city) return checkoutTranslations.validation.city;
+
+    if (!form.pincode || !/^\d{6}$/.test(form.pincode))
+      return checkoutTranslations.validation.pincode;
+
+    if (!form.country) return checkoutTranslations.validation.country;
+
+    if (!payment) return checkoutTranslations.validation.payment;
+
+    return null;
+  };
+
   // Check authentication and load user-specific addresses
   useEffect(() => {
     const loadUserAndAddresses = async () => {
@@ -147,8 +238,8 @@ export default function CheckoutClient() {
         if (!user || !user._id) {
           // User is not logged in - show alert and redirect
           setTimeout(() => {
-            alert("Please login to continue checkout");
-            router.push("/"); // FIXED: Use router
+            alert(checkoutTranslations.messages.loginRequired);
+            router.push("/");
           }, 100);
           return;
         }
@@ -173,7 +264,7 @@ export default function CheckoutClient() {
     };
 
     loadUserAndAddresses();
-  }, [router]); // ADD router to dependencies
+  }, [router, checkoutTranslations.messages.loginRequired]);
 
   const isDisabled =
     validateForm(form, cartItems, payment) !== null ||
@@ -238,7 +329,7 @@ export default function CheckoutClient() {
   // Function to save current address
   const handleSaveAddress = () => {
     if (!currentUser?._id) {
-      alert("Please login to save addresses");
+      alert(checkoutTranslations.messages.loginRequired);
       return;
     }
 
@@ -249,7 +340,7 @@ export default function CheckoutClient() {
     setSavedAddresses(updatedAddresses);
 
     // Show success message
-    alert("Address saved successfully!");
+    alert(checkoutTranslations.messages.saveSuccess);
   };
 
   const placeOrder = async () => {
@@ -257,8 +348,8 @@ export default function CheckoutClient() {
       // Check authentication again before placing order
       const user = getLoggedInUser();
       if (!user || !user._id) {
-        alert("Please login to continue checkout");
-        router.push("/"); // FIXED: Use router
+        alert(checkoutTranslations.messages.loginRequired);
+        router.push("/");
         return;
       }
 
@@ -290,8 +381,8 @@ export default function CheckoutClient() {
       console.log("Response status:", res.status);
       
       if (res.status === 401) {
-        alert("Session expired. Please login again.");
-        router.push("/login"); // FIXED: Use router
+        alert(checkoutTranslations.messages.sessionExpired);
+        router.push("/login");
         setIsLoading(false);
         return;
       }
@@ -300,7 +391,7 @@ export default function CheckoutClient() {
       console.log("Response data:", data);
 
       if (!res.ok || !data.ok) {
-        alert(data.message || "Order failed");
+        alert(data.message || checkoutTranslations.messages.orderFailed);
         setIsLoading(false);
         return;
       }
@@ -315,49 +406,35 @@ export default function CheckoutClient() {
       console.log("Redirecting to order-success with ID:", data.orderId);
       clearCart();
       
-      // FIXED: Use router.push for Next.js navigation
       router.push(`/order-success/${data.orderId}`);
       
     } catch (error) {
       console.error("Order placement error:", error);
-      alert("Network error. Please try again.");
+      alert(checkoutTranslations.messages.networkError);
       setIsLoading(false);
     }
   };
 
   if (cartItems.length === 0) {
     return (
-      <div className="min-h-[60vh] flex items-center justify-center px-4 ">
-        <div className="max-w-md w-full bg-white/80 backdrop-blur-md border border-slate-100 rounded-2xl shadow-sm px-6 py-10  text-center">
+      <div className="min-h-[60vh] flex items-center justify-center px-4">
+        <div className="max-w-md w-full bg-white/80 backdrop-blur-md border border-slate-100 rounded-2xl shadow-sm px-6 py-10 text-center">
           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#0A4C89]/10 text-[#0A4C89]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-7"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <circle cx="9" cy="21" r="1" />
-              <circle cx="20" cy="21" r="1" />
-              <path d="M1 1h4l2.4 12.3a1 1 0 0 0 1 .8h9.7a1 1 0 0 0 1-.7L21 6H6" />
-            </svg>
+            <ShoppingCart size={28} />
           </div>
 
           <h1 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-            Your cart is empty
+            {checkoutTranslations.emptyState.title}
           </h1>
           <p className="text-sm md:text-base text-gray-500 mb-6">
-            Add products to continue checkout.
+            {checkoutTranslations.emptyState.description}
           </p>
 
           <Link
             href="/products"
             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#0A4C89] to-[#0D5FA8] text-white text-sm font-semibold shadow-md hover:shadow-lg hover:translate-y-0.5 transition-transform"
           >
-            Browse products
+            {checkoutTranslations.emptyState.browseButton}
             <span aria-hidden>→</span>
           </Link>
         </div>
@@ -368,46 +445,48 @@ export default function CheckoutClient() {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen bg-gradient-to-br from-[#f5f9ff] via-[#edf3ff] to-[#e6eeff] ">
+      <div className="min-h-screen bg-gradient-to-br from-[#f5f9ff] via-[#edf3ff] to-[#e6eeff]">
         <div className="max-w-7xl mx-auto px-4 py-10 lg:py-14">
           {/* HEADER */}
           <div className="mb-8 lg:mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h1 className="text-3xl sm:text-4xl font-bold text-[#0A4C89] tracking-tight">
-                Secure Checkout
+                {checkoutTranslations.header.title}
               </h1>
               <p className="text-gray-600 text-sm sm:text-base">
-                Fast • Safe • Confidential
+                {checkoutTranslations.header.subtitle}
               </p>
             </div>
 
             {/* STEPS */}
             <div className="flex gap-2 sm:gap-3 mt-2 sm:mt-0 flex-wrap text-[11px] sm:text-xs justify-start sm:justify-end">
-              <Step done label="Cart" />
-              <Step active label="Address" />
-              <Step label="Payment" />
-              <Step label="Confirm" />
+              <Step done label={checkoutTranslations.header.steps[0]} />
+              <Step active label={checkoutTranslations.header.steps[1]} />
+              <Step label={checkoutTranslations.header.steps[2]} />
+              <Step label={checkoutTranslations.header.steps[3]} />
             </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] gap-6 lg:gap-8 items-start">
             {/* LEFT SIDE */}
             <div className="space-y-6">
-              <Card title="Delivery Address" icon={<MapPin size={18} />}>
+              <Card title={checkoutTranslations.deliveryAddress.title} icon={<MapPin size={18} />}>
                 {currentUser && savedAddresses.length > 0 && (
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-sm font-semibold text-gray-700 flex items-center gap-2">
                         <Clock size={16} />
-                        Your Saved Addresses
+                        {checkoutTranslations.deliveryAddress.savedAddresses}
                       </h3>
                       <button
                         type="button"
                         onClick={() => setShowAddressList(!showAddressList)}
                         className="text-xs text-[#0A4C89] hover:text-[#0D5FA8] font-medium"
                       >
-                        {showAddressList ? "Hide" : "Show"} (
-                        {savedAddresses.length})
+                        {showAddressList ? 
+                          checkoutTranslations.deliveryAddress.hide : 
+                          checkoutTranslations.deliveryAddress.show
+                        } ({savedAddresses.length})
                       </button>
                     </div>
 
@@ -445,7 +524,7 @@ export default function CheckoutClient() {
                                 onClick={() => loadSavedAddress(address)}
                                 className="text-xs px-2 py-1 bg-[#0A4C89] text-white rounded hover:bg-[#0D5FA8]"
                               >
-                                Use
+                                {checkoutTranslations.deliveryAddress.useAddress}
                               </button>
                               <button
                                 type="button"
@@ -465,7 +544,7 @@ export default function CheckoutClient() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <Input
                     icon={<User size={16} />}
-                    placeholder="Full Name"
+                    placeholder={checkoutTranslations.form.placeholders.fullName}
                     value={form.fullName}
                     onChange={onNameChange}
                     autoComplete="name"
@@ -474,7 +553,7 @@ export default function CheckoutClient() {
 
                   <Input
                     icon={<Phone size={16} />}
-                    placeholder="Phone Number"
+                    placeholder={checkoutTranslations.form.placeholders.phone}
                     value={form.phone}
                     onChange={onPhoneChange}
                     inputMode="numeric"
@@ -485,7 +564,7 @@ export default function CheckoutClient() {
                   <Input
                     icon={<User size={16} />}
                     type="email"
-                    placeholder="Email Address"
+                    placeholder={checkoutTranslations.form.placeholders.email}
                     value={form.email}
                     onChange={onEmailChange}
                     autoComplete="email"
@@ -494,12 +573,12 @@ export default function CheckoutClient() {
 
                   <Input
                     className="sm:col-span-2"
-                    placeholder="Full Address"
+                    placeholder={checkoutTranslations.form.placeholders.address}
                     value={form.address}
                     onChange={onChange("address")}
                   />
                   <Input
-                    placeholder="City"
+                    placeholder={checkoutTranslations.form.placeholders.city}
                     value={form.city}
                     onChange={onCityChange}
                     inputMode="text"
@@ -507,7 +586,7 @@ export default function CheckoutClient() {
                   />
 
                   <Input
-                    placeholder="Pincode"
+                    placeholder={checkoutTranslations.form.placeholders.pincode}
                     value={form.pincode}
                     onChange={onPincodeChange}
                     inputMode="numeric"
@@ -516,7 +595,7 @@ export default function CheckoutClient() {
                   />
 
                   <Input
-                    placeholder="Country"
+                    placeholder={checkoutTranslations.form.placeholders.country}
                     value={form.country}
                     onChange={onChange("country")}
                     autoComplete="country-name"
@@ -527,7 +606,7 @@ export default function CheckoutClient() {
                   <div className="flex items-center gap-2">
                     <Save size={16} className="text-[#0A4C89]" />
                     <span className="text-xs text-gray-600">
-                      Save this address for future orders
+                      {checkoutTranslations.deliveryAddress.saveForFuture}
                     </span>
                   </div>
                   <button
@@ -540,49 +619,48 @@ export default function CheckoutClient() {
                         : "bg-gray-100 text-gray-400 cursor-not-allowed"
                     }`}
                   >
-                    Save Address
+                    {checkoutTranslations.deliveryAddress.saveAddress}
                   </button>
                 </div>
 
                 {currentUser && (
                   <div className="mt-2 text-xs text-gray-500">
-                    <span className="font-medium">Note:</span> Addresses are
-                    saved only for your account and {`won't`} be visible to other
-                    users.
+                    <span className="font-medium">Note:</span>{" "}
+                    {checkoutTranslations.deliveryAddress.note}
                   </div>
                 )}
               </Card>
 
-              {/* PAYMENT CARD (unchanged) */}
-              <Card title="Payment Method" icon={<CreditCard size={18} />}>
+              {/* PAYMENT CARD */}
+              <Card title={checkoutTranslations.payment.title} icon={<CreditCard size={18} />}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <PayOption
                     active={payment === "cod"}
                     onClick={() => setPayment("cod")}
                     icon={<IndianRupee />}
-                    title="Cash on Delivery"
-                    subtitle="Pay when you receive"
+                    title={checkoutTranslations.payment.cod.title}
+                    subtitle={checkoutTranslations.payment.cod.subtitle}
                   />
                   <PayOption
                     active={payment === "upi"}
                     onClick={() => setPayment("upi")}
                     icon={<Wallet />}
-                    title="UPI"
-                    subtitle="GPay • PhonePe • Paytm"
+                    title={checkoutTranslations.payment.upi.title}
+                    subtitle={checkoutTranslations.payment.upi.subtitle}
                   />
                   <PayOption
                     active={payment === "card"}
                     onClick={() => setPayment("card")}
                     icon={<CreditCard />}
-                    title="Credit / Debit Card"
-                    subtitle="Visa • Mastercard"
+                    title={checkoutTranslations.payment.card.title}
+                    subtitle={checkoutTranslations.payment.card.subtitle}
                   />
                   <PayOption
                     active={payment === "wallet"}
                     onClick={() => setPayment("wallet")}
                     icon={<Wallet />}
-                    title="Wallets"
-                    subtitle="Paytm • Amazon Pay"
+                    title={checkoutTranslations.payment.wallet.title}
+                    subtitle={checkoutTranslations.payment.wallet.subtitle}
                   />
                 </div>
 
@@ -590,12 +668,12 @@ export default function CheckoutClient() {
                   <span className="inline-flex h-4 w-4 rounded-full bg-emerald-100 text-emerald-600 items-center justify-center text-[10px]">
                     🔒
                   </span>
-                  All payments are encrypted & secure
+                  {checkoutTranslations.payment.secure}
                 </p>
               </Card>
             </div>
 
-            {/* RIGHT SIDE - ORDER SUMMARY (unchanged) */}
+            {/* RIGHT SIDE - ORDER SUMMARY */}
             <div className="lg:sticky lg:top-24">
               <div
                 className={[
@@ -612,11 +690,11 @@ export default function CheckoutClient() {
                       <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#0A4C89]/10 text-[#0A4C89]">
                         <Package size={18} />
                       </span>
-                      <span>Order Summary</span>
+                      <span>{checkoutTranslations.orderSummary.title}</span>
                     </h2>
                     <span className="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-medium text-emerald-700">
                       <CheckCircle size={14} className="mr-1" />
-                      Secure & Private
+                      {checkoutTranslations.orderSummary.secure}
                     </span>
                   </div>
 
@@ -630,7 +708,6 @@ export default function CheckoutClient() {
                           <p className="font-semibold text-slate-800 truncate">
                             {i.name}
                           </p>
-                          {/* UPDATE THIS LINE: Show bulk quantity */}
                           <p className="mt-0.5 text-xs text-gray-500">
                             Qty: {i.qty} units ({Math.ceil(i.qty / 50)} batch
                             {Math.ceil(i.qty / 50) > 1 ? "es" : ""})
@@ -644,15 +721,14 @@ export default function CheckoutClient() {
                   </div>
 
                   <div className="mt-5 border-t border-slate-100 pt-4 space-y-2 text-sm">
-                    <Row label="Items" value={totals.totalDistinct} />
-                    {/* ADD THESE TWO LINES: */}
-                    <Row label="Total Units" value={totals.totalQty} />
+                    <Row label={checkoutTranslations.orderSummary.items} value={totals.totalDistinct} />
+                    <Row label={checkoutTranslations.orderSummary.totalUnits} value={totals.totalQty} />
                     <Row
-                      label="Total Batches"
+                      label={checkoutTranslations.orderSummary.totalBatches}
                       value={`${totals.totalBulkUnits}`}
                     />
                     <Row
-                      label="Total amount"
+                      label={checkoutTranslations.orderSummary.totalAmount}
                       value={`₹${totals.totalPrice}`}
                       bold
                     />
@@ -668,18 +744,21 @@ export default function CheckoutClient() {
                         : "bg-gradient-to-r from-[#0A4C89] via-[#0D5FA8] to-[#1B78D1] text-white shadow-lg shadow-[#0A4C89]/30 hover:shadow-xl hover:translate-y-0.5",
                     ].join(" ")}
                   >
-                    {isLoading ? "Processing..." : "Place Secure Order"}
+                    {isLoading ? 
+                      checkoutTranslations.orderSummary.processing : 
+                      checkoutTranslations.orderSummary.placeOrder
+                    }
                   </button>
 
                   <p className="mt-3 text-[11px] text-center text-gray-500">
-                    Trusted by healthcare professionals • Discreet packaging
+                    {checkoutTranslations.orderSummary.trustedBy}
                   </p>
 
                   <Link
                     href="/products"
                     className="mt-4 block text-center text-xs sm:text-sm font-medium text-[#0A4C89] hover:text-[#0D5FA8] underline-offset-4 hover:underline"
                   >
-                    Continue shopping
+                    {checkoutTranslations.orderSummary.continueShopping}
                   </Link>
                 </div>
               </div>
@@ -704,7 +783,7 @@ export default function CheckoutClient() {
   );
 }
 
-// UI Components (keep these the same)
+// UI Components
 function Step({ label, active, done }) {
   return (
     <div

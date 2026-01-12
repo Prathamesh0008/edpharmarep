@@ -264,6 +264,388 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "Το καλάθι σας",
+    subtitle: "Ελέγξτε τα προϊόντα πριν την ολοκλήρωση",
+    b2bBadge: "B2B Χονδρική",
+    batches: "παρτίδες",
+    batch: "παρτίδα",
+    totalUnits: "συνολικές μονάδες"
+  },
+  emptyState: {
+    title: "Το καλάθι σας είναι άδειο",
+    description: "Προσθέστε προϊόντα για να συνεχίσετε τις αγορές",
+    browseButton: "Περιηγηθείτε στα προϊόντα"
+  },
+  items: {
+    unitPrice: "/ μονάδα",
+    remove: "Αφαίρεση",
+    removing: "Αφαιρείται...",
+    bulkUnits: "Χονδρικόι μονάδες:",
+    swipeTip: "Συμβουλή: Σύρετε αριστερά τα προϊόντα για αφαίρεση"
+  },
+  summary: {
+    title: "Περίληψη Παραγγελίας",
+    items: "προϊόν",
+    itemsPlural: "προϊόντα",
+    bulkOrder: "Χονδρικόι Παραγγελία",
+    unitsPerBatch: "μονάδες/παρτίδα",
+    totalUnits: "Συνολικές Μονάδες",
+    totalBatches: "Συνολικές Παρτίδες",
+    subtotal: "Μερικό Σύνολο",
+    shipping: "Αποστολή",
+    shippingCalc: "Θα υπολογιστεί κατά την ολοκλήρωση",
+    total: "Σύνολο",
+    loginRequired: "Απαιτείται σύνδεση",
+    loginPrompt: "Παρακαλώ συνδεθείτε για να συνεχίσετε την ολοκλήρωση",
+    loginLink: "Κάντε κλικ εδώ για σύνδεση",
+    checkoutButton: "Ολοκλήρωση παραγγελίας",
+    loginCheckoutButton: "Συνδεθείτε για ολοκλήρωση",
+    continueShopping: "Συνέχεια αγορών",
+    checkingAuth: "Έλεγχος ταυτότητας..."
+  },
+  buttons: {
+    increase: "Αύξηση ποσότητας κατά χονδρικόι μονάδες",
+    decrease: "Μείωση ποσότητας κατά χονδρικόι μονάδες"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Ασφαλής Ολοκλήρωση",
+    subtitle: "Γρήγορη • Ασφαλής • Εμπιστευτική",
+    steps: ["Καλάθι", "Διεύθυνση", "Πληρωμή", "Επιβεβαίωση"]
+  },
+  emptyState: {
+    title: "Το καλάθι σας είναι άδειο",
+    description: "Προσθέστε προϊόντα για να συνεχίσετε την ολοκλήρωση.",
+    browseButton: "Περιηγηθείτε στα προϊόντα"
+  },
+  deliveryAddress: {
+    title: "Διεύθυνση Παράδοσης",
+    savedAddresses: "Οι Αποθηκευμένες Διευθύνσεις Σας",
+    show: "Εμφάνιση",
+    hide: "Απόκρυψη",
+    useAddress: "Χρήση",
+    saveAddress: "Αποθήκευση Διεύθυνσης",
+    note: "Οι διευθύνσεις αποθηκεύονται μόνο για το λογαριασμό σας και δεν θα είναι ορατές σε άλλους χρήστες.",
+    saveForFuture: "Αποθήκευση αυτής της διεύθυνσης για μελλοντικές παραγγελίες"
+  },
+  form: {
+    placeholders: {
+      fullName: "Πλήρες Όνομα",
+      phone: "Αριθμός Τηλεφώνου",
+      email: "Διεύθυνση Email",
+      address: "Πλήρης Διεύθυνση",
+      city: "Πόλη",
+      pincode: "Ταχυδρομικός Κώδικας",
+      country: "Χώρα"
+    }
+  },
+  payment: {
+    title: "Μέθοδος Πληρωμής",
+    cod: {
+      title: "Αντικαταβολή",
+      subtitle: "Πληρωμή κατά την παράδοση"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Πιστωτική / Χρεωστική Κάρτα",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Ψηφιακά Πορτοφόλια",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Όλες οι πληρωμές είναι κρυπτογραφημένες και ασφαλείς"
+  },
+  orderSummary: {
+    title: "Περίληψη Παραγγελίας",
+    secure: "Ασφαλής και Ιδιωτική",
+    items: "Προϊόντα",
+    totalUnits: "Συνολικές Μονάδες",
+    totalBatches: "Συνολικές Παρτίδες",
+    totalAmount: "Συνολικό ποσό",
+    placeOrder: "Κάντε Ασφαλή Παραγγελία",
+    processing: "Επεξεργασία...",
+    trustedBy: "Εμπιστευόμενο από επαγγελματίες υγείας • Διακριτική συσκευασία",
+    continueShopping: "Συνέχεια αγορών"
+  },
+  validation: {
+    emptyCart: "Το καλάθι σας είναι άδειο",
+    fullName: {
+      required: "Παρακαλώ εισάγετε έγκυρο πλήρες όνομα",
+      invalid: "Το πλήρες όνομα πρέπει να περιέχει μόνο γράμματα"
+    },
+    email: "Παρακαλώ εισάγετε έγκυρη διεύθυνση email",
+    phone: "Ο αριθμός τηλεφώνου πρέπει να είναι 10 ψηφία",
+    address: "Παρακαλώ εισάγετε πλήρη διεύθυνση παράδοσης",
+    city: "Η πόλη απαιτείται",
+    pincode: "Ο ταχυδρομικός κώδικας πρέπει να είναι 6 ψηφία",
+    country: "Η χώρα απαιτείται",
+    payment: "Παρακαλώ επιλέξτε μέθοδο πληρωμής"
+  },
+  messages: {
+    loginRequired: "Παρακαλώ συνδεθείτε για να συνεχίσετε την ολοκλήρωση",
+    saveSuccess: "Η διεύθυνση αποθηκεύτηκε επιτυχώς!",
+    sessionExpired: "Η συνεδρία έληξε. Παρακαλώ συνδεθείτε ξανά.",
+    orderFailed: "Η παραγγελία απέτυχε",
+    networkError: "Σφάλμα δικτύου. Παρακαλώ δοκιμάστε ξανά."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Η Παραγγελία Επιβεβαιώθηκε!",
+    subtitle: "Σας ευχαριστούμε για την αγορά σας. Λάβαμε την παραγγελία σας #{orderId} και βρίσκεται σε επεξεργασία.",
+    paymentStatus: "Η πληρωμή επιβεβαιώθηκε • Αποστέλλεται email • Επεξεργασία παραγγελίας"
+  },
+  errorState: {
+    title: "Σφάλμα Παραγγελίας",
+    viewOrders: "Προβολή Παραγγελιών Μου",
+    returnHome: "Επιστροφή στην Αρχική"
+  },
+  loadingState: {
+    title: "Φόρτωση Παραγγελίας Σας...",
+    subtitle: "Προετοιμασία επιβεβαίωσης παραγγελίας"
+  },
+  orderSummary: {
+    title: "Περίληψη Παραγγελίας",
+    orderNumber: "Αριθμός Παραγγελίας",
+    orderDate: "Ημερομηνία Παραγγελίας",
+    paymentMethod: "Τρόπος Πληρωμής",
+    cashOnDelivery: "Αντικαταβολή",
+    delivery: "Παράδοση",
+    standardDelivery: "Τυπική (2-3 ημέρες)"
+  },
+  orderStatus: {
+    title: "Κατάσταση Παραγγελίας",
+    steps: {
+      placed: {
+        title: "Η Παραγγελία Τοποθετήθηκε",
+        description: "Η παραγγελία σας ελήφθη",
+        time: "Μόλις τώρα"
+      },
+      processing: {
+        title: "Επεξεργασία",
+        description: "Ετοιμάζουμε τα προϊόντα σας",
+        time: "Σήμερα"
+      },
+      shipping: {
+        title: "Αποστολή",
+        description: "Εκτιμώμενη παράδοση σε 2-3 ημέρες",
+        time: "Αύριο"
+      },
+      delivered: {
+        title: "Παραδόθηκε",
+        description: "Θα φτάσει στην πόρτα σας",
+        time: "2-3 ημέρες"
+      }
+    },
+    statuses: {
+      complete: "Ολοκληρωμένη",
+      inProgress: "Σε Εξέλιξη"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Προβολή Λεπτομερειών Παραγγελίας",
+    continueShopping: "Συνέχεια Αγορών",
+    downloadReceipt: "Λήψη Αποδείξεως",
+    emailReceipt: "Αποστολή Αποδείξεως με Email"
+  },
+  supportCard: {
+    title: "Χρειάζεστε Βοήθεια;",
+    description: "Η ομάδα υποστήριξής μας είναι εδώ για να σας βοηθήσει με οποιεσδήποτε ερωτήσεις σχετικά με την παραγγελία σας.",
+    contactSupport: "Επικοινωνία με Υποστήριξη"
+  },
+  quickActions: {
+    title: "Γρήγορες Ενέργειες",
+    viewAllOrders: "Προβολή Όλων των Παραγγελιών",
+    accountSettings: "Ρυθμίσεις Λογαριασμού"
+  },
+  deliveryInfo: {
+    title: "Ενημερώσεις Παράδοσης",
+    subtitle: "Θα σας ενημερώνουμε",
+    estimatedDelivery: "Εκτιμώμενη Παράδοση",
+    trackingNumber: "Αριθμός Παρακολούθησης",
+    willBeProvided: "Θα παρέχεται"
+  },
+  footer: {
+    confirmed: "✓ Επιβεβαιωμένη",
+    confirmationMessage: "Ένα email επιβεβαίωσης έχει σταλεί στη μητρώου ηλεκτρονική διεύθυνσή σας. Μπορείτε να παρακολουθείτε την κατάσταση της παραγγελίας σας ανά πάσα στιγμή από την ενότητα Παραγγελίες Μου.",
+    links: {
+      helpCenter: "Κέντρο Βοήθειας",
+      shippingPolicy: "Πολιτική Αποστολών",
+      returnsRefunds: "Επιστροφές & Επιστροφές Χρημάτων",
+      contactUs: "Επικοινωνήστε Μαζί Μας"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Η απόδειξη κατέβηκε με επιτυχία!",
+    emailSubject: "Η Επιβεβαίωση Παραγγελίας Σας - {orderId}"
+  }
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Πίσω στις Παραγγελίες",
+    orderNumber: "Παραγγελία #{id}",
+    printInvoice: "Εκτύπωση Τιμολογίου",
+    downloadPDF: "Λήψη PDF",
+    shareOrder: "Κοινοποίηση Παραγγελίας"
+  },
+  orderHeader: {
+    orderId: "Αριθμός Παραγγελίας",
+    orderDate: "Ημερομηνία Παραγγελίας",
+    items: "Προϊόντα",
+    totalItems: "{count} {items}",
+    item: "προϊόν",
+    itemsPlural: "προϊόντα"
+  },
+  status: {
+    pending: "Εκκρεμεί",
+    processing: "Σε Επεξεργασία",
+    shipped: "Αποστάλθηκε",
+    delivered: "Παραδόθηκε",
+    rejected: "Απορρίφθηκε",
+    cancelled: "Ακυρώθηκε",
+    completed: "Ολοκληρώθηκε"
+  },
+  orderProgress: {
+    title: "Πρόοδος Παραγγελίας",
+    steps: ["Παραγγέλθηκε", "Σε Επεξεργασία", "Αποστάλθηκε", "Παραδόθηκε"],
+    current: "Τρέχων",
+    estimatedDelivery: "Εκτιμώμενη Παράδοση",
+    delivered: "Παραδόθηκε",
+    deliveredOn: "Παραδόθηκε στις",
+    expectedBy: "Αναμένεται μέχρι"
+  },
+  rejectedState: {
+    title: "Η Παραγγελία Απορρίφθηκε",
+    cancelled: "Ακυρώθηκε",
+    orderStopped: "Η Παραγγελία Διακόπηκε",
+    cannotProcess: "Η Παραγγελία Δεν Μπορεί Να Επεξεργαστεί",
+    codNote: "Δεν απαιτήθηκε πληρωμή καθώς ήταν παραγγελία με Αντικαταβολή.",
+    paymentNote: "Εάν έγινε οποιαδήποτε πληρωμή, θα επιστραφεί εντός 5-7 εργάσιμων ημερών.",
+    contactSupport: "Επικοινωνία με Υποστήριξη",
+    shopAgain: "Αγοράστε Ξανά"
+  },
+  orderItems: {
+    title: "Προϊόντα Παραγγελίας",
+    totalItems: "σύνολο προϊόντων",
+    quantity: "Ποσότητα:",
+    priceEach: "το καθένα",
+    subtotal: "Μερικό Σύνολο",
+    shipping: "Αποστολή",
+    shippingFree: "ΔΩΡΕΑΝ",
+    tax: "Φόρος",
+    total: "Σύνολο",
+    inclusiveTax: "Συμπεριλαμβανομένων όλων των φόρων",
+    distinctItems: "διαφορετικά προϊόντα"
+  },
+  deliveryAddress: {
+    title: "Διεύθυνση Παράδοσης",
+    billingAddress: "Διεύθυνση Χρέωσης",
+    recipient: "Παραλήπτης",
+    primaryContact: "Κύρια επικοινωνία"
+  },
+  paymentInfo: {
+    title: "Πληροφορίες Πληρωμής",
+    paymentMethod: "Τρόπος Πληρωμής",
+    paymentStatus: "Κατάσταση Πληρωμής",
+    pending: "Εκκρεμεί",
+    paid: "Πληρώθηκε",
+    via: "μέσω",
+    codInstructions: "Οδηγίες Αντικαταβολής",
+    codNote: "Παρακαλώ διατηρήστε ακριβές ρέστα έτοιμα για ₹{amount}",
+    paymentNote: "Σημείωση Πληρωμής",
+    codRefundNote: "Δεν απαιτήθηκε πληρωμή για αυτήν την παραγγελία με Αντικαταβολή.",
+    regularRefundNote: "Οποιαδήποτε πληρωμή που έγινε θα επιστραφεί αυτόματα."
+  },
+  customerSupport: {
+    callSupport: "Καλέστε Υποστήριξη",
+    issueResolution: "Επίλυση Προβλημάτων",
+    needHelp: "Χρειάζεστε βοήθεια με απόρριψη παραγγελίας;",
+    fastResolution: "Γρήγορη επίλυση προβλημάτων",
+    availableHours: "Διαθέσιμο 9:00 - 21:00",
+    trackOrder: "Παρακολούθηση Παραγγελίας",
+    reorderItems: "Επαναπαραγγελία Προϊόντων",
+    liveTracking: "Ζωντανή Παρακολούθηση Διαθέσιμη",
+    quickReorder: "Γρήγορη επαναπαραγγελία διαθέσιμη",
+    trackPackage: "Παρακολούθηση Πακέτου",
+    emailSupport: "Στείλτε μας email για βοήθεια",
+    contactSupport: "Επικοινωνία με Υποστήριξη"
+  },
+  footerNote: {
+    needHelp: "Χρειάζεστε βοήθεια με την παραγγελία σας;",
+    contactSupport: "Επικοινωνήστε με την ομάδα υποστήριξής μας"
+  },
+  errorState: {
+    oops: "Ωχ!",
+    orderNotFound: "Η Παραγγελία Δεν Βρέθηκε",
+    notExist: "Η παραγγελία που αναζητάτε δεν υπάρχει ή δεν έχετε άδεια να την προβάλετε."
+  },
+  actions: {
+    contactSupport: "Επικοινωνία με Υποστήριξη",
+    shopAgain: "Αγοράστε Ξανά"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Οι Παραγγελίες Μου",
+    subtitle: "Παρακολουθήστε τις πρόσφατες αγορές σας και την κατάσταση παραγγελίας"
+  },
+  search: {
+    placeholder: "Αναζήτηση παραγγελιών, ονόματος, τηλεφώνου...",
+    filterAll: "Όλες",
+    filterPending: "Εκκρεμεί",
+    filterProcessing: "Σε Επεξεργασία",
+    filterShipped: "Αποστάλθηκε",
+    filterRejected: "Απορρίφθηκε"
+  },
+  statuses: {
+    pending: "Εκκρεμεί",
+    processing: "Σε Επεξεργασία",
+    shipped: "Αποστάλθηκε",
+    rejected: "Απορρίφθηκε",
+    completed: "Ολοκληρώθηκε"
+  },
+  orderItem: {
+    orderId: "Αριθμός Παραγγελίας",
+    itemsCount: "{count} προϊόν{t}",
+    quantity: "Ποσ: {qty}",
+    deliverTo: "Παράδοση σε: {name}, {city}",
+    viewDetails: "Προβολή Λεπτομερειών"
+  },
+  emptyState: {
+    title: "Δεν υπάρχουν ακόμη παραγγελίες",
+    description: "Το ιστορικό παραγγελιών σας θα εμφανιστεί εδώ. Ξεκινήστε τις αγορές σας για να παρακολουθείτε τις αγορές σας.",
+    startShopping: "Ξεκινήστε Αγορές →"
+  },
+  loading: "Φόρτωση παραγγελιών σας..."
+},
+homeProducts: {
+  header: {
+    tag: "Όλα τα Προϊόντα",
+    showingAll: "Εμφάνιση όλων των {count} προϊόντων",
+    noProducts: "Δεν βρέθηκαν προϊόντα για",
+    tryAnotherBrand: "Παρακαλώ δοκιμάστε να επιλέξετε άλλη μάρκα ή ελέγξτε ξανά αργότερα.",
+    viewBrandProducts: "Δείτε Προϊόντα {brand}"
+  },
+  productCard: {
+    category: "Κατηγορία",
+    dosage: "Δοσολογία:",
+    form: "Μορφή:",
+    pack: "Συσκευασία:",
+    details: "Λεπτομέρειες",
+    enquire: "Αίτηση πληροφοριών"
+  },
+  buttons: {
+    viewBrandProducts: "Δείτε Προϊόντα {brand}",
+    productsCount: "{count} Προϊόντα"
+  }
+},
 contactPage: {
   hero: {
     title: "Επικοινωνήστε Μαζί Μας",

@@ -236,6 +236,388 @@ const sq = {
       },
     ],
   },
+  cartPage: {
+  header: {
+    title: "Shporta juaj",
+    subtitle: "Rishikoni artikujt para pagesës",
+    b2bBadge: "B2B Shumicë",
+    batches: "grupe",
+    batch: "grup",
+    totalUnits: "njësi totale"
+  },
+  emptyState: {
+    title: "Shporta juaj është e zbrazët",
+    description: "Shtoni produkte për të vazhduar blerjet",
+    browseButton: "Shfletoni produkte"
+  },
+  items: {
+    unitPrice: "/ njësi",
+    remove: "Hiq",
+    removing: "Po hiqet...",
+    bulkUnits: "Njësi shumicë:",
+    swipeTip: "Këshillë: Zhvarritni majtas artikujt për t'i hequr"
+  },
+  summary: {
+    title: "Përmbledhja e Porosisë",
+    items: "artikull",
+    itemsPlural: "artikuj",
+    bulkOrder: "Porosi Shumicë",
+    unitsPerBatch: "njësi/grup",
+    totalUnits: "Njësi totale",
+    totalBatches: "Grupe totale",
+    subtotal: "Nëntotali",
+    shipping: "Transporti",
+    shippingCalc: "Llogaritur në arkë",
+    total: "Totali",
+    loginRequired: "Kërkohet identifikimi",
+    loginPrompt: "Ju lutem identifikohuni për të vazhduar me pagesën",
+    loginLink: "Klikoni këtu për t'u identifikuar",
+    checkoutButton: "Vazhdo në arkë",
+    loginCheckoutButton: "Identifikohu për pagesë",
+    continueShopping: "Vazhdo blerjet",
+    checkingAuth: "Po kontrollohet identifikimi..."
+  },
+  buttons: {
+    increase: "Rrit sasinë me njësi shumicë",
+    decrease: "Zvogëlo sasinë me njësi shumicë"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Pagesë e Sigurt",
+    subtitle: "E Shpejtë • E Sigurt • Konfidenciale",
+    steps: ["Shporta", "Adresa", "Pagesa", "Konfirmimi"]
+  },
+  emptyState: {
+    title: "Shporta juaj është e zbrazët",
+    description: "Shtoni produkte për të vazhduar pagesën.",
+    browseButton: "Shfletoni produkte"
+  },
+  deliveryAddress: {
+    title: "Adresa e Dorëzimit",
+    savedAddresses: "Adresat e Juaja të Ruajtura",
+    show: "Shfaq",
+    hide: "Fshih",
+    useAddress: "Përdor",
+    saveAddress: "Ruaj Adresën",
+    note: "Adresat ruhen vetëm për llogarinë tuaj dhe nuk do të jenë të dukshme për përdorues të tjerë.",
+    saveForFuture: "Ruaj këtë adresë për porositë e ardhshme"
+  },
+  form: {
+    placeholders: {
+      fullName: "Emri i Plotë",
+      phone: "Numri i Telefonit",
+      email: "Adresa e Emailit",
+      address: "Adresa e Plotë",
+      city: "Qyteti",
+      pincode: "Kodi Postar",
+      country: "Vendi"
+    }
+  },
+  payment: {
+    title: "Metoda e Pagesës",
+    cod: {
+      title: "Para në Dorëzim",
+      subtitle: "Paguaj kur të marrësh"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Kartelë Krediti / Debimi",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Portofolë Digitale",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Të gjitha pagesat janë të koduara dhe të sigurta"
+  },
+  orderSummary: {
+    title: "Përmbledhja e Porosisë",
+    secure: "E Sigurt dhe Private",
+    items: "Artikuj",
+    totalUnits: "Njësi Totale",
+    totalBatches: "Seri Totale",
+    totalAmount: "Shuma totale",
+    placeOrder: "Bëj Porosi të Sigurt",
+    processing: "Po përpunohet...",
+    trustedBy: "E besuar nga profesionistët e shëndetësisë • Paketim diskret",
+    continueShopping: "Vazhdo blerjet"
+  },
+  validation: {
+    emptyCart: "Shporta juaj është e zbrazët",
+    fullName: {
+      required: "Ju lutem shkruani një emër të plotë të vlefshëm",
+      invalid: "Emri i plotë duhet të përmbajë vetëm shkronja"
+    },
+    email: "Ju lutem shkruani një adresë emaili të vlefshme",
+    phone: "Numri i telefonit duhet të jetë 10 shifra",
+    address: "Ju lutem shkruani adresën e plotë të dorëzimit",
+    city: "Qyteti është i nevojshëm",
+    pincode: "Kodi postar duhet të jetë 6 shifra",
+    country: "Vendi është i nevojshëm",
+    payment: "Ju lutem zgjidhni një metodë pagese"
+  },
+  messages: {
+    loginRequired: "Ju lutem identifikohuni për të vazhduar pagesën",
+    saveSuccess: "Adresa u ruajt me sukses!",
+    sessionExpired: "Seanca ka skaduar. Ju lutem identifikohuni përsëri.",
+    orderFailed: "Porosia dështoi",
+    networkError: "Gabim në rrjet. Ju lutem provoni përsëri."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Porosia Konfirmuar!",
+    subtitle: "Faleminderit për blerjen tuaj. Kemi marrë porosinë tuaj #{orderId} dhe është duke u përpunuar.",
+    paymentStatus: "Pagesa e konfirmuar • Email i dërguar • Përpunimi i porosisë"
+  },
+  errorState: {
+    title: "Gabim në Porosi",
+    viewOrders: "Shiko Porositë e Mia",
+    returnHome: "Kthehu në Faqen Kryesore"
+  },
+  loadingState: {
+    title: "Po Ngarkohet Porosia Juaj...",
+    subtitle: "Po përgatitet konfirmimi i porosisë tuaj"
+  },
+  orderSummary: {
+    title: "Përmbledhje Porosie",
+    orderNumber: "Numri i Porosisë",
+    orderDate: "Data e Porosisë",
+    paymentMethod: "Metoda e Pagesës",
+    cashOnDelivery: "Para në Dorëzim",
+    delivery: "Dorëzimi",
+    standardDelivery: "Standard (2-3 ditë)"
+  },
+  orderStatus: {
+    title: "Statusi i Porosisë",
+    steps: {
+      placed: {
+        title: "Porosi e Bërë",
+        description: "Porosia juaj është marrë",
+        time: "Tani"
+      },
+      processing: {
+        title: "Në Përpunim",
+        description: "Po përgatisim artikujt tuaj",
+        time: "Sot"
+      },
+      shipping: {
+        title: "Në Dorëzim",
+        description: "Dorëzim i vlerësuar në 2-3 ditë",
+        time: "Nesër"
+      },
+      delivered: {
+        title: "Dorëzuar",
+        description: "Do të arrijë në derën tuaj",
+        time: "2-3 ditë"
+      }
+    },
+    statuses: {
+      complete: "E Përfunduar",
+      inProgress: "Në Progres"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Shiko Detajet e Porosisë",
+    continueShopping: "Vazhdo Blerjet",
+    downloadReceipt: "Shkarko Faturën",
+    emailReceipt: "Dërgo Faturën me Email"
+  },
+  supportCard: {
+    title: "Keni Nevojë për Ndihmë?",
+    description: "Ekipi ynë i asistencës është këtu për t'ju ndihmuar me çdo pyetje për porosinë tuaj.",
+    contactSupport: "Kontakto Asistencën"
+  },
+  quickActions: {
+    title: "Veprime të Shpejta",
+    viewAllOrders: "Shiko të Gjitha Porositë",
+    accountSettings: "Cilësimet e Llogarisë"
+  },
+  deliveryInfo: {
+    title: "Përditësime Dorëzimi",
+    subtitle: "Do t'ju mbajmë të informuar",
+    estimatedDelivery: "Dorëzim i Vlerësuar",
+    trackingNumber: "Numri i Gjurmimit",
+    willBeProvided: "Do të sigurohet"
+  },
+  footer: {
+    confirmed: "✓ E Konfirmuar",
+    confirmationMessage: "Një email konfirmimi është dërguar në adresën tuaj të emailit të regjistruar. Ju mund të gjurmoni statusin e porosisë tuaj kurdo që nga seksioni Porositë e Mia.",
+    links: {
+      helpCenter: "Qendra e Ndihmës",
+      shippingPolicy: "Politika e Dorëzimit",
+      returnsRefunds: "Kthimet & Rimbursimet",
+      contactUs: "Na Kontaktoni"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Fatura u shkarkua me sukses!",
+    emailSubject: "Konfirmimi i Porosisë Tuaj - {orderId}"
+  }
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Kthehu te Porositë",
+    orderNumber: "Porosia #{id}",
+    printInvoice: "Shtyp Faturën",
+    downloadPDF: "Shkarko PDF",
+    shareOrder: "Ndaj Porosinë"
+  },
+  orderHeader: {
+    orderId: "Numri i Porosisë",
+    orderDate: "Data e Porosisë",
+    items: "Artikuj",
+    totalItems: "{count} {items}",
+    item: "artikull",
+    itemsPlural: "artikuj"
+  },
+  status: {
+    pending: "Në Pritje",
+    processing: "Në Përpunim",
+    shipped: "E Dërguar",
+    delivered: "E Dorëzuar",
+    rejected: "E Refuzuar",
+    cancelled: "E Anuluar",
+    completed: "E Përfunduar"
+  },
+  orderProgress: {
+    title: "Progresi i Porosisë",
+    steps: ["E Porositur", "Në Përpunim", "E Dërguar", "E Dorëzuar"],
+    current: "Aktual",
+    estimatedDelivery: "Dorëzim i Vlerësuar",
+    delivered: "E Dorëzuar",
+    deliveredOn: "Dorëzuar më",
+    expectedBy: "Pritur deri më"
+  },
+  rejectedState: {
+    title: "Porosi e Refuzuar",
+    cancelled: "E Anuluar",
+    orderStopped: "Porosi e Ndaluar",
+    cannotProcess: "Porosia Nuk Mund të Përpunohet",
+    codNote: "Asnjë pagesë nuk ishte e nevojshme pasi kjo ishte një porosi me Para në Dorëzim.",
+    paymentNote: "Nëse është bërë ndonjë pagesë, ajo do të rimbursohet brenda 5-7 ditëve pune.",
+    contactSupport: "Kontakto Asistencën",
+    shopAgain: "Bli Përsëri"
+  },
+  orderItems: {
+    title: "Artikujt e Porosisë",
+    totalItems: "artikuj total",
+    quantity: "Sasia:",
+    priceEach: "secili",
+    subtotal: "Nëntotali",
+    shipping: "Dorëzimi",
+    shippingFree: "FALAS",
+    tax: "Taksa",
+    total: "Totali",
+    inclusiveTax: "Përfshirë të gjitha taksat",
+    distinctItems: "artikuj të ndryshëm"
+  },
+  deliveryAddress: {
+    title: "Adresa e Dorëzimit",
+    billingAddress: "Adresa e Faturimit",
+    recipient: "Marrësi",
+    primaryContact: "Kontakt primar"
+  },
+  paymentInfo: {
+    title: "Informacione Pagese",
+    paymentMethod: "Metoda e Pagesës",
+    paymentStatus: "Statusi i Pagesës",
+    pending: "Në Pritje",
+    paid: "E Paguar",
+    via: "përmes",
+    codInstructions: "Udhëzime Para në Dorëzim",
+    codNote: "Ju lutemi mbani të gatshme kusur të saktë për ₹{amount}",
+    paymentNote: "Shënim Pagese",
+    codRefundNote: "Asnjë pagesë nuk ishte e nevojshme për këtë porosi me Para në Dorëzim.",
+    regularRefundNote: "Çdo pagesë e bërë do të rimbursohet automatikisht."
+  },
+  customerSupport: {
+    callSupport: "Thirr Asistencën",
+    issueResolution: "Zgjidhje Problemash",
+    needHelp: "Keni nevojë për ndihmë me porosi të refuzuar?",
+    fastResolution: "Zgjidhje e shpejtë e problemeve",
+    availableHours: "Në dispozicion 9:00 - 21:00",
+    trackOrder: "Ndjek Porosinë",
+    reorderItems: "Ri-porosit Artikuj",
+    liveTracking: "Ndjekje Live e Disponueshme",
+    quickReorder: "Ri-porositje e shpejtë e disponueshme",
+    trackPackage: "Ndjek Paketën",
+    emailSupport: "Na dërgoni email për ndihmë",
+    contactSupport: "Kontakto Asistencën"
+  },
+  footerNote: {
+    needHelp: "Keni nevojë për ndihmë me porosinë tuaj?",
+    contactSupport: "Kontaktoni ekipin tonë të asistencës"
+  },
+  errorState: {
+    oops: "Oops!",
+    orderNotFound: "Porosia nuk u Gjet",
+    notExist: "Porosia që po kërkoni nuk ekziston ose nuk keni leje për ta parë atë."
+  },
+  actions: {
+    contactSupport: "Kontakto Asistencën",
+    shopAgain: "Bli Përsëri"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Porositë e Mia",
+    subtitle: "Ndjekni blerjet tuaja të fundit dhe statusin e porosive"
+  },
+  search: {
+    placeholder: "Kërko porosi, emër, telefon...",
+    filterAll: "Të Gjitha",
+    filterPending: "Në Pritje",
+    filterProcessing: "Në Përpunim",
+    filterShipped: "E Dërguar",
+    filterRejected: "E Refuzuar"
+  },
+  statuses: {
+    pending: "Në Pritje",
+    processing: "Në Përpunim",
+    shipped: "E Dërguar",
+    rejected: "E Refuzuar",
+    completed: "E Përfunduar"
+  },
+  orderItem: {
+    orderId: "Numri i Porosisë",
+    itemsCount: "{count} artikull{plural}",
+    quantity: "Sasi: {qty}",
+    deliverTo: "Dorëzoni tek: {name}, {city}",
+    viewDetails: "Shiko Detajet"
+  },
+  emptyState: {
+    title: "Asnjë porosi akoma",
+    description: "Historiku i porosive tuaja do të shfaqet këtu. Filloni të blini për të ndjekur blerjet tuaja.",
+    startShopping: "Filloni Blerjet →"
+  },
+  loading: "Po ngarkohen porositë tuaja..."
+},
+homeProducts: {
+  header: {
+    tag: "Të Gjitha Produktet",
+    showingAll: "Duke treguar të gjitha {count} produktet",
+    noProducts: "Asnjë produkt i gjetur për",
+    tryAnotherBrand: "Ju lutemi provoni të zgjidhni një markë tjetër ose kontrolloni më vonë.",
+    viewBrandProducts: "Shiko Produktet {brand}"
+  },
+  productCard: {
+    category: "Kategoria",
+    dosage: "Doza:",
+    form: "Forma:",
+    pack: "Paketimi:",
+    details: "Detaje",
+    enquire: "Kërkoni informacion"
+  },
+  buttons: {
+    viewBrandProducts: "Shiko Produktet {brand}",
+    productsCount: "{count} Produkte"
+  }
+},
   contactPage: {
   hero: {
     title: "Na Kontaktoni",

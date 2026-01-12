@@ -264,6 +264,388 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "Вашата кошничка",
+    subtitle: "Прегледајте ги артиклите пред наплата",
+    b2bBadge: "B2B Навал",
+    batches: "серии",
+    batch: "серија",
+    totalUnits: "вкупно единици"
+  },
+  emptyState: {
+    title: "Вашата кошничка е празна",
+    description: "Додајте продукти за да продолжите со пазарување",
+    browseButton: "Прелистајте продукти"
+  },
+  items: {
+    unitPrice: "/ единица",
+    remove: "Отстрани",
+    removing: "Се отстранува...",
+    bulkUnits: "Навални единици:",
+    swipeTip: "Совет: Лизгајте лево на артиклите за отстранување"
+  },
+  summary: {
+    title: "Резиме на нарачката",
+    items: "артикл",
+    itemsPlural: "артикли",
+    bulkOrder: "Нарачка навал",
+    unitsPerBatch: "единици/серија",
+    totalUnits: "Вкупно единици",
+    totalBatches: "Вкупно серии",
+    subtotal: "Меѓузбир",
+    shipping: "Испорака",
+    shippingCalc: "Ќе се пресмета при наплата",
+    total: "Вкупно",
+    loginRequired: "Потребна е најава",
+    loginPrompt: "Најавете се за да продолжите со наплата",
+    loginLink: "Кликнете овде за најава",
+    checkoutButton: "Продолжете кон наплата",
+    loginCheckoutButton: "Најавете се за наплата",
+    continueShopping: "Продолжете со пазарување",
+    checkingAuth: "Се проверува автентикацијата..."
+  },
+  buttons: {
+    increase: "Зголемете ја количината со навални единици",
+    decrease: "Намалете ја количината со навални единици"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Безбедна Наплата",
+    subtitle: "Брзо • Безбедно • Доверливо",
+    steps: ["Кошничка", "Адреса", "Плаќање", "Потврда"]
+  },
+  emptyState: {
+    title: "Вашата кошничка е празна",
+    description: "Додајте продукти за да продолжите со наплатата.",
+    browseButton: "Прелистајте продукти"
+  },
+  deliveryAddress: {
+    title: "Адреса за Испорака",
+    savedAddresses: "Вашите зачувани адреси",
+    show: "Прикажи",
+    hide: "Сокриј",
+    useAddress: "Користи",
+    saveAddress: "Зачувај Адреса",
+    note: "Адресите се зачувуваат само за вашата сметка и нема да бидат видливи за други корисници.",
+    saveForFuture: "Зачувајте ја оваа адреса за идни нарачки"
+  },
+  form: {
+    placeholders: {
+      fullName: "Целосно име",
+      phone: "Телефонски број",
+      email: "Е-маил адреса",
+      address: "Целосна адреса",
+      city: "Град",
+      pincode: "Поштенски код",
+      country: "Држава"
+    }
+  },
+  payment: {
+    title: "Начин на плаќање",
+    cod: {
+      title: "Плаќање по испорака",
+      subtitle: "Платете кога ќе го добиете"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Кредитна / Дебитна картичка",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Дигитални паричници",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Сите плаќања се шифрирани и безбедни"
+  },
+  orderSummary: {
+    title: "Резиме на нарачката",
+    secure: "Безбедно и приватно",
+    items: "Артикли",
+    totalUnits: "Вкупно единици",
+    totalBatches: "Вкупно серии",
+    totalAmount: "Вкупен износ",
+    placeOrder: "Направете безбедна нарачка",
+    processing: "Се обработува...",
+    trustedBy: "Доверба од здравствени професионалци • Дискретна пакување",
+    continueShopping: "Продолжете со пазарување"
+  },
+  validation: {
+    emptyCart: "Вашата кошничка е празна",
+    fullName: {
+      required: "Ве молиме внесете валидно целосно име",
+      invalid: "Целосното име мора да содржи само букви"
+    },
+    email: "Ве молиме внесете валидна е-маил адреса",
+    phone: "Телефонскиот број мора да биде 10 цифри",
+    address: "Ве молиме внесете целосна адреса за испорака",
+    city: "Градот е задолжителен",
+    pincode: "Поштенскиот код мора да биде 6 цифри",
+    country: "Државата е задолжителна",
+    payment: "Ве молиме изберете начин на плаќање"
+  },
+  messages: {
+    loginRequired: "Ве молиме најавете се за да продолжите со наплата",
+    saveSuccess: "Адресата е успешно зачувана!",
+    sessionExpired: "Сесијата истече. Ве молиме најавете се повторно.",
+    orderFailed: "Нарачката не успеа",
+    networkError: "Мрежна грешка. Ве молиме обидете се повторно."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Нарачката е Потврдена!",
+    subtitle: "Ви благодариме за вашата набавка. Го примивме вашето нарачување #{orderId} и се процесира.",
+    paymentStatus: "Плаќањето е потврдено • И-поштата е испратена • Се процесира нарачката"
+  },
+  errorState: {
+    title: "Грешка во Нарачка",
+    viewOrders: "Преглед на Моите Нарачки",
+    returnHome: "Врати се на Почетна"
+  },
+  loadingState: {
+    title: "Се вчитува Вашата Нарачка...",
+    subtitle: "Се подготвува потврдата за нарачка"
+  },
+  orderSummary: {
+    title: "Резиме на Нарачка",
+    orderNumber: "Број на Нарачка",
+    orderDate: "Датум на Нарачка",
+    paymentMethod: "Начин на Плаќање",
+    cashOnDelivery: "Плаќање по испорака",
+    delivery: "Испорака",
+    standardDelivery: "Стандардна (2-3 дена)"
+  },
+  orderStatus: {
+    title: "Статус на Нарачка",
+    steps: {
+      placed: {
+        title: "Нарачка Направена",
+        description: "Вашата нарачка е примена",
+        time: "Само сега"
+      },
+      processing: {
+        title: "Се процесира",
+        description: "Ги подготвуваме вашите артикли",
+        time: "Денес"
+      },
+      shipping: {
+        title: "Испорака",
+        description: "Проценета испорака за 2-3 дена",
+        time: "Утре"
+      },
+      delivered: {
+        title: "Испорачано",
+        description: "Ќе пристигне на вашата врата",
+        time: "2-3 дена"
+      }
+    },
+    statuses: {
+      complete: "Завршено",
+      inProgress: "Во Тек"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Преглед на Детали за Нарачка",
+    continueShopping: "Продолжи со Пазарување",
+    downloadReceipt: "Преземи Сметка",
+    emailReceipt: "Испрати Сметка по И-пошта"
+  },
+  supportCard: {
+    title: "Потребна е Помош?",
+    description: "Нашиот тим за поддршка е тука за да ви помогне со какви било прашања за вашата нарачка.",
+    contactSupport: "Контактирајте Поддршка"
+  },
+  quickActions: {
+    title: "Брзи Акции",
+    viewAllOrders: "Преглед на Сите Нарачки",
+    accountSettings: "Поставки на Сметка"
+  },
+  deliveryInfo: {
+    title: "Ажурирања за Испорака",
+    subtitle: "Ќе ве известуваме",
+    estimatedDelivery: "Проценета Испорака",
+    trackingNumber: "Број за Следење",
+    willBeProvided: "Ќе биде обезбеден"
+  },
+  footer: {
+    confirmed: "✓ Потврдено",
+    confirmationMessage: "Потврдна и-пошта е испратена на вашата регистрирана и-пошта адреса. Можете да го следите статусот на вашата нарачка во секое време од делот Мои Нарачки.",
+    links: {
+      helpCenter: "Центар за Помош",
+      shippingPolicy: "Политика за Испорака",
+      returnsRefunds: "Враќања & Надоместувања",
+      contactUs: "Контактирајте нè"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Сметката е успешно преземена!",
+    emailSubject: "Вашата Потврда за Нарачка - {orderId}"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Моите Нарачки",
+    subtitle: "Следете ги вашите скорешни набавки и статус на нарачка"
+  },
+  search: {
+    placeholder: "Пребарај нарачки, име, телефон...",
+    filterAll: "Сите",
+    filterPending: "Во Чекање",
+    filterProcessing: "Во Обработка",
+    filterShipped: "Испратени",
+    filterRejected: "Одбиени"
+  },
+  statuses: {
+    pending: "Во Чекање",
+    processing: "Во Обработка",
+    shipped: "Испратена",
+    rejected: "Одбиена",
+    completed: "Завршена"
+  },
+  orderItem: {
+    orderId: "Број на Нарачка",
+    itemsCount: "{count} артикл{plural}",
+    quantity: "Кол: {qty}",
+    deliverTo: "Испорака до: {name}, {city}",
+    viewDetails: "Види Детали"
+  },
+  emptyState: {
+    title: "Сеуште нема нарачки",
+    description: "Вашата историја на нарачки ќе се појави овде. Започнете со пазарување за да ги следите вашите набавки.",
+    startShopping: "Започнете со Пазарување →"
+  },
+  loading: "Се вчитуваат вашите нарачки..."
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Назад кон Нарачки",
+    orderNumber: "Нарачка #{id}",
+    printInvoice: "Печати Фактура",
+    downloadPDF: "Преземи PDF",
+    shareOrder: "Сподели Нарачка"
+  },
+  orderHeader: {
+    orderId: "Број на Нарачка",
+    orderDate: "Датум на Нарачка",
+    items: "Артикли",
+    totalItems: "{count} {items}",
+    item: "артикл",
+    itemsPlural: "артикли"
+  },
+  status: {
+    pending: "Во Чекање",
+    processing: "Во Обработка",
+    shipped: "Испратена",
+    delivered: "Испорачана",
+    rejected: "Одбиена",
+    cancelled: "Откажана",
+    completed: "Завршена"
+  },
+  orderProgress: {
+    title: "Напредок на Нарачка",
+    steps: ["Нарачана", "Во Обработка", "Испратена", "Испорачана"],
+    current: "Тековна",
+    estimatedDelivery: "Проценета Испорака",
+    delivered: "Испорачана",
+    deliveredOn: "Испорачана на",
+    expectedBy: "Очекувано до"
+  },
+  rejectedState: {
+    title: "Нарачка Одбиена",
+    cancelled: "Откажана",
+    orderStopped: "Нарачка Застана",
+    cannotProcess: "Нарачката Не Може да се Обработи",
+    codNote: "Не беше потребно плаќање бидејќи ова беше нарачка со Плаќање по Испорака.",
+    paymentNote: "Ако е направено плаќање, ќе биде рефундирано во рок од 5-7 работни дена.",
+    contactSupport: "Контактирајте Поддршка",
+    shopAgain: "Купете Повторно"
+  },
+  orderItems: {
+    title: "Артикли од Нарачка",
+    totalItems: "вкупно артикли",
+    quantity: "Количина:",
+    priceEach: "секој",
+    subtotal: "Подзбир",
+    shipping: "Испорака",
+    shippingFree: "БЕСПЛАТНО",
+    tax: "Данок",
+    total: "Вкупно",
+    inclusiveTax: "Вклучени сите даноци",
+    distinctItems: "различни артикли"
+  },
+  deliveryAddress: {
+    title: "Адреса за Испорака",
+    billingAddress: "Адреса за Сметководство",
+    recipient: "Примател",
+    primaryContact: "Примарен контакт"
+  },
+  paymentInfo: {
+    title: "Информации за Плаќање",
+    paymentMethod: "Начин на Плаќање",
+    paymentStatus: "Статус на Плаќање",
+    pending: "Во Чекање",
+    paid: "Платено",
+    via: "преку",
+    codInstructions: "Инструкции за Плаќање по Испорака",
+    codNote: "Ве молиме подгответе точно кусур за ₹{amount}",
+    paymentNote: "Белешка за Плаќање",
+    codRefundNote: "Не беше потребно плаќање за оваа нарачка со Плаќање по Испорака.",
+    regularRefundNote: "Секое плаќање што е направено ќе биде автоматски рефундирано."
+  },
+  customerSupport: {
+    callSupport: "Повикајте Поддршка",
+    issueResolution: "Решавање на Проблеми",
+    needHelp: "Потребна е помош за одбиена нарачка?",
+    fastResolution: "Брзо решавање на проблеми",
+    availableHours: "Достапни 9:00 - 21:00",
+    trackOrder: "Следете Нарачка",
+    reorderItems: "Повторно Нарачајте Артикли",
+    liveTracking: "Живо Следење Достапно",
+    quickReorder: "Брзо повторно нарачување достапно",
+    trackPackage: "Следете Пакет",
+    emailSupport: "Испратете ни email за помош",
+    contactSupport: "Контактирајте Поддршка"
+  },
+  footerNote: {
+    needHelp: "Потребна е помош со вашата нарачка?",
+    contactSupport: "Контактирајте го нашиот тим за поддршка"
+  },
+  errorState: {
+    oops: "Упс!",
+    orderNotFound: "Нарачката Не Е Пронајдена",
+    notExist: "Нарачката што ја барате не постои или немате дозвола да ја видите."
+  },
+  actions: {
+    contactSupport: "Контактирајте Поддршка",
+    shopAgain: "Купете Повторно"
+  }
+},
+homeProducts: {
+  header: {
+    tag: "Сите Производи",
+    showingAll: "Прикажување на сите {count} производи",
+    noProducts: "Не се пронајдени производи за",
+    tryAnotherBrand: "Ве молиме обидете се да изберете друг бренд или проверете подоцна.",
+    viewBrandProducts: "Види Производи {brand}"
+  },
+  productCard: {
+    category: "Категорија",
+    dosage: "Доза:",
+    form: "Форма:",
+    pack: "Пакет:",
+    details: "Детали",
+    enquire: "Побарај информации"
+  },
+  buttons: {
+    viewBrandProducts: "Види Производи {brand}",
+    productsCount: "{count} Производи"
+  }
+},
 contactPage: {
   hero: {
     title: "Контактирајте Не",

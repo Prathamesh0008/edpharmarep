@@ -13,15 +13,18 @@ import {
   Clock,
   Home,
   CreditCard,
-  ChevronRight
+  ChevronRight,
+  AlertCircle
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useCart } from "../../components/CartContext";
 import Confetti from "react-confetti";
+import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
 
 export default function OrderSuccessPage() {
   const router = useRouter();
   const params = useParams();
+  const { t, language } = useLanguage(); // ADD LANGUAGE CONTEXT
   
   // FIXED: Since your folder is [orderId], use params.orderId
   const orderId = params.orderId;
@@ -32,6 +35,99 @@ export default function OrderSuccessPage() {
   const [isClient, setIsClient] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+
+  // Get translations from context, fallback to English
+  const orderSuccessTranslations = t?.orderSuccessPage || {
+    header: {
+      title: "Order Confirmed!",
+      subtitle: "Thank you for your purchase. We've received your order #{orderId} and it's being processed.",
+      paymentStatus: "Payment confirmed • Email sent • Processing order"
+    },
+    errorState: {
+      title: "Order Error",
+      viewOrders: "View My Orders",
+      returnHome: "Return to Home"
+    },
+    loadingState: {
+      title: "Loading Your Order...",
+      subtitle: "Preparing your order confirmation"
+    },
+    orderSummary: {
+      title: "Order Summary",
+      orderNumber: "Order Number",
+      orderDate: "Order Date",
+      paymentMethod: "Payment Method",
+      cashOnDelivery: "Cash on Delivery",
+      delivery: "Delivery",
+      standardDelivery: "Standard (2-3 days)"
+    },
+    orderStatus: {
+      title: "Order Status",
+      steps: {
+        placed: {
+          title: "Order Placed",
+          description: "Your order has been received",
+          time: "Just now"
+        },
+        processing: {
+          title: "Processing",
+          description: "We're preparing your items",
+          time: "Today"
+        },
+        shipping: {
+          title: "Shipping",
+          description: "Estimated delivery in 2-3 days",
+          time: "Tomorrow"
+        },
+        delivered: {
+          title: "Delivered",
+          description: "Will arrive at your doorstep",
+          time: "2-3 days"
+        }
+      },
+      statuses: {
+        complete: "Complete",
+        inProgress: "In Progress"
+      }
+    },
+    actionButtons: {
+      viewDetails: "View Order Details",
+      continueShopping: "Continue Shopping",
+      downloadReceipt: "Download Receipt",
+      emailReceipt: "Email Receipt"
+    },
+    supportCard: {
+      title: "Need Help?",
+      description: "Our support team is here to help with any questions about your order.",
+      contactSupport: "Contact Support"
+    },
+    quickActions: {
+      title: "Quick Actions",
+      viewAllOrders: "View All Orders",
+      accountSettings: "Account Settings"
+    },
+    deliveryInfo: {
+      title: "Delivery Updates",
+      subtitle: "We'll keep you posted",
+      estimatedDelivery: "Estimated Delivery",
+      trackingNumber: "Tracking Number",
+      willBeProvided: "Will be provided"
+    },
+    footer: {
+      confirmed: "✓ Confirmed",
+      confirmationMessage: "A confirmation email has been sent to your registered email address. You can track your order status anytime from the My Orders section.",
+      links: {
+        helpCenter: "Help Center",
+        shippingPolicy: "Shipping Policy",
+        returnsRefunds: "Returns & Refunds",
+        contactUs: "Contact Us"
+      }
+    },
+    messages: {
+      receiptDownloaded: "Receipt downloaded successfully!",
+      emailSubject: "Your Order Confirmation - {orderId}"
+    }
+  };
 
   useEffect(() => {
     console.log("=== ORDER SUCCESS DEBUG ===");
@@ -79,25 +175,28 @@ export default function OrderSuccessPage() {
 
   // Handle receipt download
   const handleDownloadReceipt = () => {
-    alert(`Receipt for order ${orderId} downloaded successfully!`);
+    alert(`${orderSuccessTranslations.messages.receiptDownloaded}`);
   };
 
   // Handle email receipt
   const handleEmailReceipt = () => {
-    const emailSubject = `Your Order Confirmation - ${orderId}`;
-    const emailBody = `Thank you for your order!\n\nOrder ID: ${orderId}\nDate: ${new Date().toLocaleDateString()}\n\nBest regards,\nYour Store Team`;
+    const emailSubject = orderSuccessTranslations.messages.emailSubject.replace('{orderId}', orderId);
+    const emailBody = `Thank you for your order!\n\nOrder ID: ${orderId}\nDate: ${isClient ? formatDate() : new Date().toLocaleDateString()}\n\nBest regards,\nYour Store Team`;
     
     window.location.href = `mailto:?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
   };
 
   // Format date
   const formatDate = () => {
-    return new Date().toLocaleDateString('en-US', {
+    const options = {
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'
-    });
+    };
+    
+    // Return localized date based on current language
+    return new Date().toLocaleDateString(language === 'en' ? 'en-US' : language, options);
   };
 
   // Show error state
@@ -106,24 +205,24 @@ export default function OrderSuccessPage() {
       <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center justify-center px-4">
         <div className="max-w-md w-full bg-white rounded-2xl shadow-lg p-8 text-center">
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 text-red-600">
-            <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+            <AlertCircle className="w-8 h-8" />
           </div>
-          <h1 className="text-2xl font-bold text-gray-900 mb-3">Order Error</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-3">
+            {orderSuccessTranslations.errorState.title}
+          </h1>
           <p className="text-gray-600 mb-6">{error}</p>
           <div className="space-y-3">
             <Link
               href="/orders"
               className="block w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             >
-              View My Orders
+              {orderSuccessTranslations.errorState.viewOrders}
             </Link>
             <Link
               href="/"
               className="block w-full py-3 border-2 border-gray-300 text-gray-700 font-semibold rounded-lg hover:border-blue-400 hover:text-blue-600 transition-colors"
             >
-              Return to Home
+              {orderSuccessTranslations.errorState.returnHome}
             </Link>
           </div>
         </div>
@@ -139,9 +238,11 @@ export default function OrderSuccessPage() {
             <CheckCircle className="w-8 h-8 text-white" strokeWidth={1.5} />
           </div>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">
-            Loading Your Order...
+            {orderSuccessTranslations.loadingState.title}
           </h2>
-          <p className="text-gray-600">Preparing your order confirmation</p>
+          <p className="text-gray-600">
+            {orderSuccessTranslations.loadingState.subtitle}
+          </p>
           {orderId && (
             <p className="text-sm text-gray-500 mt-2">Order ID: {orderId}</p>
           )}
@@ -170,15 +271,15 @@ export default function OrderSuccessPage() {
           </div>
           
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-            Order Confirmed!
+            {orderSuccessTranslations.header.title}
           </h1>
           <p className="text-gray-600 max-w-md mx-auto">
-            Thank you for your purchase. We've received your order #{orderId} and it's being processed.
+            {orderSuccessTranslations.header.subtitle.replace('{orderId}', orderId)}
           </p>
           
           <div className="mt-4 inline-flex items-center gap-2 text-sm text-emerald-600 bg-emerald-50 px-4 py-2 rounded-full">
             <CheckCircle size={14} />
-            <span>Payment confirmed • Email sent • Processing order</span>
+            <span>{orderSuccessTranslations.header.paymentStatus}</span>
           </div>
         </div>
 
@@ -187,7 +288,9 @@ export default function OrderSuccessPage() {
           <div className="lg:col-span-2 space-y-6">
             {/* Order Summary Card */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-              <h2 className="text-xl font-semibold text-gray-900 mb-6">Order Summary</h2>
+              <h2 className="text-xl font-semibold text-gray-900 mb-6">
+                {orderSuccessTranslations.orderSummary.title}
+              </h2>
               
               <div className="space-y-4">
                 <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 p-4 bg-gray-50 rounded-xl">
@@ -196,12 +299,16 @@ export default function OrderSuccessPage() {
                       <Package className="w-5 h-5 text-blue-600" />
                     </div>
                     <div>
-                      <p className="text-sm text-gray-500">Order Number</p>
+                      <p className="text-sm text-gray-500">
+                        {orderSuccessTranslations.orderSummary.orderNumber}
+                      </p>
                       <p className="text-lg font-bold text-gray-900">{orderId}</p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-gray-500">Order Date</p>
+                    <p className="text-sm text-gray-500">
+                      {orderSuccessTranslations.orderSummary.orderDate}
+                    </p>
                     <p className="font-medium text-gray-900">
                       {isClient ? formatDate() : "Loading..."}
                     </p>
@@ -212,17 +319,25 @@ export default function OrderSuccessPage() {
                   <div className="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                     <div className="flex items-center gap-2 mb-2">
                       <CreditCard className="w-4 h-4 text-gray-400" />
-                      <p className="text-sm text-gray-500">Payment Method</p>
+                      <p className="text-sm text-gray-500">
+                        {orderSuccessTranslations.orderSummary.paymentMethod}
+                      </p>
                     </div>
-                    <p className="font-medium text-gray-900">Cash on Delivery</p>
+                    <p className="font-medium text-gray-900">
+                      {orderSuccessTranslations.orderSummary.cashOnDelivery}
+                    </p>
                   </div>
                   
                   <div className="p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors">
                     <div className="flex items-center gap-2 mb-2">
                       <Truck className="w-4 h-4 text-gray-400" />
-                      <p className="text-sm text-gray-500">Delivery</p>
+                      <p className="text-sm text-gray-500">
+                        {orderSuccessTranslations.orderSummary.delivery}
+                      </p>
                     </div>
-                    <p className="font-medium text-gray-900">Standard (2-3 days)</p>
+                    <p className="font-medium text-gray-900">
+                      {orderSuccessTranslations.orderSummary.standardDelivery}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -230,37 +345,31 @@ export default function OrderSuccessPage() {
 
             {/* Order Status */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-6">Order Status</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-6">
+                {orderSuccessTranslations.orderStatus.title}
+              </h3>
               
               <div className="space-y-6">
                 {[
                   { 
                     icon: CheckCircle, 
-                    title: "Order Placed", 
-                    description: "Your order has been received",
-                    status: "complete",
-                    time: "Just now"
+                    ...orderSuccessTranslations.orderStatus.steps.placed,
+                    status: "complete"
                   },
                   { 
                     icon: Clock, 
-                    title: "Processing", 
-                    description: "We're preparing your items",
-                    status: "current",
-                    time: "Today"
+                    ...orderSuccessTranslations.orderStatus.steps.processing,
+                    status: "current"
                   },
                   { 
                     icon: Truck, 
-                    title: "Shipping", 
-                    description: "Estimated delivery in 2-3 days",
-                    status: "pending",
-                    time: "Tomorrow"
+                    ...orderSuccessTranslations.orderStatus.steps.shipping,
+                    status: "pending"
                   },
                   { 
                     icon: Home, 
-                    title: "Delivered", 
-                    description: "Will arrive at your doorstep",
-                    status: "pending",
-                    time: "2-3 days"
+                    ...orderSuccessTranslations.orderStatus.steps.delivered,
+                    status: "pending"
                   }
                 ].map((step, index) => (
                   <div key={index} className="flex items-start gap-4">
@@ -279,12 +388,12 @@ export default function OrderSuccessPage() {
                         </div>
                         {step.status === 'complete' && (
                           <span className="px-3 py-1 text-sm font-medium bg-emerald-50 text-emerald-600 rounded-full">
-                            Complete
+                            {orderSuccessTranslations.orderStatus.statuses.complete}
                           </span>
                         )}
                         {step.status === 'current' && (
                           <span className="px-3 py-1 text-sm font-medium bg-blue-50 text-blue-600 rounded-full">
-                            In Progress
+                            {orderSuccessTranslations.orderStatus.statuses.inProgress}
                           </span>
                         )}
                       </div>
@@ -303,7 +412,7 @@ export default function OrderSuccessPage() {
                 href={`/orders/${orderId}`}
                 className="group flex items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
               >
-                View Order Details
+                {orderSuccessTranslations.actionButtons.viewDetails}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
 
@@ -312,7 +421,7 @@ export default function OrderSuccessPage() {
                 className="group flex items-center justify-center gap-2 px-6 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
               >
                 <Home className="w-4 h-4" />
-                Continue Shopping
+                {orderSuccessTranslations.actionButtons.continueShopping}
               </Link>
 
               <button
@@ -320,7 +429,7 @@ export default function OrderSuccessPage() {
                 className="flex items-center justify-center gap-2 px-6 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-emerald-400 hover:bg-emerald-50 hover:text-emerald-600 transition-all duration-200"
               >
                 <Download className="w-4 h-4" />
-                Download Receipt
+                {orderSuccessTranslations.actionButtons.downloadReceipt}
               </button>
 
               <button
@@ -328,7 +437,7 @@ export default function OrderSuccessPage() {
                 className="flex items-center justify-center gap-2 px-6 py-4 border-2 border-gray-300 text-gray-700 font-semibold rounded-xl hover:border-blue-400 hover:bg-blue-50 hover:text-blue-600 transition-all duration-200"
               >
                 <Mail className="w-4 h-4" />
-                Email Receipt
+                {orderSuccessTranslations.actionButtons.emailReceipt}
               </button>
             </div>
           </div>
@@ -341,22 +450,26 @@ export default function OrderSuccessPage() {
                 <div className="p-2 bg-blue-100 rounded-lg">
                   <Shield className="w-5 h-5 text-blue-600" />
                 </div>
-                <h3 className="font-semibold text-gray-900">Need Help?</h3>
+                <h3 className="font-semibold text-gray-900">
+                  {orderSuccessTranslations.supportCard.title}
+                </h3>
               </div>
               <p className="text-sm text-gray-600 mb-4">
-                Our support team is here to help with any questions about your order.
+                {orderSuccessTranslations.supportCard.description}
               </p>
               <Link
                 href="/contact"
                 className="block text-center text-blue-600 hover:text-blue-700 font-medium py-3 rounded-lg border border-blue-200 hover:border-blue-300 hover:bg-blue-50 transition-all duration-200"
               >
-                Contact Support
+                {orderSuccessTranslations.supportCard.contactSupport}
               </Link>
             </div>
 
             {/* Quick Actions */}
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6">
-              <h3 className="font-semibold text-gray-900 mb-4">Quick Actions</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">
+                {orderSuccessTranslations.quickActions.title}
+              </h3>
               <div className="space-y-3">
                 <Link
                   href="/orders"
@@ -364,7 +477,9 @@ export default function OrderSuccessPage() {
                 >
                   <div className="flex items-center gap-3">
                     <Package className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
-                    <span className="text-gray-700 group-hover:text-blue-600">View All Orders</span>
+                    <span className="text-gray-700 group-hover:text-blue-600">
+                      {orderSuccessTranslations.quickActions.viewAllOrders}
+                    </span>
                   </div>
                   <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-blue-600" />
                 </Link>
@@ -375,7 +490,9 @@ export default function OrderSuccessPage() {
                 >
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-4 h-4 text-gray-400 group-hover:text-emerald-600" />
-                    <span className="text-gray-700 group-hover:text-emerald-600">Account Settings</span>
+                    <span className="text-gray-700 group-hover:text-emerald-600">
+                      {orderSuccessTranslations.quickActions.accountSettings}
+                    </span>
                   </div>
                   <ChevronRight className="w-4 h-4 text-gray-300 group-hover:text-emerald-600" />
                 </Link>
@@ -389,18 +506,28 @@ export default function OrderSuccessPage() {
                   <Truck className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Delivery Updates</h3>
-                  <p className="text-sm text-gray-600">We'll keep you posted</p>
+                  <h3 className="font-semibold text-gray-900">
+                    {orderSuccessTranslations.deliveryInfo.title}
+                  </h3>
+                  <p className="text-sm text-gray-600">
+                    {orderSuccessTranslations.deliveryInfo.subtitle}
+                  </p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="flex justify-between items-center p-2 hover:bg-white/50 rounded-lg transition-colors">
-                  <span className="text-sm text-gray-600">Estimated Delivery</span>
+                  <span className="text-sm text-gray-600">
+                    {orderSuccessTranslations.deliveryInfo.estimatedDelivery}
+                  </span>
                   <span className="font-semibold text-gray-900">2-3 business days</span>
                 </div>
                 <div className="flex justify-between items-center p-2 hover:bg-white/50 rounded-lg transition-colors">
-                  <span className="text-sm text-gray-600">Tracking Number</span>
-                  <span className="font-medium text-blue-600">Will be provided</span>
+                  <span className="text-sm text-gray-600">
+                    {orderSuccessTranslations.deliveryInfo.trackingNumber}
+                  </span>
+                  <span className="font-medium text-blue-600">
+                    {orderSuccessTranslations.deliveryInfo.willBeProvided}
+                  </span>
                 </div>
               </div>
             </div>
@@ -414,30 +541,31 @@ export default function OrderSuccessPage() {
             <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
             <span>{isClient ? formatDate() : "Loading..."}</span>
             <span className="w-1 h-1 bg-gray-300 rounded-full"></span>
-            <span className="text-emerald-600 font-medium">✓ Confirmed</span>
+            <span className="text-emerald-600 font-medium">
+              {orderSuccessTranslations.footer.confirmed}
+            </span>
           </div>
           
           <p className="text-sm text-gray-600 mb-6 max-w-2xl mx-auto">
-            A confirmation email has been sent to your registered email address.
-            You can track your order status anytime from the{" "}
-            <Link href="/orders" className="text-blue-600 hover:text-blue-700 font-medium underline hover:no-underline">
-              My Orders
-            </Link>{" "}
-            section.
+            {orderSuccessTranslations.footer.confirmationMessage.replace('My Orders', 
+              <Link href="/orders" className="text-blue-600 hover:text-blue-700 font-medium underline hover:no-underline">
+                {orderSuccessTranslations.quickActions.viewAllOrders}
+              </Link>
+            )}
           </p>
           
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
             <Link href="/help" className="hover:text-gray-700 transition-colors">
-              Help Center
+              {orderSuccessTranslations.footer.links.helpCenter}
             </Link>
             <Link href="/shipping" className="hover:text-gray-700 transition-colors">
-              Shipping Policy
+              {orderSuccessTranslations.footer.links.shippingPolicy}
             </Link>
             <Link href="/returns" className="hover:text-gray-700 transition-colors">
-              Returns & Refunds
+              {orderSuccessTranslations.footer.links.returnsRefunds}
             </Link>
             <Link href="/contact" className="hover:text-gray-700 transition-colors">
-              Contact Us
+              {orderSuccessTranslations.footer.links.contactUs}
             </Link>
           </div>
         </div>

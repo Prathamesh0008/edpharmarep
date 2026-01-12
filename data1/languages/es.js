@@ -337,6 +337,388 @@ termsPage: {
     }
   ]
 },
+cartPage: {
+  header: {
+    title: "Tu Carrito",
+    subtitle: "Revisa los artículos antes de pagar",
+    b2bBadge: "B2B Al Por Mayor",
+    batches: "lotes",
+    batch: "lote",
+    totalUnits: "unidades totales"
+  },
+  emptyState: {
+    title: "Tu carrito está vacío",
+    description: "Agrega productos para continuar comprando",
+    browseButton: "Explorar productos"
+  },
+  items: {
+    unitPrice: "/ unidad",
+    remove: "Eliminar",
+    removing: "Eliminando...",
+    bulkUnits: "Unidades a granel:",
+    swipeTip: "Consejo: Desliza a la izquierda para eliminar artículos"
+  },
+  summary: {
+    title: "Resumen del Pedido",
+    items: "artículo",
+    itemsPlural: "artículos",
+    bulkOrder: "Pedido al Por Mayor",
+    unitsPerBatch: "unidades/lote",
+    totalUnits: "Unidades Totales",
+    totalBatches: "Lotes Totales",
+    subtotal: "Subtotal",
+    shipping: "Envío",
+    shippingCalc: "Calculado en el pago",
+    total: "Total",
+    loginRequired: "Inicio de sesión requerido",
+    loginPrompt: "Inicia sesión para proceder con el pago",
+    loginLink: "Haz clic aquí para iniciar sesión",
+    checkoutButton: "Proceder al Pago",
+    loginCheckoutButton: "Iniciar sesión para pagar",
+    continueShopping: "Continuar comprando",
+    checkingAuth: "Verificando autenticación..."
+  },
+  buttons: {
+    increase: "Aumentar cantidad por unidades a granel",
+    decrease: "Disminuir cantidad por unidades a granel"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Pago Seguro",
+    subtitle: "Rápido • Seguro • Confidencial",
+    steps: ["Carrito", "Dirección", "Pago", "Confirmar"]
+  },
+  emptyState: {
+    title: "Tu carrito está vacío",
+    description: "Añade productos para continuar con el pago.",
+    browseButton: "Explorar productos"
+  },
+  deliveryAddress: {
+    title: "Dirección de Entrega",
+    savedAddresses: "Tus Direcciones Guardadas",
+    show: "Mostrar",
+    hide: "Ocultar",
+    useAddress: "Usar",
+    saveAddress: "Guardar Dirección",
+    note: "Las direcciones se guardan solo para tu cuenta y no serán visibles para otros usuarios.",
+    saveForFuture: "Guardar esta dirección para pedidos futuros"
+  },
+  form: {
+    placeholders: {
+      fullName: "Nombre Completo",
+      phone: "Número de Teléfono",
+      email: "Dirección de Email",
+      address: "Dirección Completa",
+      city: "Ciudad",
+      pincode: "Código Postal",
+      country: "País"
+    }
+  },
+  payment: {
+    title: "Método de Pago",
+    cod: {
+      title: "Pago contra Reembolso",
+      subtitle: "Paga al recibir"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Tarjeta de Crédito / Débito",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Billeteras Digitales",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Todos los pagos están encriptados y son seguros"
+  },
+  orderSummary: {
+    title: "Resumen del Pedido",
+    secure: "Seguro y Privado",
+    items: "Artículos",
+    totalUnits: "Unidades Totales",
+    totalBatches: "Lotes Totales",
+    totalAmount: "Importe total",
+    placeOrder: "Realizar Pedido Seguro",
+    processing: "Procesando...",
+    trustedBy: "Confiado por profesionales de la salud • Embalaje discreto",
+    continueShopping: "Seguir comprando"
+  },
+  validation: {
+    emptyCart: "Tu carrito está vacío",
+    fullName: {
+      required: "Por favor, introduce un nombre completo válido",
+      invalid: "El nombre completo solo debe contener letras"
+    },
+    email: "Por favor, introduce una dirección de email válida",
+    phone: "El número de teléfono debe tener 10 dígitos",
+    address: "Por favor, introduce la dirección de entrega completa",
+    city: "La ciudad es obligatoria",
+    pincode: "El código postal debe tener 6 dígitos",
+    country: "El país es obligatorio",
+    payment: "Por favor, selecciona un método de pago"
+  },
+  messages: {
+    loginRequired: "Por favor, inicia sesión para continuar con el pago",
+    saveSuccess: "¡Dirección guardada con éxito!",
+    sessionExpired: "Sesión expirada. Por favor, inicia sesión nuevamente.",
+    orderFailed: "Pedido fallido",
+    networkError: "Error de red. Por favor, inténtalo de nuevo."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "¡Pedido Confirmado!",
+    subtitle: "Gracias por su compra. Hemos recibido su pedido #{orderId} y está siendo procesado.",
+    paymentStatus: "Pago confirmado • Email enviado • Procesando pedido"
+  },
+  errorState: {
+    title: "Error en el Pedido",
+    viewOrders: "Ver Mis Pedidos",
+    returnHome: "Volver al Inicio"
+  },
+  loadingState: {
+    title: "Cargando Su Pedido...",
+    subtitle: "Preparando su confirmación de pedido"
+  },
+  orderSummary: {
+    title: "Resumen del Pedido",
+    orderNumber: "Número de Pedido",
+    orderDate: "Fecha del Pedido",
+    paymentMethod: "Método de Pago",
+    cashOnDelivery: "Pago Contra Reembolso",
+    delivery: "Entrega",
+    standardDelivery: "Estándar (2-3 días)"
+  },
+  orderStatus: {
+    title: "Estado del Pedido",
+    steps: {
+      placed: {
+        title: "Pedido Realizado",
+        description: "Su pedido ha sido recibido",
+        time: "Ahora mismo"
+      },
+      processing: {
+        title: "Procesando",
+        description: "Estamos preparando sus artículos",
+        time: "Hoy"
+      },
+      shipping: {
+        title: "Envío",
+        description: "Entrega estimada en 2-3 días",
+        time: "Mañana"
+      },
+      delivered: {
+        title: "Entregado",
+        description: "Llegará a su puerta",
+        time: "2-3 días"
+      }
+    },
+    statuses: {
+      complete: "Completado",
+      inProgress: "En Progreso"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Ver Detalles del Pedido",
+    continueShopping: "Seguir Comprando",
+    downloadReceipt: "Descargar Recibo",
+    emailReceipt: "Enviar Recibo por Email"
+  },
+  supportCard: {
+    title: "¿Necesita Ayuda?",
+    description: "Nuestro equipo de soporte está aquí para ayudarle con cualquier pregunta sobre su pedido.",
+    contactSupport: "Contactar Soporte"
+  },
+  quickActions: {
+    title: "Acciones Rápidas",
+    viewAllOrders: "Ver Todos los Pedidos",
+    accountSettings: "Configuración de la Cuenta"
+  },
+  deliveryInfo: {
+    title: "Actualizaciones de Entrega",
+    subtitle: "Lo mantendremos informado",
+    estimatedDelivery: "Entrega Estimada",
+    trackingNumber: "Número de Seguimiento",
+    willBeProvided: "Se proporcionará"
+  },
+  footer: {
+    confirmed: "✓ Confirmado",
+    confirmationMessage: "Se ha enviado un correo electrónico de confirmación a su dirección de correo electrónico registrada. Puede seguir el estado de su pedido en cualquier momento desde la sección Mis Pedidos.",
+    links: {
+      helpCenter: "Centro de Ayuda",
+      shippingPolicy: "Política de Envío",
+      returnsRefunds: "Devoluciones y Reembolsos",
+      contactUs: "Contáctenos"
+    }
+  },
+  messages: {
+    receiptDownloaded: "¡Recibo descargado con éxito!",
+    emailSubject: "Su Confirmación de Pedido - {orderId}"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Mis Pedidos",
+    subtitle: "Realice el seguimiento de sus compras recientes y estado del pedido"
+  },
+  search: {
+    placeholder: "Buscar pedidos, nombre, teléfono...",
+    filterAll: "Todos",
+    filterPending: "Pendiente",
+    filterProcessing: "Procesando",
+    filterShipped: "Enviado",
+    filterRejected: "Rechazado"
+  },
+  statuses: {
+    pending: "Pendiente",
+    processing: "Procesando",
+    shipped: "Enviado",
+    rejected: "Rechazado",
+    completed: "Completado"
+  },
+  orderItem: {
+    orderId: "Número de Pedido",
+    itemsCount: "{count} artículo{s}",
+    quantity: "Cant: {qty}",
+    deliverTo: "Entregar a: {name}, {city}",
+    viewDetails: "Ver Detalles"
+  },
+  emptyState: {
+    title: "Aún no hay pedidos",
+    description: "Su historial de pedidos aparecerá aquí. Empiece a comprar para realizar el seguimiento de sus compras.",
+    startShopping: "Empezar a Comprar →"
+  },
+  loading: "Cargando sus pedidos..."
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Volver a Pedidos",
+    orderNumber: "Pedido #{id}",
+    printInvoice: "Imprimir Factura",
+    downloadPDF: "Descargar PDF",
+    shareOrder: "Compartir Pedido"
+  },
+  orderHeader: {
+    orderId: "Número de Pedido",
+    orderDate: "Fecha del Pedido",
+    items: "Artículos",
+    totalItems: "{count} {items}",
+    item: "artículo",
+    itemsPlural: "artículos"
+  },
+  status: {
+    pending: "Pendiente",
+    processing: "Procesando",
+    shipped: "Enviado",
+    delivered: "Entregado",
+    rejected: "Rechazado",
+    cancelled: "Cancelado",
+    completed: "Completado"
+  },
+  orderProgress: {
+    title: "Progreso del Pedido",
+    steps: ["Pedido Realizado", "Procesando", "Enviado", "Entregado"],
+    current: "Actual",
+    estimatedDelivery: "Entrega Estimada",
+    delivered: "Entregado",
+    deliveredOn: "Entregado el",
+    expectedBy: "Esperado para"
+  },
+  rejectedState: {
+    title: "Pedido Rechazado",
+    cancelled: "Cancelado",
+    orderStopped: "Pedido Detenido",
+    cannotProcess: "El Pedido No Puede Ser Procesado",
+    codNote: "No se requería pago ya que este era un pedido de Pago Contra Reembolso.",
+    paymentNote: "Si se realizó algún pago, se reembolsará en 5-7 días hábiles.",
+    contactSupport: "Contactar Soporte",
+    shopAgain: "Comprar de Nuevo"
+  },
+  orderItems: {
+    title: "Artículos del Pedido",
+    totalItems: "artículos totales",
+    quantity: "Cantidad:",
+    priceEach: "cada uno",
+    subtotal: "Subtotal",
+    shipping: "Envío",
+    shippingFree: "GRATIS",
+    tax: "Impuesto",
+    total: "Total",
+    inclusiveTax: "Incluye todos los impuestos",
+    distinctItems: "artículos distintos"
+  },
+  deliveryAddress: {
+    title: "Dirección de Entrega",
+    billingAddress: "Dirección de Facturación",
+    recipient: "Destinatario",
+    primaryContact: "Contacto principal"
+  },
+  paymentInfo: {
+    title: "Información de Pago",
+    paymentMethod: "Método de Pago",
+    paymentStatus: "Estado del Pago",
+    pending: "Pendiente",
+    paid: "Pagado",
+    via: "vía",
+    codInstructions: "Instrucciones de Pago Contra Reembolso",
+    codNote: "Por favor tenga el cambio exacto listo para ₹{amount}",
+    paymentNote: "Nota de Pago",
+    codRefundNote: "No se requería pago para este pedido de Pago Contra Reembolso.",
+    regularRefundNote: "Cualquier pago realizado será reembolsado automáticamente."
+  },
+  customerSupport: {
+    callSupport: "Llamar al Soporte",
+    issueResolution: "Resolución de Problemas",
+    needHelp: "¿Necesita ayuda con un pedido rechazado?",
+    fastResolution: "Resolución rápida de problemas",
+    availableHours: "Disponible 9:00 - 21:00",
+    trackOrder: "Seguir Pedido",
+    reorderItems: "Volver a Pedir Artículos",
+    liveTracking: "Seguimiento en Vivo Disponible",
+    quickReorder: "Volver a pedir rápidamente disponible",
+    trackPackage: "Seguir Paquete",
+    emailSupport: "Envíenos un email para ayuda",
+    contactSupport: "Contactar Soporte"
+  },
+  footerNote: {
+    needHelp: "¿Necesita ayuda con su pedido?",
+    contactSupport: "Contacte a nuestro equipo de soporte"
+  },
+  errorState: {
+    oops: "¡Ups!",
+    orderNotFound: "Pedido No Encontrado",
+    notExist: "El pedido que está buscando no existe o no tiene permiso para verlo."
+  },
+  actions: {
+    contactSupport: "Contactar Soporte",
+    shopAgain: "Comprar de Nuevo"
+  }
+},
+homeProducts: {
+  header: {
+    tag: "Todos los Productos",
+    showingAll: "Mostrando todos los {count} productos",
+    noProducts: "No se encontraron productos para",
+    tryAnotherBrand: "Intente seleccionar otra marca o vuelva a consultar más tarde.",
+    viewBrandProducts: "Ver Productos {brand}"
+  },
+  productCard: {
+    category: "Categoría",
+    dosage: "Dosis:",
+    form: "Forma:",
+    pack: "Envase:",
+    details: "Detalles",
+    enquire: "Consultar"
+  },
+  buttons: {
+    viewBrandProducts: "Ver Productos {brand}",
+    productsCount: "{count} Productos"
+  }
+},
 contactPage: {
   hero: {
     title: "Contáctenos",

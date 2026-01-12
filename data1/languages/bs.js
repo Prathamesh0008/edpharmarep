@@ -264,6 +264,367 @@ const bs = {
       }
     ]
   },
+  cartPage: {
+  header: {
+    title: "Vaša korpa",
+    subtitle: "Pregledajte artikle prije plaćanja",
+    b2bBadge: "B2B Veleprodaja",
+    batches: "serije",
+    batch: "serija",
+    totalUnits: "ukupno jedinica"
+  },
+  emptyState: {
+    title: "Vaša korpa je prazna",
+    description: "Dodajte proizvode da nastavite sa kupovinom",
+    browseButton: "Pregledajte proizvode"
+  },
+  items: {
+    unitPrice: "/ jedinica",
+    remove: "Ukloni",
+    removing: "Uklanja se...",
+    bulkUnits: "Veleprodajne jedinice:",
+    swipeTip: "Savjet: Povucite ulijevo artikle da ih uklonite"
+  },
+  summary: {
+    title: "Sažetak narudžbe",
+    items: "artikal",
+    itemsPlural: "artikala",
+    bulkOrder: "Veleprodajna narudžba",
+    unitsPerBatch: "jedinica/serija",
+    totalUnits: "Ukupno jedinica",
+    totalBatches: "Ukupno serija",
+    subtotal: "Međuzbir",
+    shipping: "Dostava",
+    shippingCalc: "Izračunat će se pri plaćanju",
+    total: "Ukupno",
+    loginRequired: "Potrebna prijava",
+    loginPrompt: "Prijavite se da nastavite s plaćanjem",
+    loginLink: "Kliknite ovdje za prijavu",
+    checkoutButton: "Nastavi na plaćanje",
+    loginCheckoutButton: "Prijavite se za plaćanje",
+    continueShopping: "Nastavi kupovinu",
+    checkingAuth: "Provjera autentifikacije..."
+  },
+  buttons: {
+    increase: "Povećaj količinu veleprodajnim jedinicama",
+    decrease: "Smanji količinu veleprodajnim jedinicama"
+  }
+},
+checkoutPage: {
+  header: {
+    title: "Sigurna Naplata",
+    subtitle: "Brzo • Sigurno • Povjerljivo",
+    steps: ["Korpa", "Adresa", "Plaćanje", "Potvrda"]
+  },
+  emptyState: {
+    title: "Vaša korpa je prazna",
+    description: "Dodajte proizvode da nastavite naplatu.",
+    browseButton: "Pregledajte proizvode"
+  },
+  deliveryAddress: {
+    title: "Adresa za dostavu",
+    savedAddresses: "Vaše sačuvane adrese",
+    show: "Prikaži",
+    hide: "Sakrij",
+    useAddress: "Koristi",
+    saveAddress: "Sačuvaj adresu",
+    note: "Adrese se čuvaju samo za vaš račun i neće biti vidljive drugim korisnicima.",
+    saveForFuture: "Sačuvajte ovu adresu za buduće narudžbe"
+  },
+  form: {
+    placeholders: {
+      fullName: "Puno ime",
+      phone: "Broj telefona",
+      email: "Adresa e-pošte",
+      address: "Puna adresa",
+      city: "Grad",
+      pincode: "Poštanski broj",
+      country: "Država"
+    }
+  },
+  payment: {
+    title: "Način plaćanja",
+    cod: {
+      title: "Pouzeće",
+      subtitle: "Platite prilikom primitka"
+    },
+    upi: {
+      title: "UPI",
+      subtitle: "GPay • PhonePe • Paytm"
+    },
+    card: {
+      title: "Kreditna / Debitna kartica",
+      subtitle: "Visa • Mastercard"
+    },
+    wallet: {
+      title: "Digitalni novčanici",
+      subtitle: "Paytm • Amazon Pay"
+    },
+    secure: "Sva plaćanja su šifrirana i sigurna"
+  },
+  orderSummary: {
+    title: "Sažetak narudžbe",
+    secure: "Sigurno i privatno",
+    items: "Artikli",
+    totalUnits: "Ukupno jedinica",
+    totalBatches: "Ukupno serija",
+    totalAmount: "Ukupan iznos",
+    placeOrder: "Izvršite sigurnu narudžbu",
+    processing: "Obrada...",
+    trustedBy: "Povjerenje zdravstvenih profesionalaca • Diskretno pakiranje",
+    continueShopping: "Nastavite kupovinu"
+  },
+  validation: {
+    emptyCart: "Vaša korpa je prazna",
+    fullName: {
+      required: "Unesite važeće puno ime",
+      invalid: "Puno ime mora sadržavati samo slova"
+    },
+    email: "Unesite važeću adresu e-pošte",
+    phone: "Broj telefona mora imati 10 cifara",
+    address: "Unesite punu adresu za dostavu",
+    city: "Grad je obavezan",
+    pincode: "Poštanski broj mora imati 6 cifara",
+    country: "Država je obavezna",
+    payment: "Odaberite način plaćanja"
+  },
+  messages: {
+    loginRequired: "Prijavite se da nastavite naplatu",
+    saveSuccess: "Adresa je uspješno sačuvana!",
+    sessionExpired: "Sesija je istekla. Prijavite se ponovo.",
+    orderFailed: "Narudžba nije uspjela",
+    networkError: "Mrežna greška. Pokušajte ponovo."
+  }
+},
+orderSuccessPage: {
+  header: {
+    title: "Narudžba Potvrđena!",
+    subtitle: "Hvala na vašoj kupovini. Primili smo vašu narudžbu #{orderId} i ona se obrađuje.",
+    paymentStatus: "Plaćanje potvrđeno • E-mail poslan • Obrada narudžbe"
+  },
+  errorState: {
+    title: "Greška u Narudžbi",
+    viewOrders: "Pogledajte Moje Narudžbe",
+    returnHome: "Povratak na Početnu"
+  },
+  loadingState: {
+    title: "Učitavanje Vaše Narudžbe...",
+    subtitle: "Priprema potvrde vaše narudžbe"
+  },
+  orderSummary: {
+    title: "Sažetak Narudžbe",
+    orderNumber: "Broj Narudžbe",
+    orderDate: "Datum Narudžbe",
+    paymentMethod: "Način Plaćanja",
+    cashOnDelivery: "Pouzeće",
+    delivery: "Dostava",
+    standardDelivery: "Standardna (2-3 dana)"
+  },
+  orderStatus: {
+    title: "Status Narudžbe",
+    steps: {
+      placed: {
+        title: "Narudžba Plaširana",
+        description: "Vaša narudžba je primljena",
+        time: "Upravo sada"
+      },
+      processing: {
+        title: "Obrada",
+        description: "Pripremamo vaše artikle",
+        time: "Danas"
+      },
+      shipping: {
+        title: "Dostava",
+        description: "Procijenjena dostava za 2-3 dana",
+        time: "Sutra"
+      },
+      delivered: {
+        title: "Dostavljeno",
+        description: "Stići će na vaša vrata",
+        time: "2-3 dana"
+      }
+    },
+    statuses: {
+      complete: "Završeno",
+      inProgress: "U Tijeku"
+    }
+  },
+  actionButtons: {
+    viewDetails: "Pogledajte Pojedinosti Narudžbe",
+    continueShopping: "Nastavite Kupovinu",
+    downloadReceipt: "Preuzmite Račun",
+    emailReceipt: "Pošaljite Račun E-mailom"
+  },
+  supportCard: {
+    title: "Trebate Pomoć?",
+    description: "Naš tim za podršku je ovdje da vam pomogne s bilo kojim pitanjima o vašoj narudžbi.",
+    contactSupport: "Kontaktirajte Podršku"
+  },
+  quickActions: {
+    title: "Brze Radnje",
+    viewAllOrders: "Pogledajte Sve Narudžbe",
+    accountSettings: "Postavke Računa"
+  },
+  deliveryInfo: {
+    title: "Ažuriranja Dostave",
+    subtitle: "Obavijestit ćemo vas",
+    estimatedDelivery: "Procijenjena Dostava",
+    trackingNumber: "Broj za Praćenje",
+    willBeProvided: "Bit će osiguran"
+  },
+  footer: {
+    confirmed: "✓ Potvrđeno",
+    confirmationMessage: "Potvrdni e-mail poslan je na vašu registriranu adresu e-pošte. Možete pratiti status svoje narudžbe u bilo kojem trenutku iz odjeljka Moje Narudžbe.",
+    links: {
+      helpCenter: "Centar za Pomoć",
+      shippingPolicy: "Politika Dostave",
+      returnsRefunds: "Povrati & Naknade",
+      contactUs: "Kontaktirajte Nas"
+    }
+  },
+  messages: {
+    receiptDownloaded: "Račun je uspješno preuzet!",
+    emailSubject: "Potvrda Vaše Narudžbe - {orderId}"
+  }
+},
+ordersPage: {
+  header: {
+    title: "Moje Narudžbe",
+    subtitle: "Pratite vaše nedavne kupovine i status narudžbe"
+  },
+  search: {
+    placeholder: "Pretražite narudžbe, ime, telefon...",
+    filterAll: "Sve",
+    filterPending: "Na Čekanju",
+    filterProcessing: "U Obradi",
+    filterShipped: "Poslano",
+    filterRejected: "Odbijeno"
+  },
+  statuses: {
+    pending: "Na Čekanju",
+    processing: "U Obradi",
+    shipped: "Poslano",
+    rejected: "Odbijeno",
+    completed: "Završeno"
+  },
+  orderItem: {
+    orderId: "Broj Narudžbe",
+    itemsCount: "{count} artikal{a}",
+    quantity: "Kol: {qty}",
+    deliverTo: "Dostava na: {name}, {city}",
+    viewDetails: "Pogledajte Detalje"
+  },
+  emptyState: {
+    title: "Još nema narudžbi",
+    description: "Vaša istorija narudžbi će se pojaviti ovdje. Počnite s kupovinom da pratite vaše kupovine.",
+    startShopping: "Počnite Kupovinu →"
+  },
+  loading: "Učitavanje vaših narudžbi..."
+},
+orderDetailPage: {
+  header: {
+    backToOrders: "Natrag na Narudžbe",
+    orderNumber: "Narudžba #{id}",
+    printInvoice: "Štampaj Fakturu",
+    downloadPDF: "Preuzmi PDF",
+    shareOrder: "Podijeli Narudžbu"
+  },
+  orderHeader: {
+    orderId: "Broj Narudžbe",
+    orderDate: "Datum Narudžbe",
+    items: "Artikli",
+    totalItems: "{count} {items}",
+    item: "artikal",
+    itemsPlural: "artikala"
+  },
+  status: {
+    pending: "Na Čekanju",
+    processing: "U Obradi",
+    shipped: "Poslano",
+    delivered: "Dostavljeno",
+    rejected: "Odbijeno",
+    cancelled: "Otkazano",
+    completed: "Završeno"
+  },
+  orderProgress: {
+    title: "Napredak Narudžbe",
+    steps: ["Naručeno", "U Obradi", "Poslano", "Dostavljeno"],
+    current: "Trenutno",
+    estimatedDelivery: "Procijenjena Dostava",
+    delivered: "Dostavljeno",
+    deliveredOn: "Dostavljeno dana",
+    expectedBy: "Očekivano do"
+  },
+  rejectedState: {
+    title: "Narudžba Odbijena",
+    cancelled: "Otkazano",
+    orderStopped: "Narudžba Zaustavljena",
+    cannotProcess: "Narudžba Se Ne Može Obraditi",
+    codNote: "Nije bilo potrebno plaćanje jer je ovo bila narudžba s Pouzećem.",
+    paymentNote: "Ako je izvršeno bilo kakvo plaćanje, bit će refundirano u roku od 5-7 radnih dana.",
+    contactSupport: "Kontaktirajte Podršku",
+    shopAgain: "Kupite Ponovo"
+  },
+  orderItems: {
+    title: "Artikli Narudžbe",
+    totalItems: "ukupno artikala",
+    quantity: "Količina:",
+    priceEach: "svaki",
+    subtotal: "Međuzbir",
+    shipping: "Dostava",
+    shippingFree: "BESPLATNO",
+    tax: "Porez",
+    total: "Ukupno",
+    inclusiveTax: "Uključujući sve poreze",
+    distinctItems: "različiti artikli"
+  },
+  deliveryAddress: {
+    title: "Adresa Dostave",
+    billingAddress: "Adresa za Naplatu",
+    recipient: "Primatelj",
+    primaryContact: "Primarni kontakt"
+  },
+  paymentInfo: {
+    title: "Informacije o Plaćanju",
+    paymentMethod: "Način Plaćanja",
+    paymentStatus: "Status Plaćanja",
+    pending: "Na Čekanju",
+    paid: "Plaćeno",
+    via: "putem",
+    codInstructions: "Upute za Pouzeće",
+    codNote: "Molimo pripremite tačan iznos za ₹{amount}",
+    paymentNote: "Napomena o Plaćanju",
+    codRefundNote: "Nije bilo potrebno plaćanje za ovu narudžbu s Pouzećem.",
+    regularRefundNote: "Bilo koje plaćanje bit će automatski refundirano."
+  },
+  customerSupport: {
+    callSupport: "Nazovite Podršku",
+    issueResolution: "Rješavanje Problema",
+    needHelp: "Trebate pomoć s odbijenom narudžbom?",
+    fastResolution: "Brzo rješavanje problema",
+    availableHours: "Dostupno 9:00 - 21:00",
+    trackOrder: "Pratite Narudžbu",
+    reorderItems: "Ponovno Naručite Artikle",
+    liveTracking: "Praćenje uživo dostupno",
+    quickReorder: "Brzo ponovno naručivanje dostupno",
+    trackPackage: "Pratite Paket",
+    emailSupport: "Pošaljite nam email za pomoć",
+    contactSupport: "Kontaktirajte Podršku"
+  },
+  footerNote: {
+    needHelp: "Trebate pomoć s vašom narudžbom?",
+    contactSupport: "Kontaktirajte naš tim podrške"
+  },
+  errorState: {
+    oops: "Ups!",
+    orderNotFound: "Narudžba Nije Pronađena",
+    notExist: "Narudžba koju tražite ne postoji ili nemate dopuštenje za njen pregled."
+  },
+  actions: {
+    contactSupport: "Kontaktirajte Podršku",
+    shopAgain: "Kupite Ponovo"
+  }
+},
   contactPage: {
   hero: {
     title: "Kontaktirajte Nas",
@@ -317,6 +678,27 @@ const bs = {
     message: {
       required: "Poruka je obavezna"
     }
+  }
+},
+homeProducts: {
+  header: {
+    tag: "Svi Proizvodi",
+    showingAll: "Prikaz svih {count} proizvoda",
+    noProducts: "Nije pronađen nijedan proizvod za",
+    tryAnotherBrand: "Pokušajte odabrati drugi brend ili provjerite kasnije.",
+    viewBrandProducts: "Pogledajte Proizvode {brand}"
+  },
+  productCard: {
+    category: "Kategorija",
+    dosage: "Doza:",
+    form: "Oblik:",
+    pack: "Pakiranje:",
+    details: "Detalji",
+    enquire: "Upit"
+  },
+  buttons: {
+    viewBrandProducts: "Pogledajte Proizvode {brand}",
+    productsCount: "{count} Proizvoda"
   }
 },
 productsPage: {
