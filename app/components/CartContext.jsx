@@ -61,42 +61,60 @@ export function CartProvider({ children }) {
   };
 
   /* ---------- ADD TO CART (B2B VERSION) ---------- */
-  const addToCart = (product, qty = 1, options = {}) => {
-    const {
-      openDrawer: shouldOpenDrawer = false,
-      toast: shouldToast = true,
-      isBulkAdd = true, // Default to bulk add for B2B
-    } = options;
+  // In CartContext.jsx - MODIFY the addToCart function:
+/* ---------- ADD TO CART (B2B VERSION) ---------- */
+const addToCart = (product, qty = 1, options = {}) => {
+  const {
+    openDrawer: shouldOpenDrawer = false,
+    toast: shouldToast = true,
+    isBulkAdd = true,
+  } = options;
 
-    setCartItems((prev) => {
-      const existing = prev.find((p) => p.slug === product.slug);
-
-      if (existing) {
-        // If product exists, add BULK_QUANTITY (50 units)
-        return prev.map((p) =>
-          p.slug === product.slug
-            ? { 
-                ...p, 
-                qty: p.qty + BULK_QUANTITY, // Add 50 more units
-                // Keep display properties
-                displayQty: 1 // For cart badge - always 1
-              }
-            : p
-        );
-      }
-
-      // First time add - add BULK_QUANTITY (50 units)
-      return [...prev, { 
-        ...product, 
-        qty: BULK_QUANTITY, // Actual quantity = 50
-        displayQty: 1, // For cart badge - always 1
-        bulkUnit: BULK_QUANTITY // Store bulk unit
-      }];
-    });
-
-    if (shouldOpenDrawer) openDrawer();
-    if (shouldToast) showToast(`Added ${BULK_QUANTITY} units: ${product.name}`);
+  // CRITICAL FIX: Validate and ensure product has all required properties
+  const validatedProduct = {
+    ...product,
+    // Ensure these properties always exist
+    name: product.name || "Unknown Product",
+    slug: product.slug || product.id || `product-${Date.now()}`,
+    price: Number(product.price) || 0, // Convert to number, default to 0
+    image: product.image || "/placeholder.jpg",
+    brand: product.brand || "Unknown Brand",
   };
+
+  console.log("🛒 Cart adding validated product:", {
+    name: validatedProduct.name,
+    price: validatedProduct.price,
+    originalPrice: product.price
+  });
+
+  setCartItems((prev) => {
+    const existing = prev.find((p) => p.slug === validatedProduct.slug);
+
+    if (existing) {
+      return prev.map((p) =>
+        p.slug === validatedProduct.slug
+          ? { 
+              ...p, 
+              qty: p.qty + BULK_QUANTITY,
+              // Update price if it was 0 before
+              price: p.price === 0 ? validatedProduct.price : p.price,
+              displayQty: 1
+            }
+          : p
+      );
+    }
+
+    return [...prev, { 
+      ...validatedProduct, 
+      qty: BULK_QUANTITY,
+      displayQty: 1,
+      bulkUnit: BULK_QUANTITY
+    }];
+  });
+
+  if (shouldOpenDrawer) openDrawer();
+  if (shouldToast) showToast(`Added ${BULK_QUANTITY} units: ${validatedProduct.name}`);
+};
 
   /* ---------- UPDATE QTY (B2B VERSION) ---------- */
   const updateQty = (slug, delta, isBulkUpdate = true) => {

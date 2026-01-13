@@ -320,7 +320,7 @@ export default function Home() {
       <ScrollProgressLine />
 
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className=" gap-8 md:gap-12 items-center">
           
           {/* LEFT CONTENT */}

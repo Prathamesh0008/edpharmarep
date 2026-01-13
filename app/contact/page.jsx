@@ -7,11 +7,8 @@ import Footer from "../components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactPage() {
-  const { t, language } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
+  const { t, language } = useLanguage();
   
-  console.log("DEBUG Contact: Current language:", language);
-  console.log("DEBUG Contact: Contact translations:", t?.contactPage);
-
   const [form, setForm] = useState({
     email: "",
     phone: "",
@@ -22,8 +19,9 @@ export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
   const [shake, setShake] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Get translations from context, fallback to English structure
+  // Get translations from context
   const contactTranslations = t?.contactPage || {
     hero: {
       title: "Contact Us",
@@ -60,7 +58,8 @@ export default function ContactPage() {
         message: "Type your message here..."
       },
       submitButton: "Submit Message",
-      successMessage: "✅ Message sent successfully!"
+      submittingButton: "Sending...",
+      successMessage: "✅ Message sent successfully! Check your email for confirmation."
     },
     validation: {
       email: {
@@ -100,7 +99,7 @@ export default function ContactPage() {
     else if (!/\S+@\S+\.\S+/.test(form.email)) newErrors.email = validation.email?.invalid || "Email is invalid";
 
     if (!form.phone) newErrors.phone = validation.phone?.required || "Phone is required";
-    else if (!/^\+?[\d\s\-()]{7,}$/.test(form.phone)) newErrors.phone = validation.phone?.invalid || "Phone number is invalid";
+    else if (!/^[\d\s\-()]{7,}$/.test(form.phone.replace(/\D/g, ''))) newErrors.phone = validation.phone?.invalid || "Phone number is invalid";
 
     if (!form.name) newErrors.name = validation.name?.required || "Name is required";
 
@@ -109,7 +108,7 @@ export default function ContactPage() {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const validationErrors = validate();
@@ -120,26 +119,52 @@ export default function ContactPage() {
       return;
     }
 
-    console.log("Form Data:", form);
-    setSubmitted(true);
+    setIsLoading(true);
     setErrors({});
 
-    setForm({
-      email: "",
-      phone: "",
-      name: "",
-      message: "",
-    });
+    try {
+      console.log("📨 Sending contact form data:", form);
+      
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.message || "Failed to send message");
+      }
+
+      console.log("✅ Contact form submitted successfully:", data);
+      
+      setSubmitted(true);
+      
+      // Reset form
+      setForm({
+        email: "",
+        phone: "",
+        name: "",
+        message: "",
+      });
+
+    } catch (error) {
+      console.error("❌ Contact form submission error:", error);
+      setErrors({ 
+        submit: error.message || "Failed to send message. Please try again." 
+      });
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <main className="min-h-screen bg-[#eaf3f3] text-[#0f2f2f]">
-      {/* Debug banner - remove this after testing */}
-      <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
-        <div>Lang: {language}</div>
-        <div>Has contactPage: {t?.contactPage ? "Yes" : "No"}</div>
-      </div>
-      
       {/* <Navbar/> */}
       
       {/* HERO */}
@@ -182,7 +207,7 @@ export default function ContactPage() {
                 <div className="text-3xl sm:text-4xl">✉️</div>
                 <div>
                   <h4 className="font-semibold">mail@influenca.id</h4>
-                  <p className="text-sm text-gray-600 mt-1">Email us for business inquiries</p>
+                  <p className="text-sm text-gray-6 00 mt-1">Email us for business inquiries</p>
                 </div>
               </div>
               <div className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
@@ -215,6 +240,7 @@ export default function ContactPage() {
                 className={`field-input ${errors.email ? "input-error" : ""}`}
                 aria-invalid={errors.email ? "true" : "false"}
                 placeholder={formPlaceholders.email || "Enter your email address"}
+                disabled={isLoading}
               />
               {errors.email && <p className="error-text">{errors.email}</p>}
             </div>
@@ -231,6 +257,7 @@ export default function ContactPage() {
                 className={`field-input ${errors.phone ? "input-error" : ""}`}
                 aria-invalid={errors.phone ? "true" : "false"}
                 placeholder={formPlaceholders.phone || "Enter your phone number"}
+                disabled={isLoading}
               />
               {errors.phone && <p className="error-text">{errors.phone}</p>}
             </div>
@@ -248,6 +275,7 @@ export default function ContactPage() {
               className={`field-input ${errors.name ? "input-error" : ""}`}
               aria-invalid={errors.name ? "true" : "false"}
               placeholder={formPlaceholders.name || "Enter your full name"}
+              disabled={isLoading}
             />
             {errors.name && <p className="error-text">{errors.name}</p>}
           </div>
@@ -263,21 +291,37 @@ export default function ContactPage() {
               className={`field-input h-28 resize-none ${errors.message ? "input-error" : ""}`}
               aria-invalid={errors.message ? "true" : "false"}
               placeholder={formPlaceholders.message || "Type your message here..."}
+              disabled={isLoading}
             />
             {errors.message && <p className="error-text">{errors.message}</p>}
           </div>
 
+          {errors.submit && (
+            <p className="error-text mt-2">{errors.submit}</p>
+          )}
+
           <button
             type="submit"
-            className="btn-primary mt-4 w-full sm:w-auto hover:scale-105 transition-transform duration-300"
+            disabled={isLoading}
+            className={`btn-primary mt-4 w-full sm:w-auto hover:scale-105 transition-transform duration-300 ${
+              isLoading ? "opacity-70 cursor-not-allowed" : ""
+            }`}
           >
-            {formButtons.submitButton || "Submit Message"}
+            {isLoading 
+              ? (formButtons.submittingButton || "Sending...") 
+              : (formButtons.submitButton || "Submit Message")
+            }
           </button>
 
           {submitted && (
-            <p className="mt-3 text-green-700 text-sm">
-              {formButtons.successMessage || "✅ Message sent successfully!"}
-            </p>
+            <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg">
+              <p className="text-green-700 text-sm">
+                {formButtons.successMessage || "✅ Message sent successfully! Check your email for confirmation."}
+              </p>
+              <p className="text-green-600 text-xs mt-1">
+                We've sent a confirmation email to {form.email}
+              </p>
+            </div>
           )}
         </form>
       </section>
@@ -307,6 +351,11 @@ export default function ContactPage() {
           box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
         }
 
+        .field-input:disabled {
+          background-color: rgba(255, 255, 255, 0.5);
+          cursor: not-allowed;
+        }
+
         .input-error {
           border-color: #e53e3e !important;
           animation: shake 0.3s;
@@ -320,7 +369,7 @@ export default function ContactPage() {
 
         .btn-primary {
           background: #6f9e9e;
-          padding: 10px 26px;
+          padding: 12px 30px;
           border-radius: 999px;
           color: white;
           font-weight: 500;
@@ -328,11 +377,18 @@ export default function ContactPage() {
           transition: background-color 0.3s ease;
           border: none;
           outline: none;
+          font-size: 16px;
         }
 
-        .btn-primary:hover {
+        .btn-primary:hover:not(:disabled) {
           background-color: #5b7f7f;
           transform: scale(1.05);
+        }
+
+        .btn-primary:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+          transform: none;
         }
 
         @keyframes shake {

@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { products } from "../data/products";
+// REMOVE THIS: import { products } from "../data/products"; // ❌ DELETE THIS LINE
 import { COMPOUNDS } from "../data/compounds";
 import { useSearchParams } from "next/navigation";
 import { useCart } from "../components/CartContext";
@@ -58,7 +58,9 @@ export default function ProductsPage() {
   const { addToCart } = useCart();
   const searchParams = useSearchParams();
   const brandFromUrl = searchParams.get("brand");
-  const { t, language } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
+  
+  // CHANGE HERE: Add getProductsByBrand
+  const { t, language, getProductsByBrand } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
 
   console.log("DEBUG Products: Current language:", language);
   console.log("DEBUG Products: Products translations:", t?.productsPage);
@@ -111,7 +113,10 @@ export default function ProductsPage() {
   const theme = BRAND_THEMES[selectedBrand];
   const brandCompounds = COMPOUNDS[selectedBrand] || {};
   const compoundNames = Object.keys(brandCompounds);
-  const brandProducts = products.filter((p) => p.brand === selectedBrand);
+  
+  // CHANGE HERE: Replace products.filter with getProductsByBrand
+  const brandProducts = getProductsByBrand(selectedBrand);
+  
   const brandCategories = [
     "All",
     ...new Set(brandProducts.map((p) => p.category)),
@@ -217,12 +222,13 @@ export default function ProductsPage() {
     return items.length > 0;
   });
 
+  // Rest of your code remains EXACTLY THE SAME from here...
   return (
     <div className="w-full relative">
       <Navbar />
 
       {/* Background Pattern & Gradient */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-gray-50 to-white">
+      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-gray-50 to-white -mt-">
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
@@ -233,10 +239,10 @@ export default function ProductsPage() {
       </div>
 
       {/* Debug banner - remove this after testing */}
-      <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
+      {/* <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
         <div>Lang: {language}</div>
         <div>Has productsPage: {t?.productsPage ? "Yes" : "No"}</div>
-      </div>
+      </div> */}
 
       {/* Floating Brand Selector - Medium Size & Responsive */}
       <div

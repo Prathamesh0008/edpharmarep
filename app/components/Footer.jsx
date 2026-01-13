@@ -77,10 +77,15 @@ export default function Footer() {
         {/* Brand section */}
         <div className="space-y-4">
           <div className="flex items-center gap-2">
-            <div className="p-2 bg-white/10 rounded-lg">
-              <FaPills className="text-2xl text-cyan-300" />
-            </div>
-            <h2 className="text-2xl font-bold tracking-tight">ED Pharma</h2>
+            
+            <Link href="/" className="flex items-center">
+            <img
+              src="/logo.svg"
+              alt="ED Pharma"
+              className="h-18 w-auto object-contain "
+            />
+          </Link>
+            
           </div>
           <p className="text-white/80 text-sm leading-relaxed">
             {footerData.description}

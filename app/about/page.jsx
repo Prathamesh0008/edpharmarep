@@ -100,10 +100,10 @@ export default function AboutPage() {
       }}
     >
       {/* Debug banner - remove this after testing */}
-      <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
+      {/* <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
         <div>Lang: {language}</div>
         <div>Has about: {t?.about ? "Yes" : "No"}</div>
-      </div>
+      </div> */}
       
       <ScrollProgressLine />
       <Offer />

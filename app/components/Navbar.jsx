@@ -306,12 +306,12 @@ export default function Navbar() {
       {/* ================= NAVBAR ================= */}
       <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-[60px] flex items-center justify-between">
-          {/* LOGO */}
+          {/* LOGO public\logo.svg*/}
           <Link href="/" className="flex items-center">
             <img
-              src="/EdLogo.svg"
+              src="/logo.svg"
               alt="ED Pharma"
-              className="h-10 w-auto object-contain"
+              className="h-18 w-auto object-contain"
             />
           </Link>
 

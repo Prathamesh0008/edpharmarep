@@ -8,15 +8,27 @@ import { useRouter } from "next/navigation";
 export default function ProductActions({ product, theme }) {
   const router = useRouter();
   const { addBulkToCart, BULK_QUANTITY } = useCart();
-  const [batchCount, setBatchCount] = useState(1); // Number of batches
+  const [batchCount, setBatchCount] = useState(1);
   const [loading, setLoading] = useState(false);
 
   const totalUnits = batchCount * BULK_QUANTITY;
 
   const handleAddToCart = () => {
-    // Add product BATCH_COUNT times (each batch = BULK_QUANTITY units)
+    // Ensure product has all required properties
+    const productToAdd = {
+      ...product,
+      // Ensure these critical fields exist
+      name: product.name || "Product",
+      slug: product.slug || product.id || "",
+      price: product.price || 0, // CRITICAL: Ensure price exists
+      image: product.image || "/placeholder.jpg",
+      brand: product.brand || "Unknown Brand",
+      // Add any other required fields
+    };
+    
+    // Add product BATCH_COUNT times
     for (let i = 0; i < batchCount; i++) {
-      addBulkToCart(product);
+      addBulkToCart(productToAdd);
     }
   };
 
@@ -24,13 +36,19 @@ export default function ProductActions({ product, theme }) {
     setLoading(true);
     
     try {
-      // Clear any existing cart items for single product checkout
-      // If you want to keep cart context, you can add this product first
+      const productToAdd = {
+        ...product,
+        price: product.price || 0,
+        name: product.name || "Product",
+        slug: product.slug || product.id || "",
+      };
+      
+      // Add batches to cart
       for (let i = 0; i < batchCount; i++) {
-        addBulkToCart(product);
+        addBulkToCart(productToAdd);
       }
       
-      // Navigate to checkout page
+      // Navigate to checkout
       router.push(`/checkout?product=${encodeURIComponent(product.slug || product.id)}&quantity=${totalUnits}`);
       
     } catch (error) {

@@ -1,4 +1,3 @@
-//context/LanguageContext.jsx
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
@@ -46,81 +45,147 @@ const LANGUAGES = {
   ro, sq, el, bg, mk, sr, hr, bs
 };
 
+// Helper function to convert your object structure to array
+const convertProductsToArray = (productsObj) => {
+  if (!productsObj) return [];
+  
+  // If it's already an array, return it
+  if (Array.isArray(productsObj)) {
+    return productsObj;
+  }
+  
+  // If it has a 'products' property that's an array
+  if (productsObj.products && Array.isArray(productsObj.products)) {
+    return productsObj.products;
+  }
+  
+  // Convert your object structure { "slug1": {...}, "slug2": {...} } to array
+  if (typeof productsObj === 'object') {
+    const productsArray = Object.values(productsObj);
+    
+    // Make sure each product has a slug (use the key if missing)
+    productsArray.forEach((product, index) => {
+      if (!product.slug && Object.keys(productsObj)[index]) {
+        product.slug = Object.keys(productsObj)[index];
+      }
+    });
+    
+    return productsArray;
+  }
+  
+  return [];
+};
+
+// Debug each language's product structure
+console.log("=== DEBUG: Checking product file structures ===");
+console.log("English products type:", typeof enProducts);
+console.log("English products keys:", Object.keys(enProducts || {}).slice(0, 3), "...");
+console.log("English products converted count:", convertProductsToArray(enProducts).length);
+
 const PRODUCT_LANGUAGES = {
-  en: enProducts,
-  de: deProducts,
-  fr: frProducts,
-  es: esProducts,
-  pt: ptProducts,
-  nl: nlProducts,
-  ja: jaProducts,
-  zh: zhProducts,
-  ar: arProducts,
-  hr: hrProducts, 
-  bs: bsProducts,
-  bg: bgProducts, 
-  mk: mkProducts, 
-  sr: srProducts,
-  ro: roProducts,
-  sq: sqProducts,
-  el: elProducts
+  en: convertProductsToArray(enProducts),
+  de: convertProductsToArray(deProducts),
+  fr: convertProductsToArray(frProducts),
+  es: convertProductsToArray(esProducts),
+  pt: convertProductsToArray(ptProducts),
+  nl: convertProductsToArray(nlProducts),
+  ja: convertProductsToArray(jaProducts),
+  zh: convertProductsToArray(zhProducts),
+  ar: convertProductsToArray(arProducts),
+  hr: convertProductsToArray(hrProducts),
+  bs: convertProductsToArray(bsProducts),
+  bg: convertProductsToArray(bgProducts),
+  mk: convertProductsToArray(mkProducts),
+  sr: convertProductsToArray(srProducts),
+  ro: convertProductsToArray(roProducts),
+  sq: convertProductsToArray(sqProducts),
+  el: convertProductsToArray(elProducts)
 };
 
 const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState("en");
+  const [products, setProducts] = useState(PRODUCT_LANGUAGES.en || []);
 
+  // Debug on mount
+  useEffect(() => {
+    console.log("🚀 LanguageContext Initialized");
+    console.log("🌐 Current language:", lang);
+    console.log("📊 Products loaded:", products.length);
+    
+    if (products.length > 0) {
+      console.log("✅ Sample product:", {
+        name: products[0].name,
+        slug: products[0].slug,
+        brand: products[0].brand,
+        category: products[0].category
+      });
+      
+      // List all unique brands
+      const brands = [...new Set(products.map(p => p.brand))].filter(Boolean);
+      console.log("🏷️ Available brands:", brands);
+    }
+  }, [lang, products]);
+
+  // Initialize language from localStorage
   useEffect(() => {
     const saved = localStorage.getItem("app-lang");
     if (saved && LANGUAGES[saved]) {
       setLang(saved);
+      setProducts(PRODUCT_LANGUAGES[saved] || PRODUCT_LANGUAGES.en);
     }
   }, []);
 
   const changeLanguage = (code) => {
     if (LANGUAGES[code]) {
       setLang(code);
+      setProducts(PRODUCT_LANGUAGES[code] || PRODUCT_LANGUAGES.en);
       localStorage.setItem("app-lang", code);
     }
   };
 
   const getProductBySlug = (slug) => {
-  console.log("🔍 Looking for slug:", slug, "in language:", lang);
-  
-  // Try to find the product in current language with language suffix
-  const productKey = `${slug}-${lang}`;
-  const productInCurrentLang = PRODUCT_LANGUAGES[lang]?.[productKey];
-  
-  if (productInCurrentLang) {
-    console.log("✅ Found in current language:", productInCurrentLang.name);
-    return productInCurrentLang;
-  }
-  
-  // Fallback to English version
-  const productKeyEn = `${slug}-en`;
-  const productInEnglish = PRODUCT_LANGUAGES.en?.[productKeyEn];
-  
-  if (productInEnglish) {
-    console.log("🔄 Found in English fallback:", productInEnglish.name);
-    return productInEnglish;
-  }
-  
-  // If still not found, search through all products in current language
-  const currentLangProducts = PRODUCT_LANGUAGES[lang];
-  if (currentLangProducts) {
-    for (const key in currentLangProducts) {
-      const product = currentLangProducts[key];
-      if (product.slug === slug) {
-        console.log("🔎 Found by slug match:", product.name);
-        return product;
-      }
+    // Find in current language
+    const product = products.find(p => p.slug === slug);
+    if (product) return product;
+    
+    // Fallback to English
+    return PRODUCT_LANGUAGES.en.find(p => p.slug === slug) || null;
+  };
+
+  // Get products by brand - FIXED for your structure
+  const getProductsByBrand = (brand) => {
+    console.log(`🔍 getProductsByBrand("${brand}") called`);
+    console.log(`📊 Total products in ${lang}:`, products.length);
+    
+    if (!products || !Array.isArray(products)) {
+      console.log("⚠️ No products array available");
+      return [];
     }
-  }
-  
-  console.log("❌ Product not found for slug:", slug);
-  return null;
-};
+    
+    // Filter products by brand
+    const filteredProducts = products.filter(p => {
+      const matches = p.brand === brand;
+      return matches;
+    });
+    
+    console.log(`✅ Found ${filteredProducts.length} products for "${brand}"`);
+    
+    // If no products in current language, fallback to English
+    if (filteredProducts.length === 0 && lang !== "en") {
+      console.log(`🔄 No products for "${brand}" in ${lang}, checking English...`);
+      const englishProducts = PRODUCT_LANGUAGES.en || [];
+      return englishProducts.filter(p => p.brand === brand);
+    }
+    
+    return filteredProducts;
+  };
+
+  // Get all products
+  const getAllProducts = () => {
+    return products || [];
+  };
 
   // Get available languages for selector
   const availableLanguages = [
@@ -150,7 +215,10 @@ export function LanguageProvider({ children }) {
         changeLanguage,
         availableLanguages,
         t: LANGUAGES[lang] || LANGUAGES.en,
+        products,
         getProductBySlug,
+        getProductsByBrand,
+        getAllProducts
       }}
     >
       {children}

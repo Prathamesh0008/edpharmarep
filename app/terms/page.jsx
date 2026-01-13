@@ -133,10 +133,10 @@ export default function TermsPage() {
   return (
     <div className="relative min-h-screen overflow-hidden text-slate-800 font-sans pt-24">
       {/* Debug banner - remove this after testing */}
-      <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
+      {/* <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
         <div>Lang: {language}</div>
         <div>Has termsPage: {t?.termsPage ? "Yes" : "No"}</div>
-      </div>
+      </div> */}
       
       {/* <Navbar /> */}
       <ScrollProgressLine/>
