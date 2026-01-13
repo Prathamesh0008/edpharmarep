@@ -808,8 +808,14 @@ productDetail: {
     overview: "Übersicht"
   },
   sections: {
-    overview: "Übersicht"
-  }
+  overview: "Übersicht",
+  howItWorks: "Funktionsweise",
+  administration: "Anwendung",
+  sideEffects: "Mögliche Nebenwirkungen",
+  warnings: "Wichtige Warnhinweise",
+  tips: "Anwendungstipps"
+}
+
 },
 profilePage: {
   loading: "Ihr Profil wird geladen...",

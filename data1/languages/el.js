@@ -738,8 +738,14 @@ productDetail: {
     overview: "Επισκόπηση"
   },
   sections: {
-    overview: "Επισκόπηση"
-  }
+  overview: "Επισκόπηση",
+  howItWorks: "Πώς λειτουργεί",
+  administration: "Τρόπος χρήσης",
+  sideEffects: "Πιθανές παρενέργειες",
+  warnings: "Σημαντικές προειδοποιήσεις",
+  tips: "Συμβουλές χρήσης"
+}
+
 },
 profilePage: {
   loading: "Φόρτωση προφίλ σας...",

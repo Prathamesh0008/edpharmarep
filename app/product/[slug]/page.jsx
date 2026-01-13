@@ -39,9 +39,10 @@ export default function ProductPage({ params }) {
     sections: {
       overview: "Product Overview",
       sideEffects: "Possible Side Effects",
-      administration: "How to Use",
+      administration: "How to Use", 
       warnings: "Important Warnings",
       howItWorks: "How It Works",
+      howToUse: "How to use",
       tips: "Usage Tips"
     }
   };

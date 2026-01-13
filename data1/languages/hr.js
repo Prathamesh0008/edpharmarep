@@ -710,8 +710,14 @@ productDetail: {
     overview: "Pregled"
   },
   sections: {
-    overview: "Pregled"
-  }
+  overview: "Pregled",
+  howItWorks: "Kako djeluje",
+  administration: "Način uporabe",
+  sideEffects: "Moguće nuspojave",
+  warnings: "Važna upozorenja",
+  tips: "Savjeti za uporabu"
+}
+
 },
 
   profilePage: {

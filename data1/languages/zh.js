@@ -805,8 +805,14 @@ productDetail: {
     overview: "概述"
   },
   sections: {
-    overview: "概述"
-  }
+  overview: "概述",
+  howItWorks: "作用原理",
+  administration: "使用方法",
+  sideEffects: "可能的副作用",
+  warnings: "重要警告",
+  tips: "使用提示"
+}
+
 },
 profilePage: {
   loading: "正在加载您的个人资料...",

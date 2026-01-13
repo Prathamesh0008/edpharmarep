@@ -694,8 +694,14 @@ productDetail: {
     overview: "Overview"
   },
   sections: {
-    overview: "Overview"
-  }
+  overview: "Overview",
+  howItWorks: "How It Works",
+  administration: "How to Use",
+  sideEffects: "Possible Side Effects",
+  warnings: "Important Warnings",
+  tips: "Usage Tips"
+}
+
 },
 // Add this to your en.js file
 homeProducts: {

@@ -710,8 +710,14 @@ productDetail: {
     overview: "Përmbledhje"
   },
   sections: {
-    overview: "Përmbledhje"
-  }
+  overview: "Përmbledhje",
+  howItWorks: "Si funksionon",
+  administration: "Mënyra e përdorimit",
+  sideEffects: "Efekte anësore të mundshme",
+  warnings: "Paralajmërime të rëndësishme",
+  tips: "Këshilla përdorimi"
+}
+
 },
 
   profilePage: {

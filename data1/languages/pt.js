@@ -809,8 +809,14 @@ productDetail: {
     overview: "Visão Geral"
   },
   sections: {
-    overview: "Visão Geral"
-  }
+  overview: "Visão geral",
+  howItWorks: "Como funciona",
+  administration: "Modo de uso",
+  sideEffects: "Possíveis efeitos colaterais",
+  warnings: "Avisos importantes",
+  tips: "Dicas de uso"
+}
+
 },
 profilePage: {
   loading: "A carregar o seu perfil...",

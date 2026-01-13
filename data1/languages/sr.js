@@ -738,8 +738,14 @@ productDetail: {
     overview: "Преглед"
   },
   sections: {
-    overview: "Преглед"
-  }
+  overview: "Pregled",
+  howItWorks: "Kako deluje",
+  administration: "Način upotrebe",
+  sideEffects: "Mogući neželjeni efekti",
+  warnings: "Važna upozorenja",
+  tips: "Saveti za upotrebu"
+}
+
 },
 profilePage: {
   loading: "Učitavanje vašeg profila...",

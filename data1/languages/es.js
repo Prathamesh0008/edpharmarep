@@ -811,8 +811,14 @@ productDetail: {
     overview: "Resumen"
   },
   sections: {
-    overview: "Resumen"
-  }
+  overview: "Resumen",
+  howItWorks: "Cómo funciona",
+  administration: "Modo de uso",
+  sideEffects: "Posibles efectos secundarios",
+  warnings: "Advertencias importantes",
+  tips: "Consejos de uso"
+}
+
 },
 profilePage: {
   loading: "Cargando su perfil...",

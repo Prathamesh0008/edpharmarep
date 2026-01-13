@@ -710,8 +710,14 @@ productDetail: {
     overview: "Преглед"
   },
   sections: {
-    overview: "Преглед"
-  }
+  overview: "Общ преглед",
+  howItWorks: "Как действа",
+  administration: "Начин на употреба",
+  sideEffects: "Възможни странични ефекти",
+  warnings: "Важни предупреждения",
+  tips: "Съвети за употреба"
+}
+
 },
   profilePage: {
     loading: "Зареждане на вашия профил...",

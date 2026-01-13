@@ -817,8 +817,14 @@ productDetail: {
     overview: "نظرة عامة"
   },
   sections: {
-    overview: "نظرة عامة"
-  }
+  overview: "نظرة عامة",
+  howItWorks: "آلية العمل",
+  administration: "طريقة الاستخدام",
+  sideEffects: "الآثار الجانبية المحتملة",
+  warnings: "تحذيرات هامة",
+  tips: "نصائح الاستخدام"
+}
+
 },
 profilePage: {
   loading: "جاري تحميل ملفك الشخصي...",

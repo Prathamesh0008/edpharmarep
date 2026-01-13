@@ -751,8 +751,14 @@ productDetail: {
     overview: "Overzicht"
   },
   sections: {
-    overview: "Overzicht"
-  }
+  overview: "Overzicht",
+  howItWorks: "Hoe het werkt",
+  administration: "Gebruik",
+  sideEffects: "Mogelijke bijwerkingen",
+  warnings: "Belangrijke waarschuwingen",
+  tips: "Gebruikstips"
+}
+
 },
 profilePage: {
   loading: "Uw profiel laden...",

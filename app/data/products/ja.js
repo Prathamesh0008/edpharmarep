@@ -195,6 +195,7 @@ const products = {
   packSize: "7 × 5g サシェ",
   casId: "139755-83-2",
   image: "/products/kamagra-oral-jelly 02.jpeg",
+  slug:"kamagra-100mg-oral-jelly-vol1",
 
   description:
     "カマグラ 100mg オーラルジェリーは、ゲル状のシルデナフィルクエン酸塩を含み、経口使用を目的としています。口の中で溶けやすい製剤です。",

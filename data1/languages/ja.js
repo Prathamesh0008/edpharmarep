@@ -747,8 +747,14 @@ productDetail: {
     overview: "概要"
   },
   sections: {
-    overview: "概要"
-  }
+  overview: "概要",
+  howItWorks: "作用機序",
+  administration: "使用方法",
+  sideEffects: "考えられる副作用",
+  warnings: "重要な警告",
+  tips: "使用上のヒント"
+}
+
 },
 profilePage: {
   loading: "プロフィールを読み込み中...",

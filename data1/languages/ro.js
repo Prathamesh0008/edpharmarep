@@ -709,8 +709,14 @@ productDetail: {
     overview: "Prezentare Generală"
   },
   sections: {
-    overview: "Prezentare Generală"
-  }
+  overview: "Prezentare generală",
+  howItWorks: "Cum funcționează",
+  administration: "Mod de utilizare",
+  sideEffects: "Posibile efecte secundare",
+  warnings: "Avertismente importante",
+  tips: "Sfaturi de utilizare"
+}
+
 },
 
   profilePage: {
