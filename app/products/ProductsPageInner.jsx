@@ -4,45 +4,68 @@ import Navbar from "../components/Navbar";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-// REMOVE THIS: import { products } from "../data/products"; // ❌ DELETE THIS LINE
 import { COMPOUNDS } from "../data/compounds";
 import { useSearchParams } from "next/navigation";
 import { useCart } from "../components/CartContext";
-import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
+import { useLanguage } from "@/context/LanguageContext";
 
-// BRAND THEMES (unchanged)
+// BRAND THEMES
 const BRAND_THEMES = {
   "ED Ajanta Pharma": {
     name: "Ajanta Pharma",
-    logo: "/bg/ajanta.png",
+    logo: "/bg/ajanta.png", //public\Artboard 2.png
     primary: "#0A2A73",
     secondary: "#2A7DB8",
+    accent: "#1C5EB7",
     bgImage: "/bg/bg1.png",
+     bgUpImage: "/bg/bgup.png",    // Top right image
+    bgDownImage: "/bg/bgdown.png", // Bottom left image
     gradient: "linear-gradient(135deg, #0A2A73 0%, #2A7DB8 100%)",
+    compoundHeaderGradient:
+      "linear-gradient(135deg, #0A2A73 0%, #1C5EB7 50%, #2A7DB8 100%)",
+    compoundHeaderShadow: "0 4px 20px rgba(10, 42, 115, 0.25)",
+    buttonHover: "#0F3A8E",
   },
   "ED Centurion Remedies": {
     name: "Centurion Remedies",
     logo: "/bg/centurion.png",
-    primary: "#B69A6B",
-    secondary: "#D9C7A2",
+    primary: "#FFB800",
+    secondary: "#FFD966",
+    accent: "#E6A400",
     bgImage: "/bg/bg5.png",
-    gradient: "linear-gradient(135deg, #B69A6B 0%, #D9C7A2 100%)",
+    gradient: "linear-gradient(135deg, #FFB800 0%, #FFD966 100%)",
+    compoundHeaderGradient:
+      "linear-gradient(135deg, #FFB800 0%, #E6A400 50%, #FFD966 100%)",
+    compoundHeaderShadow: "0 4px 20px rgba(255, 184, 0, 0.25)",
+    buttonHover: "#E6A400",
+    imageBorderColor: "#FFFFFF", // Add this for white border
+    imageBorderStyle: "embossed", // Add this to identify style
   },
   "ED Sunrise Remedies": {
     name: "Sunrise Remedies",
     logo: "/bg/sunrise.png",
     primary: "#E86A0C",
     secondary: "#F6B15C",
+    accent: "#F08529",
     bgImage: "/bg/bg4.png",
     gradient: "linear-gradient(135deg, #E86A0C 0%, #F6B15C 100%)",
+    compoundHeaderGradient:
+      "linear-gradient(135deg, #E86A0C 0%, #F08529 50%, #F6B15C 100%)",
+    compoundHeaderShadow: "0 4px 20px rgba(232, 106, 12, 0.25)",
+    buttonHover: "#D45F0A",
   },
   Nova: {
     name: "Nova",
     logo: "/bg/nova.png",
     primary: "#081A3E",
     secondary: "#1C4A8C",
+    accent: "#122A5C",
     bgImage: "/bg/bg6.png",
     gradient: "linear-gradient(135deg, #081A3E 0%, #1C4A8C 100%)",
+    compoundHeaderGradient:
+      "linear-gradient(135deg, #081A3E 0%, #122A5C 50%, #1C4A8C 100%)",
+    compoundHeaderShadow: "0 4px 20px rgba(8, 26, 62, 0.25)",
+    buttonHover: "#0D234F",
   },
 };
 
@@ -58,24 +81,21 @@ export default function ProductsPage() {
   const { addToCart } = useCart();
   const searchParams = useSearchParams();
   const brandFromUrl = searchParams.get("brand");
-  
-  // CHANGE HERE: Add getProductsByBrand
-  const { t, language, getProductsByBrand } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
+  const { t, language, getProductsByBrand } = useLanguage();
 
-  console.log("DEBUG Products: Current language:", language);
-  console.log("DEBUG Products: Products translations:", t?.productsPage);
-
-  // Get translations from context, fallback to English structure
+  // Get translations
   const productsTranslations = t?.productsPage || {
     hero: {
       suffix: "Products",
-      subtitle: "Browse through our comprehensive range of pharmaceutical products"
+      subtitle:
+        "Browse through our comprehensive range of pharmaceutical products",
     },
     filters: {
-      searchPlaceholder: "Search products by name, composition, or description...",
+      searchPlaceholder:
+        "Search products by name, composition, or description...",
       allCompounds: "All Compounds",
       resetButton: "Reset All Filters",
-      clearSearch: "Clear Search"
+      clearSearch: "Clear Search",
     },
     productCard: {
       viewDetails: "View Details",
@@ -86,12 +106,13 @@ export default function ProductsPage() {
       packSizeLabel: "Pack Size:",
       skusAvailable: "SKUs",
       productsAvailable: "products available",
-      productAvailable: "product available"
+      productAvailable: "product available",
     },
     emptyState: {
       title: "No Products Found",
-      description: "We couldn't find any products matching your search criteria."
-    }
+      description:
+        "We couldn't find any products matching your search criteria.",
+    },
   };
 
   const hero = productsTranslations?.hero || {};
@@ -113,10 +134,7 @@ export default function ProductsPage() {
   const theme = BRAND_THEMES[selectedBrand];
   const brandCompounds = COMPOUNDS[selectedBrand] || {};
   const compoundNames = Object.keys(brandCompounds);
-  
-  // CHANGE HERE: Replace products.filter with getProductsByBrand
   const brandProducts = getProductsByBrand(selectedBrand);
-  
   const brandCategories = [
     "All",
     ...new Set(brandProducts.map((p) => p.category)),
@@ -195,7 +213,6 @@ export default function ProductsPage() {
   // GLOBAL FILTER CHECK
   const hasAnyResults = compoundNames.some((compound) => {
     const slugs = brandCompounds[compound] || [];
-
     const items = brandProducts.filter((p) => {
       const slug = p.slug.toLowerCase();
       const name = p.name.toLowerCase();
@@ -222,29 +239,55 @@ export default function ProductsPage() {
     return items.length > 0;
   });
 
-  // Rest of your code remains EXACTLY THE SAME from here...
   return (
-    <div className="w-full relative">
+    <div className="w-full relative min-h-screen">
       <Navbar />
 
-      {/* Background Pattern & Gradient */}
-      <div className="fixed inset-0 -z-10 bg-gradient-to-b from-gray-50 to-white -mt-">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `radial-gradient(${theme.primary} 1px, transparent 1px)`,
-            backgroundSize: "50px 50px",
-          }}
-        ></div>
-      </div>
+      {/* Background with brand image */}
+      {/* Background with brand image */}
+<div className="fixed inset-0 -z-10">
+  {/* Brand background image */}
+  <div
+    className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+    style={{
+      backgroundImage: `url(${theme.bgImage})`,
+    }}
+  ></div>
+  
+  {/* Conditional Ajanta Pharma specific background images */}
+  {selectedBrand === "ED Ajanta Pharma" && theme.bgUpImage && theme.bgDownImage && (
+    <>
+      {/* Top right image */}
+      <div 
+        className="absolute -top-20 -right-35 w-130 h-200 opacity-80"
+        style={{
+          backgroundImage: `url(${theme.bgUpImage})`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'top right',
+          mixBlendMode: 'multiply'
+        }}
+      ></div>
+      
+      {/* Bottom left image */}
+      <div 
+        className="absolute -bottom-20 -left-35 w-110 h-204 opacity-80"
+        style={{
+          backgroundImage: `url(${theme.bgDownImage})`,
+          backgroundSize: 'contain',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'bottom left',
+          mixBlendMode: 'multiply'
+        }}
+      ></div>
+    </>
+  )}
+  
+  {/* White overlay for better readability but still showing background */}
+  <div className="absolute inset-0 bg-white/30"></div>
+</div>
 
-      {/* Debug banner - remove this after testing */}
-      {/* <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
-        <div>Lang: {language}</div>
-        <div>Has productsPage: {t?.productsPage ? "Yes" : "No"}</div>
-      </div> */}
-
-      {/* Floating Brand Selector - Medium Size & Responsive */}
+      {/* Floating Brand Selector - White with shadow */}
       <div
         className={`fixed top-18 sm:top-20 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-300 ${
           isScrolled
@@ -252,7 +295,7 @@ export default function ProductsPage() {
             : "opacity-0 scale-95 pointer-events-none"
         }`}
       >
-        <div className="flex items-center gap-1 sm:gap-2 bg-white rounded-full shadow-xl px-3 sm:px-4 py-2 sm:py-3 border">
+        <div className="flex items-center gap-1 sm:gap-2 bg-white rounded-full shadow-xl px-3 sm:px-4 py-2 sm:py-3 border border-gray-100">
           {BRAND_ORDER.map((brandKey) => {
             const b = BRAND_THEMES[brandKey];
             const isActive = selectedBrand === brandKey;
@@ -264,19 +307,21 @@ export default function ProductsPage() {
                   setSelectedBrand(brandKey);
                   setSearch("");
                   setCategoryFilter("All");
-
                   setTimeout(() => {
                     scrollToProductsStart();
                   }, 50);
                 }}
                 className={`flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all ${
-                  isActive ? "bg-blue-50" : "hover:bg-gray-50"
+                  isActive ? "shadow-inner" : "hover:bg-gray-50"
                 }`}
                 style={{
-                  backgroundColor: isActive ? `${b.primary}10` : undefined,
+                  backgroundColor: isActive ? `${b.primary}15` : undefined,
+                  border: isActive
+                    ? `1.5px solid ${b.primary}40`
+                    : "1.5px solid transparent",
                 }}
               >
-                <div className="relative w-5 h-5 sm:w-6 sm:h-6">
+                <div className="relative w-5 h-5 sm:w-6 sm:h-6 cursor-pointer">
                   <Image
                     src={b.logo}
                     alt={b.name}
@@ -286,7 +331,7 @@ export default function ProductsPage() {
                 </div>
                 {isActive && (
                   <span
-                    className="text-xs sm:text-sm font-medium whitespace-nowrap"
+                    className="text-xs sm:text-sm font-semibold whitespace-nowrap"
                     style={{ color: b.primary }}
                   >
                     {b.name}
@@ -298,18 +343,14 @@ export default function ProductsPage() {
         </div>
       </div>
 
-      {/* Search Input - Full width on mobile */}
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8">
-        {/* Brand Logos at the Top - Made more responsive */}
+        {/* Brand Logos Grid */}
         <div className="mb-6 sm:mb-8 mt-7">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
             {BRAND_ORDER.map((brandKey, index) => {
               const b = BRAND_THEMES[brandKey];
               const isActive = selectedBrand === brandKey;
-
-              const isFirstLogo = index === 0;
-              const isSecondLogo = index === 1;
-              const isThirdLogo = index === 2;
 
               return (
                 <button
@@ -319,39 +360,37 @@ export default function ProductsPage() {
                     setSearch("");
                     setCategoryFilter("All");
                   }}
-                  className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-48 transition-all duration-500 transform hover:scale-[1.02] ${
+                  className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-48 transition-all duration-500 transform hover:scale-[1.02] bg-white ${
                     isActive
-                      ? "ring-2 sm:ring-4 ring-offset-1 sm:ring-offset-2 scale-[1.02]"
-                      : "hover:shadow-lg sm:hover:shadow-xl"
+                      ? "ring-3 sm:ring-4 ring-offset-1 sm:ring-offset-2 scale-[1.02] shadow-2xl"
+                      : "hover:shadow-xl"
                   }`}
                   style={{
-                    background: `linear-gradient(135deg, ${b.primary}15 0%, ${b.secondary}15 100%)`,
-                    border: `1px solid ${isActive ? b.primary : "transparent"}`,
-                    outlineColor: b.primary,
+                    border: `1px solid ${isActive ? b.primary : "#e5e7eb"}`,
+                    boxShadow: isActive
+                      ? `0 20px 40px ${b.primary}40`
+                      : "0 4px 20px rgba(0, 0, 0, 0.08)",
                   }}
                 >
                   {isActive && (
                     <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
                       <div
-                        className="w-2 h-2 sm:w-3 sm:h-3 rounded-full animate-pulse"
-                        style={{ backgroundColor: b.primary }}
+                        className="w-3 h-3 sm:w-4 sm:h-4 rounded-full animate-pulse"
+                        style={{
+                          backgroundColor: b.primary,
+                          boxShadow: `0 0 10px ${b.primary}`,
+                        }}
                       ></div>
                     </div>
                   )}
 
                   <div className="flex items-center justify-center h-full w-full cursor-pointer">
-                    <div
-                      className={`relative flex items-center justify-center transition-all duration-300 
-                      ${isFirstLogo ? "w-40 h-40" : ""}
-                      ${isSecondLogo ? "w-36 h-36" : ""}
-                      ${isThirdLogo ? "w-60 h-32" : ""}
-                    `}
-                    >
+                    <div className="relative w-40 h-40 sm:w-48 sm:h-48">
                       <Image
                         src={b.logo}
                         alt={b.name}
                         fill
-                        className="object-contain drop-shadow-md"
+                        className="object-contain "
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                         priority={index === 0}
                       />
@@ -363,50 +402,64 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        {/* Hero Section Below Logos */}
+        {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
           <div className="text-center mb-6 sm:mb-10">
             <h1 className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-4">
               <span
-                className="bg-clip-text text-transparent"
+                className="bg-clip-text text-transparent drop-shadow-sm"
                 style={{ backgroundImage: theme.gradient }}
               >
                 {theme.name}
               </span>{" "}
-              <span className="text-2xl xs:text-2xl sm:text-5xl block sm:inline">
+              <span className="text-2xl xs:text-2xl sm:text-5xl block sm:inline text-gray-900">
                 {hero.suffix || "Products"}
               </span>
             </h1>
 
-            <p className="text-base xs:text-lg sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-              {hero.subtitle || "Browse through our comprehensive range of pharmaceutical products"}
+            <p className="text-base xs:text-lg sm:text-lg text-gray-700 max-w-2xl mx-auto px-2">
+              {hero.subtitle ||
+                "Browse through our comprehensive range of pharmaceutical products"}
             </p>
           </div>
 
-          {/* Advanced Filters - Made responsive */}
-          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 mb-6 sm:mb-8">
+          {/* Advanced Filters - White background */}
+          <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 mb-6 sm:mb-8 border border-gray-100">
             <div className="flex flex-col gap-4 sm:gap-6">
-              {/* Search Input - Full width on mobile */}
-              <div className="w-full">
+              {/* Search Input */}
+              {/* <div className="w-full">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
-                    <svg className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    <svg
+                      className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                      />
                     </svg>
                   </div>
                   <input
                     type="text"
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    placeholder={filters.searchPlaceholder || "Search products by name, composition, or description..."}
-                    className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all"
-                    style={{ '--tw-ring-color': theme.primary }}
+                    placeholder={
+                      filters.searchPlaceholder ||
+                      "Search products by name, composition, or description..."
+                    }
+                    className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-3 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all shadow-sm text-gray-900"
+                    style={{ "--tw-ring-color": theme.primary }}
                   />
                 </div>
-              </div>
+              </div> */}
 
-              {/* Filters Row - Stack on mobile, row on sm+ */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap阿 4">
+              {/* Filters Row */}
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 {/* Compound Select */}
                 <div className="relative flex-1">
                   <select
@@ -415,12 +468,14 @@ export default function ProductsPage() {
                       setSelectedCompound(e.target.value);
                       scrollToCompound(e.target.value);
                     }}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all appearance-none bg-white"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-3 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all appearance-none bg-white shadow-sm text-gray-900"
                     style={{ "--tw-ring-color": theme.primary }}
                   >
-                    <option value="">{filters.allCompounds || "All Compounds"}</option>
+                    <option value="" className="text-gray-900">
+                      {filters.allCompounds || "All Compounds"}
+                    </option>
                     {compoundNames.map((c) => (
-                      <option key={c} value={c}>
+                      <option key={c} value={c} className="text-gray-900">
                         {c}
                       </option>
                     ))}
@@ -447,11 +502,11 @@ export default function ProductsPage() {
                   <select
                     value={categoryFilter}
                     onChange={(e) => setCategoryFilter(e.target.value)}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all appearance-none bg-white"
+                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-3 focus:ring-offset-1 sm:focus:ring-offset-2 focus:border-transparent transition-all appearance-none bg-white shadow-sm text-gray-900"
                     style={{ "--tw-ring-color": theme.primary }}
                   >
                     {brandCategories.map((cat) => (
-                      <option key={cat} value={cat}>
+                      <option key={cat} value={cat} className="text-gray-900">
                         {cat}
                       </option>
                     ))}
@@ -513,30 +568,128 @@ export default function ProductsPage() {
                 className="scroll-mt-24 sm:scroll-mt-32 mb-10 sm:mb-16"
               >
                 {/* Compound Header */}
-                <div className="mb-6 sm:mb-10">
-                  <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-3 xs:gap-0 mb-4 sm:mb-6">
-                    <div>
-                      <h2 className="text-xl xs:text-2xl sm:text-3xl font-bold text-gray-900">
-                        {compound}
-                      </h2>
-                      <p className="text-gray-600 text-sm sm:text-base mt-1 sm:mt-2">
-                        {items.length} {items.length !== 1 ? productCard.productsAvailable || "products available" : productCard.productAvailable || "product available"}
-                      </p>
-                    </div>
+                {/* Compact Compound Header */}
+                <div className="mb-6 sm:mb-8">
+                  <div className="relative">
+                    {/* Main Header Container */}
                     <div
-                      className="px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold"
+                      className="relative overflow-hidden rounded-xl mb-3 sm:mb-4 group"
                       style={{
-                        backgroundColor: `${theme.primary}15`,
-                        color: theme.primary,
+                        background: theme.compoundHeaderGradient,
+                        boxShadow: theme.compoundHeaderShadow,
                       }}
                     >
-                      {slugs.length} {productCard.skusAvailable || "SKUs"}
+                      {/* Top accent line */}
+                      <div
+                        className="absolute top-0 left-0 right-0 h-1"
+                        style={{
+                          background: `linear-gradient(90deg, ${theme.primary} 0%, ${theme.secondary} 100%)`,
+                        }}
+                      ></div>
+
+                      {/* Main content - Compact layout */}
+                      <div className="px-4 sm:px-6 py-3 sm:py-4">
+                        <div className="flex items-center justify-between gap-2 sm:gap-4">
+                          {/* Left side - Compound name */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 sm:gap-3">
+                              {/* Active indicator dot */}
+                              <div className="flex-shrink-0">
+                                <div className="relative">
+                                  <div
+                                    className="w-2 h-2 sm:w-3 sm:h-3 rounded-full animate-pulse"
+                                    style={{ backgroundColor: theme.secondary }}
+                                  ></div>
+                                </div>
+                              </div>
+
+                              {/* Compound name */}
+                              <div className="min-w-0">
+                                <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white truncate drop-shadow-sm">
+                                  {compound}
+                                </h2>
+                                <div className="flex items-center gap-2 mt-0.5">
+                                  <span className="text-white/80 text-xs font-medium">
+                                    Pharmaceutical Range
+                                  </span>
+                                  <div className="w-1 h-1 rounded-full bg-white/40"></div>
+                                  <span className="text-white/80 text-xs">
+                                    {slugs.length} SKUs
+                                  </span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Right side - Product count */}
+                          <div className="flex-shrink-0">
+                            <div
+                              className="px-3 py-1.5 rounded-lg backdrop-blur-sm bg-white/10 border border-white/20"
+                              style={{
+                                boxShadow: `0 2px 8px ${theme.primary}40`,
+                              }}
+                            >
+                              <div className="flex items-center gap-1.5">
+                                <span className="text-white font-bold text-sm sm:text-base">
+                                  {items.length}
+                                </span>
+                                <span className="text-white/90 text-xs sm:text-sm whitespace-nowrap">
+                                  {items.length !== 1 ? "Products" : "Product"}
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Bottom shine */}
+                      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
                     </div>
+
+                    {/* Optional: Compact filter indicators (only show if filters active) */}
+                    {(categoryFilter !== "All" || search.trim()) && (
+                      <div className="flex flex-wrap items-center gap-1.5 mt-2">
+                        {categoryFilter !== "All" && (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium bg-white/90 text-gray-700 border border-gray-200">
+                            <svg
+                              className="w-3 h-3"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                              />
+                            </svg>
+                            {categoryFilter}
+                          </span>
+                        )}
+
+                        {search.trim() && (
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium bg-white/90 text-gray-700 border border-gray-200">
+                            <svg
+                              className="w-3 h-3"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                              />
+                            </svg>
+                            "{search.substring(0, 10)}
+                            {search.length > 10 ? "..." : ""}"
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
-                  <div
-                    className="h-1 w-16 sm:w-24 rounded-full"
-                    style={{ backgroundColor: theme.primary }}
-                  ></div>
                 </div>
 
                 {/* Products List */}
@@ -547,14 +700,15 @@ export default function ProductsPage() {
                     return (
                       <div
                         key={p.slug}
-                        className="bg-white rounded-xl sm:rounded-2xl shadow-md sm:shadow-lg overflow-hidden border border-gray-100 hover:shadow-lg sm:hover:shadow-xl transition-all duration-300"
+                        className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
                       >
                         <div className="p-4 sm:p-6">
                           {/* MOBILE VIEW */}
                           <div className="lg:hidden">
                             <div className="space-y-4 sm:space-y-6">
                               {/* Product Image */}
-                              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg sm:rounded-xl p-3 sm:p-4">
+                              <div className=" sm:rounded-xl p-3 sm:p-4 relative overflow-hidden ">
+                                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
                                 <div className="relative h-60 sm:h-88">
                                   <Image
                                     src={
@@ -564,7 +718,7 @@ export default function ProductsPage() {
                                     }
                                     alt={p.name}
                                     fill
-                                    className="object-cover"
+                                    className="object-cover rounded-lg"
                                     sizes="60vw"
                                   />
                                 </div>
@@ -573,7 +727,10 @@ export default function ProductsPage() {
                               {/* Product Details */}
                               <div className="space-y-3 sm:space-y-4">
                                 <div>
-                                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">
+                                  <h3
+                                    className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 group-hover:scale-[1.02] transition-transform"
+                                    style={{ color: theme.primary }}
+                                  >
                                     {p.name}
                                   </h3>
                                 </div>
@@ -593,7 +750,8 @@ export default function ProductsPage() {
                                   {p.composition && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
-                                        {productCard.compositionLabel || "Composition:"}
+                                        {productCard.compositionLabel ||
+                                          "Composition:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
                                         {p.composition}
@@ -603,7 +761,8 @@ export default function ProductsPage() {
                                   {p.pack_size && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
-                                        {productCard.packSizeLabel || "Pack Size:"}
+                                        {productCard.packSizeLabel ||
+                                          "Pack Size:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
                                         {p.pack_size}
@@ -622,10 +781,19 @@ export default function ProductsPage() {
                                 <div className="flex flex-col gap-2 sm:gap-3 pt-3 sm:pt-4">
                                   <Link
                                     href={`/product/${p.slug}`}
-                                    className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all hover:bg-gray-50"
+                                    className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all hover:shadow-md active:scale-95"
                                     style={{
                                       borderColor: theme.primary,
                                       color: theme.primary,
+                                      backgroundColor: `${theme.primary}08`,
+                                    }}
+                                    onMouseEnter={(e) => {
+                                      e.currentTarget.style.backgroundColor = `${theme.primary}15`;
+                                      e.currentTarget.style.boxShadow = `0 4px 12px ${theme.primary}30`;
+                                    }}
+                                    onMouseLeave={(e) => {
+                                      e.currentTarget.style.backgroundColor = `${theme.primary}08`;
+                                      e.currentTarget.style.boxShadow = "";
                                     }}
                                   >
                                     {productCard.viewDetails || "View Details"}
@@ -635,9 +803,20 @@ export default function ProductsPage() {
                                     onClick={() =>
                                       addToCart(p, 50, false, true)
                                     }
-                                    className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all hover:opacity-90"
+                                    className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all hover:shadow-lg active:scale-95"
                                     style={{
                                       backgroundColor: theme.primary,
+                                      boxShadow: `0 2px 10px ${theme.primary}50`,
+                                    }}
+                                    onMouseEnter={(e) => {
+                                      e.currentTarget.style.backgroundColor =
+                                        theme.buttonHover;
+                                      e.currentTarget.style.boxShadow = `0 4px 15px ${theme.primary}70`;
+                                    }}
+                                    onMouseLeave={(e) => {
+                                      e.currentTarget.style.backgroundColor =
+                                        theme.primary;
+                                      e.currentTarget.style.boxShadow = `0 2px 10px ${theme.primary}50`;
                                     }}
                                   >
                                     {productCard.addToCart || "Add to Cart"}
@@ -653,8 +832,9 @@ export default function ProductsPage() {
                               <>
                                 {/* Image Left */}
                                 <div className="flex items-center justify-center">
-                                  <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 w-full">
-                                    <div className="relative h-40 sm:h-88">
+                                  <div className=" p-6 w-full relative overflow-hidden group/image">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
+                                    <div className="relative h-40 sm:h-88 overflow-hidden rounded-lg">
                                       <Image
                                         src={
                                           p.image && p.image.trim() !== ""
@@ -663,7 +843,7 @@ export default function ProductsPage() {
                                         }
                                         alt={p.name}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover rounded-lg group-hover/image:scale-105 transition-transform duration-500"
                                         sizes="40vw"
                                       />
                                     </div>
@@ -673,7 +853,10 @@ export default function ProductsPage() {
                                 {/* Details Right */}
                                 <div className="flex flex-col justify-center">
                                   <div className="space-y-3 sm:space-y-4">
-                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">
+                                    <h3
+                                      className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2 group-hover:scale-[1.02] transition-transform"
+                                      style={{ color: theme.primary }}
+                                    >
                                       {p.name}
                                     </h3>
 
@@ -682,7 +865,8 @@ export default function ProductsPage() {
                                       {p.dosage && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.dosageLabel || "Dosage:"}
+                                            {productCard.dosageLabel ||
+                                              "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.dosage}
@@ -692,7 +876,8 @@ export default function ProductsPage() {
                                       {p.composition && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.compositionLabel || "Composition:"}
+                                            {productCard.compositionLabel ||
+                                              "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.composition}
@@ -702,7 +887,8 @@ export default function ProductsPage() {
                                       {p.pack_size && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.packSizeLabel || "Pack Size:"}
+                                            {productCard.packSizeLabel ||
+                                              "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.pack_size}
@@ -723,22 +909,43 @@ export default function ProductsPage() {
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">
                                       <Link
                                         href={`/product/${p.slug}`}
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all hover:bg-gray-50"
+                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all hover:shadow-md active:scale-95"
                                         style={{
                                           borderColor: theme.primary,
                                           color: theme.primary,
+                                          backgroundColor: `${theme.primary}08`,
+                                        }}
+                                        onMouseEnter={(e) => {
+                                          e.currentTarget.style.backgroundColor = `${theme.primary}15`;
+                                          e.currentTarget.style.boxShadow = `0 4px 12px ${theme.primary}30`;
+                                        }}
+                                        onMouseLeave={(e) => {
+                                          e.currentTarget.style.backgroundColor = `${theme.primary}08`;
+                                          e.currentTarget.style.boxShadow = "";
                                         }}
                                       >
-                                        {productCard.viewDetails || "View Details"}
+                                        {productCard.viewDetails ||
+                                          "View Details"}
                                       </Link>
 
                                       <button
                                         onClick={() =>
                                           addToCart(p, 50, false, true)
                                         }
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all hover:opacity-90"
+                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all hover:shadow-lg active:scale-95"
                                         style={{
                                           backgroundColor: theme.primary,
+                                          boxShadow: `0 2px 10px ${theme.primary}50`,
+                                        }}
+                                        onMouseEnter={(e) => {
+                                          e.currentTarget.style.backgroundColor =
+                                            theme.buttonHover;
+                                          e.currentTarget.style.boxShadow = `0 4px 15px ${theme.primary}70`;
+                                        }}
+                                        onMouseLeave={(e) => {
+                                          e.currentTarget.style.backgroundColor =
+                                            theme.primary;
+                                          e.currentTarget.style.boxShadow = `0 2px 10px ${theme.primary}50`;
                                         }}
                                       >
                                         {productCard.addToCart || "Add to Cart"}
@@ -752,7 +959,10 @@ export default function ProductsPage() {
                                 {/* Details Left */}
                                 <div className="flex flex-col justify-center">
                                   <div className="space-y-3 sm:space-y-4">
-                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-1 sm:mb-2">
+                                    <h3
+                                      className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2 group-hover:scale-[1.02] transition-transform"
+                                      style={{ color: theme.primary }}
+                                    >
                                       {p.name}
                                     </h3>
 
@@ -761,7 +971,8 @@ export default function ProductsPage() {
                                       {p.dosage && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.dosageLabel || "Dosage:"}
+                                            {productCard.dosageLabel ||
+                                              "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.dosage}
@@ -771,7 +982,8 @@ export default function ProductsPage() {
                                       {p.composition && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.compositionLabel || "Composition:"}
+                                            {productCard.compositionLabel ||
+                                              "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.composition}
@@ -781,7 +993,8 @@ export default function ProductsPage() {
                                       {p.pack_size && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.packSizeLabel || "Pack Size:"}
+                                            {productCard.packSizeLabel ||
+                                              "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.pack_size}
@@ -802,22 +1015,43 @@ export default function ProductsPage() {
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">
                                       <Link
                                         href={`/product/${p.slug}`}
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all hover:bg-gray-50"
+                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all hover:shadow-md active:scale-95"
                                         style={{
                                           borderColor: theme.primary,
                                           color: theme.primary,
+                                          backgroundColor: `${theme.primary}08`,
+                                        }}
+                                        onMouseEnter={(e) => {
+                                          e.currentTarget.style.backgroundColor = `${theme.primary}15`;
+                                          e.currentTarget.style.boxShadow = `0 4px 12px ${theme.primary}30`;
+                                        }}
+                                        onMouseLeave={(e) => {
+                                          e.currentTarget.style.backgroundColor = `${theme.primary}08`;
+                                          e.currentTarget.style.boxShadow = "";
                                         }}
                                       >
-                                        {productCard.viewDetails || "View Details"}
+                                        {productCard.viewDetails ||
+                                          "View Details"}
                                       </Link>
 
                                       <button
                                         onClick={() =>
                                           addToCart(p, 50, false, true)
                                         }
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all hover:opacity-90"
+                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all hover:shadow-lg active:scale-95"
                                         style={{
                                           backgroundColor: theme.primary,
+                                          boxShadow: `0 2px 10px ${theme.primary}50`,
+                                        }}
+                                        onMouseEnter={(e) => {
+                                          e.currentTarget.style.backgroundColor =
+                                            theme.buttonHover;
+                                          e.currentTarget.style.boxShadow = `0 4px 15px ${theme.primary}70`;
+                                        }}
+                                        onMouseLeave={(e) => {
+                                          e.currentTarget.style.backgroundColor =
+                                            theme.primary;
+                                          e.currentTarget.style.boxShadow = `0 2px 10px ${theme.primary}50`;
                                         }}
                                       >
                                         {productCard.addToCart || "Add to Cart"}
@@ -828,8 +1062,9 @@ export default function ProductsPage() {
 
                                 {/* Image Right */}
                                 <div className="flex items-center justify-center">
-                                  <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 w-full">
-                                    <div className="relative h-40 sm:h-88">
+                                  <div className=" p-6 w-full relative overflow-hidden group/image ">
+                                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
+                                    <div className="relative h-40 sm:h-88 overflow-hidden rounded-lg">
                                       <Image
                                         src={
                                           p.image && p.image.trim() !== ""
@@ -838,7 +1073,7 @@ export default function ProductsPage() {
                                         }
                                         alt={p.name}
                                         fill
-                                        className="object-cover"
+                                        className="object-cover rounded-lg group-hover/image:scale-105 transition-transform duration-500"
                                         sizes="50vw"
                                       />
                                     </div>
@@ -860,9 +1095,8 @@ export default function ProductsPage() {
           {compoundNames.length > 0 && !hasAnyResults && (
             <div className="text-center py-12 sm:py-20 px-4">
               <div
-                className="inline-flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 rounded-full mb-4 sm:mb-6"
+                className="inline-flex items-center justify-center w-16 h-16 sm:w-24 sm:h-24 rounded-full mb-4 sm:mb-6 bg-white shadow-lg"
                 style={{
-                  background: `linear-gradient(135deg, ${theme.primary}15 0%, ${theme.secondary}15 100%)`,
                   border: `2px dashed ${theme.primary}40`,
                 }}
               >
@@ -885,15 +1119,26 @@ export default function ProductsPage() {
                 {emptyState.title || "No Products Found"}
               </h3>
               <p className="text-gray-600 text-sm sm:text-base max-w-md mx-auto mb-6 sm:mb-8">
-                {emptyState.description || "We couldn't find any products matching your search criteria."}
+                {emptyState.description ||
+                  "We couldn't find any products matching your search criteria."}
               </p>
 
-              {/* UPDATED CONTAINER: Stacks on mobile (col), Row on Desktop (sm:row) */}
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full">
                 <button
                   onClick={() => setSearch("")}
-                  className="w-full sm:w-auto px-6 py-2.5 rounded-lg border font-medium text-sm transition-all hover:bg-gray-50 whitespace-nowrap"
-                  style={{ borderColor: theme.primary, color: theme.primary }}
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-lg border font-medium text-sm transition-all hover:shadow-md whitespace-nowrap bg-white"
+                  style={{
+                    borderColor: theme.primary,
+                    color: theme.primary,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = `${theme.primary}08`;
+                    e.currentTarget.style.boxShadow = `0 4px 12px ${theme.primary}30`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = `white`;
+                    e.currentTarget.style.boxShadow = "";
+                  }}
                 >
                   {filters.clearSearch || "Clear Search"}
                 </button>
@@ -904,8 +1149,19 @@ export default function ProductsPage() {
                     setCategoryFilter("All");
                     setSelectedCompound(compoundNames[0]);
                   }}
-                  className="w-full sm:w-auto px-6 py-2.5 rounded-lg font-medium text-sm text-white transition-all hover:shadow-md whitespace-nowrap"
-                  style={{ background: theme.gradient }}
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-lg font-medium text-sm text-white transition-all hover:shadow-lg whitespace-nowrap"
+                  style={{
+                    background: theme.gradient,
+                    boxShadow: `0 4px 15px ${theme.primary}40`,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = `linear-gradient(135deg, ${theme.buttonHover} 0%, ${theme.secondary} 100%)`;
+                    e.currentTarget.style.boxShadow = `0 6px 20px ${theme.primary}60`;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = theme.gradient;
+                    e.currentTarget.style.boxShadow = `0 4px 15px ${theme.primary}40`;
+                  }}
                 >
                   {filters.resetButton || "Reset All Filters"}
                 </button>
@@ -919,8 +1175,17 @@ export default function ProductsPage() {
               onClick={() =>
                 scrollToCompound(activeCompound || compoundNames[0])
               }
-              className="p-3 sm:p-4 rounded-full shadow-2xl text-white animate-bounce"
-              style={{ background: theme.gradient }}
+              className="p-3 sm:p-4 rounded-full shadow-2xl text-white animate-bounce hover:shadow-3xl transition-all active:scale-90"
+              style={{
+                background: theme.gradient,
+                boxShadow: `0 8px 32px ${theme.primary}60`,
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.boxShadow = `0 10px 40px ${theme.primary}80`;
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.boxShadow = `0 8px 32px ${theme.primary}60`;
+              }}
             >
               <svg
                 className="w-5 h-5 sm:w-6 sm:h-6"

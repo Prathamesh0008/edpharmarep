@@ -55,10 +55,11 @@ export default function Testimonials() {
       {/* ===== STYLES ===== */}
       <style jsx>{`
         .testimonial-section {
-          padding: 80px 20px;
+          padding: 60px 20px;
           background: #f7f9fc;
           text-align: center;
           overflow: hidden;
+          
         }
 
         .testimonial-tag {

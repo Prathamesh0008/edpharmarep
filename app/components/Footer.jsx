@@ -35,7 +35,7 @@ export default function Footer() {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "ED Solutions"
+      
     ],
     contactInfo: {
       address: "Mumbai, India",
@@ -113,21 +113,34 @@ export default function Footer() {
         </div>
 
         {/* Categories */}
-        <div>
-          <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">
-            {footerData.headers.categories}
-          </h3>
-          <ul className="space-y-3">
-            {categories.map((item) => (
-              <li 
-                key={item} 
-                className="text-white/80 hover:text-white transition-all duration-200 cursor-pointer hover:translate-x-1"
-              >
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Categories */}
+<div>
+  <h3 className="text-lg font-semibold mb-6 pb-2 border-b border-white/20">
+    {footerData.headers.categories}
+  </h3>
+  <ul className="space-y-3">
+    {categories.map((item) => {
+      // Map category names to brand keys used in your products page
+      const brandKey = {
+        "Ajanta Pharma": "ED Ajanta Pharma",
+        "Centurion Remedies": "ED Centurion Remedies",
+        "Sunrise Remedies": "ED Sunrise Remedies"
+      }[item];
+      
+      return (
+        <li key={item}>
+          <Link
+            href={`/products?brand=${encodeURIComponent(brandKey)}`}
+            className="flex items-center gap-2 text-white/80 hover:text-cyan-300 transition-all duration-200 group"
+          >
+            <div className="w-1 h-1 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition"></div>
+            {item}
+          </Link>
+        </li>
+      );
+    })}
+  </ul>
+</div>
 
         {/* Contact */}
         <div className="space-y-6">
