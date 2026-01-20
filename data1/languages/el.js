@@ -1023,7 +1023,7 @@ testimonials: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "Λύσεις για Στυτική Δυσλειτουργία"
+      
     ],
     contactInfo: {
       address: "Μουμπάι, Ινδία",

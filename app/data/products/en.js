@@ -186,7 +186,7 @@ const products = {
   },
   "kamagra-100mg-oral-jelly-vol1": {
   id: "3",
-  name: "Kamagra 100 mg Oral Jelly Vol 1",
+  name: "Kamagra 100 mg Oral Jelly Vol 1 ",
   category: "Kamagra Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -19570,7 +19570,7 @@ administration: [
     "Regular medical check-ups help ensure safe long-term use of Udenafil-based medications."
   ]
   },
-   "Super Zudena-en":{
+   "super-zudena-en":{
     id: "112",
     name: "Super Zudena",
     brand: "ED Sunrise Remedies",

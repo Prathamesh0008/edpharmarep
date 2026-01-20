@@ -998,7 +998,7 @@ productDetail: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "Soluții DE",
+      
     ],
     contactInfo: {
       address: "Mumbai, India",

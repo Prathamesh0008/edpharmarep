@@ -943,7 +943,7 @@ const products = {
 
 "apcalis-sx-20mg-oral-jelly-ro": {
   "id": "11",
-  "name": "Apcalis-SX 20 mg Jei Oral",
+  "name": "Apcalis-SX 20 mg Jeleu Oral",
   "category": "Apcalis Jei Oral",
   "brand": "ED Ajanta Pharma",
   "dosage": "20 mg",
@@ -1309,7 +1309,7 @@ const products = {
 
 "lovegra-100mg-ro": {
   "id": "14",
-  "name": "Lovegra 100 mg",
+  "name": " Lovegra 100 mg",
   "category": "Lovegra",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg",
@@ -1490,7 +1490,7 @@ const products = {
 },
 "valif-20mg-tablet-ro": {
   "id": "15",
-  "name": "Valif 20 mg",
+  "name": "Valif 20 mg Jeleu Oral",
   "category": "Valif",
   "brand": "ED Ajanta Pharma",
   "dosage": "20 mg",
@@ -3863,7 +3863,7 @@ const products = {
 
 "cenforce-oral-jelly-100-ro": {
   "id": "28",
-  "name": "Cenforce Oral Jelly 100 mg",
+  "name": " Cenforce Jeleu Oral 100 mg",
   "category": "Cenforce Oral Jelly",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg",

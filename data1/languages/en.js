@@ -1011,7 +1011,6 @@ testimonials: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "ED Solutions"
     ],
     contactInfo: {
       address: "Mumbai, India",

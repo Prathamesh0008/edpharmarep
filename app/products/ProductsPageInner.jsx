@@ -1,7 +1,7 @@
 "use client";
 
 import Navbar from "../components/Navbar";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { COMPOUNDS } from "../data/compounds";
@@ -9,17 +9,17 @@ import { useSearchParams } from "next/navigation";
 import { useCart } from "../components/CartContext";
 import { useLanguage } from "@/context/LanguageContext";
 
-// BRAND THEMES
+// BRAND THEMES (keep as is)
 const BRAND_THEMES = {
   "ED Ajanta Pharma": {
     name: "Ajanta Pharma",
-    logo: "/bg/ajanta.png", //public\Artboard 2.png
+    logo: "/bg/ajanta.png",
     primary: "#0A2A73",
     secondary: "#2A7DB8",
     accent: "#1C5EB7",
     bgImage: "/bg/bg1.png",
-     bgUpImage: "/bg/bgup.png",    // Top right image
-    bgDownImage: "/bg/bgdown.png", // Bottom left image
+    bgUpImage: "/bg/bgup.png",
+    bgDownImage: "/bg/bgdown.png",
     gradient: "linear-gradient(135deg, #0A2A73 0%, #2A7DB8 100%)",
     compoundHeaderGradient:
       "linear-gradient(135deg, #0A2A73 0%, #1C5EB7 50%, #2A7DB8 100%)",
@@ -38,8 +38,8 @@ const BRAND_THEMES = {
       "linear-gradient(135deg, #FFB800 0%, #E6A400 50%, #FFD966 100%)",
     compoundHeaderShadow: "0 4px 20px rgba(255, 184, 0, 0.25)",
     buttonHover: "#E6A400",
-    imageBorderColor: "#FFFFFF", // Add this for white border
-    imageBorderStyle: "embossed", // Add this to identify style
+    imageBorderColor: "#FFFFFF",
+    imageBorderStyle: "embossed",
   },
   "ED Sunrise Remedies": {
     name: "Sunrise Remedies",
@@ -76,6 +76,17 @@ const BRAND_ORDER = [
 ];
 
 const makeId = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+// Helper function to normalize text for comparison
+const normalizeText = (text) => {
+  if (!text) return '';
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-') // Convert to slug-like format
+    .replace(/-+/g, '-')
+    .replace(/^-|-$/g, '');
+};
 
 export default function ProductsPage() {
   const { addToCart } = useCart();
@@ -121,7 +132,7 @@ export default function ProductsPage() {
   const emptyState = productsTranslations?.emptyState || {};
 
   const [selectedBrand, setSelectedBrand] = useState(
-    BRAND_THEMES[brandFromUrl] ? brandFromUrl : "ED Ajanta Pharma"
+    BRAND_THEMES[brandFromUrl] ? brandFromUrl : "ED Ajanta Pharma",
   );
   const [search, setSearch] = useState("");
   const [selectedCompound, setSelectedCompound] = useState("");
@@ -139,6 +150,103 @@ export default function ProductsPage() {
     "All",
     ...new Set(brandProducts.map((p) => p.category)),
   ];
+
+  // Helper function to get product name in current language
+  const getProductName = useMemo(() => {
+    return (product) => {
+      if (!product) return '';
+      
+      // If product has multilingual name object
+      if (product.name && typeof product.name === 'object') {
+        return product.name[language] || product.name.en || product.slug || '';
+      }
+      
+      // If name is a string (fallback)
+      return product.name || product.slug || '';
+    };
+  }, [language]);
+
+  // Helper function to check if a product matches a compound identifier
+  const productMatchesIdentifier = useMemo(() => {
+    return (product, identifier) => {
+      const productSlug = product.slug.toLowerCase();
+      const identifierLower = identifier.toLowerCase();
+      
+      // 1. Direct slug match (e.g., "kamagra-gold-50-mg" matches "kamagra-gold-50-mg")
+      if (productSlug === identifierLower) return true;
+      
+      // 2. Normalized slug match (handle variations)
+      if (normalizeText(productSlug) === normalizeText(identifierLower)) return true;
+      
+      // 3. Check against current language name
+      const currentName = getProductName(product).toLowerCase();
+      if (currentName === identifierLower) return true;
+      if (normalizeText(currentName) === normalizeText(identifierLower)) return true;
+      
+      // 4. Check against all language names if multilingual
+      if (product.name && typeof product.name === 'object') {
+        return Object.values(product.name).some(name => {
+          const nameLower = name.toLowerCase();
+          return nameLower === identifierLower || 
+                 normalizeText(nameLower) === normalizeText(identifierLower);
+        });
+      }
+      
+      // 5. Check against original English name (if name is a string)
+      if (product.name && typeof product.name === 'string') {
+        const nameLower = product.name.toLowerCase();
+        if (nameLower === identifierLower || 
+            normalizeText(nameLower) === normalizeText(identifierLower)) {
+          return true;
+        }
+      }
+      
+      return false;
+    };
+  }, [getProductName]);
+
+  // Helper function to search in product (multilingual support)
+  const searchInProduct = useMemo(() => {
+    return (product, searchQuery) => {
+      const query = searchQuery.toLowerCase().trim();
+      if (!query) return true;
+      
+      // Check in current language name
+      const currentName = getProductName(product).toLowerCase();
+      if (currentName.includes(query)) return true;
+      
+      // Check in description (if multilingual description)
+      if (product.description) {
+        let descriptionText = '';
+        if (typeof product.description === 'object') {
+          // Multilingual description
+          descriptionText = product.description[language] || product.description.en || '';
+        } else {
+          descriptionText = product.description;
+        }
+        if (descriptionText.toLowerCase().includes(query)) return true;
+      }
+      
+      // Check in all language names
+      if (product.name && typeof product.name === 'object') {
+        const foundInName = Object.values(product.name).some(name => 
+          name.toLowerCase().includes(query)
+        );
+        if (foundInName) return true;
+      }
+      
+      // Check in composition
+      if (product.composition?.toLowerCase().includes(query)) return true;
+      
+      // Check in category
+      if (product.category?.toLowerCase().includes(query)) return true;
+      
+      // Check in dosage
+      if (product.dosage?.toLowerCase().includes(query)) return true;
+      
+      return false;
+    };
+  }, [getProductName, language]);
 
   // Initialize
   useEffect(() => {
@@ -169,7 +277,7 @@ export default function ProductsPage() {
           }
         });
       },
-      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 },
     );
 
     compoundNames.forEach((compound) => {
@@ -178,7 +286,7 @@ export default function ProductsPage() {
     });
 
     return () => observer.disconnect();
-  }, [selectedBrand]);
+  }, [selectedBrand, compoundNames]);
 
   // URL brand change
   useEffect(() => {
@@ -210,82 +318,96 @@ export default function ProductsPage() {
     window.scrollTo({ top: y, behavior: "smooth" });
   };
 
-  // GLOBAL FILTER CHECK
-  const hasAnyResults = compoundNames.some((compound) => {
-    const slugs = brandCompounds[compound] || [];
-    const items = brandProducts.filter((p) => {
-      const slug = p.slug.toLowerCase();
-      const name = p.name.toLowerCase();
-
-      const belongsToCompound = slugs.some((key) => {
-        const k = key.toLowerCase();
-        return k === slug || k === name;
+  // Memoized filtered products for each compound
+  const filteredProductsByCompound = useMemo(() => {
+    const result = {};
+    
+    compoundNames.forEach(compound => {
+      const identifiers = brandCompounds[compound] || [];
+      
+      let items = brandProducts.filter((product) => {
+        // Check if product belongs to this compound
+        const belongsToCompound = identifiers.some(identifier => 
+          productMatchesIdentifier(product, identifier)
+        );
+        
+        if (!belongsToCompound) return false;
+        
+        // Category filter
+        if (categoryFilter !== "All" && product.category !== categoryFilter) return false;
+        
+        // Search filter
+        if (search.trim()) {
+          return searchInProduct(product, search);
+        }
+        
+        return true;
       });
-
-      if (!belongsToCompound) return false;
-      if (categoryFilter !== "All" && p.category !== categoryFilter)
-        return false;
-
-      if (search.trim()) {
-        const q = search.toLowerCase();
-        const n = p.name?.toLowerCase() || "";
-        const d = p.description?.toLowerCase() || "";
-        return n.includes(q) || d.includes(q);
-      }
-
-      return true;
+      
+      result[compound] = items;
     });
+    
+    return result;
+  }, [compoundNames, brandCompounds, brandProducts, productMatchesIdentifier, categoryFilter, search, searchInProduct]);
 
-    return items.length > 0;
-  });
+  // Check if any compound has results
+  const hasAnyResults = useMemo(() => {
+    return Object.values(filteredProductsByCompound).some(items => items.length > 0);
+  }, [filteredProductsByCompound]);
+
+  // Get current filtered items for active compound
+  const getFilteredItems = (compound) => {
+    return filteredProductsByCompound[compound] || [];
+  };
 
   return (
     <div className="w-full relative min-h-screen">
       <Navbar />
 
       {/* Background with brand image */}
-      {/* Background with brand image */}
-<div className="fixed inset-0 -z-10">
-  {/* Brand background image */}
-  <div
-    className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
-    style={{
-      backgroundImage: `url(${theme.bgImage})`,
-    }}
-  ></div>
-  
-  {/* Conditional Ajanta Pharma specific background images */}
-  {selectedBrand === "ED Ajanta Pharma" && theme.bgUpImage && theme.bgDownImage && (
-    <>
-      {/* Top right image */}
-      <div 
-        className="absolute -top-20 -right-35 w-130 h-200 opacity-80"
-        style={{
-          backgroundImage: `url(${theme.bgUpImage})`,
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'top right',
-          mixBlendMode: 'multiply'
-        }}
-      ></div>
-      
-      {/* Bottom left image */}
-      <div 
-        className="absolute -bottom-20 -left-35 w-110 h-204 opacity-80"
-        style={{
-          backgroundImage: `url(${theme.bgDownImage})`,
-          backgroundSize: 'contain',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'bottom left',
-          mixBlendMode: 'multiply'
-        }}
-      ></div>
-    </>
-  )}
-  
-  {/* White overlay for better readability but still showing background */}
-  <div className="absolute inset-0 bg-white/30"></div>
-</div>
+      <div className="fixed inset-0 -z-10">
+        {/* Brand background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat"
+          style={{
+            backgroundImage: `url(${theme.bgImage})`,
+          }}
+        ></div>
+
+        {/* Conditional Ajanta Pharma specific background images */}
+        {selectedBrand === "ED Ajanta Pharma" &&
+          theme.bgUpImage &&
+          theme.bgDownImage && (
+            <>
+              {/* Top right image */}
+              <div
+                className="absolute -top-20 -right-35 w-130 h-200 opacity-80"
+                style={{
+                  backgroundImage: `url(${theme.bgUpImage})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "top right",
+                  mixBlendMode: "multiply",
+                }}
+              ></div>
+
+              {/* Bottom left image */}
+              <div
+                className="absolute -bottom-20 -left-35 w-110 h-204 opacity-80"
+                style={{
+                  backgroundImage: `url(${theme.bgDownImage})`,
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "bottom left",
+                  mixBlendMode: "multiply",
+                }}
+              ></div>
+            </>
+          )}
+
+        {/* White overlay for better readability but still showing background */}
+        <div className="absolute inset-0 bg-white/30"></div>
+      </div>
 
       {/* Floating Brand Selector - White with shadow */}
       <div
@@ -390,7 +512,7 @@ export default function ProductsPage() {
                         src={b.logo}
                         alt={b.name}
                         fill
-                        className="object-contain "
+                        className="object-contain"
                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                         priority={index === 0}
                       />
@@ -427,7 +549,7 @@ export default function ProductsPage() {
           <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 mb-6 sm:mb-8 border border-gray-100">
             <div className="flex flex-col gap-4 sm:gap-6">
               {/* Search Input */}
-              {/* <div className="w-full">
+              <div className="w-full">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
                     <svg
@@ -456,7 +578,7 @@ export default function ProductsPage() {
                     style={{ "--tw-ring-color": theme.primary }}
                   />
                 </div>
-              </div> */}
+              </div>
 
               {/* Filters Row */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
@@ -535,28 +657,7 @@ export default function ProductsPage() {
         {/* Products Sections */}
         <div ref={productsStartRef} className="pt-4 sm:pt-8">
           {compoundNames.map((compound) => {
-            const slugs = brandCompounds[compound] || [];
-
-            let items = brandProducts.filter((p) => {
-              const slug = p.slug.toLowerCase();
-              const name = p.name.toLowerCase();
-              const belongsToCompound = slugs.some((key) => {
-                const k = key.toLowerCase();
-                return k === slug || k === name;
-              });
-
-              if (!belongsToCompound) return false;
-              if (categoryFilter !== "All" && p.category !== categoryFilter)
-                return false;
-              if (search.trim()) {
-                const q = search.toLowerCase();
-                const n = p.name?.toLowerCase() || "";
-                const d = p.description?.toLowerCase() || "";
-                return n.includes(q) || d.includes(q);
-              }
-              return true;
-            });
-
+            const items = getFilteredItems(compound);
             if (!items.length) return null;
 
             return (
@@ -568,7 +669,6 @@ export default function ProductsPage() {
                 className="scroll-mt-24 sm:scroll-mt-32 mb-10 sm:mb-16"
               >
                 {/* Compound Header */}
-                {/* Compact Compound Header */}
                 <div className="mb-6 sm:mb-8">
                   <div className="relative">
                     {/* Main Header Container */}
@@ -587,7 +687,7 @@ export default function ProductsPage() {
                         }}
                       ></div>
 
-                      {/* Main content - Compact layout */}
+                      {/* Main content */}
                       <div className="px-4 sm:px-6 py-3 sm:py-4">
                         <div className="flex items-center justify-between gap-2 sm:gap-4">
                           {/* Left side - Compound name */}
@@ -614,7 +714,7 @@ export default function ProductsPage() {
                                   </span>
                                   <div className="w-1 h-1 rounded-full bg-white/40"></div>
                                   <span className="text-white/80 text-xs">
-                                    {slugs.length} SKUs
+                                    {(brandCompounds[compound] || []).length} SKUs
                                   </span>
                                 </div>
                               </div>
@@ -645,50 +745,6 @@ export default function ProductsPage() {
                       {/* Bottom shine */}
                       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
                     </div>
-
-                    {/* Optional: Compact filter indicators (only show if filters active) */}
-                    {(categoryFilter !== "All" || search.trim()) && (
-                      <div className="flex flex-wrap items-center gap-1.5 mt-2">
-                        {categoryFilter !== "All" && (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium bg-white/90 text-gray-700 border border-gray-200">
-                            <svg
-                              className="w-3 h-3"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-                              />
-                            </svg>
-                            {categoryFilter}
-                          </span>
-                        )}
-
-                        {search.trim() && (
-                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md text-xs font-medium bg-white/90 text-gray-700 border border-gray-200">
-                            <svg
-                              className="w-3 h-3"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth={2}
-                                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                              />
-                            </svg>
-                            "{search.substring(0, 10)}
-                            {search.length > 10 ? "..." : ""}"
-                          </span>
-                        )}
-                      </div>
-                    )}
                   </div>
                 </div>
 
@@ -696,10 +752,11 @@ export default function ProductsPage() {
                 <div className="space-y-6 sm:space-y-8">
                   {items.map((p, index) => {
                     const isEven = index % 2 === 0;
+                    const productName = getProductName(p);
 
                     return (
                       <div
-                        key={p.slug}
+                        key={`${compound}-${p.slug}-${index}`}
                         className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 group"
                       >
                         <div className="p-4 sm:p-6">
@@ -707,7 +764,7 @@ export default function ProductsPage() {
                           <div className="lg:hidden">
                             <div className="space-y-4 sm:space-y-6">
                               {/* Product Image */}
-                              <div className=" sm:rounded-xl p-3 sm:p-4 relative overflow-hidden ">
+                              <div className="sm:rounded-xl p-3 sm:p-4 relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
                                 <div className="relative h-60 sm:h-88">
                                   <Image
@@ -716,7 +773,7 @@ export default function ProductsPage() {
                                         ? p.image
                                         : "/placeholder.jpg"
                                     }
-                                    alt={p.name}
+                                    alt={productName}
                                     fill
                                     className="object-cover rounded-lg"
                                     sizes="60vw"
@@ -731,7 +788,7 @@ export default function ProductsPage() {
                                     className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 group-hover:scale-[1.02] transition-transform"
                                     style={{ color: theme.primary }}
                                   >
-                                    {p.name}
+                                    {productName}
                                   </h3>
                                 </div>
 
@@ -773,11 +830,13 @@ export default function ProductsPage() {
 
                                 {p.description && (
                                   <p className="text-gray-600 text-xs sm:text-sm pt-3 border-t border-gray-100 line-clamp-2">
-                                    {p.description}
+                                    {typeof p.description === 'object' 
+                                      ? p.description[language] || p.description.en || p.description
+                                      : p.description}
                                   </p>
                                 )}
 
-                                {/* Action Buttons - Mobile */}
+                                {/* Action Buttons */}
                                 <div className="flex flex-col gap-2 sm:gap-3 pt-3 sm:pt-4">
                                   <Link
                                     href={`/product/${p.slug}`}
@@ -832,7 +891,7 @@ export default function ProductsPage() {
                               <>
                                 {/* Image Left */}
                                 <div className="flex items-center justify-center">
-                                  <div className=" p-6 w-full relative overflow-hidden group/image">
+                                  <div className="p-6 w-full relative overflow-hidden group/image">
                                     <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
                                     <div className="relative h-40 sm:h-88 overflow-hidden rounded-lg">
                                       <Image
@@ -841,7 +900,7 @@ export default function ProductsPage() {
                                             ? p.image
                                             : "/placeholder.jpg"
                                         }
-                                        alt={p.name}
+                                        alt={productName}
                                         fill
                                         className="object-cover rounded-lg group-hover/image:scale-105 transition-transform duration-500"
                                         sizes="40vw"
@@ -857,7 +916,7 @@ export default function ProductsPage() {
                                       className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2 group-hover:scale-[1.02] transition-transform"
                                       style={{ color: theme.primary }}
                                     >
-                                      {p.name}
+                                      {productName}
                                     </h3>
 
                                     {/* Specifications List */}
@@ -900,7 +959,9 @@ export default function ProductsPage() {
                                     {p.description && (
                                       <div className="pt-3 border-t border-gray-100">
                                         <p className="text-gray-600 text-sm leading-relaxed">
-                                          {p.description}
+                                          {typeof p.description === 'object'
+                                            ? p.description[language] || p.description.en || p.description
+                                            : p.description}
                                         </p>
                                       </div>
                                     )}
@@ -963,7 +1024,7 @@ export default function ProductsPage() {
                                       className="text-xl sm:text-2xl font-bold mb-1 sm:mb-2 group-hover:scale-[1.02] transition-transform"
                                       style={{ color: theme.primary }}
                                     >
-                                      {p.name}
+                                      {productName}
                                     </h3>
 
                                     {/* Specifications List */}
@@ -1006,7 +1067,9 @@ export default function ProductsPage() {
                                     {p.description && (
                                       <div className="pt-3 border-t border-gray-100">
                                         <p className="text-gray-600 text-sm leading-relaxed">
-                                          {p.description}
+                                          {typeof p.description === 'object'
+                                            ? p.description[language] || p.description.en || p.description
+                                            : p.description}
                                         </p>
                                       </div>
                                     )}
@@ -1062,7 +1125,7 @@ export default function ProductsPage() {
 
                                 {/* Image Right */}
                                 <div className="flex items-center justify-center">
-                                  <div className=" p-6 w-full relative overflow-hidden group/image ">
+                                  <div className="p-6 w-full relative overflow-hidden group/image">
                                     <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
                                     <div className="relative h-40 sm:h-88 overflow-hidden rounded-lg">
                                       <Image
@@ -1071,7 +1134,7 @@ export default function ProductsPage() {
                                             ? p.image
                                             : "/placeholder.jpg"
                                         }
-                                        alt={p.name}
+                                        alt={productName}
                                         fill
                                         className="object-cover rounded-lg group-hover/image:scale-105 transition-transform duration-500"
                                         sizes="50vw"

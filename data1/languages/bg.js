@@ -998,7 +998,7 @@ productDetail: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "Решения за ЕД",
+      
     ],
     contactInfo: {
       address: "Мумбай, Индия",

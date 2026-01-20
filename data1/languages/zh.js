@@ -1074,7 +1074,7 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
-    "ED 解决方案"
+    
   ],
   contactInfo: {
     address: "印度，孟买",

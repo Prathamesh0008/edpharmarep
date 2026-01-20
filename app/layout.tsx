@@ -156,7 +156,7 @@ export default function RootLayout({
         `}
       >
         {/* BACKGROUND SVG */}
-        <div
+        {/* <div
           className="fixed inset-0 -z-10"
           style={{
             backgroundImage: "url('/bg/ED-banner (2).svg')",
@@ -164,7 +164,7 @@ export default function RootLayout({
             backgroundPosition: "center",
             backgroundSize: "cover",
           }}
-        />
+        /> */}
 
         <LanguageProvider>
           <AuthProvider>

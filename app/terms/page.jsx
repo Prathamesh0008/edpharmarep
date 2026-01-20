@@ -1,117 +1,124 @@
 // app/terms/page.jsx
 "use client";
 
-import React, { useRef } from "react";
-import Navbar from "../components/Navbar";
-import ScrollProgressLine from "../components/ScrollProgressLine";
-import Footer from "../components/Footer";
+import React, { useState, useEffect, useRef } from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { 
+  ShieldCheck,
+  FileText,
+  Building2,
+  Users,
+  AlertCircle,
+  CheckCircle2,
+  ArrowRight,
+  Sparkles,
+  Lock,
+  Award,
+  FileSignature,
+  Download,
+  Mail,
+  Eye,
+  ChevronRight,
+  Info
+} from "lucide-react";
 
 export default function TermsPage() {
-  const { t, language } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
-  const sectionRefs = useRef([]);
+  const { t, language } = useLanguage();
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const containerRef = useRef(null);
   
-  console.log("DEBUG Terms: Current language:", language);
-  console.log("DEBUG Terms: Terms translations:", t?.termsPage);
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
-  // Get translations from context, fallback to English structure
+  // Get translations with fallbacks
   const termsTranslations = t?.termsPage || {
     header: {
       title: "Terms & Conditions",
-      subtitle: "These Terms & Conditions govern business-to-business access to and use of the ED_pharma website and product catalogue.",
-      complianceTitle: "B2B Compliance & Verification",
-      complianceText: "Access is strictly limited to licensed wholesalers, pharmacies, and authorised distributors."
+      subtitle: "B2B Pharmaceutical Distribution Framework",
+      description: "These Terms & Conditions govern business-to-business access to and use of the ED_pharma website and product catalogue.",
+      lastUpdated: "Last Updated: January 2026",
+      version: "v2.4.1"
     },
     terms: [
       {
         number: "01",
         title: "Scope of Use",
+        category: "General Terms",
+        icon: "building",
         text: "This website and catalogue are intended exclusively for professional counterparties such as pharmaceutical wholesalers, pharmacies, online pharmacies, clinics and licensed distributors within Europe. It is not designed for direct-to-patient sales or for individual consumers.",
-        moreDetails: `Additional Information:
-- Applies to all products and catalogues.
-- Only licensed business entities may interact with ED_pharma.
-- Regional regulations must always be followed.`
+        keyPoints: [
+          "B2B access only",
+          "Licensed business entities",
+          "Regional compliance required",
+          "Professional use exclusively"
+        ]
       },
       {
         number: "02",
-        title: "Business Relationship",
-        text: "Any quotation, order or delivery is made on the understanding that both parties operate as independent businesses. Nothing on this website creates an employment, agency or partnership relationship between ED_pharma and its customers.",
-        moreDetails: `Additional Information:
-- No third-party representation allowed.
-- No franchise, agent or partnership status is implied.
-- All contracts remain independent between both parties.`
+        title: "Business Verification",
+        category: "Access Control",
+        icon: "shield",
+        text: "All users must provide valid business credentials and licensing documentation prior to accessing our product catalogue and ordering systems.",
+        keyPoints: [
+          "Business license verification",
+          "Professional credentials required",
+          "Ongoing compliance checks",
+          "Right to audit access"
+        ]
       },
       {
         number: "03",
-        title: "Product Portfolio & Availability",
-        text: "ED_pharma focuses on erectile-dysfunction and sexual-health medicines manufactured by approved partners. Product range, branding, packaging and strengths may change without prior public notice and availability can vary by country or regulatory status.",
-        moreDetails: `Additional Information:
-- Product variations may occur depending on manufacturer updates.
-- Packaging may vary by country.
-- Stock availability changes daily.`
+        title: "Data Protection",
+        category: "Privacy & Security",
+        icon: "lock",
+        text: "We handle all business data in accordance with GDPR and maintain strict confidentiality protocols for all partner information.",
+        keyPoints: [
+          "GDPR compliant",
+          "Encrypted data transmission",
+          "Secure storage systems",
+          "Regular security audits"
+        ]
       },
       {
         number: "04",
-        title: "Regulatory & Licensing Duties",
-        text: "Each customer is responsible for holding and maintaining all licences, permits and registrations required to purchase, store, market and distribute medicinal products in its own territory. ED_pharma does not authorise resale into jurisdictions where products are not compliant with local regulations.",
-        moreDetails: `Additional Information:
-- Each customer must submit required compliance documents.
-- ED_pharma may request additional regulatory certificates.
-- Non-compliance may suspend operations.`
+        title: "Ordering & Distribution",
+        category: "Commercial Terms",
+        icon: "award",
+        text: "All orders are subject to availability, minimum order quantities, and our standard distribution agreements for B2B pharmaceutical supply.",
+        keyPoints: [
+          "Minimum order quantities apply",
+          "Subject to availability",
+          "Standard lead times",
+          "Territory restrictions"
+        ]
       },
       {
         number: "05",
-        title: "Ordering, Pricing & Payment",
-        text: "Orders are only binding once confirmed in writing by ED_pharma. Prices, currencies and payment terms are agreed on a customer-by-customer basis and may be updated in new offers or contracts. Late payment may result in suspension of deliveries or withdrawal of credit facilities.",
-        moreDetails: `Additional Information:
-- Multi-currency payments accepted based on agreements.
-- Orders may be paused if documents or payments are delayed.
-- Credit limits may apply to some buyers.`
+        title: "Intellectual Property",
+        category: "Legal Protection",
+        icon: "file",
+        text: "All product information, images, and documentation remain the intellectual property of ED Pharma and licensed partners.",
+        keyPoints: [
+          "Protected trademarks",
+          "Copyright materials",
+          "Restricted usage rights",
+          "Attribution requirements"
+        ]
       },
       {
         number: "06",
-        title: "Delivery, Risk & Title",
-        text: "Delivery terms follow the Incoterms or shipping conditions stated in the offer or invoice. Risk in the goods passes to the customer when the products are handed over to the agreed carrier or collection point; title usually transfers after full payment is received, unless otherwise agreed in writing.",
-        moreDetails: `Additional Information:
-- Temperature-controlled shipments follow GDP rules.
-- Insurance is recommended for international shipping.
-- Tracking & serialisation may apply to some medicines.`
-      },
-      {
-        number: "07",
-        title: "Quality, Storage & Returns",
-        text: "Customers must store and handle products in accordance with GDP, temperature and security requirements and maintain full batch traceability. Returns are only accepted when pre-authorised by ED_pharma and where integrity, storage conditions and documentation can be verified.",
-        moreDetails: `Additional Information:
-- Returns only accepted with proper storage proof.
-- Tampered goods cannot be accepted.
-- All returns must match supplied batch numbers.`
-      },
-      {
-        number: "08",
-        title: "Pharmacovigilance & Complaints",
-        text: "Suspected adverse reactions, quality defects or product complaints reported to customers must be communicated promptly to ED_pharma with all available details so they can be escalated to the relevant manufacturer and authorities where required.",
-        moreDetails: `Additional Information:
-- Any serious adverse event must be reported within 24 hours.
-- All reports are escalated to manufacturers.
-- Failure to report may restrict future orders.`
-      },
-      {
-        number: "09",
-        title: "Data Protection & Confidentiality",
-        text: "Business contact data and transaction information are processed only to manage the commercial relationship, fulfil orders and comply with legal obligations. Price lists, product information and commercial terms shared by ED_pharma are confidential and must not be disclosed to unauthorised third parties.",
-        moreDetails: `Additional Information:
-- ED_pharma strictly follows GDPR.
-- Data stored securely for regulatory reasons only.
-- No data shared with third parties.`
-      },
-      {
-        number: "10",
-        title: "Intellectual Property & Changes",
-        text: "All trademarks, logos, artwork and catalogue designs remain the property of ED_pharma or the respective manufacturers and may not be reproduced without written consent. ED_pharma may amend these terms and website content at any time; continued use indicates acceptance of the updated terms.",
-        moreDetails: `Additional Information:
-- Trademark misuse may lead to legal action.
-- Catalogue layouts may change without notice.
-- Custom branding requires written approval.`
+        title: "Liability & Warranties",
+        category: "Legal Framework",
+        icon: "signature",
+        text: "Product warranties and liability terms are governed by applicable pharmaceutical regulations and our standard commercial agreements.",
+        keyPoints: [
+          "Regulatory compliance",
+          "Product quality guarantees",
+          "Limitation of liability",
+          "Dispute resolution process"
+        ]
       }
     ]
   };
@@ -119,142 +126,383 @@ export default function TermsPage() {
   const header = termsTranslations?.header || {};
   const terms = termsTranslations?.terms || [];
 
-  const scrollToSection = (index) => {
-    const el = sectionRefs.current[index];
-    if (!el) return;
+  // Mouse move effect for gradient
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
 
-    /* ⭐ FIX: INCREASE OFFSET SO FULL HEADING SHOWS ⭐ */
-    const yOffset = -120; // <-- This is the fix  
-    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-
-    window.scrollTo({ top: y, behavior: "smooth" });
+  const iconMap = {
+    building: Building2,
+    shield: ShieldCheck,
+    lock: Lock,
+    award: Award,
+    file: FileText,
+    signature: FileSignature,
+    users: Users,
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden text-slate-800 font-sans pt-24">
-      {/* Debug banner - remove this after testing */}
-      {/* <div className="fixed top-20 right-4 z-50 bg-red-100 p-2 rounded shadow text-xs">
-        <div>Lang: {language}</div>
-        <div>Has termsPage: {t?.termsPage ? "Yes" : "No"}</div>
-      </div> */}
-      
-      {/* <Navbar /> */}
-      <ScrollProgressLine/>
-      
-      {/* BACKGROUND */}
-      <div className="fixed inset-0 -z-10">
-        <img
-          src="/ed-pharma/img3.jpg"
-          className="h-full w-full object-cover"
+    <div className="min-h-screen bg-[#0a1628] relative overflow-hidden">
+      {/* Animated Gradient Background */}
+      <div className="fixed inset-0 z-0">
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#063B8A] via-[#0a1628] to-[#063B8A]" />
+        
+        {/* Animated gradient orbs */}
+        <motion.div
+          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-30 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, #4FB3E8 0%, transparent 70%)',
+            x: mousePosition.x * 0.02,
+            y: mousePosition.y * 0.02,
+          }}
         />
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-md" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1c4078]/10 via-transparent to-[#2d6199]/10" />
+        <motion.div
+          className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-20 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, #2A7DB8 0%, transparent 70%)',
+            x: mousePosition.x * -0.01,
+            y: mousePosition.y * -0.01,
+          }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 w-[700px] h-[700px] rounded-full opacity-10 blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          style={{
+            background: 'radial-gradient(circle, #063B8A 0%, transparent 70%)',
+          }}
+        />
+
+        {/* Grid overlay */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `
+              linear-gradient(#4FB3E8 1px, transparent 1px),
+              linear-gradient(90deg, #4FB3E8 1px, transparent 1px)
+            `,
+            backgroundSize: '100px 100px'
+          }} />
+        </div>
       </div>
 
-      <div className="px-4 pb-16 pt-20 md:px-6">
-        {/* HEADER SECTION */}
-        <section className="mx-auto max-w-4xl mb-12 text-center">
-          <h1
-            className="text-4xl md:text-6xl font-extrabold tracking-tight mb-8 inline-block"
-            style={{
-              background: "linear-gradient(90deg, #063B8A 0%, #2A7DB8 50%, #4FB3E8 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            {header.title || "Terms & Conditions"}
-          </h1>
+      {/* Main Content */}
+      <div className="relative z-10" ref={containerRef}>
+        {/* Hero Section with Glassmorphism */}
+        <section className="pt-32 pb-20 px-4 md:px-6">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-20"
+            >
+              {/* Badge */}
+              <motion.div
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.2, type: "spring" }}
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full mb-8 backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl"
+              >
+                <Sparkles className="w-5 h-5 text-[#4FB3E8]" />
+                <span className="text-sm font-bold text-white tracking-wide">LEGAL FRAMEWORK</span>
+                <div className="px-3 py-1 bg-gradient-to-r from-[#063B8A] to-[#2A7DB8] rounded-full text-xs font-bold text-white">
+                  {header.version}
+                </div>
+              </motion.div>
 
-          <p className="text-base md:text-lg text-slate-700 font-medium leading-relaxed">
-            {header.subtitle || "These Terms & Conditions govern business-to-business access to and use of the ED_pharma website and product catalogue."}
-          </p>
+              {/* Main Title */}
+              <h1 className="text-4xl md:text-6xl font-black mb-6 tracking-tight">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-[#4FB3E8] to-white">
+                  {header.title}
+                </span>
+              </h1>
 
-          <div className="mt-6 mx-auto max-w-3xl border-l-4 border-[#1c4078] bg-white/30 p-4 rounded-r-xl text-left">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-[#1c4078] mb-1">
-              {header.complianceTitle || "B2B Compliance & Verification"}
-            </h3>
-            <p className="text-sm text-slate-700 leading-relaxed font-medium">
-              {header.complianceText || "Access is strictly limited to licensed wholesalers, pharmacies, and authorised distributors."}
-            </p>
-          </div>
-        </section>
+              <p className="text-xl md:text-2xl text-blue-100 mb-4 font-light max-w-3xl mx-auto">
+                {header.subtitle}
+              </p>
 
-        {/* SCROLLABLE SECTION */}
-        <section className="mx-auto max-w-4xl">
-          <div className="relative max-h-[65vh] overflow-y-auto p-2 md:p-4 custom-scrollbar">
-            <style jsx>{`
-              .custom-scrollbar::-webkit-scrollbar { width: 6px; }
-              .custom-scrollbar::-webkit-scrollbar-thumb { background-color: #94a3b8; border-radius: 20px; }
-            `}</style>
+              <p className="text-sm text-blue-200/60 flex items-center justify-center gap-2">
+                <Eye className="w-4 h-4" />
+                {header.lastUpdated}
+              </p>
 
-            <div className="grid gap-4">
-              {terms.map((item, index) => (
-                <article
-                  key={index}
-                  onClick={() => scrollToSection(index)}
-                  className="cursor-pointer group flex flex-col gap-5 rounded-2xl bg-white/30 backdrop-blur-sm p-5 shadow-sm hover:bg-white/80 transition-all md:flex-row"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/50 text-[#1c4078] font-black text-lg">
-                    {item.number || `0${index + 1}`}
+              {/* Glass Card for Description */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="mt-12 max-w-4xl mx-auto p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-red-500/20 to-orange-500/20 backdrop-blur-sm border border-red-300/20">
+                    <AlertCircle className="w-6 h-6 text-red-300" />
                   </div>
-
-                  <div>
-                    <h2 className="text-lg font-bold text-[#1c4078]">
-                      {item.title || "Term Title"}
-                    </h2>
-                    <p className="mt-2 text-sm text-slate-800">
-                      {item.text || "Term description text..."}
+                  <div className="flex-1 text-left">
+                    <h3 className="text-lg font-bold text-white mb-2">
+                      B2B Compliance & Verification Required
+                    </h3>
+                    <p className="text-blue-100/80 leading-relaxed">
+                      {header.description}
                     </p>
                   </div>
-                </article>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Stats Bar - Glassmorphic */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 max-w-5xl mx-auto"
+            >
+              {[
+                { icon: FileText, label: "Sections", value: terms.length },
+                { icon: ShieldCheck, label: "GDPR Compliant", value: "100%" },
+                { icon: Building2, label: "B2B Only", value: "✓" },
+                { icon: Award, label: "EU Certified", value: "✓" }
+              ].map((stat, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  className="p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-xl hover:bg-white/10 transition-all"
+                >
+                  <stat.icon className="w-8 h-8 text-[#4FB3E8] mb-3 mx-auto" />
+                  <div className="text-2xl font-black text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-blue-200/60">{stat.label}</div>
+                </motion.div>
               ))}
+            </motion.div>
+
+            {/* Terms Cards - Glassmorphic Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              {terms.map((term, index) => {
+                const Icon = iconMap[term.icon] || FileText;
+                const isHovered = hoveredCard === index;
+                
+                return (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 * index, duration: 0.6 }}
+                    onHoverStart={() => setHoveredCard(index)}
+                    onHoverEnd={() => setHoveredCard(null)}
+                    whileHover={{ y: -8 }}
+                    className="group relative"
+                  >
+                    {/* Glow effect on hover */}
+                    {isHovered && (
+                      <motion.div
+                        layoutId="cardGlow"
+                        className="absolute -inset-1 bg-gradient-to-r from-[#063B8A] via-[#2A7DB8] to-[#4FB3E8] rounded-3xl blur-xl opacity-50"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
+
+                    {/* Glass Card */}
+                    <div className="relative h-full p-8 rounded-3xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl hover:bg-white/10 transition-all overflow-hidden">
+                      {/* Gradient overlay */}
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#4FB3E8]/20 to-transparent rounded-bl-full" />
+
+                      {/* Header */}
+                      <div className="relative mb-6">
+                        <div className="flex items-start justify-between mb-4">
+                          <div className="p-4 rounded-2xl bg-gradient-to-br from-[#063B8A]/40 to-[#2A7DB8]/40 backdrop-blur-sm border border-[#4FB3E8]/30 shadow-lg group-hover:scale-110 transition-transform">
+                            <Icon className="w-7 h-7 text-[#4FB3E8]" />
+                          </div>
+                          <div className="text-right">
+                            <div className="font-mono text-sm text-blue-300/50 mb-1">
+                              {term.number}
+                            </div>
+                            <div className="px-3 py-1 rounded-full bg-[#063B8A]/50 backdrop-blur-sm border border-[#4FB3E8]/30">
+                              <span className="text-xs font-bold text-[#4FB3E8]">
+                                {term.category}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <h3 className="text-2xl font-black text-white mb-3 group-hover:text-[#4FB3E8] transition-colors">
+                          {term.title}
+                        </h3>
+
+                        <p className="text-blue-100/70 leading-relaxed text-sm mb-6">
+                          {term.text}
+                        </p>
+                      </div>
+
+                      {/* Key Points */}
+                      <div className="space-y-2 mb-6">
+                        {term.keyPoints?.slice(0, 3).map((point, idx) => (
+                          <motion.div
+                            key={idx}
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: 0.1 * idx + 0.2 }}
+                            className="flex items-center gap-2 text-sm"
+                          >
+                            <CheckCircle2 className="w-4 h-4 text-green-400 flex-shrink-0" />
+                            <span className="text-blue-100/80">{point}</span>
+                          </motion.div>
+                        ))}
+                      </div>
+
+                      {/* Read More Button */}
+                      {/* <button className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-[#063B8A]/50 to-[#2A7DB8]/50 backdrop-blur-sm border border-[#4FB3E8]/30 text-white font-bold hover:from-[#063B8A] hover:to-[#2A7DB8] transition-all flex items-center justify-center gap-2 group">
+                        <span>View Details</span>
+                        <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </button> */}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+
+            {/* Full Details Section - Expandable Glassmorphic Panels */}
+            <div className="mt-24 max-w-5xl mx-auto space-y-6">
+              <motion.h2
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                className="text-4xl font-black text-white mb-12 text-center"
+              >
+                Complete Terms Documentation
+              </motion.h2>
+
+              {terms.map((term, index) => {
+                const Icon = iconMap[term.icon] || FileText;
+                
+                return (
+                  <motion.details
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl shadow-2xl hover:bg-white/10 transition-all overflow-hidden"
+                  >
+                    <summary className="cursor-pointer p-8 list-none flex items-center justify-between">
+                      <div className="flex items-center gap-6">
+                        <div className="p-3 rounded-xl bg-gradient-to-br from-[#063B8A]/40 to-[#2A7DB8]/40 backdrop-blur-sm border border-[#4FB3E8]/30">
+                          <Icon className="w-6 h-6 text-[#4FB3E8]" />
+                        </div>
+                        <div>
+                          <div className="flex items-center gap-3 mb-2">
+                            <span className="font-mono text-sm text-blue-300/50">{term.number}</span>
+                            <span className="px-3 py-1 rounded-full bg-[#063B8A]/50 backdrop-blur-sm border border-[#4FB3E8]/30 text-xs font-bold text-[#4FB3E8]">
+                              {term.category}
+                            </span>
+                          </div>
+                          <h3 className="text-2xl font-bold text-white group-hover:text-[#4FB3E8] transition-colors">
+                            {term.title}
+                          </h3>
+                        </div>
+                      </div>
+                      <ChevronRight className="w-6 h-6 text-blue-300 group-open:rotate-90 transition-transform" />
+                    </summary>
+
+                    <div className="px-8 pb-8 pt-4 border-t border-white/10">
+                      <p className="text-blue-100/80 leading-relaxed mb-6 text-lg">
+                        {term.text}
+                      </p>
+
+                      {/* All Key Points */}
+                      <div className="grid md:grid-cols-2 gap-4 p-6 rounded-xl bg-[#063B8A]/20 backdrop-blur-sm border border-[#4FB3E8]/20">
+                        <h4 className="col-span-full text-sm font-bold text-[#4FB3E8] uppercase tracking-wide mb-2 flex items-center gap-2">
+                          <Info className="w-4 h-4" />
+                          Key Requirements
+                        </h4>
+                        {term.keyPoints?.map((point, idx) => (
+                          <div key={idx} className="flex items-start gap-3">
+                            <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                            <span className="text-blue-100/90">{point}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.details>
+                );
+              })}
+            </div>
+
+            {/* CTA Section - Large Glassmorphic Card */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="mt-24 max-w-5xl mx-auto relative group"
+            >
+              {/* Animated glow */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#063B8A] via-[#4FB3E8] to-[#063B8A] rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
+              
+              <div className="relative p-12 md:p-16 rounded-3xl backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-2xl text-center">
+                <motion.div
+                  animate={{
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 5, -5, 0],
+                  }}
+                  transition={{
+                    duration: 5,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#063B8A] to-[#2A7DB8] mb-8 shadow-2xl"
+                >
+                  <Mail className="w-10 h-10 text-white" />
+                </motion.div>
+
+                <h3 className="text-4xl md:text-5xl font-black text-white mb-6">
+                  Questions About These Terms?
+                </h3>
+                <p className="text-xl text-blue-100/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+                  Our dedicated legal team is available to provide clarifications or discuss custom partnership agreements tailored to your organization.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 rounded-xl bg-white text-[#063B8A] font-black shadow-2xl hover:shadow-[#4FB3E8]/50 transition-all flex items-center justify-center gap-3 group"
+                  >
+                    <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                    Contact Legal Team
+                    <ArrowRight className="w-5 h-5" />
+                  </motion.button>
+
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-8 py-4 rounded-xl backdrop-blur-xl bg-white/10 border-2 border-white/30 text-white font-black hover:bg-white/20 transition-all flex items-center justify-center gap-3"
+                  >
+                    <Download className="w-5 h-5" />
+                    Download PDF
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Footer */}
+            <div className="mt-16 pt-8 border-t border-white/10 text-center">
+              <p className="text-blue-200/40 text-sm">
+                © 2026 ED Pharma. All rights reserved. • {header.version}
+              </p>
             </div>
           </div>
         </section>
-
-        {/* DETAILED SECTION */}
-        <section className="mx-auto max-w-4xl mt-20 space-y-16">
-          {terms.map((item, index) => (
-            <div
-              key={index}
-              ref={(el) => (sectionRefs.current[index] = el)}
-            >
-              <h3 className="text-3xl font-bold text-[#063B8A] mb-3">
-                {item.number || `0${index + 1}`}. {item.title || "Term Title"}
-              </h3>
-
-              <p className="text-base leading-relaxed text-slate-800 whitespace-pre-line">
-                {item.text || "Term description text..."}
-              </p>
-
-              {item.moreDetails && (
-                <div className="mt-4 text-slate-700 text-base whitespace-pre-line leading-relaxed">
-                  {item.moreDetails}
-                </div>
-              )}
-            </div>
-          ))}
-          
-          {/* Fallback if no terms */}
-          {terms.length === 0 && (
-            <div>
-              <h3 className="text-3xl font-bold text-[#063B8A] mb-3">
-                01. Scope of Use
-              </h3>
-              <p className="text-base leading-relaxed text-slate-800">
-                This website and catalogue are intended exclusively for professional counterparties such as pharmaceutical wholesalers, pharmacies, online pharmacies, clinics and licensed distributors within Europe. It is not designed for direct-to-patient sales or for individual consumers.
-              </p>
-              <div className="mt-4 text-slate-700 text-base whitespace-pre-line leading-relaxed">
-                Additional Information:
-                - Applies to all products and catalogues.
-                - Only licensed business entities may interact with ED_pharma.
-                - Regional regulations must always be followed.
-              </div>
-            </div>
-          )}
-        </section>
       </div>
-      {/* <Footer/> */}
     </div>
   );
 }

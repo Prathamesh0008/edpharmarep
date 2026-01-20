@@ -1068,7 +1068,7 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
-    "Soluciones ED"
+    
   ],
   contactInfo: {
     address: "Mumbai, India",

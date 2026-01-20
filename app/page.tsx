@@ -42,6 +42,17 @@ export default function Home() {
       {/* Add ScrollProgressLine here - positioned right after Navbar */}
       <ScrollProgressLine />
 
+      {/* BACKGROUND SVG */}
+        <div
+          className="fixed inset-0 -z-10"
+          style={{
+            backgroundImage: "url('/bg/ED-banner (2).svg')",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
+        />
+
       {/* HERO */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className=" gap-8 md:gap-12 items-center">

@@ -1041,7 +1041,7 @@ const products = {
 
 "apcalis-sx-20mg-oral-jelly-sq": {
   "id": "11",
-  "name": "Apcalis-SX 20 mg Oral Jelly",
+  "name": "Apcalis-SX 20 mg Xhel Oral",
   "category": "Apcalis Oral Jelly",
   "brand": "ED Ajanta Pharma",
   "dosage": "20 mg",
@@ -1403,7 +1403,7 @@ const products = {
 },
 "lovegra-100mg-oral-jelly-sq": {
   id: "13",
-  name: "Lovegra 100 mg Oral Jelly",
+  name: "Lovegra 100 mg Xhel Oral",
   category: "Lovegra",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -4153,7 +4153,7 @@ const products = {
 
 "cenforce-oral-jelly-100-sq": {
   "id": "28",
-  "name": "Cenforce Oral Jelly 100 mg",
+  "name": "Cenforce Xhel Oral 100 mg",
   "category": "Cenforce Oral Jelly",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg",

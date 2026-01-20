@@ -42,23 +42,23 @@ export default function Navbar() {
   /* ---------- LANGUAGES CONFIG ---------- */
   // UPDATE THIS to use availableLanguages from context or create a mapping
   const LANGUAGE_MAPPING = {
-    "en": { label: "English", flag: "us" },
+    "ar": { label: "Arabic", flag: "sa" },
+    "sq": { label: "Albanian", flag: "al" },
+    "bs": { label: "Bosnian", flag: "ba" },
+    "bg": { label: "Bulgarian", flag: "bg" },
+    "zh": { label: "Chinese", flag: "cn" },
+    "hr": { label: "Croatian", flag: "hr" },
     "nl": { label: "Dutch", flag: "nl" },
+    "en": { label: "English", flag: "us" },
     "fr": { label: "French", flag: "fr" },
     "de": { label: "German", flag: "de" },
-    "es": { label: "Spanish", flag: "es" },
-    "ar": { label: "Arabic", flag: "sa" },
-    "zh": { label: "Chinese", flag: "cn" },
+    "el": { label: "Greek", flag: "gr" },
     "ja": { label: "Japanese", flag: "jp" },
+    "mk": { label: "Macedonian", flag: "mk" },
     "pt": { label: "Portuguese", flag: "pt" },
     "ro": { label: "Romanian", flag: "ro" },
-    "sq": { label: "Albanian", flag: "al" },
-    "el": { label: "Greek", flag: "gr" },
-    "bg": { label: "Bulgarian", flag: "bg" },
-    "mk": { label: "Macedonian", flag: "mk" },
     "sr": { label: "Serbian", flag: "rs" },
-    "hr": { label: "Croatian", flag: "hr" },
-    "bs": { label: "Bosnian", flag: "ba" },
+    "es": { label: "Spanish", flag: "es" },
   };
 
   // Get current language info

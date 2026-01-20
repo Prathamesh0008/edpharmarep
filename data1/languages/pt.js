@@ -1062,7 +1062,7 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
-    "Soluções ED"
+    
   ],
   contactInfo: {
     address: "Mumbai, Índia",
@@ -1082,6 +1082,24 @@ productPage: {
  productActions: {
   addToCart: "Adicionar ao carrinho",
   buyNow: "Comprar agora"
+},
+
+homePage: {
+  hero: {
+    title: "Fabricação Farmacêutica Confiável e Distribuição Global",
+    subtitle:
+      "A ED Pharma fornece produtos farmacêuticos de alta qualidade e em conformidade com as BPF para mercados internacionais regulamentados.",
+    ctaViewProducts: "Ver Produtos",
+  },
+
+  featured: {
+    title: "Produtos em Destaque",
+    productImageAltFallback: "Imagem do produto",
+  },
+
+  heroRotator: {
+    alt: "Produto ED Pharma",
+  },
 },
 
 

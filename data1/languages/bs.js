@@ -1023,7 +1023,7 @@ productDetail: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "ED rješenja"
+      
     ],
     contactInfo: {
       address: "Mumbai, Indija",

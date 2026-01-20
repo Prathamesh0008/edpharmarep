@@ -1014,7 +1014,7 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
-    "EDソリューション"
+    
   ],
   contactInfo: {
     address: "インド、ムンバイ",

@@ -999,7 +999,7 @@ productDetail: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "Zgjidhje DE",
+      
     ],
     contactInfo: {
       address: "Mumbai, India",

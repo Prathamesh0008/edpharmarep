@@ -148,7 +148,7 @@ export default function ProductPage({ params }) {
               
               {/* Product Image */}
               <div className="flex-shrink-0">
-                <div className="w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden border-4 border-white shadow-lg">
+                <div className="w-64 h-64 md:w-120 md:h-120 rounded-xl overflow-hidden border-4 border-white shadow-lg">
                   <Image
                     src={product.image || "/placeholder.jpg"}
                     alt={product.name || "Product Image"}

@@ -1023,7 +1023,7 @@ testimonials: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
-      "Решенија за ЕД"
+      
     ],
     contactInfo: {
       address: "Мумбаи, Индија",

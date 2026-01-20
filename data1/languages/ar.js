@@ -1177,7 +1177,7 @@ testimonials: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
-    "حلول ED"
+  
   ],
   contactInfo: {
     address: "مومباي، الهند",

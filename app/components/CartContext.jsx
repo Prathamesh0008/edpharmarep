@@ -12,7 +12,7 @@ import {
 
 const CartContext = createContext(null);
 const LS_KEY = "edpharma_cart_v1";
-const BULK_QUANTITY = 50; // B2B bulk quantity increment
+const BULK_QUANTITY = 100; // B2B bulk quantity increment
 
 /* ================= PROVIDER ================= */
 
