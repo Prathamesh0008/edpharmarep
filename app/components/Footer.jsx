@@ -80,7 +80,7 @@ export default function Footer() {
             
             <Link href="/" className="flex items-center">
             <img
-              src="/logo.svg"
+              src="/logoed.svg"
               alt="ED Pharma"
               className="h-18 w-auto object-contain "
             />

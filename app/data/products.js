@@ -5,7 +5,7 @@ export const products = [
     category: "Kamagra Gold",
     brand: "ED Ajanta Pharma",
     dosage: "50 mg",
-    price: "500",
+    
     composition: "Sildenafil Citrate 50mg",
     form: "Tablet",
     pack_size: "1 x 4 Tablets",

@@ -389,7 +389,7 @@ const products = {
 },
 "kamagra-polo-zh": {
   id: "5",
-  name: "Super Kamagra Oral Jelly",
+  name: "超级卡玛格拉口服果冻",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -492,7 +492,7 @@ const products = {
 },
 "kamagra-chewable-strawberry-zh": {
   id: "6",
-  name: "Kamagra-100 mg Chewable Tablet (Strawberry)",
+  name: "卡玛格拉 100 毫克 草莓味 咀嚼片",
   category: "Kamagra Chewable Tablet",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -634,7 +634,7 @@ const products = {
 
 "kamagra-100mg-chewable-orange-cn": {
   id: "7",
-  name: "Kamagra-100 mg 咀嚼片 (橙味)",
+  name: "卡玛格拉 100 毫克 橙味 咀嚼片",
   category: "Kamagra 咀嚼片",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -817,7 +817,7 @@ const products = {
 },
 "kamagra-100mg-effervescent-zh": {
   id: "8",
-  name: "Kamagra-100 mg 泡腾片",
+  name: "卡玛格拉 100 毫克 泡腾片",
   category: "Kamagra 泡腾片",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -999,7 +999,7 @@ const products = {
 },
 "super-kamagra-100-60-cn": {
   id: "9",
-  name: "Super Kamagra",
+  name: "超级卡玛格拉",
   category: "Super Kamagra",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg 西地那非 + 60 mg 达泊西汀",
@@ -1184,7 +1184,7 @@ const products = {
 },
 "kamagra-expo-100mg-zh": {
   id: "10",
-  name: "Kamagra Expo 100 mg",
+  name: "卡玛格拉博览版 100 毫克",
   category: "Kamagra Expo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1366,7 +1366,7 @@ const products = {
 },
 "apcalis-sx-20mg-oral-jelly-cn": {
   id: "11",
-  name: "Apcalis-SX 20 mg 口服果冻",
+  name: "阿普卡利斯-SX 20 毫克 口服果冻",
   category: "Apcalis 口服果冻",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -1548,7 +1548,7 @@ const products = {
 },
 "tadalis-sx-20mg-zh": {
   id: "12",
-  name: "Tadalis-SX 20 mg",
+  name: "他达拉斯-SX 20 毫克",
   category: "Tadalis-SX",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -1730,7 +1730,7 @@ const products = {
 },
 "lovegra-100mg-oral-jelly-cn": {
   id: "13",
-  name: "Lovegra 100 mg 口服果冻",
+  name: "洛芙格拉 100 毫克 口服果冻",
   category: "Lovegra",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1912,7 +1912,7 @@ const products = {
 },
 "lovegra-100mg-zh": {
   id: "14",
-  name: "Lovegra 100 mg",
+  name: "洛芙格拉 100 毫克",
   category: "Lovegra",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -2093,7 +2093,7 @@ const products = {
 },
 "valif-20mg-tablet-cn": {
   id: "15",
-  name: "Valif 20 mg",
+  name: "瓦利夫 20 毫克",
   category: "Valif",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -2275,7 +2275,7 @@ const products = {
 },
 "valif-20mg-oral-jelly-zh": {
   id: "16",
-  name: "Valif 20 mg Oral Jelly",
+  name: "瓦利夫 20 毫克 口服凝胶",
   category: "Valif Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -2457,7 +2457,7 @@ const products = {
 },
 "cenforce-25mg-cn": {
   id: "17",
-  name: "Cenforce 25 mg",
+  name: "森福斯 25 毫克",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "25 mg",
@@ -2639,7 +2639,7 @@ const products = {
 },
 "cenforce-50mg-zh": {
   id: "18",
-  name: "Cenforce 50 mg",
+  name: "森福斯 50 毫克",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "50 mg",
@@ -2821,7 +2821,7 @@ const products = {
 },
 "cenforce-100mg-cn": {
   id: "19",
-  name: "Cenforce 100 mg",
+  name: "森福斯 100 毫克",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -3003,7 +3003,7 @@ const products = {
 },
 "cenforce-120mg-zh": {
   id: "20",
-  name: "Cenforce 120 mg",
+  name: "森福斯 120 毫克",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "120 mg",
@@ -3185,7 +3185,7 @@ const products = {
 },
 "cenforce-130mg-cn": {
   id: "21",
-  name: "Cenforce 130 mg",
+  name: "森福斯 130 毫克",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "130 mg",
@@ -3367,7 +3367,7 @@ const products = {
 },
 "cenforce-150mg-zh": {
   id: "22",
-  name: "Cenforce 150 mg",
+  name: "森福斯 150 毫克",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "150 mg",
@@ -3549,7 +3549,7 @@ const products = {
 },
 "cenforce-200mg-cn": {
   id: "23",
-  name: "Cenforce 200 mg",
+  name: "森福斯 200 毫克",
   brand: "ED Centurion Remedies",
   category: "Cenforce",
   dosage: "200 mg",
@@ -3726,7 +3726,7 @@ const products = {
 },
 "cenforce-soft-100-zh": {
   id: "24",
-  name: "Cenforce Soft 100",
+  name: "森福斯 软 100 毫克",
   category: "Cenforce Soft",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -3908,7 +3908,7 @@ const products = {
 },
 "cenforce-d-100-60-cn": {
   id: "25",
-  name: "Cenforce-D",
+  name: "森福斯-D",
   category: "Cenforce-D",
   brand: "ED Centurion Remedies",
   dosage: "100 mg 西地那非 + 60 mg 达泊西汀",
@@ -4094,7 +4094,7 @@ const products = {
 },
 "cenforce-fm-100-zh": {
   id: "26",
-  name: "Cenforce-FM",
+  name: "森福斯-FM",
   category: "Cenforce FM",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -4276,7 +4276,7 @@ const products = {
 },
 "cenforce-professional-cn": {
   id: "27",
-  name: "Cenforce Professional",
+  name: "森福斯 专业版",
   category: "Cenforce Professional",
   brand: "ED Centurion Remedies",
   dosage: "舌下片（相当于 100 mg）",
@@ -4458,7 +4458,7 @@ const products = {
 },
 "cenforce-oral-jelly-100-zh": {
   id: "28",
-  name: "Cenforce Oral Jelly 100 mg",
+  name: "森福斯 口服果冻 100 毫克",
   category: "Cenforce Oral Jelly",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -4635,7 +4635,7 @@ const products = {
 },
 "vidalista-2-5mg-cn": {
   id: "29",
-  name: "Vidalista 2.5 mg",
+  name: "维达利斯 2.5 毫克",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "2.5 mg",
@@ -4817,7 +4817,7 @@ const products = {
 },
 "vidalista-10-zh": {
   id: "31",
-  name: "Vidalista 10 mg",
+  name: "维达利斯 10 毫克",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "10 mg",
@@ -4999,7 +4999,7 @@ const products = {
 },
 "vidalista-20mg-cn": {
   id: "32",
-  name: "Vidalista 20 mg",
+  name: "维达利斯 20 毫克",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "20 mg",
@@ -5181,7 +5181,7 @@ const products = {
 },
 "vidalista-40-zh": {
   id: "33",
-  name: "Vidalista 40 mg",
+  name: "维达利斯 40 毫克",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "40 mg",
@@ -5363,7 +5363,7 @@ const products = {
 },
 "vidalista-60mg-cn": {
   id: "34",
-  name: "Vidalista 60 mg",
+  name: "维达利斯 60 毫克",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "60 mg",
@@ -5545,7 +5545,7 @@ const products = {
 },
 "vidalista-80-zh": {
   id: "35",
-  name: "Vidalista 80 mg",
+  name: "维达利斯 80 毫克",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "80 mg",
@@ -5727,7 +5727,7 @@ const products = {
 },
 "vidalista-black-80mg-cn": {
   id: "36",
-  name: "Vidalista Black 80",
+  name: "维达力士黑色 80",
   brand: "ED Centurion Remedies",
   category: "Vidalista Black",
   dosage: "80 mg",
@@ -5909,7 +5909,7 @@ const products = {
 },
 "super-vidalista-zh": {
   id: "37",
-  name: "Super Vidalista",
+  name: "维达利斯塔超级",
   brand: "ED Centurion Remedies",
   category: "Super Vidalista",
   dosage: "他达拉非 20mg + 达泊西汀 60mg",
@@ -6279,7 +6279,7 @@ const products = {
   id: "39",
   category: "Tadalafil",
   brand: "ED Centurion Remedies",
-  name: "Vidalista Professional",
+  name: "维达利斯塔专业版",
   dosage: "20mg",
   form: "舌下片",
   composition: "他达拉非 & 舌下 20mg",
@@ -6460,7 +6460,7 @@ const products = {
 },
 "vilitra-10mg-zh": {
   id: "40",
-  name: "Vilitra 10 mg",
+  name: "维力特拉 10毫克",
   brand: "ED Centurion Remedies",
   category: "伐地那非",
   dosage: "伐地那非 10mg",
@@ -6642,7 +6642,7 @@ const products = {
 },
 "vilitra-20mg-zh": {
   id: "41",
-  name: "Vilitra 20 mg",
+  name: "维力特拉 20毫克",
   brand: "ED Centurion Remedies",
   category: "伐地那非",
   dosage: "伐地那非 20mg",
@@ -6824,7 +6824,7 @@ const products = {
 },
 "vilitra-40mg-zh": {
   id: "42",
-  name: "Vilitra 40 mg",
+  name: "维力特拉 40毫克",
   brand: "ED Centurion Remedies",
   category: "伐地那非",
   dosage: "伐地那非 40mg",
@@ -7008,7 +7008,7 @@ const products = {
   id: "43",
   category: "Vardenafil",
   brand: "ED Centurion Remedies",
-  name: "Vilitra 60 mg",
+  name: "维力特拉 60毫克",
   dosage: "60mg",
   form: "片剂",
   composition: "伐地那非 60mg",
@@ -7176,7 +7176,7 @@ const products = {
 },
 "super-vilitra-zh": {
   id: "44",
-  name: "Super Vilitra",
+  name: "超级维力特拉",
   brand: "ED Centurion Remedies",
   category: "伐地那非 + 达泊西汀",
   dosage: "伐地那非 20mg + 达泊西汀 60mg",
@@ -7363,7 +7363,7 @@ const products = {
 "fliban-100-zh": {
   id: "45",
   category: "Flibanserin",
-  name: "Fliban",
+  name: "弗利班",
   brand: "ED Centurion Remedies",
   dosage: "100mg",
   form: "片剂",
@@ -7545,7 +7545,7 @@ const products = {
 },
 "avana-50mg-zh": {
   id: "46",
-  name: "Avana-50",
+  name: "阿瓦纳-50",
   brand: "ED Sunrise Remedies",
   category: "阿伐那非",
   dosage: "50mg",
@@ -7729,7 +7729,7 @@ const products = {
   id: "47",
   category: "Avanafil",
   brand: "ED Sunrise Remedies",
-  name: "Avana-100",
+  name: "阿瓦纳-100",
   dosage: "100mg",
   form: "片剂",
   composition: "阿伐那非 100mg",
@@ -7902,7 +7902,7 @@ const products = {
   id: "48",
   category: "Avanafil",
   brand: "ED Sunrise Remedies",
-  name: "Avana-200",
+  name: "阿瓦纳-200",
   dosage: "200mg",
   form: "片剂",
   composition: "阿伐那非 200mg",
@@ -8085,7 +8085,7 @@ const products = {
   id: "49",
   category: "Avanafil + Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Top Avana",
+  name: "顶级阿瓦纳",
   dosage: "Avanafil 50mg + Dapoxetine 60mg",
   form: "片剂",
   composition: "阿伐那非 50mg & 达泊西汀 60mg",
@@ -8272,7 +8272,7 @@ const products = {
   id: "50",
   category: "Avanafil + Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Super Avana",
+  name: "超级阿瓦纳",
   dosage: "Avanafil 100mg + Dapoxetine 60mg",
   form: "片剂",
   composition: "阿伐那非 100mg & 达泊西汀 60mg",
@@ -8460,7 +8460,7 @@ const products = {
 "extra-super-avana-zh": {
   id: "51",
   category: "Avanafil + Dapoxetine",
-  name: "Extra Super Avana",
+  name: "特级超级阿瓦纳",
   brand: "ED Sunrise Remedies",
   dosage: "Avanafil 200mg + Dapoxetine 60mg",
   form: "片剂",
@@ -8648,7 +8648,7 @@ const products = {
   id: "52",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-30",
+  name: "波克塞特-30",
   dosage: "30mg",
   form: "片剂",
   composition: "达泊西汀 30mg",
@@ -8832,7 +8832,7 @@ const products = {
   id: "53",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-60",
+  name: "波克塞特-60",
   dosage: "60mg",
   form: "片剂",
   composition: "达泊西汀 60mg",
@@ -9016,7 +9016,7 @@ const products = {
   id: "54",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-90",
+  name: "波克塞特-90",
   dosage: "90mg",
   form: "片剂",
   composition: "达泊西汀 90mg",
@@ -9208,7 +9208,7 @@ const products = {
 },
 "p-force-100-caps-zh": {
   id: "55",
-  name: "P-Force 100 Caps.",
+  name: "P-Force 100 胶囊",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100",
@@ -9401,7 +9401,7 @@ const products = {
 },
 "p-force-fort-zh": {
   id: "56",
-  name: "P-Force Fort",
+  name: ": 皮福斯强堡",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "150 mg",
@@ -9594,7 +9594,7 @@ const products = {
 },
 "p-force-plus-zh": {
   id: "57",
-  name: "P-Force Plus",
+  name: " 皮福斯普拉斯",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "130 mg",
@@ -9786,7 +9786,7 @@ const products = {
 },
 "super-p-force-oral-jelly-zh": {
   id: "58",
-  name: "Super P-Force Oral Jelly",
+  name: "Супер П-Форс Орал Џели",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100 mg + 60 mg",
@@ -9978,7 +9978,7 @@ const products = {
 },
 "super-p-force-zh": {
   id: "59",
-  name: "Super P-Force",
+  name: "超级皮福斯",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100 mg + 60 mg",
@@ -10170,7 +10170,7 @@ const products = {
 },
 "extra-super-p-force-zh": {
   id: "60",
-  name: "Extra Super P-Force",
+  name: " 特级超级皮福斯",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100 mg + 100 mg",
@@ -10362,7 +10362,7 @@ const products = {
 },
 "zhewitra-10-zh": {
   id: "61",
-  name: "Zhewitra 10",
+  name: "泽维特拉10",
   brand: "ED Sunrise Remedies",
   category: "Zhewitra系列",
   dosage: "10 毫克",
@@ -10549,7 +10549,7 @@ const products = {
 },
 "zhewitra-20-zh": {
     id: "62",
-    name: "Zhewitra 20",
+    name: " 泽维特拉20",
     brand: "ED Sunrise Remedies",
     category: "Zhewitra 系列",
     dosage: "20 mg",
@@ -10739,7 +10739,7 @@ const products = {
 },
 "zhewitra-20-oral-jelly-zh": {
   id: "63",
-  name: "Zhewitra 20 口服果冻",
+  name: "泽维特拉20口服凝胶",
   brand: "ED Sunrise Remedies",
   category: "Zhewitra 系列",
   dosage: "20 mg",
@@ -10931,7 +10931,7 @@ const products = {
 },
 "zhewitra-40": {
   id: "64",
-  name: "Zhewitra 40",
+  name: " 泽维特拉40",
   brand: "ED Sunrise Remedies",
   category: "Zhewitra 系列",
   dosage: "40 毫克",
@@ -11118,7 +11118,7 @@ const products = {
 },
 "zhewitra-60-zh": {
     id: "65",
-    name: "Zhewitra 60",
+    name: "泽维特拉60",
     brand: "ED Sunrise Remedies",
     category: "Zhewitra 系列",
     dosage: "60 mg",
@@ -11308,7 +11308,7 @@ const products = {
 },
 "zhewitra-soft-20": {
   id: "66",
-  name: "Zhewitra Soft-20",
+  name: "泽维特拉软20",
   brand: "ED Sunrise Remedies",
   category: "Zhewitra 系列",
   dosage: "20 毫克",
@@ -11500,7 +11500,7 @@ const products = {
 },
 "Tadarise-10-en":{
     id: "71",
-    name: "Tadarise-10",
+    name: "塔达瑞斯-10",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "10 mg",
@@ -11690,7 +11690,7 @@ administration: [
   },
 "Tadarise-Pro-20-zh":{
     id: "72",
-    name: "Tadarise Pro-20",
+    name: " 塔达瑞斯专业-20",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -11879,7 +11879,7 @@ administration: [
   },
 "Tadarise-20-zh":{
     id: "73",
-    name: "Tadarise-20",
+    name: "塔达瑞斯-20",
     brand: "ED Sunrise Remedies",
     category: "Tadarise 系列",
     dosage: "20 mg",
@@ -12069,7 +12069,7 @@ administration: [
   },
 "Tadarise-20-Oral-Jelly-en":{
     id: "74",
-    name: "Tadarise-20 Oral Jelly",
+    name: "塔达瑞斯-20口服果冻",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -12259,7 +12259,7 @@ administration: [
   },
 "Tadarise-40-zh":{
     id: "75",
-    name: "Tadarise-40",
+    name: "塔达瑞斯-40",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "40 mg",
@@ -12448,7 +12448,7 @@ administration: [
   },
 "Tadarise Pro-40-zh":{
     id: "76",
-    name: "Tadarise Pro-40",
+    name: "塔达瑞斯专业-40",
     brand: "ED Sunrise Remedies",
     category: "Tadarise 系列",
     dosage: "40 mg",
@@ -12638,7 +12638,7 @@ administration: [
   },
 "Tadarise-60-en":{
     id: "77",
-    name: "Tadarise-60",
+    name: "塔达瑞斯-60",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "60 mg",
@@ -12828,7 +12828,7 @@ administration: [
   },
 "Super-Tadarise-zh":{
     id: "78",
-    name: "Super Tadarise",
+    name: "超级塔达瑞斯",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg + 60 mg",
@@ -13017,7 +13017,7 @@ administration: [
   },
 "Extra-Super-Tadarise-zh":{
     id: "79",
-    name: "Extra Super Tadarise",
+    name: " 特级超级塔达瑞斯",
     brand: "ED Sunrise Remedies",
     category: "Tadarise 系列",
     dosage: "40 mg + 60 mg",
@@ -13207,7 +13207,7 @@ administration: [
   },
 "Tadarise-Effervescent-en":{
     id: "80",
-    name: "Tadarise Effervescent",
+    name: "塔达瑞斯泡腾",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -13396,7 +13396,7 @@ administration: [
   },
 "top-tadarise-zh": {
   id: "81",
-  name: "Top Tadarise",
+  name: "顶级塔达瑞斯",
   brand: "ED Sunrise Remedies",
   category: "Tadarise",
   dosage: "20 mg + 30 mg",
@@ -13576,7 +13576,7 @@ administration: [
 },
 "tadasoft-20-zh": {
   id: "82",
-  name: "Tadasoft 20 mg",
+  name: " 塔达索夫特20毫克",
   brand: "ED Sunrise Remedies",
   category: "Tadasoft",
   dosage: "20 mg",
@@ -13756,7 +13756,7 @@ administration: [
 },
 "tadasoft-40-en": {
   id: "83",
-  name: "Tadasoft 40 mg",
+  name: "塔达索夫特40毫克",
   brand: "ED Sunrise Remedies",
   category: "Tadasoft",
   dosage: "40 mg",
@@ -13937,7 +13937,7 @@ administration: [
 },
 "Sildisoft-100-zh":{
     id: "84",
-    name: "Sildisoft-100",
+    name: "希尔迪索夫特-100",
     brand: "ED Sunrise Remedies",
     category: "Sildisoft Range",
     dosage: "100 mg",
@@ -14127,7 +14127,7 @@ administration: [
   },
 "Sildisoft-50-zh":{
     id: "85",
-    name: "Sildisoft-50",
+    name: "希尔迪索夫特-50",
     brand: "ED Sunrise Remedies",
     category: "Sildisoft 系列",
     dosage: "50 mg",
@@ -14317,7 +14317,7 @@ administration: [
   },
 "Malegra-25-en":{
     id: "86",
-    name: "Malegra 25",
+    name: "马勒格拉25",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "25 mg",
@@ -14505,7 +14505,7 @@ administration: [
   },
 "Malegra-50-zh":{
     id: "87",
-    name: "Malegra 50",
+    name: "马勒格拉50",
     brand: "ED Sunrise Remedies",
     category: "Malegra 系列",
     dosage: "50 mg",
@@ -14695,7 +14695,7 @@ administration: [
   },
 "Malegra-75-en":{
     id: "88",
-    name: "Malegra 75",
+    name: "马勒格拉75",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "75 mg",
@@ -14885,7 +14885,7 @@ administration: [
   },
 "Malegra-100-zh":{
     id: "89",
-    name: "Malegra 100",
+    name: "马勒格拉100",
     brand: "ED Sunrise Remedies",
     category: "Malegra 系列",
     dosage: "100 mg",
@@ -15075,7 +15075,7 @@ administration: [
   },
 "Malegra-120-en":{
     id: "90",
-    name: "Malegra 120",
+    name: "马勒格拉120",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "120 mg",
@@ -15266,7 +15266,7 @@ administration: [
   },
 "Malegra-200-zh":{
     id: "91",
-    name: "Malegra 200",
+    name: "马勒格拉200",
     brand: "ED Sunrise Remedies",
     category: "Malegra 系列",
     dosage: "200 mg",
@@ -15456,7 +15456,7 @@ administration: [
   },
 "Malegra100-Oral-Jelly-en":{
     id: "92",
-    name: "Malegra 100 Oral Jelly",
+    name: "马勒格拉100口服果冻",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -15646,7 +15646,7 @@ administration: [
   },
 "Malegra-Pro-50-zh":{
     id: "93",
-    name: "Malegra Pro 50",
+    name: "马勒格拉专业50",
     brand: "ED Sunrise Remedies",
     category: "Malegra 系列",
     dosage: "50 mg",
@@ -15836,7 +15836,7 @@ administration: [
   },
 "Malegra-Pro-100-en":{
     id: "94",
-    name: "Malegra Pro 100",
+    name: "马勒格拉专业100",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -16026,7 +16026,7 @@ administration: [
   },
 "Malegra-DXT-zh":{
     id: "95",
-    name: "Malegra DXT",
+    name: "马勒格拉DXT",
     brand: "ED Sunrise Remedies",
     category: "Malegra 系列",
     dosage: "100 mg + 30 mg",
@@ -16216,7 +16216,7 @@ administration: [
   },
 "Malegra-DXT-Plus-en":{
     id: "96",
-    name: "Malegra DXT Plus",
+    name: "马勒格拉DXT普拉斯",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg + 60 mg",
@@ -16405,7 +16405,7 @@ administration: [
   },
 "Malegra-FXT-zh":{
     id: "97",
-    name: "Malegra FXT",
+    name: "马勒格拉FXT",
     brand: "ED Sunrise Remedies",
     category: "Malegra 系列",
     dosage: "100 mg + 40 mg",
@@ -16595,7 +16595,7 @@ administration: [
   },
 "Malegra-FXT-Plus-en":{
     id: "98",
-    name: "Malegra FXT Plus",
+    name: "马勒格拉FXT普拉斯",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg + 60 mg",
@@ -16785,7 +16785,7 @@ administration: [
   },
 "Malegra-Effervescent100mg-zh":{
     id: "99",
-    name: "Malegra Effervescent 100mg",
+    name: "马勒格拉泡腾100毫克 ",
     category: "Malegra 系列",
     brand: "ED Sunrise Remedies",
     dosage: "100 mg",
@@ -16975,7 +16975,7 @@ administration: [
   },
 "Malegra100-Green-en":{
     id: "100",
-    name: "Malegra 100 Green",
+    name: "马勒格拉绿色100",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -17165,7 +17165,7 @@ administration: [
   },
 "Malegra100-Gold-en":{
     id: "101",
-    name: "Malegra 100 Gold",
+    name: "马勒格拉金色100",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -17356,7 +17356,7 @@ administration: [
   },
 "Penon-Cream-en":{
   id: "102",
-  name: "Penon 霜",
+  name: "佩农霜 ",
   brand: "ED Sunrise Remedies",
   category: "男性健康护理",
   dosage: "草本霜",
@@ -17518,7 +17518,7 @@ administration: [
 },
 "Naron-Cream-zh":{
     id: "103",
-    name: "Naron Cream",
+    name: "纳隆霜",
     brand: "ED Sunrise Remedies",
     category: "女性保健",
     dosage: "100 gm",
@@ -17662,7 +17662,7 @@ administration: [
   },
 "Grafix-Cream-en":{
     id: "104",
-    name: "Grafix Cream",
+    name: "格拉菲克斯霜",
     brand: "ED Sunrise Remedies",
     category: "女性保健",
     dosage: "100 gm",
@@ -17807,7 +17807,7 @@ administration: [
   },
 "Femallegra-100-en":{
     id: "105",
-    name: "Femallegra-100",
+    name: " 费马乐格拉-100",
     brand: "ED Sunrise Remedies",
     category: "女性健康护理",
     dosage: "100 mg",
@@ -17949,7 +17949,7 @@ administration: [
   },
 "Tadafem-20-zh":{
     id: "106",
-    name: "Tadafem-20",
+    name: "塔达芬-20",
     brand: "ED Sunrise Remedies",
     category: "女性保健",
     dosage: "20 mg",
@@ -18093,7 +18093,7 @@ administration: [
   },
 "Clofi-25-en":{
     id: "107",
-    name: "Clofi-25",
+    name: "克洛菲-25",
     brand: "ED Sunrise Remedies",
     category: "女性保健",
     dosage: "25 mg",
@@ -18226,7 +18226,7 @@ administration: [
   },
 "Clofi-50-en":{
   id: "108",
-  name: "Clofi-50",
+  name: "克洛菲-50",
   brand: "ED Sunrise Remedies",
   category: "女性健康护理",
   dosage: "50 mg",
@@ -18365,7 +18365,7 @@ administration: [
 },
 "Clofi-100-zh":{
   id: "109",
-  name: "Clofi-100",
+  name: "克洛菲-100",
   brand: "ED Sunrise Remedies",
   category: "女性保健",
   dosage: "100 mg",
@@ -18498,7 +18498,7 @@ administration: [
 },
 "Zudena-100-en":{
     id: "110",
-    name: "Zudena-100",
+    name: " 祖德纳-100",
     brand: "ED Sunrise Remedies",
     category: "Zudena 系列",
     dosage: "100 mg",
@@ -18643,7 +18643,7 @@ administration: [
   },
 "Zudena-200-en":{
   id: "111",
-  name: "Zudena-200",
+  name: "祖德纳-200",
   brand: "ED Sunrise Remedies",
   category: "Zudena 系列",
   dosage: "200 mg",
@@ -18790,7 +18790,7 @@ administration: [
 },
 "Super Zudena-zh":{
     id: "112",
-    name: "Super Zudena",
+    name: "超级祖德纳",
     brand: "ED Sunrise Remedies",
     category: "Zudena 系列",
     dosage: "乌地那非 100 mg & 盐酸达泊西汀 60 mg",
@@ -18936,7 +18936,7 @@ administration: [
   },
 "Iversun-6-en":{
     id: "113",
-    name: "Iversun-6",
+    name: "伊维孙-6",
     brand: "ED Sunrise Remedies",
     category: "伊维菌素系列",
     dosage: "6 mg",
@@ -19067,7 +19067,7 @@ administration: [
   },
 "Iversun-12-en":{
   id: "114",
-  name: "Iversun-12",
+  name: "伊维孙-12",
   brand: "ED Sunrise Remedies",
   category: "伊维菌素系列",
   dosage: "12 mg",
@@ -19201,7 +19201,7 @@ administration: [
 },
 "Cinasun-30-zh":{
     id: "115",
-    name: "Cinasun-30",
+    name: "西纳孙-30",
     brand: "ED Sunrise Remedies",
     category: "西那卡塞系列",
     dosage: "30 mg",
@@ -19333,7 +19333,7 @@ administration: [
   },
 "Cinasun-60-en":{
     id: "116",
-    name: "Cinasun-60",
+    name: "西纳孙-60",
     brand: "ED Sunrise Remedies",
     category: "西那卡塞系列",
     dosage: "60 mg",
@@ -19465,7 +19465,7 @@ administration: [
   },
 "Cinasun-90-en":{
   id: "117",
-  name: "Cinasun-90",
+  name: "西纳孙-90",
   brand: "ED Sunrise Remedies",
   category: "西那卡塞系列",
   dosage: "90 mg",
@@ -19747,7 +19747,7 @@ administration: [
   },
 "Chocogra-100-en":{
     id: "119",
-    name: "Chocogra-100",
+    name: "乔可格拉-100",
     brand: "ED Sunrise Remedies",
     category: "其他系列",
     dosage: "100 mg",
@@ -19892,7 +19892,7 @@ administration: [
   },
 "Orlisun-en":{
   id: "120",
-  name: "Orlisun",
+  name: " 奥利孙",
   brand: "ED Sunrise Remedies",
   category: "其他系列",
   dosage: "120 mg",
@@ -20026,7 +20026,7 @@ administration: [
 },
 "Modafresh-200-zh":{
     id: "121",
-    name: "Modafresh-200",
+    name: "莫达弗雷什-200",
     brand: "ED Sunrise Remedies",
     category: "其他系列",
     dosage: "200 mg",
@@ -20157,7 +20157,7 @@ administration: [
   },
 "Sunpecia-1mg/5mg-en":{
     id: "122",
-    name: "Sunpecia 1mg / 5mg",
+    name: "桑佩西亚 1毫克 / 5毫克",
     brand: "ED Sunrise Remedies",
     category: "其他系列",
     dosage: "1 mg / 5 mg",
@@ -20327,7 +20327,7 @@ administration: [
   },
 "Pirfisun-Tablet-zh":{
     id: "123",
-    name: "Pirfisun Tablet",
+    name: "皮尔菲孙片",
     brand: "ED Sunrise Remedies",
     category: "其他系列",
     dosage: "200 mg",

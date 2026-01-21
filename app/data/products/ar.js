@@ -1,7 +1,7 @@
 const products = {
-"kamagra-gold-50-mg-ar": {
+ "kamagra-gold-50-mg-ar": {
   id: "1",
-  name: "Kamagra Gold 50 mg",
+  name: "كاماجرا-جولد-50-ملغ-عربي",
   category: "كاماغرا جولد",
   brand: "ED Ajanta Pharma",
   dosage: "50 ملغ",
@@ -87,7 +87,7 @@ const products = {
     "تعرف على كيفية تفاعل المادة الفعالة مع جسمك لاتخاذ قرارات مدروسة."
   ]
   },
- "kamagra-gold-100-mg-ar": {
+ "كاماجرا-جولد-100-ملغ-عربي": {
   id: "2",
   name: "Kamagra Gold 100 mg",
   category: "كاماغرا جولد",
@@ -186,7 +186,7 @@ const products = {
 },
 "kamagra-100mg-oral-jelly-vol1-ar": {
   id: "3",
-  name: "Kamagra 100 mg Oral Jelly Vol 1",
+  name: "كاماجرا 100 ملغ جل فموي – المجلد 1",
   category: "كاماغرا جيلي فموي",
   brand: "ED Ajanta Pharma",
   dosage: "100 ملغ",
@@ -284,7 +284,7 @@ const products = {
 },
 "super-kamagra-oral-jelly-ar": {
   id: "4",
-  name: "Super Kamagra Oral Jelly",
+  name: "سوبر كاماجرا جل فموي",
   category: "كاماغرا جل فموي",
   brand: "ED Ajanta Pharma",
   dosage: "100 ملغ سيلدينافيل + 60 ملغ دابوكستين",
@@ -389,7 +389,7 @@ const products = {
 },
 "kamagra-polo-ar": {
   id: "5",
-  name: "Super Kamagra Oral Jelly",
+  name: "سوبر كاماجرا جل فموي",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -492,7 +492,7 @@ const products = {
 },
 "kamagra-chewable-strawberry-ar": {
   id: "6",
-  name: "Kamagra-100 mg Chewable Tablet (Strawberry)",
+  name: "كاماجرا 100 ملغ أقراص قابلة للمضغ (فراولة)",
   category: "Kamagra Chewable Tablet",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -817,7 +817,7 @@ const products = {
 },
 "kamagra-100mg-effervescent-ar": {
   id: "8",
-  name: "Kamagra-100 mg Effervescent",
+  name: "كاماجرا 100 ملغ فوار",
   category: "كاماغرا فوار",
   brand: "ED Ajanta Pharma",
   dosage: "100 مجم",
@@ -999,7 +999,7 @@ const products = {
 },
 "super-kamagra-100-60-ar": {
   id: "9",
-  name: "Super Kamagra",
+  name: "سوبر كاماجرا",
   category: "سوبر كاماجرا",
   brand: "ED Ajanta Pharma",
   dosage: "100 مجم سيلدينافيل + 60 مجم دابوكستين",
@@ -1184,7 +1184,7 @@ const products = {
 },
 "super-kamagra-100-60-en": {
   id: "9",
-  name: "Super Kamagra",
+  name: "سوبر كاماجرا",
   category: "سوبر كاماجرا",
   brand: "ED Ajanta Pharma",
   dosage: "100 مجم سيلدينافيل + 60 مجم دابوكستين",
@@ -1370,7 +1370,7 @@ const products = {
 
 "kamagra-expo-100mg-ar": {
   id: "10",
-  name: "Kamagra Expo 100 mg",
+  name: "كاماجرا إكسبو 100 ملغ",
   category: "كاماغرا إكسبو",
   brand: "ED Ajanta Pharma",
   dosage: "100 مجم",
@@ -1552,7 +1552,7 @@ const products = {
 },
 "apcalis-sx-20mg-oral-jelly-ar": {
   id: "11",
-  name: "Apcalis-SX 20 mg Oral Jelly",
+  name: "أبكاليس-إس إكس 20 ملغ جل فموي",
   category: "أبكاليس جيلي فموي",
   brand: "ED Ajanta Pharma",
   dosage: "20 مجم",
@@ -1734,7 +1734,7 @@ const products = {
 },
 "tadalis-sx-20mg-ar": {
   id: "12",
-  name: "Tadalis-SX 20 mg",
+  name: "تاداليس-إس إكس 20 ملغ",
   category: "تاداليس-إس إكس",
   brand: "ED Ajanta Pharma",
   dosage: "20 مجم",
@@ -2098,7 +2098,7 @@ const products = {
 },
 "lovegra-100mg-ar": {
   id: "14",
-  name: "Lovegra 100 mg Oral Jelly",
+  name: "لوفجرا 100 ملغ جل فموي",
   category: "لوفيجرا",
   brand: "ED Ajanta Pharma",
   dosage: "100 مجم",
@@ -2279,7 +2279,7 @@ const products = {
 },
 "valif-20mg-tablet-ar": {
   id: "15",
-  name: "Valif 20 mg",
+  name: "فاليف 20 ملغ",
   category: "فاليف",
   brand: "ED Ajanta Pharma",
   dosage: "20 مجم",
@@ -2459,7 +2459,7 @@ const products = {
     "خزن المنتج في عبوته الأصلية لحمايته من الرطوبة."
   ]
 },
-"valif-20mg-oral-jelly-ar": {
+"فاليف-20-ملغ-جل-فموي-عربي": {
   id: "16",
   name: "Valif 20 mg Oral Jelly",
   category: "فاليف جيلي فموي",
@@ -2643,7 +2643,7 @@ const products = {
 },
 "cenforce-25mg-ar": {
   id: "17",
-  name: "Cenforce 25 mg",
+  name: "سينفورس 25 ملغ",
   category: "سينفورس",
   brand: "ED Centurion Remedies",
   dosage: "25 مجم",
@@ -2825,7 +2825,7 @@ const products = {
 },
 "cenforce-50mg-ar": {
   id: "18",
-  name: "nforce 50 mg",
+  name: "إنفورس 50 ملغ",
   category: "سينفورس",
   brand: "ED Centurion Remedies",
   dosage: "50 مجم",
@@ -3007,7 +3007,7 @@ const products = {
 },
 "cenforce-100mg-ar": {
   id: "19",
-  name: "Cenforce 100 mg",
+  name: "سينفورس 100 ملغ",
   category: "سينفورس",
   brand: "ED Centurion Remedies",
   dosage: "100 مجم",
@@ -3371,7 +3371,7 @@ const products = {
 },
 "cenforce-130mg-ar": {
   id: "21",
-  name: "Cenforce 130 mg",
+  name: "سينفورس 100 ملغ",
   category: "سينفورس",
   brand: "ED Centurion Remedies",
   dosage: "130 مجم",
@@ -3553,7 +3553,7 @@ const products = {
 },
 "cenforce-150mg-ar": {
   id: "22",
-  name: "Cenforce 150 mg",
+  name: "سينفورس 150 ملغ",
   category: "سينفورس",
   brand: "ED Centurion Remedies",
   dosage: "150 مجم",
@@ -3912,7 +3912,7 @@ const products = {
 },
 "cenforce-soft-100-ar": {
   id: "24",
-  name: "Cenforce Soft 100",
+  name: "سينفورس سوفت 100 ملغ",
   category: "سينفورس سوفت",
   brand: "ED Centurion Remedies",
   dosage: "100 مجم",
@@ -4094,7 +4094,7 @@ const products = {
 },
 "cenforce-d-100-60-ar": {
   id: "25",
-  name: "Cenforce-D",
+  name: "سينفورس-دي",
   category: "سينفورس-دي",
   brand: "ED Centurion Remedies",
   dosage: "100 مجم سيلدينافيل + 60 مجم دابوكستين",
@@ -4280,7 +4280,7 @@ const products = {
 },
 "cenforce-fm-100-ar": {
   id: "26",
-  name: "Cenforce-FM",
+  name: "سينفورس-إف إم",
   category: "سينفورس إف إم",
   brand: "إي دي سينتوريون ريميديز",
   dosage: "100 مجم",
@@ -4462,7 +4462,7 @@ const products = {
 },
 "cenforce-professional-ar": {
   id: "27",
-  name: "Cenforce Professional",
+  name: "سينفورس بروفيشنال",
   category: "سينفورس بروفيشنال",
   brand: "ED Centurion Remedies",
   dosage: "قرص تحت اللسان (يعادل 100 مجم)",
@@ -4644,7 +4644,7 @@ const products = {
 },
 "cenforce-oral-jelly-100-ar": {
   id: "28",
-  name: "Cenforce Oral Jelly 100 mg",
+  name: "سينفورس جل فموي 100 ملغ",
   category: "سينفورس أورال جيلي",
   brand: "ED Centurion Remedies",
   dosage: "100 مجم",
@@ -4821,7 +4821,7 @@ const products = {
 },
 "vidalista-2-5mg-ar": {
   id: "29",
-  name: "Vidalista 2.5 mg",
+  name: "فيداليستا 2.5 ملغ",
   category: "فيداليستا",
   brand: "ED Centurion Remedies",
   dosage: "2.5 مجم",
@@ -5003,7 +5003,7 @@ const products = {
 },
 "vidalista-5-ar": {
   id: "30",
-  name: "Vidalista 5 mg",
+  name: "فيداليستا 5 ملغ",
   brand: "ED Centurion Remedies",
   category: "فيداليستا",
   dosage: "5 ملغ",
@@ -5185,7 +5185,7 @@ const products = {
 
 "vidalista-10-ar": {
   id: "31",
-  name: "Vidalista 10 mg",
+  name: "فيداليستا 10 ملغ",
   brand: "ED Centurion Remedies",
   category: "فيداليستا",
   dosage: "10 مجم",
@@ -5367,7 +5367,7 @@ const products = {
 },
 "vidalista-20mg-ar": {
   id: "32",
-  name: "Vidalista 20 mg",
+  name: "فيداليستا 20 ملغ",
   category: "فيداليستا",
   brand: "ED Centurion Remedies",
   dosage: "20 مجم",
@@ -5549,7 +5549,7 @@ const products = {
 },
 "vidalista-40-ar": {
   id: "33",
-  name: "Vidalista 40 mg",
+  name: "فيداليستا 40 ملغ",
   category: "فيداليستا",
   brand: "ED Centurion Remedies",
   dosage: "40 مجم",
@@ -5731,7 +5731,7 @@ const products = {
 },
 "vidalista-60mg-ar": {
   id: "34",
-  name: "Vidalista 60 mg",
+  name: "فيداليستا 60 ملغ",
   brand: "ED Centurion Remedies",
   category: "فيداليستا",
   dosage: "60 مجم",
@@ -5913,7 +5913,7 @@ const products = {
 },
 "vidalista-80-ar": {
   id: "35",
-  name: "Vidalista 80 mg",
+  name: "فيداليستا 80 ملغ",
   brand: "ED Centurion Remedies",
   category: "فيداليستا",
   dosage: "80 مجم",
@@ -6095,7 +6095,7 @@ const products = {
 },
 "vidalista-black-80mg-ar": {
   id: "36",
-  name: "Vidalista Black 80",
+  name: "فيداليستا بلاك 80 ملغ",
   brand: "ED Centurion Remedies",
   category: "فيداليستا بلاك",
   dosage: "80 mg",
@@ -6277,7 +6277,7 @@ const products = {
 },
 "super-vidalista-ar": {
   id: "37",
-  name: "Super Vidalista",
+  name: "سوبر فيداليستا",
   brand: "ED Centurion Remedies",
   category: "سوبر فيداليستا",
   dosage: "تادالافيل 20 مجم + دابوكستين 60 مجم",
@@ -6464,7 +6464,7 @@ const products = {
 "vidalista-ct-20mg-ar": {
   id: "38",
   category: "تادالافيل",
-  brand: "ED Centurion Remedies",
+  brand: "إي دي سنتوريون ريميديز",
   name: "Vidalista CT",
   dosage: "20 مجم",
   form: "قرص قابل للمضغ",
@@ -6647,7 +6647,7 @@ const products = {
   id: "39",
   category: "Tadalafil",
   brand: "ED Centurion Remedies",
-  name: "vidalista Professional",
+  name: "فيداليستا بروفيشنال",
   dosage: "20 مجم",
   form: "قرص تحت اللسان",
   composition: "تادالافيل وتحت اللسان 20 مجم",
@@ -6829,7 +6829,7 @@ const products = {
 "vilitra-10mg-ar": {
   id: "40",
   name: "Vilitra 10 mg",
-  brand: "ED Centurion Remedies",
+  brand: "إي دي سنتوريون ريميديز",
   category: "فاردنافيل",
   dosage: "فاردنافيل 10 مجم",
   composition: "فاردنافيل 10 مجم",
@@ -7010,7 +7010,7 @@ const products = {
 },
 "vilitra-20mg-ar": {
   id: "41",
-  name: "Vilitra 20 mg",
+  name: "فيلترا 20 ملغ",
   brand: "ED Centurion Remedies",
   category: "فاردنافيل",
   dosage: "فاردنافيل 20 مجم",
@@ -7192,7 +7192,7 @@ const products = {
 },
 "vilitra-40mg-ar": {
   id: "42",
-  name: "Vilitra 40 mg",
+  name: "فيلترا 40 ملغ",
   brand: "ED Centurion Remedies",
   category: "فاردنافيل",
   dosage: "فاردنافيل 40 مجم",
@@ -7544,7 +7544,7 @@ const products = {
 },
 "super-vilitra-ar": {
   id: "44",
-  name: "Super Vilitra",
+  name: "سوبر فيلترا",
   brand: "ED Centurion Remedies",
   category: "فاردنافيل + دابوكستين",
   dosage: "فاردنافيل 20 مجم + دابوكستين 60 مجم",
@@ -7731,7 +7731,7 @@ const products = {
 "fliban-100-ar": {
   id: "45",
   category: "Flibanserin",
-  name: "Fliban",
+  name: "فليبان",
   brand: "ED Centurion Remedies",
   dosage: "100 مجم",
   form: "قرص",
@@ -7913,7 +7913,7 @@ const products = {
 },
 "avana-50mg-ar": {
   id: "46",
-  name: "Avana-50",
+  name: "أفانا-50",
   brand: "ED Sunrise Remedies",
   category: "أفانا فيل",
   dosage: "50 مجم",
@@ -8097,7 +8097,7 @@ const products = {
   id: "47",
   category: "Avanafil",
   brand: "ED Sunrise Remedies",
-  name: "Avana-200",
+  name: "أفانا-200",
   dosage: "100 مجم",
   form: "قرص",
   composition: "أفانا فيل 100 مجم",
@@ -8453,7 +8453,7 @@ const products = {
   id: "49",
   category: "Avanafil + Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Top Avana",
+  name: "توب أفانا",
   dosage: "أفانا فيل 50 مجم + دابوكستين 60 مجم",
   form: "قرص",
   composition: "أفانا فيل 50 مجم & دابوكستين 60 مجم",
@@ -8640,7 +8640,7 @@ const products = {
   id: "50",
   category: "Avanafil + Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Super Avana",
+  name: "سوبر أفانا",
   dosage: "أفانا فيل 100 مجم + دابوكستين 60 مجم",
   form: "قرص",
   composition: "أفانا فيل 100 مجم & دابوكستين 60 مجم",
@@ -8828,7 +8828,7 @@ const products = {
 "extra-super-avana-ar": {
   id: "51",
   category: "Avanafil + Dapoxetine",
-  name: "Extra Super Avana",
+  name: "إكسترا سوبر أفانا",
   brand: "ED Sunrise Remedies",
   dosage: "أفانا فيل 200 مجم + دابوكستين 60 مجم",
   form: "قرص",
@@ -9016,7 +9016,7 @@ const products = {
   id: "52",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-30",
+  name: "بوكسيت-30",
   dosage: "30mg",
   form: "قرص",
   composition: "دابوكستين 30 مجم",
@@ -9200,7 +9200,7 @@ const products = {
   id: "53",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-60",
+  name: "بوكسيت-60",
   dosage: "60mg",
   form: "قرص",
   composition: "دابوكستين 60 مجم",
@@ -9384,7 +9384,7 @@ const products = {
   id: "54",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-90",
+  name: "بوكسيت-90",
   dosage: "90mg",
   form: "قرص",
   composition: "دابوكستين 90 مجم",
@@ -9576,7 +9576,7 @@ const products = {
 },
 "p-force-100-caps-ar": {
   id: "55",
-  name: "P-Force 100 Caps.",
+  name: "بي-فورس 100 كبسولة.",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100",
@@ -9770,7 +9770,7 @@ const products = {
 "p-force-fort-ar": {
   id: "56",
   name: "P-Force Fort",
-  brand: "ED Sunrise Remedies",
+  brand: "إي دي صن رايز ريميديز",
   category: "P-Force Range",
   dosage: "150 mg",
   composition: "Sildenafil 150mg",
@@ -9962,7 +9962,7 @@ const products = {
 },
 "p-force-plus-ar": {
   id: "57",
-  name: "P-Force Plus",
+  name: "بي-فورس بلس",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "130 mg",
@@ -10154,7 +10154,7 @@ const products = {
 },
 "super-p-force-oral-jelly-ar": {
   id: "58",
-  name: "Super P-Force Oral Jelly",
+  name: "سوبر بي-فورس جل فموي",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100 mg + 60 mg",
@@ -10346,7 +10346,7 @@ const products = {
 },
 "super-p-force-ar": {
   id: "59",
-  name: "Super P-Force",
+  name: "سوبر بي-فورس",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100 mg + 60 mg",
@@ -10538,7 +10538,7 @@ const products = {
 },
 "extra-super-p-force-ar": {
   id: "60",
-  name: "Extra Super P-Force",
+  name: "إكسترا سوبر بي-فورس",
   brand: "ED Sunrise Remedies",
   category: "P-Force Range",
   dosage: "100 mg + 100 mg",
@@ -10730,7 +10730,7 @@ const products = {
 },
 "zhewitra-10": {
   id: "61",
-  name: "Zhewitra 10",
+  name: "زهيفيترا 10 ملغ",
   brand: "ED Sunrise Remedies",
   category: "مجموعة زيفيترا",
   dosage: "10 مجم",
@@ -11868,7 +11868,7 @@ const products = {
 },
 "Tadarise-10-ar":{
     id: "71",
-    name: "Tadarise-10",
+    name: "تاداريس-10",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "10 mg",
@@ -12058,7 +12058,7 @@ administration: [
   },
 "Tadarise-Pro-20-ar":{
     id: "72",
-    name: "Tadarise Pro-20",
+    name: "تاداريس برو-20",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -12247,7 +12247,7 @@ administration: [
   },
 "Tadarise-20-ar":{
     id: "73",
-    name: "Tadarise-20",
+    name: "تاداريس-20",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Tadarise",
     dosage: "20 mg",
@@ -12437,7 +12437,7 @@ administration: [
   },
 "Tadarise-20-Oral-Jelly-ar":{
     id: "74",
-    name: "Tadarise-20 Oral Jelly",
+    name: "تاداريس-20 جل فموي",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -12627,7 +12627,7 @@ administration: [
   },
 "Tadarise-40-ar":{
     id: "75",
-    name: "Tadarise-40",
+    name: "تاداريس-40",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "40 mg",
@@ -12816,7 +12816,7 @@ administration: [
   },
 "Tadarise Pro-40-ar":{
     id: "76",
-    name: "Tadarise Pro-40",
+    name: "تاداريس برو-40",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Tadarise",
     dosage: "40 mg",
@@ -13006,7 +13006,7 @@ administration: [
   },
 "Tadarise-60-ar":{
     id: "77",
-    name: "Tadarise-60",
+    name: "تاداريس-60",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "60 mg",
@@ -13196,7 +13196,7 @@ administration: [
   },
 "Super-Tadarise-ar":{
     id: "78",
-    name: "Super Tadarise",
+    name: "سوبر تاداريس",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg + 60 mg",
@@ -13385,7 +13385,7 @@ administration: [
   },
 "Extra-Super-Tadarise-ar":{
     id: "79",
-    name: "Extra Super Tadarise",
+    name: "إكسترا سوبر تاداريس",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Tadarise",
     dosage: "40 mg + 60 mg",
@@ -13575,7 +13575,7 @@ administration: [
   },
 "Tadarise-Effervescent-ar":{
     id: "80",
-    name: "Tadarise Effervescent",
+    name: "تاداريس فوار",
     brand: "ED Sunrise Remedies",
     category: "Tadarise Range",
     dosage: "20 mg",
@@ -13764,7 +13764,7 @@ administration: [
   },
 "top-tadarise-ar": {
   id: "81",
-  name: "Top Tadarise",
+  name: "توب تاداريس",
   brand: "ED Sunrise Remedies",
   category: "Tadarise",
   dosage: "20 mg + 30 mg",
@@ -13945,7 +13945,7 @@ administration: [
 "tadasoft-20-ar": {
   id: "82",
   name: "Tadasoft 20 mg",
-  brand: "ED Sunrise Remedies",
+  brand: "أداسوفـت 20 ملغ",
   category: "Tadasoft",
   dosage: "20 mg",
   composition: "تادالافيل 20 ملغ (ناعم ومنكه)",
@@ -14124,7 +14124,7 @@ administration: [
 },
 "tadasoft-40-ar": {
   id: "83",
-  name: "Tadasoft 40 mg",
+  name: "تاداسوفـت 40 ملغ",
   brand: "ED Sunrise Remedies",
   category: "Tadasoft",
   dosage: "40 mg",
@@ -14305,7 +14305,7 @@ administration: [
 },
 "Sildisoft-100-ar":{
     id: "84",
-    name: "Sildisoft-100",
+    name: "سيلديسوفت-100",
     brand: "ED Sunrise Remedies",
     category: "Sildisoft Range",
     dosage: "100 mg",
@@ -14495,7 +14495,7 @@ administration: [
   },
 "Sildisoft-50-ar":{
     id: "85",
-    name: "Sildisoft-50",
+    name: "سيلديسوفت-50",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Sildisoft",
     dosage: "50 mg",
@@ -14685,7 +14685,7 @@ administration: [
   },
 "Malegra-25-ar":{
     id: "86",
-    name: "Malegra 25",
+    name: "ماليغرا 25 ملغ",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "25 mg",
@@ -14873,7 +14873,7 @@ administration: [
   },
 "Malegra-50-ar":{
     id: "87",
-    name: "Malegra 50",
+    name: "ماليغرا 50 ملغ",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Malegra",
     dosage: "50 mg",
@@ -15063,7 +15063,7 @@ administration: [
   },
 "Malegra-75-ar":{
     id: "88",
-    name: "Malegra 75",
+    name: "ماليغرا 75 ملغ",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "75 mg",
@@ -15253,7 +15253,7 @@ administration: [
   },
 "Malegra-100-ar":{
     id: "89",
-    name: "Malegra 100",
+    name: "ماليغرا 100 ملغ",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Malegra",
     dosage: "100 mg",
@@ -15443,7 +15443,7 @@ administration: [
   },
 "Malegra-120-ar":{
     id: "90",
-    name: "Malegra 120",
+    name: "ماليغرا 120 ملغ",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "120 mg",
@@ -15634,7 +15634,7 @@ administration: [
   },
 "Malegra-200-ar":{
     id: "91",
-    name: "Malegra 200",
+    name: "ماليغرا 200 ملغ",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Malegra",
     dosage: "200 mg",
@@ -15824,7 +15824,7 @@ administration: [
   },
 "Malegra100-Oral-Jelly-ar":{
     id: "92",
-    name: "Malegra 100 Oral Jelly",
+    name: "ماليغرا 100 ملغ جل فموي",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -16014,7 +16014,7 @@ administration: [
   },
 "Malegra-Pro-50-ar":{
     id: "93",
-    name: "Malegra Pro 50",
+    name: "ماليجرا برو 50",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Malegra",
     dosage: "50 mg",
@@ -16204,7 +16204,7 @@ administration: [
   },
 "Malegra-Pro-100-ar":{
     id: "94",
-    name: "Malegra Pro 100",
+    name: "ماليجرا برو 100",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -16394,7 +16394,7 @@ administration: [
   },
 "Malegra-DXT-ar":{
     id: "95",
-    name: "Malegra DXT",
+    name: "ماليجرا دي إكس تي",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Malegra",
     dosage: "100 mg + 30 mg",
@@ -16773,7 +16773,7 @@ administration: [
   },
 "Malegra-FXT-ar":{
     id: "97",
-    name: "Malegra FXT",
+    name: "ماليجرا إف إكس تي",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Malegra",
     dosage: "100 mg + 40 mg",
@@ -16963,7 +16963,7 @@ administration: [
   },
 "Malegra-FXT-Plus-ar":{
     id: "98",
-    name: "Malegra FXT Plus",
+    name: "ماليجرا إف إكس تي بلس",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg + 60 mg",
@@ -17153,7 +17153,7 @@ administration: [
   },
 "Malegra-Effervescent100mg-ar":{
     id: "99",
-    name: "Malegra Effervescent 100mg",
+    name: "ماليجرا فوار 100 ملغ",
     category: "مجموعة Malegra",
     brand: "ED Sunrise Remedies",
     dosage: "100 mg",
@@ -17343,7 +17343,7 @@ administration: [
   },
 "Malegra100-Green-ar":{
     id: "100",
-    name: "Malegra 100 Green",
+    name: "ماليجرا 100 الأخضر",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -17533,7 +17533,7 @@ administration: [
   },
 "Malegra100-Gold-ar":{
     id: "101",
-    name: "Malegra 100 Gold",
+    name: "ماليجرا 100 جولد",
     brand: "ED Sunrise Remedies",
     category: "Malegra Range",
     dosage: "100 mg",
@@ -17724,7 +17724,7 @@ administration: [
   },
 "Penon-Cream-ar":{
   id: "102",
-  name: "Penon Cream",
+  name: "كريم بينون",
   brand: "ED Sunrise Remedies",
   category: "العناية الصحية للرجال",
   dosage: "كريم عشبي",
@@ -17886,7 +17886,7 @@ administration: [
 },
 "Naron-Cream-ar":{
     id: "103",
-    name: "Naron Cream",
+    name: "كريم نارون",
     brand: "ED Sunrise Remedies",
     category: "العناية بصحة المرأة",
     dosage: "100 gm",
@@ -18030,7 +18030,7 @@ administration: [
   },
 "Grafix-Cream-ar":{
     id: "104",
-    name: "Grafix Cream",
+    name: "كريم جرافيكس",
     brand: "ED Sunrise Remedies",
     category: "رعاية صحة المرأة",
     dosage: "100 gm",
@@ -18175,7 +18175,7 @@ administration: [
   },
 "Femallegra-100-ar":{
     id: "105",
-    name: "Femallegra-100",
+    name: "فيماليجرا 100",
     brand: "ED Sunrise Remedies",
     category: "الرعاية الصحية للمرأة",
     dosage: "100 ملغ",
@@ -18317,7 +18317,7 @@ administration: [
   },
 "Tadafem-20-ar":{
     id: "106",
-    name: "Tadafem-20",
+    name: "فيماليجرا 100",
     brand: "ED Sunrise Remedies",
     category: "العناية بصحة المرأة",
     dosage: "20 mg",
@@ -18461,7 +18461,7 @@ administration: [
   },
 "Clofi-25-ar":{
     id: "107",
-    name: "Clofi-25",
+    name: "كلوفي 25",
     brand: "ED Sunrise Remedies",
     category: "رعاية صحة المرأة",
     dosage: "25 ملغ",
@@ -18594,7 +18594,7 @@ administration: [
   },
 "Clofi-50-ar":{
   id: "108",
-  name: "Clofi-50",
+  name: "كلوفي 50",
   brand: "ED Sunrise Remedies",
   category: "الرعاية الصحية للمرأة",
   dosage: "50 ملغ",
@@ -18733,7 +18733,7 @@ administration: [
 },
 "Clofi-100-ar":{
   id: "109",
-  name: "Clofi-100",
+  name: "كلوفي 100",
   brand: "ED Sunrise Remedies",
   category: "العناية بصحة المرأة",
   dosage: "100 mg",
@@ -18866,7 +18866,7 @@ administration: [
 },
 "Zudena-100-ar":{
     id: "110",
-    name: "Zudena-100",
+    name: "زودينا 100",
     brand: "ED Sunrise Remedies",
     category: "مجموعة زودينا",
     dosage: "100 ملغ",
@@ -19011,7 +19011,7 @@ administration: [
   },
 "Zudena-200-ar":{
   id: "111",
-  name: "Zudena-200",
+  name: "زودينا 200",
   brand: "ED Sunrise Remedies",
   category: "مجموعة زودينا",
   dosage: "200 ملغ",
@@ -19158,7 +19158,7 @@ administration: [
 },
 "Super Zudena-ar":{
     id: "112",
-    name: "Super Zudena",
+    name: "سوبر زودينا",
     brand: "ED Sunrise Remedies",
     category: "مجموعة Zudena",
     dosage: "أودينافيل 100 مجم & دابوكستين هيدروكلوريد 60 مجم",
@@ -19304,7 +19304,7 @@ administration: [
   },
 "Iversun-6-ar":{
     id: "113",
-    name: "Iversun-6",
+    name: "إيفرسن 6",
     brand: "ED Sunrise Remedies",
     category: "مجموعة إيفرميكتين",
     dosage: "6 ملغ",
@@ -19435,7 +19435,7 @@ administration: [
   },
 "Iversun-12-ar":{
   id: "114",
-  name: "Iversun-12",
+  name: "إيفرسن 12",
   brand: "ED Sunrise Remedies",
   category: "مجموعة إيفرمكتين",
   dosage: "12 ملغ",
@@ -19569,7 +19569,7 @@ administration: [
 },
 "Cinasun-30-ar":{
     id: "115",
-    name: "Cinasun-30",
+    name: "سيناسن 30",
     brand: "ED Sunrise Remedies",
     category: "مجموعة سيناكالسيت",
     dosage: "30 مجم",
@@ -19701,7 +19701,7 @@ administration: [
   },
 "Cinasun-60-ar":{
     id: "116",
-    name: "Cinasun-60",
+    name: "سيناسن 60",
     brand: "ED Sunrise Remedies",
     category: "مجموعة سيناكالسيت",
     dosage: "60 ملغ",
@@ -19833,7 +19833,7 @@ administration: [
   },
 "Cinasun-90-ar":{
   id: "117",
-  name: "Cinasun-90",
+  name: "سيناسن 90",
   brand: "ED Sunrise Remedies",
   category: "مجموعة سيناكالسيت",
   dosage: "90 ملغ",
@@ -19968,7 +19968,7 @@ administration: [
 },
 "Chocolis-20-ar":{
     id: "118",
-    name: "Chocolis-20",
+    name: "شوكوليس 20",
     category: "نطاق آخر",
     brand: "ED Sunrise Remedies",
     dosage: "20 مجم",

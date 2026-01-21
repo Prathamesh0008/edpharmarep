@@ -2,7 +2,7 @@ const products = {
 
     "kamagra-gold-50-mg-el": {
     "id": "1",
-    "name": "Kamagra Gold 50 mg",
+    "name": "Καμάγκρα Χρυσό 50 mg",
     "category": "Kamagra Gold",
     "brand": "ED Ajanta Pharma",
     "dosage": "50 mg",
@@ -85,7 +85,7 @@ const products = {
 
 "kamagra-gold-100-mg-el": {
     "id": "2",
-    "name": "Kamagra Gold 100 mg",
+    "name": "Καμάγκρα Χρυσό 100 mg",
     "category": "Kamagra Gold",
     "brand": "ED Ajanta Pharma",
     "dosage": "100 mg",
@@ -177,7 +177,7 @@ const products = {
 
 "kamagra-100mg-oral-jelly-vol1-el": {
   "id": "3",
-  "name": "Kamagra 100 mg Oral Jelly Vol 1",
+  "name": "Καμάγκρα 100 mg Πόσιμη Ζελέ Τόμος 1",
   "category": "Kamagra Oral Jelly",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg",
@@ -275,7 +275,7 @@ const products = {
 
 "super-kamagra-oral-jelly-el": {
   "id": "4",
-  "name": "Super Kamagra Oral Jelly",
+  "name": "Σούπερ Καμάγκρα Πόσιμη Ζελέ",
   "category": "Kamagra Oral Jelly",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg Sildenafil + 60 mg Dapoxetine",
@@ -380,7 +380,7 @@ const products = {
 
 "kamagra-100mg-chewable-orange-el": {
   "id": "7",
-  "name": "Kamagra-100 mg Chewable Tablet (Orange)",
+  "name": "Καμάγκρα 100 mg Μασώμενο Δισκίο (Πορτοκάλι))",
   "category": "Kamagra Chewable Tablet",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg",
@@ -564,7 +564,7 @@ const products = {
 
 "kamagra-100mg-effervescent-el": {
   "id": "8",
-  "name": "Kamagra-100 mg Effervescent",
+  "name": "Καμάγκρα 100 mg Αναβράζον Δισκίο",
   "category": "Kamagra Effervescent",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg",
@@ -747,7 +747,7 @@ const products = {
 
 "super-kamagra-el": {
   "id": "9",
-  "name": "Super Kamagra",
+  "name": "Σούπερ Καμάγκρα",
   "category": "Super Kamagra",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg Sildenafil + 60 mg Dapoxetine",
@@ -932,7 +932,7 @@ const products = {
 },
 "kamagra-expo-100mg-el": {
   "id": "10",
-  "name": "Kamagra Expo 100 mg",
+  "name": "Καμάγκρα Έκσπο 100 mg",
   "category": "Kamagra Expo",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg",
@@ -1114,7 +1114,7 @@ const products = {
 },
 "apcalis-sx-20mg-oral-jelly-el": {
   "id": "11",
-  "name": "Apcalis-SX 20 mg Oral Jelly",
+  "name": "Απκάλις-SX 20 mg Πόσιμη Ζελέ",
   "category": "Apcalis Oral Jelly",
   "brand": "ED Ajanta Pharma",
   "dosage": "20 mg",
@@ -1297,7 +1297,7 @@ const products = {
 
 "tadalis-sx-20mg-el": {
   "id": "12",
-  "name": "Tadalis-SX 20 mg",
+  "name": "Ταδάλης-SX 20 mg",
   "category": "Tadalis-SX",
   "brand": "ED Ajanta Pharma",
   "dosage": "20 mg",
@@ -1479,7 +1479,7 @@ const products = {
 },
 "lovegra-100mg-oral-jelly-el": {
   "id": "13",
-  "name": "Lovegra 100 mg Oral Jelly",
+  "name": "Λόβεγκρα 100 mg Πόσιμη Ζελέ",
   "category": "Lovegra",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg",
@@ -1662,7 +1662,7 @@ const products = {
 
 "lovegra-100mg-el": {
   "id": "14",
-  "name": "Lovegra 100 mg",
+  "name": "Λόβεγκρα 100 mg",
   "category": "Lovegra",
   "brand": "ED Ajanta Pharma",
   "dosage": "100 mg",
@@ -1843,7 +1843,7 @@ const products = {
 },
 "valif-20mg-tablet-el": {
   "id": "15",
-  "name": "Valif 20 mg",
+  "name": "Βάλιφ 20 mg",
   "category": "Valif",
   "brand": "ED Ajanta Pharma",
   "dosage": "20 mg",
@@ -2025,7 +2025,7 @@ const products = {
 },
 "valif-20mg-oral-jelly-el": {
   "id": "16",
-  "name": "Valif 20 mg Πόσιμη Γέλη",
+  "name": "Βάλιφ 20 mg Πόσιμο Τζελ",
   "category": "Valif Oral Jelly",
   "brand": "ED Ajanta Pharma",
   "dosage": "20 mg",
@@ -2209,7 +2209,7 @@ const products = {
 
 "cenforce-25mg-el": {
   "id": "17",
-  "name": "Cenforce 25 mg",
+  "name": "Σένφορς 25 mg",
   "category": "Cenforce",
   "brand": "ED Centurion Remedies",
   "dosage": "25 mg",
@@ -2392,7 +2392,7 @@ const products = {
 
 "cenforce-50mg-el": {
   "id": "18",
-  "name": "Cenforce 50 mg",
+  "name": "Σένφορς 50 mg",
   "category": "Cenforce",
   "brand": "ED Centurion Remedies",
   "dosage": "50 mg",
@@ -2575,7 +2575,7 @@ const products = {
 
 "cenforce-100mg-el": {
   "id": "19",
-  "name": "Cenforce 100 mg",
+  "name": "Σένφορς 100 mg",
   "category": "Cenforce",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg",
@@ -2758,7 +2758,7 @@ const products = {
 
 "cenforce-120mg-el": {
   "id": "20",
-  "name": "Cenforce 120 mg",
+  "name": "Σένφορς 120 mg",
   "category": "Cenforce",
   "brand": "ED Centurion Remedies",
   "dosage": "120 mg",
@@ -2941,7 +2941,7 @@ const products = {
 
 "cenforce-130mg-el": {
   "id": "21",
-  "name": "Cenforce 130 mg",
+  "name": "Σένφορς 130 mg",
   "category": "Cenforce",
   "brand": "ED Centurion Remedies",
   "dosage": "130 mg",
@@ -3124,7 +3124,7 @@ const products = {
 
 "cenforce-150mg-el": {
   "id": "22",
-  "name": "Cenforce 150 mg",
+  "name": "Σένφορς 150 mg",
   "category": "Cenforce",
   "brand": "ED Centurion Remedies",
   "dosage": "150 mg",
@@ -3307,7 +3307,7 @@ const products = {
 
 "cenforce-200mg-el": {
   "id": "23",
-  "name": "Cenforce 200 mg",
+  "name": "Σένφορς 200 mg",
   "brand": "ED Centurion Remedies",
   "category": "Cenforce",
   "dosage": "200 mg",
@@ -3432,7 +3432,7 @@ const products = {
 
 "cenforce-soft-100-sq": {
   "id": "24",
-  "name": "Cenforce Soft 100",
+  "name": "Σένφορς Σόφτ 100 mg",
   "category": "Cenforce Soft",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg",
@@ -3615,7 +3615,7 @@ const products = {
 
 "cenforce-d-100-60-sq": {
   "id": "25",
-  "name": "Cenforce-D",
+  "name": "Σένφορς-D",
   "category": "Cenforce-D",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg Sildenafil + 60 mg Dapoxetine",
@@ -3801,7 +3801,7 @@ const products = {
 },
 "cenforce-fm-100-el": {
   "id": "26",
-  "name": "Cenforce-FM 100 mg",
+  "name": "Σένφορς-FM",
   "category": "Cenforce FM",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg",
@@ -3925,7 +3925,7 @@ const products = {
 
 "cenforce-professional-el": {
   "id": "27",
-  "name": "Cenforce Professional",
+  "name": "Cenforce Επαγγελματική Έκδοση",
   "category": "Cenforce Professional",
   "brand": "ED Centurion Remedies",
   "dosage": "Υπογλώσσιο δισκίο (ισοδύναμο 100 mg)",
@@ -4050,7 +4050,7 @@ const products = {
 
 "cenforce-oral-jelly-100-sq": {
   "id": "28",
-  "name": "Cenforce Oral Jelly 100 mg",
+  "name": "Cenforce Πόσιμη Ζελέ 100 mg",
   "category": "Cenforce Oral Jelly",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg",
@@ -4228,7 +4228,7 @@ const products = {
 
 "vidalista-2-5mg-el": {
   "id": "29",
-  "name": "Vidalista 2.5 mg",
+  "name": "Βινταλίστα 2,5 mg",
   "category": "Vidalista",
   "brand": "ED Centurion Remedies",
   "dosage": "2.5 mg",
@@ -4354,7 +4354,7 @@ const products = {
 },
 "vidalista-5-el": {
   id: "30",
-  name: "Vidalista 5 mg",
+  name: "Βινταλίστα 5 mg",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "5 mg",
@@ -4536,7 +4536,7 @@ const products = {
 
 "vidalista-10-sq": {
   "id": "31",
-  "name": "Vidalista 10 mg",
+  "name": "Βινταλίστα 10 mg",
   "brand": "ED Centurion Remedies",
   "category": "Vidalista",
   "dosage": "10 mg",
@@ -4719,7 +4719,7 @@ const products = {
 
 "vidalista-20mg-el": {
   "id": "32",
-  "name": "Vidalista 20 mg",
+  "name": "Βινταλίστα 20 mg",
   "category": "Vidalista",
   "brand": "ED Centurion Remedies",
   "dosage": "20 mg",
@@ -4846,7 +4846,7 @@ const products = {
 
 "vidalista-40-sq": {
   "id": "33",
-  "name": "Vidalista 40 mg",
+  "name": "Βινταλίστα 40 mg",
   "category": "Vidalista",
   "brand": "ED Centurion Remedies",
   "dosage": "40 mg",
@@ -5029,7 +5029,7 @@ const products = {
 
 "vidalista-60mg-el": {
   "id": "34",
-  "name": "Vidalista 60 mg",
+  "name": "Βινταλίστα 60 mg",
   "brand": "ED Centurion Remedies",
   "category": "Vidalista",
   "dosage": "60 mg",
@@ -5163,7 +5163,7 @@ const products = {
 },
 "vidalista-80-sq": {
   "id": "35",
-  "name": "Vidalista 80 mg",
+  "name": "Βινταλίστα 80 mg",
   "brand": "ED Centurion Remedies",
   "category": "Vidalista",
   "dosage": "80 mg",
@@ -5347,7 +5347,7 @@ const products = {
 
 "vidalista-black-80mg-el": {
   "id": "36",
-  "name": "Vidalista Black 80",
+  "name": "Βιδαλίστα Μαύρο 80",
   "brand": "ED Centurion Remedies",
   "category": "Vidalista Black",
   "dosage": "80 mg",
@@ -5494,7 +5494,7 @@ const products = {
 
 "super-vidalista-sq": {
   "id": "37",
-  "name": "Super Vidalista",
+  "name": "Σούπερ Βιδαλίστα",
   "brand": "ED Centurion Remedies",
   "category": "Super Vidalista",
   "dosage": "Tadalafil 20 mg + Dapoxetine 60 mg",
@@ -5681,7 +5681,7 @@ const products = {
 
 "vidalista-ct-20mg-el": {
   "id": "38",
-  "category": "Tadalafil",
+  "category": "Τανταλαφίλη",
   "brand": "ED Centurion Remedies",
   "name": "Vidalista CT",
   "dosage": "20 mg",
@@ -5816,7 +5816,7 @@ const products = {
   "id": "39",
   "category": "Tadalafil",
   "brand": "ED Centurion Remedies",
-  "name": "Vidalista Professional",
+  "name": "Βιδαλίστα Professional",
   "dosage": "20 mg",
   "form": "Tabletë Sublinguale",
   "composition": "Tadalafil & Sublingual 20 mg",
@@ -5998,7 +5998,7 @@ const products = {
 
 "vilitra-10mg-el": {
   "id": "40",
-  "name": "Vilitra 10 mg",
+  "name": "Βιλίτρα 10 mg",
   "brand": "ED Centurion Remedies",
   "category": "Vardenafil",
   "dosage": "Vardenafil 10 mg",
@@ -6129,7 +6129,7 @@ const products = {
 
 "vilitra-20mg-sq": {
   "id": "41",
-  "name": "Vilitra 20 mg",
+  "name": "Βιλίτρα 20 mg",
   "brand": "ED Centurion Remedies",
   "category": "Vardenafil",
   "dosage": "Vardenafil 20 mg",
@@ -6312,7 +6312,7 @@ const products = {
 
 "vilitra-40mg-el": {
   "id": "42",
-  "name": "Vilitra 40 mg",
+  "name": "Βιλίτρα 40 mg ",
   "brand": "ED Centurion Remedies",
   "category": "Vardenafil",
   "dosage": "Vardenafil 40 mg",
@@ -6445,7 +6445,7 @@ const products = {
   "id": "43",
   "category": "Vardenafil",
   "brand": "ED Centurion Remedies",
-  "name": "Vilitra 60 mg",
+  "name": "Βιλίτρα 60 mg",
   "dosage": "60 mg",
   "form": "Tabletë",
   "composition": "Vardenafil 60 mg",
@@ -6613,7 +6613,7 @@ const products = {
 },
 "super-vilitra-el": {
   "id": "44",
-  "name": "Super Vilitra",
+  "name": "Σούπερ Βιλίτρα",
   "brand": "ED Centurion Remedies",
   "category": "Vardenafil + Dapoxetine",
   "dosage": "Vardenafil 20 mg + Dapoxetine 60 mg",
@@ -6755,7 +6755,7 @@ const products = {
 "fliban-100-sq": {
   "id": "45",
   "category": "Flibanserin",
-  "name": "Fliban",
+  "name": "Φλιμπάν",
   "brand": "ED Centurion Remedies",
   "dosage": "100 mg",
   "form": "Tabletë",
@@ -6938,7 +6938,7 @@ const products = {
 
 "avana-50mg-el": {
   "id": "46",
-  "name": "Avana-50",
+  "name": "Αβάνα-50",
   "brand": "ED Sunrise Remedies",
   "category": "Avanafil",
   "dosage": "50 mg",
@@ -7084,7 +7084,7 @@ const products = {
   "id": "47",
   "category": "Avanafil",
   "brand": "ED Sunrise Remedies",
-  "name": "Avana-100",
+  "name": "Αβάνα-100",
   "dosage": "100 mg",
   "form": "Tabletë",
   "composition": "Avanafil 100 mg",
@@ -7257,7 +7257,7 @@ const products = {
   "id": "48",
   "category": "Avanafil",
   "brand": "ED Sunrise Remedies",
-  "name": "Avana-200",
+  "name": "Αβάνα-200",
   "dosage": "200 mg",
   "form": "Δισκίο",
   "composition": "Avanafil 200 mg",
@@ -7393,7 +7393,7 @@ const products = {
   "id": "49",
   "category": "Avanafil + Dapoxetine",
   "brand": "ED Sunrise Remedies",
-  "name": "Top Avana",
+  "name": "Top Αβάνα",
   "dosage": "Avanafil 50 mg + Dapoxetine 60 mg",
   "form": "Tabletë",
   "composition": "Avanafil 50 mg & Dapoxetine 60 mg",
@@ -7581,7 +7581,7 @@ const products = {
   "id": "50",
   "category": "Avanafil + Dapoxetine",
   "brand": "ED Sunrise Remedies",
-  "name": "Super Avana",
+  "name": "Σούπερ Αβάνα",
   "dosage": "Avanafil 100 mg + Dapoxetine 60 mg",
   "form": "Δισκίο",
   "composition": "Avanafil 100 mg & Dapoxetine 60 mg",
@@ -7723,7 +7723,7 @@ const products = {
 "extra-super-avana-sq": {
   "id": "51",
   "category": "Avanafil + Dapoxetine",
-  "name": "Extra Super Avana",
+  "name": "Έξτρα Σούπερ Αβάνα",
   "brand": "ED Sunrise Remedies",
   "dosage": "Avanafil 200 mg + Dapoxetine 60 mg",
   "form": "Tabletë",
@@ -7911,7 +7911,7 @@ const products = {
   "id": "52",
   "category": "Dapoxetine",
   "brand": "ED Sunrise Remedies",
-  "name": "Poxet-30",
+  "name": "Ποξέτ-30",
   "dosage": "30 mg",
   "form": "Δισκίο",
   "composition": "Dapoxetine 30 mg",
@@ -8095,7 +8095,7 @@ const products = {
   "id": "53",
   "category": "Dapoxetine",
   "brand": "ED Sunrise Remedies",
-  "name": "Poxet-60",
+  "name": "Ποξέτ-60",
   "dosage": "60 mg",
   "form": "Tabletë",
   "composition": "Dapoxetine 60 mg",
@@ -8279,7 +8279,7 @@ const products = {
   "id": "54",
   "category": "Dapoxetine",
   "brand": "ED Sunrise Remedies",
-  "name": "Poxet-90",
+  "name": "Ποξέτ-90",
   "dosage": "90 mg",
   "form": "Δισκίο",
   "composition": "Dapoxetine 90 mg",
@@ -8461,7 +8461,7 @@ const products = {
 },
 "p-force-100-caps-el": {
 "id": "55",
-"name": "P-Force 100 Καψ.",
+"name": "P-Force 100 Κάψουλες",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά P-Force",
 "dosage": "100",
@@ -8653,7 +8653,7 @@ const products = {
 },
 "p-force-fort-el": {
 "id": "56",
-"name": "P-Force Fort",
+"name": "Π-Φόρς Φόρτε",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά P-Force",
 "dosage": "150 mg",
@@ -8845,7 +8845,7 @@ const products = {
 },
 "p-force-plus-el": {
 "id": "57",
-"name": "P-Force Plus",
+"name": "Π-Φόρς Πλας ",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά P-Force",
 "dosage": "130 mg",
@@ -9036,7 +9036,7 @@ const products = {
 },
 "super-p-force-oral-jelly-el": {
 "id": "58",
-"name": "Super P-Force Oral Jelly",
+"name": " Σούπερ Π-Φόρς Οράλ Τζελ",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά P-Force",
 "dosage": "100 mg + 60 mg",
@@ -9227,7 +9227,7 @@ const products = {
 },
 "super-p-force-el": {
 "id": "59",
-"name": "Super P-Force",
+"name": "Σούπερ Π-Φόρς",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά P-Force",
 "dosage": "100 mg + 60 mg",
@@ -9418,7 +9418,7 @@ const products = {
 },
 "extra-super-p-force-el": {
 "id": "60",
-"name": "Extra Super P-Force",
+"name": "Έξτρα Σούπερ Π-Φόρς",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά P-Force",
 "dosage": "100 mg + 100 mg",
@@ -9610,7 +9610,7 @@ const products = {
 
 "Super-Zhewitra-el": {
 "id": "67",
-"name": "Super Zhewitra",
+"name": "Σούπερ Ζεβίτρα",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Zhewitra",
 "dosage": "20 mg + 60 mg",
@@ -9796,7 +9796,7 @@ const products = {
 },
 "Extra-Super-Zhewitra-el": {
 "id": "68",
-"name": "Extra Super Zhewitra",
+"name": "Έξτρα Σούπερ Ζεβίτρα",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Zhewitra",
 "dosage": "40 mg + 60 mg",
@@ -9982,7 +9982,7 @@ const products = {
 },
 "Tadarise-2.5-el": {
 "id": "69",
-"name": "Tadarise-2.5",
+"name": " Ταδαρίσε-2.5 ",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "2.5 mg",
@@ -10168,7 +10168,7 @@ const products = {
 },
 "Tadarise-5-el": {
 "id": "70",
-"name": "Tadarise-5",
+"name": "Ταδαρίσε-5",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "5 mg",
@@ -10354,7 +10354,7 @@ const products = {
 },
 "Tadarise-10-el": {
 "id": "71",
-"name": "Tadarise-10",
+"name": "Ταδαρίσε-10",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "10 mg",
@@ -10540,7 +10540,7 @@ const products = {
 },
 "Tadarise-Pro-20-el": {
 "id": "72",
-"name": "Tadarise Pro-20",
+"name": "Ταδαρίσε Προ-20 ",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "20 mg",
@@ -10726,7 +10726,7 @@ const products = {
 },
 "Tadarise-20-el": {
 "id": "73",
-"name": "Tadarise-20",
+"name": "Ταδαρίσε-20",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "20 mg",
@@ -10912,7 +10912,7 @@ const products = {
 },
 "Tadarise-20-Oral-Jelly-el": {
 "id": "74",
-"name": "Tadarise-20 Oral Jelly",
+"name": "Ταδαρίσε-20 Οράλ Τζελί",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "20 mg",
@@ -11098,7 +11098,7 @@ const products = {
 },
 "Tadarise-40-el": {
 "id": "75",
-"name": "Tadarise-40",
+"name": "Ταδαρίσε-40",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "40 mg",
@@ -11284,7 +11284,7 @@ const products = {
 },
 "Tadarise-Pro-40-el": {
 "id": "76",
-"name": "Tadarise Pro-40",
+"name": "Ταδαρίσε Προ-40",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "40 mg",
@@ -11470,7 +11470,7 @@ const products = {
 },
 "Tadarise-60-el": {
 "id": "77",
-"name": "Tadarise-60",
+"name": "Ταδαρίσε-60",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "60 mg",
@@ -11656,7 +11656,7 @@ const products = {
 },
 "Super-Tadarise-el": {
 "id": "78",
-"name": "Super Tadarise",
+"name": "Σούπερ Ταδαρίσε",
 "brand": "ED Sunrise Remedies",
 "category": "Σειρά Tadarise",
 "dosage": "20 mg + 60 mg",
@@ -11842,7 +11842,7 @@ const products = {
 }, 
 "Extra-Super-Tadarise-el": {
     "id": "79",
-    "name": "Extra Super Tadarise",
+    "name": "Έξτρα Σούπερ Ταδαρίσε",
     "brand": "ED Sunrise Remedies",
     "category": "Σειρά Tadarise",
     "dosage": "40 mg + 60 mg",
@@ -12028,7 +12028,7 @@ const products = {
   },
   "Tadarise-Effervescent-el": {
     "id": "80",
-    "name": "Tadarise Effervescent",
+    "name": "Ταδαρίσε Αναβράζον",
     "brand": "ED Sunrise Remedies",
     "category": "Σειρά Tadarise",
     "dosage": "20 mg",
@@ -12214,7 +12214,7 @@ const products = {
   },
    "top-tadarise-el": {
     "id": "81",
-    "name": "Top Tadarise",
+    "name": "Τοπ Ταδαρίσε",
     "brand": "ED Sunrise Remedies",
     "category": "Tadarise",
     "dosage": "20 mg + 30 mg",
@@ -12388,7 +12388,7 @@ const products = {
   },
   "tadasoft-20-el": {
     "id": "82",
-    "name": "Tadasoft 20 mg",
+    "name": "Ταδασόφτ 20 mg",
     "brand": "ED Sunrise Remedies",
     "category": "Tadasoft",
     "dosage": "20 mg",
@@ -12562,7 +12562,7 @@ const products = {
   },
   "tadasoft-40-el": {
     "id": "83",
-    "name": "Tadasoft 40 mg",
+    "name": "Ταδασόφτ 40 mg",
     "brand": "ED Sunrise Remedies",
     "category": "Tadasoft",
     "dosage": "40 mg",
@@ -12737,7 +12737,7 @@ const products = {
   },
   "Sildisoft-100-el": {
     "id": "84",
-    "name": "Sildisoft-100",
+    "name": "Σιλντισοφτ-100",
     "brand": "ED Sunrise Remedies",
     "category": "Σειρά Sildisoft",
     "dosage": "100 mg",
@@ -12923,7 +12923,7 @@ const products = {
   },
   "Sildisoft-50-el": {
     "id": "85",
-    "name": "Sildisoft-50",
+    "name": "Σιλντισοφτ-50",
     "brand": "ED Sunrise Remedies",
     "category": "Σειρά Sildisoft",
     "dosage": "50 mg",
@@ -13108,7 +13108,7 @@ const products = {
   },
   "Malegra-25-el": {
     "id": "86",
-    "name": "Malegra 25",
+    "name": " Малегра 25",
     "brand": "ED Sunrise Remedies",
     "category": "Σειρά Malegra",
     "dosage": "25 mg",
@@ -13294,7 +13294,7 @@ const products = {
   },
   "Malegra-50-el": {
     "id": "87",
-    "name": "Malegra 50",
+    "name": "Μαλέγκρα 50",
     "brand": "ED Sunrise Remedies",
     "category": "Σειρά Malegra",
     "dosage": "50 mg",

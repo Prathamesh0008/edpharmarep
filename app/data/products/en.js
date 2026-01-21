@@ -11,6 +11,11 @@ const products = {
     packSize: "1 x 4 Tablets",
     casId: "139755-83-2",
     image: "/products/kamagra_gold 50mg 02.jpg",
+    "additionalImages": [
+    "/products/kamagra-gold 100mg 01.jpg",
+    "/products/kamagra_gold 50mg 02.jpg",
+  
+  ],
 
     description:
       "Kamagra 50 mg containing the active ingredient, Sildenafil Citrate is used in the treatment of Erectile Dysfunction and Pulmonary Hypertension.",

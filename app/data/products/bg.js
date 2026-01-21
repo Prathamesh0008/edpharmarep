@@ -1,7 +1,7 @@
 const products = {
  "kamagra-gold-50-mg": {
     id: "1",
-    name: "Kamagra Gold 50 mg",
+    name: "Kamagra Gold 50 мг",
     category: "Kamagra Gold",
     brand: "ED Ajanta Pharma",
     dosage: "50 mg",
@@ -177,7 +177,7 @@ const products = {
 },
 "kamagra-100mg-oral-jelly-vol1-bg": {
   id: "3",
-  name: "Kamagra 100 mg Oral Jelly Vol 1",
+  name: "Kamagra 100 мг Орален желе Том 1",
   category: "Kamagra Oral Jelly",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -381,7 +381,7 @@ const products = {
 },
 "kamagra-polo-bg": {
   id: "5",
-  name: "Super Kamagra Oral Jelly",
+  name: "Super Kamagra Орален желе",
   category: "Kamagra Polo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -484,7 +484,7 @@ const products = {
 },
 "kamagra-100mg-chewable-strawberry": {
   id: "6",
-  name: "Kamagra-100 mg Дъвчаща се таблетка (Ягода)",
+  name: "Kamagra-100 мг Дъвчаща таблетка (Ягода)",
   category: "Kamagra Дъвчащи се таблетки",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -808,7 +808,7 @@ const products = {
 },
 "kamagra-100mg-effervescent-bg": {
   id: "8",
-  name: "Kamagra-100 mg ефервесцентна таблетка",
+  name: "Kamagra-100 мг Ефервесцентни таблетки",
   category: "Kamagra ефервесцентни таблетки",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1175,7 +1175,7 @@ const products = {
 },
 "kamagra-expo-100mg-bg": {
   id: "10",
-  name: "Kamagra Expo 100 mg",
+  name: "Апкалис‑SX 20 мг Орал Джели",
   category: "Kamagra Expo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1357,7 +1357,7 @@ const products = {
 },
 "kamagra-expo-100mg-bg": {
   id: "10",
-  name: "Kamagra Expo 100 mg",
+  name: "Камагра Експо 100 мг",
   category: "Kamagra Expo",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -1727,7 +1727,7 @@ const products = {
 },
 "tadalis-sx-20mg-bg": {
   id: "12",
-  name: "Tadalis-SX 20 mg",
+  name: "Тадалис‑SX 20 мг",
   category: "Tadalis-SX",
   brand: "ED Ajanta Pharma",
   dosage: "20 mg",
@@ -1915,7 +1915,7 @@ const products = {
 },
 "lovegra-100mg-oral-jelly-bg": {
   id: "13",
-  name: "Ловегра 100 mg орален гел",
+  name: "Ловегра 100 мг",
   category: "Ловегра",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -2460,7 +2460,7 @@ const products = {
 },
 "cenforce-25mg-bg": {
   id: "17",
-  name: "Cenforce 25 mg",
+  name: "Ценфорс 25 мг",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "25 mg",
@@ -2642,7 +2642,7 @@ const products = {
 },
 "cenforce-50mg-bg": {
   id: "18",
-  name: "Cenforce 50 mg",
+  name: "Ценфорс 50 мг",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "50 mg",
@@ -2824,7 +2824,7 @@ const products = {
 },
 "cenforce-100mg-bg": {
   id: "19",
-  name: "Cenforce 100 mg",
+  name: "Ценфорс 100 мг",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -3006,7 +3006,7 @@ const products = {
 },
 "cenforce-120mg-bg": {
   id: "20",
-  name: "Cenforce 120 mg",
+  name: "Ценфорс 120 мг",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "120 mg",
@@ -3186,7 +3186,7 @@ const products = {
 },
 "cenforce-130mg-bg": {
   id: "21",
-  name: "Cenforce 130 mg",
+  name: "Ценфорс 130 мг",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "130 mg",
@@ -3368,7 +3368,7 @@ const products = {
 },
 "cenforce-150mg-bg": {
   id: "22",
-  name: "Cenforce 150 mg",
+  name: "Сенфорс 150 мг",
   category: "Cenforce",
   brand: "ED Centurion Remedies",
   dosage: "150 mg",
@@ -3550,7 +3550,7 @@ const products = {
 },
 "cenforce-200mg-bg": {
   id: "23",
-  name: "Cenforce 200 mg",
+  name: "Сенфорс 200 мг",
   brand: "ED Centurion Remedies",
   category: "Cenforce",
   dosage: "200 mg",
@@ -3727,7 +3727,7 @@ const products = {
 },
 "cenforce-soft-100-bg": {
   id: "24",
-  name: "Cenforce Soft 100",
+  name: "Сенфорс Софт 100",
   category: "Cenforce Soft",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -3909,7 +3909,7 @@ const products = {
 },
 "cenforce-d-100-60-bg": {
   id: "25",
-  name: "Cenforce-D",
+  name: "Сенфорс-Д",
   category: "Cenforce-D",
   brand: "ED Centurion Remedies",
   dosage: "100 mg Силденафил + 60 mg Дапоксетин",
@@ -4095,7 +4095,7 @@ const products = {
 },
 "cenforce-fm-100-bg": {
   id: "26",
-  name: "Cenforce-FM",
+  name: "CСенфорс-FM",
   category: "Cenforce FM",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -4277,7 +4277,7 @@ const products = {
 },
 "cenforce-professional-bg": {
   id: "27",
-  name: "Cenforce Professional",
+  name: "Сенфорс Профешънъл",
   category: "Cenforce Professional",
   brand: "ED Centurion Remedies",
   dosage: "Сублингвална таблетка (еквивалент 100 mg)",
@@ -4459,7 +4459,7 @@ const products = {
 },
 "cenforce-oral-jelly-100-bg": {
   id: "28",
-  name: "Cenforce Oral Jelly 100 mg",
+  name: "Сенфорс Орал Джели 100 мг",
   category: "Cenforce Oral Jelly",
   brand: "ED Centurion Remedies",
   dosage: "100 mg",
@@ -4636,7 +4636,7 @@ const products = {
 },
 "vidalista-2-5mg-bg": {
   id: "29",
-  name: "Vidalista 2.5 mg",
+  name: "Видалиста 2,5 мг",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "2.5 mg",
@@ -4818,7 +4818,7 @@ const products = {
 },
 "vidalista-5-bg": {
   id: "30",
-  name: "Vidalista 5 mg",
+  name: "Видалиста 5 мг",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "5 mg",
@@ -5000,7 +5000,7 @@ const products = {
 
 "vidalista-10-bg": {
   id: "31",
-  name: "Vidalista 10 mg",
+  name: "Видалиста 10 мг",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "10 mg",
@@ -5182,7 +5182,7 @@ const products = {
 },
 "vidalista-20mg-bg": {
   id: "32",
-  name: "Vidalista 20 mg",
+  name: "Видалиста 20 мг",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "20 mg",
@@ -5364,7 +5364,7 @@ const products = {
 },
 "vidalista-40-bg": {
   id: "33",
-  name: "Vidalista 40 mg",
+  name: "Видалиста 40 мг",
   category: "Vidalista",
   brand: "ED Centurion Remedies",
   dosage: "40 mg",
@@ -5546,7 +5546,7 @@ const products = {
 },
 "vidalista-60-bg": {
   id: "34",
-  name: "Vidalista 60 mg",
+  name: "Видалиста 60 мг",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "60 mg",
@@ -5728,7 +5728,7 @@ const products = {
 },
 "vidalista-80-bg": {
   id: "35",
-  name: "Vidalista 80 mg",
+  name: "Видалиста 80 мг",
   brand: "ED Centurion Remedies",
   category: "Vidalista",
   dosage: "80 mg",
@@ -6092,7 +6092,7 @@ const products = {
 },
 "super-vidalista-bg": {
   id: "37",
-  name: "Super Vidalista",
+  name: "Супер Видалиста",
   brand: "ED Centurion Remedies",
   category: "Super Vidalista",
   dosage: "Tadalafil 20mg + Dapoxetine 60mg",
@@ -6280,7 +6280,7 @@ const products = {
   id: "38",
   category: "Tadalafil",
   brand: "ED Centurion Remedies",
-  name: "Vidalista CT",
+  name: "Видалиста CT",
   dosage: "20mg",
   form: "Таблетка за дъвчене",
   composition: "Tadalafil & Дъвчащ 20mg",
@@ -6448,7 +6448,7 @@ const products = {
   id: "39",
   category: "Tadalafil",
   brand: "ED Centurion Remedies",
-  name: "Vidalista Professional",
+  name: "Видалиста Профешънъл",
   dosage: "20mg",
   form: "Сублингвална таблетка",
   composition: "Tadalafil & Sublingual 20mg",
@@ -6629,7 +6629,7 @@ const products = {
 },
 "vilitra-10-bg": {
   id: "40",
-  name: "Vilitra 10 mg",
+  name: "Вилитра 10 мг",
   brand: "ED Centurion Remedies",
   category: "Vardenafil",
   dosage: "Vardenafil 10mg",
@@ -6811,7 +6811,7 @@ const products = {
 },
 "vilitra-20mg-bg": {
   id: "41",
-  name: "Vilitra 20 mg",
+  name: "Вилитра 20 мг",
   brand: "ED Centurion Remedies",
   category: "Vardenafil",
   dosage: "Vardenafil 20mg",
@@ -6993,7 +6993,7 @@ const products = {
 },
 "vilitra-40mg-bg": {
   id: "42",
-  name: "Vilitra 40 mg",
+  name: "Вилитра 40 мг",
   brand: "ED Centurion Remedies",
   category: "Vardenafil",
   dosage: "Vardenafil 40mg",
@@ -7177,7 +7177,7 @@ const products = {
   id: "43",
   category: "Vardenafil",
   brand: "ED Centurion Remedies",
-  name: "Vilitra 60 mg",
+  name: "Вилитра 60 мг",
   dosage: "60mg",
   form: "Таблетка",
   composition: "Vardenafil 60mg",
@@ -7345,7 +7345,7 @@ const products = {
 },
 "super-vilitra-bg": {
   id: "44",
-  name: "Super Vilitra",
+  name: "Супер Вилитра",
   brand: "ED Centurion Remedies",
   category: "Vardenafil + Dapoxetine",
   dosage: "Vardenafil 20mg + Dapoxetine 60mg",
@@ -7532,7 +7532,7 @@ const products = {
 "fliban-100-bg": {
   id: "45",
   category: "Flibanserin",
-  name: "Fliban",
+  name: "FФлибан",
   brand: "ED Centurion Remedies",
   dosage: "100mg",
   form: "Tablet",
@@ -7714,7 +7714,7 @@ const products = {
 },
 "avana-50mg-bg": {
   id: "46",
-  name: "Avana-50",
+  name: "Авана-50",
   brand: "ED Sunrise Remedies",
   category: "Avanafil",
   dosage: "50mg",
@@ -7898,7 +7898,7 @@ const products = {
   id: "47",
   category: "Avanafil",
   brand: "ED Sunrise Remedies",
-  name: "Avana-100",
+  name: "Авана-100",
   dosage: "100mg",
   form: "Таблетка",
   composition: "Avanafil 100mg",
@@ -8071,7 +8071,7 @@ const products = {
   id: "48",
   category: "Avanafil",
   brand: "ED Sunrise Remedies",
-  name: "Avana-200",
+  name: "Авана-200",
   dosage: "200mg",
   form: "Tablet",
   composition: "Avanafil 200mg",
@@ -8254,7 +8254,7 @@ const products = {
   id: "49",
   category: "Avanafil + Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Top Avana",
+  name: "Топ Авана",
   dosage: "Avanafil 50mg + Dapoxetine 60mg",
   form: "Tablet",
   composition: "Avanafil 50mg & Dapoxetine 60mg",
@@ -8441,7 +8441,7 @@ const products = {
   id: "50",
   category: "Avanafil + Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Super Avana",
+  name: "Супер Авана",
   dosage: "Avanafil 100mg + Dapoxetine 60mg",
   form: "Таблетка",
   composition: "Avanafil 100mg & Dapoxetine 60mg",
@@ -8629,7 +8629,7 @@ const products = {
 "extra-super-avana-bg": {
   id: "51",
   category: "Avanafil + Dapoxetine",
-  name: "Extra Super Avana",
+  name: "Екстра Супер Авана",
   brand: "ED Sunrise Remedies",
   dosage: "Avanafil 200mg + Dapoxetine 60mg",
   form: "Tablet",
@@ -8817,7 +8817,7 @@ const products = {
   id: "52",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-30",
+  name: "Поксет-30",
   dosage: "30mg",
   form: "Tablet",
   composition: "Dapoxetine 30mg",
@@ -9001,7 +9001,7 @@ const products = {
   id: "53",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-60",
+  name: "Поксет-60",
   dosage: "60mg",
   form: "Таблетка",
   composition: "Dapoxetine 60mg",
@@ -9185,7 +9185,7 @@ const products = {
   id: "54",
   category: "Dapoxetine",
   brand: "ED Sunrise Remedies",
-  name: "Poxet-90",
+  name: "Поксет-90",
   dosage: "90mg",
   form: "Tablet",
   composition: "Dapoxetine 90mg",
@@ -9564,7 +9564,7 @@ const products = {
 },
 "p-force-fort-bg": {
 "id": "56",
-"name": "P-Force Fort",
+"name": "P-Force Форт",
 "brand": "ED Sunrise Remedies",
 "category": "Гама P-Force",
 "dosage": "150 мг",
@@ -9751,7 +9751,7 @@ const products = {
 },
 "p-force-plus-bg": {
 "id": "57",
-"name": "P-Force Plus",
+"name": "P-Force Плюс",
 "brand": "ED Sunrise Remedies",
 "category": "Гама P-Force",
 "dosage": "130 мг",
@@ -9937,7 +9937,7 @@ const products = {
 },
 "super-p-force-oral-jelly-bg": {
 "id": "58",
-"name": "Super P-Force Oral Jelly",
+"name": "Супер P-Force Орал Джели",
 "brand": "ED Sunrise Remedies",
 "category": "Гама P-Force",
 "dosage": "100 мг + 60 мг",
@@ -10123,7 +10123,7 @@ const products = {
 },
 "super-p-force-bg": {
 "id": "59",
-"name": "Super P-Force",
+"name": "Супер P-Force",
 "brand": "ED Sunrise Remedies",
 "category": "Гама P-Force",
 "dosage": "100 мг + 60 мг",
@@ -10309,7 +10309,7 @@ const products = {
 },
 "extra-super-p-force-bg": {
 "id": "60",
-"name": "Extra Super P-Force",
+"name": "Екстра Супер P-Force",
 "brand": "ED Sunrise Remedies",
 "category": "Гама P-Force",
 "dosage": "100 мг + 100 мг",
@@ -10495,7 +10495,7 @@ const products = {
 },
 "Super-Zhewitra-bg": {
 "id": "67",
-"name": "Super Zhewitra",
+"name": "Супер Жевитра",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Zhewitra",
 "dosage": "20 мг + 60 мг",
@@ -10681,7 +10681,7 @@ const products = {
 },
 "Extra-Super-Zhewitra-bg": {
 "id": "68",
-"name": "Extra Super Zhewitra",
+"name": "Екстра Супер Жевитра",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Zhewitra",
 "dosage": "40 мг + 60 мг",
@@ -10867,7 +10867,7 @@ const products = {
 },
 "Tadarise-2.5-bg": {
 "id": "69",
-"name": "Tadarise-2.5",
+"name": "Тадарисе-2,5",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Tadarise",
 "dosage": "2.5 мг",
@@ -11053,7 +11053,7 @@ const products = {
 },
 "Tadarise-5-bg":{
 id: "70",
-name: "Tadarise-5",
+name: "Тадарисе-5",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "5 мг",
@@ -11243,7 +11243,7 @@ tips: [
 },
 "Tadarise-10-bg":{
 id: "71",
-name: "Tadarise-10",
+name: "Тадарисе-10",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "10 мг",
@@ -11433,7 +11433,7 @@ tips: [
 },
 "Tadarise-Pro-20-bg":{
 id: "72",
-name: "Tadarise Pro-20",
+name: "Тадарисе Про-20",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "20 мг",
@@ -11622,7 +11622,7 @@ tips: [
 },
 "Tadarise-20-bg":{
 id: "73",
-name: "Tadarise-20",
+name: "Тадарисе-20",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "20 мг",
@@ -11812,7 +11812,7 @@ tips: [
 },
 "Tadarise-20-Oral-Jelly-bg":{
 id: "74",
-name: "Tadarise-20 Oral Jelly",
+name: "Тадарисе-20 Орал Джели",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "20 мг",
@@ -12002,7 +12002,7 @@ tips: [
 },
 "Tadarise-40-bg":{
 id: "75",
-name: "Tadarise-40",
+name: "Тадарисе-40",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "40 мг",
@@ -12191,7 +12191,7 @@ tips: [
 },
 "Tadarise Pro-40-bg":{
 id: "76",
-name: "Tadarise Pro-40",
+name: "Тадарисе Про-40",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "40 мг",
@@ -12381,7 +12381,7 @@ tips: [
 },
 "Tadarise-60-bg":{
 id: "77",
-name: "Tadarise-60",
+name: "Тадарисе-60",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "60 мг",
@@ -12570,7 +12570,7 @@ tips: [
 },
 "Super-Tadarise-bg":{
 id: "78",
-name: "Super Tadarise",
+name: "Супер Тадарисе",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "20 мг + 60 мг",
@@ -12760,7 +12760,7 @@ tips: [
 },
 "Extra-Super-Tadarise-bg":{
 id: "79",
-name: "Extra Super Tadarise",
+name: "Екстра Супер Тадарисе",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "40 мг + 60 мг",
@@ -12950,7 +12950,7 @@ tips: [
 },
 "Tadarise-Effervescent-bg":{
 id: "80",
-name: "Tadarise Effervescent",
+name: "Тадарисе Ефервесцент",
 brand: "ED Sunrise Remedies",
 category: "Гама Tadarise",
 dosage: "20 мг",
@@ -13139,7 +13139,7 @@ tips: [
 },
 "top-tadarise-bg": {
 id: "81",
-name: "Top Tadarise",
+name: "Топ Тадарисе",
 brand: "ED Sunrise Remedies",
 category: "Tadarise",
 dosage: "20 мг + 30 мг",
@@ -13499,7 +13499,7 @@ tips: [
 },
 "tadasoft-40-bg": {
 id: "83",
-name: "Tadasoft 40 мг",
+name: "Тадасофт 40 мг",
 brand: "ED Sunrise Remedies",
 category: "Tadasoft",
 dosage: "40 мг",
@@ -13680,7 +13680,7 @@ tips: [
 },
 "Sildisoft-100-bg":{
 id: "84",
-name: "Sildisoft-100",
+name: "Силдисофт-100",
 brand: "ED Sunrise Remedies",
 category: "Гама Sildisoft",
 dosage: "100 мг",
@@ -13870,7 +13870,7 @@ tips: [
 },
 "tadasoft-20-bg": {
 "id": "82",
-"name": "Tadasoft 20 мг",
+"name": "Тадасофт 20 мг",
 "brand": "ED Sunrise Remedies",
 "category": "Tadasoft",
 "dosage": "20 мг",
@@ -14044,7 +14044,7 @@ tips: [
 },
 "tadasoft-40-bg": {
 "id": "83",
-"name": "Tadasoft 40 мг",
+"name": "Тадасофт 40 мг",
 "brand": "ED Sunrise Remedies",
 "category": "Tadasoft",
 "dosage": "40 мг",
@@ -14219,7 +14219,7 @@ tips: [
 },
 "Sildisoft-100-bg": {
 "id": "84",
-"name": "Sildisoft-100",
+"name": "Силдисофт-100",
 "brand": "ED Sunrise Remedies",
 "category": "Sildisoft Гама",
 "dosage": "100 мг",
@@ -14405,7 +14405,7 @@ tips: [
 },
 "Sildisoft-50-bg": {
 "id": "85",
-"name": "Sildisoft-50",
+"name": "Силдисофт-50",
 "brand": "ED Sunrise Remedies",
 "category": "Sildisoft Гама",
 "dosage": "50 мг",
@@ -14591,7 +14591,7 @@ tips: [
 },
 "Malegra-25-bg": {
 "id": "86",
-"name": "Malegra 25",
+"name": "Малегра 25",
 "brand": "ED Sunrise Remedies",
 "category": "Malegra Гама",
 "dosage": "25 мг",
@@ -14775,7 +14775,7 @@ tips: [
 "Редовните прегледи гарантират безопасна и ефективна употреба на Силденафил за ED."
 ]
 },
-"Malegra-50-bg": {
+"Малегра 50": {
 "id": "87",
 "name": "Malegra 50",
 "brand": "ED Sunrise Remedies",
@@ -14961,7 +14961,7 @@ tips: [
 "Редовните прегледи гарантират безопасна и ефективна употреба на Силденафил за ED."
 ]
 },
-"Malegra-75-bg": {
+"Малегра-75": {
 "id": "88",
 "name": "Malegra 75",
 "brand": "ED Sunrise Remedies",
@@ -15149,7 +15149,7 @@ tips: [
 },
 "Malegra-120-bg": {
 "id": "90",
-"name": "Malegra 120",
+"name": "Малегра 120",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Malegra",
 "dosage": "120 мг",
@@ -15334,7 +15334,7 @@ tips: [
 },
 "Malegra-200-bg": {
 "id": "91",
-"name": "Malegra 200",
+"name": "Малегра 200",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Malegra",
 "dosage": "200 мг",
@@ -15520,7 +15520,7 @@ tips: [
 },
   "Malegra100-Oral-Jelly-bg": {
     "id": "92",
-    "name": "Malegra 100 Oral Jelly",
+    "name": "Малегра 100 Орал Джели",
     "brand": "ED Sunrise Remedies",
     "category": "Малагра Асортимент",
     "dosage": "100 mg",
@@ -15706,7 +15706,7 @@ tips: [
   },
   "Malegra-Pro-50-bg": {
     "id": "93",
-    "name": "Malegra Pro 50",
+    "name": "Малегра Про 50",
     "brand": "ED Sunrise Remedies",
     "category": "Малагра Асортимент",
     "dosage": "50 mg",
@@ -15892,7 +15892,7 @@ tips: [
   },
   "Malegra-Pro-100-bg": {
     "id": "94",
-    "name": "Malegra Pro 100",
+    "name": " Малегра Про 100",
     "brand": "ED Sunrise Remedies",
     "category": "Малагра Асортимент",
     "dosage": "100 mg",
@@ -16078,7 +16078,7 @@ tips: [
   },
   "Malegra-DXT-bg": {
 "id": "95",
-"name": "Malegra DXT",
+"name": "Малегра DXT",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Malegra",
 "dosage": "100 мг + 30 мг",
@@ -16264,7 +16264,7 @@ tips: [
 },
 "Malegra-DXT-Plus-bg": {
 "id": "96",
-"name": "Malegra DXT Plus",
+"name": "Малегра DXT Плюс",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Malegra",
 "dosage": "100 мг + 60 мг",
@@ -16449,7 +16449,7 @@ tips: [
 },
 "Malegra-FXT-bg": {
 "id": "97",
-"name": "Malegra FXT",
+"name": "Малегра FXT",
 "brand": "ED Sunrise Remedies",
 "category": "Гама Malegra",
 "dosage": "100 мг + 40 мг",
@@ -16821,7 +16821,7 @@ tips: [
   },
   "Malegra-Effervescent100mg-bg": {
     "id": "99",
-    "name": "Malegra Effervescent 100mg",
+    "name": "Малегра Ефервесцент 100 мг",
     "category": "Малагра Асортимент",
     "brand": "ED Sunrise Remedies",
     "dosage": "100 mg",
@@ -17007,7 +17007,7 @@ tips: [
   },
   "Malegra100-Green-bg": {
     "id": "100",
-    "name": "Malegra 100 Green",
+    "name": "Малегра 100 Грийн",
     "brand": "ED Sunrise Remedies",
     "category": "Малагра Асортимент",
     "dosage": "100 mg",
@@ -17193,7 +17193,7 @@ tips: [
   },
   "Malegra100-Gold-bg":{
     id: "101",
-    name: "Malegra 100 Gold",
+    name: "MМалегра 100 Голд",
     brand: "ED Sunrise Remedies",
     category: "Гама Малегра",
     dosage: "100 mg",
@@ -17548,7 +17548,7 @@ administration: [
 },
   "Naron-Cream-bg":{
     id: "103",
-    name: "Naron Cream",
+    name: "Нарон Крем",
     brand: "ED Sunrise Remedies",
     category: "Женско здраве",
     dosage: "100 gm",
@@ -17694,7 +17694,7 @@ administration: [
   },
   "Grafix-Cream-bg":{
     id: "104",
-    name: "Grafix Cream",
+    name: "Графикс Крем",
     brand: "ED Sunrise Remedies",
     category: "Женско здраве",
     dosage: "100 gm",
@@ -17842,7 +17842,7 @@ administration: [
   },
   "Grafix-Cream-bg":{
     id: "104",
-    name: "Grafix Cream",
+    name: "Графикс Крем",
     brand: "ED Sunrise Remedies",
     category: "Женско здраве",
     dosage: "100 gm",
@@ -17990,7 +17990,7 @@ administration: [
   },
   "Femallegra-100-bg":{
     id: "105",
-    name: "Femallegra-100",
+    name: "Фемалегра-100",
     brand: "ED Sunrise Remedies",
     category: "Женско здраве",
     dosage: "100 mg",
@@ -18131,7 +18131,7 @@ administration: [
   },
   "Tadafem-20-bg":{
     id: "106",
-    name: "Tadafem-20",
+    name: "Тадафем-20",
     brand: "ED Sunrise Remedies",
     category: "Женско здраве",
     dosage: "20 mg",
@@ -18420,7 +18420,7 @@ administration: [
   },
 "Clofi-50-en":{
     id: "108",
-    name: "Clofi-50",
+    name: "Клофи-25",
     brand: "ED Sunrise Remedies",
     category: "Women Health Care",
     dosage: "50 mg",
@@ -18559,7 +18559,7 @@ administration: [
   },
 "Clofi-100-en":{
   id: "109",
-  name: "Clofi-100",
+  name: "Клофи-100",
   brand: "ED Sunrise Remedies",
   category: "Women Health Care",
   dosage: "100 mg",
@@ -18696,7 +18696,7 @@ administration: [
 },
 "Zudena-100-en":{
     id: "110",
-    name: "Zudena-100",
+    name: "Зудена-100",
     brand: "ED Sunrise Remedies",
     category: "Zudena Range",
     dosage: "100 mg",
@@ -18845,7 +18845,7 @@ administration: [
 
   "Zudena-200-en":{
     id: "111",
-    name: "Zudena-200",
+    name: "Зудена-200",
     brand: "ED Sunrise Remedies",
     category: "Гама Зудена",
     dosage: "200 mg",
@@ -18992,7 +18992,7 @@ administration: [
   },
   "Super Zudena-en":{
     id: "112",
-    name: "Super Zudena",
+    name: "Супер Зудена",
     brand: "ED Sunrise Remedies",
     category: "Гама Зудена",
     dosage: "Udenafil 100 mg & Dapoxetine Hydrochloride 60 mg",
@@ -19143,7 +19143,7 @@ administration: [
   },
   "Iversun-6-en":{
     id: "113",
-    name: "Iversun-6",
+    name: "Иверсън-6",
     brand: "ED Sunrise Remedies",
     category: "Гама Ивермектин",
     dosage: "6 mg",
@@ -19277,7 +19277,7 @@ administration: [
   },
   "Iversun-12-en":{
     id: "114",
-    name: "Iversun-12",
+    name: "Иверсън-12",
     brand: "ED Sunrise Remedies",
     category: "Гама Ивермектин",
     dosage: "12 mg",
@@ -19411,7 +19411,7 @@ administration: [
   },
   "Cinasun-30-en":{
     id: "115",
-    name: "Cinasun-30",
+    name: "Цинасун-30",
     brand: "ED Sunrise Remedies",
     category: "Гама Цинакалцет",
     dosage: "30 mg",
@@ -19684,7 +19684,7 @@ administration: [
   },
   "Cinasun-90-en":{
     id: "117",
-    name: "Cinasun-90",
+    name: "Цинасун-60",
     brand: "ED Sunrise Remedies",
     category: "Гама Цинакалцет",
     dosage: "90 mg",
@@ -19820,7 +19820,7 @@ administration: [
   },
   "Chocolis-20-en":{
     id: "118",
-    name: "Chocolis-20",
+    name: "Шоколис-20",
     category: "Друга гама",
     brand: "ED Sunrise Remedies",
     dosage: "20 mg",
@@ -19975,7 +19975,7 @@ administration: [
 
 "Chocogra-100-bg":{
     id: "119",
-    name: "Chocogra-100",
+    name: "Чокогра-100",
     brand: "ED Sunrise Remedies",
     category: "Други продукти",
     dosage: "100 mg",
@@ -20123,7 +20123,7 @@ administration: [
 
 "Orlisun-bg":{
     id: "120",
-    name: "Orlisun",
+    name: "Орлисън",
     brand: "ED Sunrise Remedies",
     category: "Други продукти",
     dosage: "120 mg",
@@ -20256,7 +20256,7 @@ administration: [
 
 "Modafresh-200-bg":{
     id: "121",
-    name: "Modafresh-200",
+    name: "Модафреш-200",
     brand: "ED Sunrise Remedies",
     category: "Други продукти",
     dosage: "200 mg",
@@ -20390,7 +20390,7 @@ administration: [
 
 "Sunpecia-1mg/5mg-bg":{
     id: "122",
-    name: "Sunpecia 1mg / 5mg",
+    name: "Санпесия 1 мг / 5 мг",
     brand: "ED Sunrise Remedies",
     category: "Други продукти",
     dosage: "1 mg / 5 mg",
@@ -20563,7 +20563,7 @@ administration: [
 
 "Pirfisun-Tablet-bg":{
     id: "123",
-    name: "Pirfisun Таблетка",
+    name: "Пирфисън Таблетка",
     brand: "ED Sunrise Remedies",
     category: "Други продукти",
     dosage: "200 mg",

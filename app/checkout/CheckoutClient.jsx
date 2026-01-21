@@ -344,76 +344,211 @@ export default function CheckoutClient() {
   };
 
   const placeOrder = async () => {
-    try {
-      // Check authentication again before placing order
-      const user = getLoggedInUser();
-      if (!user || !user._id) {
-        alert(checkoutTranslations.messages.loginRequired);
-        router.push("/");
-        return;
-      }
-
-      const error = validateForm(form, cartItems, payment);
-      if (error) {
-        alert(error);
-        return;
-      }
-
-      setIsLoading(true);
-
-      // Save address to user's localStorage
-      saveAddressToUser(form, user._id);
-
-      console.log("Sending order request...");
-      
-      const res = await fetch("/api/orders/create", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({
-          items: cartItems,
-          totals,
-          address: form,
-          paymentMethod: payment,
-        }),
-      });
-
-      console.log("Response status:", res.status);
-      
-      if (res.status === 401) {
-        alert(checkoutTranslations.messages.sessionExpired);
-        router.push("/login");
-        setIsLoading(false);
-        return;
-      }
-
-      const data = await res.json();
-      console.log("Response data:", data);
-
-      if (!res.ok || !data.ok) {
-        alert(data.message || checkoutTranslations.messages.orderFailed);
-        setIsLoading(false);
-        return;
-      }
-
-      if (!data.orderId) {
-        console.error("No orderId in response:", data);
-        alert("Order created but no order ID returned");
-        setIsLoading(false);
-        return;
-      }
-
-      console.log("Redirecting to order-success with ID:", data.orderId);
-      clearCart();
-      
-      router.push(`/order-success/${data.orderId}`);
-      
-    } catch (error) {
-      console.error("Order placement error:", error);
-      alert(checkoutTranslations.messages.networkError);
-      setIsLoading(false);
+  try {
+    // Check authentication again before placing order
+    const user = getLoggedInUser();
+    if (!user || !user._id) {
+      alert(checkoutTranslations.messages.loginRequired);
+      router.push("/");
+      return;
     }
-  };
+
+    const error = validateForm(form, cartItems, payment);
+    if (error) {
+      alert(error);
+      return;
+    }
+
+    setIsLoading(true);
+
+    // Save address to user's localStorage
+    saveAddressToUser(form, user._id);
+
+    console.log("Sending order request...");
+    
+    // ✅ CRITICAL: Save order data for email receipt BEFORE API call
+    if (typeof window !== 'undefined') {
+      const orderDataForEmail = {
+        orderId: null, // Will be updated after API response
+        customerEmail: form.email,
+        customerName: form.fullName,
+        paymentMethod: payment,
+        totalAmount: totals.totalPrice,
+        items: cartItems.map(item => ({
+          name: item.name,
+          quantity: item.qty,
+          price: item.price,
+          total: item.price * item.qty
+        })),
+        address: {
+          fullName: form.fullName,
+          phone: form.phone,
+          address: form.address,
+          city: form.city,
+          pincode: form.pincode,
+          country: form.country
+        }
+      };
+      
+      // Save to sessionStorage (temporary, for this session)
+      sessionStorage.setItem('pendingOrderData', JSON.stringify(orderDataForEmail));
+      
+      // Also save to localStorage as backup
+      localStorage.setItem('lastOrderData', JSON.stringify(orderDataForEmail));
+      
+      console.log('✅ Order data saved for email receipt:', {
+        email: form.email,
+        paymentMethod: payment,
+        total: totals.totalPrice,
+        itemCount: cartItems.length
+      });
+    }
+    
+    // Make API call to create order
+    const res = await fetch("/api/orders/create", {
+      method: "POST",
+      headers: { 
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${localStorage.getItem('token') || ''}`
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        items: cartItems,
+        totals,
+        address: form,
+        paymentMethod: payment,
+        userEmail: form.email,
+        userName: form.fullName,
+        userId: user._id
+      }),
+    });
+
+    console.log("Response status:", res.status);
+    
+    if (res.status === 401) {
+      alert(checkoutTranslations.messages.sessionExpired);
+      router.push("/login");
+      setIsLoading(false);
+      return;
+    }
+
+    const data = await res.json();
+    console.log("API Response data:", data);
+
+    if (!res.ok || !data.ok) {
+      alert(data.message || checkoutTranslations.messages.orderFailed);
+      setIsLoading(false);
+      
+      // Clean up temporary data on failure
+      if (typeof window !== 'undefined') {
+        sessionStorage.removeItem('pendingOrderData');
+      }
+      return;
+    }
+
+    if (!data.orderId) {
+      console.error("No orderId in response:", data);
+      alert("Order created but no order ID returned. Please contact support.");
+      setIsLoading(false);
+      
+      // Clean up temporary data
+      if (typeof window !== 'undefined') {
+        sessionStorage.removeItem('pendingOrderData');
+      }
+      return;
+    }
+
+    console.log("✅ Order created successfully! Order ID:", data.orderId);
+    
+    // ✅ UPDATE: Save final order data with actual order ID
+    if (typeof window !== 'undefined') {
+      try {
+        // Get the pending order data
+        const pendingDataStr = sessionStorage.getItem('pendingOrderData');
+        let orderData = {};
+        
+        if (pendingDataStr) {
+          orderData = JSON.parse(pendingDataStr);
+        } else {
+          // Fallback: Get from localStorage
+          const lastOrderDataStr = localStorage.getItem('lastOrderData');
+          if (lastOrderDataStr) {
+            orderData = JSON.parse(lastOrderDataStr);
+          } else {
+            // Create new order data if nothing found
+            orderData = {
+              customerEmail: form.email,
+              customerName: form.fullName,
+              paymentMethod: payment,
+              totalAmount: totals.totalPrice,
+              items: cartItems.map(item => ({
+                name: item.name,
+                quantity: item.qty,
+                price: item.price,
+                total: item.price * item.qty
+              }))
+            };
+          }
+        }
+        
+        // Add the actual order ID
+        orderData.orderId = data.orderId;
+        orderData.createdAt = new Date().toISOString();
+        orderData.userId = user._id;
+        
+        // ✅ Save to multiple places for reliability
+        // 1. localStorage with order ID as key (main storage)
+        localStorage.setItem(`order_${data.orderId}`, JSON.stringify(orderData));
+        
+        // 2. sessionStorage with order ID as key (for current session)
+        sessionStorage.setItem(`order_${data.orderId}`, JSON.stringify(orderData));
+        
+        // 3. Also save to a special key for easy retrieval
+        localStorage.setItem('lastSuccessfulOrder', JSON.stringify(orderData));
+        
+        console.log('✅ Final order data saved:', {
+          orderId: data.orderId,
+          email: orderData.customerEmail,
+          storageKeys: [
+            `order_${data.orderId} in localStorage`,
+            `order_${data.orderId} in sessionStorage`,
+            'lastSuccessfulOrder in localStorage'
+          ]
+        });
+        
+        // Clean up temporary data
+        sessionStorage.removeItem('pendingOrderData');
+        localStorage.removeItem('lastOrderData');
+        
+      } catch (storageError) {
+        console.error('Error saving order data:', storageError);
+        // Don't fail the order just because of storage error
+      }
+    }
+    
+    // Clear the cart
+    clearCart();
+    console.log('✅ Cart cleared');
+    
+    // ✅ Redirect to success page with parameters
+    const redirectUrl = `/order-success/${data.orderId}?payment=${encodeURIComponent(payment)}&email=${encodeURIComponent(form.email)}&name=${encodeURIComponent(form.fullName)}`;
+    console.log('Redirecting to:', redirectUrl);
+    
+    router.push(redirectUrl);
+    
+  } catch (error) {
+    console.error("❌ Order placement error:", error);
+    alert(checkoutTranslations.messages.networkError);
+    
+    // Clean up on error
+    if (typeof window !== 'undefined') {
+      sessionStorage.removeItem('pendingOrderData');
+      localStorage.removeItem('lastOrderData');
+    }
+    
+    setIsLoading(false);
+  }
+};
 
   if (cartItems.length === 0) {
     return (
@@ -708,6 +843,7 @@ export default function CheckoutClient() {
                           <p className="font-semibold text-slate-800 truncate">
                             {i.name}
                           </p>
+                          
                           <p className="mt-0.5 text-xs text-gray-500">
                             Qty: {i.qty} units ({Math.ceil(i.qty / 50)} batch
                             {Math.ceil(i.qty / 50) > 1 ? "es" : ""})

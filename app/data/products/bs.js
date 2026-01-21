@@ -1,7 +1,7 @@
 const products = {
    "kamagra-gold-50-mg-bs": {
     id: "1",
-    name: "Kamagra Gold 50 mg",
+    name: "Kamagra Gold 50 mg filmom obložene tablete",
     category: "Kamagra Gold",
     brand: "ED Ajanta Pharma",
     dosage: "50 mg",
@@ -1722,7 +1722,7 @@ const products = {
 },
 "lovegra-100mg-oral-jelly-bs": {
   id: "13",
-  name: "Lovegra 100 mg Oral Jelly",
+  name: "Lovegra 100 mg Oralni Gel",
   category: "Lovegra",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",

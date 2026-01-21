@@ -4,7 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { products as allProducts } from "../data/products";
-import React from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 /* ---------------- BRANDS ---------------- */
@@ -16,6 +16,212 @@ const brands = [
   { key: "ED Sunrise Remedies", logo: "/logo/sunrise.png" },
   { key: "ED Centurion Remedies", logo: "/logo/cen.png" },
 ];
+
+/* ---------------- SMOOTH PRODUCT IMAGE GALLERY ---------------- */
+const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const intervalRef = useRef(null);
+  const transitionTimeoutRef = useRef(null);
+
+  // Get product images
+  const images = useMemo(() => {
+    const imageArray = [
+      product?.image || "/placeholder.jpg",
+      product?.additionalImages?.[0] || "/placeholder.jpg",
+      product?.additionalImages?.[1] || "/placeholder.jpg",
+    ];
+    return imageArray.filter(img => img && img.trim() !== "");
+  }, [product]);
+
+  // Auto-rotation with smooth transitions - FASTER VERSION
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    const rotateImage = () => {
+      setIsTransitioning(true);
+      setCurrentImageIndex(prev => (prev + 1) % images.length);
+      
+      // Clear any existing timeout
+      if (transitionTimeoutRef.current) {
+        clearTimeout(transitionTimeoutRef.current);
+      }
+      
+      // Reset transitioning state after animation completes - FASTER
+      transitionTimeoutRef.current = setTimeout(() => {
+        setIsTransitioning(false);
+      }, 400); // Faster: 400ms
+    };
+
+    intervalRef.current = setInterval(rotateImage, 1000); // Faster: 2 seconds between images
+
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+      if (transitionTimeoutRef.current) {
+        clearTimeout(transitionTimeoutRef.current);
+      }
+    };
+  }, [images.length]);
+
+  const handleThumbnailClick = (index) => {
+    if (index === currentImageIndex || isTransitioning) return;
+    
+    // Reset auto-rotation timer
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    
+    setIsTransitioning(true);
+    setCurrentImageIndex(index);
+    
+    // Restart auto-rotation after manual interaction - FASTER
+    setTimeout(() => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+      intervalRef.current = setInterval(() => {
+        setCurrentImageIndex(prev => (prev + 1) % images.length);
+      }, 2000); // Faster: 2 seconds
+    }, 800); // Faster: 800ms
+  };
+
+  return (
+    <div className="relative w-full h-full group overflow-hidden">
+      <style jsx>{`
+        .image-container {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+        
+        .image-slide {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transform: scale(0.98);
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); // Faster: 0.4s
+          will-change: transform, opacity;
+        }
+        
+        .image-slide.active {
+          opacity: 1;
+          transform: scale(1);
+          z-index: 10;
+        }
+        
+        .image-slide.inactive {
+          opacity: 0;
+          transform: scale(0.98);
+          z-index: 1;
+        }
+        
+        .navigation-dot {
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); // Faster: 0.2s
+          will-change: transform, background-color;
+        }
+        
+        .image-indicator {
+          animation: gentlePulse 1s ease-in-out infinite; // Faster: 1s
+        }
+        
+        @keyframes gentlePulse {
+          0%, 100% { opacity: 0.7; }
+          50% { opacity: 1; }
+        }
+        
+        /* Prevent animation on reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+          .image-slide,
+          .navigation-dot,
+          .image-indicator {
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+          }
+        }
+      `}</style>
+
+      {/* Main Image Container */}
+      <div className="image-container">
+        {images.map((imgSrc, index) => (
+          <div
+            key={index}
+            className={`image-slide ${index === currentImageIndex ? 'active' : 'inactive'}`}
+          >
+            <Image
+              src={imgSrc}
+              alt={`${product.name} - View ${index + 1}`}
+              fill
+              className="object-contain p-3 sm:p-4 md:p-5 lg:p-6 transition-transform duration-200 group-hover:scale-105" // Added duration-200
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              priority={index === 0}
+            />
+          </div>
+        ))}
+        
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
+        
+        {/* Image Navigation Dots - Compact for homepage */}
+        {images.length > 1 && (
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 flex gap-1">
+            {images.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => handleThumbnailClick(index)}
+                className={`navigation-dot w-1.5 h-1.5 rounded-full ${
+                  index === currentImageIndex 
+                    ? 'scale-125' 
+                    : 'scale-100 hover:scale-110'
+                }`}
+                style={{
+                  backgroundColor: index === currentImageIndex 
+                    ? themeColor 
+                    : `${themeColor}80`
+                }}
+                aria-label={`View image ${index + 1}`}
+                disabled={isTransitioning}
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Auto-rotation Indicator - Show on hover */}
+        {images.length > 1 && (
+          <div className="absolute top-1.5 right-1.5 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"> {/* Added duration-200 */}
+            <div 
+              className="px-1.5 py-0.5 rounded-full text-[8px] font-medium backdrop-blur-sm bg-white/90 image-indicator"
+              style={{ color: themeColor }}
+            >
+              <div className="flex items-center gap-0.5">
+                <svg 
+                  className="w-2 h-2" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
+                  />
+                </svg>
+                <span>Auto</span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
 
 /* ---------------- RESPONSIVE LOGO STRIP ---------------- */
 function LogoStrip({ activeBrand, setActiveBrand }) {
@@ -77,6 +283,7 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
 export default function HomeProducts({ activeBrand, setActiveBrand }) {
   const { t } = useLanguage();
   const BRAND = "#0A2A73";
+  const [hoveredProductId, setHoveredProductId] = useState(null);
 
   const brandProducts = allProducts.filter(
     (p) => p.brand === activeBrand
@@ -90,6 +297,15 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   const productCountText = t?.homeProducts?.buttons?.productsCount 
     ? t.homeProducts.buttons.productsCount.replace('{count}', brandProducts.length)
     : `${brandProducts.length} Products`;
+
+  // Handle product hover for image rotation
+  const handleProductMouseEnter = (productId) => {
+    setHoveredProductId(productId);
+  };
+
+  const handleProductMouseLeave = () => {
+    setHoveredProductId(null);
+  };
 
   return (
     <section className="relative py-10 sm:py-14 md:py-16">
@@ -150,17 +366,16 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                   key={p.slug}  
                   className="group relative rounded-xl sm:rounded-2xl md:rounded-3xl bg-white border shadow-sm hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col"
                   style={{ borderColor: "rgba(10,42,115,0.15)" }}
+                  onMouseEnter={() => handleProductMouseEnter(p.slug)}
+                  onMouseLeave={handleProductMouseLeave}
                 >
-                  {/* IMAGE - Fixed aspect ratio */}
+                  {/* IMAGE - Fixed aspect ratio with animation */}
                   <div className="relative aspect-square h-40 sm:h-44 md:h-48 lg:h-52 xl:h-56 2xl:h-60 rounded-t-xl sm:rounded-t-2xl md:rounded-t-3xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden flex-shrink-0">
-                    <Image
-                      src={p.image}
-                      alt={p.name}
-                      fill
-                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                      className="object-contain p-3 sm:p-4 md:p-5 lg:p-6 transition-transform duration-300 group-hover:scale-105"
+                    <SmoothProductImageGallery 
+                      product={p} 
+                      themeColor={BRAND} 
+                      isCompact={true}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
                   </div>
 
                   {/* CONTENT - Fixed heights for text sections */}

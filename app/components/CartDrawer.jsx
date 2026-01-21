@@ -26,7 +26,8 @@ export default function CartDrawer() {
     incrementBulk, 
     decrementBulk, 
     removeFromCart,
-    BULK_QUANTITY,
+    INITIAL_BULK_QUANTITY,  // Changed
+    INCREMENT_STEP,         // Added
     totals 
   } = useCart();
 
@@ -132,7 +133,7 @@ export default function CartDrawer() {
           )}
 
           {cartItems.map((item) => {
-            const batchCount = Math.ceil(item.qty / BULK_QUANTITY);
+            const batchCount = Math.ceil(item.qty / INITIAL_BULK_QUANTITY); // Updated
             
             return (
               <div
@@ -165,7 +166,7 @@ export default function CartDrawer() {
                           <span>{item.price}/unit</span>
                         </p>
                         <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded">
-                          {batchCount} batch{batchCount > 1 ? 'es' : ''}
+                          Min: {INITIAL_BULK_QUANTITY} {/* Updated */}
                         </span>
                       </div>
                     </div>
@@ -174,7 +175,7 @@ export default function CartDrawer() {
                       {/* QTY CONTROLS */}
                       <div className="flex flex-col gap-1">
                         <div className="text-xs text-gray-500">
-                          Bulk units: <span className="font-semibold">{BULK_QUANTITY}</span>
+                          {INCREMENT_STEP} units per click {/* Updated */}
                         </div>
                         <div className="inline-flex items-center gap-2 rounded-full bg-slate-50 border border-slate-200 px-2 py-1">
                           <button
@@ -183,12 +184,14 @@ export default function CartDrawer() {
                               decrementBulk(item.slug);
                             }}
                             className="w-7 h-7 rounded-full flex items-center justify-center text-gray-600 hover:bg-slate-200 transition"
+                            title={`Decrease by ${INCREMENT_STEP} units`} // Added
                           >
                             <Minus size={14} />
                           </button>
 
                           <span className="min-w-[28px] text-center text-sm font-semibold text-slate-900">
                             {item.qty}
+                            <div className="text-[10px] text-gray-500 font-normal">units</div> {/* Added */}
                           </span>
 
                           <button
@@ -197,6 +200,7 @@ export default function CartDrawer() {
                               incrementBulk(item.slug);
                             }}
                             className="w-7 h-7 rounded-full flex items-center justify-center text-gray-600 hover:bg-slate-200 transition"
+                            title={`Increase by ${INCREMENT_STEP} units`} // Added
                           >
                             <Plus size={14} />
                           </button>
@@ -232,8 +236,8 @@ export default function CartDrawer() {
                 <span className="text-blue-800 font-medium">Bulk Order Summary</span>
               </div>
               <div className="text-right">
-                <div className="text-xs text-blue-600">Per batch: {BULK_QUANTITY} units</div>
-                <div className="text-xs text-gray-600">Total batches: {totals.totalBulkUnits}</div>
+                <div className="text-xs text-blue-600">Min order: {INITIAL_BULK_QUANTITY} units</div>
+                <div className="text-xs text-gray-600">+/- {INCREMENT_STEP} units per click</div>
               </div>
             </div>
           </div>

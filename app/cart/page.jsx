@@ -216,7 +216,7 @@ export default function CartPage() {
                   >
                     <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                       {/* IMAGE */}
-                      <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-slate-50 rounded-lg sm:rounded-xl border border-slate-100 overflow-hidden shrink-0 mx-auto sm:mx-0">
+                      <div className="relative w-40 h-40 sm:w-24 sm:h-30 md:w-28 md:h-28 bg-slate-50 rounded-lg sm:rounded-xl border border-slate-100 overflow-hidden shrink-0 mx-auto sm:mx-0">
                         <Image
                           src={item.image || "/placeholder.jpg"}
                           alt={item.name}
