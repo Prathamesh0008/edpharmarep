@@ -10,7 +10,12 @@ const products = {
   "form": "Tabletë",
   "packSize": "1 x 4 Tableta",
   "casId": "139755-83-2",
-  "image": "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
 
   "description":
     "Kamagra 50 mg që përmban përbërësin aktiv, Citrati i Sildenafilit, përdoret për trajtimin e mosfunksionimit erektil dhe hipertensionit pulmonar.",
@@ -97,110 +102,18 @@ const products = {
   "form": "Tabletë",
   "packSize": "1 x 4 Tableta",
   "casId": "139755-83-2",
-  "image": "/products/kamagra-gold 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   
 
   "description":
     "Tableta Kamagra përmban përbërësin aktiv citratin e sildenafilit i cili i përket familjes së Vasodilatorëve PDE-5.",
 
     slug: "kamagra-gold-100-mg",
-
-  "overview": [
-    "Kamagra Gold 100 mg përmban Citrati të Sildenafilit, një inhibitor PDE5 i përdorur për të mbështetur funksionin erektil.",
-    "Është formuluar për të rritur që mund të kenë nevojë për një opsion më të fortë krahasuar me dozat më të ulëta.",
-    "Produkti synohet për individë që përjetojnë sfida erekstile gjatë intimitetit.",
-    "Kamagra Gold 100 mg mund të ndihmojë në mbajtjen e fortësisë gjatë stimulimit seksual.",
-    "Përbërësi aktiv vepron kur ndodh stimulimi dhe nuk krijon efekte automatike.",
-    "Shumë individë e konsiderojnë këtë forcë kur dozat më të ulëta nuk ofrojnë përgjigje të mjaftueshme.",
-    "Mund të mbështesë rritjen e qarkullimit të gjakut në zona specifike për të përmirësuar fortësinë erekstile.",
-    "Ky produkt bën pjesë në kategori terapeutike të rregulluara me recetë në shumë rajone.",
-    "Mund të fillojë të veprojë brenda 30 deri në 60 minutave, në varësi të metabolizmit individual.",
-    "Rezultatet mund të zgjasin disa orë, në varësi të përgjigjes dhe tolerancës së trupit.",
-    "Kamagra Gold 100 mg mund të mbështesë përvojë më të mirë gjatë intimitetit kur përdoret siç duhet."
-  ],
-
-  "sideEffects": [
-    "Disa përdorues mund të përjetojnë dhimbje koke të përkohshme pas përdorimit.",
-    "Skuqja ose ngrohja e fytyrës mund të ndodhë si reagim i shkurtër.",
-    "Marramendja e lehtë mund të ndodhë kur qëndrohet shpejt në këmbë.",
-    "Shqetësimi i tretjes ose dispepsia mund të shfaqet te disa individë.",
-    "Hunda e bllokuar ose e rrjedhshme mund të ndodhë përkohësisht.",
-    "Disa përdorues mund të vërejnë ndjeshmëri të përkohshme vizuale ose ndriçim të lehtë.",
-    "Dhimbje muskujsh ose parehati e lehtë në shpinë mund të ndodhë ndonjëherë.",
-    "Të përzierat mund të përjetohet në varësi të ndjeshmërisë individuale.",
-    "Pamja e turbullt e përkohshme mund të ndodhë te një grup i vogël individësh.",
-    "Një ndjenjë ngrohjeje në pjesën e sipërme të trupit mund të ndodhë shkurt.",
-    "Kontaktoni një profesionist mjekësor nëse efektet anësore ndërhyjnë në aktivitetin normal."
-  ],
-
-  "administration": [
-    "Përdorni këtë produkt vetëm nën udhëzimin e një profesionisti të licencuar të kujdesit shëndetësor.",
-    "Mos ndryshoni sasinë ose kohën pa miratim mjekësor.",
-    "Gëlltitni tabletën të plotë me ujë, përveç nëse udhëzohet ndryshe.",
-    "Shmangni marrjen e produktit më shpesh se sa rekomandohet mjekësish.",
-    "Konsultohuni me një mjek para se ta filloni nëse keni probleme shëndetësore të vazhdueshme.",
-    "Përdorni produktin vetëm kur jeni të sigurt se është i sigurt për gjendjen tuaj.",
-    "Mos e kombinoni tabletën me substanca që mund të ndërhyjnë në efektet e saj.",
-    "Kontrolloni përputhshmërinë me të gjitha medikamentet e tjera që mund të merrni.",
-    "Nëse nuk jeni të sigurt, konfirmoni gjithmonë përshtatshmërinë me një ofrues të kujdesit shëndetësor.",
-    "Ndërpriteni përdorimin dhe konsultohuni me një profesionist në shenjën e parë të parehatisë."
-  ],
-
-  "warnings": [
-    "Mos e përdorni këtë produkt nëse jeni alergjik ndaj ndonjë përbërësi të tij.",
-    "Shmangni përdorimin nëse merrni nitrate ose nitroglicerinë.",
-    "Konsultohuni me një mjek para përdorimit nëse keni shqetësime të lidhura me zemrën.",
-    "Shmangni alkoolin pasi mund të ulë sigurinë dhe tolerancën.",
-    "Nuk rekomandohet për individë nën 18 vjeç.",
-    "Mos e teproni me më shumë se një dozë brenda 24 orëve.",
-    "Ndërpriteni përdorimin nëse përjetoni ndryshime të pazakonta në shikim ose dëgjim.",
-    "Nuk është i përshtatshëm për gra ose fëmijë në asnjë rrethanë.",
-    "Shmangni përdorimin nëse keni tension të lartë ose të ulët të papjekur të gjakut.",
-    "Mos e përzieni me droga rekreative të çdo lloji."
-  ],
-
-  "how_it_works": [
-    "Kamagra Gold 100 mg përmban Citrati të Sildenafilit, një përbërës i studiuar mirë që mbështet mekanizmat e përmirësuara të qarkullimit të gjakut në zona të synuara të trupit.",
-    "Vepron duke ndërvepruar me rrugën e enzimës PDE-5, e cila natyrisht rregullon se si enët e gjakut tkurren dhe relaksohen.",
-    "Kur aktiviteti i PDE-5 moderatohet, muskujt e lëmuar në disa enë gjaku mund të relaksohen më efikas.",
-    "Kjo relaksim mbështet qarkullim më të shëndetshëm dhe lejon trupin të reagojë më efektivisht gjatë momenteve që kërkojnë performancë vaskulare të shtuar.",
-    "Sildenafil nuk është stimulues; roli i tij është të mbështesë proceset fiziologjike natyrale që janë tashmë aktive.",
-    "Përbërësi ndihmon në mbajtjen e zgjerimit të përkohshëm të enëve të gjakut, duke përmirësuar rrjedhjen e oksigjenit dhe lëndëve ushqyese.",
-    "Efektiviteti i tij mbështetet në përgjigjet biologjike normale dhe sinjalet natyrale të gjeneruara nga trupi.",
-    "Kamagra Gold 100 mg është studiuar për kushte të lidhura me kufizimin e qarkullimit të gjakut ku funksioni vaskular i përmirësuar është përfitues.",
-    "Pasi të absorbohet në qarkullimin e gjakut, përbërësi aktiv fillon veprimin duke synuar receptorët specifike të enzimave.",
-    "Në përgjithësi, mekanizmi i tij përqendrohet në mbështetjen e relaksimit të muskujve të lëmuar dhe modeleve të qarkullimit të shëndetshëm."
-  ],
-
-  "tips": [
-    "Mbajini tabletat në një vend të freskët e të thatë për të mbrojtur cilësinë e produktit.",
-    "Kontrolloni gjithmonë ambalazhimin e produktit dhe sigurohuni se është i mbyllur dhe i papërdorur.",
-    "Shqyeni të gjithë informacionin e ofruar nga profesionistët e kujdesit shëndetësor para përdorimit.",
-    "Shmangni përzierjen me substanca që mund të ndikojnë në tensionin e gjakut ose qarkullimin pa aprovimin e një eksperti mjekësor.",
-    "Ji i kujdesshëm ndaj çdo alergjie personale ndaj Sildenafilit ose përbërësve të lidhur.",
-    "Nëse keni një gjendje mjekësore, konsultohuni me një profesionist të licencuar për udhëzime të personalizuara.",
-    "Mos e kombinoni me suplemente të panjohura ose produkte të paverifikuara.",
-    "Monitoroni përgjigjen e trupit tuaj dhe flisni me një ofrues të kujdesit shëndetësor nëse diçka duket e pazakontë.",
-    "Individët në medikamente për zemrën ose tensionin e gjakut duhet të jenë nën mbikëqyrje mjekësore.",
-    "Mos e teproni kurrë me atë që një profesionist i kualifikuar e konsideron të përshtatshme për gjendjen tuaj shëndetësore.",
-    "Ruani hidratimin e mirë dhe zakonet e mirëqenies së përgjithshme për të mbështetur qarkullimin natyrshëm."
-  ]
-},
-
-"kamagra-gold-100-mg-sq": {
-  "id": "2",
-  "name": "Kamagra Gold 100 mg",
-  "category": "Kamagra Gold",
-  "brand": "ED Ajanta Pharma",
-  "dosage": "100 mg",
-  "composition": "Citrati i Sildenafilit 100 mg",
-  "form": "Tabletë",
-  "packSize": "1 x 4 Tableta",
-  "casId": "139755-83-2",
-  "image": "/products/kamagra-gold 100mg 01.jpg",
-
-  "description":
-    "Tableta Kamagra përmban përbërësin aktiv citratin e sildenafilit i cili i përket familjes së Vasodilatorëve PDE-5.",
 
   "overview": [
     "Kamagra Gold 100 mg përmban Citrati të Sildenafilit, një inhibitor PDE5 i përdorur për të mbështetur funksionin erektil.",
@@ -294,7 +207,13 @@ const products = {
   "form": "Xhel Oral",
   "packSize": "7 x 5 gm Sashe",
   "casId": "139755-83-2",
-  "image": "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
+  slug: "kamagra-100mg-oral-jelly-vol1",
 
   "description":
     "Kamagra 100 mg Oral Jelly përmban citratin e sildenafilit në formë xheli dhe synohet për përdorim oral. Është një ilaç lehtësisht i tretshëm.",
@@ -396,7 +315,13 @@ const products = {
     "sildenafil": "139755-83-2",
     "dapoxetine": "119356-77-3"
   },
-  "image": "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
+   slug: "super-kamagra-oral-jelly",
 
   "description":
     "Super Kamagra Oral Jelly i përket një grupi ilaçesh të quajtura inhibitorë PDE5. Vepron duke relaksuar enët e gjakut në penis. Kjo lejon rrjedhjen e gjakut në penis dhe prodhon një ereksion kur jeni seksualisht të stimuluar.",
@@ -501,8 +426,13 @@ const products = {
   "pack_size": "1 x 4 Tableta",
   "cas_id": "139755-83-2",
   "description": "Kamagra 100 përdoret për të trajtuar mosfunksionimin erektil duke ndihmuar burrat të arrijnë dhe mbajnë një ereksion, kur janë seksualisht të stimuluar.",
-  "slug": "kamagra-100mg-chewable-orange",
-  "image": "/products/kamagra-chewable-tablets 02.jpg",
+  slug: "kamagra-100mg-chewable-orange",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   "overview": [
     "Kamagra 100 mg Tablete e Të Ngrënshme përmban Citrati i Sildenafilit në formë të ngrënshme me shije portokalli.",
@@ -684,8 +614,13 @@ const products = {
   "pack_size": "1 x 7 Tableta Efundueshme",
   "cas_id": "139755-83-2",
   "description": "Kjo, në të kundërt, lejon rrjedhje më të fortë të gjakut për të mundësuar ndodhjen e një ereksioni.",
-  "slug": "kamagra-100mg-effervescent",
-  "image": "/products/kamagra-Effervescent.png",
+  slug: "kamagra-100mg-effervescent",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   "overview": [
     "Kamagra 100 mg Efundueshme përmban Citrati i Sildenafilit në formë tablete të tretshme.",
@@ -867,8 +802,13 @@ const products = {
   "pack_size": "1 x 4 Tableta",
   "cas_id": "139755-83-2",
   "description": "Tableta Kamagra Export 100 mg, një terapi orale për mosfunksionimin erektil është kripëra citrat e sildenafilit, një inhibitor selektiv i monofosfatit guanozin ciklik.",
-  "slug": "kamagra-expo-100mg",
-  "image": "/products/kamagra-expo 100mg 01.jpg",
+  slug: "kamagra-expo-100mg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   "overview": [
     "Kamagra Expo 100 mg përmban Citrati i Sildenafilit, një formulim i njohur i inhibitorit PDE5.",
@@ -1050,8 +990,12 @@ const products = {
   "pack_size": "7 x 5 gm Sashe",
   "cas_id": "171596-29-5",
   "description": "Këto ilaçe veprojnë duke zgjeruar enët e gjakut në trup; veçanërisht rreth zonës gjenitale.",
-  "slug": "apcalis-sx-20mg-oral-jelly",
-  "image": "/products/Apcalis sx Jelly 01.jpg",
+  slug: "apcalis-sx-20mg-oral-jelly",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   "overview": [
     "Apcalis-SX 20 mg Oral Jelly përmban Tadalafil, një inhibitor i njohur i gjatë PDE5.",
@@ -1233,8 +1177,13 @@ const products = {
   pack_size: "1 x 4 Tableta",
   cas_id: "171596-29-5",
   description: "Këto barna funksionojnë duke zgjeruar enët e gjakut në trup, veçanërisht në zonën gjenitale.",
-  slug: "tadalis-sx-20mg",
+   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg përmban Tadalafil, një inhibitor PDE5 me veprim të gjatë që përdoret për të mbështetur funksionin erektil.",
@@ -1412,8 +1361,13 @@ const products = {
   pack_size: "7 x 5 gm Sashetat",
   cas_id: "139755-83-2",
   description: "Lovegra Oral Jelly (Sildenafil Citrate për Femra 100 mg Jelly) është një ilaç me veprim të shpejtë dhe efektiv i formuluar posaçërisht për trajtimin e çrregullimit të eksitimit seksual femëror (FSAD) dhe disfunkcionit seksual femëror (FSD).",
-  slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+   slug: "lovegra-100mg-oral-jelly",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg Oral Jelly përmban Sildenafil Citrate në format xhel të thithjes së shpejtë.",
@@ -1596,8 +1550,13 @@ const products = {
   pack_size: "1 x 4 Tableta",
   cas_id: "139755-83-2",
   description: "Kohët e fundit, diskutimi i hapur rreth kushteve seksuale tek gratë është bërë më i zakonshëm.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg përmban Sildenafil Citrate të formuluar për mbështetjen e reagimit seksual tek gratë.",
@@ -1779,7 +1738,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "Rrit rrjedhjen e gjakut drejt penisit për të ndihmuar burrat të arrijnë një ereksion.",
   slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg përmban Vardenafil, një inhibitor PDE5 i përdorur për mbështetjen e funksionit erektil.",
@@ -10956,8 +10920,13 @@ const products = {
   "pack_size": "Një kuti përmban 10 x 10 tableta.",
   "cas_id": "171596-29-5",
   "description": "Tabletat Tadarise 20 mg (Cialis gjenerik) përdoren për trajtimin e mosfunksionimit erektil (impotencës) te meshkujt.",
-  "slug": "tadarise-pro-20",
-  "image": "/products/Tadarise-Pro-20.png",
+  slug: "tadarise-pro-20",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
 
   "overview": [
     "Tadarise Pro-20 përmban Tadalafil 20 mg dhe është projektuar për të mbështetur meshkujt që përjetojnë mosfunksionim erektil.",
@@ -11147,8 +11116,13 @@ const products = {
   "pack_size": "Një kuti përmban 10 x 10 tableta.",
   "cas_id": "171596-29-5",
   "description": "Tabletat Tadarise 20 mg (Cialis gjenerik) përdoren për trajtimin e mosfunksionimit erektil (impotencës) te meshkujt.",
-  "slug": "tadarise-20",
-  "image": "/products/Tadarise-20.png",
+  slug: "tadarise-20",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
 
   "overview": [
     "Tadarise-20 përmban Tadalafil 20 mg dhe përdoret për të mbështetur meshkujt që përjetojnë mosfunksionim erektil.",
@@ -18611,8 +18585,13 @@ tips: [
     "pack_size": "10 x 10 Tableta",
     "cas_id": "98319-26-7",
     "description": "Sunpecia përdoret për trajtimin e hiperplazisë së mirëfilltë të prostatës (BPH) dhe përmirësimin e rrjedhjes së urinës tek meshkujt.",
-    "slug": "sunpecia-1-5",
-    "image": "/products/kamagra_gold 50mg 02.jpg",
+     slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
     "overview": [
       "Sunpecia përmban Finasteride, i disponueshëm në forca 1mg dhe 5mg, i përdorur për të trajtuar hiperplazinë e mirëfilltë të prostatës (BPH) dhe humbjen e flokëve me model mashkullor.",
       "Vepron duke frenuar enzimën 5-sqfa-reduktazë, e cila shndërron testosteronin në dihidrotestosteron (DHT).",
@@ -18777,8 +18756,13 @@ tips: [
     "pack_size": "3 x 10 Tableta",
     "cas_id": "53179-13-8",
     "description": "Tableta Pirfisun 200 trajton fibrozin idiopatike pulmonare dhe redukton brazdat dhe ënjtjen e mushkërive.",
-    "slug": "pirfisun-200",
-    "image": "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     "overview": [
       "Tableta Pirfisun përmban Pirfenidon 200mg, një ilaç me recetë i përdorur për të trajtuar fibrozin idiopatike pulmonare (IPF).",
       "Ajo vepron duke reduktuar inflamacionin dhe duke ngadalësuar përparimin e brazdave të mushkërive (fibroza).",

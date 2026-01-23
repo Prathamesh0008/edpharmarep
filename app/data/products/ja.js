@@ -10,7 +10,12 @@ const products = {
   form: "錠剤",
   packSize: "1 × 4 錠",
   casId: "139755-83-2",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
   
 
 
@@ -100,7 +105,12 @@ const products = {
   form: "錠剤",
   packSize: "1 × 4 錠",
   casId: "139755-83-2",
-  image: "/products/kamagra-gold 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   slug: "kamagra-gold-100-mg",
 
   description:
@@ -197,7 +207,12 @@ const products = {
   form: "オーラルジェリー",
   packSize: "7 × 5g サシェ",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+ image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
 
   description:
@@ -300,7 +315,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
   slug: "super-kamagra-oral-jelly",
 
   description:
@@ -403,8 +423,13 @@ const products = {
   form: "咀嚼錠",
   packSize: "1 x 4 錠",
   casId: "139755-83-2",
-  image: "/products/Kamagra-Polo 02.jpg",
-  slug: "kamagra-100mg-polo-fruit",
+   image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
+ slug: "kamagra-polo",
 
   description:
     "Kamagra 100は勃起不全治療に使用され、性的刺激時に勃起を達成・維持するのを助けます。",
@@ -510,8 +535,13 @@ const products = {
   pack_size: "1 x 4 Tablets",
   cas_id: "139755-83-2",
   description: "カマグラ100は、男性が性的に興奮したときに勃起を達成し維持するのを助けることにより、勃起不全を治療するために使用されます。",
-  slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+ slug: "kamagra-100mg-chewable-strawberry",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "カマグラ100mgチュアブル錠は、噛みやすい形式でクエン酸シルデナフィルを含んでいます。",
@@ -653,7 +683,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "カマグラ100は、性的刺激を受けた際に男性が勃起を達成し維持するのを助けることで、勃起不全を治療するために使用されます。",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "カマグラ 100mg チュアブル錠は、オレンジ味の噛み砕ける形状のクエン酸シルデナフィルを含有しています。",
@@ -834,8 +869,13 @@ const products = {
   pack_size: "1 x 7 発泡錠",
   cas_id: "139755-83-2",
   description: "これにより、より強力な血流が可能になり、勃起が起こりやすくなります。",
-  slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+ slug: "kamagra-100mg-effervescent",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "カマグラ100mg発泡錠は、溶解性錠剤形態のクエン酸シルデナフィルを含んでいます。",
@@ -1019,8 +1059,13 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "これらの薬は、特に性器周辺の体内の血管を拡張することによって作用します。",
-  slug: "super-kamagra-100-60",
-  image: "/products/Super_Kamagra_03.jpg",
+  slug: "super-kamagra",
+   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "スーパーカマグラは、クエン酸シルデナフィルとダポキセチンを1つの二重作用錠剤に組み合わせています。",
@@ -1202,7 +1247,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "カマグラエクスポート100mg錠は、勃起不全の経口療法であり、環状グアノシン一リン酸の選択的阻害剤であるシルデナフィルのクエン酸塩です。",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+   image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "カマグラエキスポ100mgは、よく知られているPDE5阻害剤製剤であるクエン酸シルデナフィルを含んでいます。",
@@ -1384,7 +1434,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "これらの薬は、特に性器周辺の体内の血管を拡張することによって作用します。",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "アプカリスSX 20mg オーラルゼリーは、よく知られている長時間作用型PDE5阻害剤であるタダラフィルを含有しています。",
@@ -1567,6 +1621,11 @@ const products = {
   description: "これらの薬は、特に性器周辺の体内の血管を拡張することによって作用します。",
   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "タダリス-SX 20 mgは、勃起機能をサポートするために使用される長時間作用型PDE5阻害剤であるタダラフィルを含んでいます。",
@@ -1748,7 +1807,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "ラブグラ オーラルゼリー（女性用クエン酸シルデナフィル 100 mg ゼリー）は、女性の性的興奮障害（FSAD）および女性の性機能障害（FSD）の治療のために特別に処方された、即効性のある効果的な薬です。",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "ラブグラ 100 mg オーラルゼリーは、吸収の早いゼリー形式のクエン酸シルデナフィルを含んでいます。",
@@ -1929,8 +1993,13 @@ const products = {
   pack_size: "1 x 4 錠",
   cas_id: "139755-83-2",
   description: "近年、女性の性的状態に関するオープンな議論がより一般的になっています。",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+   slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "ラブグラ 100 mgは、女性の性的反応をサポートするために処方されたクエン酸シルデナフィルを含んでいます。",
@@ -2110,8 +2179,13 @@ const products = {
   pack_size: "1 x 10 錠",
   cas_id: "224785-90-4",
   description: "男性が勃起するのを助けるために陰茎への血流を増加させます。",
-  slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+   slug: "valif-20mg-tablet",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "バリフ 20 mgは、勃起機能をサポートするために使用されるPDE5阻害剤であるバルデナフィルを含有しています。",
@@ -12654,7 +12728,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise錠20mgジェネリックシアリスは、男性の勃起不全（インポテンツ）の治療に使用されます。",
     slug: "tadarise-20",
-    image: "/products/Tadarise-20.png",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-20はタダラフィル20mgを含み、勃起不全を経験している男性をサポートするために使用されます。",
@@ -20931,8 +21010,13 @@ administration: [
     pack_size: "10 x 10 錠",
     cas_id: "98319-26-7",
     description: "Sunpecia は、良性前立腺肥大症（BPH）の治療と男性の尿流改善に使用されます。",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
     
   overview: [
     "Sunpecia には、良性前立腺肥大症（BPH）と男性型脱毛症の治療に使用される 1mg および 5mg の強度のフィナステリドが含まれています。",
@@ -21101,8 +21185,13 @@ administration: [
     pack_size: "3 x 10 錠",
     cas_id: "53179-13-8",
     description: "Pirfisun 200錠は特発性肺線維症を治療し、肺の瘢痕化と腫れを軽減します。",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     
   overview: [
     "Pirfisun Tabletには、特発性肺線維症（IPF）の治療に使用される処方薬であるピルフェニドン200mgが含まれています。",

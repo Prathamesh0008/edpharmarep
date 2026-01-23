@@ -1,5 +1,6 @@
 export const products = [
- {
+ 
+{
     id: "1",
     name: "Kamagra Gold 50 mg", 
     category: "Kamagra Gold",
@@ -12,7 +13,7 @@ export const products = [
     cas_id: "139755-83-2",
     description: "Kamagra 50 mg containing the active ingredient, Sildenafil Citrate is used in the treatment of Erectile Dysfunction and Pulmonary Hypertension.",
     slug: "kamagra-gold-50-mg",
-    image: "/products/kamagra_gold 50mg 02.jpg", // main image C:\Users\AMD\Desktop\Ed_Pharma\public\products\kamagra_gold 50mg 02.jpg
+    image: "/products/kamagra50_1.png", // main image C:\Users\AMD\Desktop\Ed_Pharma\public\products\kamagra_gold 50mg 02.jpg
   // images: [
   //   "/products/kamagra-gold 50mg 01.jpg",
   //   "products/kamagra_gold 50mg 02.jpg"],

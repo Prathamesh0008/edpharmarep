@@ -9,7 +9,12 @@ const products = {
   form: "أقراص",
   packSize: "1 × 4 أقراص",
   casId: "139755-83-2",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+ image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
 
   description:
     "كاماغرا 50 ملغ يحتوي على المادة الفعالة سيترات السيلدينافيل، ويُستخدم في علاج ضعف الانتصاب وارتفاع ضغط الدم الرئوي.",
@@ -97,8 +102,13 @@ const products = {
   form: "أقراص",
   packSize: "1 × 4 أقراص",  
   casId: "139755-83-2",
-  image: "/products/kamagra-gold 100mg 01.jpg",
   slug: "kamagra-gold-100-mg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ], 
 
   description:
     "يحتوي قرص كاماغرا على المادة الفعالة سيلدينافيل سترات، والتي تنتمي إلى عائلة موسعات الأوعية الدموية من نوع PDE-5.",
@@ -194,7 +204,13 @@ const products = {
   form: "جيلي فموي",
   packSize: "7 × 5 غرام أكياس",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  slug: "kamagra-100mg-oral-jelly-vol1",
+   image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   description:
     "يحتوي جيلي كاماغرا 100 ملغ الفموي على سترات السيلدينافيل في شكل هلامي ومخصص للاستخدام عن طريق الفم. وهو دواء سهل الذوبان.",
@@ -295,7 +311,13 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  slug: "super-kamagra-oral-jelly",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "ينتمي سوبر كاماغرا جل فموي إلى مجموعة من الأدوية تُعرف بمثبطات PDE5. يعمل عن طريق إرخاء الأوعية الدموية في القضيب، مما يسمح بتدفق الدم وإحداث الانتصاب عند وجود إثارة جنسية.",
@@ -398,8 +420,13 @@ const products = {
   pack_size: "1 x 4 Tablets",
   cas_id: "139755-83-2",
   description: "يستخدم كاماجرا 100 لعلاج ضعف الانتصاب من خلال مساعدة الرجال على تحقيق والحفاظ على الانتصاب عند الإثارة الجنسية.",
-  slug: "kamagra-100mg-polo-fruit",
-  image: "/products/Kamagra-Polo 02.jpg",
+  slug: "kamagra-polo",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "كاماجرا 100 مجم بولو عبارة عن تركيبة قابلة للمضغ تحتوي على سترات السيلدينافيل.",
@@ -503,7 +530,7 @@ const products = {
   cas_id: "139755-83-2",
   description: "يستخدم كاماجرا 100 لعلاج ضعف الانتصاب من خلال مساعدة الرجال على تحقيق والحفاظ على الانتصاب عند الإثارة الجنسية.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
 
   overview: [
     "يحتوي قرص كاماجرا 100 مجم القابل للمضغ على سترات السيلدينافيل بتنسيق سهل المضغ.",
@@ -645,7 +672,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "يستخدم كاماجرا 100 لعلاج ضعف الانتصاب من خلال مساعدة الرجال على تحقيق الانتصاب والحفاظ عليه عند التحفيز الجنسي.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+   image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "يحتوي قرص كاماجرا 100 مجم للمضغ على سيلدينافيل سترات في شكل قابل للمضغ بنكهة البرتقال.",
@@ -827,7 +859,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "هذا بدوره يسمح بتدفق دم أقوى لتمكين حدوث الانتصاب.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "يحتوي كاماغرا 100 مجم فوار على سترات السيلدينافيل في شكل قرص قابل للذوبان.",
@@ -997,7 +1034,7 @@ const products = {
     "ادعم صحة الأوعية الدموية على المدى الطويل من خلال خيارات نمط الحياة مثل النوم والتمارين الرياضية وإدارة التوتر."
   ]
 },
-"super-kamagra-100-60-ar": {
+"super-kamagra-ar": {
   id: "9",
   name: "سوبر كاماجرا",
   category: "سوبر كاماجرا",
@@ -1011,8 +1048,13 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "تعمل هذه الأدوية عن طريق توسيع الأوعية الدموية في الجسم، خاصة حول المنطقة التناسلية.",
-  slug: "super-kamagra-100-60",
+  slug: "super-kamagra",
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "يجمع سوبر كاماجرا بين سيلدينافيل سترات ودابوكستين في قرص واحد ثنائي المفعول.",
@@ -1562,7 +1604,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "تعمل هذه الأدوية عن طريق توسيع الأوعية الدموية في الجسم، خاصة حول المنطقة التناسلية.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  
+  ],
 
   overview: [
     "يحتوي أبكاليس-إس إكس 20 مجم جيلي فموي على تادالافيل، وهو مثبط PDE5 طويل المفعول معروف.",
@@ -1744,7 +1791,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "تعمل هذه الأدوية عن طريق توسيع الأوعية الدموية في الجسم وخاصة حول المنطقة التناسلية.",
   slug: "tadalis-sx-20mg",
-  image: "/products/tadalis-sx 01.jpg",
+   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "يحتوي تاداليس-إس إكس 20 مجم على تادالافيل، وهو مثبط PDE5 طويل المفعول يستخدم لدعم وظيفة الانتصاب.",
@@ -1926,7 +1978,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "لوفيغرا جيلي فموي (جيلي سيترات السيلدينافيل النسائي 100 مجم) هو دواء سريع المفعول وفعال تم تركيبه خصيصًا لعلاج اضطراب الاستثارة الجنسية لدى الإناث (FSAD) والخلل الوظيفي الجنسي لدى الإناث (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "يحتوي لوفيغرا 100 مجم جيلي فموي على سيترات السيلدينافيل في شكل جيلي سريع الامتصاص.",
@@ -2107,8 +2164,13 @@ const products = {
   pack_size: "1 × 4 أقراص",
   cas_id: "139755-83-2",
   description: "في الآونة الأخيرة، أصبح النقاش المفتوح حول الحالات الجنسية لدى النساء أكثر شيوعًا.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+ image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "يحتوي لوفيجرا 100 مجم على سترات السيلدينافيل المصممة لدعم الاستجابة الجنسية للإناث.",
@@ -2289,7 +2351,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "يزيد من تدفق الدم إلى القضيب لمساعدة الرجال في الحصول على انتصاب.",
   slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+   image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "يحتوي فاليف 20 مجم على فاردنافيل، وهو مثبط PDE5 يستخدم لدعم وظيفة الانتصاب.",
@@ -2459,9 +2526,9 @@ const products = {
     "خزن المنتج في عبوته الأصلية لحمايته من الرطوبة."
   ]
 },
-"فاليف-20-ملغ-جل-فموي-عربي": {
+"valif-20mg-oral-jelly": {
   id: "16",
-  name: "Valif 20 mg Oral Jelly",
+  name: "فاليف-20-ملغ-جل-فموي-عربي",
   category: "فاليف جيلي فموي",
   brand: "ED Ajanta Pharma",
   dosage: "20 مجم",
@@ -12068,7 +12135,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "تستخدم أقراص تادارايز 20 ملغ (سياليس جنيس) لعلاج ضعف الانتصاب والعجز الجنسي لدى الرجال.",
     slug: "tadarise-pro-20",
-    image: "/products/Tadarise-Pro-20.png",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
    
   overview: [
     "يحتوي تادارايز برو-20 على تادالافيل 20 ملغ وهو مصمم لدعم الرجال الذين يعانون من ضعف الانتصاب.",
@@ -12257,7 +12329,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "تستخدم أقراص Tadarise 20mg جينيريك سياليس لعلاج ضعف الانتصاب والعجز الجنسي لدى الرجال.",
     slug: "tadarise-20",
-    image: "/products/Tadarise-20.png",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
    
   overview: [
     "يحتوي Tadarise-20 على تادالافيل 20 مجم ويستخدم لدعم الرجال الذين يعانون من ضعف الانتصاب.",
@@ -20533,8 +20610,13 @@ administration: [
     pack_size: "10 × 10 أقراص",
     cas_id: "98319-26-7",
     description: "يستخدم صنبيشيا لعلاج تضخم البروستاتا الحميد (BPH) وتحسين تدفق البول لدى الرجال.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+     image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
     
   overview: [
     "يحتوي صنبيشيا على فيناسترايد، المتوفر بقوة 1 ملغ و 5 ملغ، ويستخدم لعلاج تضخم البروستاتا الحميد (BPH) وفقدان الشعر الذكري.",
@@ -20703,8 +20785,13 @@ administration: [
     pack_size: "3 × 10 أقراص",
     cas_id: "53179-13-8",
     description: "يعالج قرص Pirfisun 200 التليف الرئوي مجهول السبب ويقلل من ندبات الرئة والتورم.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     
   overview: [
     "يحتوي قرص Pirfisun على بيرفينيدون 200 مجم، وهو دواء موصوف طبيًا يستخدم لعلاج التليف الرئوي مجهول السبب (IPF).",

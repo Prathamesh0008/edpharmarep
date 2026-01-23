@@ -9,7 +9,12 @@ const products = {
   form: "Tableta",
   packSize: "1 × 4 tabletas",
   casId: "139755-83-2",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
   slug: "kamagra-gold-50-mg",
 
 
@@ -97,7 +102,12 @@ const products = {
   form: "Tableta",
   packSize: "1 × 4 tabletas",
   casId: "139755-83-2",
-  image: "/products/kamagra-gold 100mg 01.jpg",
+   image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   slug: "kamagra-gold-100-mg",
 
   description:
@@ -194,7 +204,12 @@ const products = {
   form: "Gel Oral",
   packSize: "7 x 5 g sobres",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+ image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   description:
     "Kamagra 100 mg Gel Oral contiene citrato de sildenafil en forma de gel y está destinado para uso oral. Es un medicamento de fácil disolución.",
@@ -295,7 +310,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "Super Kamagra Oral Jelly pertenece a un grupo de medicamentos llamados inhibidores de la PDE5. Actúa relajando los vasos sanguíneos del pene, lo que permite un mayor flujo de sangre y favorece la erección cuando existe estimulación sexual.",
@@ -397,7 +417,12 @@ const products = {
   form: "Comprimido masticable",
   packSize: "1 x 4 comprimidos",
   casId: "139755-83-2",
-  image: "/products/Kamagra-Polo 02.jpg",
+   image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   description:
     "Kamagra 100 se utiliza para tratar la disfunción eréctil ayudando a los hombres a conseguir y mantener una erección cuando existe estimulación sexual.",
@@ -504,7 +529,13 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 se utiliza para tratar la disfunción eréctil ayudando a los hombres a lograr y mantener una erección cuando están sexualmente excitados.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+   slug: "kamagra-100mg-chewable-strawberry",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "La tableta masticable Kamagra 100 mg contiene Citrato de Sildenafil en un formato fácil de masticar.",
@@ -646,7 +677,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 se utiliza para tratar la disfunción eréctil ayudando a los hombres a lograr y mantener una erección durante la estimulación sexual.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Tableta Masticable contiene citrato de sildenafil en una forma masticable con sabor a naranja.",
@@ -828,7 +864,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Esto a su vez permite un flujo sanguíneo más fuerte para permitir que se produzca una erección.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Efervescente contiene citrato de sildenafil en forma de tableta soluble.",
@@ -998,7 +1039,7 @@ const products = {
     "Apoye la salud vascular a largo plazo a través de elecciones de estilo de vida como sueño, ejercicio y manejo del estrés."
   ]
 },
-"super-kamagra-100-60-es": {
+"super-kamagra-es": {
   id: "9",
   name: "Super Kamagra",
   category: "Super Kamagra",
@@ -1012,8 +1053,13 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "Estos medicamentos funcionan dilatando los vasos sanguíneos del cuerpo, particularmente alrededor del área genital.",
-  slug: "super-kamagra-100-60",
+  slug: "super-kamagra",
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra combina Citrato de Sildenafil y Dapoxetina en una tableta de doble acción.",
@@ -1194,8 +1240,13 @@ const products = {
   pack_size: "1 x 4 Tabletas",
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg Tableta, una terapia oral para la disfunción eréctil, es la sal de citrato de sildenafil, un inhibidor selectivo de la guanosina monofosfato cíclica.",
-  slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+   slug: "kamagra-expo-100mg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "Kamagra Expo 100 mg contiene citrato de sildenafil, una formulación conocida de inhibidor de PDE5.",
@@ -1377,7 +1428,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "Estos medicamentos funcionan dilatando los vasos sanguíneos del cuerpo, particularmente alrededor del área genital.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "Apcalis-SX 20 mg Jalea Oral contiene Tadalafilo, un inhibidor de PDE5 de acción prolongada bien conocido.",
@@ -1560,6 +1615,11 @@ const products = {
   description: "Estos medicamentos funcionan dilatando los vasos sanguíneos en el cuerpo, particularmente alrededor del área genital.",
   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg contiene Tadalafil, un inhibidor de PDE5 de larga duración utilizado para apoyar la función eréctil.",
@@ -1741,7 +1801,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Lovegra Jalea Oral (Jalea de Citrato de Sildenafilo Femenino 100 mg) es un medicamento de acción rápida y eficaz que ha sido especialmente formulado para el tratamiento del trastorno de excitación sexual femenina (FSAD) y la disfunción sexual femenina (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg Jalea Oral contiene Citrato de Sildenafilo en un formato de jalea de rápida absorción.",
@@ -1922,8 +1987,13 @@ const products = {
   pack_size: "1 x 4 Tabletas",
   cas_id: "139755-83-2",
   description: "En tiempos recientes, la discusión abierta sobre condiciones sexuales en mujeres se ha vuelto más común.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg contiene Citrato de Sildenafil formulado para el apoyo de la respuesta sexual femenina.",
@@ -2092,187 +2162,7 @@ const products = {
     "Priorice hábitos de estilo de vida que apoyen una circulación saludable como movimiento, manejo del estrés y sueño adecuado."
   ]
 },
-"lovegra-100mg-es": {
-  id: "14",
-  name: "Lovegra 100 mg",
-  category: "Lovegra",
-  brand: "ED Ajanta Pharma",
-  dosage: "100 mg",
-  composition: "Citrato de Sildenafil 100mg",
-  form: "Tableta",
-  pack_size: "1 x 4 Tabletas",
-  cas_id: "139755-83-2",
-  description: "En tiempos recientes, la discusión abierta sobre condiciones sexuales en mujeres se ha vuelto más común.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
 
-  overview: [
-    "Lovegra 100 mg contiene Citrato de Sildenafil formulado para el apoyo de la respuesta sexual femenina.",
-    "Está destinado a mujeres que experimentan desafíos relacionados con la excitación o la capacidad de respuesta física.",
-    "El formato de tableta ofrece una opción oral estándar con absorción predecible.",
-    "Lovegra funciona apoyando un mejor flujo sanguíneo cuando ocurre estimulación.",
-    "Los efectos pueden ayudar a mejorar la sensibilidad y la preparación física durante la intimidad.",
-    "El producto puede apoyar a mujeres que experimentan una respuesta reducida a la estimulación o interés en la intimidad.",
-    "Se activa solo con estimulación sexual y no crea efectos inmediatos por sí solo.",
-    "La mayoría de las usuarias toman una tableta antes de la actividad íntima planificada.",
-    "Los efectos pueden comenzar dentro de 30 a 60 minutos dependiendo del metabolismo y el tiempo.",
-    "Lovegra proporciona apoyo temporal y no cambia permanentemente la función sexual.",
-    "La tableta está destinada para uso adulto y no se recomienda para menores.",
-    "El alcohol puede interferir con los beneficios esperados y debe limitarse durante el uso.",
-    "Una comida rica en grasas puede retrasar la absorción y ralentizar el tiempo de inicio.",
-    "El producto apoya la excitación física en lugar del deseo emocional o psicológico.",
-    "Lovegra puede ayudar a algunas usuarias a experimentar una confianza mejorada durante la intimidad.",
-    "La respuesta varía según el estado de salud, edad, estilo de vida y sensibilidad individual.",
-    "Puede ser útil para mujeres que prefieren una ventana de preparación más larga antes de la actividad.",
-    "La formulación no aumenta los niveles hormonales; apoya los mecanismos de circulación física.",
-    "La tableta ofrece facilidad de uso para aquellas que prefieren un formato de medicamento tradicional.",
-    "Comúnmente se empaqueta en pequeños blísteres para conveniencia en viajes.",
-    "Las usuarias no deben exceder la dosis recomendada a menos que lo aconseje un profesional de la salud.",
-    "El producto puede apoyar un aumento de la lubricación natural y la capacidad de respuesta cuando se estimula.",
-    "Lovegra está destinado a un uso ocasional según sea necesario, dependiendo de la respuesta personal.",
-    "Puede proporcionar una comodidad mejorada durante la intimidad cuando se usa responsablemente.",
-    "La consulta con un proveedor de atención médica puede ayudar a determinar la idoneidad basada en el historial de salud.",
-    "Los resultados y la duración de los efectos varían entre individuos.",
-    "El almacenamiento adecuado ayuda a mantener la calidad de la tableta y la efectividad del rendimiento.",
-    "Lovegra puede ser utilizado por aquellas que buscan una participación física mejorada durante experiencias íntimas.",
-    "Este producto no está destinado a tratar causas emocionales, hormonales o psicológicas de baja capacidad de respuesta.",
-    "El uso responsable puede ayudar a mejorar la satisfacción general y la comodidad durante la intimidad."
-  ],
-
-  sideEffects: [
-    "Algunas usuarias pueden experimentar dolores de cabeza leves después de tomar la tableta.",
-    "Calor facial temporal o enrojecimiento puede ocurrir durante el período activo.",
-    "Mareos o aturdimiento pueden aparecer, especialmente al ponerse de pie rápidamente.",
-    "Malestar digestivo leve o malestar estomacal puede ocurrir en algunas personas.",
-    "Congestión nasal temporal o secreción nasal puede experimentarse.",
-    "Sensibilidad temporal a la luz brillante puede ocurrir.",
-    "Algunas usuarias pueden experimentar dolores musculares o corporales leves.",
-    "Náuseas pueden ocurrir dependiendo de la sensibilidad individual.",
-    "Visión borrosa o alterada temporal puede aparecer en casos raros.",
-    "Calor o enrojecimiento en la cara o parte superior del cuerpo puede ocurrir brevemente.",
-    "Algunas personas pueden experimentar una mayor conciencia de los latidos del corazón.",
-    "Enrojecimiento o irritación leve de la piel puede ocurrir temporalmente.",
-    "Fatiga o baja energía puede ocurrir después de que los efectos disminuyan.",
-    "Zumbido en los oídos puede ocurrir en raras instancias temporales.",
-    "Alteración del sueño puede ocurrir si se toma tarde en la noche.",
-    "Malestar leve de espalda o tensión muscular puede aparecer.",
-    "Aumento de la sudoración puede ocurrir en algunas personas.",
-    "Hinchazón leve temporal de los ojos puede experimentarse.",
-    "Algunas usuarias pueden notar sensibilidad del estado de ánimo o irritabilidad temporal.",
-    "Una presión temporal o sensación de pesadez en la cabeza puede ocurrir.",
-    "Boca seca o regusto inusual puede notarse brevemente.",
-    "Inquietud menor o dificultad para calmarse puede ocurrir.",
-    "Cambios temporales en el contraste visual o enfoque pueden aparecer.",
-    "El malestar en el pecho debe ser evaluado por un profesional de la salud si se experimenta.",
-    "Tomar la tableta con comida pesada puede intensificar el malestar digestivo.",
-    "Los efectos secundarios pueden aumentar si se combinan con alcohol.",
-    "El malestar persistente o síntomas severos deben ser revisados por un experto médico.",
-    "La mayoría de los efectos secundarios son temporales y desaparecen a medida que el medicamento sale del sistema.",
-    "La intensidad de la reacción varía según el metabolismo, el tiempo y la condición de salud.",
-    "Las personas sensibles al Sildenafil pueden experimentar efectos más pronunciados."
-  ],
-
-  warnings: [
-    "No use este producto si es alérgico al Sildenafil o a cualquier ingrediente listado.",
-    "Evite el uso si actualmente está tomando nitratos o medicamentos con nitroglicerina.",
-    "Consulte a su médico antes de usar si tiene alguna condición relacionada con el corazón.",
-    "No apto para personas menores de 18 años.",
-    "Evite consumir alcohol ya que puede interferir con la seguridad y tolerancia.",
-    "No exceda una tableta dentro de un período de 24 horas.",
-    "Suspenda el uso y busque ayuda si experimenta cambios inusuales en la visión o audición.",
-    "Este producto no está destinado a niños o usuarios no autorizados.",
-    "Evite el uso si tiene presión arterial alta o baja no controlada.",
-    "No combine con drogas recreativas o sustancias estimulantes.",
-    "Busque ayuda médica inmediata si aparece malestar relacionado con el pecho.",
-    "Evite usar tabletas vencidas o dañadas.",
-    "Consulte a un médico si tiene preocupaciones de salud relacionadas con los riñones o el hígado.",
-    "Suspenda el uso si mareos, dolores de cabeza o sensaciones inusuales persisten.",
-    "Busque consejo médico antes de usar si recientemente se sometió a cirugía.",
-    "No combine con otros inhibidores de la PDE5 o formulaciones similares.",
-    "Busque ayuda urgente si la respiración se vuelve difícil.",
-    "Evite conducir u operar maquinaria si ocurre aturdimiento.",
-    "Mantenga el producto fuera del alcance de los niños y personas no autorizadas.",
-    "No use la tableta si su color, textura u olor parecen anormales.",
-    "Informe hinchazón, entumecimiento o sensaciones inusuales a un proveedor de atención médica.",
-    "Evite mezclar con remedios herbales o alternativos no verificados.",
-    "Almacene adecuadamente para prevenir el acceso accidental por otros.",
-    "Informe a su médico sobre todos los medicamentos y suplementos que está tomando actualmente.",
-    "Busque ayuda médica si el malestar continúa más tiempo del esperado.",
-    "Use con precaución si tiene condiciones neurológicas o relacionadas con la circulación.",
-    "Deje de usar el producto inmediatamente si ocurren reacciones inesperadas.",
-    "No lo tome si el blíster está roto o manipulado.",
-    "Consulte a un profesional de la salud si no está seguro sobre interacciones con medicamentos.",
-    "Busque ayuda de emergencia si experimenta debilidad repentina o mareos severos."
-  ],
-
-  administration: [
-    "Use este producto solo bajo la supervisión de un profesional de la salud con licencia.",
-    "No cambie el tiempo o la dosis sin aprobación médica.",
-    "Trague la tableta entera con agua a menos que su médico le indique lo contrario.",
-    "Evite triturar o romper la tableta a menos que sea aprobado por un clínico.",
-    "Asegúrese de que la tableta esté sellada, intacta y sin manipular antes de usar.",
-    "No mezcle este producto con otros medicamentos a menos que sea autorizado por un médico.",
-    "Confirme con un proveedor de atención médica que esta formulación es adecuada para su perfil de salud.",
-    "No tome la tableta con más frecuencia de la indicada.",
-    "Verifique alergias al Sildenafil o cualquier ingrediente inactivo antes de tomar.",
-    "Informe a su médico sobre todos los medicamentos, suplementos y tratamientos que está utilizando.",
-    "Use el producto en un ambiente tranquilo y seguro.",
-    "Evite tomar más de una tableta a la vez a menos que sea médicamente aconsejado.",
-    "Suspenda el uso inmediatamente si la tableta parece descolorida o contaminada.",
-    "Siga todas las instrucciones de tiempo proporcionadas por su profesional de la salud.",
-    "Evite remedios herbales o suplementos no verificados mientras usa este producto.",
-    "Consulte a su médico si es la primera vez que usa formulaciones similares.",
-    "Almacene las tabletas en un lugar fresco y seco, lejos del calor y la humedad.",
-    "Inspeccione la forma, color y textura de la tableta antes de consumir.",
-    "Evite tomar el producto después de un esfuerzo físico extremo a menos que sea médicamente autorizado.",
-    "Use solo una tableta por administración a menos que se indique lo contrario.",
-    "No combine este producto con sustancias conocidas por afectar la presión arterial.",
-    "Deseche el empaque vacío de manera responsable para prevenir el mal uso.",
-    "Mantenga una hidratación normal a menos que su médico aconseje lo contrario.",
-    "Evite usar el producto si se siente mal, con fiebre o inusualmente cansado.",
-    "Busque orientación de su médico si alguna instrucción se siente poco clara.",
-    "No tome junto con otros productos que contengan ingredientes activos similares.",
-    "Suspenda el uso inmediatamente si nota sensaciones inusuales o malestar.",
-    "Asegúrese de que la administración sea consistente con cualquier plan de tratamiento médico actual.",
-    "Busque atención médica si el malestar persiste después del uso.",
-    "Nunca comparta este producto con otros, incluso si sus síntomas parecen similares."
-  ],
-
-  how_it_works: [
-    "Lovegra 100 mg contiene Citrato de Sildenafil, una molécula estudiada por sus efectos en la relajación del músculo liso vascular.",
-    "El compuesto funciona moderando la actividad de la enzima PDE-5, una enzima que afecta cómo los vasos sanguíneos se tensan y relajan naturalmente.",
-    "Cuando la PDE-5 está regulada, ciertos vasos sanguíneos pueden relajarse más eficientemente, promoviendo una circulación más saludable.",
-    "La circulación mejorada puede apoyar respuestas físicas naturales en áreas donde el flujo sanguíneo mejorado juega un papel.",
-    "El Sildenafil no es un producto hormonal; actúa sobre vías vasculares en lugar de afectar hormonas femeninas.",
-    "Su acción depende de señales fisiológicas normales del cuerpo y no crea estimulación artificial.",
-    "La tableta apoya un aumento temporal en el flujo sanguíneo, ayudando a los tejidos a recibir más oxígeno y nutrientes.",
-    "Los investigadores han explorado su potencial para abordar preocupaciones de capacidad de respuesta relacionadas con la circulación.",
-    "Lovegra se vuelve activo después de la absorción, cuando el compuesto alcanza niveles en el torrente sanguíneo que permiten la modulación de PDE-5.",
-    "El mecanismo central se enfoca en ayudar a los músculos lisos a relajarse, lo que apoya las vías de respuesta sensorial natural."
-  ],
-
-  tips: [
-    "Almacene las tabletas en un ambiente fresco y seco, lejos de la humedad y la luz solar.",
-    "Siempre lea etiquetas, advertencias e información del producto proporcionada por profesionales de la salud con licencia.",
-    "Evite mezclar con sustancias que puedan influir en la presión arterial a menos que sea supervisado médicamente.",
-    "Sea consciente de cualquier sensibilidad personal o alergia al Sildenafil o compuestos relacionados.",
-    "Discuta cualquier condición médica existente con un proveedor de atención médica certificado si considera la idoneidad.",
-    "No combine con suplementos desconocidos, estimulantes o productos no verificados.",
-    "Monitoree la respuesta natural de su cuerpo y consulte a un profesional si ocurre algún malestar.",
-    "Aquellos en medicamentos que afectan el corazón o la circulación deben buscar orientación médica.",
-    "Nunca exceda lo que un experto médico calificado considere apropiado para su perfil de salud.",
-    "Asegúrese de que el producto provenga de un proveedor confiable y reputado para mantener la autenticidad.",
-    "Deseche cualquier empaque vencido o dañado adecuadamente y evite usar productos comprometidos.",
-    "Mantenga el empaque blíster intacto para proteger las tabletas de la humedad.",
-    "Mantenga el bienestar general—hidratación, nutrición equilibrada y descanso—para apoyar las funciones corporales naturales.",
-    "Almacene el producto lejos de niños e individuos para quienes no está destinado.",
-    "Si no está seguro sobre la idoneidad, un experto con licencia debe ser su asesor principal.",
-    "Evite el alcohol o comidas pesadas alrededor de momentos de actividad física si busca comodidad general.",
-    "Siga cualquier restricción proporcionada por profesionales de la salud basada en su estado de salud personal.",
-    "Edúquese sobre cómo el Sildenafil interactúa con el cuerpo para tomar decisiones informadas.",
-    "Priorice hábitos de estilo de vida que apoyen una circulación saludable como movimiento, manejo del estrés y sueño adecuado."
-  ]
-},
 "valif-20mg-tablet-es": {
   id: "15",
   name: "Valif 20 mg",
@@ -2285,7 +2175,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "Aumenta el flujo sanguíneo al pene para ayudar a los hombres a lograr una erección.",
   slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+ image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg contiene Vardenafilo, un inhibidor de la PDE5 utilizado para apoyar la función eréctil.",

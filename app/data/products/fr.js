@@ -9,7 +9,12 @@ const products = {
   form: "Comprimé",
   packSize: "1 × 4 comprimés",
   casId: "139755-83-2",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
   slug: "kamagra-gold-50-mg",
 
 
@@ -97,7 +102,12 @@ const products = {
   form: "Comprimé",
   packSize: "1 × 4 comprimés",
   casId: "139755-83-2",
-  image: "/products/kamagra-gold 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   slug: "kamagra-gold-100-mg",
 
   description:
@@ -194,7 +204,12 @@ const products = {
   form: "Gel Oral",
   packSize: "7 x 5 g sachets",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
   slug: "kamagra-100mg-oral-jelly-vol1",
 
   description:
@@ -296,7 +311,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "Super Kamagra Oral Jelly appartient à un groupe de médicaments appelés inhibiteurs de la PDE5. Il agit en relaxant les vaisseaux sanguins du pénis, permettant ainsi une augmentation du flux sanguin et la production d’une érection lors de la stimulation sexuelle.",
@@ -504,7 +524,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 est utilisé pour traiter la dysfonction érectile en aidant les hommes à obtenir et maintenir une érection lorsqu'ils sont sexuellement excités.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+   image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "Le comprimé à croquer Kamagra 100 mg contient du Citrate de Sildénafil dans un format facile à croquer.",
@@ -646,7 +671,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 est utilisé pour traiter la dysfonction érectile en aidant les hommes à obtenir et maintenir une érection lors d'une stimulation sexuelle.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+   image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Comprimé à Croquer contient du citrate de sildénafil sous une forme à croquer au goût d'orange.",
@@ -828,7 +858,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Cela permet à son tour un flux sanguin plus fort pour permettre à une érection de se produire.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Effervescent contient du citrate de sildénafil sous forme de comprimé soluble.",
@@ -998,7 +1033,7 @@ const products = {
     "Soutenez la santé vasculaire à long terme par des choix de mode de vie comme le sommeil, l'exercice et la gestion du stress."
   ]
 },
-"super-kamagra-100-60-fr": {
+"super-kamagra-fr": {
   id: "9",
   name: "Super Kamagra",
   category: "Super Kamagra",
@@ -1012,8 +1047,13 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "Ces médicaments agissent en dilatant les vaisseaux sanguins dans le corps, en particulier autour de la zone génitale.",
-  slug: "super-kamagra-100-60",
-  image: "/products/Super_Kamagra_03.jpg",
+  slug: "super-kamagra",
+ image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra combine le citrate de sildénafil et la dapoxétine en un comprimé à double action.",
@@ -1195,7 +1235,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Le comprimé Kamagra Export 100mg, une thérapie orale pour la dysfonction érectile, est le sel de citrate de sildénafil, un inhibiteur sélectif de la guanosine monophosphate cyclique.",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "Kamagra Expo 100 mg contient du citrate de sildénafil, une formulation bien connue d'inhibiteur de la PDE5.",
@@ -1377,7 +1422,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "Ces médicaments agissent en dilatant les vaisseaux sanguins dans le corps, en particulier autour de la zone génitale.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+   image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "Apcalis-SX 20 mg Gelée Orale contient du Tadalafil, un inhibiteur de la PDE5 à longue action bien connu.",
@@ -1559,7 +1608,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Ces médicaments agissent en dilatant les vaisseaux sanguins dans le corps, particulièrement autour de la zone génitale.",
   slug: "tadalis-sx-20mg",
-  image: "/products/tadalis-sx 01.jpg",
+   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg contient du Tadalafil, un inhibiteur de la PDE5 à longue durée d'action utilisé pour soutenir la fonction érectile.",
@@ -1741,7 +1795,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Lovegra Gelée Orale (Gelée de Citrate de Sildénafil Féminin 100 mg) est un médicament à action rapide et efficace qui a été spécialement formulé pour le traitement du trouble de l'excitation sexuelle féminine (FSAD) et de la dysfonction sexuelle féminine (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+   image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg Gelée Orale contient du Citrate de Sildénafil dans un format de gelée à absorption rapide.",
@@ -1922,8 +1981,13 @@ const products = {
   pack_size: "1 x 4 Comprimés",
   cas_id: "139755-83-2",
   description: "Ces derniers temps, la discussion ouverte sur les conditions sexuelles chez les femmes est devenue plus courante.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg contient du Citrate de Sildénafil formulé pour soutenir la réponse sexuelle féminine.",
@@ -2092,187 +2156,7 @@ const products = {
     "Priorisez les habitudes de vie qui soutiennent une circulation saine telles que le mouvement, la gestion du stress et un sommeil adéquat."
   ]
 },
-"lovegra-100mg-fr": {
-  id: "14",
-  name: "Lovegra 100 mg",
-  category: "Lovegra",
-  brand: "ED Ajanta Pharma",
-  dosage: "100 mg",
-  composition: "Citrate de Sildénafil 100mg",
-  form: "Comprimé",
-  pack_size: "1 x 4 Comprimés",
-  cas_id: "139755-83-2",
-  description: "Ces derniers temps, la discussion ouverte sur les conditions sexuelles chez les femmes est devenue plus courante.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
 
-  overview: [
-    "Lovegra 100 mg contient du Citrate de Sildénafil formulé pour soutenir la réponse sexuelle féminine.",
-    "Il est destiné aux femmes rencontrant des défis liés à l'excitation ou à la réactivité physique.",
-    "Le format comprimé offre une option orale standard avec une absorption prévisible.",
-    "Lovegra agit en soutenant une amélioration du flux sanguin lors de la stimulation.",
-    "Les effets peuvent aider à améliorer la sensibilité et la préparation physique pendant l'intimité.",
-    "Le produit peut soutenir les femmes éprouvant une réponse réduite à la stimulation ou un intérêt pour l'intimité.",
-    "Il ne s'active qu'avec une stimulation sexuelle et ne crée pas d'effets immédiats par lui-même.",
-    "La plupart des utilisatrices prennent un comprimé avant l'activité intime planifiée.",
-    "Les effets peuvent commencer dans les 30 à 60 minutes selon le métabolisme et le timing.",
-    "Lovegra fournit un soutien temporaire et ne change pas la fonction sexuelle de manière permanente.",
-    "Le comprimé est destiné à un usage adulte et n'est pas recommandé pour les mineurs.",
-    "L'alcool peut interférer avec les bénéfices attendus et doit être limité pendant l'utilisation.",
-    "Un repas riche en graisses peut retarder l'absorption et ralentir le délai d'action.",
-    "Le produit soutient l'excitation physique plutôt que le désir émotionnel ou psychologique.",
-    "Lovegra peut aider certaines utilisatrices à éprouver une confiance améliorée pendant l'intimité.",
-    "La réponse varie en fonction de l'état de santé, de l'âge, du mode de vie et de la sensibilité individuelle.",
-    "Il peut être utile pour les femmes qui préfèrent une fenêtre de préparation plus longue avant l'activité.",
-    "La formulation n'augmente pas les niveaux hormonaux; elle soutient les mécanismes de circulation physique.",
-    "Le comprimé offre une facilité d'utilisation pour celles qui préfèrent un format de médicament traditionnel.",
-    "Il est couramment emballé dans de petites plaquettes alvéolées pour plus de commodité en voyage.",
-    "Les utilisatrices ne doivent pas dépasser le dosage recommandé sauf avis d'un professionnel de santé.",
-    "Le produit peut soutenir une augmentation de la lubrification naturelle et de la réactivité lorsqu'il est stimulé.",
-    "Lovegra est destiné à une utilisation occasionnelle au besoin, selon la réponse personnelle.",
-    "Il peut fournir un confort amélioré pendant l'intimité lorsqu'il est utilisé de manière responsable.",
-    "La consultation d'un prestataire de soins peut aider à déterminer l'adéquation en fonction des antécédents médicaux.",
-    "Les résultats et la durée des effets varient entre les individus.",
-    "Un stockage approprié aide à maintenir la qualité du comprimé et l'efficacité de la performance.",
-    "Lovegra peut être utilisé par celles qui recherchent un engagement physique amélioré pendant les expériences intimes.",
-    "Ce produit n'est pas destiné à traiter les causes émotionnelles, hormonales ou psychologiques d'une faible réactivité.",
-    "Une utilisation responsable peut aider à améliorer la satisfaction globale et le confort pendant l'intimité."
-  ],
-
-  sideEffects: [
-    "Certaines utilisatrices peuvent ressentir de légers maux de tête après avoir pris le comprimé.",
-    "Une chaleur ou rougeur faciale temporaire peut survenir pendant la période active.",
-    "Des étourdissements ou vertiges peuvent apparaître, surtout en se levant rapidement.",
-    "Un léger inconfort digestif ou des maux d'estomac peuvent survenir chez certaines personnes.",
-    "Une congestion nasale temporaire ou un nez qui coule peut être ressentie.",
-    "Une sensibilité temporaire à la lumière vive peut survenir.",
-    "Certaines utilisatrices peuvent ressentir de légères douleurs musculaires ou corporelles.",
-    "Des nausées peuvent survenir selon la sensibilité individuelle.",
-    "Une vision floue ou altérée temporaire peut apparaître dans de rares cas.",
-    "Une chaleur ou rougeur au visage ou dans le haut du corps peut survenir brièvement.",
-    "Certaines personnes peuvent ressentir une conscience accrue des battements cardiaques.",
-    "Une légère rougeur ou irritation de la peau peut survenir temporairement.",
-    "De la fatigue ou une baisse d'énergie peut survenir après la diminution des effets.",
-    "Des bourdonnements d'oreilles peuvent survenir dans de rares cas temporaires.",
-    "Des troubles du sommeil peuvent survenir si pris tard dans la soirée.",
-    "Un léger inconfort dorsal ou une tension musculaire peut apparaître.",
-    "Une transpiration accrue peut survenir chez certaines personnes.",
-    "Un léger gonflement temporaire des yeux peut être ressenti.",
-    "Certaines utilisatrices peuvent remarquer une sensibilité de l'humeur ou une irritabilité temporaire.",
-    "Une pression temporaire ou une sensation de lourdeur dans la tête peut survenir.",
-    "Une bouche sèche ou un arrière-goût inhabituel peut être remarqué brièvement.",
-    "Une légère agitation ou une difficulté à se calmer peut survenir.",
-    "Des changements temporaires de contraste visuel ou de mise au point peuvent apparaître.",
-    "L'inconfort thoracique doit être évalué par un professionnel de santé s'il est ressenti.",
-    "Prendre le comprimé avec de la nourriture lourde peut intensifier les troubles digestifs.",
-    "Les effets secondaires peuvent augmenter s'ils sont combinés à l'alcool.",
-    "L'inconfort persistant ou les symptômes sévères doivent être examinés par un expert médical.",
-    "La plupart des effets secondaires sont temporaires et s'estompent à mesure que le médicament quitte le système.",
-    "L'intensité de la réaction varie selon le métabolisme, le timing et l'état de santé.",
-    "Les personnes sensibles au Sildénafil peuvent ressentir des effets plus prononcés."
-  ],
-
-  warnings: [
-    "N'utilisez pas ce produit si vous êtes allergique au Sildénafil ou à l'un des ingrédients listés.",
-    "Évitez l'utilisation si vous prenez actuellement des nitrates ou des médicaments à base de nitroglycérine.",
-    "Consultez votre médecin avant d'utiliser si vous avez des problèmes cardiaques.",
-    "Ne convient pas aux personnes de moins de 18 ans.",
-    "Évitez de consommer de l'alcool car cela peut interférer avec la sécurité et la tolérance.",
-    "Ne dépassez pas un comprimé par période de 24 heures.",
-    "Arrêtez l'utilisation et cherchez de l'aide si vous ressentez des changements inhabituels de vision ou d'audition.",
-    "Ce produit n'est pas destiné aux enfants ou aux utilisateurs non autorisés.",
-    "Évitez l'utilisation si vous avez une hypertension ou hypotension non contrôlée.",
-    "Ne combinez pas avec des drogues récréatives ou des substances stimulantes.",
-    "Cherchez une aide médicale immédiate si un inconfort lié à la poitrine apparaît.",
-    "Évitez d'utiliser des comprimés périmés ou endommagés.",
-    "Consultez un médecin si vous avez des problèmes de santé liés aux reins ou au foie.",
-    "Arrêtez l'utilisation si des vertiges, des maux de tête ou des sensations inhabituelles persistent.",
-    "Demandez un avis médical avant utilisation si vous avez récemment subi une intervention chirurgicale.",
-    "Ne combinez pas avec d'autres inhibiteurs de la PDE5 ou formulations similaires.",
-    "Cherchez une aide urgente si la respiration devient difficile.",
-    "Évitez de conduire ou d'utiliser des machines si des vertiges surviennent.",
-    "Gardez le produit hors de portée des enfants et des personnes non autorisées.",
-    "N'utilisez pas le comprimé si sa couleur, sa texture ou son odeur semble anormale.",
-    "Signalez tout gonflement, engourdissement ou sensation inhabituelle à un prestataire de soins.",
-    "Évitez de mélanger avec des remèdes à base de plantes ou alternatifs non vérifiés.",
-    "Stockez correctement pour éviter tout accès accidentel par d'autres.",
-    "Informez votre médecin de tous les médicaments et suppléments que vous prenez actuellement.",
-    "Cherchez une aide médicale si l'inconfort continue plus longtemps que prévu.",
-    "Utilisez avec prudence si vous avez des problèmes neurologiques ou liés à la circulation.",
-    "Arrêtez d'utiliser le produit immédiatement si des réactions inattendues surviennent.",
-    "Ne le prenez pas si la plaquette alvéolée est déchirée ou altérée.",
-    "Consultez un professionnel de santé si vous n'êtes pas sûr des interactions médicamenteuses.",
-    "Cherchez une aide d'urgence si vous ressentez une faiblesse soudaine ou des vertiges sévères."
-  ],
-
-  administration: [
-    "Utilisez ce produit uniquement sous la supervision d'un professionnel de santé agréé.",
-    "Ne changez pas le timing ou le dosage sans approbation médicale.",
-    "Avalez le comprimé entier avec de l'eau sauf instruction contraire de votre médecin.",
-    "Évitez d'écraser ou de casser le comprimé sauf approbation d'un clinicien.",
-    "Assurez-vous que le comprimé est scellé, intact et non altéré avant utilisation.",
-    "Ne mélangez pas ce produit avec d'autres médicaments sauf autorisation d'un médecin.",
-    "Confirmez avec un prestataire de soins que cette formulation convient à votre profil de santé.",
-    "Ne prenez pas le comprimé plus fréquemment que dirigé.",
-    "Vérifiez les allergies au Sildénafil ou à tout ingrédient inactif avant de prendre.",
-    "Informez votre médecin de tous les médicaments, suppléments et traitements que vous utilisez.",
-    "Utilisez le produit dans un environnement calme et sûr.",
-    "Évitez de prendre plus d'un comprimé à la fois sauf avis médical.",
-    "Arrêtez immédiatement l'utilisation si le comprimé semble décoloré ou contaminé.",
-    "Suivez toutes les instructions de timing fournies par votre professionnel de santé.",
-    "Évitez les remèdes à base de plantes ou suppléments non vérifiés tout en utilisant ce produit.",
-    "Consultez votre médecin si c'est la première fois que vous utilisez des formulations similaires.",
-    "Conservez les comprimés dans un endroit frais et sec, à l'abri de la chaleur et de l'humidité.",
-    "Inspectez la forme, la couleur et la texture du comprimé avant de consommer.",
-    "Évitez de prendre le produit après un effort physique extrême sauf autorisation médicale.",
-    "Utilisez un seul comprimé par administration sauf instruction contraire.",
-    "Ne combinez pas ce produit avec des substances connues pour affecter la pression artérielle.",
-    "Jetez les emballages vides de manière responsable pour éviter les mauvais usages.",
-    "Maintenez une hydratation normale sauf avis contraire de votre médecin.",
-    "Évitez d'utiliser le produit si vous vous sentez mal, fiévreux ou inhabituellement fatigué.",
-    "Cherchez des conseils auprès de votre médecin si une instruction semble peu claire.",
-    "Ne prenez pas aux côtés d'autres produits contenant des ingrédients actifs similaires.",
-    "Arrêtez l'utilisation immédiatement si vous remarquez des sensations inhabituelles ou un inconfort.",
-    "Assurez-vous que l'administration est cohérente avec tout plan de traitement médical actuel.",
-    "Cherchez une attention médicale si l'inconfort persiste après utilisation.",
-    "Ne partagez jamais ce produit avec d'autres, même si leurs symptômes semblent similaires."
-  ],
-
-  how_it_works: [
-    "Lovegra 100 mg contient du Citrate de Sildénafil, une molécule étudiée pour ses effets sur la relaxation des muscles lisses vasculaires.",
-    "Le composé agit en modérant l'activité de l'enzyme PDE-5, une enzyme qui affecte la façon dont les vaisseaux sanguins se resserrent et se détendent naturellement.",
-    "Lorsque la PDE-5 est régulée, certains vaisseaux sanguins peuvent se détendre plus efficacement, favorisant une circulation plus saine.",
-    "Une circulation améliorée peut soutenir les réponses physiques naturelles dans les zones où un flux sanguin accru joue un rôle.",
-    "Le Sildénafil n'est pas un produit hormonal; il agit sur les voies vasculaires plutôt que d'affecter les hormones féminines.",
-    "Son action dépend des signaux physiologiques normaux du corps et ne crée pas de stimulation artificielle.",
-    "Le comprimé soutient une augmentation temporaire du flux sanguin, aidant les tissus à recevoir plus d'oxygène et de nutriments.",
-    "Les chercheurs ont exploré son potentiel pour répondre aux préoccupations de réactivité liées à la circulation.",
-    "Lovegra devient actif après absorption, lorsque le composé atteint des niveaux sanguins permettant la modulation de la PDE-5.",
-    "Le mécanisme central se concentre sur l'aide aux muscles lisses à se détendre, ce qui soutient les voies de réponse sensorielle naturelles."
-  ],
-
-  tips: [
-    "Conservez les comprimés dans un environnement frais et sec, à l'abri de l'humidité et de la lumière du soleil.",
-    "Lisez toujours les étiquettes, les avertissements et les informations sur les produits fournis par des professionnels de santé agréés.",
-    "Évitez de mélanger avec des substances pouvant influencer la pression artérielle sauf sous surveillance médicale.",
-    "Soyez conscient de toute sensibilité personnelle ou allergie au Sildénafil ou aux composés apparentés.",
-    "Discutez de toute condition médicale existante avec un prestataire de soins certifié si vous envisagez l'adéquation.",
-    "Ne combinez pas avec des suppléments inconnus, des stimulants ou des produits non vérifiés.",
-    "Surveillez la réponse naturelle de votre corps et consultez un professionnel si un inconfort survient.",
-    "Ceux qui prennent des médicaments affectant le cœur ou la circulation doivent chercher des conseils médicaux.",
-    "Ne dépassez jamais ce qu'un expert médical qualifié considère approprié pour votre profil de santé.",
-    "Assurez-vous que le produit provient d'un fournisseur de confiance et réputé pour maintenir l'authenticité.",
-    "Jetez correctement tout emballage périmé ou endommagé et évitez d'utiliser des produits compromis.",
-    "Gardez l'emballage blister intact pour protéger les comprimés de l'humidité.",
-    "Maintenez le bien-être général—hydratation, nutrition équilibrée et repos—pour soutenir les fonctions corporelles naturelles.",
-    "Stockez le produit loin des enfants et des personnes pour lesquelles il n'est pas destiné.",
-    "En cas de doute sur l'adéquation, un expert agréé doit être votre conseiller principal.",
-    "Évitez l'alcool ou les repas lourds autour des moments d'activité physique si vous visez un confort général.",
-    "Suivez toutes les restrictions fournies par les professionnels de santé en fonction de votre état de santé personnel.",
-    "Informez-vous sur la façon dont le Sildénafil interagit avec le corps pour prendre des décisions éclairées.",
-    "Priorisez les habitudes de vie qui soutiennent une circulation saine telles que le mouvement, la gestion du stress et un sommeil adéquat."
-  ]
-},
 "valif-20mg-tablet-fr": {
   id: "15",
   name: "Valif 20 mg",
@@ -2284,8 +2168,13 @@ const products = {
   pack_size: "1 x 10 Comprimés",
   cas_id: "224785-90-4",
   description: "Il augmente le flux sanguin vers le pénis pour aider les hommes à obtenir une érection.",
-  slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+ slug: "valif-20mg-tablet",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg contient du Vardénafil, un inhibiteur de la PDE5 utilisé pour soutenir la fonction érectile.",
@@ -11882,7 +11771,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Les comprimés Tadarise 20mg générique Cialis sont utilisés pour traiter la dysfonction érectile et l'impuissance chez les hommes.",
     slug: "tadarise-pro-20",
-    image: "/products/Tadarise-Pro-20.png",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise Pro-20 contient du Tadalafil 20 mg et est conçu pour soutenir les hommes souffrant de dysfonction érectile.",
@@ -12070,8 +11964,13 @@ administration: [
     pack_size: "Une boîte contient 10 X 10 comprimés.",
     cas_id: "171596-29-5",
     description: "Les comprimés Tadarise 20mg générique Cialis sont utilisés pour traiter la dysfonction érectile et l'impuissance chez les hommes.",
-    slug: "tadarise-20",
-    image: "/products/Tadarise-20.png",
+     slug: "tadarise-20",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-20 contient du Tadalafil 20 mg et est utilisé pour soutenir les hommes souffrant de dysfonction érectile.",
@@ -20214,8 +20113,13 @@ administration: [
     pack_size: "10 x 10 Comprimés",
     cas_id: "98319-26-7",
     description: "Sunpecia est utilisé pour traiter l'hyperplasie bénigne de la prostate (HBP) et améliorer le débit urinaire chez les hommes.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
     
   overview: [
     "Sunpecia contient du Finastéride, disponible en dosages de 1 mg et 5 mg, utilisé pour traiter l'hyperplasie bénigne de la prostate (HBP) et la perte de cheveux chez l'homme.",
@@ -20384,8 +20288,13 @@ administration: [
     pack_size: "3 x 10 Comprimés",
     cas_id: "53179-13-8",
     description: "Le comprimé Pirfisun 200 traite la fibrose pulmonaire idiopathique et réduit les cicatrices et l'enflure des poumons.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     
   overview: [
     "Le comprimé Pirfisun contient de la Pirfénidone 200mg, un médicament sur ordonnance utilisé pour traiter la fibrose pulmonaire idiopathique (FPI).",

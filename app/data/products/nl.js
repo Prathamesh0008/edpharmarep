@@ -9,7 +9,12 @@ const products = {
   form: "Tablet",
   packSize: "1 × 4 tabletten",
   casId: "139755-83-2",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+   image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
   slug: "kamagra-gold-50-mg",
 
 
@@ -97,7 +102,12 @@ const products = {
   form: "Tablet",
   packSize: "1 × 4 tabletten",
   casId: "139755-83-2",
-  image: "/products/kamagra-gold 100mg 01.jpg",
+  image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
   slug: "kamagra-gold-100-mg",
 
   description:
@@ -194,7 +204,13 @@ const products = {
   form: "Orale Jelly",
   packSize: "7 × 5 g sachets",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
+  slug: "kamagra-100mg-oral-jelly-vol1",
 
   description:
     "Kamagra 100mg Oral Jelly bevat sildenafilcitraat in gelvorm en is bedoeld voor orale toediening. Het is een gemakkelijk oplosbaar geneesmiddel.",
@@ -295,7 +311,13 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+ image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
+  slug: "super-kamagra-oral-jelly",
 
   description:
     "Super Kamagra Oral Jelly behoort tot een groep geneesmiddelen die PDE5-remmers worden genoemd. Het werkt door de bloedvaten in de penis te ontspannen, waardoor er meer bloed kan toestromen en een erectie kan ontstaan bij seksuele opwinding.",
@@ -397,7 +419,13 @@ const products = {
   form: "Kauwtablet",
   packSize: "1 x 4 tabletten",
   casId: "139755-83-2",
-  image: "/products/Kamagra-Polo 02.jpg",
+  slug: "kamagra-polo",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   description:
     "Kamagra 100 wordt gebruikt voor de behandeling van erectiestoornissen door mannen te helpen een erectie te verkrijgen en te behouden bij seksuele stimulatie.",
@@ -504,7 +532,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 wordt gebruikt om erectiestoornissen te behandelen door mannen te helpen een erectie te bereiken en te behouden wanneer ze seksueel opgewonden zijn.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Kauwtablet bevat Sildenafil Citraat in een gemakkelijk te kauwen formaat.",
@@ -646,7 +679,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 wordt gebruikt voor de behandeling van erectiestoornissen door mannen te helpen een erectie te verkrijgen en te behouden bij seksuele stimulatie.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Kauwtablet bevat sildenafilcitraat in een kauwbare vorm met sinaasappelsmaak.",
@@ -828,7 +866,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Dit zorgt voor een sterkere bloedstroom om een erectie mogelijk te maken.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Bruistabletten bevatten sildenafilcitraat in een oplosbare tabletvorm.",
@@ -1012,8 +1055,14 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "Deze medicijnen werken door de bloedvaten in het lichaam te verwijden, met name rond het genitale gebied.",
-  slug: "super-kamagra-100-60",
+  slug: "super-kamagra",
+ 
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra combineert sildenafilcitraat en dapoxetine in één tablet met dubbele werking.",
@@ -1194,8 +1243,14 @@ const products = {
   pack_size: "1 x 4 Tabletten",
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg Tablet, een orale therapie voor erectiestoornissen, is het citraatzout van sildenafil, een selectieve remmer van cyclisch guanosinemonofosfaat.",
-  slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+   slug: "kamagra-expo-100mg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
+  
 
   overview: [
     "Kamagra Expo 100 mg bevat sildenafilcitraat, een bekende PDE5-remmerformulering.",
@@ -1377,7 +1432,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "Deze medicijnen werken door de bloedvaten in het lichaam te verwijden, met name rond het genitale gebied.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   overview: [
     "Apcalis-SX 20 mg Oral Jelly bevat tadalafil, een bekende langwerkende PDE5-remmer.",
@@ -1558,8 +1617,13 @@ const products = {
   pack_size: "1 x 4 Tabletten",
   cas_id: "171596-29-5",
   description: "Deze geneesmiddelen werken door de bloedvaten in het lichaam te verwijden, met name rond het genitale gebied.",
-  slug: "tadalis-sx-20mg",
+   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   overview: [
     "Tadalis-SX 20 mg bevat Tadalafil, een langwerkende PDE5-remmer die wordt gebruikt om de erectiefunctie te ondersteunen.",
@@ -1741,7 +1805,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Lovegra Oral Jelly (Vrouwelijke Sildenafilcitraat 100 mg Jelly) is een snelwerkend en effectief medicijn dat speciaal is samengesteld voor de behandeling van vrouwelijke seksuele opwindingsstoornis (FSAD) en vrouwelijke seksuele disfunctie (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg Oral Jelly bevat sildenafilcitraat in een snel absorberend gelei-formaat.",
@@ -1922,8 +1991,13 @@ const products = {
   pack_size: "1 x 4 Tabletten",
   cas_id: "139755-83-2",
   description: "De laatste tijd is de openlijke discussie over seksuele aandoeningen bij vrouwen gebruikelijker geworden.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg bevat sildenafilcitraat, geformuleerd voor ondersteuning van de vrouwelijke seksuele respons.",
@@ -2103,8 +2177,13 @@ const products = {
   pack_size: "1 x 4 Tabletten",
   cas_id: "139755-83-2",
   description: "De laatste tijd is de openlijke discussie over seksuele aandoeningen bij vrouwen gebruikelijker geworden.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "valif-20mg-tablet",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg bevat sildenafilcitraat, geformuleerd voor ondersteuning van de vrouwelijke seksuele respons.",
@@ -2285,7 +2364,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "Het verhoogt de bloedstroom naar de penis om mannen te helpen een erectie te krijgen.",
   slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg bevat Vardenafil, een PDE5-remmer die wordt gebruikt om erectiele functie te ondersteunen.",
@@ -12248,7 +12332,12 @@ const products = {
     cas_id: "171596-29-5",
     description: "Tadarise tabletten 20mg generieke Cialis worden gebruikt om erectiestoornissen en impotentie bij mannen te behandelen.",
     slug: "tadarise-pro-20",
-    image: "/products/Tadarise-Pro-20.png",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise Pro-20 bevat Tadalafil 20 mg en is ontworpen om mannen met erectiestoornissen te ondersteunen.",
@@ -12436,8 +12525,14 @@ const products = {
     pack_size: "Een doos bevat 10 X 10 tabletten.",
     cas_id: "171596-29-5",
     description: "Tadarise tabletten 20mg generieke Cialis worden gebruikt om erectiestoornissen impotentie bij mannen te behandelen.",
+
     slug: "tadarise-20",
-    image: "/products/Tadarise-20.png",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-20 bevat Tadalafil 20 mg en wordt gebruikt om mannen te ondersteunen die erectiestoornissen ervaren.",
@@ -20714,8 +20809,13 @@ administration: [
     pack_size: "10 x 10 Tabletten",
     cas_id: "98319-26-7",
     description: "Sunpecia wordt gebruikt voor de behandeling van benigne prostaathyperplasie (BPH) en het verbeteren van de urinestroom bij mannen.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
     
   overview: [
     "Sunpecia bevat Finasteride, verkrijgbaar in sterktes van 1mg en 5mg, gebruikt voor de behandeling van benigne prostaathyperplasie (BPH) en mannelijke haaruitval.",
@@ -20884,8 +20984,13 @@ administration: [
     pack_size: "3 x 10 Tabletten",
     cas_id: "53179-13-8",
     description: "Pirfisun 200 Tablet behandelt idiopathische longfibrose en vermindert littekenvorming en zwelling van de longen.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
     
   overview: [
     "Pirfisun Tablet bevat Pirfenidon 200mg, een receptplichtig medicijn dat wordt gebruikt voor de behandeling van idiopathische longfibrose (IPF).",

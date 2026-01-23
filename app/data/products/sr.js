@@ -9,7 +9,12 @@ const products = {
     form: "Tableta",
     packSize: "1 x 4 Tablete",
     casId: "139755-83-2",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
     slug: "kamagra-gold-50-mg",
 
 
@@ -92,7 +97,12 @@ const products = {
     form: "Таблета",
     packSize: "1 x 4 Таблете",
     casId: "139755-83-2",
-    image: "/products/kamagra-gold 100mg 01.jpg",
+    image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
     slug: "kamagra-gold-100-mg",
 
     description:
@@ -186,7 +196,12 @@ const products = {
   form: "Oralni žele",
   packSize: "7 x 5 gm kesica",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   description:
     "Kamagra 100mg Oral Jelly sadrži silendafil citrat u žel formi i namenjen je za oralnu upotrebu. To je lek koji se lako rastvara.",
@@ -275,105 +290,7 @@ const products = {
     "Nikada ne prekoračujte ono što sertifikovani medicinski stručnjak određuje kao prikladno za vaš zdravstveni profil."
   ]
 },
-"kamagra-100mg-oral-jelly-vol1-sr": {
-  id: "3",
-  name: "Kamagra 100 mg Oral Jelly Vol 1",
-  category: "Kamagra Oral Jelly",
-  brand: "ED Ajanta Pharma",
-  dosage: "100 mg",
-  composition: "Sildenafil Citrat 100mg",
-  form: "Oralni žele",
-  packSize: "7 x 5 gm kesica",
-  casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
 
-  description:
-    "Kamagra 100mg Oral Jelly sadrži silendafil citrat u žel formi i namenjen je za oralnu upotrebu. To je lek koji se lako rastvara.",
-  slug: "kamagra-100mg-oral-jelly-vol1",
-  overview: [
-    "Kamagra 100 mg Oral Jelly sadrži Sildenafil Citrat u lako konzumabilnom žel formatu.",
-    "Dizajniran je za pojedince koji možda preferiraju alternativu tabletama koja se brže apsorbuje.",
-    "Formulacija oralnog želea može početi da deluje brže od standardnih tabletnih verzija.",
-    "Ovaj proizvod je namenjen da podrži erektilnu funkciju tokom seksualne stimulacije.",
-    "Žel format omogućava lakše gutanje u poređenju sa čvrstim tabletama.",
-    "Mnogi korisnici biraju ovaj format zbog praktičnosti i bržeg vremena apsorpcije.",
-    "Kamagra Oral Jelly pripada grupi lekova poznatih kao PDE5 inhibitori.",
-    "Podržava povećan protok krvi kako bi pomogao u čvrstini erekcije kada je seksualno stimulisan.",
-    "Medicinski stručnjak može preporučiti učestalost doziranja na osnovu procene ličnog zdravlja.",
-    "Alkohol može ometati očekivane rezultate i najbolje ga je ograničiti tokom upotrebe.",
-    "Obroci sa visokim sadržajem masti mogu usporiti brzinu aktivacije želea u sistemu.",
-    "Čuvanje na hladnom, suvom mestu pomaže u održavanju kvaliteta proizvoda.",
-    "Rezultati mogu varirati u zavisnosti od zdravlja, metabolizma, životnog stila i interakcija sa lekovima."
-  ],
-
-  sideEffects: [
-    "Neki pojedinci mogu osetiti blage glavobolje nakon upotrebe.",
-    "Može se privremeno pojaviti crvenilo ili toplota na licu ili telu.",
-    "Vrtoglavica se može pojaviti pri ustajanju ili brzom kretanju.",
-    "Kod nekih pojedinaca može doći do probavne nelagodnosti ili povećane kiselosti.",
-    "Zagušen ili tekući nos može se privremeno pojaviti dok je žele aktivan.",
-    "Iritacija kože ili blago crvenilo može se privremeno pojaviti.",
-    "Povećana osetljivost na svetlost može se javiti na kratko vreme.",
-    "Blag umor ili malaksalost mogu se pojaviti nakon što efekti prestanu.",
-    "Zujanje u ušima ili osetljivost na zvukovi mogu se retko javiti.",
-    "Neki pojedinci mogu imati poteškoća sa spavanjem u zavisnosti od vremena uzimanja.",
-    "Većina neželjenih efekata je privremena i može se smanjiti nakon ponovljene kontrolisane upotrebe pod nadzorom."
-  ],
-
-  administration: [
-    "Koristite ovaj proizvod samo pod nadzorom ili po savetu licenciranog zdravstvenog stručnjaka.",
-    "Ne menjajte vreme upotrebe bez medicinskog odobrenja.",
-    "Pre otvaranja i korišćenja želea proverite da li je kesica neoštećena.",
-    "Konzumirajte žele direktno iz kesice, osim ako nije drugačije savetovano.",
-    "Ne mešajte žele sa drugim supstancama osim ako je odobrio lekar.",
-    "Koristite samo količinu koju preporuči medicinski stručnjak.",
-    "Pre prve upotrebe potvrdite da ovaj proizvod odgovara vašem zdravstvenom stanju.",
-    "Izbegavajte konzumiranje nepoznatih dodataka dok koristite ovaj proizvod.",
-    "Proverite kompatibilnost sa bilo kojim propisanim ili slobodno prodatim lekovima.",
-    "Ne delite ovaj proizvod sa drugima, čak i ako su simptomi slični.",
-    "Koristite žele u mirnom okruženju kako biste izbegli pogrešno tumačenje njegovih efekata.",
-   
-  ],
-
-  warnings: [
-    "Ne koristite ovaj proizvod ako ste alergični na sildenafil ili njegove sastojke.",
-    "Izbegavajte upotrebu ako uzimate nitrate ili nitroglicerin.",
-    "Konsultujte se sa lekarom pre upotrebe ako imate bilo kakva srčana stanja.",
-    "Izbegavajte konzumiranje alkohola jer može smanjiti toleranciju.",
-    "Nije pogodno za osobe mlađe od 18 godina.",
-    "Ne prekoračujte jednu kesicu u roku od 24 sata.",
-    "Prekinite upotrebu ako primetite iznenadne promene vida ili sluha.",
-    "Nije namenjeno ženama ili deci.",
-    "Konsultujte se sa lekarom ako imate brige o interakcijama.",
-    "Potražite hitnu pomoć ako dođe do ozbiljne vrtoglavice."
-  ],
-
-  how_it_works: [
-    "Kamagra 100 mg Oral Jelly Vol 1 sadrži Sildenafil Citrat, formulisan u glatkoj žel teksturi za lakšu oralnu primenu.",
-    "Aktivno jedinjenje deluje kroz PDE-5 enzimski put, prirodni regulator opuštanja krvnih sudova.",
-    "Moderiranjem aktivnosti ovog enzima, formulacija podržava poboljšan protok krvi unutar specifičnih vaskularnih regiona.",
-    "Žel format omogućava da se aktivni sastojak brže disperguje i apsorbuje u poređenju sa čvrstim tabletama.",
-    "Nakon apsorpcije, Sildenafil pomaže opuštanju glatkih mišića u ciljanim krvnim sudovima, podržavajući zdraviju dinamiku cirkulacije.",
-    "Ovaj mehanizam poboljšava prirodnu sposobnost tela da odgovori kada se signalizira povećana vaskularna aktivnost.",
-    "Proizvod radi zajedno sa normalnim fiziološkim odgovorima, umesto da ih veštački pokreće.",
-    "Oralni žele oblik pruža korisnički prijateljsko iskustvo, posebno za pojedince koji preferiraju opcije koje nisu u obliku tableta.",
-    "Podržava privremeno proširenje krvnih sudova, omogućavajući efikasniji protok krvi tamo gde je potrebno.",
-    "Efikasnost zavisi od prirodnih telesnih procesa koji su aktivni i normalno funkcionišu."
-  ],
-
-  tips: [
-    "Čuvajte kesice na hladnom, suvom mestu kako biste održali konzistenciju i kvalitet želea.",
-    "Izbegavajte izlaganje kesica direktnoj sunčevoj svetlosti ili prekomernoj toploti, jer su proizvodi na bazi želea osetljivi na temperaturu.",
-    "Uvek pročitajte pakovanje proizvoda i bilo koji informativni materijal koji pružaju zdravstveni radnici.",
-    "Ako imate poznate alergije na Sildenafil ili srodna jedinjenja, prvo se konsultujte sa licenciranim medicinskim stručnjakom.",
-    "Suzdržite se od kombinovanja sa supstancama koje mogu uticati na cirkulaciju ili interagovati sa aktivnim sastojkom proizvoda.",
-    "Uverite se da su kesice pravilno zatvorene; ne koristite one koje izgledaju oštećeno ili neautorizovano otvarane.",
-    "Održavajte zdravu hidrataciju i opšte navike blagostanja kako biste podržali prirodne fiziološke procese.",
-    "Potražite medicinski savet ako imate postojeća zdravstvena stanja koja mogu uticati na cirkulaciju ili funkciju srca.",
-    "Ne mešajte ovaj žele sa nepoznatim dodacima ili neodobrenim proizvodima.",
-    "Nikada ne prekoračujte ono što sertifikovani medicinski stručnjak određuje kao prikladno za vaš zdravstveni profil."
-  ]
-},
 "super-kamagra-oral-jelly-sr": {
   id: "4",
   name: "Super Kamagra Oralni Žele",
@@ -387,7 +304,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "Super Kamagra Oral Jelly pripada grupi lekova poznatih kao PDE5 inhibitori. Deluje tako što opušta krvne sudove u penisu. Ovo omogućava protok krvi u penis i stvara erekciju kada ste seksualno uzbuđeni.",
@@ -490,8 +412,13 @@ const products = {
   pack_size: "1 x 4 Tablete",
   cas_id: "139755-83-2",
   description: "Kamagra 100 se koristi za lečenje erektilne disfunkcije pomažući muškarcima da postignu i održe erekciju kada su seksualno uzbuđeni.",
-  slug: "kamagra-100mg-polo-fruit",
-  image: "/products/Kamagra-Polo 02.jpg",
+  slug: "kamagra-polo",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Polo je žvakća formulacija koja sadrži Sildenafil citrat.",
@@ -595,7 +522,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 се користи за лечење еректилне дисфункције помажући мушкарцима да постигну и одрже ерекцију када су сексуално узбуђени.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Жвакаћа таблета садржи Силденафил цитрат у лако жвакаћем формату.",
@@ -736,7 +668,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 се користи за лечење еректилне дисфункције помажући мушкарцима да постигну и одрже ерекцију када су сексуално узбуђени.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Жвакаћа таблета садржи Силденафил цитрат у жвакаћем облику са укусом наранџе.",
@@ -918,7 +855,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Ово заузврат омогућава јачи проток крви како би се омогућило настајање ерекције.",
   slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg ефервесцентна садржи Силденафил цитрат у облику таблете која се раствара.",
@@ -1088,188 +1030,7 @@ const products = {
     "Подржите дугорочно васкуларно здравље кроз изборе начина живота као што су спавање, вежбање и управљање стресом."
   ]
 },
-"kamagra-100mg-effervescent-sr": {
-  id: "8",
-  name: "Kamagra-100 mg ефервесцентна таблета",
-  category: "Kamagra ефервесцентне таблете",
-  brand: "ED Ajanta Pharma",
-  dosage: "100 mg",
-  composition: "Силденафил цитрат 100mg",
-  form: "Ефервесцентна таблета",
-  pack_size: "1 x 7 ефервесцентних таблета",
-  cas_id: "139755-83-2",
-  description: "Ово заузврат омогућава јачи проток крви како би се омогућило настајање ерекције.",
-  slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
 
-  overview: [
-    "Kamagra 100 mg ефервесцентна садржи Силденафил цитрат у облику таблете која се раствара.",
-    "Таблета је дизајнирана да се раствори у води, стварајући лако конзумибилни питји раствор.",
-    "Овај формат може подржати бржу апсорпцију у поређењу са традиционалним чврстим таблетама.",
-    "Производ помаже у побољшању протока крви када дође до сексуалне стимулације.",
-    "Намењен је одраслима који имају потешкоће у одржавању или постизању ерекције.",
-    "Kamagra ефервесцентна припада групи лекова познатих као PDE5 инхибитори.",
-    "Питљиви облик може почети да делује брже због своје методе испоруке у течном облику.",
-    "Резултати се типично јављају само са сексуалном стимулацијом и не аутоматски.",
-    "Ефервесцентна таблета може почети да делује у року од 15 до 30 минута у зависности од метаболизма.",
-    "Корисници могу изабрати овај облик због практичности и лакшег гутања у поређењу са редовним таблетама.",
-    "Производ може пружити подршку неколико сати у зависности од индивидуалног одговора.",
-    "Није намењен за континуирану дневну употребу осим ако није медицински одобрен.",
-    "Узимање производа са алкохолом може смањити ефикасност и одложити појаву ефеката.",
-    "Храна са високим садржајем масти може успорити време апсорпције и смањити очекиване резултате.",
-    "Овај облик може бити од помоћи појединцима који преферирају опцију са укусом која се раствара.",
-    "Производ пружа привремену помоћ и не лечи трајно проблеме са ерекцијом.",
-    "Једна доза је генерално намењена пре планиране сексуалне активности.",
-    "Складиштење у сувој средини помаже у заштити квалитета ефервесцентне реакције.",
-    "Водорастворна таблета може подржати бржу дигестивну обраду.",
-    "Резултати могу варирати у зависности од начина живота, здравственог стања и старости.",
-    "Само одрасли треба да користе овај производ; није намењен за малолетнике.",
-    "Многи корисници бирају ову опцију због глатког и лаког начина уноса.",
-    "Ефекти су привремени и зависе од сексуалне стимулације током активног периода.",
-    "Производ може помоћи у побољшању самопоуздања у интимним ситуацијама.",
-    "Корисници обично растварају таблету у води пре конзумирања.",
-    "Правилна хидратација може подржати удобност и лакоћу употребе.",
-    "Време одговора може се разликовати у зависности од метаболизма и времена уноса.",
-    "Здравствени стручњак може помоћи у одређивању одговарајуће фреквенције употребе.",
-    "Ефервесцентни формат комбинује практичност, погодност и потенцијал бржег деловања.",
-    "Одговорна употреба може подржати контролисаније и задовољавајуће интимно искуство."
-  ],
-
-  sideEffects: [
-    "Неки појединци могу доживети благе главобоље након употребе производа.",
-    "Црвенило лица или топла сензација могу се привремено јавити.",
-    "Вртоглавица или осећај лаког ума може се јавити при устајању или брзом кретању.",
-    "Може се доживети блага стомачна нелагодност или повећана киселост након конзумирања.",
-    "Може се јавити привремена зачепљеност носа или кијање.",
-    "Осетљивост на јаку светлост може се приметити током активног периода.",
-    "Благи болови у мишићима или телу могу се повремено јавити.",
-    "Неки корисници могу доживети благу мучнину у зависности од осетљивости.",
-    "Привремено замагљен вид или променена јасноћа могу се појавити у ретким случајевима.",
-    "Топлота или црвенило око врата и образа могу се привремено јавити.",
-    "Неки појединци могу приметити повећану свесност о откуцајима срца.",
-    "Блага иритација или црвенило коже могу се краткотрајно јавити.",
-    "Може се десити привремено повећана осетљивост на светлост.",
-    "Умор или малаксалост могу се појавити након што ефекти престану.",
-    "Звање у ушима може се јавити у ретким привременим ситуацијама.",
-    "Тешкоће са спавањем могу се појавити ако се производ узима касно ноћу.",
-    "Може се јавити привремен бол у леђима или зглобовима.",
-    "Неки корисници могу доживети повећано знојење.",
-    "Благи привремени оток око очију може се појавити код неких појединаца.",
-    "Осетљивост расположења или иритабилност могу се јавити у зависности од толеранције.",
-    "Може се јавити привремен осећај притиска или тежине у глави.",
-    "Сува уста или блага послеукуса могу се приметити накратко.",
-    "Може се доживети мала немир или потешкоће у опуштености.",
-    "Могу се јавити привремене промене у визуелном контрасту или перцепцији.",
-    "Нелагодност у грудима треба да процени здравствен стручњак.",
-    "Узимање производа са тешким оброком може повећати дигестивну нелагодност.",
-    "Нежељени ефекти могу постати уочљивији ако се конзумирају са алкохолом.",
-    "Трајне или тешке реакције треба разговарати са медицинским стручњаком.",
-    "Већина нежељених ефеката је привремена и може се смањити како се производ метаболише.",
-    "Искуство ће варирати у зависности од здравља, времена, осетљивости и навика доцирања."
-  ],
-
-  warnings: [
-    "Не користите овај производ ако сте алергични на његове састојке.",
-    "Избегавајте употребу ако узимате нитрате, нитроглицерин или сличне лекове.",
-    "Консултујте се са лекаром пре употребе ако имате било каква срчана стања.",
-    "Није намењено за особе млађе од 18 година.",
-    "Избегавајте алкохол јер може ометати безбедност и толеранцију.",
-    "Не прекорачујте једну ефервесцентну таблету у року од 24 сата.",
-    "Зауставите употребу ако приметите необичне визуелне или слушне промене.",
-    "Овај производ није препоручљив за жене или децу.",
-    "Избегавајте употребу ако имате неконтролисане проблеме са крвним притиском.",
-    "Не мешајте са рекреационим дрогама или стимулансима.",
-    "Потражите хитну медицинску помоћ ако доживите нелагодност у грудима.",
-    "Не користите ако је производ истекао, мокар или оштећен.",
-    "Консултујте се са лекаром ако имате проблеме са јетром или бубрезима.",
-    "Зауставите употребу ако осећате трајну вртоглавицу или главобоље.",
-    "Потражите савет пре употребе ако се опорављате од недавне операције.",
-    "Не комбинујте са другим производима који садрже сличне активне састојке.",
-    "Зауставите употребу и потражите помоћ ако доживите отежано дисање.",
-    "Избегавајте возење или коришћење машина ако се осећате вртоглаво.",
-    "Чувајте даље од деце и неовлашћених корисника.",
-    "Не користите ако се растварени раствор чини мутним или необичним.",
-    "Пријавите оток, утрнулост или неочекиване сензације лекару.",
-    "Избегавајте комбиновање са непровереним биљним или алтернативним лековима.",
-    "Чувајте на сигурном месту да бисте спречили случајну хидратацију таблети.",
-    "Обавестите свог здравственог радника о свим лековима које узимате.",
-    "Потражите медицинску нега ако нелагодност траје дуже од очекиваног.",
-    "Користите опрезно ако имате циркулаторне или неуролошке проблеме.",
-    "Не игноришите необичне или продужене физичке реакције.",
-    "Избегавајте употребу ако је паковање пробијено или компромитовано.",
-    "Консултујте се са лекаром ако нисте сигурни у интеракције лекова.",
-    "Потражите хитну медицинску подршку ако доживите тешку вртоглавицу или изненадну слабост."
-  ],
-
-  administration: [
-    "Користите овај производ само под надзором лиценцираног здравственог стручњака.",
-    "Не мењајте време, фреквенцију или дозирање без медицинског одобрења.",
-    "Потпуно растварите ефервесцентну таблету у чаши воде пре конзумирања.",
-    "Осигурајте да је таблета непокварена, запечаћена и да није оштећена пре употребе.",
-    "Користите растварени раствор одмах припреме.",
-    "Не мешајте овај производ са другим супстанцама осим ако лекар није потврдио безбедност.",
-    "Потврдите да је производ погодан за ваше тренутно здравствено стање.",
-    "Проверите алергије на било коју од наведених састојака пре употребе.",
-    "Обавестите свог лекара о свим лековима и додацима које узимате.",
-    "Користите производ у мирном окружењу како бисте осигурали правилну администрацију.",
-    "Не узимајте више од једне ефервесцентне таблете истовремено осим ако није саветовано.",
-    "Одмах зауставите употребу ако се таблета чини измењеном или контаминираном.",
-    "Пратите сва медицинска упутства о правилној употреби и времену.",
-    "Избегавајте непознате биљне или непроверене додатке током употребе.",
-    "Консултујте се са лекаром ако вам је ово први пут да користите ову врсту формулације.",
-    "Чувајте ефервесцентне таблете на хладном, сувом месту да бисте одржали квалитет.",
-    "Не излажите таблете влази или влажности.",
-    "Прегледајте изглед таблете пре него што је ставите у воду.",
-    "Избегавајте употребу након тешког физичког напора осим ако није медицински одобрено.",
-    "Користите само један припремљени раствор по администрацији.",
-    "Избегавајте комбиновање овог производа са супстанцама које утичу на крвни притисак.",
-    "Правилно одбаците празно паковање да бисте спречили злоупотребу.",
-    "Одржавајте нормалну хидратацију осим ако ваш лекар не да другачије упутство.",
-    "Избегавајте коришћење производа ако се осећате необично слабо или болесно.",
-    "Консултујте се са лекаром ако је било које упутство за руковање или употребу нејасно.",
-    "Не користите са другим производима који садрже сличне активне састојке.",
-    "Одмах зауставите употребу ако ваше тело реагује необично.",
-    "Осигурајте да употреба буде усклађена са било којим текућим медицинским третманима које пратите.",
-    "Потражите медицинску пажњу ако нелагодност или необична осећања наставе.",
-    "Никада не делите овај производ са другима, без обзира на њихове симптоме."
-  ],
-
-  how_it_works: [
-    "Kamagra 100 mg ефервесцентна садржи Силденафил цитрат, широко проучено једињење познато по подршци побољшаној циркулацији у циљаним областима тела.",
-    "Ефервесцентни облик се брзо раствара у води, омогућавајући бржу апсорпцију у поређењу са стандардним таблетама.",
-    "Након апсорпције, једињење интерагира са PDE-5 ензимским путем, који природно регулише контракцију и релаксацију ткива крвних судова.",
-    "Модирисањем активности PDE-5, глатки мишићи специфичних крвних судова могу се ефикасније опуштати.",
-    "Ово опуштање промовише здрављу и одрживију циркулацију за кратко време.",
-    "Формула не покреће вештачки никакав физички одговор; она подржава природне процесе који су већ у току у телу.",
-    "Ефервесцентна испорука помаже у равномерној дистрибуцији активног састојка кроз систем.",
-    "Механизам се фокусира на побољшање нормалне васкуларне функције уместо на стварање стимулације.",
-    "Његови ефекти зависе од природних биолошких сигнала и здравог физиолошког функционисања.",
-    "Свеукупно, производ подржава гладак проток крви помажући телу да природно циркулише крв ефикасно."
-  ],
-
-  tips: [
-    "Чувајте ефервесцентне таблете на сувом месту да бисте спречили да влага утиче на њихов квалитет.",
-    "Увек држите оригиналну тубицу или паковање чврсто затворено да бисте очували свежину.",
-    "Проверите запечаћивање паковања и датум истека пре употребе да бисте осигурали интегритет производа.",
-    "Прегледајте све информације од здравствених стручњака у вези са активним састојком.",
-    "Избегавајте комбиновање са супстанцама за које је познато да утичу на крвни притисак осим ако није медицински одобрено.",
-    "Будите свесни било каквих осетљивости или алергија повезаних са Силденафилом или сличним састојцима.",
-    "Ако имате претходна здравствена стања, потражите стручно медицинско вођство.",
-    "Воздржите се од мешања са непознатим додацима или непровереним производима.",
-    "Обратите пажњу на то како ваше тело реагује и консултујте се са здравственим радником ако се било шта учини необичним.",
-    "Људи који узимају лекове за срце или крвни притисак увек треба да буду под медицинским надзором.",
-    "Не прекорачујте оно што сертификовани здравствен стручњак сматра безбедним за ваш здравствен профил.",
-    "Чувајте далеко од сунчеве светлости и влаге да бисте спречили преурањено пропадање.",
-    "Одбаците ефервесцентне таблете које изгледају натекле, напукле или промениле боју.",
-    "Купујте само од поузданих или овлашћених добављача да бисте осигурали аутентичност производа.",
-    "Ако нисте сигурни у погодност, лиценцирани медицински стручњак треба да буде примарни саветник.",
-    "Чувајте производ ван домашаја деце и особа за које није намењен.",
-    "Пратите сва ограничења и здравствене препоруке које дају стручњаци.",
-    "Одржавајте уравнотежену исхрану и хидратацију како бисте природно подржали укупну циркулацију.",
-    "Избегавајте спајање са тешким оброцима или алкохолом ради опште удобности и добробити.",
-    "Подржите дугорочно васкуларно здравље кроз изборе начина живота као што су спавање, вежбање и управљање стресом."
-  ]
-},
 "super-kamagra-sr": {
   id: "9",
   name: "Super Kamagra",
@@ -1284,8 +1045,14 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "Ови лекови делују тако што шире крвне судове у телу, посебно око гениталног подручја.",
-  slug: "super-kamagra-100-60",
+  slug: "super-kamagra",
+ 
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra комбинује Силденафил цитрат и Дапоксетин у једну таблету са двоструким дејством.",
@@ -1467,7 +1234,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg Таблета, орална терапија за еректилну дисфункцију, је цитратна сол силденафила, селективни инхибитор цикличног гуанозин монофосфата.",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "Kamagra Expo 100 mg садржи Силденафил цитрат, добро познату PDE5 инхибиторску формулацију.",
@@ -1649,7 +1421,11 @@ const products = {
   cas_id: "171596-29-5",
   description: "Ovi lekovi deluju tako što šire krvne sudove u telu, posebno u području genitalija.",
   slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
 
   overview: [
@@ -1838,6 +1614,11 @@ const products = {
   description: "Ovi lekovi deluju tako što šire krvne sudove u telu, posebno oko genitalnog područja.",
   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
 
   overview: [
@@ -2025,7 +1806,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Ловегра орални гел (женски Силденафил цитрат 100 мг гел) је брзоделујући и ефикасан лек који је посебно формулисан за лечење поремећаја женског сексуалног узбуђења (FSAD) и женске сексуалне дисфункције (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Ловегра 100 мг орални гел садржи Силденафил цитрат у брзоапсорбујућем облику гела.",
@@ -2206,8 +1992,13 @@ const products = {
   pack_size: "1 x 4 tablete",
   cas_id: "139755-83-2",
   description: "U poslednje vreme, otvorena diskusija o seksualnim stanjima kod žena postala je sve češća.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg sadrži Sildenafil citrat formulisan za podršku ženskog seksualnog odgovora.",
@@ -2387,8 +2178,13 @@ const products = {
   pack_size: "1 x 10 tableta",
   cas_id: "224785-90-4",
   description: "Povećava protok krvi ka penisu kako bi pomogao muškarcima da postignu erekciju.",
-  slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+ slug: "valif-20mg-tablet",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg sadrži Vardenafil, PDE5 inhibitor koji se koristi za podršku erektilne funkcije.",
@@ -12894,8 +12690,13 @@ const products = {
     "pack_size": "Jedna kutija sadrži 10 x 10 tableta.",
     "cas_id": "171596-29-5",
     "description": "Tadarise tablete 20mg generički Cialis se koriste za lečenje erektilne disfunkcije, impotencije kod muškaraca.",
-    "slug": "tadarise-pro-20",
-    "image": "/products/Tadarise-Pro-20.png",
+    slug: "tadarise-pro-20",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
     "overview": [
       "Tadarise Pro-20 sadrži Tadalafil 20 mg i dizajniran je da podrži muškarce koji imaju erektilnu disfunkciju.",
       "Ova jačina je jedna od najčešće propisivanih doza za primetne i pouzdane rezultate.",
@@ -13080,8 +12881,13 @@ const products = {
     "pack_size": "Jedna kutija sadrži 10 x 10 tableta.",
     "cas_id": "171596-29-5",
     "description": "Tadarise tablete 20mg generički Cialis se koriste za lečenje erektilne disfunkcije, impotencije kod muškaraca.",
-    "slug": "tadarise-20",
-    "image": "/products/Tadarise-20.png",
+    slug: "tadarise-20",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
     "overview": [
       "Tadarise-20 sadrži Tadalafil 20 mg i koristi se za podršku muškarcima koji imaju erektilnu disfunkciju.",
       "Ova jačina se smatra jakom i obično se propisuje kada niže doze nisu dovoljno efektivne.",
@@ -21062,8 +20868,13 @@ administration: [
     pack_size: "10 x 10 Tableta",
     cas_id: "98319-26-7",
     description: "Sunpecia se koristi za lečenje benignog uvećanja prostate (BPH) i poboljšanje protoka urina kod muškaraca.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
   
   overview: [
     "Sunpecia sadrži Finasterid, dostupan u jačinama od 1mg i 5mg, koji se koristi za lečenje benignog uvećanja prostate (BPH) i muškog tipa opadanja kose.",
@@ -21233,8 +21044,13 @@ administration: [
     pack_size: "3 x 10 Tablets",
     cas_id: "53179-13-8",
     description: "Pirfisun 200 tableta leči idiopatsku plućnu fibrozu i smanjuje ožiljke i oteklina pluća.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
    
     overview: [
         "Pirfisun tableta sadrži Pirfenidon 200mg, lek na recept koji se koristi za lečenje idiopatske plućne fibroze (IPF).",

