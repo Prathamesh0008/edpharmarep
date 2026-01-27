@@ -1058,7 +1058,7 @@ const products = {
  
   image: "/products/Super_Kamagra_03.jpg",
   "additionalImages": [
-    "/products/Super_Kamagra_03.jpg",
+    "/products/100mg-super-kamagra-tablets.webp",
     "/products/Super_Kamagra_03.jpg",
   
   ],
@@ -1619,10 +1619,10 @@ const products = {
   cas_id: "171596-29-5",
   description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
   slug: "tadalis-sx-20mg",
-  image: "/products/tadalis-sx 01.jpg",
+  image: "/products/Tadalis-SX-20mg.webp",
   "additionalImages": [
+    "/products/Tadalis-SX-20mg 2.png",
     "/products/Tadalis-SX-20mg 3.png",
-    "/products/Tadalis-SX-20mg.webp",
   
   ],
 
@@ -2366,7 +2366,12 @@ const products = {
   cas_id: "224785-90-4",
   description: "Vardenafil 20mg Oral Jelly are used in the treatment of sexual problems in men such as erectile dysfunction and impotence.",
   slug: "valif-20mg-oral-jelly",
-  image: "/products/valif-20mg 03.jpeg",
+  image: "/products/valif 20 2.png",
+  "additionalImages": [
+    "/products/valif 20 2.png",
+    "/products/valif 20 1.png",
+  
+  ],
   
 
   overview: [
@@ -2550,6 +2555,7 @@ const products = {
   description: "It’s an alternative medicine for Viagra at a cost-effective rate.",
   slug: "cenforce-25mg",
   image: "/products/cenforce-25mg 01.jpg",
+  
 
   overview: [
     "Cenforce 25 mg contains Sildenafil Citrate in a lower strength formulation.",
@@ -2731,7 +2737,13 @@ const products = {
   cas_id: "139755-83-2",
   description: "It is a drug for erectile dysfunction treatment and known as a male impotency drug.",
   slug: "cenforce-50mg",
-  image: "/products/cenforce-50mg -01.jpg",
+  image: "/products/cenforce-50-mg-1-side 1.png",
+   "additionalImages": [
+    "/products/cenforce-50-mg-1-side 1.png",
+    "/products/cenforce-50-mg-1-side 1.png",
+
+  ],//public\products\cenforce 50.png
+
 
   overview: [
     "Cenforce 50 mg contains Sildenafil Citrate, a commonly used PDE5 inhibitor.",
@@ -2913,7 +2925,11 @@ const products = {
   cas_id: "139755-83-2",
   description: "Cenforce stops the activity of the enzyme which allows the muscles of the blood vessels of the penis to relax creating an increased flow of blood.",
   slug: "cenforce-100mg",
-  image: "/products/Cenforce-100mg 03.jpg",
+  image: "/products/cenforce 100_1.png",
+   "additionalImages": [
+    "/products/cenforce 100_2.png",
+    "/products/cenforce 100_3.png",
+  ],
 
   overview: [
     "Cenforce 100 mg contains Sildenafil Citrate, a widely used PDE5 inhibitor for erectile support.",
@@ -3095,8 +3111,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "This medicine helps men attain an enjoyable experience by improving overall sexual performance.",
   slug: "cenforce-120mg",
-  image: "/products/Cenforce-100mg 02.jpg",
-
+  image: "/products/cenforce_120_mg_1.webp",
+ "additionalImages": [
+    "/products/cenforce_120_mg_2.webp",
+    "/products/cenforce_120_mg_1.webp",
+  
+  ],
   overview: [
     "Cenforce 120 mg contains Sildenafil Citrate formulated in a higher-strength tablet.",
     "It is intended for individuals requiring stronger support for erectile response than lower dosages provide.",
@@ -3277,8 +3297,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "It is used for treating erectile dysfunction condition in men.",
   slug: "cenforce-130mg",
-  image: "/products/kamagra_gold 50mg 02.jpg",
-
+  image: "/products/cenforce 130_1.png",
+ "additionalImages": [
+    "/products/cenforce 130_2.png",
+    "/products/cenforce 130_3.png",
+  
+  ],
   overview: [
     "Cenforce 130 mg contains Sildenafil Citrate in a high-strength formulation designed for stronger erectile support.",
     "It is intended for users who require a more pronounced effect compared to standard strengths such as 50 mg or 100 mg.",
@@ -3459,7 +3483,13 @@ const products = {
   cas_id: "139755-83-2",
   description: "It is used for erectile dysfunction treatment, a condition in which the correct erection of the penis doesn’t occur.",
   slug: "cenforce-150mg",
-  image: "/products/cenforce-150mg 01.jpg",
+  image: "/products/cenforce 150_1.png",
+   "additionalImages": [
+    "/products/cenforce 150_2.png",
+    "/products/cenforce 150_1.png",
+  
+  ],
+
 
   overview: [
     "Cenforce 150 mg contains Sildenafil Citrate in a high-strength formulation intended for stronger support.",
@@ -3641,7 +3671,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "It is the highest dosage form of sildenafil citrate and therefore, should only be used in extreme cases of erectile dysfunction.",
   slug: "cenforce-200mg",
-  image: "/products/cenforce-200mg 01.jpg",
+  image: "/products/Cenforce 200_1.png",
+   "additionalImages": [
+    "/products/Cenforce 200_2.png",
+    "/products/Cenforce 200_1.png",
+  
+  ],
 
   overview: [
     "Cenforce 200 mg contains Sildenafil Citrate in its strongest commonly available dosage form.",
@@ -3818,7 +3853,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "It contains Sildenafil Citrate as the active ingredient.",
   slug: "cenforce-soft-100mg",
-  image: "/products/cenforce-soft-100mg 01.jpg",
+  image: "/products/Cenforce soft 100_1.png",
+   "additionalImages": [
+    "/products/Cenforce soft 100_2.png",
+    "/products/Cenforce soft 100_1.png",
+  
+  ],
 
   overview: [
     "Cenforce Soft 100 contains Sildenafil Citrate in a chewable tablet format designed for easier intake.",
@@ -4003,8 +4043,12 @@ const products = {
   },
   description: "Cenforce-D is a new form of hybrid combination treatment for erectile dysfunction and premature ejaculation.",
   slug: "cenforce-d-100-60",
-  image: "/products/cenforce-d-tablets 01.jpg",
-
+  image: "/products/cenforce-d_1.png",
+   "additionalImages": [
+    "/products/cenforce-d_2.png",
+    "/products/cenforce-d_1.png",
+  
+  ],
   overview: [
     "Cenforce-D contains two active ingredients: Sildenafil Citrate and Dapoxetine.",
     "Sildenafil supports erectile response by helping improve blood flow during sexual stimulation.",
@@ -4186,8 +4230,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Cenforce-FM is one of the tablets known as the “female”. It contains 100mg of the active ingredient Sildenafil citrate.",
   slug: "cenforce-fm-100mg",
-  image: "/products/cenforce-fm 03.jpg",
-
+  image: "/products/Cenforce fm tablet.png",
+ "additionalImages": [
+    "/products/Cenforce fm_2.png",
+    "/products/cenforce-fm-100-mg-1.png",
+  
+  ],
   overview: [
     "Cenforce-FM contains Sildenafil Citrate in a formulation intended for female use.",
     "It may support improved physical responsiveness during intimacy when stimulation occurs.",
@@ -4368,7 +4416,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Cenforce Professional can be taken at least 30 minutes prior to having sex. But ideally, for it to be highly effective and give the best results, Cenforce should be taken an hour prior to engaging in sexual activity.",
   slug: "cenforce-professional",
-  image: "/products/cenforce-professional 01.jpg",
+  image: "/products/Cenforce professional_1.png",
+   "additionalImages": [
+    "/products/Cenforce professional_2.png",
+    "/products/cenforce-professional-100-mg-1-front.png",
+  
+  ],
 
   overview: [
     "Cenforce Professional contains Sildenafil Citrate in a sublingual format designed for faster absorption.",
@@ -4550,7 +4603,12 @@ const products = {
   cas_id: "139755-83-2",
   description: "Sildenafil 100mg Oral Jelly medication is a phosphodiesterase type 5 (PDE5) inhibitor, prescribed for erectile dysfunction (impotence).",
   slug: "cenforce-oral-jelly-100mg",
-  image: "/products/cenforce oral jelly 01.jpg",
+  image: "/products/Cenforce oral jelly.png",
+   "additionalImages": [
+    "/products/cenforce oral jelly 2.png",
+    "/products/cenforce oral jelly sachets.png",
+  
+  ],
 
   overview: [
     "Cenforce Oral Jelly 100 mg contains Sildenafil Citrate in a fast-absorbing gel format.",
@@ -4727,8 +4785,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Vidalista 2.5 mg contains the active ingredient Tadalafil, which is used to treat erectile dysfunction in men.",
   slug: "vidalista-2-5mg",
-  image: "/products/vidalista-2.5mg 02.jpg",
-
+  image: "/products/vidalista 2.5 1.png",
+ "additionalImages": [
+    "/products/vidalista 2.5 2.png",
+    "/products/vidalista 2.5 3.png",
+  
+  ],
   overview: [
     "Vidalista 2.5 mg contains Tadalafil in a very low-dose formulation.",
     "It is often used as a starting or maintenance dose for individuals seeking mild erectile support.",
@@ -4908,9 +4970,13 @@ const products = {
   pack_size: "10 x 10 Tablets",
   cas_id: "171596-29-5",
   description: "It is only used to treat the physical problems associated with erectile dysfunction.",
-  slug: "vidalista-5mg",
-  image: "/products/vidalista-5-mg 01.jpg",
-
+  slug: "vidalista-5",
+  image: "/products/tadalafil-tablet-5-mg-1000x1000.webp",
+   "additionalImages": [
+    "/products/vidalista-5mg-tadalafil-tablets-1000x1000.webp",
+    "/products/vidalista-5mg-0005-1000x1000.webp",
+  
+  ],
   overview: [
     "Vidalista 5 mg contains Tadalafil in a low-dose formulation designed for consistent erectile support.",
     "This strength is commonly used for daily or regular management of erectile dysfunction.",
@@ -5091,7 +5157,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "It is only used to treat the physical problems associated with erectile dysfunction.",
   slug: "vidalista-10mg",
-  image: "/products/vidalista-10-mg 03.jpg",
+  image: "/products/vidalista-10-box.webp",
+   "additionalImages": [
+    "/products/Vidalista-10-mg.jpg",
+    "/products/vidalista-10-box.webp",
+  
+  ],
 
   overview: [
     "Vidalista 10 mg contains Tadalafil in a low-dose formulation suitable for controlled erectile support.",
@@ -5273,7 +5344,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Only used to treat the physical problems associated with erectile dysfunction.",
   slug: "vidalista-20mg",
-  image: "/products/Vidalista °20mg 01.jpg",
+  image: "/products/Vidalista_1.webp",
+ "additionalImages": [
+    "/products/Vidalista_2.webp",
+    "/products/Vidalista_3.webp",
+  
+  ],
 
   overview: [
     "Vidalista 20 mg contains Tadalafil and is considered a standard mid-range strength for erectile support.",
@@ -5455,8 +5531,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "Only used to treat the physical problems associated with erectile dysfunction.",
   slug: "vidalista-40mg",
-  image: "/products/Vidalista 60mg 0 2.jpg",
-
+  image: "/products/vidalista_40mg_1.webp",
+ "additionalImages": [
+    "/products/vidalista-40mg_2.webp",
+    "/products/vidalista-40mg-side_3.webp",
+  
+  ],
   overview: [
     "Vidalista 40 mg contains Tadalafil in a higher-strength formulation for erectile support.",
     "It is typically used when lower strengths such as 10 mg or 20 mg are not effective enough.",
@@ -5637,8 +5717,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "This enhances the blood flow to the male penile organ resulting in a rigid erection for a longer time.",
   slug: "vidalista-60mg",
-  image: "/products/Vidalista 60mg 0 2.jpg",
-
+  image: "/products/vidalista-60mg_1.webp",
+ "additionalImages": [
+    "/products/vidalista-60mg_2.webp",
+    "/products/vidalista-60mg-side_3.webp",
+  
+  ],
   overview: [
     "Vidalista 60 mg contains Tadalafil in a high-strength formulation intended for erectile support.",
     "This strength is generally used when lower doses such as 10 mg, 20 mg, or 40 mg have not provided enough effectiveness.",
@@ -5818,9 +5902,13 @@ const products = {
   pack_size: "10 x 10 Tablets",
   cas_id: "171596-29-5",
   description: "Vidalista 80 works only if the patient is sexually stimulated.",
-  slug: "vidalista-80mg",
-  image: "/products/vidalista-black-80-mg 01.jpg",
-
+  slug: "vidalista-80",
+  image: "/products/vidalista 80_1.webp",
+ "additionalImages": [
+    "/products/vidalista 80_2.png",
+    "/products/vidalista 80_3.png",
+  
+  ],
   overview: [
     "Vidalista 80 mg contains a high dose of Tadalafil and is intended for strong erectile support.",
     "It is generally recommended only for individuals who did not respond adequately to lower strengths.",
@@ -6001,8 +6089,12 @@ const products = {
   cas_id: "171596-29-5",
   description: "This enhances the blood flow to the male penile organ resulting in a rigid erection for a longer time.",
   slug: "vidalista-black-80mg",
-  image: "/products/vidalista-black-80-mg 03.jpg",
-
+  image: "/products/vidalista-black-80-mg_1.webp",
+ "additionalImages": [
+    "/products/vidalista-black-80-mg_2.png",
+    "/products/vidalista-black-80-mg_3.png",
+  
+  ],
   overview: [
     "Vidalista Black 80 contains Tadalafil in a high-strength formulation for enhanced erectile support.",
     "It is designed for individuals who require strong and sustained performance.",
@@ -6186,7 +6278,12 @@ const products = {
   },
   description: "Only used to treat the physical problems associated with erectile dysfunction.",
   slug: "super-vidalista-20-60",
-  image: "/products/super-vidalista 03.jpg",
+  image: "/products/super-vidalista_1.png",//public\products\Super-Kamagra-Oral-Jelly 3.png
+  "additionalImages": [
+    "/products/super-vidalista_1.webp",
+    "/products/vidalista-black-80-mg_3.png",
+  
+  ],
 
   overview: [
     "Super Vidalista contains a combination of Tadalafil 20 mg and Dapoxetine 60 mg.",
@@ -6369,9 +6466,13 @@ const products = {
   pack_size: "10x10",
   cas_id: "171596-29-5",
   slug: "vidalista-ct-20mg",
-  image: "/products/vidalista-ct 02.jpg",
+  image: "/products/vidalista20mg_1.webp",
   description: "Tadalafil has two main uses. The most common is to treat erectile dysfunction in men.",
-
+ "additionalImages": [
+    "/products/vadalista20mg_2.png",
+    "/products/vadalista20mg-3.png",
+  
+  ],
   overview: [
     "Vidalista CT 20 mg contains Tadalafil in a chewable tablet form for easier administration.",
     "It is primarily used to support erectile response in men experiencing erectile dysfunction.",
@@ -6536,10 +6637,14 @@ const products = {
   packing: "10x10 tablets",
   pack_size: "10x10",
   cas_id: "171596-29-5",
-  slug: "vidalista-professional-20mg",
-  image: "/products/cenforce-professional 03.jpg",
+  slug: "vidalista-professional",
+  image: "/products/vidalista-professional-20-mg_1.webp",
   description: "Vidalista Professional Tablet is utilized to treat erectile brokenness in men. It increments blood stream to the penis to assist men with getting an erection.",
-
+ "additionalImages": [
+    "/products/vidalista-professional-20-mg_2.jpg",
+    "/products/vidalista-professional-20-mg_3.jpg",
+  
+  ],
   overview: [
     "Vidalista Professional 20 mg contains Tadalafil in a sublingual tablet format for faster absorption.",
     "The tablet dissolves under the tongue, allowing quicker entry into the bloodstream compared to standard tablets.",
@@ -6720,8 +6825,12 @@ const products = {
   cas_id: "224785-91-5",
   description: "Vilitra 10 mg is a solid dosage form, which is utilized by men to cure erectile malfunction.",
   slug: "vilitra-10mg",
-  image: "/products/Vilitra 10mg 01.jpg",
-
+  image: "/products/Vilitra10_1.png",
+  "additionalImages": [
+    "/products/Vilitra10_2.png",
+    "/products/vilitra_10_3.webp",
+  
+  ],
   overview: [
     "Vilitra 10 mg contains Vardenafil and is used to support erectile function in men.",
     "The medication works by increasing blood flow to the penis during sexual stimulation.",
@@ -6902,8 +7011,12 @@ const products = {
   cas_id: "224785-91-5",
   description: "Vilitra 20mg is the right medication to heal erection disorders. The prevalence of ED increases with age.",
   slug: "vilitra-20mg",
-  image: "/products/vilitra-20mg 01.jpg",
-
+  image: "/products/vilitra 20_1.png",
+ "additionalImages": [
+    "/products/vilitra_20_2.webp",
+    "/products/vilitra 20_3.jpeg",
+  
+  ],
   overview: [
     "Vilitra 20 mg contains Vardenafil and is used to support erectile function in men.",
     "The medication increases blood flow to the penis during sexual stimulation.",
@@ -7084,7 +7197,12 @@ const products = {
   cas_id: "224785-91-5",
   description: "Vilitra 40mg is a solid dosage form used by men to cure erectile malfunction.",
   slug: "vilitra-40mg",
-  image: "/products/Vidalista °40mg 02.jpg",
+  image: "/products/vilitra 40mg.png",
+   "additionalImages": [
+    "/products/vilitra-40-mg.webp",
+    "/products/vilitra 40mg.png",
+  
+  ],
 
   overview: [
     "Vilitra 40 mg contains Vardenafil and is a higher-dose option for erectile support in men.",
@@ -7265,8 +7383,13 @@ const products = {
   packing: "10x10 tablets",
   pack_size: "10x10",
   cas_id: "224785-91-5",
-  slug: "vilitra-60mg",
-  image: "/products/vilitra-60mg 01.jpg",
+  slug: "vilitra-60",
+  image: "/products/vardenafil-60-mg-vilitra-60mg.jpeg",
+   "additionalImages": [
+    "/products/Vilitra-60-Mg_2.webp",
+    "/products/vardenafil-60-mg-vilitra-60mg.jpeg",
+  
+  ],
   description: "Vilitra 60mg is a medicament that treats the inability to attain the desired erection for healthy sexual intercourse.",
 
   overview: [
@@ -7439,7 +7562,12 @@ const products = {
   },
   description: "Super Vilitra is a medicament that treats the inability to get or attain the desired erection for healthy sexual intercourse.",
   slug: "super-vilitra",
-  image: "/products/super-vilitra-tablets 01.jpg",
+  image: "/products/super_vilitra_1.webp",
+   "additionalImages": [
+    "/products/super_vilitra_2.webp",
+    "/products/super_vilitra_3.webp",
+  
+  ],
 
   overview: [
     "Super Vilitra contains a combination of Vardenafil 20 mg and Dapoxetine 60 mg.",
@@ -7806,6 +7934,11 @@ const products = {
   description: "Avanafil is used to treat erectile dysfunction (ED: impotence; inability to get or keep an erection in men).",
   slug: "avana-50mg",
   image: "/products/Avana50.png",
+  "additionalImages": [
+    "/products/avanafil-avana-50mg_2.webp",
+    "/products/avanafil-avana-50mg-tablet_3.webp",
+  
+  ],//public\products\Avana 200_1.png
 
   overview: [
     "Avana-50 contains Avanafil 50 mg and is used to support erectile function in men with ED.",
@@ -7987,7 +8120,13 @@ const products = {
   pack_size: "1x4",
   cas_id: "330784-47-9",
   slug: "avana-100mg",
-  image: "/products/Avana-100.png",
+  image: "/products/Avana-100mg_2.png",
+  "additionalImages": [
+    "/products/Avana-100mg_1.jpg",
+    "/products/Avana-100mg_3.png",
+    
+  ],
+
   description: "The primary indication of Avana is treatment of inability to sustain satisfaction to complete intercourse.",
 
   overview: [
@@ -8160,7 +8299,12 @@ const products = {
   pack_size: "1x4",
   cas_id: "330784-47-9",
   slug: "avana-200mg",
-  image: "/products/Avana-200.png",
+  image: "/products/avana-200-mg-1000x1000.webp",
+  "additionalImages": [
+    "/products/avana-200-mg-1000x1000.webp",
+    "/products/Avana-200mg.png",
+  
+  ],
   description: "Avana-200 contains Avanafil, used in the treatment of erectile dysfunction (inadequate penile erection during sexual activity).",
 
   overview: [
@@ -8346,9 +8490,14 @@ const products = {
     "dapoxetine": "129938-20-1"
   },
   slug: "top-avana",
-  image: "/products/Top-Avana.png",
+  image: "/products/TOP AVANA.png",
+   "additionalImages": [
+    "/products/TOP AVANA.png",
+    "/products/TOP AVANA.png",
+  
+  ],
   description: "Used to help men with erectile dysfunction impotence, to achieve and maintain an erection when sexually aroused.",
-
+ 
   overview: [
     "Top Avana contains a combination of Avanafil 50 mg and Dapoxetine 60 mg.",
     "Avanafil supports erectile response by increasing blood flow to the penis during sexual stimulation.",
@@ -10622,8 +10771,12 @@ const products = {
     cas_id: "224785-90-4",
     description: "Vardenafil is used to treat erectile dysfunction (impotence; inability to get or keep an erection) in men.",
     slug: "zhewitra-10",
-    image: "/products/Zhewitra-10.png",
-   
+    image: "/products/zhewitra 10_1.png",
+    "additionalImages": [
+    "/products/zhewitra 10_2.png",
+    "/products/zhewitra 10_3.png",
+  
+  ],
   overview: [
     "Zhewitra 10 contains Vardenafil 10 mg, a trusted medication used to support men experiencing erectile dysfunction.",
     "It helps increase blood flow to the penile tissue, improving the ability to achieve a firm and lasting erection.",
@@ -10814,7 +10967,12 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra-20 is used for erectile dysfunction and impotency in males.",
     slug: "zhewitra-20",
-    image: "/products/Zhewitra-20.png",
+    image: "/products/zhewitra 20_1.png",
+     "additionalImages": [
+    "/products/zhewitra 20_3.png",
+    "/products/zhewitra 20_1.png",
+  
+  ],
    
   overview: [
     "Zhewitra 20 contains Vardenafil 20 mg, a medication used to treat erectile dysfunction in men.",
@@ -11007,7 +11165,12 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra oral jelly comes in sachets and is a fast-acting medicine. It is for men who want a rock hard erection which lasts long.",
     slug: "zhewitra-20-oral-jelly",
-    image: "/products/Zhewitra-20-Oral-Jelly.png",
+    image: "/products/zhewitra-20-oral-jelly_1.png",
+     "additionalImages": [
+    "/products/zhewitra-20-oral-jelly_2.png",
+    "/products/zhewitra-20-oral-jelly-3.png",
+  
+  ],
    
   overview: [
     "Zhewitra 20 Oral Jelly contains Vardenafil 20 mg and is designed for treating erectile dysfunction in men.",
@@ -11197,8 +11360,12 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra 40 mg is a brand of Sunrise remedies and contains Vardenafil HCL in the constitution of 40 mg.",
     slug: "zhewitra-40",
-    image: "/products/Zhewitra-40.png",
-
+    image: "/products/zhewitra-40_1.png",
+     "additionalImages": [
+    "/products/zhewitra-40_2.png",
+    "/products/zhewitra-40-3.png",
+  
+  ],
 
   overview: [
     "Zhewitra 40 contains Vardenafil 40 mg and is used for the treatment of erectile dysfunction in men.",
@@ -11388,8 +11555,12 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra 60 mg is recommended for erectile dysfunction and impotency in males.",
     slug: "zhewitra-60",
-    image: "/products/Zhewitra-60.png",
+    image: "/products/zhewitra-60_1.png",
+   "additionalImages": [
+    "/products/zhewitra60-2.png",
+    "/products/zhewitra-60_3.png",
   
+  ],
   overview: [
     "Zhewitra 60 contains Vardenafil 60 mg, a high-strength medication used for treating erectile dysfunction in men.",
     "This dosage is intended for individuals who require stronger erectile support than standard or moderate formulations.",
@@ -11580,8 +11751,12 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra Soft 20mg is another nonexclusive Levitra with 20 mg Vardenafil as dynamic fixing.",
     slug: "zhewitra-soft-20",
-    image: "/products/Zhewitra-Soft-20.png",
-    
+    image: "/products/Zhewitrasoft_1.png",
+     "additionalImages": [
+    "/products/Zhewitrasoft_2.png",
+    "/products/Zhewitrasoft-3.png",
+  
+  ],
   overview: [
     "Zhewitra Soft 20 contains Vardenafil 20 mg in a soft chewable tablet format designed to treat erectile dysfunction in men.",
     "The soft formulation allows faster absorption compared to traditional swallowed tablets.",
@@ -14453,8 +14628,12 @@ administration: [
   cas_id: "171596-29-5 / 129938-20-1",
   description: "Top Tadarise is a combination medicine used to treat the physical problems associated with erectile dysfunction and premature ejaculation in males.",
   slug: "top-tadarise",
-  image: "/products/Top-Tadarise.png",
-
+  image: "/products/top-tadarise12-sunrise_1.png",
+    "additionalImages": [
+    "/products/top-tadarise12-sunrise_2.png",
+    "/products/top-tadarise12-sunrise-3.png",
+  
+  ],
   overview: [
     "Top Tadarise contains a dual-action combination of Tadalafil 20 mg and Dapoxetine 30 mg.",
     "This formulation is designed to address both erectile dysfunction and premature ejaculation simultaneously.",
@@ -16328,9 +16507,13 @@ administration: [
     pack_size: "One Box Contains 7 X 5gm Sachets.",
     cas_id: "171599-83-0",
     description: "It contains Sildenafil Oral Jelly 100mg to enhance your sexual life and treat erectile dysfunction.",
-    slug: "malegra-100-oral-jelly",
-    image: "/products/Malegra-100-Oral-Jelly.png",
-   
+    slug: "malegra100-oral-jelly",
+    image: "/products/1681226857_78464_0-Photoroom.png",
+    "additionalImages": [
+    "/products/1681226857_78464_0-Photoroom.png",
+    "/products/1681226857_78464_0-Photoroom.png",
+  
+  ],
   overview: [
     "Malegra 100 Oral Jelly contains Sildenafil 100mg formulated as an easy-to-consume jelly instead of a traditional tablet.",
     "It is used to treat erectile dysfunction by improving the body's natural response to sexual stimulation.",
@@ -18038,6 +18221,7 @@ administration: [
     "Regular medical check-ups help ensure safe and effective use of Sildenafil."
   ]
   },
+  
   "Malegra100-Gold-en":{
     id: "101",
     name: "Malegra 100 Gold",
@@ -18241,7 +18425,11 @@ warnings: [
   cas_id: "N/A",
   description: "Penon Cream for men is a herbal massage cream to enhance the length of men's private organ.",
   slug: "penon-cream",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/penon-cream-for-man-packaging-size-100-gm-1000x1000.png",
+  "additionalImages": [
+    "/products/penon-cream_2.png",
+    "/products/penon-cream_3.png",
+  ],
   
   overview: [
     "Penon Cream is a natural herbal formulation designed to support men's intimate health and confidence.",
@@ -18400,7 +18588,12 @@ administration: [
     cas_id: "N/A",
     description: "Naron Cream is an all-natural product, fragrance-free, without hormones and chemicals.",
     slug: "naron-cream",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/naron-cream_1.png",//public\products\naron-cream_1.png
+    "additionalImages": [
+    "/products/naron-cream_2.png",
+    "/products/naron-cream_3.png",
+  
+  ],
    
   overview: [
     "Naron Cream is a natural herbal formulation specially designed for women’s intimate wellness and comfort.",
@@ -18544,7 +18737,12 @@ administration: [
     cas_id: "N/A",
     description: "Grafix cream is a non-surgical breast enlargement cream to achieve size and shape of breasts.",
     slug: "grafix-cream",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Grafix cream_1.png",//public\products\Grafix cream_2.png
+    "additionalImages": [
+    "/products/Grafix cream_2.png",
+    "/products/Grafix cream_3.png",
+  
+  ],
    
   overview: [
     "Grafix Cream is a herbal-based formulation designed to support natural breast enhancement and firmness in women.",
@@ -18830,7 +19028,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil helps relax smooth muscles in blood vessel walls and increases blood flow.",
     slug: "tadafem-20",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Tadafem 20_1.png",//public\products\Tadafem 20_2.png
+    "additionalImages": [
+    "/products/Tadafem 20_2.png",
+    "/products/Tadafem 20_3.png",
+  
+  ],
    
   overview: [
     "Tadafem-20 is formulated for women who may experience reduced physical arousal, lowered response, or difficulty engaging in intimate activity.",
@@ -18966,7 +19169,7 @@ administration: [
     "Regular check-ups help ensure safe, suitable, and effective use over time."
   ]
   },
-  "Clofi-25-en":{
+  "clofi-25-en":{
     id: "107",
     name: "Clofi-25",
     brand: "ED Sunrise Remedies",
@@ -18978,7 +19181,12 @@ administration: [
     cas_id: "50-41-9",
     description: "Powerful medication for women with PCOS, amenorrhea-galactorrhoea disorder.",
     slug: "clofi-25",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Clofi 25.png",
+    "additionalImages": [
+    "/products/clofi-25_2.png",
+    "/products/clofi-25_3.png",
+  
+  ],
   
   overview: [
     "Clofi-25 contains Clomiphene Citrate, a selective estrogen receptor modulator commonly prescribed to support ovulation in women experiencing fertility difficulties.",
@@ -19112,7 +19320,12 @@ administration: [
     cas_id: "50-41-9",
     description: "Powerful medication for women with PCOS and related conditions.",
     slug: "clofi-50",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Clofi50_2.png",//public\products\Clofi50_2.png
+    "additionalImages": [
+    "/products/Clofi50_3.png",
+    "/products/Clofi 50.png",
+  
+  ],
    
   overview: [
     "Clofi-50 contains Clomiphene Citrate, a well-known fertility-support medication used to help stimulate ovulation in women experiencing difficulty conceiving.",
@@ -19247,7 +19460,12 @@ administration: [
   cas_id: "50-41-9",
   description: "This medication is no doubt powerful in ladies with Polycystic Ovary Syndrome (PCOS), amenorrhea-galactorrhoea disorder.",
   slug: "clofi-100",
-  image: "/products/kamagra_gold 50mg 02.jpg",
+  image: "/products/Clofi 100.png",
+  "additionalImages": [
+    "/products/Clofi 100.png",
+    "/products/Clofi 100.png",
+  
+  ],
   
   overview: [
     "Clofi-100 contains Clomiphene Citrate and is commonly prescribed to help induce ovulation in women experiencing infertility related to ovulatory dysfunction.",
@@ -19382,8 +19600,12 @@ administration: [
     cas_id: "268203-93-6",
     description: "Zudena 100 contains Udenafil 100 mg that helps treat erectile dysfunction in men by increasing blood flow to the penis by relaxing muscles in penile blood vessels.",
     slug: "zudena-100",
-    image: "/products/kamagra_gold 50mg 02.jpg",
-   
+    image: "/products/Zudena-100_3.png",
+    "additionalImages": [
+    "/products/zudena-100-mg-tablet-1000x1000.png",
+    "/products/Zudena100-Udenafil-Tablet.png",
+  
+  ],
   overview: [
     "Zudena-100 contains Udenafil, a medication used to support men experiencing erectile dysfunction by improving natural blood flow to the penile tissues.",
     "It works by relaxing smooth muscle in the blood vessel walls, particularly in the pelvic and penile region, helping improve the ability to achieve and maintain an erection during sexual stimulation.",
@@ -19527,8 +19749,12 @@ administration: [
     cas_id: "268203-93-6",
     description: "Zudena is a revolutionary product for the treatment of erectile dysfunction. Zudena 200 mg is not generic and contains a completely new active ingredient Udenafil.",
     slug: "zudena-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Zudena-200-1.png",
+   "additionalImages": [
+    "/products/Zudena-200-1.png",
+    "/products/Zudena-200-1.png",
   
+  ],
   overview: [
     "Zudena-200 contains Udenafil, a potent PDE5 inhibitor designed to support men with moderate to severe erectile dysfunction.",
     "It works by improving blood flow to the penile tissue, helping support stronger and more sustained erections during sexual stimulation.",
@@ -19672,7 +19898,12 @@ administration: [
     cas_id: "268203-93-6",
     description: "Super Zudena Udenafil and Dapoxetine Hydrochloride is a revolutionary product for the treatment of erectile dysfunction and premature ejaculation.",
     slug: "super-zudena",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Super-Zudena.png",//public\products\Super-Zudena_3.png
+    "additionalImages": [
+    "/products/Super-Zudena_3.png",
+    "/products/Super-Zudena_3.png",
+  
+  ],
    
   overview: [
     "Super Zudena is a combination formula containing Udenafil and Dapoxetine, designed to support men experiencing both erectile dysfunction and premature ejaculation.",
@@ -19819,7 +20050,12 @@ administration: [
     cas_id: "70288-86-7",
     description: "Iversun 6 Tablet is used to treat parasitic infections of the intestinal tract, skin, and eyes.",
     slug: "iversun-6",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/iversun-6mg_2.png",//public\products\iversun-6mg_1.png
+    "additionalImages": [
+    "/products/iversun-6mg_3.png",
+    "/products/iversun-6mg_1.png",
+  
+  ],
    
   overview: [
     "Iversun-6 contains Ivermectin, a widely used antiparasitic medication prescribed for treating various parasitic infections in the body.",
@@ -19950,7 +20186,12 @@ administration: [
     cas_id: "70288-86-7",
     description: "Iversun 12mg is used to treat parasitic infections of the intestinal tract, skin, and eyes.",
     slug: "iversun-12",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/iversun-12mg_2.png",//public\products\iversun-12-mg-1000x1000.png
+    "additionalImages": [
+    "/products/iversun-12mg_2.png",
+    "/products/iversun-12-mg-1000x1000.png",
+  
+  ],
     
   overview: [
     "Iversun-12 contains Ivermectin 12 mg, a potent antiparasitic medication for treating various parasitic infections in the body.",
@@ -20082,7 +20323,12 @@ administration: [
     cas_id: "226256-56-0",
     description: "Cinacalcet is a prescription medication used to treat high calcium levels in the body.",
     slug: "cinasun-30",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/cinasun-30mg-tablets-1000x1000.png",//public\products\cinasun-30-3.png
+    "additionalImages": [
+    "/products/cinasun-30-3.png",
+    "/products/cinasun-30-_3.png",
+  
+  ],
     
   overview: [
     "Cinasun-30 contains Cinacalcet, a prescription medication used to manage elevated calcium levels in the blood (hypercalcemia).",
@@ -20215,7 +20461,12 @@ administration: [
     cas_id: "226256-56-0",
     description: "Cinacalcet is a prescription medication used to treat high calcium levels in the body.",
     slug: "cinasun-60",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/cinasun-60mg-1-1000x1000.png",//public\products\cinasun-60mg-1-1000x1000.png
+    "additionalImages": [
+    "/products/cinasun-60mg-2-1000x1000.png",
+    "/products/cinasun-60mg-1-1000x1000.png",
+  
+  ],
    
   overview: [
     "Cinasun-60 contains Cinacalcet, a prescription medication designed to manage elevated calcium levels in the blood (hypercalcemia).",
@@ -20349,7 +20600,12 @@ administration: [
     cas_id: "226256-56-0",
     description: "Cinacalcet is a prescription medication used to treat high calcium levels in the body.",
     slug: "cinasun-90",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/cinasun-90mg_1.png",//public\products\cinasun-90mg_2.png
+    "additionalImages": [
+    "/products/cinasun-90mg_2.png",
+    "/products/cinasun-90mg_1.png",
+  
+  ],
   
   overview: [
     "Cinasun-90 contains Cinacalcet, a prescription medication used to manage high blood calcium levels (hypercalcemia).",
@@ -20483,7 +20739,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Chocolis 20 is a chocolate-flavoured tadalafil tablet that relaxes blood vessels to improve blood flow.",
     slug: "chocolis-20",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/chocolis-chewable-tadalafil-20mg-1000x1000.png",
+    "additionalImages": [
+    "/products/chocolis-chewable-tadalafil-20mg-1000x1000 (1).png",
+    "/products/chocolis-chewable-tadalafil-20mg-1000x1000 (2).png",
+  
+  ],
    
   overview: [
     "Chocolis-20 is a chocolate-flavored Tadalafil tablet designed to help men with erectile dysfunction achieve and maintain stronger erections.",
@@ -20632,7 +20893,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Chocogra 100 Chewable contains Sildenafil Citrate used for erectile dysfunction and pulmonary hypertension.",
     slug: "chocogra-100",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Chocogra 100.png",
+    "additionalImages": [
+    "/products/chocogra-100-mg-tablet-1729580911-7650550.png",
+    "/products/chocogra-100-sildenafil-tablets-1000x1000.png",
+  
+  ],
    
   overview: [
     "Chocogra-100 is a chewable Sildenafil Citrate tablet designed to support men with erectile dysfunction and pulmonary hypertension.",
@@ -20777,8 +21043,13 @@ administration: [
     pack_size: "4 x 21 Capsules",
     cas_id: "96829-58-2",
     description: "Orlistat is used with a low-calorie, low-fat diet and exercise program to help people lose weight.",
-    slug: "orlisun-120",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "orlisun",
+    image: "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",//public\products\Orlisun-Orlistat-Capsules-USP-120mg.png
+    "additionalImages": [
+    "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",
+    "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",
+  
+  ],
    
   overview: [
     "Orlisun contains Orlistat 120mg, a prescription medication designed to support weight loss in adults.",
@@ -20911,8 +21182,12 @@ administration: [
     cas_id: "68693-11-8",
     description: "Modafresh 200 Tablet promotes wakefulness in patients with excessive daytime sleepiness or narcolepsy.",
     slug: "modafresh-200",
-    image: "/products/kamagra_gold 50mg 02.jpg",
-   
+    image: "/products/modafresh_1.png",
+    "additionalImages": [
+    "/products/modafresh_1.png",
+    "/products/Moadfresh_Tablets.webp",//public\products\Moadfresh_Tablets.webp
+  
+  ],
   overview: [
     "Modafresh-200 contains Modafinil 200mg, a prescription medication designed to promote wakefulness in adults with excessive daytime sleepiness.",
     "It is commonly prescribed for conditions such as narcolepsy, obstructive sleep apnea, and shift work sleep disorder.",
