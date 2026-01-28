@@ -210,6 +210,7 @@ const products = {
     "/products/kamagra_oral_jelly_3.png",
   
   ],
+  slug: "kamagra-100mg-oral-jelly-vol1",
 
   description:
     "Kamagra 100mg Oral Jelly enthält Sildenafilcitrat in Gelform und ist für die orale Anwendung bestimmt. Es ist ein leicht lösliches Arzneimittel.",

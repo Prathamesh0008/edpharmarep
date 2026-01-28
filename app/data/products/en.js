@@ -6268,7 +6268,7 @@ const products = {
     "Prioritize overall cardiovascular health to naturally complement the product’s mechanism."
   ]
 },
-"super-vidalista-en": {
+"super-vidalista-20-60-en": {
   id: "37",
   name: "Super Vidalista",
   brand: "ED Centurion Remedies",

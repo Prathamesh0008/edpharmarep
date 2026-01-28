@@ -95,13 +95,16 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
 
   // Get product images
   const images = useMemo(() => {
-    const imageArray = [
-      product?.image || "/placeholder.jpg",
-      product?.additionalImages?.[0] || "/placeholder.jpg",
-      product?.additionalImages?.[1] || "/placeholder.jpg",
-    ];
-    return imageArray.filter(img => img && img.trim() !== "");
-  }, [product]);
+  if (!product?.images) {
+    return ["/placeholder.jpg"];
+  }
+
+  return [
+    product.images.main,
+    ...(product.images.gallery || []),
+  ].filter(Boolean);
+}, [product]);
+
 
   // Simplified auto-rotation
   useEffect(() => {
@@ -363,6 +366,8 @@ export default function ProductsPage() {
       return product.name || product.slug || '';
     };
   }, [language]);
+  
+
 
   // Simple product match function
   const productMatchesIdentifier = useCallback((product, identifier) => {
