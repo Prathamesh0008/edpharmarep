@@ -2555,6 +2555,11 @@ const products = {
   description: "It’s an alternative medicine for Viagra at a cost-effective rate.",
   slug: "cenforce-25mg",
   image: "/products/cenforce-25mg 01.jpg",
+  "additionalImages": [
+    "/products/cenforce-50-mg-1-side 1.png",
+    "/products/cenforce-50-mg-1-side 1.png",
+
+  ],
   
 
   overview: [
@@ -4045,8 +4050,8 @@ const products = {
   slug: "cenforce-d-100-60",
   image: "/products/cenforce-d_1.png",
    "additionalImages": [
-    "/products/cenforce-d_2.png",
     "/products/cenforce-d_1.png",
+    "/products/cenforce-d_2.png",
   
   ],
   overview: [
@@ -4230,10 +4235,10 @@ const products = {
   cas_id: "139755-83-2",
   description: "Cenforce-FM is one of the tablets known as the “female”. It contains 100mg of the active ingredient Sildenafil citrate.",
   slug: "cenforce-fm-100mg",
-  image: "/products/Cenforce fm tablet.png",
+  image: "/products/cenforce-fm-100-mg-1.png",
  "additionalImages": [
     "/products/Cenforce fm_2.png",
-    "/products/cenforce-fm-100-mg-1.png",
+    "/products/Cenforce fm tablet.png",//Cenforce fm tablet.png
   
   ],
   overview: [
@@ -4606,7 +4611,7 @@ const products = {
   image: "/products/Cenforce oral jelly.png",
    "additionalImages": [
     "/products/cenforce oral jelly 2.png",
-    "/products/cenforce oral jelly sachets.png",
+    "/products/Cenforce oral jelly.png",
   
   ],
 
@@ -4785,9 +4790,9 @@ const products = {
   cas_id: "171596-29-5",
   description: "Vidalista 2.5 mg contains the active ingredient Tadalafil, which is used to treat erectile dysfunction in men.",
   slug: "vidalista-2-5mg",
-  image: "/products/vidalista 2.5 1.png",
+  image: "/products/vidalista 2.5 2.png",
  "additionalImages": [
-    "/products/vidalista 2.5 2.png",
+    "/products/vidalista 2.5 1.png",
     "/products/vidalista 2.5 3.png",
   
   ],
@@ -4971,10 +4976,10 @@ const products = {
   cas_id: "171596-29-5",
   description: "It is only used to treat the physical problems associated with erectile dysfunction.",
   slug: "vidalista-5",
-  image: "/products/tadalafil-tablet-5-mg-1000x1000.webp",
+  image: "/products/vidalista-5mg-0005-1000x1000.webp",//vidalista-5mg-0005-1000x1000.webp
    "additionalImages": [
     "/products/vidalista-5mg-tadalafil-tablets-1000x1000.webp",
-    "/products/vidalista-5mg-0005-1000x1000.webp",
+    "/products/tadalafil-tablet-5-mg-1000x1000.webp",
   
   ],
   overview: [
@@ -5891,7 +5896,7 @@ const products = {
     "Use responsibly and only under proper medical supervision."
   ]
 },
-"vidalista-80-en": {
+"vidalista-80mg-en": {
   id: "35",
   name: "Vidalista 80 mg",
   brand: "ED Centurion Remedies",
@@ -5902,7 +5907,7 @@ const products = {
   pack_size: "10 x 10 Tablets",
   cas_id: "171596-29-5",
   description: "Vidalista 80 works only if the patient is sexually stimulated.",
-  slug: "vidalista-80",
+  slug: "vidalista-80mg",
   image: "/products/vidalista 80_1.webp",
  "additionalImages": [
     "/products/vidalista 80_2.png",
@@ -6281,7 +6286,7 @@ const products = {
   image: "/products/super-vidalista_1.png",//public\products\Super-Kamagra-Oral-Jelly 3.png
   "additionalImages": [
     "/products/super-vidalista_1.webp",
-    "/products/vidalista-black-80-mg_3.png",
+    "/products/super-vidalista_1.webp",
   
   ],
 
@@ -6467,12 +6472,13 @@ const products = {
   cas_id: "171596-29-5",
   slug: "vidalista-ct-20mg",
   image: "/products/vidalista20mg_1.webp",
-  description: "Tadalafil has two main uses. The most common is to treat erectile dysfunction in men.",
- "additionalImages": [
+  "additionalImages": [
     "/products/vadalista20mg_2.png",
     "/products/vadalista20mg-3.png",
   
   ],
+  description: "Tadalafil has two main uses. The most common is to treat erectile dysfunction in men.",
+ 
   overview: [
     "Vidalista CT 20 mg contains Tadalafil in a chewable tablet form for easier administration.",
     "It is primarily used to support erectile response in men experiencing erectile dysfunction.",
@@ -6626,7 +6632,7 @@ const products = {
     "Monitor how your body responds and seek medical help if something feels unusual.",
   ]
 },
-"vidalista-professional-en": {
+"vidalista-professional-20mg-en": {
   id: "39",
   category: "Tadalafil",
   brand: "ED Centurion Remedies",
@@ -6637,12 +6643,12 @@ const products = {
   packing: "10x10 tablets",
   pack_size: "10x10",
   cas_id: "171596-29-5",
-  slug: "vidalista-professional",
+  slug: "vidalista-professional-20mg",
   image: "/products/vidalista-professional-20-mg_1.webp",
   description: "Vidalista Professional Tablet is utilized to treat erectile brokenness in men. It increments blood stream to the penis to assist men with getting an erection.",
  "additionalImages": [
-    "/products/vidalista-professional-20-mg_2.jpg",
     "/products/vidalista-professional-20-mg_3.jpg",
+    "/products/vidalista-professional-20-mg_2.jpg",
   
   ],
   overview: [
@@ -7011,7 +7017,7 @@ const products = {
   cas_id: "224785-91-5",
   description: "Vilitra 20mg is the right medication to heal erection disorders. The prevalence of ED increases with age.",
   slug: "vilitra-20mg",
-  image: "/products/vilitra 20_1.png",
+  image: "/products/vilitra_20_2.webp",
  "additionalImages": [
     "/products/vilitra_20_2.webp",
     "/products/vilitra 20_3.jpeg",
@@ -7197,9 +7203,9 @@ const products = {
   cas_id: "224785-91-5",
   description: "Vilitra 40mg is a solid dosage form used by men to cure erectile malfunction.",
   slug: "vilitra-40mg",
-  image: "/products/vilitra 40mg.png",
+  image: "/products/vilitra 40mg.png",//public\products\vilitra 40mg.png
    "additionalImages": [
-    "/products/vilitra-40-mg.webp",
+    "/products/vilitra 40mg.png",
     "/products/vilitra 40mg.png",
   
   ],
@@ -7372,7 +7378,7 @@ const products = {
     "Learn about the composition and safety profile before considering usage."
   ]
 },
-"vilitra-60-en": {
+"vilitra-60mg-en": {
   id: "43",
   category: "Vardenafil",
   brand: "ED Centurion Remedies",
@@ -7383,10 +7389,10 @@ const products = {
   packing: "10x10 tablets",
   pack_size: "10x10",
   cas_id: "224785-91-5",
-  slug: "vilitra-60",
-  image: "/products/vardenafil-60-mg-vilitra-60mg.jpeg",
+  slug: "vilitra-60mg",
+  image: "/products/Vilitra-60-Mg-2.webp",//public\products\Vilitra-60-Mg-2.webp
    "additionalImages": [
-    "/products/Vilitra-60-Mg_2.webp",
+    "/products/Vilitra-60-Mg-2.webp",
     "/products/vardenafil-60-mg-vilitra-60mg.jpeg",
   
   ],
@@ -7562,7 +7568,7 @@ const products = {
   },
   description: "Super Vilitra is a medicament that treats the inability to get or attain the desired erection for healthy sexual intercourse.",
   slug: "super-vilitra",
-  image: "/products/super_vilitra_1.webp",
+  image: "/products/super_vilitra_1.webp",//
    "additionalImages": [
     "/products/super_vilitra_2.webp",
     "/products/super_vilitra_3.webp",
@@ -7750,7 +7756,12 @@ const products = {
   pack_size: "1x4",
   cas_id: "167933-07-5",
   slug: "fliban-100mg",
-  image: "/products/Fliban-0.png",
+  image: "/products/fliban_2.png",//public\products\fliban_2.png
+   "additionalImages": [
+    "/products/fliban_2.png",
+    "/products/fliban_1.webp",
+  
+  ],
   description: "Fliban (Flibanserin Tablets) are used to treat premenopausal women with acquired hypoactive sexual desire disorder (HSDD).",
 
   overview: [
@@ -7933,7 +7944,7 @@ const products = {
   cas_id: "330784-47-9",
   description: "Avanafil is used to treat erectile dysfunction (ED: impotence; inability to get or keep an erection in men).",
   slug: "avana-50mg",
-  image: "/products/Avana50.png",
+  image: "/products/Avana-50mg_1.png",//public\products\avanafil-avana-50mg-tablet_3.webp
   "additionalImages": [
     "/products/avanafil-avana-50mg_2.webp",
     "/products/avanafil-avana-50mg-tablet_3.webp",
@@ -8120,9 +8131,9 @@ const products = {
   pack_size: "1x4",
   cas_id: "330784-47-9",
   slug: "avana-100mg",
-  image: "/products/Avana-100mg_2.png",
+  image: "/products/Avana-100mg_1.jpg",//public\products\Avana-100mg_2.png
   "additionalImages": [
-    "/products/Avana-100mg_1.jpg",
+    "/products/Avana-100mg_2.png",
     "/products/Avana-100mg_3.png",
     
   ],
@@ -8299,9 +8310,9 @@ const products = {
   pack_size: "1x4",
   cas_id: "330784-47-9",
   slug: "avana-200mg",
-  image: "/products/avana-200-mg-1000x1000.webp",
+  image: "/products/avana-200-mg-1000x1000.webp",//public\products\Avana 200_1.png
   "additionalImages": [
-    "/products/avana-200-mg-1000x1000.webp",
+    "/products/Avana 200_1.png",
     "/products/Avana-200mg.png",
   
   ],
@@ -8490,9 +8501,9 @@ const products = {
     "dapoxetine": "129938-20-1"
   },
   slug: "top-avana",
-  image: "/products/TOP AVANA.png",
+  image: "/products/Top avana_1.png",//public\products\TOP AVANA.png
    "additionalImages": [
-    "/products/TOP AVANA.png",
+    "/products/Top avana_2.png",
     "/products/TOP AVANA.png",
   
   ],
@@ -8682,7 +8693,12 @@ const products = {
     "dapoxetine": "129938-20-1"
   },
   slug: "super-avana",
-  image: "/products/Super-Avana.png",
+  image: "/products/Super-Avana_3.png",//public\products\Super-Avana_3.png
+  "additionalImages": [
+    "/products/super-avana_2.png",
+    "/products/Super-Avana_3.png",
+  
+  ],
   description: "Super Avana tablets are manufactured by Sunrise Remedies Pvt. Ltd.",
 
   overview: [
@@ -8871,7 +8887,12 @@ const products = {
     "dapoxetine": "129938-20-1"
   },
   slug: "extra-super-avana",
-  image: "/products/Extra-super-Avana.png",
+  image: "/products/extra super avan _1.png",//public\products\extra super avan _1.png
+  "additionalImages": [
+    "/products/extra super avan _1.png",
+    "/products/extra super avan _2.png",
+  
+  ],
   description: "Extra Super Avana is a powerful medication for ED treatment. It consists of two active ingredients Avanafil and Dapoxetine that help men to fight erectile problems.",
 
   overview: [
@@ -9055,7 +9076,12 @@ const products = {
   pack_size: "10x10",
   cas_id: "129938-20-1",
   slug: "poxet-30mg",
-  image: "/products/Poxet-30.png",
+  image: "/products/poxet-30-mg-1_1.png",//public\products\poxet-30-mg-1_2.png
+  "additionalImages": [
+    "/products/poxet-30-mg-1_2.png",
+    "/products/poxet-30-mg-1_3.png",
+  
+  ],
   description: "Poxet 30 Dapoxetine is a medicine used specifically for treating premature ejaculation (PE) in adult men.",
 
   overview: [
@@ -9239,7 +9265,12 @@ const products = {
   pack_size: "10x10",
   cas_id: "129938-20-1",
   slug: "poxet-60mg",
-  image: "/products/Poxet-60.png",
+  image: "/products/poxet-60_1.png",//public\products\poxet-60_1.png
+  "additionalImages": [
+    "/products/poxet-60_2.png",
+    "/products/poxet-60_1.png",
+  
+  ],
   description: "Poxet-60 tablets are used to treat premature ejaculation (PE), one of the most common causes of sexual dysfunction in men.",
 
   overview: [
@@ -9423,7 +9454,12 @@ const products = {
   pack_size: "10x10",
   cas_id: "129938-20-1",
   slug: "poxet-90mg",
-  image: "/products/Poxet-90.png",
+  image: "/products/Poxet 90_2.png",//public\products\Poxet 90_2.png
+  "additionalImages": [
+    "/products/Poxet 90_2.png",
+    "/products/Poxet 90_1.png",
+  
+  ],
   description: "Poxet 90 is used to treat premature ejaculation in adult men aged 18 to 64 years.",
 
   overview: [
@@ -9617,7 +9653,12 @@ const products = {
   cas_id: "171599-83-0",
   description: "Sildenafil is used to treat male sexual function problems (impotence or erectile dysfunction-ED).",
   slug: "p-force-100-caps",
-  image: "/products/P-Force-100Caps.png",
+  image: "/products/P-force 100_1.png",//public\products\P-force 100_2.png
+  "additionalImages": [
+    "/products/P-force 100_2.png",
+    "/products/P-force 100_3.png",
+  
+  ],
 
   overview: [
     "P-Force 100 Caps contains Sildenafil Citrate 100 mg and is used to support erectile function in men.",
@@ -9810,7 +9851,12 @@ const products = {
   cas_id: "171599-83-0",
   description: "The salt present in the medicine, Sildenafil citrate is used for curing erectile dysfunction in males.",
   slug: "p-force-fort",
-  image: "/products/p-force fort 03.jpg",
+  image: "/products/p-force fort_1.png",//public\products\p-force fort_2.png
+  "additionalImages": [
+    "/products/p-force fort_2.png",
+    "/products/p-force fort_3.png",
+  
+  ],
 
   overview: [
     "P-Force Fort contains Sildenafil Citrate 150 mg and is used to support erectile function in men.",
@@ -10003,7 +10049,12 @@ const products = {
   cas_id: "171599-83-0",
   description: "This powerful product is known for speedy activity instrument and dependable successful outcomes.",
   slug: "p-force-plus",
-  image: "/products/p-force-plus 02.jpg",
+  image: "/products/P-Force-Plus_1.png",//public\products\P-Force-Plus_1.png
+  "additionalImages": [
+    "/products/P-Force-Plus_2.png",
+    "/products/P-Force-Plus_2.png",
+  
+  ],
 
   overview: [
     "P-Force Plus contains Sildenafil Citrate 130 mg and is used to help support erectile function in men.",
@@ -10195,7 +10246,12 @@ const products = {
   cas_id: "171599-83-0 / 129938-20-1",
   description: "Super P-Force Oral Jelly (Viagra with Dapoxetine) is a well known product produced for the treatment of male impotence and premature ejaculation.",
   slug: "super-p-force-oral-jelly",
-  image: "/products/Super-P-Force-OralJelly.png",
+  image: "/products/Super-P-Force-Oral-Jelly15_1.png",//public\products\Super-P-Force-Oral-Jelly15_2.png
+  "additionalImages": [
+    "/products/Super-P-Force-Oral-Jelly15_2.png",
+    "/products/Super-P-Force-Oral-Jelly15_2.png",
+  
+  ],
 
   overview: [
     "Super P-Force Oral Jelly contains Sildenafil Citrate 100 mg and Dapoxetine 60 mg in a fast-absorption gel format.",
@@ -10387,7 +10443,12 @@ const products = {
   cas_id: "171599-83-0 / 129938-20-1",
   description: "Super P-Force tablets are used to treat erectile dysfunction impotence in men.",
   slug: "super-p-force",
-  image: "/products/super-p-force 01.jpg",
+  image: "/products/Super-P-Force6-sunrise_1.png",//public\products\Super-P-Force6-sunrise_2.png
+  "additionalImages": [
+    "/products/Super-P-Force6-sunrise_2.png",
+    "/products/Super-P-Force6-sunris_3.png",
+  
+  ],
 
   overview: [
     "Super P-Force contains a combination of Sildenafil Citrate 100 mg and Dapoxetine 60 mg.",
@@ -10579,7 +10640,12 @@ const products = {
   cas_id: "171599-83-0 / 129938-20-1",
   description: "Extra Super P Force interferes with the production of a hormone called PDE5.",
   slug: "extra-super-p-force",
-  image: "/products/Extra super P force 01.jpg",
+  image: "/products/Extra-Super-P-Force_1.png",//public\products\Extra-Super-P-Force_1.png
+  "additionalImages": [
+    "/products/Extra-Super-P-Force_2.png",
+    "/products/Extra-Super-P-Force_3.png",
+  
+  ],
 
   overview: [
     "Extra Super P-Force combines Sildenafil Citrate 100 mg and Dapoxetine 100 mg.",
@@ -11945,7 +12011,12 @@ administration: [
     cas_id: "224785-90-4 / 129938-20-1",
     description: "Super Zhewitra Tablets are composed of Vardenafil 20 mg and Dapoxetine 60 mg for instant results.",
     slug: "super-zhewitra",
-    image: "/products/Super-Zhewitra.png",
+    image: "/products/Super-Zhewitra16_1.png",//public\products\Super-Zhewitra16_1.png
+    "additionalImages": [
+    "/products/Super-Zhewitra16_2.png",
+    "/products/Super-Zhewitra16_3.png",
+  
+  ],
     
   overview: [
     "Super Zhewitra contains Vardenafil 20 mg and Dapoxetine 60 mg, formulated to support erectile dysfunction and premature ejaculation in men.",
@@ -12137,7 +12208,12 @@ administration: [
     cas_id: "224785-90-4 / 129938-20-1",
     description: "Extra Super Zhewitra is a blend of Vardenafil and Dapoxetine, used in the treatment of Premature discharge and erectile brokenness.",
     slug: "extra-super-zhewitra",
-    image: "/products/Extra-super-Zhewitra.png",
+    image: "/products/Extra-Super-Zhewitra_1.png",//public\products\Extra-Super-Zhewitra_1.png
+    "additionalImages": [
+    "/products/Extra-Super-Zhewitra_2.png",
+    "/products/Extra-Super-Zhewitra_3.png",
+  
+  ],
    
   overview: [
     "Extra Super Zhewitra contains Vardenafil 40 mg and Dapoxetine 60 mg, formulated to assist with erectile dysfunction and premature ejaculation.",
@@ -12328,7 +12404,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil is also used to treat the symptoms of an enlarged prostate (benign prostatic hyperplasia-BPH).",
     slug: "tadarise-2-5",
-    image: "/products/Tadarise-2.5.png",
+    image: "/products/tablet-tadarise-2.5_1.png",//public\products\tablet-tadarise-2.5_3.png
+     "additionalImages": [
+    "/products/tablet-tadarise-2.5_2.png",
+    "/products/tablet-tadarise-2.5_3.png",
+  
+  ],
     
   overview: [
     "Tadarise-2.5 contains Tadalafil 2.5 mg and is used primarily to support erectile function in men.",
@@ -12520,7 +12601,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise tablets 5mg (generic Cialis) is used to treat erectile dysfunction impotence in men.",
     slug: "tadarise-5",
-    image: "/products/Tadarise-5.png",
+    image: "/products/tablet-tadarise-5_1.png",//public\products\tablet-tadarise-5_3.png
+    "additionalImages": [
+    "/products/tablet-tadarise-5_2.png",
+    "/products/tablet-tadarise-5_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-5 contains Tadalafil 5 mg and is commonly used for managing erectile dysfunction in men.",
@@ -12710,7 +12796,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil Works By Increasing Blood Flow To The Penis To Help A Man Get And Keep An Erection.",
     slug: "tadarise-10",
-    image: "/products/Tadarise-10.png",
+    image: "/products/tadarise10_1.png",//public\products\tadarise10_1.png
+    "additionalImages": [
+    "/products/tadarise10_2.png",
+    "/products/tadarise10_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-10 contains Tadalafil 10 mg and is used to help men experiencing erectile dysfunction.",
@@ -13295,7 +13386,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Zhewitra oral jelly comes in sachets and is a fast-acting medicine. Zhewitra Oral Jelly is for men who want a rock hard erection which lasts long.",
     slug: "tadarise-20-oral-jelly",
-    image: "/products/Tadarise-20-Oral-Jelly.png",
+    image: "/products/tadalafil-oral-jelly-20-mg-1000x1000.png",//public\products\tadalafil-oral-jelly-20-mg-1000x1000.png
+    "additionalImages": [
+    "/products/tadalafil-oral-jelly-20-mg-1000x1000.png",
+    "/products/tadalafil-oral-jelly-20-mg-1000x1000.png",
+  
+  ],
    
   overview: [
     "Tadarise-20 Oral Jelly contains Tadalafil 20 mg and is formulated for easy and fast absorption.",
@@ -13487,7 +13583,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise tablets 40mg (generic Cialis) is used to treat erectile dysfunction (impotence) in men.",
     slug: "tadarise-40",
-    image: "/products/Tadarise-40.png",
+    image: "/products/tadarise40_1.png",//public\products\tadarise40_1.png
+    "additionalImages": [
+    "/products/tadarise40_2.png",
+    "/products/tadarise40_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-40 contains Tadalafil 40mg and is used to support treatment for erectile dysfunction in men.",
@@ -13676,7 +13777,13 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise Pro 40 mg tablet is a drug for men who suffer from erectile dysfunction.",
     slug: "tadarise-pro-40",
-    image: "/products/Tadarise-pro-40.png",
+    image: "/products/tadarise-pro-40_1.png",//public\products\tadarise-pro-40_1.png
+    "additionalImages": [
+    "/products/tadarise-pro-40_2.png",
+    "/products/tadarise-pro-40_3.png",
+  
+  ],
+
    
   overview: [
     "Tadarise Pro-40 contains Tadalafil 40mg and is intended for men managing erectile dysfunction.",
@@ -13854,7 +13961,7 @@ administration: [
     "Regular check-ups help ensure safe and effective use of Tadalafil."
   ]
   },
-  "Tadarise-60-en":{
+  "tadarise-60-en":{
     id: "77",
     name: "Tadarise-60",
     brand: "ED Sunrise Remedies",
@@ -13866,7 +13973,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil is used to treat male sexual function problems (impotence or erectile dysfunction-ED).",
     slug: "tadarise-60",
-    image: "/products/Tadarise-60.png",
+    image: "/products/tadarise-60-mg-back_1.png",//public\products\tadarise-60-mg-back_1.png
+    "additionalImages": [
+    "/products/tadarise-60-mg-back_2.png",
+    "/products/tadarise-60-mg-back_3.png",
+  
+  ],
    
   overview: [
     "Tadarise-60 contains Tadalafil 60mg and is designed for men experiencing moderate to severe erectile dysfunction.",
@@ -14056,7 +14168,12 @@ administration: [
     cas_id: "171596-29-5 / 129938-20-1",
     description: "Super tadarise Tablet is a medication used to treat Erectile dysfunction ED and Premature Ejaculation PE in Millions of Men's.",
     slug: "super-tadarise",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/super_tadarise_tablet_1.png",//public\products\super_tadarise_tablet_1.png
+     "additionalImages": [
+    "/products/super_tadarise_tablet_1.png",
+    "/products/super_tadarise_tablet_3.png",
+  
+  ],
     
   overview: [
     "Super Tadarise combines Tadalafil 20mg and Dapoxetine 60mg to support erectile function and delay ejaculation.",
@@ -14248,7 +14365,12 @@ administration: [
     cas_id: "171596-29-5 / 129938-20-1",
     description: "Extra Super Tadarise Tablets are used for treating sexual disorders like erectile dysfunction and complains regarding premature ejaculation.",
     slug: "extra-super-tadarise",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/extra_super_tadarise_tablet_1.png",
+    "additionalImages": [
+    "/products/extra_super_tadarise_tablet_2.png",
+    "/products/extra_super_tadarise_tablet_3.png",
+  
+  ],
    
   overview: [
     "Extra Super Tadarise contains Tadalafil 40mg and Dapoxetine 60mg, formulated for men experiencing both erectile dysfunction and premature ejaculation.",
@@ -14439,7 +14561,12 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise effervescent Tadalafil 20 Mg is used to treat erectile dysfunction (impotence) in men. Tadarise Effervescent tablets are the newest version of the Generic Tadalafil.",
     slug: "tadarise-effervescent",
-    image: "/products/Tadarise-Effervescent.png",
+    image: "/products/Tadarise-Effervescent_2.png",//public\products\Tadarise-Effervescent_2.png
+    "additionalImages": [
+    "/products/Tadarise-Effervescent_2.png",
+    "/products/Tadarise-Effervescent_1.png",
+  
+  ],
     
   overview: [
     "Tadarise Effervescent contains Tadalafil 20mg in a fast-dissolving effervescent tablet form.",
@@ -14811,8 +14938,13 @@ administration: [
   pack_size: "10 x 10 Tablets",
   cas_id: "171596-29-5",
   description: "Tadasoft 20 mg is a chewable form of Tadalafil with a natural fruit flavor, used to treat the physical problems associated with erectile dysfunction.",
-  slug: "tadasoft-20mg",
-  image: "/products/Tadasoft-20.png",//public\products\Tadasoft-20.png
+  slug: "tadasoft-20",
+  image: "/products/tadasoft-20-mg_1.png",//public\products\tadasoft-20-mg_3.png
+  "additionalImages": [
+    "/products/tadasoft-20-mg_2.png",
+    "/products/tadasoft-20-mg_3.png",
+  
+  ],
 
   overview: [
     "Tadasoft 20 mg contains Tadalafil in a soft, chewable, and flavored tablet form.",
@@ -14991,8 +15123,13 @@ administration: [
   pack_size: "10 x 10 Tablets",
   cas_id: "171596-29-5",
   description: "Tadasoft 40 mg is a chewable form of Tadalafil with a natural fruit flavor, used to treat the physical problems associated with erectile dysfunction.",
-  slug: "tadasoft-40mg",
-  image: "/products/tadasoft-40.jpg",
+  slug: "tadasoft-40",
+  image: "/products/tadasoft-40-mg-2_1.png",//public\products\tadasoft-40-mg_2.png
+  "additionalImages": [
+    "/products/tadasoft-40-mg_3.png",
+    "/products/tadasoft-40-mg_2.png",
+  
+  ],
 
   overview: [
     "Tadasoft 40 mg contains a high-strength dose of Tadalafil in a soft, chewable, flavored tablet form.",
@@ -15173,7 +15310,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Sildisoft 100 is brand of salt Sildenafil citrate in 100 mg quality. It is an impotency sedate used to treat erectile brokenness in men.",
     slug: "sildisoft-100",
-    image: "/products/Sildisoft-100.png",
+    image: "/products/sildisoft-sildenafil-100_1.png",
+    "additionalImages": [
+    "/products/sildisoft-sildenafil-100_2.png",
+    "/products/sildisoft-sildenafil-100_3.png",
+  
+  ],
    
   overview: [
     "Sildisoft-100 contains Sildenafil 100mg in a soft chewable format for the treatment of erectile dysfunction in men.",
@@ -15363,7 +15505,12 @@ administration: [
   cas_id: "171599-83-0",
   description: "It is an impotency sedate used to treat erectile brokenness in men.",
   slug: "sildisoft-50",
-  image: "/products/Sildisoft-50.png",
+  image: "/products/sildisoft-sildenafil-50_1.png",
+  "additionalImages": [
+    "/products/sildisoft-sildenafil-50_1.png",
+    "/products/sildisoft-sildenafil-50mg_3.png",
+  
+  ],
  
   overview: [
     "Sildisoft-50 contains Sildenafil 50mg in a soft chewable form designed to treat erectile dysfunction in men.",
@@ -15557,7 +15704,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Malegra 25 Mg is the pill utilized for Erectile Dysfunction in men. ED is the state of poor sexual fulfillment because of inadequate erection.",
     slug: "malegra-25",
-    image: "/products/Malegra-25.png",
+    image: "/products/malegra_25_mg_1.png",
+    "additionalImages": [
+    "/products/malegra_25_mg_2.webp",
+    "/products/malegra_25_mg_3.png",
+  
+  ],
    
   overview: [
     "Malegra 25 contains Sildenafil 25mg and is formulated to treat erectile dysfunction in men.",
@@ -15745,7 +15897,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Sildenafil Citrate 50mg Tablet is a prescription medication used to treat erectile dysfunction (impotence) in men.",
     slug: "malegra-50",
-    image: "/products/Malegra-50.png",//ed_pharma\public\products\Malegra-50.png
+    image: "/products/Malegra-50-Mg_2.webp",//public\products\malegra_50_mg_1.webp
+    "additionalImages": [
+    "/products/malegra_50_mg_1.webp",
+    "/products/malegra_50_mg_1.webp",
+  
+  ],
   
   overview: [
     "Malegra 50 contains Sildenafil 50mg and is used to treat erectile dysfunction in men.",
@@ -15936,7 +16093,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Malegra 75 mg tablet is a physician endorsed medication used to treat erectile Dysfunction. It works by expanding blood stream to the penis.",
     slug: "malegra-75",
-    image: "/products/Malegra-75.png",
+    image: "/products/malegra-sildenafil-tablets 75_2.png",//public\products\malegra-sildenafil-tablets 75_1.png
+    "additionalImages": [
+    "/products/malegra-sildenafil-tablets 75_2.png",
+    "/products/malegra-sildenafil-tablets 75_3.png",
+  
+  ],
    
   overview: [
     "Malegra 75 contains Sildenafil 75mg and is designed to support men experiencing erectile dysfunction.",
@@ -16127,7 +16289,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Sildenafil works by increasing blood flow to the penis to help a man get and keep an erection.",
     slug: "malegra-120",
-    image: "/products/Malegra-120.png",
+    image: "/products/malegra-120mg_1.png",//public\products\malegra-120mg_2.png
+    "additionalImages": [
+    "/products/malegra-120mg_2.png",
+    "/products/malegra-120mg_3.png",
+  
+  ],
     
   overview: [
     "Malegra 120 mg contains Sildenafil Citrate in a higher-strength formulation designed for men experiencing moderate to severe erectile dysfunction.",
@@ -16316,7 +16483,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Malegra 200 mg tablet is a potential and long-lasting medical formula to deal with erectile failures in men.",
     slug: "malegra-200",
-    image: "/products/Malegra-200.png",
+    image: "/products/malegra-200_1.png",//public\products\malegra-200_2.png
+    "additionalImages": [
+    "/products/malegra-200_2.png",
+    "/products/malegra-200_2.png",
+  
+  ],
    
   overview: [
     "Malegra 200 mg contains Sildenafil Citrate in one of the highest available strengths used for treating severe erectile dysfunction.",
@@ -16496,7 +16668,7 @@ administration: [
     "Regular check-ups help ensure safe and effective use of Malegra 200."
   ]
   },
-  "Malegra100-Oral-Jelly-en":{
+  "malegra-100-oral-jelly-en":{
     id: "92",
     name: "Malegra 100 Oral Jelly",
     brand: "ED Sunrise Remedies",
@@ -16507,11 +16679,11 @@ administration: [
     pack_size: "One Box Contains 7 X 5gm Sachets.",
     cas_id: "171599-83-0",
     description: "It contains Sildenafil Oral Jelly 100mg to enhance your sexual life and treat erectile dysfunction.",
-    slug: "malegra100-oral-jelly",
-    image: "/products/1681226857_78464_0-Photoroom.png",
+    slug: "malegra-100-oral-jelly",
+    image: "/products/malegra_oral_jelly_1.webp",//public\products\malegra_oral_jelly_1.webp
     "additionalImages": [
-    "/products/1681226857_78464_0-Photoroom.png",
-    "/products/1681226857_78464_0-Photoroom.png",
+    "/products/malegra_oral_jelly_1.webp",
+    "/products/MALEGRA_ORALL_JELLY.png",
   
   ],
   overview: [
@@ -16704,7 +16876,11 @@ administration: [
     cas_id: "171599-83-0",
     description: "MALEGRA PRO restrains the PDE-5 receptors and causes men to accomplish solid and continued erection.",
     slug: "malegra-pro-50",
-    image: "/products/Malegra-pro-50.png",
+    image: "/products/Malegra pro 50_1.png",///public\products\Malegra pro 50_1.png
+    "additionalImages": [
+    "/products/Malegra pro 50_3.png",
+    "/products/Malegra pro 50_3.png",
+  ],
    
   overview: [
     "Malegra Pro 50 contains Sildenafil Citrate in a flavored, professional formulation designed for improved user convenience.",
@@ -16895,7 +17071,11 @@ administration: [
     cas_id: "171599-83-0",
     description: "MALEGRA PRO restrains the PDE-5 receptors and causes men to accomplish solid and continued erection.",
     slug: "malegra-pro-100",
-    image: "/products/Malegra-pro-100.png",
+    image: "/products/malegra pro 100_1.png",//public\products\malegra pro 100_1.png
+    "additionalImages": [
+    "/products/malegra pro 100_2.png",
+    "/products/malegra pro 100_3.png",
+  ],
    
   overview: [
     "Malegra Pro 100 contains Sildenafil Citrate in a professional flavored formulation designed for enhanced absorption and faster action.",
@@ -17086,7 +17266,11 @@ administration: [
     cas_id: "171599-83-0 / 116539-59-4",
     description: "It is a prescription drug used to cure ED (erectile dysfunction).",
     slug: "malegra-dxt",
-    image: "/products/Malegra-DXT.png",
+    image: "/products/Malegra-Dxt-100-30mg.png",//public\products\Malegra-Dxt.png public\products\Malegra-Dxt-100-30mg.png
+    "additionalImages": [
+    "/products/Malegra-Dxt-100-30mg.png",
+    "/products/Malegra-Dxt.png",
+  ],
    
   overview: [
     "Malegra DXT is a dual-action medication formulated with Sildenafil 100 mg and Duloxetine 30 mg to support men with erectile dysfunction and premature ejaculation.",
@@ -17276,7 +17460,12 @@ administration: [
     cas_id: "171599-83-0 / 116539-59-4",
     description: "Malegra dxt is an oral medication that treats erectile dysfunction as well as premature ejaculation in men.",
     slug: "malegra-dxt-plus",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/malegra-dxt-plus.png",//public\products\malegra-dxt-plus.png
+    "additionalImages": [
+    "/products/malegra-dxt-plus.png",
+    "/products/malegra-dxt-plus.png",
+  ],
+
    
   overview: [
     "Malegra DXT Plus is a combination medication designed to treat both erectile dysfunction and premature ejaculation in men.",
@@ -17469,7 +17658,12 @@ administration: [
     cas_id: "171599-83-0 / 54910-89-3",
     description: "Malegra FXT is the new age treatment for sexual dysfunction in males.",
     slug: "malegra-fxt",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Malegra-FXT3.png",//public\products\Malegra-FXT3.png
+    "additionalImages": [
+    "/products/Malegra-FXT3.png",
+    "/products/Malegra-FXT3.png",
+  ],
+
     
   overview: [
     "Malegra FXT is a dual-action medication designed to treat erectile dysfunction and premature ejaculation in men.",
@@ -17659,7 +17853,11 @@ administration: [
     cas_id: "171599-83-0 / 54910-89-3",
     description: "Malegra FXT Plus is prescribed for Erectile Dysfunction (ED) and Premature Ejaculation (PE).",
     slug: "malegra-fxt-plus",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/malegra-fxt-plus-1000x1000.png",//public\products\malegra-fxt-plus-1000x1000.png
+    "additionalImages": [
+    "/products/malegra-fxt-plus-1000x1000.png",
+    "/products/malegra-fxt-plus-1000x1000.png",
+  ],
   
   overview: [
     "Malegra FXT Plus is a dual-action medication formulated to help men experiencing erectile dysfunction and premature ejaculation.",
@@ -17851,7 +18049,13 @@ administration: [
     cas_id: "171599-83-0",
     description: "Malegra Sildenafil Effervescent Tablets are a successful and widely accepted treatment for Erectile dysfunction (ED).",
     slug: "malegra-effervescent-100",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Malegra-100_1.png",//public\products\Malegra-100_2.png
+    "additionalImages": [
+    "/products/Malegra-100_2.png",
+    "/products/Malegra-100_1.png",
+  ],
+
+
    
   overview: [
     "Malegra Effervescent 100mg contains Sildenafil in a fast-dissolving tablet form designed for enhanced absorption.",
@@ -18042,7 +18246,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "Malegra 100 Green Tablet is a PDE-5 inhibitor. It works by increasing blood flow to the penis.",
     slug: "malegra-100-green",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/Malegra-100 Green_2.png",
+     "additionalImages": [
+    "/products/Malegra-100 Green_3.png",
+    "/products/Malegra-100 Green_1.png",
+  ],
+
     
   overview: [
     "Malegra 100 Green contains Sildenafil Citrate 100mg, a commonly used medication for treating erectile dysfunction in men.",
@@ -18222,7 +18431,7 @@ administration: [
   ]
   },
   
-  "Malegra100-Gold-en":{
+  "malegra-100-en":{
     id: "101",
     name: "Malegra 100 Gold",
     brand: "ED Sunrise Remedies",
@@ -18233,8 +18442,12 @@ administration: [
     pack_size: "1x5 Tablets",
     cas_id: "171599-83-0",
     description: "Malegra Gold 100 Tablet is used to treat erectile dysfunction in men.",
-    slug: "malegra-100-gold",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    slug: "malegra-100",
+    image: "/products/malegra-gold_1.png",//public\products\malegra-gold_1.png
+    "additionalImages": [
+    "/products/malegra-gold_2.png",
+    "/products/malegra-gold_1.png",
+  ],
    
   overview: [
     "Malegra 100 Gold contains Sildenafil Citrate 100mg, a widely used treatment for erectile dysfunction (ED) in men.",

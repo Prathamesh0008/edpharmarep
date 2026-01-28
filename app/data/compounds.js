@@ -91,7 +91,8 @@ export const COMPOUNDS = {
        "vidalista-80",
        "vidalista-black-80mg",
        "vidalista-ct-20mg",
-       "vidalista-professional"
+       "vidalista-professional",
+       "Vidalista 5 mg"
     ],
   },
 
