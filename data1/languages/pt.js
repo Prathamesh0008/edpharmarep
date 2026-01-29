@@ -85,6 +85,21 @@
       ],
     },
   },
+  "en":{
+  "home": "Início",
+  "products": "Produtos",
+  "about": "Sobre",
+  "terms": "Termos",
+  "contact": "Contato",
+  "orders": "Meus pedidos",
+  "download": "Baixar PDF",
+  "login": "Entrar",
+  "logout": "Sair",
+  "profile": "Perfil",
+  "hi": "Olá",
+  "language": "Idioma"
+},
+
   journey: {
   back: "Voltar",
   tag: "Europa para Europa",

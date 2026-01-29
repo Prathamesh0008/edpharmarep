@@ -85,6 +85,20 @@ const ja = {
       ],
     },
   },
+  "en":{
+  "home": "ホーム",
+  "products": "製品",
+  "about": "私たちについて",
+  "terms": "利用規約",
+  "contact": "お問い合わせ",
+  "orders": "注文履歴",
+  "download": "PDFをダウンロード",
+  "login": "ログイン",
+  "logout": "ログアウト",
+  "profile": "プロフィール",
+  "hi": "こんにちは",
+  "language": "言語"
+},
  howWeWorkPage: {
   header: {
     back: "戻る",

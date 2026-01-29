@@ -460,32 +460,7 @@ export default function AboutPage() {
           </div>
           
           {/* Content */}
-          <div className="relative z-10 text-center py-16 px-8">
-            <Award className="w-16 h-16 text-white mx-auto mb-6 opacity-80" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Partner with Europe's Leading ED Specialist
-            </h2>
-            <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-10">
-              Join hundreds of pharmacies and distributors who trust ED_pharma for quality, reliability, and expert support in sexual health therapies.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-sky-700 bg-white rounded-full hover:bg-blue-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              >
-                Become a Partner
-                <ChevronRight className="w-4 h-4 ml-2" />
-              </Link>
-              
-              <Link
-                href="/products"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white border-2 border-white/30 rounded-full hover:bg-white/10 hover:border-white/50 transition-all duration-300"
-              >
-                View Our Products
-              </Link>
-            </div>
-          </div>
+          
         </div>
       </section>
 

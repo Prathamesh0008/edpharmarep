@@ -164,231 +164,337 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#eaf3f3] text-[#0f2f2f]">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 text-[#0c2d3e]">
       {/* <Navbar/> */}
       
       {/* HERO */}
-      <section className="text-center px-4 py-20">
-        <h1 className="text-3xl md:text-4xl font-bold">
-          {hero.title || "Contact Us"}
-        </h1>
-        <p className="mt-2 max-w-xl mx-auto text-gray-600">
-          {hero.subtitle || "Get in touch with us for any inquiries or support"}
-        </p>
+      <section className="text-center px-4 py-20 bg-gradient-to-r from-blue-900 to-cyan-600">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            {hero.title || "Contact Us"}
+          </h1>
+          <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+            {hero.subtitle || "Get in touch with us for any inquiries or support"}
+          </p>
+          <div className="mt-8 w-20 h-1 bg-white/40 mx-auto rounded-full"></div>
+        </div>
       </section>
 
       {/* 2-Column Layout */}
-      <section className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-6 mb-20">
-        {/* LEFT SIDE - INFO CARDS */}
-        <div className="flex flex-col gap-4">
-          {contactInfo.length > 0 ? (
-            contactInfo.map((item, i) => (
-              <div key={i} className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
-                <div className="text-3xl sm:text-4xl">{item.icon || "📞"}</div>
-                <div>
-                  <h4 className="font-semibold">{item.title || "Contact Info"}</h4>
-                  <p className="text-sm text-gray-600 mt-1">
-                    {item.description || "Contact description"}
-                  </p>
+      <section className="max-w-6xl mx-auto px-4 -mt-10 mb-20">
+        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-100">
+          <div className="grid md:grid-cols-2 gap-8 p-8">
+            {/* LEFT SIDE - INFO CARDS */}
+            <div>
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-blue-900 mb-2">Get in Touch</h2>
+                <p className="text-blue-700">We're here to help and answer any questions you might have.</p>
+              </div>
+              
+              <div className="space-y-6">
+                {contactInfo.length > 0 ? (
+                  contactInfo.map((item, i) => (
+                    <div key={i} className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
+                          {item.icon || "📞"}
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-blue-900 text-lg">{item.title || "Contact Info"}</h4>
+                          <p className="text-blue-600 mt-1">
+                            {item.description || "Contact description"}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  // Fallback if no contact info
+                  <>
+                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
+                          📞
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-blue-900 text-lg">(+91)-9525446820</h4>
+                          <p className="text-blue-600 mt-1">Call us for any questions or support</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
+                          ✉️
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-blue-900 text-lg">mail@influenca.id</h4>
+                          <p className="text-blue-600 mt-1">Email us for business inquiries</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
+                          📍
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-blue-900 text-lg">London Eye London</h4>
+                          <p className="text-blue-600 mt-1">Our main office location</p>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+
+              {/* Map/Additional Info */}
+              <div className="mt-10 pt-8 border-t border-blue-100">
+                <h3 className="text-lg font-semibold text-blue-900 mb-4">Working Hours</h3>
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <p className="text-blue-700">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                  <p className="text-blue-700 mt-1">Saturday: 10:00 AM - 4:00 PM</p>
+                  <p className="text-blue-700 mt-1">Sunday: Closed</p>
                 </div>
               </div>
-            ))
-          ) : (
-            // Fallback if no contact info
-            <>
-              <div className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
-                <div className="text-3xl sm:text-4xl">📞</div>
-                <div>
-                  <h4 className="font-semibold">(+91)-9525446820</h4>
-                  <p className="text-sm text-gray-600 mt-1">Call us for any questions or support</p>
-                </div>
+            </div>
+
+            {/* RIGHT SIDE - CONTACT FORM */}
+            <div className="bg-gradient-to-b from-white to-blue-50 p-6 rounded-xl border border-blue-100">
+              <div className="mb-8">
+                <h2 className="text-2xl font-bold text-blue-900 mb-2">Send us a Message</h2>
+                <p className="text-blue-700">Fill out the form below and we'll get back to you shortly.</p>
               </div>
-              <div className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
-                <div className="text-3xl sm:text-4xl">✉️</div>
-                <div>
-                  <h4 className="font-semibold">mail@influenca.id</h4>
-                  <p className="text-sm text-gray-6 00 mt-1">Email us for business inquiries</p>
+
+              <form
+                onSubmit={handleSubmit}
+                className={`space-y-6 ${shake ? "animate-shake" : ""}`}
+                noValidate
+              >
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="form-label">
+                      {formLabels.email || "Email *"}
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={form.email}
+                      onChange={handleChange}
+                      className={`form-input ${errors.email ? "input-error" : ""}`}
+                      aria-invalid={errors.email ? "true" : "false"}
+                      placeholder={formPlaceholders.email || "Enter your email address"}
+                      disabled={isLoading}
+                    />
+                    {errors.email && <p className="error-text">{errors.email}</p>}
+                  </div>
+
+                  <div>
+                    <label className="form-label">
+                      {formLabels.phone || "Phone *"}
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      value={form.phone}
+                      onChange={handleChange}
+                      className={`form-input ${errors.phone ? "input-error" : ""}`}
+                      aria-invalid={errors.phone ? "true" : "false"}
+                      placeholder={formPlaceholders.phone || "Enter your phone number"}
+                      disabled={isLoading}
+                    />
+                    {errors.phone && <p className="error-text">{errors.phone}</p>}
+                  </div>
                 </div>
-              </div>
-              <div className="bg-[#dbeaea] p-5 rounded-2xl flex items-center gap-4">
-                <div className="text-3xl sm:text-4xl">📍</div>
+
                 <div>
-                  <h4 className="font-semibold">London Eye London</h4>
-                  <p className="text-sm text-gray-600 mt-1">Our main office location</p>
+                  <label className="form-label">
+                    {formLabels.name || "Name *"}
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    className={`form-input ${errors.name ? "input-error" : ""}`}
+                    aria-invalid={errors.name ? "true" : "false"}
+                    placeholder={formPlaceholders.name || "Enter your full name"}
+                    disabled={isLoading}
+                  />
+                  {errors.name && <p className="error-text">{errors.name}</p>}
                 </div>
-              </div>
-            </>
-          )}
+
+                <div>
+                  <label className="form-label">
+                    {formLabels.message || "Message *"}
+                  </label>
+                  <textarea
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    className={`form-input h-32 resize-none ${errors.message ? "input-error" : ""}`}
+                    aria-invalid={errors.message ? "true" : "false"}
+                    placeholder={formPlaceholders.message || "Type your message here..."}
+                    disabled={isLoading}
+                    rows={5}
+                  />
+                  {errors.message && <p className="error-text">{errors.message}</p>}
+                </div>
+
+                {errors.submit && (
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <p className="error-text text-center">{errors.submit}</p>
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isLoading}
+                  className={`btn-primary group w-full ${
+                    isLoading ? "opacity-70 cursor-not-allowed" : ""
+                  }`}
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    {isLoading ? (
+                      <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        {formButtons.submittingButton || "Sending..."}
+                      </>
+                    ) : (
+                      <>
+                        <span>{formButtons.submitButton || "Submit Message"}</span>
+                        <svg className="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                      </>
+                    )}
+                  </span>
+                </button>
+
+                {submitted && (
+                  <div className="mt-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg animate-fade-in">
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                        <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-green-800 font-medium">
+                          {formButtons.successMessage || "✅ Message sent successfully! Check your email for confirmation."}
+                        </p>
+                        <p className="text-green-700 text-sm mt-1">
+                          We've sent a confirmation email to <span className="font-semibold">{form.email}</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
         </div>
-
-        {/* RIGHT SIDE - CONTACT FORM */}
-        <form
-          onSubmit={handleSubmit}
-          className={`bg-[#dbeaea] p-5 rounded-2xl ${shake ? "animate-shake" : ""}`}
-          noValidate
-        >
-          <div className="grid md:grid-cols-2 gap-3">
-            <div>
-              <label className="field-label">
-                {formLabels.email || "Email *"}
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handleChange}
-                className={`field-input ${errors.email ? "input-error" : ""}`}
-                aria-invalid={errors.email ? "true" : "false"}
-                placeholder={formPlaceholders.email || "Enter your email address"}
-                disabled={isLoading}
-              />
-              {errors.email && <p className="error-text">{errors.email}</p>}
-            </div>
-
-            <div>
-              <label className="field-label">
-                {formLabels.phone || "Phone *"}
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                value={form.phone}
-                onChange={handleChange}
-                className={`field-input ${errors.phone ? "input-error" : ""}`}
-                aria-invalid={errors.phone ? "true" : "false"}
-                placeholder={formPlaceholders.phone || "Enter your phone number"}
-                disabled={isLoading}
-              />
-              {errors.phone && <p className="error-text">{errors.phone}</p>}
-            </div>
-          </div>
-
-          <div className="mt-3">
-            <label className="field-label">
-              {formLabels.name || "Name *"}
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              className={`field-input ${errors.name ? "input-error" : ""}`}
-              aria-invalid={errors.name ? "true" : "false"}
-              placeholder={formPlaceholders.name || "Enter your full name"}
-              disabled={isLoading}
-            />
-            {errors.name && <p className="error-text">{errors.name}</p>}
-          </div>
-
-          <div className="mt-3">
-            <label className="field-label">
-              {formLabels.message || "Message *"}
-            </label>
-            <textarea
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              className={`field-input h-28 resize-none ${errors.message ? "input-error" : ""}`}
-              aria-invalid={errors.message ? "true" : "false"}
-              placeholder={formPlaceholders.message || "Type your message here..."}
-              disabled={isLoading}
-            />
-            {errors.message && <p className="error-text">{errors.message}</p>}
-          </div>
-
-          {errors.submit && (
-            <p className="error-text mt-2">{errors.submit}</p>
-          )}
-
-          <button
-            type="submit"
-            disabled={isLoading}
-            className={`btn-primary mt-4 w-full sm:w-auto hover:scale-105 transition-transform duration-300 ${
-              isLoading ? "opacity-70 cursor-not-allowed" : ""
-            }`}
-          >
-            {isLoading 
-              ? (formButtons.submittingButton || "Sending...") 
-              : (formButtons.submitButton || "Submit Message")
-            }
-          </button>
-
-          {submitted && (
-            <div className="mt-3 p-3 bg-green-50 border border-green-200 rounded-lg">
-              <p className="text-green-700 text-sm">
-                {formButtons.successMessage || "✅ Message sent successfully! Check your email for confirmation."}
-              </p>
-              <p className="text-green-600 text-xs mt-1">
-                We've sent a confirmation email to {form.email}
-              </p>
-            </div>
-          )}
-        </form>
       </section>
       {/* <Footer/> */}
 
       {/* INLINE STYLES */}
       <style jsx>{`
-        .field-label {
+        .form-label {
           display: block;
-          font-size: 13px;
-          margin-bottom: 4px;
-          color: #374151;
+          font-size: 14px;
+          font-weight: 500;
+          margin-bottom: 6px;
+          color: #1e3a8a;
         }
 
-        .field-input {
+        .form-input {
           width: 100%;
-          padding: 12px 14px;
-          border-radius: 12px;
-          border: 1px solid rgba(0, 0, 0, 0.15);
-          background: rgba(255, 255, 255, 0.7);
+          padding: 14px 16px;
+          border-radius: 10px;
+          border: 2px solid #dbeafe;
+          background: white;
+          color: #1e3a8a;
+          font-size: 15px;
           outline: none;
-          transition: border-color 0.3s ease;
+          transition: all 0.3s ease;
         }
 
-        .field-input:focus {
-          border-color: rgba(0, 0, 0, 0.35);
-          box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+        .form-input:focus {
+          border-color: #3b82f6;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+          background: #f8fafc;
         }
 
-        .field-input:disabled {
-          background-color: rgba(255, 255, 255, 0.5);
+        .form-input:disabled {
+          background-color: #f1f5f9;
           cursor: not-allowed;
+          border-color: #cbd5e1;
+        }
+
+        .form-input::placeholder {
+          color: #94a3b8;
         }
 
         .input-error {
-          border-color: #e53e3e !important;
-          animation: shake 0.3s;
+          border-color: #ef4444 !important;
+          background: #fef2f2;
+        }
+
+        .input-error:focus {
+          border-color: #dc2626 !important;
+          box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
         }
 
         .error-text {
-          color: #e53e3e;
-          font-size: 12px;
-          margin-top: 2px;
+          color: #dc2626;
+          font-size: 13px;
+          margin-top: 4px;
+          font-weight: 500;
         }
 
         .btn-primary {
-          background: #6f9e9e;
-          padding: 12px 30px;
-          border-radius: 999px;
+          background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+          padding: 16px 24px;
+          border-radius: 10px;
           color: white;
-          font-weight: 500;
+          font-weight: 600;
           cursor: pointer;
-          transition: background-color 0.3s ease;
+          transition: all 0.3s ease;
           border: none;
           outline: none;
           font-size: 16px;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .btn-primary:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+          transition: 0.5s;
+        }
+
+        .btn-primary:hover:not(:disabled):before {
+          left: 100%;
         }
 
         .btn-primary:hover:not(:disabled) {
-          background-color: #5b7f7f;
-          transform: scale(1.05);
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
 
         .btn-primary:disabled {
           opacity: 0.7;
           cursor: not-allowed;
           transform: none;
+          box-shadow: none;
         }
 
         @keyframes shake {
@@ -397,8 +503,23 @@ export default function ContactPage() {
           40%, 80% { transform: translateX(6px); }
         }
 
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
         .animate-shake {
           animation: shake 0.3s;
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.5s ease-out;
         }
       `}</style>
     </main>

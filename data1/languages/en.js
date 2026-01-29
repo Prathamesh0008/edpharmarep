@@ -1013,7 +1013,7 @@ testimonials: {
       "Sunrise Remedies",
     ],
     contactInfo: {
-      address: "Mumbai, India",
+      address: "Europe",
       phone: "+91 98765 43210",
       email: "support@edpharma.com"
     },

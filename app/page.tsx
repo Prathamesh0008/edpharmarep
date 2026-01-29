@@ -54,8 +54,8 @@ export default function Home() {
         />
 
       {/* HERO */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className=" gap-8 md:gap-12 items-center">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-14 ">
+        <div className=" gap-8 md:gap-12 items-center -mb-22">
           
           {/* LEFT CONTENT */}
           <div className="relative group ">

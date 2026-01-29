@@ -85,6 +85,20 @@ const nl = {
       ],
     },
   },
+  "en":{
+  "home": "Home",
+  "products": "Producten",
+  "about": "Over ons",
+  "terms": "Voorwaarden",
+  "contact": "Contact",
+  "orders": "Mijn bestellingen",
+  "download": "PDF downloaden",
+  "login": "Inloggen",
+  "logout": "Uitloggen",
+  "profile": "Profiel",
+  "hi": "Hoi",
+  "language": "Taal"
+},
   howWeWorkPage: {
   header: {
     back: "Terug",

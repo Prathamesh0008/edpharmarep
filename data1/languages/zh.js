@@ -13,6 +13,7 @@ const zh = {
       downloadCatalogue: "下载产品目录",
     },
 
+
     card: {
       tag: "欧洲到欧洲",
       titleLeft: "ED",
@@ -987,6 +988,20 @@ homePage: {
   heroRotator: {
     alt: "ED 医药产品",
   },
+},
+"en":{
+  "home": "首页",
+  "products": "产品",
+  "about": "关于我们",
+  "terms": "条款",
+  "contact": "联系",
+  "orders": "我的订单",
+  "download": "下载 PDF",
+  "login": "登录",
+  "logout": "退出登录",
+  "profile": "个人资料",
+  "hi": "你好",
+  "language": "语言"
 },
  offer: {
   tagline: "批发合作伙伴",

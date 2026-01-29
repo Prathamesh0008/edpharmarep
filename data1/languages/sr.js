@@ -88,6 +88,20 @@ const sr = {
       ],
     },
   },
+  "en":{
+  "home": "Početna",
+  "products": "Proizvodi",
+  "about": "O nama",
+  "terms": "Uslovi",
+  "contact": "Kontakt",
+  "orders": "Moje porudžbine",
+  "download": "Preuzmi PDF",
+  "login": "Prijava",
+  "logout": "Odjava",
+  "profile": "Profil",
+  "hi": "Zdravo",
+  "language": "Jezik"
+},
   journey: {
   back: "Nazad",
   tag: "Od Evrope do Evrope",

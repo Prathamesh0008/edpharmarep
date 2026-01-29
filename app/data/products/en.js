@@ -2554,10 +2554,10 @@ const products = {
   cas_id: "139755-83-2",
   description: "It’s an alternative medicine for Viagra at a cost-effective rate.",
   slug: "cenforce-25mg",
-  image: "/products/cenforce-25mg 01.jpg",
+  image: "/products/cenforce-25-side.png",//public\products\cenforce-25-side.png
   "additionalImages": [
-    "/products/cenforce-50-mg-1-side 1.png",
-    "/products/cenforce-50-mg-1-side 1.png",
+    "/products/cenforce-25-side.png",
+    "/products/cenforce-25-side.png",
 
   ],
   
@@ -19100,7 +19100,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "This drug is made for women to feel a sexual urge and boosts sexual recall.",
     slug: "femallegra-100",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/sildenafil-femalegra_1.png",
+    "additionalImages": [
+    "/products/sildenafil-femalegra_2.png",
+    "/products/sildenafil-femalegra_3.png",
+  
+  ],
    
   overview: [
     "Femallegra-100 is designed to support women experiencing reduced sexual response, arousal difficulty, or lack of sensitivity during intimate moments.",
@@ -21256,11 +21261,11 @@ administration: [
     pack_size: "4 x 21 Capsules",
     cas_id: "96829-58-2",
     description: "Orlistat is used with a low-calorie, low-fat diet and exercise program to help people lose weight.",
-    slug: "orlisun",
-    image: "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",//public\products\Orlisun-Orlistat-Capsules-USP-120mg.png
+    slug: "orlisun-120",
+    image: "/products/Orlisun-Orlistat.png",//public\products\Orlisun-Orlistat-Capsules-USP.png
     "additionalImages": [
-    "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",
-    "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",
+    "/products/Orlisun-Orlistat.png",
+    "/products/Orlisun-Orlistat.png",
   
   ],
    

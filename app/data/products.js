@@ -19081,7 +19081,12 @@ administration: [
     cas_id: "171599-83-0",
     description: "This drug is made for women to feel a sexual urge and boosts sexual recall.",
     slug: "femallegra-100",
-    image: "/products/kamagra_gold 50mg 02.jpg",
+    image: "/products/sildenafil-femalegra_1.png",
+    "additionalImages": [
+    "/products/sildenafil-femalegra_2.png",
+    "/products/sildenafil-femalegra_3.png",
+  
+  ],
    
   overview: [
     "Femallegra-100 is designed to support women experiencing reduced sexual response, arousal difficulty, or lack of sensitivity during intimate moments.",

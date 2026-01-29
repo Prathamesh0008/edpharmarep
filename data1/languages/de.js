@@ -87,6 +87,20 @@ const de = {
       ],
     },
   },
+  "en":{
+  "home": "Startseite",
+  "products": "Produkte",
+  "about": "Über uns",
+  "terms": "Bedingungen",
+  "contact": "Kontakt",
+  "orders": "Meine Bestellungen",
+  "download": "PDF herunterladen",
+  "login": "Anmelden",
+  "logout": "Abmelden",
+  "profile": "Profil",
+  "hi": "Hallo",
+  "language": "Sprache"
+},
   journey: {
   back: "Zurück",
   tag: "Europa zu Europa",

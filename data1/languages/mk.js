@@ -88,6 +88,20 @@ const mk = {
       ],
     },
   },
+  "en":{
+  "home": "Почетна",
+  "products": "Производи",
+  "about": "За нас",
+  "terms": "Услови",
+  "contact": "Контакт",
+  "orders": "Мои нарачки",
+  "download": "Преземи PDF",
+  "login": "Најава",
+  "logout": "Одјава",
+  "profile": "Профил",
+  "hi": "Здраво",
+  "language": "Јазик"
+},
   journey: {
   back: "Назад",
   tag: "Од Европа до Европа",

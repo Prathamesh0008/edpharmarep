@@ -86,6 +86,20 @@ const es = {
       ],
     },
   },
+  "en":{
+  "home": "Inicio",
+  "products": "Productos",
+  "about": "Acerca de",
+  "terms": "Términos",
+  "contact": "Contacto",
+  "orders": "Mis pedidos",
+  "download": "Descargar PDF",
+  "login": "Iniciar sesión",
+  "logout": "Cerrar sesión",
+  "profile": "Perfil",
+  "hi": "Hola",
+  "language": "Idioma"
+},
   journey: {
   back: "Volver",
   tag: "Europa a Europa",

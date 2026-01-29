@@ -13,6 +13,7 @@ const fr = {
         "Guidés par le principe « Europe à Europe », nous associons une assurance qualité rigoureuse à une logistique efficace, offrant aux grossistes, pharmacies et plateformes en ligne un accès fiable à un approvisionnement constant, conforme aux exigences réglementaires locales.",
       downloadCatalogue: "Télécharger le catalogue",
     },
+    
 
     card: {
       tag: "EUROPE À EUROPE",
@@ -87,6 +88,20 @@ const fr = {
       ],
     },
   },
+  "en":{
+  "home": "Accueil",
+  "products": "Produits",
+  "about": "À propos",
+  "terms": "Conditions",
+  "contact": "Contact",
+  "orders": "Mes commandes",
+  "download": "Télécharger le PDF",
+  "login": "Connexion",
+  "logout": "Déconnexion",
+  "profile": "Profil",
+  "hi": "Salut",
+  "language": "Langue"
+},
 
   journey: {
     back: "Retour",

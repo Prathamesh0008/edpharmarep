@@ -123,10 +123,10 @@ export default function ProductActions({ product, theme }) {
       </div>
 
       {/* Actions */}
-      <div className="flex flex-col sm:flex-row gap-4">
+      <div className="flex flex-col sm:flex-row gap-4 ">
         <button
           onClick={handleAddToCart}
-          className="px-8 py-3 text-white rounded-xl shadow-md hover:shadow-lg transition font-semibold"
+          className="px-8 py-3 text-white rounded-xl shadow-md hover:shadow-lg transition font-semibold cursor-pointer"
           style={{ backgroundColor: theme.primary }}
         >
           Add to Cart 
@@ -135,7 +135,7 @@ export default function ProductActions({ product, theme }) {
         <button
           onClick={handleBuyNow}
           disabled={loading}
-          className="px-8 py-3 rounded-xl border-2 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center"
+          className="px-8 py-3 rounded-xl border-2 cursor-pointer font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center"
           style={{
             borderColor: theme.primary,
             color: theme.primary,
@@ -143,7 +143,7 @@ export default function ProductActions({ product, theme }) {
           }}
         >
           {loading ? (
-            <span className="flex items-center gap-2">
+            <span className="flex items-center gap-2 ">
               <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>

@@ -174,17 +174,17 @@ export default function Testimonials() {
       `}</style>
 
       {/* ===== CONTENT ===== */}
-      <section className="testimonial-section">
+      <section className="testimonial-section ">
         <p className="testimonial-tag">{testimonialsData.tag}</p>
         <h2 className="testimonial-title">{testimonialsData.title}</h2>
         <p className="testimonial-subtitle">
           {testimonialsData.subtitle}
         </p>
 
-        <div className="slider">
+        <div className="slider ">
           <div className="track">
             {[...testimonials, ...testimonials].map((item, i) => (
-              <div className="card" key={i}>
+              <div className="card m-5" key={i}>
                 <div className="stars">{"★".repeat(item.rating || 5)}</div>
 
                 <p className="text">{item.text}</p>

@@ -85,6 +85,20 @@ const ar = {
       ],
     },
   },
+  "en":{
+  "home": "الرئيسية",
+  "products": "المنتجات",
+  "about": "من نحن",
+  "terms": "الشروط",
+  "contact": "اتصل بنا",
+  "orders": "طلباتي",
+  "download": "تحميل ملف PDF",
+  "login": "تسجيل الدخول",
+  "logout": "تسجيل الخروج",
+  "profile": "الملف الشخصي",
+  "hi": "مرحباً",
+  "language": "اللغة"
+},
   howWeWorkPage: {
   header: {
     back: "عودة",
