@@ -16,6 +16,9 @@ const products = {
     "/products/kamagra50_3.png",
   
   ],
+  metaTitle:"Buy Kamagra Gold 50mg Online | Best Price & Fast EU Delivery – ED Pharma",
+  metaDescription:"Buy Kamagra Gold 50mg online at best price. Original Ajanta Pharma tablets, fast EU delivery, discreet packaging & trusted supplier – ED Pharma.",
+
 
     description:
       "Kamagra 50 mg containing the active ingredient, Sildenafil Citrate is used in the treatment of Erectile Dysfunction and Pulmonary Hypertension.",
@@ -109,6 +112,8 @@ const products = {
     "/products/kamagra100_3.png",
   
   ],
+  metaTitle:"Kamagra Gold 100mg Tablets Europe | Buy Online – ED Pharma",
+  metaDescription:"Buy Kamagra Gold 100mg online with fast, discreet delivery to the UK, Germany, France, Italy & Spain. Original Ajanta Pharma tablets at best price from ED Pharma.",
 
     description:
       "Kamagra Tablet contains active ingredient sildenafil citrate which belongs to the PDE-5 Vasodilators family.",
@@ -211,6 +216,9 @@ const products = {
     "/products/kamagra_oral_jelly_3.png",
   
   ],
+  metaTitle:"Kamagra 100mg Oral Jelly Wholesale Supplier Europe | ED Pharma ",
+  metaDescription:"ED Pharma is a trusted Kamagra 100mg oral jelly wholesale supplier in Europe, offering reliable bulk supply and distribution across the UK, Germany, France, Italy and Spain.",
+
 
   description:
     "Kamagra 100mg Oral Jelly contains sildenafil citrate in gel form and is aimed for oral use. It is an easily dissolvable drug.",
@@ -313,12 +321,14 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+  image: "/products/Super-Kamagra-Oral-Jelly 2.png",
   "additionalImages": [
     "/products/Super-Kamagra-Oral-Jelly 2.png",
-    "/products/Super-Kamagra-Oral-Jelly 3.png",
+    "/products/Super-Kamagra-Oral-Jelly 2.png",
   
   ],
+  metaTitle:"Super Kamagra Oral Jelly Wholesale Supplier Europe | ED Pharma ",
+  metaDescription:"ED Pharma offers Super Kamagra oral jelly bulk supply for European distributors, with efficient wholesale delivery across the UK, Germany, France, Italy, Spain and nearby regions. ",
 
   description:
     "Super Kamagra Oral Jelly belongs to a group of medicines called PDE5 inhibitors. It works by relaxing the blood vessels in your penis. This allows blood to flow into the penis and produce an erection when sexually aroused.",
@@ -428,6 +438,8 @@ const products = {
     "/products/kamagra-polo.png",
   
   ],
+  metaTitle:"Kamagra 100mg Polo Fruit Jelly Bulk Supply Europe | ED Pharma ",
+  metaDescription:"ED Pharma provides Kamagra 100mg Polo Fruit oral jelly as part of its premium bulk supply range, serving distributors and resellers across the UK, Germany, France, Italy and Spain. ",
 
   overview: [
     "Kamagra 100 mg Polo is a chewable formulation containing Sildenafil Citrate.",
@@ -537,6 +549,8 @@ const products = {
     "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
   
   ],
+  metaTitle:"Kamagra Strawberry Chewable 100mg Wholesale Market Europe – ED Pharma ",
+  metaDescription:" ED Pharma serves the European wholesale market with Kamagra 100mg strawberry chewable tablets, ensuring reliable distributor access throughout the UK, Germany, France, Italy & Spain.",
 
   overview: [
     "Kamagra 100 mg Chewable Tablet contains Sildenafil Citrate in an easy-to-chew format.",
@@ -684,6 +698,8 @@ const products = {
     "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
   
   ],
+  metaTitle:" Kamagra 100mg Orange Chewable Wholesale Europe | ED Pharma",
+  metaDescription:"Serving the European wholesale market, ED Pharma offers Kamagra 100mg orange chewable tablets with reliable distributor access throughout the UK, Germany, France, Italy & Spain. ",
 
   overview: [
     "Kamagra 100 mg Chewable Tablet contains Sildenafil Citrate in an orange-flavored chewable form.",
@@ -871,6 +887,8 @@ const products = {
     "/products/kamagra-effervescent-100-mg.webp",
   
   ],
+  metaTitle:"Kamagra Effervescent 100mg European Market Supply | ED Pharma ",
+  metaDescription:"ED Pharma supports B2B buyers seeking Kamagra 100mg effervescent for the European market, with structured supply solutions covering the UK, Germany, France, Italy and Spain. ",
 
   overview: [
     "Kamagra 100 mg Effervescent contains Sildenafil Citrate in a dissolvable tablet form.",
@@ -1062,6 +1080,8 @@ const products = {
     "/products/Super_Kamagra_03.jpg",
   
   ],
+  metaTitle:"Buy Super Kamagra 100/60mg Tablets Wholesale | European B2B Distributor ",
+  metaDescription:"European wholesale distributor of Super Kamagra 100-60mg tablets. B2B bulk orders for dual-action Sildenafil 100mg + Dapoxetine 60mg tablets. Fast shipping across EU. Competitive prices on Lovegra female viagra 100mg, Valif oral jelly 20mg, Kamagra effervescent tablets. ",
   
 
   overview: [
@@ -1251,6 +1271,8 @@ const products = {
     "/products/kamagra100_3.png",
   
   ],
+  metaTitle:"Kamagra Expo 100mg for EU Trade Buyers | ED Pharma",
+  metaDescription:"Kamagra Expo 100mg is available for European market distribution through ED Pharma, supporting B2B buyers expanding portfolios in the UK, Germany, France, Italy & Spain. ",
   
 
   overview: [
@@ -1438,6 +1460,8 @@ const products = {
     "/products/apcalis-sx-oral-jelly-3.png",
     "/products/apcalis-sx-oral-jelly.png",
   ],
+  metaTitle:"Apcalis SX 20mg Oral Jelly Supplier | European B2B Tadalafil ",
+  metaDescription:"Leading B2B wholesaler of Apcalis SX 20mg Tadalafil Oral Jelly across Europe. Weekend medication lasting 36+ hours in fruit-flavored jelly form. Bulk supply of Lovegra female viagra 100mg, Valif 20mg price, Kamagra expo 100mg. Contact for wholesale inquiries. ",
 
   overview: [
     "Apcalis-SX 20 mg Oral Jelly contains Tadalafil, a well-known long-acting PDE5 inhibitor.",
@@ -1625,6 +1649,8 @@ const products = {
     "/products/Tadalis-SX-20mg 3.png",
   
   ],
+  metaTitle:"Tadalis SX 20mg ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"European wholesale distributor of Tadalis SX 20mg tablets. B2B bulk orders for generic Cialis Tadalafil 20mg - 36+ hour ED treatment. Fast shipping across EU. Competitive prices on Lovegra female viagra 100mg, Valif oral jelly 20mg, Kamagra effervescent tablets. ",
 
   overview: [
     "Tadalis-SX 20 mg contains Tadalafil, a long-duration PDE5 inhibitor used to support erectile function.",
@@ -1812,6 +1838,8 @@ const products = {
     "/products/lovegra-oral-jelly-3.png",
   
   ],
+  metaTitle:"Lovegra 100mg Oral Jelly European Market Supply | ED Pharma ",
+  metaDescription:"ED Pharma enables access to Lovegra 100mg oral jelly for European trade buyers, offering structured supply solutions for distributors operating in the UK, Germany, France, Italy and Spain. ",
 
   overview: [
     "Lovegra 100 mg Oral Jelly contains Sildenafil Citrate in a fast-absorbing jelly format.",
@@ -1999,6 +2027,8 @@ const products = {
     "/products/Lovegra-100mg_4.png",
   
   ],
+  metaTitle:"Lovegra 100mg Tablet Wholesale Supplier Europe | Female Viagra | Buy in Bulk ",
+  metaDescription:" Buy Lovegra 100mg tablets in bulk from a trusted Europe wholesaler. Female Viagra 100mg Lovegra with sildenafil composition. B2B supply, distributor pricing & fast delivery across Europe.",
 
   overview: [
     "Lovegra 100 mg contains Sildenafil Citrate formulated for female sexual response support.",
@@ -2185,6 +2215,8 @@ const products = {
     "/products/valif 20 1.png",
   
   ],
+  metaTitle:"Valif 20mg Tablet Wholesale Supplier in Europe | Buy Valif 20 in Bulk ",
+  metaDescription:" Buy Valif 20mg tablets wholesale from a trusted Europe B2B supplier. Vardenafil 20mg tablets for distributors with bulk pricing, export quality packaging and fast EU delivery.",
 
   overview: [
     "Valif 20 mg contains Vardenafil, a PDE5 inhibitor used to support erectile function.",
@@ -2372,6 +2404,8 @@ const products = {
     "/products/valif 20 1.png",
   
   ],
+  metaTitle:" Valif Oral Jelly 20mg ED Pharma Wholesale Europe | Buy in Bulk",
+  metaDescription:"Wholesale Valif 20mg oral jelly by ED Pharma in Europe. Trusted vardenafil jelly supplier for distributors with bulk pricing and reliable EU delivery. ",
   
 
   overview: [
@@ -2560,6 +2594,8 @@ const products = {
     "/products/cenforce-25-side.png",
 
   ],
+  metaTitle:"Cenforce 25mg Sildenafil Tablets | European Trade Supply – ED Pharma ",
+  metaDescription:"Cenforce 25mg sildenafil tablets available for European trade sourcing. ED Pharma supports distributors across the UK, Germany, France, Italy and Spain with reliable market supply. ",
   
 
   overview: [
@@ -2748,6 +2784,8 @@ const products = {
     "/products/cenforce-50-mg-1-side 1.png",
 
   ],//public\products\cenforce 50.png
+  metaTitle:"Cenforce 50mg Wholesale Supplier Europe | ED Pharma Distributor ",
+  metaDescription:"Buy Cenforce 50mg ED Pharma tablets wholesale in Europe. Trusted B2B sildenafil 50mg supplier with pharma-grade quality, bulk pricing, reliable logistics and speedy EU delivery. ",
 
 
   overview: [
@@ -2935,6 +2973,8 @@ const products = {
     "/products/cenforce 100_2.png",
     "/products/cenforce 100_3.png",
   ],
+  metaTitle:" Cenforce 100mg ED Pharma Wholesale Europe | Sildenafil 100mg B2B Supplier",
+  metaDescription:"Buy Cenforce 100mg by ED Pharma wholesale in Europe. High-quality sildenafil 100mg tablets for B2B distributors with bulk pricing, export-grade packaging, steady supply and fast EU delivery. ",
 
   overview: [
     "Cenforce 100 mg contains Sildenafil Citrate, a widely used PDE5 inhibitor for erectile support.",
@@ -3122,6 +3162,8 @@ const products = {
     "/products/cenforce_120_mg_1.webp",
   
   ],
+  metaTitle:"Cenforce 120mg ED Pharma Wholesale Europe | Sildenafil 120mg Supplier ",
+  metaDescription:"Buy Cenforce 120mg by ED Pharma wholesale in Europe. High-quality sildenafil 120mg tablets for B2B distributors and wholesalers with bulk pricing, export packaging, reliable stock & fast EU delivery. ",
   overview: [
     "Cenforce 120 mg contains Sildenafil Citrate formulated in a higher-strength tablet.",
     "It is intended for individuals requiring stronger support for erectile response than lower dosages provide.",
@@ -3302,12 +3344,14 @@ const products = {
   cas_id: "139755-83-2",
   description: "It is used for treating erectile dysfunction condition in men.",
   slug: "cenforce-130mg",
-  image: "/products/cenforce 130_1.png",
+  image: "/products/cenforce_130.png",
  "additionalImages": [
+    "/products/cenforce 130.png",
     "/products/cenforce 130_2.png",
-    "/products/cenforce 130_3.png",
   
   ],
+  metaTitle:"Buy Cenforce 130mg ED Pharma Wholesale Europe | Sildenafil 130mg Tablets ",
+  metaDescription:"Wholesale supplier of Cenforce 130mg tablets by ED Pharma in Europe. Buy sildenafil 130mg in bulk with competitive distributor pricing, trusted supply chain and fast EU shipping. ",
   overview: [
     "Cenforce 130 mg contains Sildenafil Citrate in a high-strength formulation designed for stronger erectile support.",
     "It is intended for users who require a more pronounced effect compared to standard strengths such as 50 mg or 100 mg.",
@@ -3494,6 +3538,8 @@ const products = {
     "/products/cenforce 150_1.png",
   
   ],
+  metaTitle:"Cenforce 150mg ED Pharma Wholesale Europe | Buy in Bulk",
+  metaDescription:"Buy Cenforce 150mg tablets by ED Pharma wholesale in Europe. Premium sildenafil tablets for B2B buyers and distributors with competitive pricing, reliable supply and fast EU logistics. ",
 
 
   overview: [
@@ -3682,6 +3728,8 @@ const products = {
     "/products/Cenforce 200_1.png",
   
   ],
+  metaTitle:"Cenforce 200mg ED Pharma Importer Europe | Wholesale Sildenafil ",
+  metaDescription:"Trusted importer and wholesaler of Cenforce 200mg by ED Pharma in Europe. Buy sildenafil 200mg tablets in bulk with competitive pricing and dependable supply chain support. ",
 
   overview: [
     "Cenforce 200 mg contains Sildenafil Citrate in its strongest commonly available dosage form.",
@@ -3864,6 +3912,8 @@ const products = {
     "/products/Cenforce soft 100_1.png",
   
   ],
+  metaTitle:"Cenforce Soft 100mg ED Pharma Exporter Europe | Bulk Soft Sildenafil Supply ",
+  metaDescription:"Buy Cenforce Soft 100mg tablets by ED Pharma wholesale in Europe. Premium soft sildenafil tablets for B2B buyers, distributors and importers with competitive pricing and fast EU logistics. ",
 
   overview: [
     "Cenforce Soft 100 contains Sildenafil Citrate in a chewable tablet format designed for easier intake.",
@@ -4054,6 +4104,8 @@ const products = {
     "/products/cenforce-d_2.png",
   
   ],
+  metaTitle:"Buy Cenforce D 100/60 ED Pharma Wholesale Europe | Sildenafil + Dapoxetine ",
+  metaDescription:"Leading exporter of Cenforce D 100/60 by ED Pharma in Europe. B2B supply of dual action sildenafil and dapoxetine tablets for wholesalers and pharma distributors with fast delivery. ",
   overview: [
     "Cenforce-D contains two active ingredients: Sildenafil Citrate and Dapoxetine.",
     "Sildenafil supports erectile response by helping improve blood flow during sexual stimulation.",
@@ -4241,6 +4293,8 @@ const products = {
     "/products/Cenforce fm tablet.png",//Cenforce fm tablet.png
   
   ],
+  metaTitle:"Cenforce FM 100mg ED Pharma Exporter Europe | Bulk Female Sildenafil Supply ",
+  metaDescription:"Buy Cenforce FM 100mg tablets by ED Pharma wholesale in Europe. Premium female sildenafil tablets for B2B buyers, distributors and importers with competitive pricing and fast EU logistics. ",
   overview: [
     "Cenforce-FM contains Sildenafil Citrate in a formulation intended for female use.",
     "It may support improved physical responsiveness during intimacy when stimulation occurs.",
@@ -4427,6 +4481,8 @@ const products = {
     "/products/cenforce-professional-100-mg-1-front.png",
   
   ],
+  metaTitle:"Buy Cenforce Professional ED Pharma Wholesale Europe | ED Tablets ",
+  metaDescription:"Wholesale supplier of Cenforce Professional by ED Pharma in Europe. Buy premium ED tablets in bulk with competitive distributor rates, pharma‑grade quality and dependable EU shipping.",
 
   overview: [
     "Cenforce Professional contains Sildenafil Citrate in a sublingual format designed for faster absorption.",
@@ -4614,6 +4670,8 @@ const products = {
     "/products/Cenforce oral jelly.png",
   
   ],
+  metaTitle:"Cenforce Oral Jelly 100mg ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Cenforce Oral Jelly 100mg by ED Pharma wholesale in Europe. Premium sildenafil jelly for B2B buyers and distributors with competitive pricing, reliable supply and fast EU delivery. ",
 
   overview: [
     "Cenforce Oral Jelly 100 mg contains Sildenafil Citrate in a fast-absorbing gel format.",
@@ -4796,6 +4854,8 @@ const products = {
     "/products/vidalista 2.5 3.png",
   
   ],
+  metaTitle:"Vidalista 2.5mg ED Pharma Wholesale Europe | Tadalafil 2.5mg Supplier ",
+  metaDescription:"Buy Vidalista 2.5mg by ED Pharma wholesale in Europe. Premium tadalafil 2.5mg tablets for B2B distributors and wholesalers with competitive bulk pricing, reliable stock, export packaging & fast EU delivery. ",
   overview: [
     "Vidalista 2.5 mg contains Tadalafil in a very low-dose formulation.",
     "It is often used as a starting or maintenance dose for individuals seeking mild erectile support.",
@@ -4982,6 +5042,8 @@ const products = {
     "/products/tadalafil-tablet-5-mg-1000x1000.webp",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
   overview: [
     "Vidalista 5 mg contains Tadalafil in a low-dose formulation designed for consistent erectile support.",
     "This strength is commonly used for daily or regular management of erectile dysfunction.",
@@ -5168,6 +5230,8 @@ const products = {
     "/products/vidalista-10-box.webp",
   
   ],
+  metaTitle:"Vidalista 10mg ED Pharma Exporter Europe | Tadalafil 10mg Supply ",
+  metaDescription:"Wholesale supplier of Vidalista 10mg by ED Pharma in Europe. Top quality tadalafil 10mg tablets, competitive distributor pricing, dependable stock and fast EU shipping — perfect for wholesalers. ",
 
   overview: [
     "Vidalista 10 mg contains Tadalafil in a low-dose formulation suitable for controlled erectile support.",
@@ -5355,6 +5419,8 @@ const products = {
     "/products/Vidalista_3.webp",
   
   ],
+  metaTitle:"Vidalista 20mg ED Pharma Wholesale Europe | Bulk Tadalafil Deals ",
+  metaDescription:"Buy Vidalista 20mg in bulk from ED Pharma Europe’s choice for premium tadalafil 20mg tablets. Competitive pricing, reliable stock, export-ready packaging and fast EU delivery for wholesalers. ",
 
   overview: [
     "Vidalista 20 mg contains Tadalafil and is considered a standard mid-range strength for erectile support.",
@@ -5524,7 +5590,7 @@ const products = {
     "Prioritize overall cardiovascular health to naturally support better functioning."
   ]
 },
-"vidalista-40-en": {
+"vidalista-40mg-en": {
   id: "33",
   name: "Vidalista 40 mg",
   category: "Vidalista",
@@ -5542,6 +5608,8 @@ const products = {
     "/products/vidalista-40mg-side_3.webp",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
   overview: [
     "Vidalista 40 mg contains Tadalafil in a higher-strength formulation for erectile support.",
     "It is typically used when lower strengths such as 10 mg or 20 mg are not effective enough.",
@@ -5728,6 +5796,8 @@ const products = {
     "/products/vidalista-60mg-side_3.webp",
   
   ],
+  metaTitle:"Vidalista 60mg ED Pharma Wholesale Europe | High-Strength Tadalafil",
+  metaDescription:"Europe’s trusted B2B supplier of Vidalista 60mg by ED Pharma. High-demand tadalafil 60mg tablets with competitive pricing, reliable inventory, export packaging & fast shipping for wholesalers. ",
   overview: [
     "Vidalista 60 mg contains Tadalafil in a high-strength formulation intended for erectile support.",
     "This strength is generally used when lower doses such as 10 mg, 20 mg, or 40 mg have not provided enough effectiveness.",
@@ -5914,6 +5984,9 @@ const products = {
     "/products/vidalista 80_3.png",
   
   ],
+  metaTitle:"Vidalista 80mg ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Vidalista 80mg tablets by ED Pharma wholesale in Europe. Premium tadalafil 80mg tablets for B2B buyers, distributors and importers with competitive bulk pricing and speedy EU shipping.",
+
   overview: [
     "Vidalista 80 mg contains a high dose of Tadalafil and is intended for strong erectile support.",
     "It is generally recommended only for individuals who did not respond adequately to lower strengths.",
@@ -6100,6 +6173,9 @@ const products = {
     "/products/vidalista-black-80-mg_3.png",
   
   ],
+  metaTitle:"Vidalista Black 80mg ED Pharma Wholesale Supplier Europe | B2B Tablets ",
+  metaDescription:"Trusted importer and wholesaler of Vidalista Black 80mg by ED Pharma in Europe. Bulk tadalafil tablets with competitive pricing, dependable supply chain and fast EU logistics. ",
+
   overview: [
     "Vidalista Black 80 contains Tadalafil in a high-strength formulation for enhanced erectile support.",
     "It is designed for individuals who require strong and sustained performance.",
@@ -6289,6 +6365,8 @@ const products = {
     "/products/super-vidalista_1.webp",
   
   ],
+  metaTitle:"Super Vidalista 20/60 ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Super Vidalista 20/60 tablets by ED Pharma wholesale in Europe. Premium dual action ED & PE tablets for B2B buyers and distributors with competitive pricing and fast EU logistics. ",
 
   overview: [
     "Super Vidalista contains a combination of Tadalafil 20 mg and Dapoxetine 60 mg.",
@@ -6477,6 +6555,9 @@ const products = {
     "/products/vadalista20mg-3.png",
   
   ],
+  metaTitle:"Vidalista CT 20mg ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Vidalista CT 20mg by ED Pharma wholesale in Europe. Premium dissolvable tadalafil tablets for B2B buyers and distributors with attractive bulk pricing and fast EU shipping.",
+
   description: "Tadalafil has two main uses. The most common is to treat erectile dysfunction in men.",
  
   overview: [
@@ -6651,6 +6732,9 @@ const products = {
     "/products/vidalista-professional-20-mg_2.jpg",
   
   ],
+metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Supply ",
+  metaDescription:"Buy Vidalista Professional 20mg tablets by ED Pharma wholesale in Europe. Advanced tadalafil 20mg tablets for B2B buyers, distributors and importers with competitive pricing and fast EU logistics.",
+
   overview: [
     "Vidalista Professional 20 mg contains Tadalafil in a sublingual tablet format for faster absorption.",
     "The tablet dissolves under the tongue, allowing quicker entry into the bloodstream compared to standard tablets.",
@@ -6837,6 +6921,10 @@ const products = {
     "/products/vilitra_10_3.webp",
   
   ],
+
+  metaTitle:"Vilitra 10mg ED Pharma Wholesale Europe | Vardenafil 10mg Supplier ",
+  metaDescription:"Buy Vilitra 10mg by ED Pharma wholesale in Europe. Premium vardenafil tablets for B2B distributors and wholesalers with competitive bulk pricing, pharma‑grade quality, reliable stock & fast EU delivery.",
+
   overview: [
     "Vilitra 10 mg contains Vardenafil and is used to support erectile function in men.",
     "The medication works by increasing blood flow to the penis during sexual stimulation.",
@@ -7023,6 +7111,9 @@ const products = {
     "/products/vilitra 20_3.jpeg",
   
   ],
+  metaTitle:"Buy Vilitra 20mg ED Pharma Wholesale Europe | Bulk Vardenafil 20mg ",
+  metaDescription:"Buy Vilitra 20mg tablets by ED Pharma wholesale in Europe. Premium vardenafil 20mg tablets for B2B buyers, distributors and importers with competitive bulk pricing and fast EU shipping. ",
+
   overview: [
     "Vilitra 20 mg contains Vardenafil and is used to support erectile function in men.",
     "The medication increases blood flow to the penis during sexual stimulation.",
@@ -7209,6 +7300,8 @@ const products = {
     "/products/vilitra 40mg.png",
   
   ],
+  metaTitle:"Buy Vilitra 40mg ED Pharma Wholesale Europe | Bulk Vardenafil Tablets ",
+  metaDescription:"Buy Vilitra 40mg tablets by ED Pharma wholesale in Europe. Premium vardenafil 40mg tablets for B2B buyers, distributors and importers with attractive bulk deals and fast EU shipping. ",
 
   overview: [
     "Vilitra 40 mg contains Vardenafil and is a higher-dose option for erectile support in men.",
@@ -7396,6 +7489,8 @@ const products = {
     "/products/vardenafil-60-mg-vilitra-60mg.jpeg",
   
   ],
+  metaTitle:"Vilitra 60mg ED Pharma Wholesale Supplier Europe | B2B Tablets ",
+  metaDescription:"Get Vilitra 60mg by ED Pharma at wholesale price in Europe. High‑demand vardenafil 60mg tablets with export packaging, bulk deals, fast delivery and dedicated B2B support. ",
   description: "Vilitra 60mg is a medicament that treats the inability to attain the desired erection for healthy sexual intercourse.",
 
   overview: [
@@ -7574,6 +7669,8 @@ const products = {
     "/products/super_vilitra_3.webp",
   
   ],
+  metaTitle:"Super Vilitra ED Pharma Wholesale Europe | Buy in Bulk  ",
+  metaDescription:"Buy Super Vilitra tablets by ED Pharma wholesale in Europe. Premium vardenafil formula for B2B buyers, distributors and importers with competitive pricing and fast EU shipping. ",
 
   overview: [
     "Super Vilitra contains a combination of Vardenafil 20 mg and Dapoxetine 60 mg.",
@@ -7762,6 +7859,8 @@ const products = {
     "/products/fliban_1.webp",
   
   ],
+  metaTitle:"Buy Fliban 100mg ED Pharma Wholesale Europe | Bulk Dapoxetine Tablets ",
+  metaDescription:"Buy Fliban 100mg by ED Pharma wholesale in Europe. Premium dapoxetine tablets for B2B distributors and wholesalers with competitive bulk pricing, reliable stock, export packaging and fast EU delivery. ",
   description: "Fliban (Flibanserin Tablets) are used to treat premenopausal women with acquired hypoactive sexual desire disorder (HSDD).",
 
   overview: [
@@ -7950,6 +8049,8 @@ const products = {
     "/products/avanafil-avana-50mg-tablet_3.webp",
   
   ],//public\products\Avana 200_1.png
+  metaTitle:"Avana 50mg ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Avana 50mg tablets by ED Pharma wholesale in Europe. Premium avanafil tablets for B2B buyers, distributors and importers with competitive bulk pricing and dependable EU logistics. ",
 
   overview: [
     "Avana-50 contains Avanafil 50 mg and is used to support erectile function in men with ED.",
@@ -8137,6 +8238,8 @@ const products = {
     "/products/Avana-100mg_3.png",
     
   ],
+  metaTitle:"Avana 100mg ED Pharma Wholesale Supplier Europe | B2B Avanafil ",
+  metaDescription:"Buy Avana 100mg tablets by ED Pharma wholesale in Europe. Premium avanafil formula for B2B buyers, distributors and importers with competitive bulk pricing and dependable EU logistics. ",
 
   description: "The primary indication of Avana is treatment of inability to sustain satisfaction to complete intercourse.",
 
@@ -8316,6 +8419,9 @@ const products = {
     "/products/Avana-200mg.png",
   
   ],
+  metaTitle:"Avana 200mg ED Pharma Wholesale Europe | Buy Bulk Avanafil",
+  metaDescription:"Buy Avana 200mg tablets by ED Pharma wholesale in Europe. Ultra-potent avanafil tablets for B2B distributors and wholesalers with competitive bulk pricing and dependable EU shipping. ",
+
   description: "Avana-200 contains Avanafil, used in the treatment of erectile dysfunction (inadequate penile erection during sexual activity).",
 
   overview: [
@@ -8507,6 +8613,9 @@ const products = {
     "/products/TOP AVANA.png",
   
   ],
+  metaTitle:"Buy Top Avana Tablets | Trusted ED Pharma Supplier ",
+  metaDescription:"Buy Top Avana tablets from ED Pharma. Trusted formulation, competitive rates, secure ordering, and a professional pharmaceutical supply experience. ",
+
   description: "Used to help men with erectile dysfunction impotence, to achieve and maintain an erection when sexually aroused.",
  
   overview: [
@@ -8699,6 +8808,9 @@ const products = {
     "/products/Super-Avana_3.png",
   
   ],
+  metaTitle:"Super Avana Tablets Online | Quality Supply by ED Pharma ",
+  metaDescription:"Buy Super Avana tablets from ED Pharma for reliable quality and consistent formulation. Secure ordering, competitive pricing, and dependable delivery for global buyers. ",
+
   description: "Super Avana tablets are manufactured by Sunrise Remedies Pvt. Ltd.",
 
   overview: [
@@ -8893,6 +9005,9 @@ const products = {
     "/products/extra super avan _2.png",
   
   ],
+  metaTitle:"Extra Super Avana Tablets | Buy with Confidence from ED Pharma ",
+  metaDescription:"Buy Extra Super Avana tablets from ED Pharma. Trusted formulation, competitive rates, secure ordering, and a professional pharmaceutical sourcing experience. ",
+
   description: "Extra Super Avana is a powerful medication for ED treatment. It consists of two active ingredients Avanafil and Dapoxetine that help men to fight erectile problems.",
 
   overview: [
@@ -9082,6 +9197,9 @@ const products = {
     "/products/poxet-30-mg-1_3.png",
   
   ],
+  metaTitle:"Poxet 30 mg Tablets | Buy with Confidence from ED Pharma ",
+  metaDescription:"Poxet 30 mg tablets available from ED Pharma for buyers who value secure ordering, transparent pricing, consistent formulation, and a professional sourcing experience. ",
+
   description: "Poxet 30 Dapoxetine is a medicine used specifically for treating premature ejaculation (PE) in adult men.",
 
   overview: [
@@ -9271,6 +9389,9 @@ const products = {
     "/products/poxet-60_1.png",
   
   ],
+  metaTitle:"Poxet 60 mg Tablets | Buy with Confidence from ED Pharma ",
+  metaDescription:"Buy Poxet 60 mg tablets from ED Pharma for reliable quality and consistent formulation. Secure ordering, competitive pricing, and dependable delivery for global buyers. ",
+
   description: "Poxet-60 tablets are used to treat premature ejaculation (PE), one of the most common causes of sexual dysfunction in men.",
 
   overview: [
@@ -9460,6 +9581,9 @@ const products = {
     "/products/Poxet 90_1.png",
   
   ],
+  metaTitle:"Buy Poxet 90 mg Online from ED Pharma | Trusted Source ",
+  metaDescription:"Poxet 90 mg tablets by ED Pharma are produced with controlled standards. Ideal for buyers seeking consistency, transparency, and a smooth pharmaceutical purchasing experience. ",
+
   description: "Poxet 90 is used to treat premature ejaculation in adult men aged 18 to 64 years.",
 
   overview: [
@@ -9659,6 +9783,8 @@ const products = {
     "/products/P-force 100_3.png",
   
   ],
+  metaTitle:"Buy P-Force 100 Caps ED Pharma Wholesale Europe | Bulk ED Solution ",
+  metaDescription:"Europe’s trusted B2B supplier of P-Force 100 caps by ED Pharma. Premium sildenafil 100mg capsule formula with competitive bulk pricing, dependable stock and fast EU delivery for distributors. ",
 
   overview: [
     "P-Force 100 Caps contains Sildenafil Citrate 100 mg and is used to support erectile function in men.",
@@ -9857,6 +9983,8 @@ const products = {
     "/products/p-force fort_3.png",
   
   ],
+  metaTitle:"Buy P-Force Fort ED Pharma Wholesale Europe | Bulk Sildenafil Capsules ",
+  metaDescription:"Buy P-Force Fort capsules by ED Pharma wholesale in Europe. Premium sildenafil ED support formula for distributors, wholesalers and importers with attractive bulk pricing and reliable EU logistics. ",
 
   overview: [
     "P-Force Fort contains Sildenafil Citrate 150 mg and is used to support erectile function in men.",
@@ -10055,6 +10183,8 @@ const products = {
     "/products/P-Force-Plus_2.png",
   
   ],
+  metaTitle:"Buy P-Force Plus ED Pharma Wholesale Europe | Bulk ED Capsule Supply ",
+  metaDescription:"Buy P-Force Plus by ED Pharma wholesale in Europe. Enhanced ED support capsules with premium sildenafil action, competitive bulk pricing, pharma-grade quality and fast EU delivery for B2B distributors. ",
 
   overview: [
     "P-Force Plus contains Sildenafil Citrate 130 mg and is used to help support erectile function in men.",
@@ -10252,6 +10382,8 @@ const products = {
     "/products/Super-P-Force-Oral-Jelly15_2.png",
   
   ],
+  metaTitle:"Buy Super P‑Force Oral Jelly ED Pharma Wholesale Europe",
+  metaDescription:"Buy Super P‑Force Oral Jelly by ED Pharma wholesale in Europe. Premium fast‑acting ED jelly for distributors and wholesalers with attractive bulk pricing and reliable EU delivery. ",
 
   overview: [
     "Super P-Force Oral Jelly contains Sildenafil Citrate 100 mg and Dapoxetine 60 mg in a fast-absorption gel format.",
@@ -10449,6 +10581,8 @@ const products = {
     "/products/Super-P-Force6-sunris_3.png",
   
   ],
+  metaTitle:"Buy Super P‑Force ED Pharma Wholesale Europe ",
+  metaDescription:"Stock Super P‑Force by ED Pharma for your business. Fast-acting ED tablets your customers will love, bulk deals for distributors, and reliable EU delivery — maximize satisfaction and profits. ",
 
   overview: [
     "Super P-Force contains a combination of Sildenafil Citrate 100 mg and Dapoxetine 60 mg.",
@@ -10646,6 +10780,8 @@ const products = {
     "/products/Extra-Super-P-Force_3.png",
   
   ],
+  metaTitle:"Buy Extra Super P-Force ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Extra Super P-Force capsules by ED Pharma wholesale in Europe. High-quality sildenafil ED formula for B2B buyers, distributors and importers with competitive bulk deals and reliable EU shipping. ",
 
   overview: [
     "Extra Super P-Force combines Sildenafil Citrate 100 mg and Dapoxetine 100 mg.",
@@ -10843,6 +10979,9 @@ const products = {
     "/products/zhewitra 10_3.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
+
   overview: [
     "Zhewitra 10 contains Vardenafil 10 mg, a trusted medication used to support men experiencing erectile dysfunction.",
     "It helps increase blood flow to the penile tissue, improving the ability to achieve a firm and lasting erection.",
@@ -11039,6 +11178,9 @@ administration: [
     "/products/zhewitra 20_1.png",
   
   ],
+
+  metaTitle:" ",
+  metaDescription:" ",
    
   overview: [
     "Zhewitra 20 contains Vardenafil 20 mg, a medication used to treat erectile dysfunction in men.",
@@ -11237,6 +11379,8 @@ administration: [
     "/products/zhewitra-20-oral-jelly-3.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
    
   overview: [
     "Zhewitra 20 Oral Jelly contains Vardenafil 20 mg and is designed for treating erectile dysfunction in men.",
@@ -11432,6 +11576,8 @@ administration: [
     "/products/zhewitra-40-3.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
 
   overview: [
     "Zhewitra 40 contains Vardenafil 40 mg and is used for the treatment of erectile dysfunction in men.",
@@ -11627,6 +11773,9 @@ administration: [
     "/products/zhewitra-60_3.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
+
   overview: [
     "Zhewitra 60 contains Vardenafil 60 mg, a high-strength medication used for treating erectile dysfunction in men.",
     "This dosage is intended for individuals who require stronger erectile support than standard or moderate formulations.",
@@ -11823,6 +11972,9 @@ administration: [
     "/products/Zhewitrasoft-3.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
+
   overview: [
     "Zhewitra Soft 20 contains Vardenafil 20 mg in a soft chewable tablet format designed to treat erectile dysfunction in men.",
     "The soft formulation allows faster absorption compared to traditional swallowed tablets.",
@@ -12017,6 +12169,8 @@ administration: [
     "/products/Super-Zhewitra16_3.png",
   
   ],
+  metaTitle:"Super Zhewitra Tablets Online | Quality Supply by ED Pharma ",
+  metaDescription:"Buy Super Zhewitra tablets from ED Pharma. Trusted formulation, competitive rates, secure ordering, and a professional pharmaceutical sourcing experience.",
     
   overview: [
     "Super Zhewitra contains Vardenafil 20 mg and Dapoxetine 60 mg, formulated to support erectile dysfunction and premature ejaculation in men.",
@@ -12214,6 +12368,8 @@ administration: [
     "/products/Extra-Super-Zhewitra_3.png",
   
   ],
+  metaTitle:"Extra Super Zhewitra Tablets | Buy with Confidence from ED Pharma ",
+  metaDescription:"Buy Extra Super Zhewitra tablets from ED Pharma. Trusted formulation, competitive rates, secure ordering, and a reliable pharmaceutical supply experience.",
    
   overview: [
     "Extra Super Zhewitra contains Vardenafil 40 mg and Dapoxetine 60 mg, formulated to assist with erectile dysfunction and premature ejaculation.",
@@ -12410,6 +12566,8 @@ administration: [
     "/products/tablet-tadarise-2.5_3.png",
   
   ],
+  metaTitle:"Buy Tadarise 2.5 ED Pharma Wholesale Europe | Bulk Tadalafil Supply ",
+  metaDescription:"Europe’s trusted B2B supplier of Tadarise 2.5 by ED Pharma. Premium tadalafil 2.5mg tablets in bulk, pharma-grade quality, and dependable EU delivery for distributors, wholesalers & importers. ",
     
   overview: [
     "Tadarise-2.5 contains Tadalafil 2.5 mg and is used primarily to support erectile function in men.",
@@ -12607,6 +12765,8 @@ administration: [
     "/products/tablet-tadarise-5_3.png",
   
   ],
+  metaTitle:"Tadarise 5 ED Pharma Bulk Europe | Trusted Tadalafil 5mg Supplier ",
+  metaDescription:"Buy Tadarise 5 tablets by ED Pharma wholesale in Europe. Premium tadalafil 5mg formula for B2B buyers and distributors with competitive bulk pricing and reliable EU shipping. ",
    
   overview: [
     "Tadarise-5 contains Tadalafil 5 mg and is commonly used for managing erectile dysfunction in men.",
@@ -12802,6 +12962,8 @@ administration: [
     "/products/tadarise10_3.png",
   
   ],
+  metaTitle:"Buy Tadarise 10 ED Pharma Wholesale Europe | B2B Tadalafil Supply ",
+  metaDescription:"Europe’s trusted B2B supplier of Tadarise 10 by ED Pharma. Premium tadalafil 10mg tablets in bulk with export-ready packaging, dependable stock and fast EU delivery — great for trade partners. ",
    
   overview: [
     "Tadarise-10 contains Tadalafil 10 mg and is used to help men experiencing erectile dysfunction.",
@@ -13000,6 +13162,8 @@ administration: [
     "/products/TADARISE PRO_20_3.png",
   
   ],
+  metaTitle:"Tadarise Pro 20 ED Pharma Bulk Europe | Trusted 20mg Tadalafil Supplier ",
+  metaDescription:"Europe’s trusted B2B supplier of Tadarise Pro 20 by ED Pharma. Premium 20mg tadalafil tablets with export packaging, competitive bulk pricing and reliable EU delivery for distributors and trade buyers. ",
    
   overview: [
     "Tadarise Pro-20 contains Tadalafil 20 mg and is designed to support men experiencing erectile dysfunction.",
@@ -13195,6 +13359,8 @@ administration: [
     "/products/TADARISE20_3.png",
   
   ],
+  metaTitle:"Buy Tadarise 20 ED Pharma Wholesale Europe | Premium Tadalafil 20mg ",
+  metaDescription:"Buy Tadarise 20 tablets by ED Pharma wholesale in Europe. High-potency tadalafil 20mg formula for distributors, wholesalers and importers with attractive bulk pricing and dependable EU shipping. ",
     
    
   overview: [
@@ -13392,6 +13558,8 @@ administration: [
     "/products/tadalafil-oral-jelly-20-mg-1000x1000.png",
   
   ],
+  metaTitle:"Tadarise 20 Oral Jelly ED Pharma Exporter Europe | Bulk Fast Jelly Supply ",
+  metaDescription:" Buy Tadarise 20 Oral Jelly by ED Pharma wholesale in Europe. Premium fast-acting tadalafil 20mg jelly for distributors with competitive bulk pricing and fast EU shipping — perfect for B2B.",
    
   overview: [
     "Tadarise-20 Oral Jelly contains Tadalafil 20 mg and is formulated for easy and fast absorption.",
@@ -13589,6 +13757,8 @@ administration: [
     "/products/tadarise40_3.png",
   
   ],
+  metaTitle:"Tadarise 40 ED Pharma Wholesale Europe | Bulk Tadalafil 40mg Tablets ",
+  metaDescription:"Buy Tadarise 40 tablets by ED Pharma wholesale in Europe. Premium tadalafil 40mg formula for B2B distributors and wholesalers with competitive bulk pricing and reliable EU shipping. ",
    
   overview: [
     "Tadarise-40 contains Tadalafil 40mg and is used to support treatment for erectile dysfunction in men.",
@@ -13783,6 +13953,8 @@ administration: [
     "/products/tadarise-pro-40_3.png",
   
   ],
+  metaTitle:"Tadarise Pro 40 ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Tadarise Pro 40 tablets by ED Pharma wholesale in Europe. Premium tadalafil 40mg formula for distributors and wholesalers with competitive bulk pricing and reliable EU shipping. ",
 
    
   overview: [
@@ -13979,6 +14151,8 @@ administration: [
     "/products/tadarise-60-mg-back_3.png",
   
   ],
+  metaTitle:"Tadarise 60 ED Pharma Wholesale Supplier Europe ",
+  metaDescription:"Buy Tadarise 60 tablets by ED Pharma wholesale in Europe. Premium tadalafil 60mg formula for distributors, wholesalers and importers with competitive bulk pricing and reliable EU delivery.",
    
   overview: [
     "Tadarise-60 contains Tadalafil 60mg and is designed for men experiencing moderate to severe erectile dysfunction.",
@@ -14174,6 +14348,8 @@ administration: [
     "/products/super_tadarise_tablet_3.png",
   
   ],
+  metaTitle:"Super Tadarise Tablet Supplier & Exporter | ED Pharma ",
+  metaDescription:"Super Tadarise tablets available from ED Pharma for buyers who value quality consistency, secure transactions, transparent pricing, and professional pharmaceutical sourcing. ",
     
   overview: [
     "Super Tadarise combines Tadalafil 20mg and Dapoxetine 60mg to support erectile function and delay ejaculation.",
@@ -14371,6 +14547,8 @@ administration: [
     "/products/extra_super_tadarise_tablet_3.png",
   
   ],
+  metaTitle:"Extra Super Tadarise Tablet Supplier & Exporter | ED Pharma ",
+  metaDescription:"Buy Extra Super Tadarise from ED Pharma for enhanced performance support. Quality-focused formulation, secure ordering, competitive pricing, and reliable delivery for global buyers. ",
    
   overview: [
     "Extra Super Tadarise contains Tadalafil 40mg and Dapoxetine 60mg, formulated for men experiencing both erectile dysfunction and premature ejaculation.",
@@ -14567,6 +14745,8 @@ administration: [
     "/products/Tadarise-Effervescent_1.png",
   
   ],
+  metaTitle:"Buy Tadarise Effervescent ED Pharma Bulk Europe ",
+  metaDescription:"Buy Tadarise Effervescent by ED Pharma wholesale in Europe. Premium fast-acting tadalafil effervescent tablets for distributors and wholesalers with competitive bulk pricing & reliable EU delivery. ",
     
   overview: [
     "Tadarise Effervescent contains Tadalafil 20mg in a fast-dissolving effervescent tablet form.",
@@ -14761,6 +14941,9 @@ administration: [
     "/products/top-tadarise12-sunrise-3.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
+
   overview: [
     "Top Tadarise contains a dual-action combination of Tadalafil 20 mg and Dapoxetine 30 mg.",
     "This formulation is designed to address both erectile dysfunction and premature ejaculation simultaneously.",
@@ -14945,6 +15128,8 @@ administration: [
     "/products/tadasoft-20-mg_3.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
 
   overview: [
     "Tadasoft 20 mg contains Tadalafil in a soft, chewable, and flavored tablet form.",
@@ -15130,6 +15315,8 @@ administration: [
     "/products/tadasoft-40-mg_2.png",
   
   ],
+  metaTitle:" ",
+  metaDescription:" ",
 
   overview: [
     "Tadasoft 40 mg contains a high-strength dose of Tadalafil in a soft, chewable, flavored tablet form.",
@@ -15316,6 +15503,8 @@ administration: [
     "/products/sildisoft-sildenafil-100_3.png",
   
   ],
+  metaTitle:"Sildisoft 100 ED Pharma Bulk Europe | Trusted Soft ED Supplier ",
+  metaDescription:"Europe’s trusted B2B supplier of Sildisoft 100 by ED Pharma. Soft sildenafil 100mg tablets with pharma-grade quality, attractive bulk pricing and reliable EU delivery for distributors and importers. ",
    
   overview: [
     "Sildisoft-100 contains Sildenafil 100mg in a soft chewable format for the treatment of erectile dysfunction in men.",
@@ -15511,6 +15700,8 @@ administration: [
     "/products/sildisoft-sildenafil-50mg_3.png",
   
   ],
+  metaTitle:"Buy Sildisoft 50 ED Pharma Wholesale Europe | Bulk Soft Sildenafil ",
+  metaDescription:"Wholesale supplier of Sildisoft 50 by ED Pharma in Europe. Soft form sildenafil 50mg tablets with pharma-grade quality, top bulk deals, steady inventory and fast EU shipping for wholesalers and importers. ",
  
   overview: [
     "Sildisoft-50 contains Sildenafil 50mg in a soft chewable form designed to treat erectile dysfunction in men.",
@@ -15710,6 +15901,8 @@ administration: [
     "/products/malegra_25_mg_3.png",
   
   ],
+  metaTitle:"Malegra 25 ED Pharma Wholesale Europe | Sildenafil 25mg Tablets ",
+  metaDescription:"Europe’s trusted B2B supplier of Malegra 25 by ED Pharma. High‑quality sildenafil 25mg tablets with bulk deals, export packaging and reliable EU delivery for distributors and trade partners. ",
    
   overview: [
     "Malegra 25 contains Sildenafil 25mg and is formulated to treat erectile dysfunction in men.",
@@ -15903,6 +16096,8 @@ administration: [
     "/products/malegra_50_mg_1.webp",
   
   ],
+  metaTitle:"Buy Malegra 50 ED Pharma Wholesale Europe | Bulk Sildenafil 50mg ",
+  metaDescription:"Buy Malegra 50 by ED Pharma wholesale in Europe. Effective sildenafil 50mg tablets with pharma‑grade quality, competitive bulk pricing, dependable inventory and fast EU delivery — ideal for B2B partners. ",
   
   overview: [
     "Malegra 50 contains Sildenafil 50mg and is used to treat erectile dysfunction in men.",
@@ -16099,6 +16294,8 @@ administration: [
     "/products/malegra-sildenafil-tablets 75_3.png",
   
   ],
+  metaTitle:"Malegra 75 ED Pharma Exporter Europe | Wholesale ED Tablet Supply ",
+  metaDescription:"Buy Malegra 75 tablets by ED Pharma wholesale in Europe. Premium sildenafil 75mg formula for B2B buyers, distributors and importers with attractive bulk pricing and fast EU delivery. ",
    
   overview: [
     "Malegra 75 contains Sildenafil 75mg and is designed to support men experiencing erectile dysfunction.",
@@ -16276,6 +16473,202 @@ administration: [
     "Regular medical check-ups ensure safe and effective use of Sildenafil for ED."
   ]
   },
+   "malegra-100":{
+    id: "89",
+    name: "Malegra 100",
+    brand: "ED Sunrise Remedies",
+    category: "Malegra Range",
+    dosage: "100 mg",
+    composition: "Sildenafil 100 mg",
+    form: "Tablet",
+    pack_size: "One Box Contains 10 X 10 Tablet.",
+    cas_id: "171599-83-0",
+    description: "Malegra 100 mg tablet is a potential and long-lasting medical formula to deal with erectile failures in men.",
+    slug: "malegra-100",
+    image: "/products/Malegra-100.png",//public\products\Malegra-100.png
+    "additionalImages": [
+    "/products/Malegra-100.png",
+    "/products/Malegra-100.png",
+  
+  ],
+
+  overview: [
+    "Malegra 100 contains Sildenafil Citrate 100mg, a widely recognized and effective treatment option for erectile dysfunction in adult men.",
+    "This strength is considered a full therapeutic dose suitable for individuals who did not achieve sufficient response with lower dosages such as 25mg, 50mg, or 75mg.",
+    "The medication works by enhancing blood flow to the penile tissues during sexual stimulation, helping achieve a firm and lasting erection.",
+    "Malegra 100 belongs to a class of medications called PDE5 inhibitors, known for improving sexual response and performance consistency.",
+    "It typically begins working within 30–60 minutes after intake, depending on diet, metabolism, and physical condition.",
+    "The effects may last up to 4–6 hours, allowing flexibility and confidence during intimacy without needing immediate timing.",
+    "Malegra 100 requires sexual arousal to activate its effects and does not function as an aphrodisiac.",
+    "It may help improve erection hardness, duration, and overall sexual satisfaction for men experiencing persistent erectile difficulties.",
+    "Users commonly report improved confidence, reduced anxiety related to sexual performance, and enhanced relationship satisfaction.",
+    "This strength is designed for occasional or guided ongoing use based on individual health and medical recommendations.",
+    "Malegra 100 should be taken only once in a 24-hour period, preferably with water and without crushing or chewing.",
+    "Heavy or fatty meals may slow absorption and delay onset of action, while alcohol may reduce performance response.",
+    "The tablet can be taken with or without food depending on preference and tolerance.",
+    "Malegra 100 may support better erectile response in men with circulation-related or stress-induced ED.",
+    "It does not cure erectile dysfunction permanently, but supports reliable function when used correctly.",
+    "Positive results may improve sexual confidence and help restore a natural sense of intimacy.",
+    "The formulation is suited for men requiring a stronger dose to achieve optimal erection firmness.",
+    "Results may vary based on lifestyle, stress levels, physical health, age, and medication interactions.",
+    "It should not be taken alongside other erectile dysfunction medications or nitrate-containing products.",
+    "Malegra 100 is intended only for adult men and should not be used by women or individuals under 18.",
+    "Users may experience improved stamina and a more predictable erectile response over time.",
+    "The medication is often recommended after evaluation to ensure a suitable and safe dosage match.",
+    "Proper spacing between usage and sexual activity allows natural anticipation and comfort.",
+    "Malegra 100 offers a high-strength solution balancing potency with reliable therapeutic benefits.",
+    "With proper use, it may contribute to healthier sexual relationships and improved emotional wellness.",
+    "The response window allows flexibility and reduces pressure around timing during intimacy.",
+    "This formulation supports natural erection processes rather than artificially forcing responses.",
+    "Improved confidence may positively influence performance during sexual activity.",
+    "Store in a cool, dry place and avoid moisture to maintain tablet quality.",
+    "Malegra 100 remains one of the most commonly selected strengths for ongoing ED management due to its proven effectiveness."
+  ],
+
+  sideEffects: [
+    "Headache is the most commonly reported side effect after use.",
+    "Facial flushing or a warm sensation may occur temporarily.",
+    "Mild dizziness or lightheadedness may appear, especially when standing quickly.",
+    "Some users may experience nasal congestion or mild sinus pressure.",
+    "Digestive discomfort or acidity may occur in sensitive individuals.",
+    "Temporary nausea may appear in some cases.",
+    "Visual changes, including temporary blurring or color tinting, may occur for short durations.",
+    "Sensitivity to bright light may increase for some users.",
+    "A mild increase in heart rate may occur in certain cases.",
+    "Muscle or back discomfort may appear occasionally.",
+    "Mild fatigue or tiredness may occur after the medication begins to wear off.",
+    "Increased sweating or a feeling of warmth may be noticeable during peak effect.",
+    "Ringing in the ears or mild sensory sensitivity may rarely occur.",
+    "Restlessness or trouble sleeping may occur if taken late in the evening.",
+    "Skin redness or mild irritation may appear in rare instances.",
+    "More serious reactions such as chest pain, severe dizziness, or difficulty breathing require urgent evaluation.",
+    "Sudden loss of hearing or vision is extremely rare but requires immediate medical attention.",
+    "Priapism, or an erection lasting more than four hours, is a medical emergency and requires prompt treatment.",
+    "Side effects may intensify when combined with alcohol or other medications affecting blood pressure.",
+    "Individuals with existing cardiovascular conditions should use caution and medical guidance.",
+    "Hydration and limiting alcohol may help reduce some physical side effects.",
+    "Most mild side effects fade naturally as the medication leaves the system.",
+    "Avoid using multiple erectile dysfunction medications at the same time.",
+    "Persistent side effects may require dosage adjustment or medical assessment.",
+    "Not everyone experiences side effects, and many tolerate the medication well.",
+    "Response and side-effect intensity vary depending on age, health, metabolism, and sensitivity.",
+    "Using the medication as instructed reduces the likelihood of adverse reactions.",
+    "Those experiencing new or worsening symptoms should seek evaluation from a healthcare professional.",
+    "The majority of side effects are temporary and reduce after continued proper use.",
+    "Responsible use supports long-term safety and treatment benefits."
+  ],
+
+ 
+  warnings: [
+    "Do not take this medication if you are allergic to Sildenafil or similar compounds.",
+    "Avoid use if you take nitrate-based medications such as nitroglycerin.",
+    "Consult your doctor before use if you have heart disease or circulation-related issues.",
+    "This medication is not intended for individuals under 18 years of age.",
+    "Avoid consuming alcohol because it may increase dizziness and reduce tolerance.",
+    "Do not take more than one tablet within 24 hours unless directed by a clinician.",
+    "Seek immediate medical help if sudden changes in hearing or vision occur.",
+    "This medication must not be used by children or unauthorized individuals.",
+    "Avoid use if you have uncontrolled high or low blood pressure.",
+    "Do not combine with recreational drugs or unverified stimulants.",
+    "Seek urgent care if you experience chest pressure, tightness, or unusual discomfort.",
+    "Avoid tablets that appear expired, broken, or irregular in appearance.",
+    "Inform your doctor if you have kidney or liver-related medical conditions.",
+    "Stop using the medication if persistent dizziness, nausea, headaches, or discomfort occurs.",
+    "Avoid use during severe illness unless medically reviewed.",
+    "Do not mix this medication with other PDE5 inhibitors without medical supervision.",
+    "Seek emergency care if breathing becomes strained, difficult, or irregular.",
+    "Avoid driving or machinery operation if you feel dizzy, unstable, or faint.",
+    "Do not use tablets with abnormal odor, unexpected texture, or discoloration.",
+    "Report swelling, tingling, numbness, or unusual sensations to your doctor immediately.",
+    "Avoid unverified herbal boosters or stimulant supplements with this medication.",
+    "Store securely to prevent access by children or unauthorized individuals.",
+    "Inform your clinician about all medicines, vitamins, and supplements you take regularly.",
+    "Seek medical evaluation if unexpected reactions last longer than anticipated.",
+    "Use cautiously if you have neurological or vascular health conditions.",
+    "Stop immediately if severe or unexpected adverse effects appear.",
+    "Do not use the medication if packaging is wet, torn, or tampered with.",
+    "Discuss potential drug interactions with your healthcare provider before use.",
+    "Seek emergency assistance if severe dizziness, fainting, or sudden weakness develops.",
+    "Always follow your doctor’s recommended dosage and safety guidelines."
+  ],
+
+ administration: [
+    "Use this medication only if prescribed and supervised by a licensed healthcare professional.",
+    "Do not change the dosage or frequency unless your doctor clearly instructs you.",
+    "Swallow the tablet whole with clean water unless your clinician advises otherwise.",
+    "Do not chew, crush, or split the tablet unless medically approved.",
+    "Ensure the tablet is intact, sealed, and not physically damaged before taking it.",
+    "Avoid combining this medication with other treatments unless reviewed by your doctor.",
+    "Confirm with your healthcare provider that the 100 mg strength is safe and appropriate for you.",
+    "Do not exceed the dosage recommended by your clinician under any circumstances.",
+    "Check for allergies to Sildenafil or any inactive ingredients before use.",
+    "Inform your doctor about all prescription medications you take regularly.",
+    "Also disclose vitamins, OTC medicines, and herbal supplements you typically use.",
+    "Use in a stable environment, especially if you have a history of dizziness.",
+    "Do not take more than one tablet at once unless approved by a clinician.",
+    "Stop using the tablet if it appears discolored, cracked, or unusual in texture.",
+    "Follow the timing instructions given by your doctor for best consistency.",
+    "Avoid taking unverified herbal stimulants or unknown enhancement products.",
+    "Consult your clinician before your first dose to ensure the medication is suitable for you.",
+    "Store tablets in a cool, dry place away from sunlight and moisture.",
+    "Visually inspect each tablet before use to ensure proper condition.",
+    "Do not take the medication directly after significant physical exertion unless medically cleared.",
+    "Use only the prescribed single dose without self-adjusting the amount.",
+    "Avoid combining this medication with substances that greatly affect blood pressure or heart rate.",
+    "Dispose of empty blister packs safely to prevent accidental access by others.",
+    "Maintain normal hydration unless your healthcare provider advises differently.",
+    "Avoid using this medication if you feel unwell, feverish, weak, or faint.",
+    "Ask your doctor for clarification if any instructions seem unclear to you.",
+    "Do not combine this medication with other PDE5 inhibitors unless supervised by a doctor.",
+    "Stop use if you experience any unusual or unexpected physical reactions.",
+    "Ensure your usage follows the long-term treatment plan outlined by your doctor.",
+    "Inform your healthcare provider if the medication’s effects differ from what you were told to expect."
+  ],
+ how_it_works: [
+    "Malegra 100 contains Sildenafil, a PDE5 inhibitor designed to treat erectile dysfunction (ED) in men.",
+    "Sildenafil works by blocking the enzyme phosphodiesterase type 5, which controls blood flow in penile tissues.",
+    "By inhibiting PDE5, it increases cyclic GMP levels, relaxing smooth muscles and widening blood vessels in the penis.",
+    "This enhanced blood flow allows men to achieve and maintain a firm erection during sexual stimulation.",
+    "The medication supports natural erectile function without directly stimulating sexual desire.",
+    "Malegra 100 typically starts working within 30–60 minutes of oral intake.",
+    "Its effects can last up to 4–6 hours, providing sufficient time for sexual activity.",
+    "The effectiveness depends on sexual arousal; Sildenafil alone will not trigger an erection.",
+    "Individual response varies depending on health, metabolism, and other medications.",
+    "It can help reduce performance anxiety and increase confidence in sexual performance.",
+    "Sildenafil works selectively on penile blood flow without affecting hormone levels or libido.",
+    "Proper timing of intake is important; usually taken 30–60 minutes before sexual activity.",
+    "The medication can be taken with or without food, although high-fat meals may delay onset.",
+    "Malegra 100 is intended for adult men and should not be used by women or children.",
+    "Avoid using with nitrate-containing medications due to serious potential interactions.",
+    "Mild side effects like headache, flushing, or indigestion may occur and are typically temporary.",
+    "The medication promotes reliable erectile function, enhancing satisfaction for both partners.",
+    "Regular use should be supervised by a healthcare professional for safety.",
+    "It complements a healthy lifestyle, including proper diet, exercise, and stress management.",
+    "Consult your doctor if you have underlying heart, liver, or kidney conditions before use."
+  ],
+ tips: [
+    "Store Malegra 100 in a cool, dry place away from direct sunlight to maintain potency.",
+    "Check the expiry date and packaging integrity before use to ensure quality.",
+    "Take the tablet approximately 30–60 minutes before sexual activity for optimal results.",
+    "Swallow the tablet whole with water; do not crush or chew.",
+    "Avoid excessive alcohol as it may reduce effectiveness and cause dizziness.",
+    "Consult a doctor if you have cardiovascular, liver, or kidney issues.",
+    "Do not combine with nitrate medications or other PDE5 inhibitors without medical advice.",
+    "Report any severe or unusual side effects such as prolonged erection or chest pain immediately.",
+    "Maintain a healthy lifestyle including exercise, balanced diet, and stress management.",
+    "Do not exceed the prescribed 100mg dosage per occasion.",
+    "Keep tablets in original packaging to protect from moisture and contamination.",
+    "Never share the medication with others, even if symptoms appear similar.",
+    "Avoid heavy or high-fat meals before intake to ensure proper absorption.",
+    "If dizziness or headache occurs, rest and avoid driving or operating machinery.",
+    "Ensure all other medications are checked for potential interactions with your doctor.",
+    "Educate yourself on PDE5 inhibitors to make informed usage decisions.",
+    "Do not use if under 18 years of age.",
+    "Track your body’s response to optimize timing for sexual activity.",
+    "Communicate with your partner to reduce performance anxiety and improve experience.",
+    "Regular check-ups ensure safe and effective use of Sildenafil for erectile dysfunction."
+  ]
+  },
     
   "Malegra-120-en":{
     id: "90",
@@ -16295,6 +16688,8 @@ administration: [
     "/products/malegra-120mg_3.png",
   
   ],
+  metaTitle:"Malegra 120 ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Malegra 120 tablets by ED Pharma wholesale in Europe. High‑quality sildenafil 120mg formula for B2B buyers, distributors and importers with competitive bulk pricing and reliable EU shipping.",
     
   overview: [
     "Malegra 120 mg contains Sildenafil Citrate in a higher-strength formulation designed for men experiencing moderate to severe erectile dysfunction.",
@@ -16489,6 +16884,8 @@ administration: [
     "/products/malegra-200_2.png",
   
   ],
+  metaTitle:"Malegra 200 ED Pharma Exporter Europe | Bulk ED Tablet Supply ",
+  metaDescription:"Get Malegra 200 by ED Pharma at wholesale price in Europe. Ultra‑potent sildenafil 200mg tablets with high‑demand formula, bulk deals, reliable stock and fast EU delivery for B2B partners.",
    
   overview: [
     "Malegra 200 mg contains Sildenafil Citrate in one of the highest available strengths used for treating severe erectile dysfunction.",
@@ -16686,6 +17083,9 @@ administration: [
     "/products/MALEGRA_ORALL_JELLY.png",
   
   ],
+  metaTitle:"Malegra 100 Oral Jelly ED Pharma Exporter Europe | Bulk Jelly Supply ",
+  metaDescription:"Buy Malegra 100 Oral Jelly by ED Pharma wholesale in Europe. Fast‑acting sildenafil 100mg jelly with pharma‑grade quality, competitive bulk pricing, dependable stock & quick EU delivery for B2B buyers. ",
+
   overview: [
     "Malegra 100 Oral Jelly contains Sildenafil 100mg formulated as an easy-to-consume jelly instead of a traditional tablet.",
     "It is used to treat erectile dysfunction by improving the body's natural response to sexual stimulation.",
@@ -16881,6 +17281,8 @@ administration: [
     "/products/Malegra pro 50_3.png",
     "/products/Malegra pro 50_3.png",
   ],
+  metaTitle:"Buy Malegra Pro 50 ED Pharma Wholesale Europe | Bulk Sildenafil 50mg ",
+  metaDescription:"Buy Malegra Pro 50 by ED Pharma wholesale in Europe. Premium sildenafil 50mg performance tablets with enhanced formulation, competitive bulk pricing, dependable stock & fast EU delivery for B2B buyers. ",
    
   overview: [
     "Malegra Pro 50 contains Sildenafil Citrate in a flavored, professional formulation designed for improved user convenience.",
@@ -17076,6 +17478,8 @@ administration: [
     "/products/malegra pro 100_2.png",
     "/products/malegra pro 100_3.png",
   ],
+  metaTitle:"Malegra Pro 100 ED Pharma Exporter Europe | Bulk ED Tablet Supply ",
+  metaDescription:"Top exporter of Malegra Pro 100 by ED Pharma in Europe. Bulk sildenafil 100mg tablets with pharma‑grade quality, consistent stock and fast EU logistics — ideal for trade partners.",
    
   overview: [
     "Malegra Pro 100 contains Sildenafil Citrate in a professional flavored formulation designed for enhanced absorption and faster action.",
@@ -17254,7 +17658,7 @@ administration: [
     "Regular medical check-ups help ensure safe and effective long-term use."
   ]
   },
-  "Malegra-DXT-en":{
+  "Malegra-dxt-en":{
     id: "95",
     name: "Malegra DXT",
     brand: "ED Sunrise Remedies",
@@ -17266,11 +17670,13 @@ administration: [
     cas_id: "171599-83-0 / 116539-59-4",
     description: "It is a prescription drug used to cure ED (erectile dysfunction).",
     slug: "malegra-dxt",
-    image: "/products/Malegra-Dxt-100-30mg.png",//public\products\Malegra-Dxt.png public\products\Malegra-Dxt-100-30mg.png
-    "additionalImages": [
-    "/products/Malegra-Dxt-100-30mg.png",
-    "/products/Malegra-Dxt.png",
+    image: "/products/malegra-dxt-plus-Photoroom.png",//public\products\malegra-dxt-plus-Photoroom.png
+        "additionalImages": [
+    "/products/malegra-dxt-plus-Photoroom.png",
+    "/products/malegra-dxt-plus-Photoroom.png",
   ],
+  metaTitle:"Malegra DXT ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Malegra DXT tablets by ED Pharma wholesale in Europe. Premium dual-action ED & PE solution for B2B buyers with competitive bulk pricing and dependable EU shipping.",
    
   overview: [
     "Malegra DXT is a dual-action medication formulated with Sildenafil 100 mg and Duloxetine 30 mg to support men with erectile dysfunction and premature ejaculation.",
@@ -17465,6 +17871,8 @@ administration: [
     "/products/malegra-dxt-plus.png",
     "/products/malegra-dxt-plus.png",
   ],
+  metaTitle:"Malegra DXT Plus ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Malegra DXT Plus tablets by ED Pharma wholesale in Europe. Premium dual action ED & PE tablets for B2B buyers with competitive bulk pricing and reliable EU logistics. ",
 
    
   overview: [
@@ -17663,6 +18071,8 @@ administration: [
     "/products/Malegra-FXT3.png",
     "/products/Malegra-FXT3.png",
   ],
+  metaTitle:"Malegra FXT ED Pharma Wholesale Supplier Europe | B2B Tablets",
+  metaDescription:"Buy Malegra FXT tablets by ED Pharma wholesale in Europe. High-quality dual action ED & PE tablets for B2B buyers with competitive bulk pricing and reliable EU logistics. ",
 
     
   overview: [
@@ -17858,6 +18268,8 @@ administration: [
     "/products/malegra-fxt-plus-1000x1000.png",
     "/products/malegra-fxt-plus-1000x1000.png",
   ],
+  metaTitle:"Malegra FXT Plus ED Pharma Wholesale Supplier Europe | B2B Tablets ",
+  metaDescription:"Get Malegra FXT Plus by ED Pharma at wholesale price in Europe. Advanced dual-action tablets with export packaging, bulk deals, dependable stock and fast EU delivery for distributors. ",
   
   overview: [
     "Malegra FXT Plus is a dual-action medication formulated to help men experiencing erectile dysfunction and premature ejaculation.",
@@ -18054,6 +18466,8 @@ administration: [
     "/products/Malegra-100_2.png",
     "/products/Malegra-100_1.png",
   ],
+  metaTitle:"Malegra Effervescent 100 ED Pharma Bulk Europe | B2B Sildenafil ",
+  metaDescription:"Buy Malegra Effervescent 100 tablets by ED Pharma wholesale in Europe. Premium fast‑acting ED formula with competitive bulk pricing and reliable EU delivery — ideal for distributors and importers. ",
 
 
    
@@ -18251,6 +18665,8 @@ administration: [
     "/products/Malegra-100 Green_3.png",
     "/products/Malegra-100 Green_1.png",
   ],
+  metaTitle:"Malegra 100 Green ED Pharma Wholesale Europe | Premium Green Sildenafil 100mg ",
+  metaDescription:"Buy Malegra 100 Green tablets by ED Pharma wholesale in Europe. High-quality green sildenafil 100mg formula for B2B buyers, distributors & importers with competitive bulk pricing & reliable EU shipping. ",
 
     
   overview: [
@@ -18448,6 +18864,8 @@ administration: [
     "/products/malegra-gold_2.png",
     "/products/malegra-gold_1.png",
   ],
+  metaTitle:"Buy Malegra 100 Gold ED Pharma Wholesale Europe | B2B Sildenafil ",
+  metaDescription:"Buy Malegra 100 Gold tablets by ED Pharma wholesale in Europe. Premium sildenafil 100mg formula for B2B buyers with competitive bulk pricing and reliable EU logistics — ideal for wholesalers. ",
    
   overview: [
     "Malegra 100 Gold contains Sildenafil Citrate 100mg, a widely used treatment for erectile dysfunction (ED) in men.",
@@ -18643,6 +19061,8 @@ warnings: [
     "/products/penon-cream_2.png",
     "/products/penon-cream_3.png",
   ],
+  metaTitle:"Penon Cream ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Penon Cream by ED Pharma wholesale in Europe. High‑quality male enhancement topical cream for distributors and wholesalers with competitive bulk deals and dependable EU shipping. ",
   
   overview: [
     "Penon Cream is a natural herbal formulation designed to support men's intimate health and confidence.",
@@ -18807,6 +19227,8 @@ administration: [
     "/products/naron-cream_3.png",
   
   ],
+  metaTitle:"Naron Cream ED Pharma Wholesale Europe | Advanced Male Enhancement Cream ",
+  metaDescription:"Europe’s trusted B2B supplier of Naron Cream by ED Pharma. Premium topical male support cream with export packaging, bulk discounts and dependable EU delivery for distributors. ",
    
   overview: [
     "Naron Cream is a natural herbal formulation specially designed for women’s intimate wellness and comfort.",
@@ -18956,6 +19378,8 @@ administration: [
     "/products/Grafix cream_3.png",
   
   ],
+  metaTitle:"Buy Grafix Cream ED Pharma Wholesale Europe | Bulk Enhancement Cream ",
+  metaDescription:"Buy Grafix Cream by ED Pharma in bulk across Europe. Premium male enhancement cream with attractive trade pricing, dependable stock and fast EU shipping — ideal for wholesalers. ",
    
   overview: [
     "Grafix Cream is a herbal-based formulation designed to support natural breast enhancement and firmness in women.",
@@ -19106,6 +19530,8 @@ administration: [
     "/products/sildenafil-femalegra_3.png",
   
   ],
+  metaTitle:"Buy Femallegra 100 ED Pharma Wholesale Europe | Female Sildenafil Support ",
+  metaDescription:"Europe’s trusted B2B supplier of Femallegra 100 by ED Pharma. Female‑oriented sildenafil 100mg tablets with competitive bulk pricing and reliable EU delivery for importers and trade partners.",
    
   overview: [
     "Femallegra-100 is designed to support women experiencing reduced sexual response, arousal difficulty, or lack of sensitivity during intimate moments.",
@@ -19252,6 +19678,8 @@ administration: [
     "/products/Tadafem 20_3.png",
   
   ],
+  metaTitle:"Buy Tadafem 20 ED Pharma Wholesale Europe | Bulk Female Tadalafil Tabs ",
+  metaDescription:"Buy Tadafem 20 tablets by ED Pharma wholesale in Europe. Premium female-targeted tadalafil 20mg formula for distributors and wholesalers with competitive bulk pricing and reliable EU delivery. ",
    
   overview: [
     "Tadafem-20 is formulated for women who may experience reduced physical arousal, lowered response, or difficulty engaging in intimate activity.",
@@ -19405,6 +19833,8 @@ administration: [
     "/products/clofi-25_3.png",
   
   ],
+  metaTitle:"Clofi 25 ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Clofi 25 tablets by ED Pharma wholesale in Europe. Premium 25mg clofibric acid formula for B2B buyers, distributors and wholesalers with competitive bulk pricing and reliable EU delivery. ",
   
   overview: [
     "Clofi-25 contains Clomiphene Citrate, a selective estrogen receptor modulator commonly prescribed to support ovulation in women experiencing fertility difficulties.",
@@ -19544,6 +19974,8 @@ administration: [
     "/products/Clofi 50.png",
   
   ],
+  metaTitle:"Clofi-50 Tablets (Clomiphene Citrate 50 mg) | Buy Online from ED Pharma ",
+  metaDescription:"Buy Clofi-50 (Clomiphene Citrate 50 mg) from ED Pharma for reliable fertility support. Trusted quality, competitive pricing, secure ordering, and fast delivery ideal for buyers seeking consistent results. ",
    
   overview: [
     "Clofi-50 contains Clomiphene Citrate, a well-known fertility-support medication used to help stimulate ovulation in women experiencing difficulty conceiving.",
@@ -19684,6 +20116,8 @@ administration: [
     "/products/Clofi 100.png",
   
   ],
+  metaTitle:"Buy Clofi-100 (Clomiphene Citrate 100 mg) Online in Europe | ED Pharma ",
+  metaDescription:"Buy Clofi-100 Clomiphene Citrate 100 mg from ED Pharma for European buyers. Trusted quality, EU-focused supply, competitive pricing, secure ordering, and fast delivery across Europe. ",
   
   overview: [
     "Clofi-100 contains Clomiphene Citrate and is commonly prescribed to help induce ovulation in women experiencing infertility related to ovulatory dysfunction.",
@@ -19824,6 +20258,9 @@ administration: [
     "/products/Zudena100-Udenafil-Tablet.png",
   
   ],
+  metaTitle:"Buy Zudena-100 (Udenafil 100 mg) Online in Europe | ED Pharma",
+  metaDescription:"Zudena-100 Udenafil 100 mg available from ED Pharma for Europe. Long-lasting performance, verified quality, buyer-friendly pricing, and reliable EU-focused shipping. ",
+
   overview: [
     "Zudena-100 contains Udenafil, a medication used to support men experiencing erectile dysfunction by improving natural blood flow to the penile tissues.",
     "It works by relaxing smooth muscle in the blood vessel walls, particularly in the pelvic and penile region, helping improve the ability to achieve and maintain an erection during sexual stimulation.",
@@ -19973,6 +20410,9 @@ administration: [
     "/products/Zudena-200-1.png",
   
   ],
+  metaTitle:"Buy Zudena-200 Udenafil 200 mg in Europe | ED Pharma Official",
+  metaDescription:"Buy Zudena-200 Udenafil 200 mg in Europe from ED Pharma. Trusted ED treatment with discreet delivery, premium quality standards, and buyer-friendly pricing. ",
+
   overview: [
     "Zudena-200 contains Udenafil, a potent PDE5 inhibitor designed to support men with moderate to severe erectile dysfunction.",
     "It works by improving blood flow to the penile tissue, helping support stronger and more sustained erections during sexual stimulation.",
@@ -20122,6 +20562,8 @@ administration: [
     "/products/Super-Zudena_3.png",
   
   ],
+  metaTitle:"Buy Super Zudena Tablets Online in Europe | ED Pharma ",
+  metaDescription:"Order Super Zudena tablets from ED Pharma. Advanced formulation for European buyers seeking longer-lasting performance, consistent quality, and discreet EU shipping.",
    
   overview: [
     "Super Zudena is a combination formula containing Udenafil and Dapoxetine, designed to support men experiencing both erectile dysfunction and premature ejaculation.",
@@ -20274,6 +20716,8 @@ administration: [
     "/products/iversun-6mg_1.png",
   
   ],
+  metaTitle:"Buy Iversun-6 Ivermectin Tablets Online | ED Pharma ",
+  metaDescription:"Source Iversun-6 Ivermectin 6 mg from ED Pharma. Ideal for distributors and bulk buyers seeking reliable supply, export-ready packaging, and consistency. ",
    
   overview: [
     "Iversun-6 contains Ivermectin, a widely used antiparasitic medication prescribed for treating various parasitic infections in the body.",
@@ -20410,7 +20854,9 @@ administration: [
     "/products/iversun-12-mg-1000x1000.png",
   
   ],
-    
+    metaTitle:"Buy Iversun-12 Ivermectin 12 mg Online | ED Pharma ",
+  metaDescription:"Iversun-12 Ivermectin 12 mg tablets from ED Pharma. Trusted formulation, professional sourcing, and buyer-friendly ordering experience.",
+
   overview: [
     "Iversun-12 contains Ivermectin 12 mg, a potent antiparasitic medication for treating various parasitic infections in the body.",
     "It is commonly prescribed for intestinal parasites, scabies, lice, onchocerciasis (river blindness), and certain skin infestations.",
@@ -20547,6 +20993,8 @@ administration: [
     "/products/cinasun-30-_3.png",
   
   ],
+  metaTitle:"Buy Cinasun-30 Tablet Supplier & Exporter | ED Pharma",
+  metaDescription:"Buy Cinasun-30 from ED Pharma for consistent therapeutic support. Quality-assured tablets, competitive pricing, secure ordering, and dependable supply. ",
     
   overview: [
     "Cinasun-30 contains Cinacalcet, a prescription medication used to manage elevated calcium levels in the blood (hypercalcemia).",
@@ -20685,6 +21133,8 @@ administration: [
     "/products/cinasun-60mg-1-1000x1000.png",
   
   ],
+  metaTitle:"Cinasun-60 Tablet Supplier & Exporter | ED Pharma ",
+  metaDescription:"Source Cinasun-60 tablets from ED Pharma. A preferred option for distributors seeking stable production quality, export-ready packaging, transparent pricing, and long-term supply reliability. ",
    
   overview: [
     "Cinasun-60 contains Cinacalcet, a prescription medication designed to manage elevated calcium levels in the blood (hypercalcemia).",
@@ -20824,6 +21274,8 @@ administration: [
     "/products/cinasun-90mg_1.png",
   
   ],
+  metaTitle:"Buy Cinasun-90 Tablet Supplier & Exporter | ED Pharma ",
+  metaDescription:"Buy Cinasun-90 tablets from ED Pharma for dependable pharmaceutical sourcing. Designed for buyers who value consistent formulation, secure purchasing, fair pricing, and reliable delivery.",
   
   overview: [
     "Cinasun-90 contains Cinacalcet, a prescription medication used to manage high blood calcium levels (hypercalcemia).",
@@ -20963,7 +21415,9 @@ administration: [
     "/products/chocolis-chewable-tadalafil-20mg-1000x1000 (2).png",
   
   ],
-   
+   metaTitle:"Chocolis 20 ED Pharma Wholesale Supplier Europe | B2B ED Capsules ",
+  metaDescription:"Europe’s trusted B2B supplier of Chocolis 20 by ED Pharma. Chocolate-inspired ED capsules with pharma-grade quality, export packaging and reliable EU delivery for wholesalers & importers.",
+
   overview: [
     "Chocolis-20 is a chocolate-flavored Tadalafil tablet designed to help men with erectile dysfunction achieve and maintain stronger erections.",
     "It works by relaxing blood vessels in the penis and surrounding tissues, allowing increased blood flow during sexual stimulation.",
@@ -21117,6 +21571,8 @@ administration: [
     "/products/chocogra-100-sildenafil-tablets-1000x1000.png",
   
   ],
+  metaTitle:"Chocogra 100 ED Pharma Wholesale Europe | Buy in Bulk ",
+  metaDescription:"Buy Chocogra 100 tablets by ED Pharma wholesale in Europe. Buy sildenafil 100mg tablets for B2B distributors, wholesalers and importers with competitive bulk pricing and fast delivery.",
    
   overview: [
     "Chocogra-100 is a chewable Sildenafil Citrate tablet designed to support men with erectile dysfunction and pulmonary hypertension.",
@@ -21268,6 +21724,8 @@ administration: [
     "/products/Orlisun-Orlistat.png",
   
   ],
+  metaTitle:"Buy Orlisun-120 Capsules | Reliable Global Supply – ED Pharma",
+  metaDescription:"Buy Orlisun-120 capsules from ED Pharma for quality-focused formulation and reliable sourcing. Secure ordering, competitive pricing, and dependable delivery for global buyers. ",
    
   overview: [
     "Orlisun contains Orlistat 120mg, a prescription medication designed to support weight loss in adults.",
@@ -21406,6 +21864,9 @@ administration: [
     "/products/Moadfresh_Tablets.webp",//public\products\Moadfresh_Tablets.webp
   
   ],
+  metaTitle:"Modafresh-200 Tablets | Buy with Confidence from ED Pharma ",
+  metaDescription:"ED Pharma offers Modafresh-200 tablets with quality-driven manufacturing, designed for smooth ordering and dependable global delivery. ",
+
   overview: [
     "Modafresh-200 contains Modafinil 200mg, a prescription medication designed to promote wakefulness in adults with excessive daytime sleepiness.",
     "It is commonly prescribed for conditions such as narcolepsy, obstructive sleep apnea, and shift work sleep disorder.",
@@ -21542,6 +22003,8 @@ administration: [
     "/products/Sunpecia_5_3.png",
   
   ],
+  metaTitle:"Buy Sunpecia 1.5 Tablets Online | ED Pharma  ",
+  metaDescription:"Sunpecia 1.5 tablets from ED Pharma offer consistent pharmaceutical quality for buyers seeking reliable sourcing. Secure ordering, transparent pricing, and dependable global delivery support. ",
   
   overview: [
     "Sunpecia contains Finasteride, available in 1mg and 5mg strengths, used to treat benign prostatic hyperplasia (BPH) and male pattern hair loss.",
@@ -21720,6 +22183,8 @@ administration: [
     "/products/prifsun 3.png",
   
   ],
+  metaTitle:"Buy Pirfisun-200 Tablets from ED Pharma | Pirfisun-200 Tablets Online ",
+  metaDescription:"Pirfisun-200 tablets from ED Pharma offer dependable quality and controlled manufacturing. A smart choice for buyers looking for secure transactions, consistent standards, and reliable fulfillment. ",
     
   overview: [
     "Pirfisun Tablet contains Pirfenidone 200mg, a prescription medication used to treat idiopathic pulmonary fibrosis (IPF).",

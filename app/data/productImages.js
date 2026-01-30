@@ -24,10 +24,10 @@ export const productImages = {
   ],
   },
    "super-kamagra-oral-jelly":{
-    main: "/products/Super-Kamagra-Oral-Jelly 1.png",
+    main: "/products/Super-Kamagra-Oral-Jelly 2.png",
   gallery: [
     "/products/Super-Kamagra-Oral-Jelly 2.png",
-    "/products/Super-Kamagra-Oral-Jelly 3.png",
+    "/products/Super-Kamagra-Oral-Jelly 1.png",
   
   ],
    },
@@ -145,10 +145,11 @@ export const productImages = {
   ],
    },
    "cenforce-100mg":{
-     main: "/products/cenforce 100_1.png",
-   gallery: [
-    "/products/cenforce 100_2.png",
-    "/products/cenforce 100_3.png",
+     main: "/products/cenforce_100mg_2.png",
+ gallery: [
+    "/products/cenforce_100mg.png",
+    "/products/cenforce-100mg-1.png",
+  
   ],
    },
    "cenforce-120mg":{
@@ -160,10 +161,10 @@ export const productImages = {
   ],
    },
    "cenforce-130mg":{
-    main: "/products/cenforce 130_1.png",
+    main: "/products/cenforce 130.png",//
  gallery: [
-    "/products/cenforce 130_2.png",
-    "/products/cenforce 130_3.png",
+    "/products/cenforce_130.png",
+    "/products/cenforce 130.png",
   
   ],
    },
@@ -704,6 +705,14 @@ export const productImages = {
   
   ], 
    },
+   "malegra-100":{
+    main: "/products/Malegra-100.png",//Malegra-100.png
+    gallery: [
+    "/products/Malegra-100.png",
+    "/products/Malegra-100.png",
+  
+  ],
+   },
    "malegra-120":{
     main: "/products/malegra-120mg_1.png",//public\products\malegra-120mg_2.png
     gallery: [
@@ -751,10 +760,10 @@ export const productImages = {
   ], 
    },
   "malegra-dxt-plus":{
-     main: "/products/malegra-dxt-plus.png",//public\products\malegra-dxt-plus.png
+     main: "/products/malegra-dxt-plus-Photoroom.png",//public\products\malegra-dxt-plus.png
     gallery: [
-    "/products/malegra-dxt-plus.png",
-    "/products/malegra-dxt-plus.png",
+    "/products/malegra-dxt-plus-Photoroom.png",
+    "/products/malegra-dxt-plus-Photoroom.png",
   ],
   },
    "malegra-fxt":{

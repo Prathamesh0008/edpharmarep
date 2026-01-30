@@ -671,7 +671,7 @@ const products = {
   pack_size: "1 × 4 أقراص",
   cas_id: "139755-83-2",
   description: "يستخدم كاماجرا 100 لعلاج ضعف الانتصاب من خلال مساعدة الرجال على تحقيق الانتصاب والحفاظ عليه عند التحفيز الجنسي.",
-  slug: "kamagra-100mg-chewable-orange",
+   slug: "kamagra-100mg-chewable-orange",
    image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
   "additionalImages": [
     "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
