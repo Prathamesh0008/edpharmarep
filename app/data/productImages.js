@@ -235,10 +235,10 @@ export const productImages = {
   ],
    },
    "vidalista-5":{
-    main: "/products/vidalista-5mg-0005-1000x1000.webp",//vidalista-5mg-0005-1000x1000.webp
+    main: "/products/vidalista-5mg-tadalafil-tablets.png",//vidalista-5mg-0005-1000x1000.webp
    gallery: [
-    "/products/vidalista-5mg-tadalafil-tablets-1000x1000.webp",
-    "/products/tadalafil-tablet-5-mg-1000x1000.webp",
+    "/products/vidalista-5mg-tadalafil-tablets.png",
+    "/products/tadalafil-tablet-5-mg.png",
   
   ],
    },
@@ -769,10 +769,10 @@ export const productImages = {
   ],
   },
    "malegra-fxt":{
-    main: "/products/Malegra-FXT3_1.png",//public\products\Malegra-FXT3.png
+    main: "/products/Malegra-FXT3_0.png",//public\products\Malegra-FXT3.png
     gallery: [
     "/products/Malegra-FXT3_2.png",//public\products\Malegra-FXT3_2.png
-    "/products/Malegra-FXT3.png",
+    "/products/Malegra-FXT3_0.png",
   ],
    },
    "malegra-fxt-plus":{

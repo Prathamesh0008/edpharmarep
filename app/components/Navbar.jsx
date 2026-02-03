@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Menu, X, Download, Search, LogOut, ChevronRight, User, ChevronDown } from "lucide-react";
-import { useState, useEffect } from "react";
-import { useRef } from "react";
+import { Menu, X, Download, Search, LogOut, ChevronRight, User, ChevronDown, Sparkles, Tag, Filter } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 import { useCart } from "./CartContext";
 import LoginPopup from "./LoginPopup";
 import { products } from "@/app/data/products";
-import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
+import { useLanguage } from "@/context/LanguageContext";
+import { COMPOUNDS } from "@/app/data/compounds";
 
 /* ================= NAVBAR ================= */
 
@@ -29,18 +29,19 @@ export default function Navbar() {
   const [languageOpen, setLanguageOpen] = useState(false);
   const [mobileLanguageOpen, setMobileLanguageOpen] = useState(false);
   
-  // REMOVE local language state and use LanguageContext instead
-  const { language, changeLanguage, availableLanguages, t } = useLanguage(); // ADD THIS
+  const { language, changeLanguage, availableLanguages, t } = useLanguage();
 
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
   const [showDesktopSearch, setShowDesktopSearch] = useState(false);
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
+  const [searchIndex, setSearchIndex] = useState([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [selectedBrand, setSelectedBrand] = useState(null);
 
   const cartCount = getCartBadgeCount();
 
   /* ---------- LANGUAGES CONFIG ---------- */
-  // UPDATE THIS to use availableLanguages from context or create a mapping
   const LANGUAGE_MAPPING = {
     "ar": { label: "Arabic", flag: "sa" },
     "sq": { label: "Albanian", flag: "al" },
@@ -71,6 +72,93 @@ export default function Navbar() {
     flag: info.flag
   }));
 
+  /* ---------- POPULAR SEARCHES ---------- */
+  const popularSearches = [
+    "Sildenafil",
+    "Tadalafil",
+    "Vardenafil",
+    "Cenforce",
+    "Kamagra",
+    "Vidalista",
+    "Ajanta",
+    "Centurion",
+    "Sunrise"
+  ];
+
+  /* ---------- BRAND CONFIG ---------- */
+  const BRAND_CONFIG = {
+    "ED Ajanta Pharma": {
+      name: "Ajanta Pharma",
+      color: "blue",
+      bgColor: "bg-blue-50",
+      textColor: "text-blue-700",
+      borderColor: "border-blue-200",
+      hoverBgColor: "hover:bg-blue-100",
+      popularProducts: ["Kamagra", "Tadalis", "Valif"]
+    },
+    "ED Centurion Remedies": {
+      name: "Centurion Remedies",
+      color: "green",
+      bgColor: "bg-green-50",
+      textColor: "text-green-700",
+      borderColor: "border-green-200",
+      hoverBgColor: "hover:bg-green-100",
+      popularProducts: ["Cenforce", "Vidalista", "Vilitra"]
+    },
+    "ED Sunrise Remedies": {
+      name: "Sunrise Remedies",
+      color: "purple",
+      bgColor: "bg-purple-50",
+      textColor: "text-purple-700",
+      borderColor: "border-purple-200",
+      hoverBgColor: "hover:bg-purple-100",
+      popularProducts: ["Malegra", "Tadarise", "Zhewitra"]
+    }
+  };
+
+  /* ---------- CREATE SEARCH INDEX ---------- */
+  useEffect(() => {
+    const index = [];
+    
+    // Add all products
+    products.forEach(product => {
+      index.push({
+        type: 'product',
+        id: product.id,
+        name: product.name,
+        brand: product.brand,
+        composition: product.composition,
+        strength: product.strength,
+        slug: product.slug,
+        product: product
+      });
+    });
+
+    // Add compounds from COMPOUNDS data
+    Object.entries(COMPOUNDS).forEach(([brand, compounds]) => {
+      Object.entries(compounds).forEach(([compoundName, slugs]) => {
+        slugs.forEach(slug => {
+          // Find the corresponding product
+          const product = products.find(p => p.slug === slug);
+          if (product) {
+            index.push({
+              type: 'compound',
+              id: `${compoundName}-${slug}`,
+              name: compoundName,
+              brand: brand,
+              composition: compoundName,
+              slug: slug,
+              product: product,
+              brandName: brand
+            });
+          }
+        });
+      });
+    });
+
+    setSearchIndex(index);
+  }, []);
+
   /* ---------- USER AUTH SYNC ---------- */
   useEffect(() => {
     setMounted(true);
@@ -92,12 +180,6 @@ export default function Navbar() {
 
     loadUser();
 
-    // REMOVE local language loading - LanguageContext handles this
-    // const savedLang = localStorage.getItem("ed-lang");
-    // if (savedLang) {
-    //   setLanguage(savedLang);
-    // }
-
     window.addEventListener('storage', loadUser);
     const interval = setInterval(loadUser, 1000);
     
@@ -112,9 +194,11 @@ export default function Navbar() {
     const handleClickOutside = (event) => {
       if (desktopSearchRef.current && !desktopSearchRef.current.contains(event.target)) {
         setShowDesktopSearch(false);
+        setSelectedBrand(null);
       }
       if (mobileSearchRef.current && !mobileSearchRef.current.contains(event.target)) {
         setSuggestions([]);
+        setSelectedBrand(null);
       }
       if (languageOpen && languageRef.current && !languageRef.current.contains(event.target)) {
         setLanguageOpen(false);
@@ -136,36 +220,100 @@ export default function Navbar() {
     };
   }, [profileMenuOpen, languageOpen, mobileLanguageOpen]);
 
-  /* ---------- LANGUAGE HANDLER ---------- */
-  const handleLanguageChange = (code) => {
-    changeLanguage(code); // Use context function
-    setLanguageOpen(false);
-    setMobileLanguageOpen(false);
-    setMenuOpen(false);
+  /* ---------- ENHANCED SEARCH FUNCTION ---------- */
+  const performSearchLogic = (searchValue, brandFilter = null) => {
+    if (!searchValue.trim()) {
+      setSuggestions([]);
+      setIsSearching(false);
+      setSelectedBrand(null);
+      return;
+    }
+
+    setIsSearching(true);
+    
+    // Use setTimeout for debouncing
+    setTimeout(() => {
+      const q = searchValue.toLowerCase().trim();
+      
+      // Step 1: Find all matching compounds in the search index
+      const matchingCompounds = searchIndex.filter(item => 
+        item.type === 'compound' && 
+        item.composition && 
+        item.composition.toLowerCase().includes(q)
+      );
+
+      // Step 2: If we found compounds, get unique products
+      let results = [];
+      
+      if (matchingCompounds.length > 0) {
+        // Group by brand
+        const brands = {};
+        
+        matchingCompounds.forEach(compound => {
+          const brand = compound.brandName;
+          if (!brands[brand]) {
+            brands[brand] = [];
+          }
+          if (!brands[brand].some(p => p.id === compound.product.id)) {
+            brands[brand].push(compound.product);
+          }
+        });
+
+        // Apply brand filter if selected
+        if (brandFilter && brands[brandFilter]) {
+          results = brands[brandFilter].slice(0, 8);
+        } else {
+          // Get 2-3 products from each brand
+          Object.keys(brands).forEach(brand => {
+            const brandProducts = brands[brand].slice(0, 3);
+            results.push(...brandProducts);
+          });
+          
+          // Sort and limit results
+          results = results.slice(0, 9);
+        }
+      } else {
+        // If no compounds found, do regular search
+        results = searchIndex
+          .map(item => {
+            let score = 0;
+            const searchFields = [
+              { field: item.name, weight: 3 },
+              { field: item.composition, weight: 4 },
+              { field: item.slug, weight: 2 },
+              { field: item.brand, weight: 1 },
+              { field: item.strength, weight: 1 }
+            ];
+
+            searchFields.forEach(({ field, weight }) => {
+              if (field && field.toLowerCase().includes(q)) {
+                if (field.toLowerCase() === q) score += weight * 2;
+                else if (field.toLowerCase().startsWith(q)) score += weight * 1.5;
+                else score += weight;
+              }
+            });
+
+            return { ...item, score };
+          })
+          .filter(item => item.score > 0)
+          .sort((a, b) => b.score - a.score)
+          .map(item => item.product)
+          .filter((product, index, self) => 
+            index === self.findIndex(p => p.id === product.id)
+          )
+          .slice(0, 8);
+      }
+
+      setSuggestions(results);
+      setIsSearching(false);
+    }, 300);
   };
 
   /* ---------- SEARCH FUNCTIONS ---------- */
   const handleSearchChange = (value) => {
     setQuery(value);
-
-    if (!value.trim()) {
-      setSuggestions([]);
-      return;
-    }
-
-    const results = products
-      .filter((p) => {
-        const q = value.toLowerCase().trim();
-        return (
-          p.name?.toLowerCase().includes(q) ||
-          p.brand?.toLowerCase().includes(q) ||
-          p.composition?.toLowerCase().includes(q) ||
-          p.strength?.toLowerCase().includes(q)
-        );
-      })
-      .slice(0, 6);
-
-    setSuggestions(results);
+    setSelectedBrand(null); // Reset brand filter when typing
+    performSearchLogic(value);
   };
 
   const handleSearch = (e) => {
@@ -188,17 +336,52 @@ export default function Navbar() {
     setMobileSearchOpen(false);
     setSuggestions([]);
     setQuery("");
+    setSelectedBrand(null);
     
+    // Navigate to products page with search query
     router.push(`/products?search=${encodeURIComponent(searchQuery)}`);
   };
 
-  const handleSuggestionClick = (item) => {
-    console.log("Suggestion clicked:", item);
+  const handleQuickSearch = (term) => {
+    // This will immediately perform the search and navigate
+    setShowDesktopSearch(false);
+    setMobileSearchOpen(false);
+    setQuery("");
+    setSuggestions([]);
+    setSelectedBrand(null);
     
+    // Navigate directly to products page with search
+    router.push(`/products?search=${encodeURIComponent(term)}`);
+  };
+
+  const handleBrandFilter = (brandName) => {
+    setSelectedBrand(brandName);
+    // Re-run search with brand filter
+    performSearchLogic(query, brandName);
+  };
+
+  const clearBrandFilter = () => {
+    setSelectedBrand(null);
+    performSearchLogic(query);
+  };
+
+  const handleBrandQuickSearch = (brandName, productLine = "") => {
+    const searchTerm = productLine ? `${productLine} ${query}`.trim() : query;
+    setShowDesktopSearch(false);
+    setMobileSearchOpen(false);
+    setQuery("");
+    setSuggestions([]);
+    setSelectedBrand(null);
+    
+    router.push(`/products?search=${encodeURIComponent(searchTerm)}&brand=${encodeURIComponent(brandName)}`);
+  };
+
+  const handleSuggestionClick = (item) => {
     setQuery("");
     setSuggestions([]);
     setShowDesktopSearch(false);
     setMobileSearchOpen(false);
+    setSelectedBrand(null);
     
     if (item.slug) {
       router.push(`/product/${item.slug}`);
@@ -206,24 +389,65 @@ export default function Navbar() {
       const fullProduct = products.find(p => p.id === item.id);
       if (fullProduct && fullProduct.slug) {
         router.push(`/product/${fullProduct.slug}`);
-      } else if (fullProduct && fullProduct.name) {
-        const slug = fullProduct.name
-          .toLowerCase()
-          .replace(/[^\w\s-]/g, '')
-          .replace(/\s+/g, '-')
-          .trim();
-        router.push(`/product/${slug}`);
       }
-    } else if (item.name) {
-      const slug = item.name
-        .toLowerCase()
-        .replace(/[^\w\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .trim();
-      router.push(`/product/${slug}`);
     }
   };
 
+  /* ---------- HELPER FUNCTIONS ---------- */
+  const highlightMatch = (text, query) => {
+    if (!query.trim() || !text) return text;
+    
+    const regex = new RegExp(`(${query.trim()})`, 'gi');
+    const parts = text.split(regex);
+    
+    return parts.map((part, index) => 
+      regex.test(part) ? (
+        <span key={index} className="text-blue-600 font-semibold">
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  };
+
+  const getMatchType = (item) => {
+    const currentQuery = query.toLowerCase().trim();
+    const matchedItem = searchIndex.find(indexItem => 
+      indexItem.product?.id === item.id
+    );
+    
+    if (!matchedItem) return 'product';
+    
+    if (matchedItem.type === 'compound') {
+      return 'compound';
+    }
+    
+    return 'product';
+  };
+
+  const getBrandInfo = (brandName) => {
+    return BRAND_CONFIG[brandName] || {
+      name: brandName,
+      color: "gray",
+      bgColor: "bg-gray-50",
+      textColor: "text-gray-700",
+      borderColor: "border-gray-200",
+      hoverBgColor: "hover:bg-gray-100"
+    };
+  };
+
+  const getBrandsFromSuggestions = () => {
+    const brands = new Set();
+    suggestions.forEach(item => {
+      if (item.brand) {
+        brands.add(item.brand);
+      }
+    });
+    return Array.from(brands);
+  };
+
+  /* ---------- TOGGLE FUNCTIONS ---------- */
   const toggleDesktopSearch = () => {
     setShowDesktopSearch(!showDesktopSearch);
     if (!showDesktopSearch) {
@@ -234,6 +458,7 @@ export default function Navbar() {
     } else {
       setQuery("");
       setSuggestions([]);
+      setSelectedBrand(null);
     }
   };
 
@@ -247,7 +472,251 @@ export default function Navbar() {
     } else {
       setQuery("");
       setSuggestions([]);
+      setSelectedBrand(null);
     }
+  };
+
+  /* ---------- RENDER SUGGESTIONS ---------- */
+  const renderSuggestions = () => {
+    if (isSearching && suggestions.length === 0) {
+      return (
+        <div className="mt-4 text-center py-6">
+          <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-blue-500"></div>
+          <p className="mt-2 text-sm text-gray-500">Searching across all brands...</p>
+        </div>
+      );
+    }
+
+    if (suggestions.length > 0) {
+      const brands = getBrandsFromSuggestions();
+      const isCompoundSearch = searchIndex.some(item => 
+        item.type === 'compound' && 
+        item.composition && 
+        item.composition.toLowerCase().includes(query.toLowerCase().trim())
+      );
+
+      return (
+        <>
+          {/* Brand Filters Section */}
+          <div className="mt-3">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <Filter size={14} className="text-gray-400" />
+                <p className="text-sm font-medium text-gray-700">Filter by Brand</p>
+              </div>
+              {selectedBrand && (
+                <button
+                  onClick={clearBrandFilter}
+                  className="text-xs text-gray-500 hover:text-gray-700 flex items-center gap-1"
+                >
+                  <X size={12} />
+                  Clear filter
+                </button>
+              )}
+            </div>
+            
+            <div className="flex flex-wrap gap-2">
+              {brands.map(brand => {
+                const brandInfo = getBrandInfo(brand);
+                const isActive = selectedBrand === brand;
+                const brandProducts = suggestions.filter(item => item.brand === brand);
+                
+                return (
+                  <button
+                    key={brand}
+                    onClick={() => handleBrandFilter(brand)}
+                    className={`px-3 py-1.5 text-xs rounded-full border transition-all flex items-center gap-1.5
+                      ${isActive ? 
+                        `${brandInfo.bgColor} ${brandInfo.textColor} ${brandInfo.borderColor} font-semibold` : 
+                        `bg-white ${brandInfo.textColor} ${brandInfo.borderColor} hover:${brandInfo.bgColor.replace('bg-', '')}`
+                      }`}
+                    title={`Show ${brandProducts.length} products from ${brandInfo.name}`}
+                  >
+                    <Tag size={10} />
+                    <span>{brandInfo.name}</span>
+                    <span className={`px-1.5 py-0.5 rounded text-xs ${isActive ? 'bg-white' : brandInfo.bgColor}`}>
+                      {brandProducts.length}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Results Count */}
+          <div className="mt-4 flex items-center justify-between px-1">
+            <div>
+              <p className="text-sm font-medium text-gray-700">
+                {suggestions.length} {suggestions.length === 1 ? 'product' : 'products'} found
+                {selectedBrand && ` in ${getBrandInfo(selectedBrand).name}`}
+              </p>
+              {query.trim() && !selectedBrand && brands.length > 1 && (
+                <p className="text-xs text-gray-500">
+                  Showing results from {brands.length} brands
+                </p>
+              )}
+            </div>
+            <button
+              onClick={handleSearchSubmit}
+              className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
+            >
+              View all
+              <ChevronRight size={14} />
+            </button>
+          </div>
+
+          {/* Products List */}
+          <div className="mt-2 border border-gray-200 rounded-xl shadow-lg max-h-80 overflow-y-auto">
+            {suggestions.map((item) => {
+              const matchType = getMatchType(item);
+              const matchedItem = searchIndex.find(indexItem => 
+                indexItem.product?.id === item.id
+              );
+              const brandInfo = getBrandInfo(item.brand);
+
+              return (
+                <button
+                  key={item.id || item.name}
+                  onClick={() => handleSuggestionClick(item)}
+                  className="w-full text-left px-4 py-3 hover:bg-blue-50 
+                    flex items-start justify-between border-b last:border-b-0
+                    transition-colors duration-150 active:bg-blue-100 group"
+                >
+                  <div className="flex-1">
+                    <div className="flex items-start gap-2">
+                      <div className={`p-1 rounded mt-1 ${matchType === 'compound' ? 'bg-green-100' : 'bg-blue-100'}`}>
+                        {matchType === 'compound' ? (
+                          <Sparkles size={12} className="text-green-600" />
+                        ) : (
+                          <Search size={12} className="text-blue-600" />
+                        )}
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-medium text-left">
+                          {highlightMatch(item.name, query)}
+                        </div>
+                        <div className="text-xs text-gray-500 flex flex-col mt-1">
+                          <div className="flex items-center gap-2">
+                            {item.strength && (
+                              <span className="font-medium bg-gray-100 px-1.5 py-0.5 rounded">
+                                {item.strength}
+                              </span>
+                            )}
+                            <span className={`px-2 py-0.5 rounded ${brandInfo.bgColor} ${brandInfo.textColor} ${brandInfo.borderColor}`}>
+                              {brandInfo.name}
+                            </span>
+                          </div>
+                          {matchedItem && matchedItem.type === 'compound' && (
+                            <span className="text-green-600 text-xs mt-1 flex items-center gap-1">
+                              <Sparkles size={10} />
+                              Contains: {matchedItem.composition}
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ChevronRight size={16} className="text-gray-400 group-hover:text-blue-600 flex-shrink-0 mt-2" />
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Quick Brand Actions for Compound Searches */}
+          {isCompoundSearch && brands.length > 1 && !selectedBrand && (
+            <div className="mt-4 pt-3 border-t border-gray-100">
+              <p className="text-xs font-medium text-gray-500 mb-2">QUICK ACTIONS:</p>
+              <div className="grid grid-cols-3 gap-2">
+                {brands.slice(0, 3).map(brand => {
+                  const brandInfo = getBrandInfo(brand);
+                  const popularProduct = brandInfo.popularProducts?.[0] || "";
+                  
+                  return (
+                    <button
+                      key={brand}
+                      onClick={() => handleBrandQuickSearch(brandInfo.name, popularProduct)}
+                      className={`px-2 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors`}
+                    >
+                      <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
+                      <div className="text-xs opacity-75 mt-0.5">{popularProduct}</div>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </>
+      );
+    }
+
+    if (query.trim() && !isSearching) {
+      return (
+        <div className="mt-4 text-center py-8">
+          <Search size={32} className="mx-auto text-gray-300 mb-2" />
+          <p className="text-gray-500">No results found for "{query}"</p>
+          <p className="text-sm text-gray-400 mt-1 mb-4">Try searching by compound or brand name</p>
+          
+          {/* Brand suggestions when no results */}
+          <div className="border-t border-gray-100 pt-4">
+            <p className="text-sm font-medium text-gray-700 mb-2">Browse by brand:</p>
+            <div className="grid grid-cols-3 gap-2">
+              {Object.entries(BRAND_CONFIG).slice(0, 3).map(([brandKey, brandInfo]) => (
+                <button
+                  key={brandKey}
+                  onClick={() => handleQuickSearch(brandInfo.name)}
+                  className={`px-3 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors`}
+                >
+                  <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
+                  <div className="text-xs opacity-75 mt-0.5">{brandInfo.popularProducts[0]}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Show popular searches when empty
+    if (!query.trim()) {
+      return (
+        <div className="mt-4">
+          <div className="mb-4">
+            <p className="text-sm font-medium text-gray-700 mb-2">Browse by brand:</p>
+            <div className="grid grid-cols-3 gap-2">
+              {Object.entries(BRAND_CONFIG).map(([brandKey, brandInfo]) => (
+                <button
+                  key={brandKey}
+                  onClick={() => handleQuickSearch(brandInfo.name)}
+                  className={`px-3 py-2 text-sm rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors`}
+                >
+                  <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
+                  <div className="text-xs opacity-75 mt-0.5">{brandInfo.popularProducts[0]}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="pt-4 border-t border-gray-100">
+            <p className="text-sm font-medium text-gray-700 mb-2">Popular compound searches:</p>
+            <div className="flex flex-wrap gap-2">
+              {["Sildenafil", "Tadalafil", "Vardenafil"].map((term, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleQuickSearch(term)}
+                  className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-blue-100 
+                    text-gray-700 hover:text-blue-700 rounded-full transition-colors
+                    border border-gray-200 hover:border-blue-300"
+                >
+                  {term}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    return null;
   };
 
   /* ---------- HANDLERS ---------- */
@@ -262,6 +731,13 @@ export default function Navbar() {
     setUsername("");
     setProfileMenuOpen(false);
     router.push("/");
+  };
+
+  const handleLanguageChange = (code) => {
+    changeLanguage(code);
+    setLanguageOpen(false);
+    setMobileLanguageOpen(false);
+    setMenuOpen(false);
   };
 
   // Prevent hydration mismatch
@@ -286,13 +762,6 @@ export default function Navbar() {
   }
 
   // Use translations from context
-  const navLinks = t?.en?.home ? t : { 
-    en: { home: "Home", products: "Products", about: "About", terms: "Terms", contact: "Contact" },
-    es: { home: "Inicio", products: "Productos", about: "Nosotros", terms: "Términos", contact: "Contacto" },
-    // Add other languages as needed
-  };
-
-  // Get current language translations
   const currentTranslations = t?.en || { 
     home: "Home", 
     products: "Products", 
@@ -306,7 +775,7 @@ export default function Navbar() {
       {/* ================= NAVBAR ================= */}
       <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-[60px] flex items-center justify-between">
-          {/* LOGO public/Ed_logo.svg*/}
+          {/* LOGO */}
           <Link href="/" className="flex items-center">
             <img
               src="/logoed.svg"
@@ -323,19 +792,26 @@ export default function Navbar() {
             <NavLink href="/terms">{currentTranslations.terms || "Terms"}</NavLink>
             <NavLink href="/contact">{currentTranslations.contact || "Contact"}</NavLink>
 
-            {/* ================= DESKTOP SEARCH ================= */}
+            {/* ================= ENHANCED DESKTOP SEARCH ================= */}
             <div className="flex items-center gap-4">
               <div ref={desktopSearchRef} className="relative">
                 <button
                   onClick={toggleDesktopSearch}
-                  className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50"
+                  className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50
+                    relative group"
                   title="Search products"
                 >
                   <Search size={22} />
+                  {query.trim() && showDesktopSearch && (
+                    <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs 
+                      font-bold rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+                      !
+                    </span>
+                  )}
                 </button>
 
                 {showDesktopSearch && (
-                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl shadow-2xl border border-gray-200 p-3 w-96 z-50">
+                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl shadow-2xl border border-gray-200 p-4 w-[500px] z-50">
                     <div className="flex items-center gap-2">
                       <div className="relative flex-1">
                         <Search
@@ -345,12 +821,13 @@ export default function Navbar() {
                         <input
                           autoFocus
                           type="text"
-                          placeholder={t?.productsPage?.filters?.searchPlaceholder || "Search products..."}
+                          placeholder="Search compounds, brands, products..."
                           value={query}
                           onChange={(e) => handleSearchChange(e.target.value)}
                           onKeyDown={handleSearch}
-                          className="w-full border border-gray-300 rounded-xl pl-11 pr-10 py-2.5 text-sm
-                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                          className="w-full border border-gray-300 rounded-xl pl-11 pr-10 py-3 text-sm
+                            focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none
+                            placeholder-gray-400"
                         />
                         {query && (
                           <button
@@ -364,33 +841,16 @@ export default function Navbar() {
                       <button
                         onClick={handleSearchSubmit}
                         disabled={!query.trim()}
-                        className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 
-                          disabled:bg-gray-300"
+                        className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-3 rounded-xl 
+                          hover:from-blue-700 hover:to-blue-800 disabled:bg-gray-300 disabled:from-gray-300 
+                          disabled:to-gray-400 transition-all shadow-md hover:shadow-lg"
                       >
                         <Search size={18} />
                       </button>
                     </div>
 
-                    {suggestions.length > 0 && (
-                      <div className="mt-2 border border-gray-200 rounded-xl shadow-lg max-h-80 overflow-y-auto">
-                        {suggestions.map((item) => (
-                          <button
-                            key={item.id || item.name}
-                            onClick={() => handleSuggestionClick(item)}
-                            className="w-full text-left px-4 py-3 text-sm hover:bg-blue-50 
-                              flex items-center justify-between border-b last:border-b-0"
-                          >
-                            <div>
-                              <div className="font-medium">{item.name}</div>
-                              <div className="text-xs text-gray-500">
-                                {item.strength || item.brand || ''}
-                              </div>
-                            </div>
-                            <ChevronRight size={16} className="text-gray-400" />
-                          </button>
-                        ))}
-                      </div>
-                    )}
+                    {/* Render enhanced suggestions */}
+                    {renderSuggestions()}
                   </div>
                 )}
               </div>
@@ -400,7 +860,7 @@ export default function Navbar() {
                 href="/ED.pdf"
                 download
                 className="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-700 rounded-full 
-                  hover:bg-blue-50"
+                  hover:bg-blue-50 transition-colors"
               >
                 <Download size={16} />
                 {t?.en?.download || "Download catalogue"}
@@ -411,7 +871,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setLanguageOpen(!languageOpen)}
                   className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg 
-                    hover:border-blue-400 hover:bg-blue-50 min-w-[100px]"
+                    hover:border-blue-400 hover:bg-blue-50 min-w-[100px] transition-colors"
                 >
                   <img
                     src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
@@ -433,7 +893,7 @@ export default function Navbar() {
                           key={lang.code}
                           onClick={() => handleLanguageChange(lang.code)}
                           className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
-                            ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'}`}
+                            ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors`}
                         >
                           <img
                             src={`https://flagcdn.com/w20/${lang.flag}.png`}
@@ -451,7 +911,7 @@ export default function Navbar() {
               {/* CART */}
               <button
                 onClick={() => router.push("/cart")}
-                className="relative text-2xl hover:scale-105"
+                className="relative text-2xl hover:scale-105 transition-transform"
                 title="Cart"
               >
                 🛒
@@ -468,7 +928,7 @@ export default function Navbar() {
                   <button
                     onClick={() => setProfileMenuOpen(!profileMenuOpen)}
                     className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-200 
-                      text-blue-700 font-semibold hover:bg-blue-50 min-w-[120px] justify-center"
+                      text-blue-700 font-semibold hover:bg-blue-50 min-w-[120px] justify-center transition-colors"
                   >
                     <User size={16} />
                     {t?.en?.hi || "Hi"}, {username.length > 8 ? `${username.substring(0, 8)}...` : username}
@@ -482,7 +942,7 @@ export default function Navbar() {
                       <Link
                         href="/orders"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b"
+                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors"
                       >
                         <PackageIcon />
                         <span>{t?.en?.orders || "My Orders"}</span>
@@ -490,14 +950,14 @@ export default function Navbar() {
                       <Link
                         href="/profile"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b"
+                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors"
                       >
                         <User size={14} />
                         <span>{t?.en?.profile || "My Profile"}</span>
                       </Link>
                       <button
                         onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50"
+                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition-colors"
                       >
                         <LogOut size={14} />
                         <span>{t?.en?.logout || "Logout"}</span>
@@ -508,7 +968,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-2"
+                  className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-2 transition-colors"
                 >
                   {t?.en?.login || "Log In"}
                 </button>
@@ -522,7 +982,7 @@ export default function Navbar() {
             <div ref={mobileLanguageRef} className="relative">
               <button
                 onClick={() => setMobileLanguageOpen(!mobileLanguageOpen)}
-                className="flex items-center gap-1 p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full"
+                className="flex items-center gap-1 p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full transition-colors"
               >
                 <img
                   src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
@@ -543,7 +1003,7 @@ export default function Navbar() {
                         key={lang.code}
                         onClick={() => handleLanguageChange(lang.code)}
                         className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
-                          ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'}`}
+                          ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors`}
                       >
                         <img
                           src={`https://flagcdn.com/w20/${lang.flag}.png`}
@@ -562,7 +1022,7 @@ export default function Navbar() {
             {!mobileSearchOpen && (
               <button
                 onClick={toggleMobileSearch}
-                className="text-blue-700 hover:text-blue-800 p-2"
+                className="text-blue-700 hover:text-blue-800 p-2 transition-colors"
               >
                 <Search size={24} />
               </button>
@@ -571,7 +1031,7 @@ export default function Navbar() {
             {/* CART */}
             <button
               onClick={() => router.push("/cart")}
-              className="relative text-2xl text-blue-700 hover:text-blue-800 p-1"
+              className="relative text-2xl text-blue-700 hover:text-blue-800 p-1 transition-colors"
             >
               🛒
               {cartCount > 0 && (
@@ -585,21 +1045,21 @@ export default function Navbar() {
             {!mobileSearchOpen && (
               <button 
                 onClick={() => setMenuOpen(true)} 
-                className="text-blue-700 hover:text-blue-800 p-2"
+                className="text-blue-700 hover:text-blue-800 p-2 transition-colors"
               >
                 <Menu size={28} />
               </button>
             )}
 
-            {/* MOBILE SEARCH BAR - SIMPLIFIED */}
+            {/* ENHANCED MOBILE SEARCH BAR */}
             {mobileSearchOpen && (
-              <div ref={mobileSearchRef} className="absolute top-0 left-0 right-0 h-[60px] bg-white px-4 flex items-center gap-2 z-[1001] shadow-md">
+              <div ref={mobileSearchRef} className="absolute top-0 left-0 right-0 min-h-[60px] bg-white px-4 flex items-center gap-2 z-[1001] shadow-md">
                 <div className="relative flex-1">
                   <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                   <input
                     autoFocus
                     type="text"
-                    placeholder={t?.productsPage?.filters?.searchPlaceholder || "Search products..."}
+                    placeholder="Search compounds, brands..."
                     value={query}
                     onChange={(e) => handleSearchChange(e.target.value)}
                     onKeyDown={handleSearch}
@@ -618,7 +1078,7 @@ export default function Navbar() {
                 <button
                   onClick={handleSearchSubmit}
                   disabled={!query.trim()}
-                  className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 disabled:bg-gray-300"
+                  className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 disabled:bg-gray-300 transition-colors"
                 >
                   <Search size={18} />
                 </button>
@@ -627,28 +1087,19 @@ export default function Navbar() {
                     setMobileSearchOpen(false);
                     setQuery("");
                     setSuggestions([]);
+                    setSelectedBrand(null);
                   }}
-                  className="text-blue-700 hover:text-blue-800 p-1"
+                  className="text-blue-700 hover:text-blue-800 p-1 transition-colors"
                 >
                   <X size={24} />
                 </button>
 
-                {/* MOBILE SUGGESTIONS - SIMPLIFIED */}
-                {suggestions.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-xl shadow-lg z-50 max-h-60 overflow-y-auto">
-                    {suggestions.map((item) => (
-                      <button
-                        key={item.id || item.name}
-                        onClick={() => {
-                          console.log("Mobile suggestion clicked");
-                          handleSuggestionClick(item);
-                        }}
-                        className="w-full text-left px-4 py-3 border-b last:border-b-0 hover:bg-blue-50 active:bg-blue-100"
-                      >
-                        <div className="font-medium">{item.name}</div>
-                        <div className="text-xs text-gray-500">{item.strength || item.brand || ''}</div>
-                      </button>
-                    ))}
+                {/* MOBILE SUGGESTIONS - Full height overlay */}
+                {(suggestions.length > 0 || query.trim()) && (
+                  <div className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-xl shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto z-50">
+                    <div className="p-4">
+                      {renderSuggestions()}
+                    </div>
                   </div>
                 )}
               </div>
@@ -693,7 +1144,7 @@ export default function Navbar() {
                       key={lang.code}
                       onClick={() => handleLanguageChange(lang.code)}
                       className={`flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
-                        ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'}`}
+                        ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors`}
                     >
                       <img
                         src={`https://flagcdn.com/w20/${lang.flag}.png`}
@@ -709,7 +1160,7 @@ export default function Navbar() {
               <a
                 href="/ED.pdf"
                 download
-                className="flex items-center gap-3 px-4 py-3 text-blue-700 font-semibold hover:bg-blue-50 rounded-xl"
+                className="flex items-center gap-3 px-4 py-3 text-blue-700 font-semibold hover:bg-blue-50 rounded-xl transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 <Download size={20} />
@@ -724,7 +1175,7 @@ export default function Navbar() {
                       setMenuOpen(false);
                       handleLogout();
                     }}
-                    className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left"
+                    className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left transition-colors"
                   >
                     <LogOut size={20} />
                     {t?.en?.logout || "Logout"}
@@ -736,7 +1187,7 @@ export default function Navbar() {
                     setMenuOpen(false);
                     setIsPopupOpen(true);
                   }}
-                  className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left"
+                  className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left transition-colors"
                 >
                   <User size={20} />
                   {t?.en?.login || "Login"} / Register
@@ -772,7 +1223,7 @@ function NavLink({ href, children }) {
   return (
     <Link
       href={href}
-      className="text-sm font-medium text-gray-700 hover:text-blue-600"
+      className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
     >
       {children}
     </Link>
@@ -784,7 +1235,7 @@ function MobileLink({ href, children, onClick }) {
     <Link
       href={href}
       onClick={onClick}
-      className="block px-4 py-3 text-base font-semibold text-gray-900 hover:bg-blue-50 rounded-xl"
+      className="block px-4 py-3 text-base font-semibold text-gray-900 hover:bg-blue-50 rounded-xl transition-colors"
     >
       {children}
     </Link>

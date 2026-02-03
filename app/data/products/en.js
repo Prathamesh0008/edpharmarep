@@ -5036,14 +5036,14 @@ const products = {
   cas_id: "171596-29-5",
   description: "It is only used to treat the physical problems associated with erectile dysfunction.",
   slug: "vidalista-5",
-  image: "/products/vidalista-5mg-0005-1000x1000.webp",//vidalista-5mg-0005-1000x1000.webp
+  image: "/products/vidalista-5mg-tadalafil-tablets.png",//vidalista-5mg-0005-1000x1000.webp
    "additionalImages": [
-    "/products/vidalista-5mg-tadalafil-tablets-1000x1000.webp",
-    "/products/tadalafil-tablet-5-mg-1000x1000.webp",
+    "/products/vidalista-5mg-tadalafil-tablets.png",
+    "/products/tadalafil-tablet-5-mg.png",//public\products\tadalafil-tablet-5-mg.png
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Buy Vidalista 5 mg | Daily Tadalafil Tablets for ED ",
+  metaDescription:"Vidalista 5 mg offers daily Tadalafil support for erectile dysfunction. Low dose, long-lasting benefits, and consistent performance for everyday confidence. ",
   overview: [
     "Vidalista 5 mg contains Tadalafil in a low-dose formulation designed for consistent erectile support.",
     "This strength is commonly used for daily or regular management of erectile dysfunction.",
@@ -5608,8 +5608,8 @@ const products = {
     "/products/vidalista-40mg-side_3.webp",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Buy Vidalista 40 mg Online | Tadalafil Tablets – ED Pharma ",
+  metaDescription:"Vidalista 40 mg by ED Pharma is formulated with Tadalafil to support erectile dysfunction management. Suitable for users requiring a higher dosage option. ",
   overview: [
     "Vidalista 40 mg contains Tadalafil in a higher-strength formulation for erectile support.",
     "It is typically used when lower strengths such as 10 mg or 20 mg are not effective enough.",
@@ -10979,8 +10979,8 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/zhewitra 10_3.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Buy Zhewitra 10 Online | Vardenafil Tablets for ED",
+  metaDescription:"Zhewitra 10 is a Vardenafil-based tablet used for erectile dysfunction support. Known for fast onset and improved performance, ideal for on-demand use.",
 
   overview: [
     "Zhewitra 10 contains Vardenafil 10 mg, a trusted medication used to support men experiencing erectile dysfunction.",
@@ -11179,8 +11179,8 @@ administration: [
   
   ],
 
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Buy Zhewitra 20 Online | Vardenafil Tablets for ED ",
+  metaDescription:"Discover Zhewitra 20, a high-strength Vardenafil tablet developed for improved erectile dysfunction support with consistent quality and performance. ",
    
   overview: [
     "Zhewitra 20 contains Vardenafil 20 mg, a medication used to treat erectile dysfunction in men.",
@@ -11379,8 +11379,8 @@ administration: [
     "/products/zhewitra-20-oral-jelly-3.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Zhewitra 20 Oral Jelly (Vardenafil) | ED Pharma ",
+  metaDescription:"Zhewitra 20 Oral Jelly is a Vardenafil-based ED solution designed for rapid action and ease of use. Ideal for those who prefer oral jelly over tablets. ",
    
   overview: [
     "Zhewitra 20 Oral Jelly contains Vardenafil 20 mg and is designed for treating erectile dysfunction in men.",
@@ -11576,8 +11576,8 @@ administration: [
     "/products/zhewitra-40-3.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Zhewitra 40 (Vardenafil) | ED Treatment Tablets – ED Pharma ",
+  metaDescription:"Discover Zhewitra 40 from ED Pharma, a high-strength Vardenafil tablet designed to deliver consistent erectile dysfunction support and reliable performance. ",
 
   overview: [
     "Zhewitra 40 contains Vardenafil 40 mg and is used for the treatment of erectile dysfunction in men.",
@@ -11773,8 +11773,8 @@ administration: [
     "/products/zhewitra-60_3.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Zhewitra 60 | High-Strength Vardenafil Tablets – ED Pharma ",
+  metaDescription:" Zhewitra 60 by ED Pharma offers potent Vardenafil support for erectile dysfunction. Extra strength, reliable performance, and consistent results.",
 
   overview: [
     "Zhewitra 60 contains Vardenafil 60 mg, a high-strength medication used for treating erectile dysfunction in men.",
@@ -11972,8 +11972,8 @@ administration: [
     "/products/Zhewitrasoft-3.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Zhewitra Soft 20 | Fast-Acting Vardenafil Tablets – ED Pharma ",
+  metaDescription:"Zhewitra Soft 20 by ED Pharma delivers fast-acting Vardenafil in a soft tablet form. Designed for quicker absorption, smooth intake, and reliable ED support. ",
 
   overview: [
     "Zhewitra Soft 20 contains Vardenafil 20 mg in a soft chewable tablet format designed to treat erectile dysfunction in men.",
@@ -14941,8 +14941,8 @@ administration: [
     "/products/top-tadarise12-sunrise-3.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Buy Top Tadarise Online | Advanced ED Tablets ",
+  metaDescription:"Top Tadarise is a combination tablet formulated to support erectile dysfunction and performance control. Ideal for users seeking reliable and balanced results.",
 
   overview: [
     "Top Tadarise contains a dual-action combination of Tadalafil 20 mg and Dapoxetine 30 mg.",
@@ -15128,8 +15128,8 @@ administration: [
     "/products/tadasoft-20-mg_3.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Buy Tadasoft 20 Online | Tadalafil Soft Tablets – ED Pharma",
+  metaDescription:"Order Tadasoft 20 soft tablets from ED Pharma for effective ED support. The soft tablet Tadalafil formula offers faster onset and convenient use. ",
 
   overview: [
     "Tadasoft 20 mg contains Tadalafil in a soft, chewable, and flavored tablet form.",
@@ -15315,8 +15315,8 @@ administration: [
     "/products/tadasoft-40-mg_2.png",
   
   ],
-  metaTitle:" ",
-  metaDescription:" ",
+  metaTitle:"Tadasoft 40 (Tadalafil) | Soft ED Tablets – ED Pharma ",
+  metaDescription:"Order Tadasoft 40 soft tablets from ED Pharma for strong and fast ED support. High-dose Tadalafil formulation offering quick response and lasting confidence. ",
 
   overview: [
     "Tadasoft 40 mg contains a high-strength dose of Tadalafil in a soft, chewable, flavored tablet form.",
@@ -18066,10 +18066,10 @@ administration: [
     cas_id: "171599-83-0 / 54910-89-3",
     description: "Malegra FXT is the new age treatment for sexual dysfunction in males.",
     slug: "malegra-fxt",
-    image: "/products/Malegra-FXT3_1.png",//public\products\Malegra-FXT3_1.png
+    image: "/products/Malegra-FXT3_0.png",//public\products\Malegra-FXT3_1.png
     "additionalImages": [
     "/products/Malegra-FXT3_2.png",//public\products\Malegra-FXT3_2.png
-    "/products/Malegra-FXT3.png",
+    "/products/Malegra-FXT3_0.png",
   ],
   metaTitle:"Malegra FXT ED Pharma Wholesale Supplier Europe | B2B Tablets",
   metaDescription:"Buy Malegra FXT tablets by ED Pharma wholesale in Europe. High-quality dual action ED & PE tablets for B2B buyers with competitive bulk pricing and reliable EU logistics. ",
