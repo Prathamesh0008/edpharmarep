@@ -86,21 +86,7 @@ export default function Footer() {
             {footerData.description}
           </p>
           
-          {/* Feature icons */}
-          <div className="flex flex-wrap gap-4 pt-4">
-            <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm">
-              <FaPills className="text-blue-500" />
-              <span className="text-xs font-medium text-gray-700">Quality</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm">
-              <FaGlobeAmericas className="text-cyan-500" />
-              <span className="text-xs font-medium text-gray-700">Global</span>
-            </div>
-            <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg shadow-sm">
-              <FaShieldAlt className="text-green-500" />
-              <span className="text-xs font-medium text-gray-700">Trust</span>
-            </div>
-          </div>
+          
         </div>
 
         {/* Quick Links */}

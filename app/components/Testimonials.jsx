@@ -55,11 +55,10 @@ export default function Testimonials() {
       {/* ===== STYLES ===== */}
       <style jsx>{`
         .testimonial-section {
-          padding: 60px 20px;
+          padding: 40px 16px;
           background: #f7f9fc;
           text-align: center;
           overflow: hidden;
-          
         }
 
         .testimonial-tag {
@@ -67,20 +66,24 @@ export default function Testimonials() {
           letter-spacing: 4px;
           color: #ff5a3c;
           font-weight: 600;
+          margin-bottom: 8px;
         }
 
         .testimonial-title {
-          font-size: 36px;
+          font-size: 28px;
           font-weight: 700;
-          margin: 12px 0;
+          margin: 0 0 12px 0;
           color: #222;
+          line-height: 1.2;
         }
 
         .testimonial-subtitle {
           max-width: 650px;
-          margin: 0 auto 50px;
+          margin: 0 auto 40px;
           color: #666;
           font-size: 15px;
+          line-height: 1.5;
+          padding: 0 10px;
         }
 
         .slider {
@@ -162,29 +165,103 @@ export default function Testimonials() {
           }
         }
 
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-          .testimonial-title {
-            font-size: 26px;
+          .testimonial-section {
+            padding: 30px 12px;
           }
-
+          
+          .testimonial-tag {
+            font-size: 11px;
+            letter-spacing: 3px;
+            margin-bottom: 6px;
+          }
+          
+          .testimonial-title {
+            font-size: 22px;
+            margin-bottom: 10px;
+            padding: 0 10px;
+          }
+          
+          .testimonial-subtitle {
+            font-size: 14px;
+            margin-bottom: 30px;
+            padding: 0 8px;
+          }
+          
+          .card {
+            min-width: 280px;
+            max-width: 280px;
+            padding: 20px;
+            margin: 0 5px;
+          }
+          
+          .track {
+            gap: 20px;
+          }
+          
+          .text {
+            font-size: 13.5px;
+          }
+        }
+        
+        @media (max-width: 480px) {
+          .testimonial-section {
+            padding: 24px 10px;
+          }
+          
+          .testimonial-tag {
+            font-size: 10px;
+            letter-spacing: 2px;
+          }
+          
+          .testimonial-title {
+            font-size: 20px;
+            margin-bottom: 8px;
+          }
+          
+          .testimonial-subtitle {
+            font-size: 13px;
+            margin-bottom: 24px;
+            line-height: 1.4;
+          }
+          
           .card {
             min-width: 260px;
+            max-width: 260px;
+            padding: 16px;
+          }
+          
+          .track {
+            gap: 16px;
+          }
+        }
+        
+        @media (max-width: 360px) {
+          .card {
+            min-width: 240px;
+            max-width: 240px;
+            padding: 14px;
+          }
+          
+          .testimonial-title {
+            font-size: 18px;
           }
         }
       `}</style>
 
       {/* ===== CONTENT ===== */}
-      <section className="testimonial-section ">
+      <section className="testimonial-section">
         <p className="testimonial-tag">{testimonialsData.tag}</p>
         <h2 className="testimonial-title">{testimonialsData.title}</h2>
         <p className="testimonial-subtitle">
           {testimonialsData.subtitle}
         </p>
 
-        <div className="slider ">
+        <div className="slider">
           <div className="track">
             {[...testimonials, ...testimonials].map((item, i) => (
-              <div className="card m-5" key={i}>
+              <div className="card" key={i}>
                 <div className="stars">{"★".repeat(item.rating || 5)}</div>
 
                 <p className="text">{item.text}</p>
@@ -194,6 +271,10 @@ export default function Testimonials() {
                     src={item.avatar || DEFAULT_AVATAR}
                     alt={item.name}
                     className="avatar"
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = DEFAULT_AVATAR;
+                    }}
                   />
                   <div>
                     <p className="name">{item.name}</p>

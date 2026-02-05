@@ -266,7 +266,7 @@ export default function TermsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 max-w-5xl mx-auto"
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-20 max-w-5xl mx-auto "
             >
               {[
                 { icon: FileText, label: "Sections", value: terms.length },
@@ -279,9 +279,9 @@ export default function TermsPage() {
                   whileHover={{ scale: 1.05, y: -4 }}
                   className="p-6 rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-xl hover:bg-white/10 transition-all"
                 >
-                  <stat.icon className="w-8 h-8 text-[#4FB3E8] mb-3 mx-auto" />
-                  <div className="text-2xl font-black text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-blue-200/60">{stat.label}</div>
+                  <stat.icon className="w-8 h-9 text-[#4FB3E8] mb-3 mx-auto" />
+                  <div className="text-2xl text-center font-black text-white mb-1">{stat.value}</div>
+                  <div className="text-sm text-center text-white">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -419,87 +419,17 @@ export default function TermsPage() {
                         {term.text}
                       </p>
 
-                      {/* All Key Points */}
-                      <div className="grid md:grid-cols-2 gap-4 p-6 rounded-xl bg-[#063B8A]/20 backdrop-blur-sm border border-[#4FB3E8]/20">
-                        <h4 className="col-span-full text-sm font-bold text-[#4FB3E8] uppercase tracking-wide mb-2 flex items-center gap-2">
-                          <Info className="w-4 h-4" />
-                          Key Requirements
-                        </h4>
-                        {term.keyPoints?.map((point, idx) => (
-                          <div key={idx} className="flex items-start gap-3">
-                            <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                            <span className="text-blue-100/90">{point}</span>
-                          </div>
-                        ))}
-                      </div>
+                     
+                      
                     </div>
                   </motion.details>
                 );
               })}
             </div>
 
-            {/* CTA Section - Large Glassmorphic Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mt-24 max-w-5xl mx-auto relative group"
-            >
-              {/* Animated glow */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#063B8A] via-[#4FB3E8] to-[#063B8A] rounded-3xl blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
-              
-              <div className="relative p-12 md:p-16 rounded-3xl backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-2xl text-center">
-                <motion.div
-                  animate={{
-                    scale: [1, 1.1, 1],
-                    rotate: [0, 5, -5, 0],
-                  }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#063B8A] to-[#2A7DB8] mb-8 shadow-2xl"
-                >
-                  <Mail className="w-10 h-10 text-white" />
-                </motion.div>
+            
 
-                <h3 className="text-4xl md:text-5xl font-black text-white mb-6">
-                  Questions About These Terms?
-                </h3>
-                <p className="text-xl text-blue-100/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-                  Our dedicated legal team is available to provide clarifications or discuss custom partnership agreements tailored to your organization.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 rounded-xl bg-white text-[#063B8A] font-black shadow-2xl hover:shadow-[#4FB3E8]/50 transition-all flex items-center justify-center gap-3 group"
-                  >
-                    <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                    Contact Legal Team
-                    <ArrowRight className="w-5 h-5" />
-                  </motion.button>
-
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 rounded-xl backdrop-blur-xl bg-white/10 border-2 border-white/30 text-white font-black hover:bg-white/20 transition-all flex items-center justify-center gap-3"
-                  >
-                    <Download className="w-5 h-5" />
-                    Download PDF
-                  </motion.button>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Footer */}
-            <div className="mt-16 pt-8 border-t border-white/10 text-center">
-              <p className="text-blue-200/40 text-sm">
-                © 2026 ED Pharma. All rights reserved. • {header.version}
-              </p>
-            </div>
+            
           </div>
         </section>
       </div>

@@ -135,8 +135,12 @@ const poppins = Poppins({
 
 /* ---------------- METADATA ---------------- */
 export const metadata: Metadata = {
-  title: "ED Pharma",
-  description: "Premium European pharmaceutical products",
+  title: "ED Pharma – Europe’s Trusted Sexual Health Medicine Distributor & Supplier",
+  description: "ED Pharma is a Europe-to-Europe distributor & supplier of high-quality erectile dysfunction and sexual health medicines. Supplying pharmacies and wholesalers with trusted pharma brands.",
+   icons: {
+    icon: '/Ed_logo.svg', // public\EdLogo.svg
+  },
+  manifest: '/site.webmanifest', // Optional: for PWA
 };
 
 /* ---------------- ROOT LAYOUT ---------------- */
@@ -147,6 +151,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* You can also add additional meta tags here if needed */}
+      </head>
       <body
         className={`
           ${geistSans.variable}
@@ -155,17 +162,6 @@ export default function RootLayout({
           antialiased
         `}
       >
-        {/* BACKGROUND SVG */}
-        {/* <div
-          className="fixed inset-0 -z-10"
-          style={{
-            backgroundImage: "url('/bg/ED-banner (2).svg')",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-          }}
-        /> */}
-
         <LanguageProvider>
           <AuthProvider>
             <CartProvider>
