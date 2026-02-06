@@ -316,7 +316,7 @@ export default function ProductClient({ slug }) {
                         className="text-2xl sm:text-3xl font-bold"
                         style={{ color: theme.primary }}
                       >
-                        ₹ {product.price}
+                       € {product.price}
                       </span>
                     </div>
                   </div>
