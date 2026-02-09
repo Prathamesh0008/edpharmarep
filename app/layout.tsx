@@ -84,7 +84,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.edpharma.co/",
   },
-  
+  verification: {
+    google: "Uk8jK5E0dWbzQ3cizBgWtDWZ5B0I48zZODiasyVJu5Y",
+  },
 };
 
 /* ---------------- ROOT LAYOUT ---------------- */
@@ -96,6 +98,39 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Google Search Console Verification */}
+        <meta 
+          name="google-site-verification" 
+          content="Uk8jK5E0dWbzQ3cizBgWtDWZ5B0I48zZODiasyVJu5Y" 
+        />
+        
+        {/* Google Tag Manager Script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-NNB2ZHQR');`
+          }}
+        />
+        
+        {/* Google Analytics Script */}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KDB1YW40F8"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-KDB1YW40F8');
+            `
+          }}
+        />
+        
         {/* Schema.org Structured Data */}
         <script
           type="application/ld+json"
@@ -116,6 +151,16 @@ export default function RootLayout({
           antialiased
         `}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NNB2ZHQR"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        
         <LanguageProvider>
           <AuthProvider>
             <CartProvider>
