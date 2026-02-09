@@ -74,7 +74,7 @@ export async function generateMetadata({ params }) {
         title: title,
         description: truncatedDescription,
         type: 'website',
-        url: `https://edpharma.com/product/${slug}`,
+        url: `https://edpharma.co/product/${slug}`,
         images: product.image ? [
           {
             url: product.image,
@@ -91,7 +91,7 @@ export async function generateMetadata({ params }) {
         images: product.image ? [product.image] : [],
       },
       alternates: {
-        canonical: `https://edpharma.com/product/${slug}`,
+        canonical: `https://edpharma.co/product/${slug}`,
       },
     };
   } catch (error) {
