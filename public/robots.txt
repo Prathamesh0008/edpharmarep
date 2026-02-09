@@ -1,0 +1,70 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /wp-login.php
+Disallow: /my-account/
+Disallow: /?s=
+Allow: /wp-admin/admin-ajax.php
+
+# Sitemap location
+Sitemap: https://www.edpharma.co//sitemap.xml
+
+# --- Search Engine Bots ---
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+# --- AI & Research Bots (Allowed for visibility) ---
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# --- AI Crawlers to Block (unverified/scrapers) ---
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.edpharma.co//sitemap.xml
