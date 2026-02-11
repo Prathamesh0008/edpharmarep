@@ -9236,7 +9236,7 @@ warnings: [
       "dapoxetine": "129938-20-1"
     },
     slug: "extra-super-avana",
-    image: "/products/extra super avan _1.png",//public\products\extra super avan _1.png
+    image:"/products/extra super avan _1.png",//public\products\extra super avan _1.png
   "additionalImages": [
     "/products/extra super avan _1.png",
     "/products/extra super avan _2.png",
