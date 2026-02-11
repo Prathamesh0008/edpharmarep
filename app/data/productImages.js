@@ -904,7 +904,7 @@ export const productImages = {
     main: "/products/iversun-12mg_2.png",//public\products\iversun-12-mg-1000x1000.png
     gallery: [
     "/products/iversun-12mg_2.png",
-    "/products/iversun-12-mg-1000x1000.png",
+    "/products/iversun-12mg_3.png",
   
   ],
    } ,
@@ -964,7 +964,7 @@ export const productImages = {
   
   ],
    },
-   "Sunpecia-1mg/5mg":{
+   "Sunpecia-1mg-5mg":{
     main: "/products/Sunpecia_5_1.png",
     gallery: [
     "/products/Sunpecia_5_2.png",

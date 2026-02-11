@@ -1074,10 +1074,10 @@ const products = {
   description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
   slug: "super-kamagra-100-60",
  
-  image: "/products/Super_Kamagra_03.jpg",
+  image: "/products/100mg-super-kamagra-tablets.webp",
   "additionalImages": [
     "/products/100mg-super-kamagra-tablets.webp",
-    "/products/Super_Kamagra_03.jpg",
+    "/products/100mg-super-kamagra-tablets.webp",
   
   ],
   metaTitle:"Buy Super Kamagra 100/60mg Tablets Wholesale | European B2B Distributor ",
@@ -20851,7 +20851,7 @@ administration: [
     image: "/products/iversun-12mg_2.png",//public\products\Iversun-6mg_3.png
     "additionalImages": [
      "/products/iversun-12mg_2.png",
-    "/products/iversun-12-mg-1000x1000.png",
+    "/products/iversun-12mg_3.png",
   
   ],
     metaTitle:"Buy Iversun-12 Ivermectin 12 mg Online | ED Pharma ",
@@ -21985,7 +21985,7 @@ administration: [
     "Regular medical checkups help ensure that wakefulness-related treatments remain safe and appropriate."
   ]
   },
-  "Sunpecia-1mg/5mg-en":{
+  "Sunpecia-1mg-5mg-en":{
     id: "122",
     name: "Sunpecia 1mg / 5mg",
     brand: "ED Sunrise Remedies",
@@ -21996,7 +21996,7 @@ administration: [
     pack_size: "10 x 10 Tablets",
     cas_id: "98319-26-7",
     description: "Sunpecia is used for treating benign prostatic hyperplasia (BPH) and improving urine flow in men.",
-    slug: "Sunpecia-1mg/5mg",
+    slug: "Sunpecia-1mg-5mg",
     image: "/products/Sunpecia_5_1.png",
     "additionalImages": [
     "/products/Sunpecia_5_2.png",
