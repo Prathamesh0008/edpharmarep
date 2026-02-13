@@ -2020,7 +2020,7 @@ const products = {
   pack_size: "1 x 4 Tablets",
   cas_id: "139755-83-2",
   description: "In recent times, the open discussion of sexual conditions in women has become more commonplace.",
-  slug: "lovegra-100mg",
+  slug: "lovegra-100mg-tablet",
   image: "/products/Lovegra-100mg_1.png",
   "additionalImages": [
     "/products/Lovegra-100mg_2.png",

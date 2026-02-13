@@ -6,16 +6,21 @@ import Link from "next/link";
 import ProductActions from "../../components/ProductActions";
 import { useLanguage } from "@/context/LanguageContext";
 import { useEffect, useState } from "react";
+import { getPriceByQuantity } from "@/app/utils/getPriceByQuantity";
 
 export default function ProductClient({ slug }) {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [activeImage, setActiveImage] = useState(0);
   const { t, language, getProductBySlug } = useLanguage();
+  const [quantity, setQuantity] = useState(100);
 
   console.log("DEBUG ProductClient - props slug:", slug);
   console.log("DEBUG ProductClient - language:", language);
-  console.log("DEBUG ProductClient - getProductBySlug exists:", !!getProductBySlug);
+  console.log(
+    "DEBUG ProductClient - getProductBySlug exists:",
+    !!getProductBySlug,
+  );
 
   useEffect(() => {
     if (slug && getProductBySlug) {
@@ -59,6 +64,9 @@ export default function ProductClient({ slug }) {
     );
   }
 
+  const safeQuantity = Number(quantity) >= 100 ? Number(quantity) : 100;
+  const unitPrice = getPriceByQuantity(product.slug, safeQuantity);
+  const totalPrice = unitPrice * safeQuantity;
 
   // ... rest of your component code (same as before)
   // Get translations from context, fallback to English structure
@@ -306,21 +314,80 @@ export default function ProductClient({ slug }) {
                 </div>
 
                 {/* Price */}
-                {product.price && (
-                  <div className="mb-4 sm:mb-6">
-                    <div className="inline-flex items-baseline flex-wrap">
-                      <span className="text-sm text-gray-500 mr-2">
-                        {labels.price}:
-                      </span>
-                      <span
-                        className="text-2xl sm:text-3xl font-bold"
-                        style={{ color: theme.primary }}
-                      >
-                       € {product.price}
-                      </span>
-                    </div>
+                <div className="mb-4 sm:mb-6">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-sm text-gray-500">
+                      {labels.price}:
+                    </span>
+
+                    <span
+                      className="text-2xl sm:text-3xl font-bold"
+                      style={{ color: theme.primary }}
+                    >
+                      € {unitPrice}
+                    </span>
                   </div>
-                )}
+
+                  {/* Quantity Selector */}
+                  {/* Quantity Selector */}
+                  <div className="flex items-center gap-3">
+                    {/* Minus Button (Decrease by 10) */}
+                    <button
+                      onClick={() =>
+                        setQuantity((prev) => Math.max(100, Number(prev) - 10))
+                      }
+                      className="px-3 py-1 bg-gray-200 rounded"
+                    >
+                      -10
+                    </button>
+
+                    {/* Manual Input */}
+                    <input
+                      type="number"
+                      min="100"
+                      step="10"
+                      value={quantity}
+                      onChange={(e) => {
+                        const value = e.target.value;
+
+                        // allow empty while typing
+                        if (value === "") {
+                          setQuantity("");
+                          return;
+                        }
+
+                        const num = Number(value);
+
+                        if (!isNaN(num)) {
+                          setQuantity(num);
+                        }
+                      }}
+                      onBlur={() => {
+                        let num = Number(quantity);
+
+                        if (!num || num < 100) {
+                          num = 100;
+                        }
+
+                        setQuantity(num);
+                      }}
+                      className="w-28 text-center border rounded px-2 py-1"
+                    />
+
+                    {/* Plus Button (Increase by 10) */}
+                    <button
+                      onClick={() => setQuantity((prev) => Number(prev) + 10)}
+                      className="px-3 py-1 bg-gray-200 rounded"
+                    >
+                      +10
+                    </button>
+                  </div>
+
+                  {/* Total */}
+                  <div className="mt-3 text-gray-700">
+                    Total: <strong>€ {totalPrice}</strong>
+                  </div>
+                </div>
 
                 {/* Action Buttons */}
                 <div className="mt-4 sm:mt-6">

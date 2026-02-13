@@ -78,7 +78,7 @@ export const metadata: Metadata = {
   title: "ED Pharma – Europe's Trusted Sexual Health Medicine Distributor & Supplier",
   description: "ED Pharma is a Europe-to-Europe distributor & supplier of high-quality erectile dysfunction and sexual health medicines. Supplying pharmacies and wholesalers with trusted pharma brands.",
   icons: {
-    icon: '/Ed_logo.svg',
+    icon: '/favicon.svg',
   },
   manifest: '/site.webmanifest',
   alternates: {
