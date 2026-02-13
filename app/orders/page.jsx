@@ -343,7 +343,7 @@ export default function OrdersPage() {
                           
                           <div className="text-right">
                             <p className="text-lg font-bold text-slate-900">
-                              ₹{Number(o.totals?.totalPrice || 0)}
+                              €{Number(o.totals?.totalPrice || 0)}
                             </p>
                           </div>
                         </div>

@@ -1,35 +1,34 @@
 // app/components/ProductActions.jsx
-// app/components/ProductActions.jsx
 "use client";
 
 import { useState } from "react";
 import { useCart } from "./CartContext";
 import { useRouter } from "next/navigation";
-import { Plus, Minus } from "lucide-react"; // Import icons
+import QuantitySelector from "./QuantitySelector";
 
 export default function ProductActions({ product, theme }) {
   const router = useRouter();
-  // UPDATED: Get addToCart function instead of addBulkToCart
-  const { addToCart, INITIAL_BULK_QUANTITY, INCREMENT_STEP } = useCart();
-  const [quantity, setQuantity] = useState(INITIAL_BULK_QUANTITY); // Start with 100
+  const { addToCart, INITIAL_BULK_QUANTITY, INCREMENT_STEP, getPriceForQuantity } = useCart();
+  const [quantity, setQuantity] = useState(INITIAL_BULK_QUANTITY);
   const [loading, setLoading] = useState(false);
 
+  // Get the price for current quantity
+  const currentUnitPrice = getPriceForQuantity(product, quantity);
+  const totalPrice = currentUnitPrice * quantity;
+
   const handleAddToCart = () => {
-    // Ensure product has all required properties
     const productToAdd = {
       ...product,
       name: product.name || "Product",
       slug: product.slug || product.id || "",
-      price: product.price || 0,
+      price: currentUnitPrice,
       image: product.image || "/placeholder.jpg",
       brand: product.brand || "Unknown Brand",
     };
     
-    // UPDATED: Add single product with current quantity
     addToCart(productToAdd, quantity, {
       openDrawer: true,
       toast: true,
-      isBulkAdd: true
     });
   };
 
@@ -39,19 +38,16 @@ export default function ProductActions({ product, theme }) {
     try {
       const productToAdd = {
         ...product,
-        price: product.price || 0,
+        price: currentUnitPrice,
         name: product.name || "Product",
         slug: product.slug || product.id || "",
       };
       
-      // UPDATED: Add product with current quantity
       addToCart(productToAdd, quantity, {
         openDrawer: false,
         toast: false,
-        isBulkAdd: true
       });
       
-      // Navigate to checkout
       router.push(`/checkout?product=${encodeURIComponent(product.slug || product.id)}&quantity=${quantity}`);
       
     } catch (error) {
@@ -61,81 +57,42 @@ export default function ProductActions({ product, theme }) {
     }
   };
 
-  const increment = () => {
-    setQuantity(prev => prev + INCREMENT_STEP); // Add 10 units
-  };
-
-  const decrement = () => {
-    const newQty = quantity - INCREMENT_STEP;
-    if (newQty >= INITIAL_BULK_QUANTITY) { // Minimum 100
-      setQuantity(newQty);
-    }
-  };
-
   return (
     <div className="mt-8 flex flex-col gap-6">
-      {/* Quantity Selector - SIMILAR TO CART PAGE */}
-      <div className="space-y-3">
-        {/* <div className="flex items-center justify-between">
-          <span className="text-sm font-medium text-gray-700">Quantity:</span>
-          <div className="text-right">
-            <span className="text-sm font-semibold text-[#0A4C89]">
-              {INITIAL_BULK_QUANTITY} units minimum
-            </span>
-            <div className="text-xs text-gray-500">
-              {INCREMENT_STEP} units per click
-            </div>
-          </div>
-        </div> */}
-        
-        {/* Quantity Controls - SIMILAR TO CART STYLE */}
-        {/* <div className="flex flex-col gap-2">
-          <div className="inline-flex items-center gap-4 justify-center md:justify-start rounded-xl bg-slate-50 border border-slate-200 px-4 py-3">
-            <button
-              onClick={decrement}
-              className="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 hover:bg-slate-200 transition disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled={quantity <= INITIAL_BULK_QUANTITY}
-              title={`Decrease by ${INCREMENT_STEP} units`}
-            >
-              <Minus size={16} />
-            </button>
-
-            <div className="text-center min-w-[80px]">
-              <div className="text-xl font-bold text-gray-900">{quantity}</div>
-              <div className="text-xs text-gray-500">units</div>
-            </div>
-
-            <button
-              onClick={increment}
-              className="w-8 h-8 rounded-full flex items-center justify-center text-gray-600 hover:bg-slate-200 transition"
-              title={`Increase by ${INCREMENT_STEP} units`}
-            >
-              <Plus size={16} />
-            </button>
-          </div> */}
-          
-          {/* Quantity Info */}
-          {/* <div className="flex justify-between text-xs text-gray-500">
-            <span>Min: {INITIAL_BULK_QUANTITY} units</span>
-            <span>Step: {INCREMENT_STEP} units</span>
-          </div>
-        </div> */}
+      {/* Price Display */}
+      <div className="flex items-baseline gap-2">
+        <span className="text-2xl font-bold text-gray-900">
+          €{totalPrice.toLocaleString()} {/* Changed from ₹ to € */}
+        </span>
+        <span className="text-sm text-gray-500">
+          (€{currentUnitPrice.toLocaleString()}/unit) {/* Changed from ₹ to € */}
+        </span>
       </div>
 
+      {/* Quantity Selector */}
+      <QuantitySelector
+        quantity={quantity}
+        onQuantityChange={setQuantity}
+        minQuantity={INITIAL_BULK_QUANTITY}
+        incrementStep={INCREMENT_STEP}
+        size="lg"
+        showUnitLabel={true}
+      />
+
       {/* Actions */}
-      <div className="flex flex-col sm:flex-row gap-4 ">
+      <div className="flex flex-col sm:flex-row gap-4">
         <button
           onClick={handleAddToCart}
-          className="px-8 py-3 text-white rounded-xl shadow-md hover:shadow-lg transition font-semibold cursor-pointer"
+          className="px-8 py-3 text-white rounded-xl shadow-md hover:shadow-lg transition font-semibold cursor-pointer flex-1"
           style={{ backgroundColor: theme.primary }}
         >
-          Add to Cart 
+          Add to Cart
         </button>
 
         <button
           onClick={handleBuyNow}
           disabled={loading}
-          className="px-8 py-3 rounded-xl border-2 cursor-pointer font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center"
+          className="px-8 py-3 rounded-xl border-2 cursor-pointer font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center flex-1"
           style={{
             borderColor: theme.primary,
             color: theme.primary,
@@ -143,7 +100,7 @@ export default function ProductActions({ product, theme }) {
           }}
         >
           {loading ? (
-            <span className="flex items-center gap-2 ">
+            <span className="flex items-center gap-2">
               <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
@@ -151,7 +108,7 @@ export default function ProductActions({ product, theme }) {
               Processing...
             </span>
           ) : (
-            `Buy Now `
+            `Buy Now`
           )}
         </button>
       </div>
@@ -161,154 +118,10 @@ export default function ProductActions({ product, theme }) {
         <p className="text-sm text-blue-800 text-center">
           <span className="font-semibold">B2B Purchase:</span> Minimum order is {INITIAL_BULK_QUANTITY} units.
           <span className="block text-xs text-blue-600 mt-1">
-            Adjust quantity using + and - buttons ({INCREMENT_STEP} units per click)
+            Adjust quantity using + and - buttons ({INCREMENT_STEP} units per click) or type manually
           </span>
         </p>
       </div>
     </div>
   );
 }
-
-
-// // app/components/ProductActions.jsx
-// "use client";
-
-// import { useState } from "react";
-// import { useCart } from "./CartContext";
-// import { useRouter } from "next/navigation";
-
-// export default function ProductActions({ product, theme }) {
-//   const router = useRouter();
-//   const { addBulkToCart, BULK_QUANTITY } = useCart();
-//   const [batchCount, setBatchCount] = useState(1);
-//   const [loading, setLoading] = useState(false);
-
-//   const totalUnits = batchCount * BULK_QUANTITY;
-
-//   const handleAddToCart = () => {
-//     // Ensure product has all required properties
-//     const productToAdd = {
-//       ...product,
-//       // Ensure these critical fields exist
-//       name: product.name || "Product",
-//       slug: product.slug || product.id || "",
-//       price: product.price || 0, // CRITICAL: Ensure price exists
-//       image: product.image || "/placeholder.jpg",
-//       brand: product.brand || "Unknown Brand",
-//       // Add any other required fields
-//     };
-    
-//     // Add product BATCH_COUNT times
-//     for (let i = 0; i < batchCount; i++) {
-//       addBulkToCart(productToAdd);
-//     }
-//   };
-
-//   const handleBuyNow = async () => {
-//     setLoading(true);
-    
-//     try {
-//       const productToAdd = {
-//         ...product,
-//         price: product.price || 0,
-//         name: product.name || "Product",
-//         slug: product.slug || product.id || "",
-//       };
-      
-//       // Add batches to cart
-//       for (let i = 0; i < batchCount; i++) {
-//         addBulkToCart(productToAdd);
-//       }
-      
-//       // Navigate to checkout
-//       router.push(`/checkout?product=${encodeURIComponent(product.slug || product.id)}&quantity=${totalUnits}`);
-      
-//     } catch (error) {
-//       console.error("Error in Buy Now:", error);
-//     } finally {
-//       setLoading(false);
-//     }
-//   };
-
-//   return (
-//     <div className="mt-8 flex flex-col gap-6">
-//       {/* Bulk Quantity Selector */}
-//       <div className="space-y-3">
-//         <div className="flex items-center justify-between">
-//           <span className="text-sm font-medium text-gray-700">Batch Size:</span>
-//           <span className="text-sm font-semibold text-[#0A4C89]">
-//             {BULK_QUANTITY} strips per batch
-//           </span>
-//         </div>
-        
-//         <div className="flex items-center gap-4 justify-center md:justify-start">
-//           <button
-//             onClick={() => setBatchCount(Math.max(1, batchCount - 1))}
-//             className="w-10 h-10 rounded-lg border text-lg font-semibold hover:bg-gray-50 transition"
-//           >
-//             −
-//           </button>
-
-//           <div className="text-center">
-//             <div className="text-lg font-semibold">{batchCount} batch</div>
-//             <div className="text-sm text-gray-500">{totalUnits} strips total</div>
-//           </div>
-
-//           <button
-//             onClick={() => setBatchCount(batchCount + 1)}
-//             className="w-10 h-10 rounded-lg border text-lg font-semibold hover:bg-gray-50 transition"
-//           >
-//             +
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Actions */}
-//       <div className="flex flex-col sm:flex-row gap-4">
-//         <button
-//           onClick={handleAddToCart}
-//           className="px-8 py-3 text-white rounded-xl shadow-md hover:shadow-lg transition"
-//           style={{ backgroundColor: theme.primary }}
-//         >
-//           Add {batchCount} Batch{batchCount > 1 ? 'es' : ''} ({totalUnits} strips)
-//         </button>
-
-//         <button
-//           onClick={handleBuyNow}
-//           disabled={loading}
-//           className="px-8 py-3 rounded-xl border-2 font-semibold transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center"
-//           style={{
-//             borderColor: theme.primary,
-//             color: theme.primary,
-//             backgroundColor: loading ? "rgba(255,255,255,0.7)" : "white",
-//           }}
-//         >
-//           {loading ? (
-//             <span className="flex items-center gap-2">
-//               <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-//                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-//                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-//               </svg>
-//               Processing...
-//             </span>
-//           ) : (
-//             `Buy Now (${totalUnits} strips)`
-//           )}
-//         </button>
-//       </div>
-
-//       {/* Bulk Info */}
-//       <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
-//         <p className="text-sm text-blue-800 text-center">
-//           <span className="font-semibold">B2B Purchase:</span> Minimum order {BULK_QUANTITY} strips per product
-//         </p>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-

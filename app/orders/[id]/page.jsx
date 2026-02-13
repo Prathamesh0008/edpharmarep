@@ -112,7 +112,7 @@ export default function OrderDetailsPage() {
       paid: "Paid",
       via: "via",
       codInstructions: "COD Instructions",
-      codNote: "Please keep exact change ready for ₹{amount}",
+      codNote: "Please keep exact change ready for €{amount}",
       paymentNote: "Payment Note",
       codRefundNote: "No payment was required for this Cash on Delivery order.",
       regularRefundNote: "Any payment made will be refunded automatically."
@@ -321,13 +321,13 @@ export default function OrderDetailsPage() {
         Email: ${order?.address?.email || ''}
         
         ORDER DETAILS:
-        ${order?.items?.map(item => `• ${item.name} x${item.qty} @ ₹${item.price} = ₹${item.qty * item.price}`).join('\n') || 'No items'}
+        ${order?.items?.map(item => `• ${item.name} x${item.qty} @ €${item.price} = €${item.qty * item.price}`).join('\n') || 'No items'}
         
         SUMMARY:
-        Subtotal: ₹${order?.totals?.totalPrice || 0}
+        Subtotal: €${order?.totals?.totalPrice || 0}
         Shipping: FREE
-        Tax: ₹0.00
-        Grand Total: ₹${order?.totals?.totalPrice || 0}
+        Tax: €0.00
+        Grand Total: €${order?.totals?.totalPrice || 0}
         
         Payment Method: ${order?.paymentMethod === 'cod' ? 'Cash on Delivery' : order?.paymentMethod || ''}
         Order Status: ${order?.status || ''}
@@ -884,10 +884,10 @@ export default function OrderDetailsPage() {
                             <p className={`font-bold text-lg ${
                               isRejected ? 'text-rose-700' : 'text-slate-900'
                             }`}>
-                              ₹{Number(i.price || 0) * Number(i.qty || 0)}
+                              €{Number(i.price || 0) * Number(i.qty || 0)}
                             </p>
                             <p className="text-xs text-slate-500">
-                              ₹{i.price || 0} {orderDetailTranslations.orderItems.priceEach}
+                              €{i.price || 0} {orderDetailTranslations.orderItems.priceEach}
                             </p>
                           </div>
                         </div>
@@ -920,7 +920,7 @@ export default function OrderDetailsPage() {
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
                   <span className="text-slate-600">{orderDetailTranslations.orderItems.subtotal}</span>
                   <span className={`font-medium ${isRejected ? 'text-rose-700' : 'text-slate-900'}`}>
-                    ₹{order.totals?.totalPrice ?? 0}
+                    €{order.totals?.totalPrice ?? 0}
                   </span>
                 </div>
 
@@ -933,7 +933,7 @@ export default function OrderDetailsPage() {
 
                 <div className="flex justify-between items-center py-3 border-b border-slate-100">
                   <span className="text-slate-600">{orderDetailTranslations.orderItems.tax}</span>
-                  <span className="font-medium text-slate-900">₹0.00</span>
+                  <span className="font-medium text-slate-900">€0.00</span>
                 </div>
 
                 <div className="flex justify-between items-center pt-4 mt-2">
@@ -949,7 +949,7 @@ export default function OrderDetailsPage() {
                     <span className={`font-bold text-2xl ${
                       isRejected ? 'text-rose-700' : 'text-[#0A4C89]'
                     }`}>
-                      ₹{order.totals?.totalPrice ?? 0}
+                      €{order.totals?.totalPrice ?? 0}
                     </span>
                     <p className="text-xs text-slate-500">
                       {order.totals?.totalDistinct ?? 0} {orderDetailTranslations.orderItems.distinctItems}

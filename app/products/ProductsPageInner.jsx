@@ -1,3 +1,4 @@
+// app/products/page.jsx (or wherever your ProductsPage component is)
 "use client";
 
 import Navbar from "../components/Navbar";
@@ -8,6 +9,7 @@ import { COMPOUNDS } from "../data/compounds";
 import { useSearchParams } from "next/navigation";
 import { useCart } from "../components/CartContext";
 import { useLanguage } from "@/context/LanguageContext";
+import pricingData from "../data/pricing"; // Import pricing data
 
 // BRAND THEMES (keep as is)
 const BRAND_THEMES = {
@@ -88,6 +90,11 @@ const normalizeText = (text) => {
     .replace(/^-|-$/g, '');
 };
 
+// Helper function to check if product has pricing
+const hasProductPricing = (productSlug) => {
+  return pricingData.hasOwnProperty(productSlug);
+};
+
 // Smooth Product Image Gallery Component
 const ProductImageGallery = ({ product, theme, isMobile = false }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -95,16 +102,15 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
 
   // Get product images
   const images = useMemo(() => {
-  if (!product?.images) {
-    return ["/placeholder.jpg"];
-  }
+    if (!product?.images) {
+      return ["/placeholder.jpg"];
+    }
 
-  return [
-    product.images.main,
-    ...(product.images.gallery || []),
-  ].filter(Boolean);
-}, [product]);
-
+    return [
+      product.images.main,
+      ...(product.images.gallery || []),
+    ].filter(Boolean);
+  }, [product]);
 
   // Simplified auto-rotation
   useEffect(() => {
@@ -259,6 +265,7 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
     </div>
   );
 };
+
 const smoothScrollCSS = `
   @keyframes fadeInUp {
     from {
@@ -310,6 +317,7 @@ export default function ProductsPage() {
     productCard: {
       viewDetails: "View Details",
       addToCart: "Add to Cart",
+      outOfStock: "Out of Stock",
       buyNow: "Buy Now",
       dosageLabel: "Dosage:",
       compositionLabel: "Composition:",
@@ -341,7 +349,6 @@ export default function ProductsPage() {
   const [activeCompound, setActiveCompound] = useState(null);
   const sectionRefs = useRef({});
   const productsStartRef = useRef(null);
-  const scrollTimeoutRef = useRef(null);
 
   // Debounce search input
   useEffect(() => {
@@ -353,28 +360,26 @@ export default function ProductsPage() {
   }, [searchInput]);
 
   // Optimized scroll handler
-  // Optimized scroll handler for smoother performance
-useEffect(() => {
-  let lastScrollY = window.scrollY;
-  let ticking = false;
-  
-  const handleScroll = () => {
-    lastScrollY = window.scrollY;
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+    let ticking = false;
     
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        setIsScrolled(lastScrollY > 100);
-        ticking = false;
-      });
-      ticking = true;
-    }
-  };
+    const handleScroll = () => {
+      lastScrollY = window.scrollY;
+      
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(lastScrollY > 100);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
-  
-
   // Memoized theme
   const theme = useMemo(() => BRAND_THEMES[selectedBrand], [selectedBrand]);
 
@@ -398,8 +403,6 @@ useEffect(() => {
       return product.name || product.slug || '';
     };
   }, [language]);
-  
-
 
   // Simple product match function
   const productMatchesIdentifier = useCallback((product, identifier) => {
@@ -435,53 +438,49 @@ useEffect(() => {
   }, [selectedBrand]);
 
   // Simplified Intersection Observer
-  // Simplified and optimized Intersection Observer
-useEffect(() => {
-  if (!compoundNames.length) return;
+  useEffect(() => {
+    if (!compoundNames.length) return;
 
-  let observer;
-  let animationFrameId;
-  
-  const handleIntersection = (entries) => {
-    // Use requestAnimationFrame for smoother updates
-    animationFrameId = requestAnimationFrame(() => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          // Add a small delay for smoother transition
-          setTimeout(() => {
-            setActiveCompound(entry.target.dataset.compound);
-          }, 100);
-        }
+    let observer;
+    let animationFrameId;
+    
+    const handleIntersection = (entries) => {
+      animationFrameId = requestAnimationFrame(() => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              setActiveCompound(entry.target.dataset.compound);
+            }, 100);
+          }
+        });
       });
-    });
-  };
+    };
 
-  observer = new IntersectionObserver(
-    handleIntersection,
-    { 
-      root: null,
-      rootMargin: '-20% 0px -60% 0px',
-      threshold: 0.1 // Reduced threshold for earlier detection
-    }
-  );
+    observer = new IntersectionObserver(
+      handleIntersection,
+      { 
+        root: null,
+        rootMargin: '-20% 0px -60% 0px',
+        threshold: 0.1
+      }
+    );
 
-  // Debounce the observation start
-  setTimeout(() => {
-    compoundNames.forEach((compound) => {
-      const el = sectionRefs.current[compound];
-      if (el) observer.observe(el);
-    });
-  }, 50);
+    setTimeout(() => {
+      compoundNames.forEach((compound) => {
+        const el = sectionRefs.current[compound];
+        if (el) observer.observe(el);
+      });
+    }, 50);
 
-  return () => {
-    if (animationFrameId) {
-      cancelAnimationFrame(animationFrameId);
-    }
-    if (observer) {
-      observer.disconnect();
-    }
-  };
-}, [selectedBrand, compoundNames]);
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      if (observer) {
+        observer.disconnect();
+      }
+    };
+  }, [selectedBrand, compoundNames]);
 
   // URL brand change
   useEffect(() => {
@@ -492,35 +491,35 @@ useEffect(() => {
 
   // Smooth scroll to compound
   const scrollToCompound = useCallback((compound) => {
-  const el = document.getElementById(`compound-${makeId(compound)}`);
-  if (el) {
-    const offset = 120;
-    const startPosition = window.scrollY;
-    const targetPosition = el.getBoundingClientRect().top + window.scrollY - offset;
-    const distance = targetPosition - startPosition;
-    const duration = 800; // Increased duration for smoother scroll
-    let startTime = null;
+    const el = document.getElementById(`compound-${makeId(compound)}`);
+    if (el) {
+      const offset = 120;
+      const startPosition = window.scrollY;
+      const targetPosition = el.getBoundingClientRect().top + window.scrollY - offset;
+      const distance = targetPosition - startPosition;
+      const duration = 800;
+      let startTime = null;
 
-    const easeInOutCubic = (t) => {
-      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
-    };
+      const easeInOutCubic = (t) => {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      };
 
-    const scrollAnimation = (currentTime) => {
-      if (!startTime) startTime = currentTime;
-      const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      const easeProgress = easeInOutCubic(progress);
-      
-      window.scrollTo(0, startPosition + distance * easeProgress);
-      
-      if (timeElapsed < duration) {
-        requestAnimationFrame(scrollAnimation);
-      }
-    };
+      const scrollAnimation = (currentTime) => {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        const easeProgress = easeInOutCubic(progress);
+        
+        window.scrollTo(0, startPosition + distance * easeProgress);
+        
+        if (timeElapsed < duration) {
+          requestAnimationFrame(scrollAnimation);
+        }
+      };
 
-    requestAnimationFrame(scrollAnimation);
-  }
-}, []);
+      requestAnimationFrame(scrollAnimation);
+    }
+  }, []);
 
   const scrollToProductsStart = useCallback(() => {
     if (!productsStartRef.current) return;
@@ -573,10 +572,17 @@ useEffect(() => {
     return filteredProductsByCompound[compound] || [];
   }, [filteredProductsByCompound]);
 
+  // Handle Add to Cart click - only for in-stock products
+  const handleAddToCart = (product) => {
+    if (hasProductPricing(product.slug)) {
+      addToCart(product, 100, false, true);
+    }
+  };
+
   return (
     <div className="w-full relative min-h-screen">
       {/* Add the smooth CSS styles */}
-    <style jsx global>{smoothScrollCSS}</style>
+      <style jsx global>{smoothScrollCSS}</style>
       <Navbar />
 
       {/* Background with brand image */}
@@ -872,25 +878,25 @@ useEffect(() => {
         {/* Products Sections */}
         <div ref={productsStartRef} className="pt-4 sm:pt-8">
           {compoundNames.map((compound, index) => {
-  const items = getFilteredItems(compound);
-  if (!items.length) return null;
+            const items = getFilteredItems(compound);
+            if (!items.length) return null;
 
-  return (
-    <section
-      key={compound}
-      id={`compound-${makeId(compound)}`}
-      data-compound={compound}
-      ref={(el) => {
-        sectionRefs.current[compound] = el;
-      }}
-      className={`compound-section scroll-mt-24 sm:scroll-mt-32 mb-10 sm:mb-16 transition-opacity duration-500 ${
-        activeCompound === compound ? 'opacity-100' : 'opacity-95'
-      }`}
-      style={{
-        animationDelay: `${index * 100}ms`,
-        transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
-      }}
-    >
+            return (
+              <section
+                key={compound}
+                id={`compound-${makeId(compound)}`}
+                data-compound={compound}
+                ref={(el) => {
+                  sectionRefs.current[compound] = el;
+                }}
+                className={`compound-section scroll-mt-24 sm:scroll-mt-32 mb-10 sm:mb-16 transition-opacity duration-500 ${
+                  activeCompound === compound ? 'opacity-100' : 'opacity-95'
+                }`}
+                style={{
+                  animationDelay: `${index * 100}ms`,
+                  transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
+                }}
+              >
                 {/* Compound Header */}
                 <div className="mb-6 sm:mb-8 transition-all duration-300 transform hover:scale-[1.01]">
                   <div className="relative">
@@ -973,19 +979,25 @@ useEffect(() => {
 
                 {/* Products List */}
                 <div className="space-y-6 sm:space-y-8">
-                 {items.map((p, itemIndex) => {
-  const isEven = itemIndex % 2 === 0;
-  const productName = getProductName(p);
+                  {items.map((p, itemIndex) => {
+                    const isEven = itemIndex % 2 === 0;
+                    const productName = getProductName(p);
+                    const hasPricing = hasProductPricing(p.slug);
+                    const isInStock = hasPricing;
 
-  return (
-    <div
-      key={`${compound}-${p.slug}-${itemIndex}`}
-      className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden border border-gray-100 transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-1"
-      style={{
-        animationDelay: `${itemIndex * 50}ms`,
-        transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
-      }}
-    >
+                    return (
+                      <div
+                        key={`${compound}-${p.slug}-${itemIndex}`}
+                        className={`bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl overflow-hidden border border-gray-100 transition-all duration-500 ${
+                          isInStock 
+                            ? 'hover:shadow-2xl transform hover:-translate-y-1' 
+                            : 'opacity-80'
+                        }`}
+                        style={{
+                          animationDelay: `${itemIndex * 50}ms`,
+                          transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
+                        }}
+                      >
                         <div className="p-4 sm:p-6">
                           {/* MOBILE VIEW */}
                           <div className="lg:hidden">
@@ -1053,30 +1065,38 @@ useEffect(() => {
 
                                 {/* Action Buttons */}
                                 <div className="flex flex-col gap-2 sm:gap-3 pt-3 sm:pt-4">
-                                  <Link
-                                    href={`/product/${p.slug}`}
-                                    className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all duration-200 hover:shadow-md"
-                                    style={{
-                                      borderColor: theme.primary,
-                                      color: theme.primary,
-                                      backgroundColor: `${theme.primary}08`,
-                                    }}
-                                  >
-                                    {productCard.viewDetails || "View Details"}
-                                  </Link>
+                                  {isInStock ? (
+                                    <>
+                                      <Link
+                                        href={`/product/${p.slug}`}
+                                        className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all duration-200 hover:shadow-md"
+                                        style={{
+                                          borderColor: theme.primary,
+                                          color: theme.primary,
+                                          backgroundColor: `${theme.primary}08`,
+                                        }}
+                                      >
+                                        {productCard.viewDetails || "View Details"}
+                                      </Link>
 
-                                  <button
-                                    onClick={() =>
-                                      addToCart(p, 100, false, true)
-                                    }
-                                    className="w-full inline-flex items-center justify-center  gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
-                                    style={{
-                                      backgroundColor: theme.primary,
-                                      boxShadow: `0 2px 10px ${theme.primary}50`,
-                                    }}
-                                  >
-                                    {productCard.addToCart || "Add to Cart"}
-                                  </button>
+                                      <button
+                                        onClick={() => handleAddToCart(p)}
+                                        className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
+                                        style={{
+                                          backgroundColor: theme.primary,
+                                          boxShadow: `0 2px 10px ${theme.primary}50`,
+                                        }}
+                                      >
+                                        {productCard.addToCart || "Add to Cart"}
+                                      </button>
+                                    </>
+                                  ) : (
+                                    <div
+                                      className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base bg-gray-200 text-gray-500 cursor-not-allowed"
+                                    >
+                                      {productCard.outOfStock || "Out of Stock"}
+                                    </div>
+                                  )}
                                 </div>
                               </div>
                             </div>
@@ -1153,31 +1173,39 @@ useEffect(() => {
 
                                     {/* Action Buttons */}
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">
-                                      <Link
-                                        href={`/product/${p.slug}`}
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all duration-200 hover:shadow-md"
-                                        style={{
-                                          borderColor: theme.primary,
-                                          color: theme.primary,
-                                          backgroundColor: `${theme.primary}08`,
-                                        }}
-                                      >
-                                        {productCard.viewDetails ||
-                                          "View Details"}
-                                      </Link>
+                                      {isInStock ? (
+                                        <>
+                                          <Link
+                                            href={`/product/${p.slug}`}
+                                            className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all duration-200 hover:shadow-md"
+                                            style={{
+                                              borderColor: theme.primary,
+                                              color: theme.primary,
+                                              backgroundColor: `${theme.primary}08`,
+                                            }}
+                                          >
+                                            {productCard.viewDetails ||
+                                              "View Details"}
+                                          </Link>
 
-                                      <button
-                                        onClick={() =>
-                                          addToCart(p, 100, false, true)
-                                        }
-                                        className="flex-1 inline-flex items-center justify-center cursor-pointer gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
-                                        style={{
-                                          backgroundColor: theme.primary,
-                                          boxShadow: `0 2px 10px ${theme.primary}50`,
-                                        }}
-                                      >
-                                        {productCard.addToCart || "Add to Cart"}
-                                      </button>
+                                          <button
+                                            onClick={() => handleAddToCart(p)}
+                                            className="flex-1 inline-flex items-center justify-center cursor-pointer gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
+                                            style={{
+                                              backgroundColor: theme.primary,
+                                              boxShadow: `0 2px 10px ${theme.primary}50`,
+                                            }}
+                                          >
+                                            {productCard.addToCart || "Add to Cart"}
+                                          </button>
+                                        </>
+                                      ) : (
+                                        <div
+                                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base bg-gray-200 text-gray-500 cursor-not-allowed"
+                                        >
+                                          {productCard.outOfStock || "Out of Stock"}
+                                        </div>
+                                      )}
                                     </div>
                                   </div>
                                 </div>
@@ -1243,31 +1271,39 @@ useEffect(() => {
 
                                     {/* Action Buttons */}
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">
-                                      <Link
-                                        href={`/product/${p.slug}`}
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all duration-200 hover:shadow-md"
-                                        style={{
-                                          borderColor: theme.primary,
-                                          color: theme.primary,
-                                          backgroundColor: `${theme.primary}08`,
-                                        }}
-                                      >
-                                        {productCard.viewDetails ||
-                                          "View Details"}
-                                      </Link>
+                                      {isInStock ? (
+                                        <>
+                                          <Link
+                                            href={`/product/${p.slug}`}
+                                            className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 border rounded-lg font-medium text-sm sm:text-base transition-all duration-200 hover:shadow-md"
+                                            style={{
+                                              borderColor: theme.primary,
+                                              color: theme.primary,
+                                              backgroundColor: `${theme.primary}08`,
+                                            }}
+                                          >
+                                            {productCard.viewDetails ||
+                                              "View Details"}
+                                          </Link>
 
-                                      <button
-                                        onClick={() =>
-                                          addToCart(p, 50, false, true)
-                                        }
-                                        className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2 cursor-pointer rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
-                                        style={{
-                                          backgroundColor: theme.primary,
-                                          boxShadow: `0 2px 10px ${theme.primary}50`,
-                                        }}
-                                      >
-                                        {productCard.addToCart || "Add to Cart"}
-                                      </button>
+                                          <button
+                                            onClick={() => handleAddToCart(p)}
+                                            className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2 cursor-pointer rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
+                                            style={{
+                                              backgroundColor: theme.primary,
+                                              boxShadow: `0 2px 10px ${theme.primary}50`,
+                                            }}
+                                          >
+                                            {productCard.addToCart || "Add to Cart"}
+                                          </button>
+                                        </>
+                                      ) : (
+                                        <div
+                                          className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base bg-gray-200 text-gray-500 cursor-not-allowed"
+                                        >
+                                          {productCard.outOfStock || "Out of Stock"}
+                                        </div>
+                                      )}
                                     </div>
                                   </div>
                                 </div>
@@ -1385,5 +1421,3 @@ useEffect(() => {
     </div>
   );
 }
-
-
