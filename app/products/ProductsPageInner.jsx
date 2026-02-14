@@ -1,4 +1,4 @@
-// app/products/page.jsx (or wherever your ProductsPage component is)
+// app/products/page.jsx
 "use client";
 
 import Navbar from "../components/Navbar";
@@ -19,10 +19,13 @@ const BRAND_THEMES = {
     primary: "#0A2A73",
     secondary: "#2A7DB8",
     accent: "#1C5EB7",
+    lightBg: "#E8EEF5",
+    extraLight: "#F0F5FA",
     bgImage: "/bg/bg1.png",
     bgUpImage: "/bg/bgup.png",
     bgDownImage: "/bg/bgdown.png",
     gradient: "linear-gradient(135deg, #0A2A73 0%, #2A7DB8 100%)",
+    priceGradient: "linear-gradient(135deg, #0A2A73 0%, #1C5EB7 100%)",
     compoundHeaderGradient:
       "linear-gradient(135deg, #0A2A73 0%, #1C5EB7 50%, #2A7DB8 100%)",
     compoundHeaderShadow: "0 4px 20px rgba(10, 42, 115, 0.25)",
@@ -34,8 +37,11 @@ const BRAND_THEMES = {
     primary: "#FFB800",
     secondary: "#FFD966",
     accent: "#E6A400",
+    lightBg: "#FFF8E5",
+    extraLight: "#FFF9E8",
     bgImage: "/bg/bg5.png",
     gradient: "linear-gradient(135deg, #FFB800 0%, #FFD966 100%)",
+    priceGradient: "linear-gradient(135deg, #FFB800 0%, #E6A400 100%)",
     compoundHeaderGradient:
       "linear-gradient(135deg, #FFB800 0%, #E6A400 50%, #FFD966 100%)",
     compoundHeaderShadow: "0 4px 20px rgba(255, 184, 0, 0.25)",
@@ -49,8 +55,11 @@ const BRAND_THEMES = {
     primary: "#E86A0C",
     secondary: "#F6B15C",
     accent: "#F08529",
+    lightBg: "#FEF1E5",
+    extraLight: "#FEF4E8",
     bgImage: "/bg/bg4.png",
     gradient: "linear-gradient(135deg, #E86A0C 0%, #F6B15C 100%)",
+    priceGradient: "linear-gradient(135deg, #E86A0C 0%, #F08529 100%)",
     compoundHeaderGradient:
       "linear-gradient(135deg, #E86A0C 0%, #F08529 50%, #F6B15C 100%)",
     compoundHeaderShadow: "0 4px 20px rgba(232, 106, 12, 0.25)",
@@ -62,8 +71,11 @@ const BRAND_THEMES = {
     primary: "#081A3E",
     secondary: "#1C4A8C",
     accent: "#122A5C",
+    lightBg: "#E6E9F0",
+    extraLight: "#EDF0F5",
     bgImage: "/bg/bg6.png",
     gradient: "linear-gradient(135deg, #081A3E 0%, #1C4A8C 100%)",
+    priceGradient: "linear-gradient(135deg, #081A3E 0%, #122A5C 100%)",
     compoundHeaderGradient:
       "linear-gradient(135deg, #081A3E 0%, #122A5C 50%, #1C4A8C 100%)",
     compoundHeaderShadow: "0 4px 20px rgba(8, 26, 62, 0.25)",
@@ -93,6 +105,21 @@ const normalizeText = (text) => {
 // Helper function to check if product has pricing
 const hasProductPricing = (productSlug) => {
   return pricingData.hasOwnProperty(productSlug);
+};
+
+// Helper function to get product price for minimum quantity
+const getProductPrice = (productSlug) => {
+  if (!pricingData[productSlug]) return null;
+  
+  const pricingTiers = pricingData[productSlug];
+  if (!Array.isArray(pricingTiers) || pricingTiers.length === 0) return null;
+  
+  // Get the price for minimum quantity (first tier)
+  const minTier = pricingTiers.find(tier => tier.min === 1) || pricingTiers[0];
+  return {
+    price: minTier.price,
+    tier: minTier
+  };
 };
 
 // Smooth Product Image Gallery Component
@@ -319,6 +346,8 @@ export default function ProductsPage() {
       addToCart: "Add to Cart",
       outOfStock: "Out of Stock",
       buyNow: "Buy Now",
+      priceLabel: "Price:",
+      startingFrom: "Starting from",
       dosageLabel: "Dosage:",
       compositionLabel: "Composition:",
       packSizeLabel: "Pack Size:",
@@ -984,6 +1013,7 @@ export default function ProductsPage() {
                     const productName = getProductName(p);
                     const hasPricing = hasProductPricing(p.slug);
                     const isInStock = hasPricing;
+                    const priceInfo = isInStock ? getProductPrice(p.slug) : null;
 
                     return (
                       <div
@@ -1018,6 +1048,56 @@ export default function ProductsPage() {
                                     {productName}
                                   </h3>
                                 </div>
+
+                                {/* Price Display - Brand Colors */}
+                                {isInStock && priceInfo && (
+                                  <div 
+                                    className="rounded-lg p-3 border shadow-sm"
+                                    style={{ 
+                                      backgroundColor: theme.lightBg,
+                                      borderColor: theme.primary + '30'
+                                    }}
+                                  >
+                                    <div className="flex items-center justify-between">
+                                      <span 
+                                        className="text-xs font-medium flex items-center gap-1"
+                                        style={{ color: theme.primary }}
+                                      >
+                                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>
+                                        {productCard.priceLabel || "Price:"}
+                                      </span>
+                                      <div className="text-right">
+                                        <span 
+                                          className="text-sm font-bold"
+                                          style={{ color: theme.primary }}
+                                        >
+                                          €{priceInfo.price.toLocaleString()}
+                                        </span>
+                                        <span className="text-xs text-gray-500 ml-1">
+                                          /unit
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <div className="flex items-center gap-1 mt-1.5">
+                                      <span 
+                                        className="text-[10px] font-medium px-2 py-0.5 rounded-full"
+                                        style={{ 
+                                          backgroundColor: theme.extraLight,
+                                          color: theme.primary,
+                                          borderColor: theme.primary + '20'
+                                        }}
+                                      >
+                                        {productCard.startingFrom || "Starting from"} {priceInfo.tier.min}+
+                                      </span>
+                                      <span className="text-[10px] text-gray-400">•</span>
+                                      <span className="text-[10px] text-gray-500">
+                                        Bulk pricing
+                                      </span>
+                                    </div>
+                                  </div>
+                                )}
 
                                 {/* Specifications */}
                                 <div className="space-y-2">
@@ -1124,6 +1204,8 @@ export default function ProductsPage() {
                                       {productName}
                                     </h3>
 
+                                    
+
                                     {/* Specifications List */}
                                     <div className="space-y-2 sm:space-y-3">
                                       {p.dosage && (
@@ -1168,6 +1250,56 @@ export default function ProductsPage() {
                                             ? p.description[language] || p.description.en || p.description
                                             : p.description}
                                         </p>
+                                      </div>
+                                    )}
+
+                                    {/* Price Display - Brand Colors */}
+                                    {isInStock && priceInfo && (
+                                      <div 
+                                        className="rounded-xl p-4 border shadow-sm"
+                                        style={{ 
+                                          backgroundColor: theme.lightBg,
+                                          borderColor: theme.primary + '30'
+                                        }}
+                                      >
+                                        <div className="flex items-center justify-between">
+                                          <span 
+                                            className="text-sm font-medium flex items-center gap-1.5"
+                                            style={{ color: theme.primary }}
+                                          >
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            {productCard.priceLabel || "Price:"}
+                                          </span>
+                                          <div className="text-right">
+                                            <span 
+                                              className="text-xl font-bold"
+                                              style={{ color: theme.primary }}
+                                            >
+                                              €{priceInfo.price.toLocaleString()}
+                                            </span>
+                                            <span className="text-xs text-gray-500 ml-1">
+                                              /unit
+                                            </span>
+                                          </div>
+                                        </div>
+                                        <div className="flex items-center gap-2 mt-2">
+                                          <span 
+                                            className="text-xs font-medium px-2.5 py-1 rounded-full border"
+                                            style={{ 
+                                              backgroundColor: theme.extraLight,
+                                              color: theme.primary,
+                                              borderColor: theme.primary + '20'
+                                            }}
+                                          >
+                                            {productCard.startingFrom || "Starting from"} {priceInfo.tier.min}+ units
+                                          </span>
+                                          <span className="text-xs text-gray-400">•</span>
+                                          <span className="text-xs text-gray-500">
+                                            Volume discounts
+                                          </span>
+                                        </div>
                                       </div>
                                     )}
 
@@ -1222,6 +1354,8 @@ export default function ProductsPage() {
                                       {productName}
                                     </h3>
 
+                                    
+
                                     {/* Specifications List */}
                                     <div className="space-y-2 sm:space-y-3">
                                       {p.dosage && (
@@ -1266,6 +1400,56 @@ export default function ProductsPage() {
                                             ? p.description[language] || p.description.en || p.description
                                             : p.description}
                                         </p>
+                                      </div>
+                                    )}
+
+                                    {/* Price Display - Brand Colors */}
+                                    {isInStock && priceInfo && (
+                                      <div 
+                                        className="rounded-xl p-4 border shadow-sm"
+                                        style={{ 
+                                          backgroundColor: theme.lightBg,
+                                          borderColor: theme.primary + '30'
+                                        }}
+                                      >
+                                        <div className="flex items-center justify-between">
+                                          <span 
+                                            className="text-sm font-medium flex items-center gap-1.5"
+                                            style={{ color: theme.primary }}
+                                          >
+                                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            {productCard.priceLabel || "Price:"}
+                                          </span>
+                                          <div className="text-right">
+                                            <span 
+                                              className="text-xl font-bold"
+                                              style={{ color: theme.primary }}
+                                            >
+                                              €{priceInfo.price.toLocaleString()}
+                                            </span>
+                                            <span className="text-xs text-gray-500 ml-1">
+                                              /unit
+                                            </span>
+                                          </div>
+                                        </div>
+                                        <div className="flex items-center gap-2 mt-2">
+                                          <span 
+                                            className="text-xs font-medium px-2.5 py-1 rounded-full border"
+                                            style={{ 
+                                              backgroundColor: theme.extraLight,
+                                              color: theme.primary,
+                                              borderColor: theme.primary + '20'
+                                            }}
+                                          >
+                                            {productCard.startingFrom || "Starting from"} {priceInfo.tier.min}+ units
+                                          </span>
+                                          <span className="text-xs text-gray-400">•</span>
+                                          <span className="text-xs text-gray-500">
+                                            Volume discounts
+                                          </span>
+                                        </div>
                                       </div>
                                     )}
 

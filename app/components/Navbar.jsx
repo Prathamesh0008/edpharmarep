@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { Menu, X, Download, Search, LogOut, ChevronRight, User, ChevronDown, Sparkles, Tag, Filter } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useCart } from "./CartContext";
@@ -14,6 +14,7 @@ import { COMPOUNDS } from "@/app/data/compounds";
 
 export default function Navbar() {
   const router = useRouter();
+  const pathname = usePathname(); // Get current path for active state
   const { cartItems, getCartBadgeCount } = useCart();
   const desktopSearchRef = useRef(null);
   const mobileSearchRef = useRef(null);
@@ -507,7 +508,7 @@ export default function Navbar() {
               {selectedBrand && (
                 <button
                   onClick={clearBrandFilter}
-                  className="text-xs text-gray-500 hover:text-gray-700 flex items-center gap-1"
+                  className="text-xs text-gray-500 hover:text-gray-700 flex items-center gap-1 cursor-pointer"
                 >
                   <X size={12} />
                   Clear filter
@@ -525,7 +526,7 @@ export default function Navbar() {
                   <button
                     key={brand}
                     onClick={() => handleBrandFilter(brand)}
-                    className={`px-3 py-1.5 text-xs rounded-full border transition-all flex items-center gap-1.5
+                    className={`px-3 py-1.5 text-xs rounded-full border transition-all flex items-center gap-1.5 cursor-pointer
                       ${isActive ? 
                         `${brandInfo.bgColor} ${brandInfo.textColor} ${brandInfo.borderColor} font-semibold` : 
                         `bg-white ${brandInfo.textColor} ${brandInfo.borderColor} hover:${brandInfo.bgColor.replace('bg-', '')}`
@@ -558,7 +559,7 @@ export default function Navbar() {
             </div>
             <button
               onClick={handleSearchSubmit}
-              className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1"
+              className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1 cursor-pointer"
             >
               View all
               <ChevronRight size={14} />
@@ -580,7 +581,7 @@ export default function Navbar() {
                   onClick={() => handleSuggestionClick(item)}
                   className="w-full text-left px-4 py-3 hover:bg-blue-50 
                     flex items-start justify-between border-b last:border-b-0
-                    transition-colors duration-150 active:bg-blue-100 group"
+                    transition-colors duration-150 active:bg-blue-100 group cursor-pointer"
                 >
                   <div className="flex-1">
                     <div className="flex items-start gap-2">
@@ -635,7 +636,7 @@ export default function Navbar() {
                     <button
                       key={brand}
                       onClick={() => handleBrandQuickSearch(brandInfo.name, popularProduct)}
-                      className={`px-2 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors`}
+                      className={`px-2 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors cursor-pointer`}
                     >
                       <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
                       <div className="text-xs opacity-75 mt-0.5">{popularProduct}</div>
@@ -664,7 +665,7 @@ export default function Navbar() {
                 <button
                   key={brandKey}
                   onClick={() => handleQuickSearch(brandInfo.name)}
-                  className={`px-3 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors`}
+                  className={`px-3 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors cursor-pointer`}
                 >
                   <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
                   <div className="text-xs opacity-75 mt-0.5">{brandInfo.popularProducts[0]}</div>
@@ -687,7 +688,7 @@ export default function Navbar() {
                 <button
                   key={brandKey}
                   onClick={() => handleQuickSearch(brandInfo.name)}
-                  className={`px-3 py-2 text-sm rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors`}
+                  className={`px-3 py-2 text-sm rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors cursor-pointer`}
                 >
                   <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
                   <div className="text-xs opacity-75 mt-0.5">{brandInfo.popularProducts[0]}</div>
@@ -705,7 +706,7 @@ export default function Navbar() {
                   onClick={() => handleQuickSearch(term)}
                   className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-blue-100 
                     text-gray-700 hover:text-blue-700 rounded-full transition-colors
-                    border border-gray-200 hover:border-blue-300"
+                    border border-gray-200 hover:border-blue-300 cursor-pointer"
                 >
                   {term}
                 </button>
@@ -740,13 +741,21 @@ export default function Navbar() {
     setMenuOpen(false);
   };
 
+  // Function to check if a link is active
+  const isActiveLink = (href) => {
+    if (href === '/') {
+      return pathname === '/';
+    }
+    return pathname?.startsWith(href);
+  };
+
   // Prevent hydration mismatch
   if (!mounted) {
     return (
       <>
         <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000] h-[60px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 h-full flex items-center justify-between">
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center cursor-pointer">
               <div className="h-10 w-32 bg-gray-200 rounded animate-pulse"></div>
             </Link>
             <div className="hidden md:flex items-center gap-4">
@@ -776,7 +785,7 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-[60px] flex items-center justify-between">
           {/* LOGO */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center cursor-pointer">
             <img
               src="/logoed.svg"
               alt="ED Pharma"
@@ -786,11 +795,21 @@ export default function Navbar() {
 
           {/* ================= DESKTOP MENU ================= */}
           <div className="hidden md:flex items-center gap-6 text-slate-700 font-medium">
-            <NavLink href="/">{currentTranslations.home || "Home"}</NavLink>
-            <NavLink href="/products">{currentTranslations.products || "Products"}</NavLink>
-            <NavLink href="/about">{currentTranslations.about || "About"}</NavLink>
-            <NavLink href="/terms">{currentTranslations.terms || "Terms"}</NavLink>
-            <NavLink href="/contact">{currentTranslations.contact || "Contact"}</NavLink>
+            <NavLink href="/" isActive={isActiveLink('/')}>
+              {currentTranslations.home || "Home"}
+            </NavLink>
+            <NavLink href="/products" isActive={isActiveLink('/products')}>
+              {currentTranslations.products || "Products"}
+            </NavLink>
+            <NavLink href="/about" isActive={isActiveLink('/about')}>
+              {currentTranslations.about || "About"}
+            </NavLink>
+            <NavLink href="/terms" isActive={isActiveLink('/terms')}>
+              {currentTranslations.terms || "Terms"}
+            </NavLink>
+            <NavLink href="/contact" isActive={isActiveLink('/contact')}>
+              {currentTranslations.contact || "Contact"}
+            </NavLink>
 
             {/* ================= ENHANCED DESKTOP SEARCH ================= */}
             <div className="flex items-center gap-4">
@@ -798,7 +817,7 @@ export default function Navbar() {
                 <button
                   onClick={toggleDesktopSearch}
                   className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50
-                    relative group"
+                    relative group cursor-pointer"
                   title="Search products"
                 >
                   <Search size={22} />
@@ -811,7 +830,7 @@ export default function Navbar() {
                 </button>
 
                 {showDesktopSearch && (
-                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl shadow-2xl border border-gray-200 p-4 w-[500px] z-50">
+                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl shadow-2xl border border-gray-200 p-4 w-[500px] z-50 ">
                     <div className="flex items-center gap-2">
                       <div className="relative flex-1">
                         <Search
@@ -832,7 +851,7 @@ export default function Navbar() {
                         {query && (
                           <button
                             onClick={() => setQuery("")}
-                            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
+                            className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1 cursor-pointer"
                           >
                             <X size={16} />
                           </button>
@@ -843,7 +862,7 @@ export default function Navbar() {
                         disabled={!query.trim()}
                         className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-3 rounded-xl 
                           hover:from-blue-700 hover:to-blue-800 disabled:bg-gray-300 disabled:from-gray-300 
-                          disabled:to-gray-400 transition-all shadow-md hover:shadow-lg"
+                          disabled:to-gray-400 transition-all shadow-md hover:shadow-lg cursor-pointer disabled:cursor-not-allowed"
                       >
                         <Search size={18} />
                       </button>
@@ -860,7 +879,7 @@ export default function Navbar() {
                 href="/ED.pdf"
                 download
                 className="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-700 rounded-full 
-                  hover:bg-blue-50 transition-colors"
+                  hover:bg-blue-50 transition-colors cursor-pointer"
               >
                 <Download size={16} />
                 {t?.en?.download || "Download catalogue"}
@@ -871,7 +890,7 @@ export default function Navbar() {
                 <button
                   onClick={() => setLanguageOpen(!languageOpen)}
                   className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg 
-                    hover:border-blue-400 hover:bg-blue-50 min-w-[100px] transition-colors"
+                    hover:border-blue-400 hover:bg-blue-50 min-w-[100px] transition-colors cursor-pointer"
                 >
                   <img
                     src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
@@ -893,7 +912,7 @@ export default function Navbar() {
                           key={lang.code}
                           onClick={() => handleLanguageChange(lang.code)}
                           className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
-                            ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors`}
+                            ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
                         >
                           <img
                             src={`https://flagcdn.com/w20/${lang.flag}.png`}
@@ -911,7 +930,7 @@ export default function Navbar() {
               {/* CART */}
               <button
                 onClick={() => router.push("/cart")}
-                className="relative text-2xl hover:scale-105 transition-transform"
+                className="relative text-2xl hover:scale-105 transition-transform cursor-pointer"
                 title="Cart"
               >
                 🛒
@@ -928,7 +947,7 @@ export default function Navbar() {
                   <button
                     onClick={() => setProfileMenuOpen(!profileMenuOpen)}
                     className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-200 
-                      text-blue-700 font-semibold hover:bg-blue-50 min-w-[120px] justify-center transition-colors"
+                      text-blue-700 font-semibold hover:bg-blue-50 min-w-[120px] justify-center transition-colors cursor-pointer"
                   >
                     <User size={16} />
                     {t?.en?.hi || "Hi"}, {username.length > 8 ? `${username.substring(0, 8)}...` : username}
@@ -942,7 +961,7 @@ export default function Navbar() {
                       <Link
                         href="/orders"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors"
+                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors cursor-pointer"
                       >
                         <PackageIcon />
                         <span>{t?.en?.orders || "My Orders"}</span>
@@ -950,14 +969,14 @@ export default function Navbar() {
                       <Link
                         href="/profile"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors"
+                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors cursor-pointer"
                       >
                         <User size={14} />
                         <span>{t?.en?.profile || "My Profile"}</span>
                       </Link>
                       <button
                         onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition-colors"
+                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition-colors cursor-pointer"
                       >
                         <LogOut size={14} />
                         <span>{t?.en?.logout || "Logout"}</span>
@@ -968,7 +987,7 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-2 transition-colors"
+                  className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-2 transition-colors cursor-pointer"
                 >
                   {t?.en?.login || "Log In"}
                 </button>
@@ -982,7 +1001,7 @@ export default function Navbar() {
             <div ref={mobileLanguageRef} className="relative">
               <button
                 onClick={() => setMobileLanguageOpen(!mobileLanguageOpen)}
-                className="flex items-center gap-1 p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full transition-colors"
+                className="flex items-center gap-1 p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full transition-colors cursor-pointer"
               >
                 <img
                   src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
@@ -1003,7 +1022,7 @@ export default function Navbar() {
                         key={lang.code}
                         onClick={() => handleLanguageChange(lang.code)}
                         className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
-                          ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors`}
+                          ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
                       >
                         <img
                           src={`https://flagcdn.com/w20/${lang.flag}.png`}
@@ -1022,7 +1041,7 @@ export default function Navbar() {
             {!mobileSearchOpen && (
               <button
                 onClick={toggleMobileSearch}
-                className="text-blue-700 hover:text-blue-800 p-2 transition-colors"
+                className="text-blue-700 hover:text-blue-800 p-2 transition-colors cursor-pointer"
               >
                 <Search size={24} />
               </button>
@@ -1031,7 +1050,7 @@ export default function Navbar() {
             {/* CART */}
             <button
               onClick={() => router.push("/cart")}
-              className="relative text-2xl text-blue-700 hover:text-blue-800 p-1 transition-colors"
+              className="relative text-2xl text-blue-700 hover:text-blue-800 p-1 transition-colors cursor-pointer"
             >
               🛒
               {cartCount > 0 && (
@@ -1045,7 +1064,7 @@ export default function Navbar() {
             {!mobileSearchOpen && (
               <button 
                 onClick={() => setMenuOpen(true)} 
-                className="text-blue-700 hover:text-blue-800 p-2 transition-colors"
+                className="text-blue-700 hover:text-blue-800 p-2 transition-colors cursor-pointer"
               >
                 <Menu size={28} />
               </button>
@@ -1069,7 +1088,7 @@ export default function Navbar() {
                   {query && (
                     <button
                       onClick={() => setQuery("")}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1"
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1 cursor-pointer"
                     >
                       <X size={16} />
                     </button>
@@ -1078,7 +1097,7 @@ export default function Navbar() {
                 <button
                   onClick={handleSearchSubmit}
                   disabled={!query.trim()}
-                  className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 disabled:bg-gray-300 transition-colors"
+                  className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 disabled:bg-gray-300 transition-colors cursor-pointer disabled:cursor-not-allowed"
                 >
                   <Search size={18} />
                 </button>
@@ -1089,7 +1108,7 @@ export default function Navbar() {
                     setSuggestions([]);
                     setSelectedBrand(null);
                   }}
-                  className="text-blue-700 hover:text-blue-800 p-1 transition-colors"
+                  className="text-blue-700 hover:text-blue-800 p-1 transition-colors cursor-pointer"
                 >
                   <X size={24} />
                 </button>
@@ -1111,7 +1130,7 @@ export default function Navbar() {
       {/* ================= MOBILE DRAWER ================= */}
       {menuOpen && (
         <>
-          <div onClick={() => setMenuOpen(false)} className="fixed inset-0 bg-black/40 z-[999]" />
+          <div onClick={() => setMenuOpen(false)} className="fixed inset-0 bg-black/40 z-[999] cursor-pointer" />
           <div className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white z-[1001] shadow-2xl flex flex-col">
             <div className="p-5 border-b">
               <div className="flex items-center justify-between">
@@ -1122,19 +1141,31 @@ export default function Navbar() {
                     <p className="font-semibold">Guest User</p>
                   )}
                 </div>
-                <button onClick={() => setMenuOpen(false)} className="p-2">
+                <button onClick={() => setMenuOpen(false)} className="p-2 cursor-pointer">
                   <X size={24} />
                 </button>
               </div>
             </div>
 
             <div className="flex-1 overflow-y-auto p-5 space-y-1">
-              <MobileLink href="/" onClick={() => setMenuOpen(false)}>{currentTranslations.home || "Home"}</MobileLink>
-              <MobileLink href="/products" onClick={() => setMenuOpen(false)}>{currentTranslations.products || "Products"}</MobileLink>
-              <MobileLink href="/about" onClick={() => setMenuOpen(false)}>{currentTranslations.about || "About Us"}</MobileLink>
-              <MobileLink href="/terms" onClick={() => setMenuOpen(false)}>{currentTranslations.terms || "Terms"}</MobileLink>
-              <MobileLink href="/contact" onClick={() => setMenuOpen(false)}>{currentTranslations.contact || "Contact"}</MobileLink>
-              <MobileLink href="/orders" onClick={() => setMenuOpen(false)}>{t?.en?.orders || "My Orders"}</MobileLink>
+              <MobileLink href="/" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/')}>
+                {currentTranslations.home || "Home"}
+              </MobileLink>
+              <MobileLink href="/products" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/products')}>
+                {currentTranslations.products || "Products"}
+              </MobileLink>
+              <MobileLink href="/about" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/about')}>
+                {currentTranslations.about || "About Us"}
+              </MobileLink>
+              <MobileLink href="/terms" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/terms')}>
+                {currentTranslations.terms || "Terms"}
+              </MobileLink>
+              <MobileLink href="/contact" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/contact')}>
+                {currentTranslations.contact || "Contact"}
+              </MobileLink>
+              <MobileLink href="/orders" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/orders')}>
+                {t?.en?.orders || "My Orders"}
+              </MobileLink>
 
               <div className="pt-4 border-t">
                 <p className="text-sm font-semibold mb-3">Language</p>
@@ -1144,7 +1175,7 @@ export default function Navbar() {
                       key={lang.code}
                       onClick={() => handleLanguageChange(lang.code)}
                       className={`flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
-                        ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors`}
+                        ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
                     >
                       <img
                         src={`https://flagcdn.com/w20/${lang.flag}.png`}
@@ -1160,7 +1191,7 @@ export default function Navbar() {
               <a
                 href="/ED.pdf"
                 download
-                className="flex items-center gap-3 px-4 py-3 text-blue-700 font-semibold hover:bg-blue-50 rounded-xl transition-colors"
+                className="flex items-center gap-3 px-4 py-3 text-blue-700 font-semibold hover:bg-blue-50 rounded-xl transition-colors cursor-pointer"
                 onClick={() => setMenuOpen(false)}
               >
                 <Download size={20} />
@@ -1169,13 +1200,15 @@ export default function Navbar() {
 
               {username ? (
                 <>
-                  <MobileLink href="/profile" onClick={() => setMenuOpen(false)}>{t?.en?.profile || "My Profile"}</MobileLink>
+                  <MobileLink href="/profile" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/profile')}>
+                    {t?.en?.profile || "My Profile"}
+                  </MobileLink>
                   <button
                     onClick={() => {
                       setMenuOpen(false);
                       handleLogout();
                     }}
-                    className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left transition-colors"
+                    className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left transition-colors cursor-pointer"
                   >
                     <LogOut size={20} />
                     {t?.en?.logout || "Logout"}
@@ -1187,7 +1220,7 @@ export default function Navbar() {
                     setMenuOpen(false);
                     setIsPopupOpen(true);
                   }}
-                  className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left transition-colors"
+                  className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left transition-colors cursor-pointer"
                 >
                   <User size={20} />
                   {t?.en?.login || "Login"} / Register
@@ -1219,23 +1252,31 @@ export default function Navbar() {
 
 /* ================= HELPERS ================= */
 
-function NavLink({ href, children }) {
+function NavLink({ href, children, isActive }) {
   return (
     <Link
       href={href}
-      className="text-sm font-medium text-gray-700 hover:text-blue-600 transition-colors"
+      className={`text-sm font-medium transition-colors cursor-pointer ${
+        isActive 
+          ? 'text-blue-600 font-semibold border-b-2 border-blue-600 pb-1' 
+          : 'text-gray-700 hover:text-blue-600'
+      }`}
     >
       {children}
     </Link>
   );
 }
 
-function MobileLink({ href, children, onClick }) {
+function MobileLink({ href, children, onClick, isActive }) {
   return (
     <Link
       href={href}
       onClick={onClick}
-      className="block px-4 py-3 text-base font-semibold text-gray-900 hover:bg-blue-50 rounded-xl transition-colors"
+      className={`block px-4 py-3 text-base font-semibold rounded-xl transition-colors cursor-pointer ${
+        isActive 
+          ? 'bg-blue-50 text-blue-600' 
+          : 'text-gray-900 hover:bg-blue-50'
+      }`}
     >
       {children}
     </Link>
