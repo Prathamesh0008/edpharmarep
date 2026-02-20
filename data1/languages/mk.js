@@ -673,7 +673,7 @@ contactPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "Испратете ни email за бизнис прашања" 
     },
     { 
@@ -1042,7 +1042,7 @@ testimonials: {
     contactInfo: {
       address: "Мумбаи, Индија",
       phone: "+91 98765 43210",
-      email: "support@edpharma.com"
+      email: "info.edpharmacy@gmail.com"
     },
     copyright: "Сите права се задржани."
   },

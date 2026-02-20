@@ -673,7 +673,7 @@ contactPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "Στείλτε μας email για ερωτήματα επιχειρήσεων" 
     },
     { 
@@ -1042,7 +1042,7 @@ testimonials: {
     contactInfo: {
       address: "Μουμπάι, Ινδία",
       phone: "+91 98765 43210",
-      email: "support@edpharma.com"
+      email: "info.edpharmacy@gmail.com"
     },
     copyright: "Με την επιφύλαξη παντός δικαιώματος."
   },

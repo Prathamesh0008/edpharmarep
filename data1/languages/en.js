@@ -613,7 +613,7 @@ contactPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "Email us for business inquiries" 
     },
     { 
@@ -1015,7 +1015,7 @@ testimonials: {
     contactInfo: {
       address: "Europe",
       phone: "+91 98765 43210",
-      email: "support@edpharma.com"
+      email: "info.edpharmacy@gmail.com"
     },
     copyright: "All Rights Reserved."
   },

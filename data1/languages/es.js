@@ -746,7 +746,7 @@ contactPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "Envíenos un correo para consultas comerciales" 
     },
     { 
@@ -1087,7 +1087,7 @@ footer: {
   contactInfo: {
     address: "Mumbai, India",
     phone: "+91 98765 43210",
-    email: "support@edpharma.com"
+    email: "info.edpharmacy@gmail.com"
   },
   copyright: "Todos los derechos reservados."
 },

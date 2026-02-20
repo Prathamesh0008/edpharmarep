@@ -41,7 +41,7 @@ export default function Footer() {
     contactInfo: {
       address: "Europe",
       phone: "+91 98765 43210",
-      email: "support@edpharma.com"
+      email: "info.edpharmacy@gmail.com"
     },
     social: {
       followUs: "Follow Us"

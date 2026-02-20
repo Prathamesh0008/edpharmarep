@@ -631,7 +631,7 @@ homeProducts: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "Na dërgoni email për pyetje biznesi" 
     },
     { 
@@ -1004,7 +1004,7 @@ productDetail: {
     contactInfo: {
       address: "Mumbai, India",
       phone: "+91 98765 43210",
-      email: "support@edpharma.com",
+      email: "info.edpharmacy@gmail.com",
     },
     copyright: "Të Gjitha të Drejtat e Rezervuara.",
   },

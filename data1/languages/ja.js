@@ -682,7 +682,7 @@ contactPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "ビジネスに関するお問い合わせはメールで" 
     },
     { 
@@ -1033,7 +1033,7 @@ footer: {
   contactInfo: {
     address: "インド、ムンバイ",
     phone: "+91 98765 43210",
-    email: "support@edpharma.com"
+    email: "info.edpharmacy@gmail.com"
   },
   copyright: "全著作権所有。"
 },

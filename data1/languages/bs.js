@@ -638,7 +638,7 @@ orderDetailPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "Pošaljite nam email za poslovne upite" 
     },
     { 
@@ -1028,7 +1028,7 @@ productDetail: {
     contactInfo: {
       address: "Mumbai, Indija",
       phone: "+91 98765 43210",
-      email: "support@edpharma.com"
+      email: "info.edpharmacy@gmail.com"
     },
     copyright: "Sva prava zadržana."
   },

@@ -631,7 +631,7 @@ homeProducts: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "Пишете ни имейл за бизнес запитвания" 
     },
     { 
@@ -1003,7 +1003,7 @@ productDetail: {
     contactInfo: {
       address: "Мумбай, Индия",
       phone: "+91 98765 43210",
-      email: "support@edpharma.com",
+      email: "info.edpharmacy@gmail.com",
     },
     copyright: "Всички права запазени.",
   },

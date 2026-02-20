@@ -35,7 +35,7 @@ export default function ContactPage() {
       },
       { 
         icon: "✉️", 
-        title: "mail@influenca.id", 
+        title: "info.edpharmacy@gmail.com", 
         description: "Email us for business inquiries" 
       },
       { 
@@ -228,7 +228,7 @@ export default function ContactPage() {
                           ✉️
                         </div>
                         <div>
-                          <h4 className="font-bold text-blue-900 text-lg">mail@influenca.id</h4>
+                          <h4 className="font-bold text-blue-900 text-lg">info.edpharmacy@gmail.com</h4>
                           <p className="text-blue-600 mt-1">Email us for business inquiries</p>
                         </div>
                       </div>

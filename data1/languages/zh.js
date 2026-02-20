@@ -727,7 +727,7 @@ contactPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "商务咨询请发送邮件" 
     },
     { 
@@ -1094,7 +1094,7 @@ footer: {
   contactInfo: {
     address: "印度，孟买",
     phone: "+91 98765 43210",
-    email: "support@edpharma.com"
+    email: "info.edpharmacy@gmail.com"
   },
   copyright: "版权所有。"
 },

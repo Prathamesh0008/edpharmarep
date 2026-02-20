@@ -752,7 +752,7 @@ contactPage: {
     },
     { 
       icon: "✉️", 
-      title: "mail@influenca.id", 
+      title: "info.edpharmacy@gmail.com", 
       description: "راسلنا عبر البريد الإلكتروني للاستفسارات التجارية" 
     },
     { 
@@ -1196,7 +1196,7 @@ testimonials: {
   contactInfo: {
     address: "مومباي، الهند",
     phone: "+91 98765 43210",
-    email: "support@edpharma.com"
+    email: "info.edpharmacy@gmail.com"
   },
   copyright: "جميع الحقوق محفوظة."
 },
