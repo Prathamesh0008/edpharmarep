@@ -1131,6 +1131,8 @@ export default function Navbar() {
       {menuOpen && (
         <>
           <div onClick={() => setMenuOpen(false)} className="fixed inset-0 bg-black/40 z-[999] cursor-pointer" />
+
+            
           <div className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white z-[1001] shadow-2xl flex flex-col">
             <div className="p-5 border-b">
               <div className="flex items-center justify-between">
