@@ -1,3 +1,4 @@
+// app/checkout/CheckoutClient.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -6,7 +7,7 @@ import { useCart } from "../components/CartContext";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { getLoggedInUser } from "@/lib/auth";
-import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
+import { useLanguage } from "@/context/LanguageContext";
 
 import {
   MapPin,
@@ -14,13 +15,14 @@ import {
   User,
   CreditCard,
   Package,
-  Wallet,
-  IndianRupee,
   CheckCircle,
   Save,
   Clock,
   X,
   ShoppingCart,
+  Landmark,
+  Bitcoin,
+  FileText,
 } from "lucide-react";
 
 // Function to get user-specific address key
@@ -90,9 +92,10 @@ const deleteUserAddress = (userId, index) => {
 export default function CheckoutClient() {
   const router = useRouter();
   const { cartItems, totals, clearCart } = useCart();
-  const { t, language } = useLanguage(); // ADD LANGUAGE CONTEXT
+  const { t, language } = useLanguage();
   
-  const [payment, setPayment] = useState("cod");
+  const [payment, setPayment] = useState("card");
+  const [orderNotes, setOrderNotes] = useState("");
   const [savedAddresses, setSavedAddresses] = useState([]);
   const [showAddressList, setShowAddressList] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -108,7 +111,7 @@ export default function CheckoutClient() {
     country: "India",
   });
 
-  // Get translations from context, fallback to English
+  // Get translations from context with fallbacks
   const checkoutTranslations = t?.checkoutPage || {
     header: {
       title: "Secure Checkout",
@@ -143,23 +146,23 @@ export default function CheckoutClient() {
     },
     payment: {
       title: "Payment Method",
-      cod: {
-        title: "Cash on Delivery",
-        subtitle: "Pay when you receive"
-      },
-      upi: {
-        title: "UPI",
-        subtitle: "GPay • PhonePe • Paytm"
-      },
       card: {
         title: "Credit / Debit Card",
-        subtitle: "Visa • Mastercard"
+        subtitle: "Visa • Mastercard • RuPay"
       },
-      wallet: {
-        title: "Wallets",
-        subtitle: "Paytm • Amazon Pay"
+      bank: {
+        title: "Bank Transfer",
+        subtitle: "Net Banking • UPI • IMPS"
       },
-      secure: "All payments are encrypted & secure"
+      crypto: {
+        title: "Cryptocurrency",
+        subtitle: "BTC • ETH • USDT"
+      },
+      secure: "All payments are encrypted & secure",
+      notes: {
+        label: "Order Notes (Optional)",
+        placeholder: "Add any special instructions or notes for your order..."
+      }
     },
     orderSummary: {
       title: "Order Summary",
@@ -264,7 +267,7 @@ export default function CheckoutClient() {
     };
 
     loadUserAndAddresses();
-  }, [router, checkoutTranslations.messages.loginRequired]);
+  }, [router]);
 
   const isDisabled =
     validateForm(form, cartItems, payment) !== null ||
@@ -344,211 +347,85 @@ export default function CheckoutClient() {
   };
 
   const placeOrder = async () => {
-  try {
-    // Check authentication again before placing order
-    const user = getLoggedInUser();
-    if (!user || !user._id) {
-      alert(checkoutTranslations.messages.loginRequired);
-      router.push("/");
-      return;
-    }
+    try {
+      // Check authentication again before placing order
+      const user = getLoggedInUser();
+      if (!user || !user._id) {
+        alert(checkoutTranslations.messages.loginRequired);
+        router.push("/");
+        return;
+      }
 
-    const error = validateForm(form, cartItems, payment);
-    if (error) {
-      alert(error);
-      return;
-    }
+      const error = validateForm(form, cartItems, payment);
+      if (error) {
+        alert(error);
+        return;
+      }
 
-    setIsLoading(true);
+      setIsLoading(true);
 
-    // Save address to user's localStorage
-    saveAddressToUser(form, user._id);
+      // Save address to user's localStorage
+      saveAddressToUser(form, user._id);
 
-    console.log("Sending order request...");
-    
-    // ✅ CRITICAL: Save order data for email receipt BEFORE API call
-    if (typeof window !== 'undefined') {
-      const orderDataForEmail = {
-        orderId: null, // Will be updated after API response
-        customerEmail: form.email,
-        customerName: form.fullName,
-        paymentMethod: payment,
-        totalAmount: totals.totalPrice,
-        items: cartItems.map(item => ({
-          name: item.name,
-          quantity: item.qty,
-          price: item.price,
-          total: item.price * item.qty
-        })),
-        address: {
-          fullName: form.fullName,
-          phone: form.phone,
-          address: form.address,
-          city: form.city,
-          pincode: form.pincode,
-          country: form.country
-        }
-      };
+      console.log("Sending order request...");
       
-      // Save to sessionStorage (temporary, for this session)
-      sessionStorage.setItem('pendingOrderData', JSON.stringify(orderDataForEmail));
-      
-      // Also save to localStorage as backup
-      localStorage.setItem('lastOrderData', JSON.stringify(orderDataForEmail));
-      
-      console.log('✅ Order data saved for email receipt:', {
-        email: form.email,
-        paymentMethod: payment,
-        total: totals.totalPrice,
-        itemCount: cartItems.length
+      // Make API call to create order
+      const res = await fetch("/api/orders/create", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          items: cartItems,
+          totals,
+          address: form,
+          paymentMethod: payment,
+          orderNotes: orderNotes, // Include order notes in API call
+        }),
       });
-    }
-    
-    // Make API call to create order
-    const res = await fetch("/api/orders/create", {
-      method: "POST",
-      headers: { 
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${localStorage.getItem('token') || ''}`
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        items: cartItems,
-        totals,
-        address: form,
-        paymentMethod: payment,
-        userEmail: form.email,
-        userName: form.fullName,
-        userId: user._id
-      }),
-    });
 
-    console.log("Response status:", res.status);
-    
-    if (res.status === 401) {
-      alert(checkoutTranslations.messages.sessionExpired);
-      router.push("/login");
-      setIsLoading(false);
-      return;
-    }
-
-    const data = await res.json();
-    console.log("API Response data:", data);
-
-    if (!res.ok || !data.ok) {
-      alert(data.message || checkoutTranslations.messages.orderFailed);
-      setIsLoading(false);
+      console.log("Response status:", res.status);
       
-      // Clean up temporary data on failure
-      if (typeof window !== 'undefined') {
-        sessionStorage.removeItem('pendingOrderData');
-      }
-      return;
-    }
+      const data = await res.json();
+      console.log("API Response data:", data);
 
-    if (!data.orderId) {
-      console.error("No orderId in response:", data);
-      alert("Order created but no order ID returned. Please contact support.");
-      setIsLoading(false);
+      if (!res.ok || !data.ok) {
+        alert(data.message || checkoutTranslations.messages.orderFailed);
+        setIsLoading(false);
+        return;
+      }
+
+      if (!data.orderId) {
+        console.error("No orderId in response:", data);
+        alert("Order created but no order ID returned. Please contact support.");
+        setIsLoading(false);
+        return;
+      }
+
+      console.log("✅ Order created successfully! Order ID:", data.orderId);
       
-      // Clean up temporary data
+      // Save order ID to localStorage for reference
       if (typeof window !== 'undefined') {
-        sessionStorage.removeItem('pendingOrderData');
+        localStorage.setItem('lastOrderId', data.orderId);
       }
-      return;
+      
+      // Clear the cart
+      clearCart();
+      console.log('✅ Cart cleared');
+      
+      // Redirect to success page with parameters
+      const redirectUrl = `/order-success/${data.orderId}?payment=${encodeURIComponent(payment)}&email=${encodeURIComponent(form.email)}&name=${encodeURIComponent(form.fullName)}${orderNotes ? '&notes=' + encodeURIComponent(orderNotes.substring(0, 50)) : ''}`;
+      console.log('Redirecting to:', redirectUrl);
+      
+      router.push(redirectUrl);
+      
+    } catch (error) {
+      console.error("❌ Order placement error:", error);
+      alert(checkoutTranslations.messages.networkError);
+      setIsLoading(false);
     }
-
-    console.log("✅ Order created successfully! Order ID:", data.orderId);
-    
-    // ✅ UPDATE: Save final order data with actual order ID
-    if (typeof window !== 'undefined') {
-      try {
-        // Get the pending order data
-        const pendingDataStr = sessionStorage.getItem('pendingOrderData');
-        let orderData = {};
-        
-        if (pendingDataStr) {
-          orderData = JSON.parse(pendingDataStr);
-        } else {
-          // Fallback: Get from localStorage
-          const lastOrderDataStr = localStorage.getItem('lastOrderData');
-          if (lastOrderDataStr) {
-            orderData = JSON.parse(lastOrderDataStr);
-          } else {
-            // Create new order data if nothing found
-            orderData = {
-              customerEmail: form.email,
-              customerName: form.fullName,
-              paymentMethod: payment,
-              totalAmount: totals.totalPrice,
-              items: cartItems.map(item => ({
-                name: item.name,
-                quantity: item.qty,
-                price: item.price,
-                total: item.price * item.qty
-              }))
-            };
-          }
-        }
-        
-        // Add the actual order ID
-        orderData.orderId = data.orderId;
-        orderData.createdAt = new Date().toISOString();
-        orderData.userId = user._id;
-        
-        // ✅ Save to multiple places for reliability
-        // 1. localStorage with order ID as key (main storage)
-        localStorage.setItem(`order_${data.orderId}`, JSON.stringify(orderData));
-        
-        // 2. sessionStorage with order ID as key (for current session)
-        sessionStorage.setItem(`order_${data.orderId}`, JSON.stringify(orderData));
-        
-        // 3. Also save to a special key for easy retrieval
-        localStorage.setItem('lastSuccessfulOrder', JSON.stringify(orderData));
-        
-        console.log('✅ Final order data saved:', {
-          orderId: data.orderId,
-          email: orderData.customerEmail,
-          storageKeys: [
-            `order_${data.orderId} in localStorage`,
-            `order_${data.orderId} in sessionStorage`,
-            'lastSuccessfulOrder in localStorage'
-          ]
-        });
-        
-        // Clean up temporary data
-        sessionStorage.removeItem('pendingOrderData');
-        localStorage.removeItem('lastOrderData');
-        
-      } catch (storageError) {
-        console.error('Error saving order data:', storageError);
-        // Don't fail the order just because of storage error
-      }
-    }
-    
-    // Clear the cart
-    clearCart();
-    console.log('✅ Cart cleared');
-    
-    // ✅ Redirect to success page with parameters
-    const redirectUrl = `/order-success/${data.orderId}?payment=${encodeURIComponent(payment)}&email=${encodeURIComponent(form.email)}&name=${encodeURIComponent(form.fullName)}`;
-    console.log('Redirecting to:', redirectUrl);
-    
-    router.push(redirectUrl);
-    
-  } catch (error) {
-    console.error("❌ Order placement error:", error);
-    alert(checkoutTranslations.messages.networkError);
-    
-    // Clean up on error
-    if (typeof window !== 'undefined') {
-      sessionStorage.removeItem('pendingOrderData');
-      localStorage.removeItem('lastOrderData');
-    }
-    
-    setIsLoading(false);
-  }
-};
+  };
 
   if (cartItems.length === 0) {
     return (
@@ -768,35 +645,48 @@ export default function CheckoutClient() {
 
               {/* PAYMENT CARD */}
               <Card title={checkoutTranslations.payment.title} icon={<CreditCard size={18} />}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
-                  <PayOption
-                    active={payment === "cod"}
-                    onClick={() => setPayment("cod")}
-                    icon={<IndianRupee />}
-                    title={checkoutTranslations.payment.cod.title}
-                    subtitle={checkoutTranslations.payment.cod.subtitle}
-                  />
-                  <PayOption
-                    active={payment === "upi"}
-                    onClick={() => setPayment("upi")}
-                    icon={<Wallet />}
-                    title={checkoutTranslations.payment.upi.title}
-                    subtitle={checkoutTranslations.payment.upi.subtitle}
-                  />
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
                   <PayOption
                     active={payment === "card"}
                     onClick={() => setPayment("card")}
                     icon={<CreditCard />}
-                    title={checkoutTranslations.payment.card.title}
-                    subtitle={checkoutTranslations.payment.card.subtitle}
+                    title={checkoutTranslations.payment.card?.title || "Credit / Debit Card"}
+                    subtitle={checkoutTranslations.payment.card?.subtitle || "Visa • Mastercard • RuPay"}
                   />
                   <PayOption
-                    active={payment === "wallet"}
-                    onClick={() => setPayment("wallet")}
-                    icon={<Wallet />}
-                    title={checkoutTranslations.payment.wallet.title}
-                    subtitle={checkoutTranslations.payment.wallet.subtitle}
+                    active={payment === "bank"}
+                    onClick={() => setPayment("bank")}
+                    icon={<Landmark />}
+                    title={checkoutTranslations.payment.bank?.title || "Bank Transfer"}
+                    subtitle={checkoutTranslations.payment.bank?.subtitle || "Net Banking • UPI • IMPS"}
                   />
+                  <PayOption
+                    active={payment === "crypto"}
+                    onClick={() => setPayment("crypto")}
+                    icon={<Bitcoin />}
+                    title={checkoutTranslations.payment.crypto?.title || "Cryptocurrency"}
+                    subtitle={checkoutTranslations.payment.crypto?.subtitle || "BTC • ETH • USDT"}
+                  />
+                </div>
+
+                {/* Order Notes Section */}
+                <div className="mt-6 pt-4 border-t border-slate-200">
+                  <label className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-2">
+                    <FileText size={16} className="text-[#0A4C89]" />
+                    {checkoutTranslations.payment.notes?.label || "Order Notes (Optional)"}
+                  </label>
+                  <textarea
+                    value={orderNotes}
+                    onChange={(e) => setOrderNotes(e.target.value)}
+                    placeholder={checkoutTranslations.payment.notes?.placeholder || "Add any special instructions or notes for your order..."}
+                    rows="3"
+                    className="w-full px-4 py-3 border border-slate-200 rounded-xl bg-white/80 focus:ring-2 focus:ring-[#0A4C89]/30 focus:border-[#0A4C89]/50 outline-none text-sm resize-y"
+                    maxLength={500}
+                  />
+                  <p className="text-xs text-gray-500 mt-1 flex justify-between">
+                    <span>Maximum 500 characters</span>
+                    <span>{orderNotes.length}/500</span>
+                  </p>
                 </div>
 
                 <p className="text-xs text-gray-500 mt-4 flex items-center gap-1">
@@ -877,7 +767,7 @@ export default function CheckoutClient() {
                       "mt-5 w-full py-3.5 rounded-xl text-sm sm:text-base font-semibold",
                       isDisabled
                         ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                        : "bg-gradient-to-r from-[#0A4C89] via-[#0D5FA8] to-[#1B78D1] text-white shadow-lg shadow-[#0A4C89]/30 hover:shadow-xl hover:translate-y-0.5",
+                        : "bg-gradient-to-r from-[#0A4C89] via-[#0D5FA8] to-[#1B78D1] text-white shadow-lg shadow-[#0A4C89]/30 hover:shadow-xl hover:translate-y-0.5 transition-all duration-200",
                     ].join(" ")}
                   >
                     {isLoading ? 

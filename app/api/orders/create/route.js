@@ -1,4 +1,4 @@
-//ed_pharma/app/api/orders/create/route.js
+// app/api/orders/create/route.js
 import dbConnect from "@/lib/db";
 import Order from "../../../models/Order";
 import nodemailer from "nodemailer";
@@ -40,7 +40,7 @@ async function sendEmail(to, subject, html) {
 export async function POST(req) {
   try {
     const body = await req.json();
-    const { items, totals, address, paymentMethod } = body;
+    const { items, totals, address, paymentMethod, orderNotes } = body;
     const secret = new TextEncoder().encode(process.env.JWT_SECRET);
 
     const cookieStore = await cookies();
@@ -54,12 +54,10 @@ export async function POST(req) {
     }
 
     let userId;
-    let userEmail;
 
     try {
       const { payload } = await jwtVerify(token, secret);
       userId = payload.id;
-      userEmail = payload.email;
     } catch {
       return Response.json(
         { ok: false, message: "Session expired. Please login again" },
@@ -79,13 +77,14 @@ export async function POST(req) {
     if (
       !address?.fullName ||
       !address?.phone ||
+      !address?.email ||
       !address?.address ||
       !address?.city ||
       !address?.pincode ||
       !address?.country
     ) {
       return Response.json(
-        { ok: false, message: "Address incomplete" },
+        { ok: false, message: "Address incomplete. Email is required." },
         { status: 400 }
       );
     }
@@ -106,10 +105,10 @@ export async function POST(req) {
 
     await dbConnect();
 
-    // Create order
+    // Create order with orderNotes
     const order = await Order.create({
       userId,
-      userEmail: userEmail,
+      userEmail: address.email,
       orderId: makeOrderId(),
       items: items.map((i) => ({
         slug: i.slug,
@@ -123,10 +122,26 @@ export async function POST(req) {
         totalQty: Number(totals?.totalQty || 0),
         totalPrice: Number(totals?.totalPrice || 0),
       },
-      address,
-      paymentMethod: paymentMethod || "cod",
+      address: {
+        fullName: address.fullName,
+        phone: address.phone,
+        email: address.email,
+        address: address.address,
+        city: address.city,
+        pincode: address.pincode,
+        country: address.country,
+      },
+      paymentMethod: paymentMethod || "card",
+      orderNotes: orderNotes || "",
       status: "Pending",
     });
+
+    // Format payment method for display
+    const paymentDisplay = {
+      card: "Credit/Debit Card",
+      bank: "Bank Transfer",
+      crypto: "Cryptocurrency",
+    }[paymentMethod] || paymentMethod.toUpperCase();
 
     // 📧 EMAIL 1: Send order confirmation to USER
     const userEmailHtml = `
@@ -138,14 +153,14 @@ export async function POST(req) {
         
         <div style="background-color: #f0f9ff; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
           <h2 style="color: #0A4C89; margin: 0 0 10px 0;">✅ Order Confirmation</h2>
-          <p style="margin: 0;">Thank you for your order! Your order has been successfully placed and is being processed.</p>
+          <p style="margin: 0;">Thank you for your order, ${address.fullName}! Your order has been successfully placed and is being processed.</p>
         </div>
         
         <div style="margin-bottom: 20px;">
           <h3 style="color: #333; border-bottom: 2px solid #0A4C89; padding-bottom: 5px;">Order Details</h3>
           <p><strong>Order ID:</strong> ${order.orderId}</p>
           <p><strong>Order Date:</strong> ${new Date().toLocaleDateString('en-IN')}</p>
-          <p><strong>Payment Method:</strong> ${paymentMethod === 'cod' ? 'Cash on Delivery' : paymentMethod.toUpperCase()}</p>
+          <p><strong>Payment Method:</strong> ${paymentDisplay}</p>
         </div>
         
         <div style="margin-bottom: 20px;">
@@ -155,7 +170,7 @@ export async function POST(req) {
               <tr style="background-color: #f8f9fa;">
                 <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Product</th>
                 <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Quantity</th>
-                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Price</th>
+                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Total</th>
               </tr>
             </thead>
             <tbody>
@@ -179,6 +194,15 @@ export async function POST(req) {
           </div>
         </div>
         
+        ${orderNotes ? `
+        <div style="margin-bottom: 20px; background-color: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 8px;">
+          <h3 style="color: #856404; margin: 0 0 10px 0;">📝 Your Order Notes</h3>
+          <p style="color: #856404; margin: 0; font-style: italic; background-color: white; padding: 10px; border-radius: 5px;">
+            "${orderNotes}"
+          </p>
+        </div>
+        ` : ''}
+        
         <div style="margin-bottom: 20px;">
           <h3 style="color: #333; border-bottom: 2px solid #0A4C89; padding-bottom: 5px;">Delivery Address</h3>
           <p>
@@ -190,21 +214,9 @@ export async function POST(req) {
           </p>
         </div>
         
-        <div style="background-color: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
-          <h4 style="color: #333; margin-top: 0;">What's Next?</h4>
-          <ul style="margin-bottom: 0;">
-            <li>You will receive updates about your order status via email</li>
-            <li>Our team will verify and process your order within 24 hours</li>
-            <li>For any queries, contact us at ${process.env.SMTP_EMAIL}</li>
-          </ul>
-        </div>
-        
         <div style="text-align: center; color: #666; font-size: 14px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
-          <p style="margin: 0;">Thank you for choosing ED Pharma!</p>
-          <p style="margin: 5px 0 0 0;">
-            <strong>ED Pharma Team</strong><br/>
-            Healthcare Solutions • Discreet Packaging • Fast Delivery
-          </p>
+          <p>Thank you for choosing ED Pharma!</p>
+          <p><strong>ED Pharma Team</strong></p>
         </div>
       </div>
     `;
@@ -219,9 +231,10 @@ export async function POST(req) {
         
         <div style="margin-bottom: 20px;">
           <h3 style="color: #333; border-bottom: 2px solid #ff6b6b; padding-bottom: 5px;">Customer Information</h3>
-          <p><strong>Customer Email:</strong> ${userEmail}</p>
-          <p><strong>Customer ID:</strong> ${userId}</p>
-          <p><strong>Order Date:</strong> ${new Date().toLocaleDateString('en-IN')} ${new Date().toLocaleTimeString('en-IN')}</p>
+          <p><strong>Name:</strong> ${address.fullName}</p>
+          <p><strong>Email:</strong> ${address.email}</p>
+          <p><strong>Phone:</strong> ${address.phone}</p>
+          <p><strong>Payment:</strong> ${paymentDisplay}</p>
         </div>
         
         <div style="margin-bottom: 20px;">
@@ -229,10 +242,9 @@ export async function POST(req) {
           <table style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background-color: #f8f9fa;">
-                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Product</th>
-                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Quantity</th>
-                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Price</th>
-                <th style="text-align: left; padding: 10px; border-bottom: 1px solid #ddd;">Total</th>
+                <th style="text-align: left; padding: 10px;">Product</th>
+                <th style="text-align: left; padding: 10px;">Qty</th>
+                <th style="text-align: left; padding: 10px;">Total</th>
               </tr>
             </thead>
             <tbody>
@@ -241,8 +253,7 @@ export async function POST(req) {
                   (i) => `
                   <tr>
                     <td style="padding: 10px; border-bottom: 1px solid #ddd;">${i.name}</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #ddd;">${i.qty} units</td>
-                    <td style="padding: 10px; border-bottom: 1px solid #ddd;">₹${i.price}/unit</td>
+                    <td style="padding: 10px; border-bottom: 1px solid #ddd;">${i.qty}</td>
                     <td style="padding: 10px; border-bottom: 1px solid #ddd;">₹${Number(i.price) * Number(i.qty)}</td>
                   </tr>
                 `
@@ -250,79 +261,38 @@ export async function POST(req) {
                 .join("")}
             </tbody>
           </table>
-          <div style="text-align: right; margin-top: 15px;">
-            <p style="font-size: 20px; font-weight: bold; color: #ff6b6b;">
-              Total Amount: ₹${totals.totalPrice}
-            </p>
-          </div>
-          <div style="background-color: #f8f9fa; padding: 10px; border-radius: 5px; margin-top: 10px;">
-            <p style="margin: 0;"><strong>Summary:</strong> ${items.length} items • ${totals.totalQty} total units • ₹${totals.totalPrice} total</p>
-          </div>
-        </div>
-        
-        <div style="margin-bottom: 20px;">
-          <h3 style="color: #333; border-bottom: 2px solid #ff6b6b; padding-bottom: 5px;">Delivery Address</h3>
-          <p>
-            <strong>${address.fullName}</strong><br/>
-            ${address.address}<br/>
-            ${address.city} - ${address.pincode}<br/>
-            ${address.country}<br/>
-            📞 ${address.phone}
+          <p style="font-size: 18px; font-weight: bold; color: #ff6b6b; text-align: right;">
+            Total: ₹${totals.totalPrice}
           </p>
         </div>
         
-        <div style="margin-bottom: 20px;">
-          <h3 style="color: #333; border-bottom: 2px solid #ff6b6b; padding-bottom: 5px;">Payment Information</h3>
-          <p><strong>Method:</strong> ${paymentMethod === 'cod' ? 'Cash on Delivery' : paymentMethod.toUpperCase()}</p>
-          <p><strong>Status:</strong> Pending</p>
+        ${orderNotes ? `
+        <div style="margin-bottom: 20px; background-color: #fff3cd; border: 1px solid #ffeeba; padding: 15px; border-radius: 8px;">
+          <h3 style="color: #856404;">📝 Customer Notes</h3>
+          <p style="color: #856404;">"${orderNotes}"</p>
         </div>
+        ` : ''}
         
-        <div style="background-color: #ffebee; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+        <div style="background-color: #ffebee; padding: 15px; border-radius: 8px;">
           <h4 style="color: #d32f2f; margin-top: 0;">Action Required</h4>
-          <ul style="margin-bottom: 0;">
-            <li>Verify the order details in admin panel</li>
-            <li>Process the order within 24 hours</li>
-            <li>Update order status once shipped</li>
-            <li>Contact customer if any issues: ${address.phone}</li>
-          </ul>
-        </div>
-        
-        <div style="text-align: center; color: #666; font-size: 14px; padding-top: 20px; border-top: 1px solid #e0e0e0;">
-          <p style="margin: 0;">This is an automated notification from ED Pharma Order System</p>
-          <p style="margin: 5px 0 0 0;">Order ID: ${order.orderId} | Time: ${new Date().toLocaleTimeString('en-IN')}</p>
+          <p>Process this order within 24 hours.</p>
         </div>
       </div>
     `;
 
-    // Send both emails in parallel (non-blocking)
-    // We don't wait for email success to respond to user
+    // Send emails
     Promise.allSettled([
-      sendEmail(
-        userEmail,
-        `✅ Order Confirmation - ${order.orderId} - ED Pharma`,
-        userEmailHtml
-      ),
-      sendEmail(
-        process.env.ADMIN_EMAIL,
-        `🚨 New Order - ${order.orderId} - ED Pharma`,
-        adminEmailHtml
-      ),
-    ]).then((results) => {
-      console.log("📧 Email sending results:", results);
-    });
+      sendEmail(address.email, `Order Confirmation - ${order.orderId}`, userEmailHtml),
+      sendEmail(process.env.ADMIN_EMAIL, `New Order - ${order.orderId}`, adminEmailHtml),
+    ]);
 
-    // ✅ FINAL RESPONSE
-    return Response.json(
-      { ok: true, orderId: order.orderId },
-      { status: 201 }
-    );
+    return Response.json({ ok: true, orderId: order.orderId }, { status: 201 });
 
   } catch (err) {
     console.error("ORDER_CREATE_ERROR:", err);
-
-    return new Response(
-      JSON.stringify({ ok: false, message: err.message || "Server error" }),
-      { status: 500, headers: { "Content-Type": "application/json" } }
+    return Response.json(
+      { ok: false, message: err.message || "Server error" },
+      { status: 500 }
     );
   }
 }
@@ -331,9 +301,7 @@ export async function POST(req) {
 export async function GET() {
   try {
     await dbConnect();
-
     const orders = await Order.find().sort({ createdAt: -1 }).lean();
-
     return Response.json({ ok: true, orders });
   } catch (err) {
     console.error("ORDER_LIST_ERROR:", err);
@@ -343,216 +311,3 @@ export async function GET() {
     );
   }
 }
-
-//ed_pharma/app/api/orders/create/route.js
-// import dbConnect from "@/lib/db";
-// import Order from "../../../models/Order";
-// import nodemailer from "nodemailer";
-// import { cookies } from "next/headers";
-// import { jwtVerify } from "jose";
-
-
-// function makeOrderId() {
-//   const rand = Math.random().toString(36).slice(2, 8).toUpperCase();
-//   return `ORD-${Date.now()}-${rand}`;
-// }
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: process.env.SMTP_EMAIL,
-//     pass: process.env.SMTP_PASSWORD,
-//   },
-// });
-
-
-
-
-
-// /* ================= CREATE ORDER ================= */
-// export async function POST(req) {
-//   try {
-//     const body = await req.json();
-//   const { items, totals, address, paymentMethod } = body;
-//   const secret = new TextEncoder().encode(process.env.JWT_SECRET);
-
-
-//   const cookieStore = await cookies();
-// const token = cookieStore.get("auth")?.value;
-
-// if (!token) {
-//   return Response.json(
-//     { ok: false, message: "Please login to continue" },
-//     { status: 401 }
-//   );
-// }
-
-// let userId;
-// let userEmail;
-
-// try {
-//   const { payload } = await jwtVerify(token, secret);
-//   userId = payload.id;
-//   userEmail = payload.email;
-// } catch {
-//   return Response.json(
-//     { ok: false, message: "Session expired. Please login again" },
-//     { status: 401 }
-//   );
-// }
-
-
-
-//     // ✅ validation: items
-//     if (!Array.isArray(items) || items.length === 0) {
-//       return Response.json(
-//         { ok: false, message: "Cart is empty" },
-//         { status: 400 }
-//       );
-//     }
-
-
-
-
-//     // ✅ validation: address
-//     if (
-//       !address?.fullName ||
-//       !address?.phone ||
-//       !address?.address ||
-//       !address?.city ||
-//       !address?.pincode ||
-//       !address?.country
-//     ) {
-//       return Response.json(
-//         { ok: false, message: "Address incomplete" },
-//         { status: 400 }
-//       );
-//     }
-
-//     //email validation 
-    
-
-// // if (!userId) {
-// //   return Response.json(
-// //     { ok: false, message: "User not authenticated" },
-// //     { status: 401 }
-// //   );
-// // }
-
-
-
-//     // ✅ enforce min 50 qty
-//     const invalid = items.find((i) => Number(i.qty) < 50);
-//     if (invalid) {
-//       return Response.json(
-//         {
-//           ok: false,
-//           message: `Minimum order quantity is 50 per item. "${invalid.name}" has qty ${Number(
-//             invalid.qty
-//           )}.`,
-//         },
-//         { status: 400 }
-//       );
-//     }
-
-//     await dbConnect();
-
-//     const order = await Order.create({
-//   userId,
-//  userEmail: userEmail,   // ✅ THIS IS THE FIX
-//   orderId: makeOrderId(),
-//   items: items.map((i) => ({
-//     slug: i.slug,
-//     name: i.name,
-//     qty: Number(i.qty),
-//     price: Number(i.price || 0),
-//     image: i.image || "",
-//   })),
-//   totals: {
-//     totalDistinct: Number(totals?.totalDistinct || items.length),
-//     totalQty: Number(totals?.totalQty || 0),
-//     totalPrice: Number(totals?.totalPrice || 0),
-//   },
-//   address,
-//   paymentMethod: paymentMethod || "cod",
-//   status: "Pending",
-// });
-
-
-
-//     // 📧 SEND ORDER CONFIRMATION EMAIL (non-blocking)
-// try {
-//   await transporter.sendMail({
-//     from: `"ED Pharma" <${process.env.SMTP_EMAIL}>`,
-//    to: userEmail,
-//     subject: "✅ Order Successful – ED Pharma",
-//     html: `
-//       <div style="font-family:Arial,sans-serif;line-height:1.6">
-//         <h2>Thank you for your order!</h2>
-
-//         <p>Your order <strong>${order.orderId}</strong> has been placed successfully.</p>
-
-//         <h3>Order Summary</h3>
-//         <ul>
-//           ${items
-//             .map(
-//               (i) =>
-//                 `<li>${i.name} × ${i.qty} — ₹${Number(i.price) * Number(i.qty)}</li>`
-//             )
-//             .join("")}
-//         </ul>
-
-//         <p><strong>Total:</strong> ₹${totals.totalPrice}</p>
-
-//         <h4>Delivery Address</h4>
-//         <p>
-//           ${address.fullName}<br/>
-//           ${address.address}, ${address.city} - ${address.pincode}<br/>
-//           ${address.country}<br/>
-//           Phone: ${address.phone}
-//         </p>
-
-//         <p style="margin-top:20px">
-//           Regards,<br/>
-//           <strong>ED Pharma Team</strong>
-//         </p>
-//       </div>
-//     `,
-//   });
-// } catch (mailErr) {
-//   console.error("ORDER_EMAIL_FAILED:", mailErr);
-// }
-
-// // ✅ FINAL RESPONSE
-// return Response.json(
-//   { ok: true, orderId: order.orderId },
-//   { status: 201 }
-// );
-
-//   } catch (err) {
-//     console.error("ORDER_CREATE_ERROR:", err);
-
-//     return new Response(
-//       JSON.stringify({ ok: false, message: err.message || "Server error" }),
-//       { status: 500, headers: { "Content-Type": "application/json" } }
-//     );
-//   }
-// }
-
-// /* ================= GET ALL ORDERS ================= */
-// export async function GET() {
-//   try {
-//     await dbConnect();
-
-//     const orders = await Order.find()
-//       .sort({ createdAt: -1 })
-//       .lean();
-
-//     return Response.json({ ok: true, orders });
-//   } catch (err) {
-//     console.error("ORDER_LIST_ERROR:", err);
-//     return Response.json(
-//       { ok: false, message: "Failed to fetch orders" },
-//       { status: 500 }
-//     );
-//   }
-// }

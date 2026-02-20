@@ -17,6 +17,7 @@ const AddressSchema = new mongoose.Schema(
   {
     fullName: { type: String, required: true },
     phone: { type: String, required: true },
+    email: { type: String, required: true }, // Add email to address
     address: { type: String, required: true },
     city: { type: String, required: true },
     pincode: { type: String, required: true },
@@ -28,12 +29,11 @@ const AddressSchema = new mongoose.Schema(
 /* ---------------- ORDER ---------------- */
 const OrderSchema = new mongoose.Schema(
   {
-
     userId: {
-  type: mongoose.Schema.Types.ObjectId,
-  ref: "User",
-  required: true,
-},
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
 
     /* ===== OLD FIELDS (KEPT AS-IS) ===== */
     patient: { type: String },
@@ -41,18 +41,8 @@ const OrderSchema = new mongoose.Schema(
     product: { type: String },
     amount: { type: Number },
 
-    
-
-
     /* ===== NEW STRUCTURED ORDER ===== */
     orderId: { type: String, required: true, unique: true },
-
-    userId: {
-  type: String,
-  required: true,
-  index: true,
-},
-
 
     items: {
       type: [OrderItemSchema],
@@ -60,11 +50,10 @@ const OrderSchema = new mongoose.Schema(
     },
 
     userEmail: {
-  type: String,
-  required: true,
-  index: true,
-},
-
+      type: String,
+      required: true,
+      index: true,
+    },
 
     totals: {
       totalDistinct: { type: Number, default: 0 },
@@ -78,21 +67,24 @@ const OrderSchema = new mongoose.Schema(
     },
 
     paymentMethod: {
-  type: String,
-  enum: ["cod", "upi", "card", "wallet"],
-  default: "cod",
-},
+      type: String,
+      enum: ["cod", "upi", "card", "wallet", "bank", "crypto"], // Added bank and crypto
+      default: "card",
+    },
+
+    orderNotes: {
+      type: String,
+      default: "",
+    },
 
     status: {
       type: String,
-      enum: ["Pending", "Processing", "Shipped", "Cancelled"],
+      enum: ["Pending", "Processing", "Shipped", "Delivered", "Cancelled"],
       default: "Pending",
     },
-    
-    
   },
   { timestamps: true }
-);  
+);
 
 export default mongoose.models.Order ||
   mongoose.model("Order", OrderSchema);
