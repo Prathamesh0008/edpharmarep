@@ -40,6 +40,30 @@ export default function ProductClient({ slug }) {
     }
   }, [slug, getProductBySlug, language]);
 
+  // Helper function to get localized product name
+  const getLocalizedName = (product) => {
+    if (!product) return "Product Name";
+    
+    // If name is an object with language keys
+    if (product.name && typeof product.name === 'object') {
+      return product.name[language] || product.name.en || JSON.stringify(product.name);
+    }
+    
+    // If name is a string
+    return product.name || "Product Name";
+  };
+
+  // Helper function to get localized description
+  const getLocalizedDescription = (product) => {
+    if (!product) return "";
+    
+    if (product.description && typeof product.description === 'object') {
+      return product.description[language] || product.description.en || "";
+    }
+    
+    return product.description || "";
+  };
+
   if (!slug) {
     return (
       <div className="p-8 sm:p-12 md:p-20 text-center text-lg sm:text-xl text-gray-600">
@@ -68,7 +92,6 @@ export default function ProductClient({ slug }) {
   const unitPrice = getPriceByQuantity(product.slug, safeQuantity);
   const totalPrice = unitPrice * safeQuantity;
 
-  // ... rest of your component code (same as before)
   // Get translations from context, fallback to English structure
   const productDetailTranslations = t?.productDetail || {
     notFound: "Product not found",
@@ -101,6 +124,10 @@ export default function ProductClient({ slug }) {
   const labels = productDetailTranslations?.labels || {};
   const sections = productDetailTranslations?.sections || {};
 
+  // Get localized product name and description
+  const productName = getLocalizedName(product);
+  const productDescription = getLocalizedDescription(product);
+
   // Default product images
   const productImages = [
     product?.image || "/placeholder.jpg",
@@ -127,6 +154,19 @@ export default function ProductClient({ slug }) {
       secondary: "#D9C7A2",
       bg: "/bg/bg5.png",
       light: "#F9F7F0",
+    },
+    // Add new brands
+    "Healing Pharma": {
+      primary: "#2E7D32",
+      secondary: "#4CAF50",
+      bg: "/bg/healing-bg.png",
+      light: "#E8F5E9",
+    },
+    "Hab Pharma": {
+      primary: "#1565C0",
+      secondary: "#1976D2",
+      bg: "/bg/hab-bg.png",
+      light: "#E3F2FD",
     },
   };
 
@@ -182,7 +222,7 @@ export default function ProductClient({ slug }) {
                     >
                       <Image
                         src={imgSrc}
-                        alt={`${product.name || "Product Image"} - View ${index + 1}`}
+                        alt={`${productName} - View ${index + 1}`}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-contain"
@@ -252,13 +292,13 @@ export default function ProductClient({ slug }) {
               <div className="flex-1 min-w-0">
                 {/* Product Name */}
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 break-words">
-                  {product.name || "Product Name"}
+                  {productName}
                 </h1>
 
                 {/* Description */}
-                {product.description && (
+                {productDescription && (
                   <p className="text-gray-600 mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                    {product.description}
+                    {productDescription}
                   </p>
                 )}
 
@@ -312,8 +352,6 @@ export default function ProductClient({ slug }) {
                     />
                   )}
                 </div>
-
-                
 
                 {/* Action Buttons */}
                 <div className="mt-4 sm:mt-6">

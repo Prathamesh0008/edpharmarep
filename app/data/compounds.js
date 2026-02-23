@@ -250,93 +250,64 @@ export const COMPOUNDS = {
     XCompound2: ["product-slug-3", "product-slug-4"],
   },
  // NEW BRAND: Healing Pharma
-  "Healing Pharma": {
-    "Sildenafil": [
-      "healing-sildenafil-50",
-      "healing-sildenafil-100",
-      "healing-sildenafil-oral-jelly",
-    ],
-    "Tadalafil": [
-      "healing-tadalafil-10",
-      "healing-tadalafil-20",
-      "healing-tadalafil-40",
-    ],
-    "Vardenafil": [
-      "healing-vardenafil-10",
-      "healing-vardenafil-20",
-    ],
-    "Dapoxetine": [
-      "healing-dapoxetine-30",
-      "healing-dapoxetine-60",
-    ],
-    "Sildenafil & Dapoxetine": [
-      "healing-super-combo",
-    ],
-    "Antibiotics": [
-      "healing-amoxicillin-500",
-      "healing-azithromycin-250",
-      "healing-cefixime-200",
-    ],
-    "Pain Relief": [
-      "healing-diclofenac-50",
-      "healing-paracetamol-500",
-      "healing-tramadol-50",
+  // In your COMPOUNDS object, update the "Healing Pharma" section:
+"Healing Pharma": {
+    "Skincare": [
+        "azelax-cream",
+        "derbeau-moisturizer",
+        "niacinamide-face-wash"
     ],
     "Vitamins & Supplements": [
-      "healing-multivitamin",
-      "healing-vitamin-b-complex",
-      "healing-vitamin-c-500",
+        "bonefine-d3-60k",
+        "multivitamin-abcdz"
     ],
-  },
-
-  // NEW BRAND: Hab Pharma
-  "Hab Pharma": {
-    "Sildenafil": [
-      "hab-sildenafil-50",
-      "hab-sildenafil-100",
-      "hab-sildenafil-150",
-      "hab-sildenafil-oral-jelly",
-    ],
-    "Tadalafil": [
-      "hab-tadalafil-5",
-      "hab-tadalafil-10",
-      "hab-tadalafil-20",
-      "hab-tadalafil-40",
-    ],
-    "Vardenafil": [
-      "hab-vardenafil-10",
-      "hab-vardenafil-20",
-      "hab-vardenafil-40",
-    ],
-    "Dapoxetine": [
-      "hab-dapoxetine-30",
-      "hab-dapoxetine-60",
-      "hab-dapoxetine-90",
-    ],
-    "Combination Therapies": [
-      "hab-super-zen-100-60",
-      "hab-tada-plus-20-60",
-      "hab-vardenafil-dapoxetine",
-    ],
-    "Antibiotics": [
-      "hab-ciprofloxacin-500",
-      "hab-doxycycline-100",
-      "hab-levofloxacin-500",
+    "Health & Wellness": [
+        "xheal-shilajit"
     ],
     "Antifungal": [
-      "hab-fluconazole-150",
-      "hab-itraconazole-100",
-      "hab-terbinafine-250",
+        "clotriheal-cream"
     ],
-    "Anti-inflammatory": [
-      "hab-naproxen-250",
-      "hab-ibuprofen-400",
-      "hab-piroxicam-20",
+    // Also add them to relevant functional categories if you have them
+    "Azelaic Acid": [ // Example functional category
+        "azelax-cream"
     ],
-    "Cardiovascular": [
-      "hab-amlodipine-5",
-      "hab-losartan-50",
-      "hab-atenolol-50",
+    "Vitamin D3": [
+        "bonefine-d3-60k"
     ],
-  }
+    
+},
+
+  // NEW BRAND: Hab Pharma
+  // In your COMPOUNDS object, update the Hab Pharma section:
+
+"Hab Pharma": {
+    "Muscle Relaxants": [
+      "soma-350",
+      "soma-500",
+    ],
+    "Sleep Aids": [
+      "zop-7-5",
+      "zop-10",
+    ],
+    "Wakefulness Promoters": [
+      "modafinil",
+      "armodafinil",
+    ],
+    "ED Treatments": [
+      "cobra-120",
+      "cobra-200",
+      "cobra-jelly",
+    ],
+    "Hormone Therapy": [
+      "testogel",
+    ],
+    "Sildenafil": [  // For ED category compatibility
+      "cobra-120",
+      "cobra-200",
+      "cobra-jelly",
+    ],
+    "Testosterone": [  // For hormone therapy category
+      "testogel",
+    ]
+  },
 };

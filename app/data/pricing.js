@@ -475,6 +475,143 @@ const pricing = {
   { min: 10000, max: Infinity, price:1.50 },
    ],
 
+   "soma-350":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+
+   "soma-500":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+
+   "zop-7-5":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+
+   "zop-10":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+
+   "modafinil":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+
+   "armodafinil":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+
+   "cobra-120":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   "cobra-200":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   "cobra-jelly":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   "testogel":[
+  { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+
+   "azelax-cream":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   "bonefine-d3-60k":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   "multivitamin-abcdz":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   "xheal-shilajit":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   "derbeau-moisturizer":[
+{ min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+  ],
+   "niacinamide-face-wash":[
+    { min: 1, max: 10, price: 15.00 },
+  { min: 11, max: 99, price:11.25 },
+  { min: 100, max: 999, price:7.50 },
+  { min: 1000, max: 4999, price:2.25 },
+  { min: 5000, max: 9999, price:1.88 },
+  { min: 10000, max: Infinity, price:1.50 },
+   ],
+   
+
   
 
 };

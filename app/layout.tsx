@@ -73,6 +73,127 @@ const OrganizationSchema = {
   ]
 };
 
+const EnhancedOrganizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+
+    {
+      "@type": "Organization",
+      "@id": "https://www.edpharma.co/#organization",
+      "name": "ED Pharma",
+      "url": "https://www.edpharma.co/",
+      "logo": "https://www.edpharma.co/logo.svg",
+      "description": "ED Pharma is a trusted online pharmacy offering high-quality ED medications. Buy Kamagra online, Sildenafil tablets, Tadalafil and other erectile dysfunction treatments with secure checkout and fast European delivery.",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=61587470225108",
+        "https://x.com/EdpharmacyInfo",
+        "https://www.instagram.com/ed__pharma/",
+        "https://medium.com/@info.edpharmacy",
+        "https://www.edpharma.co/",
+        "https://ed-pharma.blogspot.com/"
+      ],
+      "keywords": [
+        "buy kamagra",
+        "kamagra online",
+        "buy kamagra online",
+        "kamagra gold",
+        "sildenafil tablets",
+        "tadalafil online",
+        "ed medication online",
+        "erectile dysfunction treatment",
+        "generic viagra online",
+        "buy sildenafil europe",
+        "kamagra europe delivery"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "availableLanguage": [
+          "English",
+          "German",
+          "French",
+          "Spanish",
+          "Italian",
+          "Portuguese",
+          "Dutch",
+          "Polish",
+          "Czech",
+          "Slovak",
+          "Hungarian",
+          "Romanian",
+          "Bulgarian",
+          "Croatian",
+          "Slovenian",
+          "Greek",
+          "Danish",
+          "Swedish",
+          "Finnish",
+          "Norwegian",
+          "Lithuanian",
+          "Latvian",
+          "Estonian",
+          "Irish",
+          "Maltese",
+          "Icelandic",
+          "Serbian",
+          "Albanian",
+          "Bosnian",
+          "Ukrainian"
+        ]
+      }
+    },
+
+    {
+      "@type": "WebSite",
+      "@id": "https://www.edpharma.co/#website",
+      "url": "https://www.edpharma.co/",
+      "name": "ED Pharma – Buy Kamagra Online Europe",
+      "description": "Buy Kamagra online in Europe from ED Pharma. Trusted supplier of Sildenafil, Tadalafil and ED medications with secure payment and fast shipping across Europe.",
+      "publisher": {
+        "@id": "https://www.edpharma.co/#organization"
+      },
+      "inLanguage": [
+        "en",
+        "de",
+        "fr",
+        "es",
+        "it",
+        "pt",
+        "nl",
+        "pl",
+        "cs",
+        "sk",
+        "hu",
+        "ro",
+        "bg",
+        "hr",
+        "sl",
+        "el",
+        "da",
+        "sv",
+        "fi",
+        "no",
+        "lt",
+        "lv",
+        "et",
+        "ga",
+        "mt",
+        "is",
+        "sr",
+        "sq",
+        "bs",
+        "uk"
+      ],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.edpharma.co/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+
+  ]
+};
+
 /* ---------------- METADATA ---------------- */
 export const metadata: Metadata = {
   title: "ED Pharma – Europe's Trusted Sexual Health Medicine Distributor & Supplier",
@@ -86,6 +207,17 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "Uk8jK5E0dWbzQ3cizBgWtDWZ5B0I48zZODiasyVJu5Y",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
   },
 };
 
@@ -103,6 +235,11 @@ export default function RootLayout({
           name="google-site-verification" 
           content="Uk8jK5E0dWbzQ3cizBgWtDWZ5B0I48zZODiasyVJu5Y" 
         />
+        
+        {/* Robots Meta Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large" />
         
         {/* Google Tag Manager Script */}
         <script
@@ -141,6 +278,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationSchema) }}
           key="organization-schema"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(EnhancedOrganizationSchema) }}
+          key="enhanced-organization-schema"
         />
       </head>
       <body

@@ -979,7 +979,21 @@ export const productImages = {
     "/products/prifsun 3.png",
   
   ],
-   }   
-
+   },
+    "soma-350":{
+    main: "/products/Soma350mg.jpg",//
+    gallery: [
+    "/products/Soma350mg_2.webp",
+    "/products/Soma350mg_3.jpg",
+  
+  ],
+   },
+"soma-500":{
+  main: "/products/Soma500mg.webp",//
+    gallery: [
+    "/products/Soma500mg2.png",
+    "/products/Soma500mg_3.jpeg",
+    ]
+}
 
 }
