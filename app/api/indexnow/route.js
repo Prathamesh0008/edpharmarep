@@ -54,7 +54,7 @@ export async function POST() {
       },
       body: JSON.stringify({
         host: "www.edpharma.co",
-        key: "YOUR_KEY",
+        key: "e1aa3b2672594b69ae2a9b3e7431d25b",
         keyLocation: "https://www.edpharma.co/YOUR_KEY.txt",
         urlList: urls
       })

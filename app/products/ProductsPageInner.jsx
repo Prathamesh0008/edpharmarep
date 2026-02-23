@@ -20,6 +20,8 @@ const BRAND_THEMES = {
     secondary: "#2A7DB8",
     accent: "#1C5EB7",
     lightBg: "#E8EEF5",
+
+
     extraLight: "#F0F5FA",
     bgImage: "/bg/bg1.png",
     bgUpImage: "/bg/bgup.png",
@@ -80,6 +82,48 @@ const BRAND_THEMES = {
       "linear-gradient(135deg, #081A3E 0%, #122A5C 50%, #1C4A8C 100%)",
     compoundHeaderShadow: "0 4px 20px rgba(8, 26, 62, 0.25)",
     buttonHover: "#0D234F",
+  },// NEW BRAND: Healing Pharma
+  "Healing Pharma": {
+    name: "Healing Pharma",
+    logo: "/logo/HealingLogo.png", // You'll need to add this image public\logo\HealingLogo.png
+    primary: "#2E7D32", // Deep green
+    secondary: "#4CAF50", // Medium green
+    accent: "#1B5E20", // Dark green
+    lightBg: "#E8F5E9", // Very light green
+    extraLight: "#F1F8E9", // Light green with yellow tint
+    bgImage: "/bg/healing-bg.png", // You'll need to add this image
+    bgUpImage: "/bg/healing-up.png", // Optional
+    bgDownImage: "/bg/healing-down.png", // Optional
+    gradient: "linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%)",
+    priceGradient: "linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%)",
+    compoundHeaderGradient:
+      "linear-gradient(135deg, #2E7D32 0%, #1B5E20 50%, #4CAF50 100%)",
+    compoundHeaderShadow: "0 4px 20px rgba(46, 125, 50, 0.25)",
+    buttonHover: "#1B5E20",
+    imageBorderColor: "#FFFFFF",
+    imageBorderStyle: "embossed",
+  },
+
+  // NEW BRAND: Hab Pharma
+  "Hab Pharma": {
+    name: "Hab Pharma",
+    logo: "/logo/HabLogo.png", // You'll need to add this image public\logo\HabLogo.png
+    primary: "#1565C0", // Deep blue
+    secondary: "#1976D2", // Medium blue
+    accent: "#0D47A1", // Dark blue
+    lightBg: "#E3F2FD", // Very light blue
+    extraLight: "#E1F5FE", // Light blue with cyan tint
+    bgImage: "/bg/hab-bg.png", // You'll need to add this image
+    bgUpImage: "/bg/hab-up.png", // Optional
+    bgDownImage: "/bg/hab-down.png", // Optional
+    gradient: "linear-gradient(135deg, #1565C0 0%, #1976D2 100%)",
+    priceGradient: "linear-gradient(135deg, #1565C0 0%, #0D47A1 100%)",
+    compoundHeaderGradient:
+      "linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #1976D2 100%)",
+    compoundHeaderShadow: "0 4px 20px rgba(21, 101, 192, 0.25)",
+    buttonHover: "#0D47A1",
+    imageBorderColor: "#FFFFFF",
+    imageBorderStyle: "embossed",
   },
 };
 
@@ -87,6 +131,7 @@ const BRAND_ORDER = [
   "ED Ajanta Pharma",
   "ED Centurion Remedies",
   "ED Sunrise Remedies",
+  
 ];
 
 const makeId = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -718,61 +763,69 @@ export default function ProductsPage() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 ">
         {/* Brand Logos Grid */}
-        <div className="mb-6 sm:mb-8 mt-7">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 ">
-            {BRAND_ORDER.map((brandKey, index) => {
-              const b = BRAND_THEMES[brandKey];
-              const isActive = selectedBrand === brandKey;
+        {/* Brand Logos Grid */}
+<div className="mb-6 sm:mb-8 mt-7">
+  <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-6">
+    {BRAND_ORDER.map((brandKey, index) => {
+      const b = BRAND_THEMES[brandKey];
+      const isActive = selectedBrand === brandKey;
 
-              return (
-                <button
-                  key={brandKey}
-                  onClick={() => {
-                    setSelectedBrand(brandKey);
-                    setSearchInput("");
-                    setCategoryFilter("All");
-                  }}
-                  className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-48 transition-all duration-300 transform ${
-                    isActive
-                      ? "ring-3 sm:ring-4 ring-offset-1 sm:ring-offset-2 shadow-2xl"
-                      : "hover:shadow-xl"
-                  }`}
-                  style={{
-                    border: `1px solid ${isActive ? b.primary : "#e5e7eb"}`,
-                    boxShadow: isActive
-                      ? `0 20px 40px ${b.primary}40`
-                      : "0 4px 20px rgba(0, 0, 0, 0.08)",
-                    backgroundColor: 'white',
-                  }}
-                >
-                  {isActive && (
-                    <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
-                      <div
-                        className="w-3 h-3 sm:w-4 sm:h-4 rounded-full"
-                        style={{
-                          backgroundColor: b.primary,
-                        }}
-                      ></div>
-                    </div>
-                  )}
+      return (
+        <button
+          key={brandKey}
+          onClick={() => {
+            setSelectedBrand(brandKey);
+            setSearchInput("");
+            setCategoryFilter("All");
+          }}
+          className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-40 sm:h-48 transition-all duration-300 transform ${
+            isActive
+              ? "ring-3 sm:ring-4 ring-offset-1 sm:ring-offset-2 shadow-2xl scale-105 z-10"
+              : "hover:shadow-xl hover:scale-102"
+          }`}
+          style={{
+            border: `1px solid ${isActive ? b.primary : "#e5e7eb"}`,
+            boxShadow: isActive
+              ? `0 20px 40px ${b.primary}40`
+              : "0 4px 20px rgba(0, 0, 0, 0.08)",
+            backgroundColor: 'white',
+          }}
+        >
+          {isActive && (
+            <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
+              <div
+                className="w-3 h-3 sm:w-4 sm:h-4 rounded-full animate-pulse"
+                style={{
+                  backgroundColor: b.primary,
+                }}
+              ></div>
+            </div>
+          )}
 
-                  <div className="flex items-center justify-center h-full w-full cursor-pointer">
-                    <div className="relative w-40 h-40 sm:w-48 sm:h-48">
-                      <Image
-                        src={b.logo}
-                        alt={b.name}
-                        fill
-                        className="object-contain"
-                        sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
-                        priority={index === 0}
-                      />
-                    </div>
-                  </div>
-                </button>
-              );
-            })}
+          <div className="flex items-center justify-center h-full w-full cursor-pointer">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40">
+              <Image
+                src={b.logo}
+                alt={b.name}
+                fill
+                className="object-contain"
+                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 160px"
+                priority={index === 0}
+              />
+            </div>
           </div>
-        </div>
+          
+          {/* Brand name tooltip on hover */}
+          <div className="absolute bottom-2 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <span className="text-xs font-medium px-2 py-1 rounded-full bg-white/90 shadow-sm" style={{ color: b.primary }}>
+              {b.name}
+            </span>
+          </div>
+        </button>
+      );
+    })}
+  </div>
+</div>  
 
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
