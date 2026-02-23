@@ -981,9 +981,9 @@ export const productImages = {
   ],
    },
     "soma-350":{
-    main: "/products/Soma350mg.jpg",//
+    main: "/products/Soma350mg_2.png",//
     gallery: [
-    "/products/Soma350mg_2.webp",
+    "/products/Soma350mg_3.jpg",
     "/products/Soma350mg_3.jpg",
   
   ],
@@ -997,11 +997,84 @@ export const productImages = {
 },
 
 "zop-7-5":{
-  main: "/products/zop7.5mg.jpg",//
+  main: "/products/zop7.5mg.png",//zopisign-10mg
     gallery: [
     "/products/zop7.5mg_2.jpeg",
     "/products/zop7.5mg_3.webp",
     ]
-}
+},
+
+"zop-10":{
+   main: "/products/zopisign-10mg.jpg",//zopisign-10mg
+    gallery: [
+    "/products/zopisign-10mg_2.jpg",
+    "/products/zopisign-10mg_3.webp",
+    ]
+},
+
+"modafinil":{
+  main: "/products/Modafinil200.jpeg",//armodafinil-150-mg
+    gallery: [
+    "/products/Modafinil200_2.jpg",
+    "/products/Modafinil200_3.webp",
+    ]
+},
+
+"armodafinil":{
+  main: "/products/armodafinil-150-mg.webp",//armodafinil-150-mg
+    gallery: [
+    "/products/armodafinil-150-mg_3.jpg",
+    "/products/armodafinil-150-mg_2.jpg",
+    ]
+},
+ "azelax-cream":{
+  main: "/products/azelaic.webp",//derbeau
+    gallery: [
+    "/products/azelaic_2.webp",
+    "/products/azelaic_3.webp",
+    ]
+ },
+
+ "bonefine-d3-60k":{
+  main: "/products/Bonefine.webp",//derbeau
+    gallery: [
+    "/products/Bonefine.webp",
+    "/products/Bonefine.webp",
+    ]
+ },
+ "multivitamin-abcdz":{
+  main: "/products/abcdz_tablets.webp",//derbeau
+    gallery: [
+    "/products/abcdz_tablets_2.webp",
+    "/products/abcdz_tablets_3.webp",
+    ]
+ },
+
+ "xheal-shilajit":{
+  main: "/products/shilajit_gold.webp",//derbeau
+    gallery: [
+    "/products/shilajit_gold_2.webp",
+    "/products/shilajit_gold_3.jpg",
+    ]
+ },
+
+ "derbeau-moisturizer":{
+  main: "/products/derbeau.webp",//AcnetopFacewash
+    gallery: [
+    "/products/derbeau_2.webp",
+    "/products/derbeau_3.webp",
+    ]
+ },
+
+ "niacinamide-face-wash":{
+  main: "/products/AcnetopFacewash.webp",//AcnetopFacewash
+    gallery: [
+    "/products/AcnetopFacewash_2.webp",
+    "/products/AcnetopFacewash_3.webp",
+    ]
+ }
+
+
+
 
 }

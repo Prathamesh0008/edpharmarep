@@ -267,13 +267,7 @@ export const COMPOUNDS = {
     "Antifungal": [
         "clotriheal-cream"
     ],
-    // Also add them to relevant functional categories if you have them
-    "Azelaic Acid": [ // Example functional category
-        "azelax-cream"
-    ],
-    "Vitamin D3": [
-        "bonefine-d3-60k"
-    ],
+    
     
 },
 
@@ -281,33 +275,23 @@ export const COMPOUNDS = {
   // In your COMPOUNDS object, update the Hab Pharma section:
 
 "Hab Pharma": {
-    "Muscle Relaxants": [
-      "soma-350",
-      "soma-500",
+    "Central Nervous System": [
+        "soma-350",
+        "soma-500",
+        "zop-7-5",
+        "zop-10",
+        "modafinil",
+        "armodafinil"
     ],
-    "Sleep Aids": [
-      "zop-7-5",
-      "zop-10",
+    "Reproductive System and Urinary System": [
+        "cobra-120",
+        "cobra-200",
+        "cobra-jelly"
     ],
-    "Wakefulness Promoters": [
-      "modafinil",
-      "armodafinil",
+    "Endocrine Problem": [
+        "testogel"
     ],
-    "ED Treatments": [
-      "cobra-120",
-      "cobra-200",
-      "cobra-jelly",
-    ],
-    "Hormone Therapy": [
-      "testogel",
-    ],
-    "Sildenafil": [  // For ED category compatibility
-      "cobra-120",
-      "cobra-200",
-      "cobra-jelly",
-    ],
-    "Testosterone": [  // For hormone therapy category
-      "testogel",
-    ]
-  },
+    
+}
+
 };
