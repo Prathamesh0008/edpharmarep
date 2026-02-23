@@ -40,38 +40,7 @@ const BreadcrumbSchema = {
   }]
 };
 
-const OrganizationSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.edpharma.co/#organization",
-      "name": "ED Pharma",
-      "url": "https://www.edpharma.co/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.edpharma.co/logoed.svg",
-        "width": 600,
-        "height": 60
-      },
-      "description": "ED Pharma is an online pharmaceutical retailer offering a wide range of health and wellness products to customers.",
-      "sameAs": [
-        "https://www.instagram.com/ed__pharma/",
-        "https://www.facebook.com/profile.php?id=61587470225108",
-        "https://x.com/EdpharmacyInfo"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://www.edpharma.co/#website",
-      "url": "https://www.edpharma.co/",
-      "name": "ED Pharma",
-      "publisher": {
-        "@id": "https://www.edpharma.co/#organization"
-      }
-    }
-  ]
-};
+
 
 const EnhancedOrganizationSchema = {
   "@context": "https://schema.org",
@@ -274,11 +243,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(BreadcrumbSchema) }}
           key="breadcrumb-schema"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(OrganizationSchema) }}
-          key="organization-schema"
-        />
+        
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(EnhancedOrganizationSchema) }}

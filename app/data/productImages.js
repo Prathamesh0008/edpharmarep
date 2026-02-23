@@ -994,6 +994,14 @@ export const productImages = {
     "/products/Soma500mg2.png",
     "/products/Soma500mg_3.jpeg",
     ]
+},
+
+"zop-7-5":{
+  main: "/products/zop7.5mg.jpg",//
+    gallery: [
+    "/products/zop7.5mg_2.jpeg",
+    "/products/zop7.5mg_3.webp",
+    ]
 }
 
 }

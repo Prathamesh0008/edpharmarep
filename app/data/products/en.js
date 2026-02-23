@@ -22408,10 +22408,10 @@ administration: [
     form: "Tablet",
     packSize: "1 x 10 Tablets",
     casId: "78-44-4",
-    image: "/products/hab/soma500_1.png",
+    image: "/products/Soma500mg.webp",
     additionalImages: [
-      "/products/hab/soma500_2.png",
-      "/products/hab/soma500_3.png",
+      "/products/Soma500mg2.png",
+    "/products/Soma500mg_3.jpeg",
     ],
     metaTitle: "Buy Soma 500 mg Online | Extra Strength Muscle Relaxant | Hab Pharma",
     metaDescription: "Buy Soma 500 mg (Carisoprodol) online. Extra strength muscle relaxant for severe musculoskeletal pain. Fast EU delivery from Hab Pharma.",

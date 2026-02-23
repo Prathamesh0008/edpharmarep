@@ -131,7 +131,7 @@ const BRAND_ORDER = [
   "ED Ajanta Pharma",
   "ED Centurion Remedies",
   "ED Sunrise Remedies",
-
+ 
 ];
 
 const makeId = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, "-");
