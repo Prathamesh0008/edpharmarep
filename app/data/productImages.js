@@ -1093,7 +1093,15 @@ export const productImages = {
     "/products/cobra_jelly2.png",
     "/products/cobra_jelly.png",
     ]
+},
+"testogel":{
+  main: "/products/Testosign-40.webp",//cobra_jelly
+    gallery: [
+     "/products/Testosign-40_2.jpg",
+        "/products/Testosign-40_3.png",
+    ]
 }
+
 
 
 

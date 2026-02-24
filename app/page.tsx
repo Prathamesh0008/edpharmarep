@@ -1,5 +1,4 @@
-
-
+// app/page.tsx
 "use client";
 
 import Navbar from "../app/components/Navbar";
@@ -14,13 +13,32 @@ import HomeProducts from "../app/components/HomeProducts";
 import { useState, useEffect } from "react";
 import ScrollProgressLine from "../app/components/ScrollProgressLine"; 
 import FeaturedProducts from "./components/FeaturedProducts"
-import { useLanguage } from "@/context/LanguageContext"; // ADD THIS IMPORT
+import { useLanguage } from "@/context/LanguageContext";
+
+// Define a type for translation objects
+type TranslationObject = {
+  [key: string]: string;
+};
+
+type TranslationValue = string | TranslationObject | undefined | null;
 
 export default function Home() {
   const [activeBrand, setActiveBrand] = useState("ED Ajanta Pharma");
-  const { t } = useLanguage(); // GET TRANSLATIONS FROM CONTEXT
+  const { t, language } = useLanguage();
 
-  // Get translations from context, fallback to English structure
+  // Helper function to safely get string from translation object with proper typing
+  const getTrans = (transObj: TranslationValue, fallback: string = ''): string => {
+    if (!transObj) return fallback;
+    if (typeof transObj === 'string') return transObj;
+    if (typeof transObj === 'object') {
+      // Try current language, then English, then any first value, then fallback
+      const obj = transObj as TranslationObject;
+      return obj[language] || obj.en || Object.values(obj)[0] || fallback;
+    }
+    return fallback;
+  };
+
+  // Get translations safely
   const homeTranslations = t?.homePage || {
     hero: {
       title: "Trusted Pharmaceutical Manufacturing & Global Distribution",
@@ -32,8 +50,16 @@ export default function Home() {
     }
   };
 
-  const hero = homeTranslations?.hero || {};
-  const featured = homeTranslations?.featured || {};
+  // Safely extract strings from translation objects
+  const hero = {
+    title: getTrans(homeTranslations?.hero?.title, "Trusted Pharmaceutical Manufacturing & Global Distribution"),
+    subtitle: getTrans(homeTranslations?.hero?.subtitle, "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets."),
+    ctaViewProducts: getTrans(homeTranslations?.hero?.ctaViewProducts, "View Products")
+  };
+  
+  const featured = {
+    title: getTrans(homeTranslations?.featured?.title, "Featured Products")
+  };
 
   return (
     <>
@@ -66,18 +92,18 @@ export default function Home() {
             <div className="backdrop-blur-xs bg-white/50 p-6 md:p-8 rounded-2xl border border-blue-100/30 shadow-sm -mt-15">
               <div className="relative">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2A73] leading-tight">
-                  {hero.title || "Trusted Pharmaceutical Manufacturing & Global Distribution"}
+                  {hero.title}
                 </h1>
 
                 <p className="mt-6 text-base md:text-lg text-slate-600 max-w-xl">
-                  {hero.subtitle || "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets."}
+                  {hero.subtitle}
                 </p>
 
                 <Link
                   href="/products"
                   className="inline-block mt-8 px-6 py-3 rounded-xl bg-[#0A2A73] text-white font-medium shadow hover:shadow-md hover:bg-blue-800 transition-all duration-300"
                 >
-                  {hero.ctaViewProducts || "View Products"}
+                  {hero.ctaViewProducts}
                 </Link>
               </div>
             </div>
@@ -108,7 +134,7 @@ export default function Home() {
 }
 
 function HeroProductImage() {
-  // ✅ remove empty / null / undefined images
+  // remove empty / null / undefined images
   const images = products
     .map((p) => p.image)
     .filter(Boolean);
@@ -125,7 +151,7 @@ function HeroProductImage() {
     return () => clearInterval(timer);
   }, [images.length]);
 
-  // ✅ safety guard
+  // safety guard
   if (images.length === 0) return null;
 
   return (

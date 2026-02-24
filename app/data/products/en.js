@@ -23275,10 +23275,10 @@ administration: [
     form: "Soft Gelatin Capsule",
     packSize: "10 x 10 Capsules",
     casId: "58-22-0",
-    image: "/products/hab/testosign_1.png",
+    image: "/products/Testosign-40.webp",//public\products\Testosign-40.webp
     additionalImages: [
-        "/products/hab/testosign_2.png",
-        "/products/hab/testosign_3.png",
+        "/products/Testosign-40_2.jpg",
+        "/products/Testosign-40_3.png",
     ],
     metaTitle: "Buy Testosign Soft Gel 40 mg Online | Testosterone Replacement | Hab Pharma",
     metaDescription: "Buy Testosign Soft Gel 40 mg (Testosterone Undecanoate) online. Oral testosterone replacement therapy for hypogonadism. From Hab Pharma.",

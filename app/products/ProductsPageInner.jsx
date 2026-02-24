@@ -765,8 +765,9 @@ export default function ProductsPage() {
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 ">
         {/* Brand Logos Grid */}
         {/* Brand Logos Grid */}
+{/* Brand Logos Grid */}
 <div className="mb-6 sm:mb-8 mt-7">
-  <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-4 sm:gap-6">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
     {BRAND_ORDER.map((brandKey, index) => {
       const b = BRAND_THEMES[brandKey];
       const isActive = selectedBrand === brandKey;
@@ -779,46 +780,48 @@ export default function ProductsPage() {
             setSearchInput("");
             setCategoryFilter("All");
           }}
-          className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-40 sm:h-48 transition-all duration-300 transform ${
+          className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-32 sm:h-36 md:h-40 transition-all duration-300 transform ${
             isActive
-              ? "ring-3 sm:ring-4 ring-offset-1 sm:ring-offset-2 shadow-2xl scale-105 z-10"
+              ? "ring-2 sm:ring-3 ring-offset-1 sm:ring-offset-2 shadow-2xl scale-105 z-10"
               : "hover:shadow-xl hover:scale-102"
           }`}
           style={{
-            border: `1px solid ${isActive ? b.primary : "#e5e7eb"}`,
+            border: `2px solid ${isActive ? b.primary : "#e5e7eb"}`,
             boxShadow: isActive
-              ? `0 20px 40px ${b.primary}40`
-              : "0 4px 20px rgba(0, 0, 0, 0.08)",
+              ? `0 10px 25px -5px ${b.primary}40`
+              : "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
             backgroundColor: 'white',
           }}
         >
           {isActive && (
-            <div className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10">
+            <div className="absolute top-1 right-1 sm:top-2 sm:right-2 z-10">
               <div
-                className="w-3 h-3 sm:w-4 sm:h-4 rounded-full animate-pulse"
+                className="w-2 h-2 sm:w-3 sm:h-3 rounded-full animate-pulse"
                 style={{
                   backgroundColor: b.primary,
+                  boxShadow: `0 0 10px ${b.primary}`,
                 }}
               ></div>
             </div>
           )}
 
-          <div className="flex items-center justify-center h-full w-full cursor-pointer">
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40">
+          <div className="flex items-center justify-center h-full w-full">
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
               <Image
                 src={b.logo}
                 alt={b.name}
                 fill
                 className="object-contain"
-                sizes="(max-width: 640px) 128px, (max-width: 768px) 160px, 160px"
+                sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
                 priority={index === 0}
               />
             </div>
           </div>
           
           {/* Brand name tooltip on hover */}
-          <div className="absolute bottom-2 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            <span className="text-xs font-medium px-2 py-1 rounded-full bg-white/90 shadow-sm" style={{ color: b.primary }}>
+          <div className="absolute -bottom-1 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+            <span className="text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full bg-white/95 shadow-sm whitespace-nowrap" 
+              style={{ color: b.primary, border: `1px solid ${b.primary}30` }}>
               {b.name}
             </span>
           </div>
@@ -826,7 +829,7 @@ export default function ProductsPage() {
       );
     })}
   </div>
-</div>  
+</div> 
 
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">

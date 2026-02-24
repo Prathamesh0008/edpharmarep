@@ -16,11 +16,31 @@ const brands = [
   },
   { key: "ED Sunrise Remedies", logo: "/logo/sunrise.png" },
   { key: "ED Centurion Remedies", logo: "/logo/cen.png" },
+  // Add new brands
+  {
+    key: "Healing Pharma",
+    logo: "/logo/HealingLogo.png",
+  },
+  {
+    key: "Hab Pharma",
+    logo: "/logo/HabLogo.png",
+  },
 ];
 
 // Helper function to check if product has pricing
 const hasProductPricing = (productSlug) => {
   return pricingData.hasOwnProperty(productSlug);
+};
+
+// Helper function to safely get string from translation object
+const getTranslationString = (translation, language) => {
+  if (!translation) return '';
+  if (typeof translation === 'string') return translation;
+  if (typeof translation === 'object') {
+    // If it's an object with language keys, return the current language or fallback to en
+    return translation[language] || translation.en || '';
+  }
+  return '';
 };
 
 /* ---------------- SMOOTH PRODUCT IMAGE GALLERY ---------------- */
@@ -56,10 +76,10 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
       // Reset transitioning state after animation completes - FASTER
       transitionTimeoutRef.current = setTimeout(() => {
         setIsTransitioning(false);
-      }, 400); // Faster: 400ms
+      }, 400);
     };
 
-    intervalRef.current = setInterval(rotateImage, 1000); // Faster: 2 seconds between images
+    intervalRef.current = setInterval(rotateImage, 1000);
 
     return () => {
       if (intervalRef.current) {
@@ -82,15 +102,24 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
     setIsTransitioning(true);
     setCurrentImageIndex(index);
     
-    // Restart auto-rotation after manual interaction - FASTER
+    // Restart auto-rotation after manual interaction
     setTimeout(() => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
       }
       intervalRef.current = setInterval(() => {
         setCurrentImageIndex(prev => (prev + 1) % images.length);
-      }, 2000); // Faster: 2 seconds
-    }, 800); // Faster: 800ms
+      }, 2000);
+    }, 800);
+  };
+
+  // Get product name safely
+  const getProductName = () => {
+    if (!product) return 'Product';
+    if (typeof product.name === 'object') {
+      return product.name.en || product.name.fr || 'Product';
+    }
+    return product.name || 'Product';
   };
 
   return (
@@ -111,7 +140,7 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
           height: 100%;
           opacity: 0;
           transform: scale(0.98);
-          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); // Faster: 0.4s
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           will-change: transform, opacity;
         }
         
@@ -128,12 +157,12 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
         }
         
         .navigation-dot {
-          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); // Faster: 0.2s
+          transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
           will-change: transform, background-color;
         }
         
         .image-indicator {
-          animation: gentlePulse 1s ease-in-out infinite; // Faster: 1s
+          animation: gentlePulse 1s ease-in-out infinite;
         }
         
         @keyframes gentlePulse {
@@ -141,7 +170,6 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
           50% { opacity: 1; }
         }
         
-        /* Prevent animation on reduced motion preference */
         @media (prefers-reduced-motion: reduce) {
           .image-slide,
           .navigation-dot,
@@ -162,9 +190,9 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
           >
             <Image
               src={imgSrc}
-              alt={`${product.name} - View ${index + 1}`}
+              alt={`${getProductName()} - View ${index + 1}`}
               fill
-              className="object-contain p-3 sm:p-4 md:p-5 lg:p-6 transition-transform duration-200 group-hover:scale-105" // Added duration-200
+              className="object-contain p-3 sm:p-4 md:p-5 lg:p-6 transition-transform duration-200 group-hover:scale-105"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
               priority={index === 0}
             />
@@ -200,7 +228,7 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
 
         {/* Auto-rotation Indicator - Show on hover */}
         {images.length > 1 && (
-          <div className="absolute top-1.5 right-1.5 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200"> {/* Added duration-200 */}
+          <div className="absolute top-1.5 right-1.5 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             <div 
               className="px-1.5 py-0.5 rounded-full text-[8px] font-medium backdrop-blur-sm bg-white/90 image-indicator"
               style={{ color: themeColor }}
@@ -235,8 +263,8 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
 
   return (
     <div className="w-full flex justify-center mt-6 sm:mt-8 md:mt-10">
-      <div className="rounded-2xl md:rounded-3xl bg-white/95 backdrop-blur-md shadow-xl ring-1 ring-slate-100/50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 w-full max-w-5xl mx-2 sm:mx-4">
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+      <div className="rounded-2xl md:rounded-3xl bg-white/95 backdrop-blur-md shadow-xl ring-1 ring-slate-100/50 px-4 py-4 sm:px-6 sm:py-6 md:px-8 md:py-8 w-full max-w-6xl mx-2 sm:mx-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 md:gap-8">
           {brands.map((b) => {
             const active = b.key === activeBrand;
 
@@ -287,23 +315,69 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
 
 /* ---------------- RESPONSIVE HOME PRODUCTS ---------------- */
 export default function HomeProducts({ activeBrand, setActiveBrand }) {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const BRAND = "#0A2A73";
   const [hoveredProductId, setHoveredProductId] = useState(null);
+
+  // Helper function to safely get translation string within component
+  const getTrans = (transObj, fallback = '') => {
+    if (!transObj) return fallback;
+    if (typeof transObj === 'string') return transObj;
+    if (typeof transObj === 'object') {
+      // Try current language, then English, then any first value, then fallback
+      return transObj[language] || transObj.en || Object.values(transObj)[0] || fallback;
+    }
+    return fallback;
+  };
 
   // Filter products by brand AND check if they have pricing
   const brandProducts = allProducts
     .filter((p) => p.brand === activeBrand)
     .filter((p) => hasProductPricing(p.slug)); // Only show products with pricing
 
-  // Pre-calculate text lengths for consistent layout
-  const showingAllText = t?.homeProducts?.header?.showingAll 
-    ? t.homeProducts.header.showingAll.replace('{count}', brandProducts.length)
-    : `Showing all ${brandProducts.length} products`;
+  // Get translations safely with proper fallbacks
+  const homeProductsTrans = t?.homeProducts || {
+    header: {
+      tag: "All Products",
+      showingAll: "Showing all {count} products",
+      noProductsInStock: "No products in stock for",
+      tryAnotherBrand: "Please try selecting another brand or check back later."
+    },
+    buttons: {
+      productsCount: "{count} Products",
+      viewBrandProducts: "View {brand} Products"
+    },
+    productCard: {
+      details: "Details",
+      enquire: "Enquire",
+      dosage: "Dosage:",
+      form: "Form:",
+      pack: "Pack:"
+    }
+  };
 
-  const productCountText = t?.homeProducts?.buttons?.productsCount 
-    ? t.homeProducts.buttons.productsCount.replace('{count}', brandProducts.length)
-    : `${brandProducts.length} Products`;
+  // Pre-calculate text lengths for consistent layout - ensure they're strings
+  const headerTag = getTrans(homeProductsTrans?.header?.tag, "All Products");
+  
+  const showingAllBase = getTrans(homeProductsTrans?.header?.showingAll, "Showing all {count} products");
+  const showingAllText = showingAllBase.replace('{count}', brandProducts.length.toString());
+  
+  const productCountBase = getTrans(homeProductsTrans?.buttons?.productsCount, "{count} Products");
+  const productCountText = productCountBase.replace('{count}', brandProducts.length.toString());
+
+  const noProductsText = getTrans(homeProductsTrans?.header?.noProductsInStock, "No products in stock for");
+  
+  const tryAnotherText = getTrans(homeProductsTrans?.header?.tryAnotherBrand, "Please try selecting another brand or check back later.");
+  
+  const viewBrandBase = getTrans(homeProductsTrans?.buttons?.viewBrandProducts, "View {brand} Products");
+  const viewBrandText = viewBrandBase.replace('{brand}', brands[0].key.replace("ED ", ""));
+
+  // Product card translations
+  const detailsText = getTrans(homeProductsTrans?.productCard?.details, "Details");
+  const enquireText = getTrans(homeProductsTrans?.productCard?.enquire, "Enquire");
+  const dosageLabel = getTrans(homeProductsTrans?.productCard?.dosage, "Dosage:");
+  const formLabel = getTrans(homeProductsTrans?.productCard?.form, "Form:");
+  const packLabel = getTrans(homeProductsTrans?.productCard?.pack, "Pack:");
 
   // Handle product hover for image rotation
   const handleProductMouseEnter = (productId) => {
@@ -316,7 +390,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
 
   return (
     <section className="relative py-10 sm:py-14 md:py-16">
-      <div className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <LogoStrip
           activeBrand={activeBrand}
           setActiveBrand={setActiveBrand}
@@ -331,7 +405,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
               <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2 min-h-[20px] sm:min-h-[24px]">
                 <div className="w-2 h-0.1 sm:w-7 sm:h-01 md:w-4 md:h-1 bg-gradient-to-r from-[#0A2A73] to-blue-500 rounded-full"></div>
                 <span className="text-xs sm:text-sm font-semibold text-[#0A2A73] uppercase tracking-wide inline-block min-w-[120px] sm:min-w-[140px] whitespace-nowrap">
-                  {t?.homeProducts?.header?.tag || "All Products"}
+                  {headerTag}
                 </span>
               </div>
               
@@ -360,20 +434,16 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
         {/* PRODUCT GRID - Fixed heights for consistent layout */}
         {brandProducts.length > 0 ? (
           <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
-            {brandProducts.map((p) => {
-              // Pre-calculate text for this product card
-              const detailsText = t?.homeProducts?.productCard?.details || "Details";
-              const enquireText = t?.homeProducts?.productCard?.enquire || "Enquire";
-              const dosageLabel = t?.homeProducts?.productCard?.dosage || "Dosage:";
-              const formLabel = t?.homeProducts?.productCard?.form || "Form:";
-              const packLabel = t?.homeProducts?.productCard?.pack || "Pack:";
-
+            {brandProducts.map((p, index) => {
+              // Create a truly unique key by combining brand, slug, and index
+              const uniqueKey = `${activeBrand}-${p.slug}-${index}`;
+              
               return (
                 <article
-                  key={p.slug}  
+                  key={uniqueKey}
                   className="group relative rounded-xl sm:rounded-2xl md:rounded-3xl bg-white border shadow-sm hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col"
                   style={{ borderColor: "rgba(10,42,115,0.15)" }}
-                  onMouseEnter={() => handleProductMouseEnter(p.slug)}
+                  onMouseEnter={() => handleProductMouseEnter(uniqueKey)}
                   onMouseLeave={handleProductMouseLeave}
                 >
                   {/* IMAGE - Fixed aspect ratio with animation */}
@@ -404,7 +474,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
 
                     {/* NAME - Fixed height with line clamp */}
                     <h3 className="text-xs sm:text-sm md:text-base font-bold text-slate-900 leading-tight line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[3.5rem] overflow-hidden">
-                      {p.name}
+                      {typeof p.name === 'object' ? p.name.en || p.name.fr || '' : p.name}
                     </h3>
 
                     {/* META INFO - Fixed height container */}
@@ -471,10 +541,10 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
               </svg>
             </div>
             <h3 className="text-base sm:text-lg md:text-xl font-semibold text-slate-900 mb-1 sm:mb-2 min-h-[24px] sm:min-h-[28px] md:min-h-[32px] flex items-center justify-center">
-              {t?.homeProducts?.header?.noProductsInStock || "No products in stock for"} {activeBrand}
+              {noProductsText} {activeBrand}
             </h3>
             <p className="text-xs sm:text-sm md:text-base text-slate-600 mb-3 sm:mb-4 min-h-[40px] sm:min-h-[48px] flex items-center justify-center">
-              {t?.homeProducts?.header?.tryAnotherBrand || "Please try selecting another brand or check back later."}
+              {tryAnotherText}
             </p>
             <div className="min-h-[36px] sm:min-h-[40px] md:min-h-[44px]">
               <button
@@ -483,10 +553,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                 style={{ backgroundColor: BRAND }}
               >
                 <span className="truncate whitespace-nowrap">
-                  {t?.homeProducts?.buttons?.viewBrandProducts 
-                    ? t.homeProducts.buttons.viewBrandProducts.replace('{brand}', brands[0].key.replace("ED ", ""))
-                    : `View ${brands[0].key.replace("ED ", "")} Products`
-                  }
+                  {viewBrandText}
                 </span>
               </button>
             </div>
