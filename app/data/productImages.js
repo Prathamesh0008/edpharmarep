@@ -1072,7 +1072,28 @@ export const productImages = {
     "/products/AcnetopFacewash_2.webp",
     "/products/AcnetopFacewash_3.webp",
     ]
- }
+ },
+"cobra-120":{
+  main: "/products/cobra-120.png",//public\products\cobra-200
+    gallery: [
+    "/products/cobra-120_2.png",
+    "/products/cobra-120_3.png",
+    ]
+},
+"cobra-200": {
+  main: "/products/cobra-200.webp",//cobra_jelly
+    gallery: [
+    "/products/cobra-200-2.webp",
+    "/products/cobra-200_3.jpg",
+    ]
+},
+"cobra-jelly":{
+  main: "/products/cobra_jelly.png",//cobra_jelly
+    gallery: [
+    "/products/cobra_jelly2.png",
+    "/products/cobra_jelly.png",
+    ]
+}
 
 
 

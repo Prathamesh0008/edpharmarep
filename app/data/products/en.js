@@ -16,6 +16,14 @@ const products = {
     "/products/kamagra50_3.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Excellent quality and fast EU delivery.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Buy Kamagra Gold 50mg Online | Best Price & Fast EU Delivery – ED Pharma",
   metaDescription:"Buy Kamagra Gold 50mg online at best price. Original Ajanta Pharma tablets, fast EU delivery, discreet packaging & trusted supplier – ED Pharma.",
 
@@ -22762,10 +22770,10 @@ administration: [
     form: "Tablet",
     packSize: "10 x 10 Tablets",
     casId: "139755-83-2",
-    image: "/products/hab/cobra-120_1.png",
+    image: "/products/cobra-120.png",
     additionalImages: [
-        "/products/hab/cobra-120_2.png",
-        "/products/hab/cobra-120_3.png",
+        "/products/cobra-120_2.png",
+    "/products/cobra-120_3.png",
     ],
     metaTitle: "Buy Cobra 120 mg Online | Sildenafil for ED | Hab Pharma",
     metaDescription: "Buy Cobra 120 mg (Sildenafil Citrate) tablets online. An intermediate-strength treatment for erectile dysfunction. High-quality from Hab Pharma.",
@@ -22832,10 +22840,10 @@ administration: [
     form: "Tablet",
     packSize: "10 x 10 Tablets",
     casId: "139755-83-2",
-    image: "/products/hab/cobra-200_1.png",
+    image: "/products/cobra-200.webp",
     additionalImages: [
-        "/products/hab/cobra-200_2.png",
-        "/products/hab/cobra-200_3.png",
+        "/products/cobra-200-2.webp",
+    "/products/cobra-200_3.jpg",
     ],
     metaTitle: "Buy Cobra 200 mg Online | Maximum Strength Sildenafil | Hab Pharma",
     metaDescription: "Buy Cobra 200 mg (Sildenafil Citrate) tablets online. Maximum strength formulation for severe erectile dysfunction. From Hab Pharma.",
@@ -22904,10 +22912,10 @@ administration: [
     form: "Oral Jelly",
     packSize: "10 Sachets (per box)",
     casId: "139755-83-2",
-    image: "/products/hab/cobra-jelly_1.png",
+    image: "/products/cobra_jelly.png",
     additionalImages: [
-        "/products/hab/cobra-jelly_2.png",
-        "/products/hab/cobra-jelly_3.png",
+        "/products/cobra_jelly2.png",
+    "/products/cobra_jelly.png",
     ],
     metaTitle: "Buy Cobra Oral Jelly 100 mg Online | Fast-Acting Sildenafil | Hab Pharma",
     metaDescription: "Buy Cobra Oral Jelly 100 mg online. Sildenafil Citrate in a fast-absorbing, convenient jelly format for rapid ED treatment. Various flavors. From Hab Pharma.",
