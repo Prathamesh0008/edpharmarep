@@ -21,7 +21,7 @@ const products = {
   ratingCount: "3",
   reviewCount: "3",
   author: "Michael",
-  reviewBody: "Excellent quality and fast EU delivery.",
+  reviewBody: "Kamagra Gold 50 mg delivered excellent and reliable results. The Sildenafil 50mg tablets were genuine, professionally packaged, and delivered quickly across Europe. ED Pharma offers competitive wholesale pricing, secure checkout, and dependable service. Highly recommended for pharmacies and buyers looking to buy Kamagra online from a trusted European supplier",
   datePublished: "2025-11-08"
 },
   metaTitle:"Buy Kamagra Gold 50mg Online | Best Price & Fast EU Delivery – ED Pharma",
@@ -120,6 +120,14 @@ const products = {
     "/products/kamagra100_3.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Kamagra Gold 100 mg delivered excellent and reliable results. The Sildenafil 100mg tablets were genuine, professionally packaged, and delivered quickly across Europe. ED Pharma offers competitive wholesale pricing, secure checkout, and dependable service. Highly recommended for pharmacies and buyers looking to buy Kamagra online from a trusted European supplier.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Kamagra Gold 100mg Tablets Europe | Buy Online – ED Pharma",
   metaDescription:"Buy Kamagra Gold 100mg online with fast, discreet delivery to the UK, Germany, France, Italy & Spain. Original Ajanta Pharma tablets at best price from ED Pharma.",
 
@@ -224,6 +232,7 @@ const products = {
     "/products/kamagra_oral_jelly_3.png",
   
   ],
+  
   metaTitle:"Kamagra 100mg Oral Jelly Wholesale Supplier Europe | ED Pharma ",
   metaDescription:"ED Pharma is a trusted Kamagra 100mg oral jelly wholesale supplier in Europe, offering reliable bulk supply and distribution across the UK, Germany, France, Italy and Spain.",
 
@@ -335,6 +344,14 @@ const products = {
     "/products/Super-Kamagra-Oral-Jelly 2.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Super Kamagra Oral Jelly werkte snel en effectief. De combinatie van Sildenafil 100mg en Dapoxetine 60mg is ideaal voor klanten in Nederland die kamagra online willen kopen bij een betrouwbare leverancier. De verpakking was discreet en de levering binnen Nederland en Europa was snel. ED Pharma is een professionele en vertrouwde aanbieder voor wie kamagra kopen of sildenafil kopen Nederland overweegt.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Super Kamagra Oral Jelly Wholesale Supplier Europe | ED Pharma ",
   metaDescription:"ED Pharma offers Super Kamagra oral jelly bulk supply for European distributors, with efficient wholesale delivery across the UK, Germany, France, Italy, Spain and nearby regions. ",
 
@@ -446,6 +463,14 @@ const products = {
     "/products/kamagra-polo1.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Buy Kamagra 100mg Polo chewable tablets online in the Netherlands from ED Pharma. Original Ajanta Pharma Sildenafil Citrate 100mg chewable tablets. Fast delivery in Nederland and across Europe, discreet packaging and trusted supplier for customers searching kamagra kopen, kamagra online Nederland and sildenafil kopen Nederland.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Kamagra 100mg Polo Fruit Jelly Bulk Supply Europe | ED Pharma ",
   metaDescription:"ED Pharma provides Kamagra 100mg Polo Fruit oral jelly as part of its premium bulk supply range, serving distributors and resellers across the UK, Germany, France, Italy and Spain. ",
 
@@ -557,6 +582,14 @@ const products = {
     "/products/kamagra100mg-chewable-tablets-pineapple.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Kamagra 100mg chewable tablets waren effectief en eenvoudig in gebruik. Voor klanten in Nederland die kamagra kopen of kamagra online Nederland zoeken, is ED Pharma een betrouwbare aanbieder. De levering was snel binnen Nederland, discreet verpakt en professioneel afgehandeld. Een goede keuze voor wie sildenafil kopen Nederland overweegt bij een vertrouwde Europese leverancier",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Kamagra Strawberry Chewable 100mg Wholesale Market Europe – ED Pharma ",
   metaDescription:" ED Pharma serves the European wholesale market with Kamagra 100mg strawberry chewable tablets, ensuring reliable distributor access throughout the UK, Germany, France, Italy & Spain.",
 
@@ -706,6 +739,14 @@ const products = {
     "/products/kamagra-chewable-Orange.png",
   
   ],
+   review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Kamagra 100mg Chewable Orange tablets waren effectief en prettig van smaak. Voor klanten in Nederland die kamagra kopen of kamagra online Nederland zoeken, is ED Pharma een betrouwbare leverancier. De bestelling werd discreet verpakt en snel geleverd binnen Nederland. Een uitstekende keuze voor wie sildenafil kopen Nederland overweegt bij een vertrouwde Europese aanbieder.",
+  datePublished: "2025-11-08"
+},
   metaTitle:" Kamagra 100mg Orange Chewable Wholesale Europe | ED Pharma",
   metaDescription:"Serving the European wholesale market, ED Pharma offers Kamagra 100mg orange chewable tablets with reliable distributor access throughout the UK, Germany, France, Italy & Spain. ",
 
@@ -895,6 +936,16 @@ const products = {
     "/products/kamagra-effervescent-100-mg.webp",
   
   ],
+
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Kamagra 100mg Effervescent bruistabletten werkten snel en zijn gemakkelijk in gebruik. Voor klanten in Nederland die kamagra kopen of kamagra online Nederland zoeken, is ED Pharma een betrouwbare aanbieder. De levering was discreet en snel binnen Nederland en Europa. Een uitstekende keuze voor wie sildenafil kopen Nederland overweegt bij een professionele Europese leverancier.",
+  datePublished: "2025-11-08"
+},
+  
   metaTitle:"Kamagra Effervescent 100mg European Market Supply | ED Pharma ",
   metaDescription:"ED Pharma supports B2B buyers seeking Kamagra 100mg effervescent for the European market, with structured supply solutions covering the UK, Germany, France, Italy and Spain. ",
 
@@ -1279,6 +1330,14 @@ const products = {
     "/products/kamagra100_3.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Kamagra Expo 100mg tablets werkten effectief en waren origineel van Ajanta Pharma. Voor klanten in Nederland die kamagra kopen of kamagra online Nederland zoeken, is ED Pharma een betrouwbare leverancier. De levering was snel, discreet verpakt en professioneel afgehandeld binnen Nederland en Europa. Een goede keuze voor wie sildenafil kopen Nederland overweegt.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Kamagra Expo 100mg for EU Trade Buyers | ED Pharma",
   metaDescription:"Kamagra Expo 100mg is available for European market distribution through ED Pharma, supporting B2B buyers expanding portfolios in the UK, Germany, France, Italy & Spain. ",
   
@@ -1468,6 +1527,15 @@ const products = {
     "/products/apcalis-sx-oral-jelly-3.png",
     "/products/apcalis-sx-oral-jelly.png",
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Apcalis-SX 20mg Oral Jelly met Tadalafil werkte effectief en werd discreet geleverd binnen Nederland. Voor klanten die tadalafil kopen of apcalis kopen Nederland zoeken, is ED Pharma een betrouwbare leverancier. De bestelling werd snel verwerkt en professioneel geleverd binnen Nederland en Europa. Een uitstekende keuze voor wie erectiemiddel kopen Nederland veilig online wil bestellen",
+  datePublished: "2025-11-08"
+},
+ 
   metaTitle:"Apcalis SX 20mg Oral Jelly Supplier | European B2B Tadalafil ",
   metaDescription:"Leading B2B wholesaler of Apcalis SX 20mg Tadalafil Oral Jelly across Europe. Weekend medication lasting 36+ hours in fruit-flavored jelly form. Bulk supply of Lovegra female viagra 100mg, Valif 20mg price, Kamagra expo 100mg. Contact for wholesale inquiries. ",
 
@@ -1657,6 +1725,14 @@ const products = {
     "/products/Tadalis-SX-20mg 3.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Tadalis-SX 20mg werkte effectief en werd snel geleverd binnen Nederland. Voor klanten die tadalafil kopen Nederland of tadalis kopen zoeken, biedt ED Pharma een betrouwbare oplossing met professionele service en discrete verzending. Een veilige keuze voor wie erectiemiddel kopen Nederland online overweegt.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Tadalis SX 20mg ED Pharma Wholesale Europe | Buy in Bulk ",
   metaDescription:"European wholesale distributor of Tadalis SX 20mg tablets. B2B bulk orders for generic Cialis Tadalafil 20mg - 36+ hour ED treatment. Fast shipping across EU. Competitive prices on Lovegra female viagra 100mg, Valif oral jelly 20mg, Kamagra effervescent tablets. ",
 
@@ -1846,6 +1922,14 @@ const products = {
     "/products/lovegra-oral-jelly-3.png",
   
   ],
+   review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Lovegra 100mg Oral Jelly werkte effectief en werd discreet geleverd binnen Nederland. Voor vrouwen die lovegra kopen of vrouwelijke viagra kopen Nederland zoeken, is ED Pharma een betrouwbare leverancier. De verpakking was professioneel en de levering binnen Nederland en Europa was snel. Een goede keuze voor wie sildenafil voor vrouwen Nederland veilig online wil bestellen",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Lovegra 100mg Oral Jelly European Market Supply | ED Pharma ",
   metaDescription:"ED Pharma enables access to Lovegra 100mg oral jelly for European trade buyers, offering structured supply solutions for distributors operating in the UK, Germany, France, Italy and Spain. ",
 
@@ -2223,6 +2307,14 @@ const products = {
     "/products/valif 20 1.png",
   
   ],
+   review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Valif 20mg Vardenafil tabletten werkten effectief en werden discreet geleverd binnen Nederland. Voor klanten die vardenafil kopen of valif kopen Nederland zoeken, is ED Pharma een betrouwbare leverancier. De bestelling werd professioneel verwerkt en snel geleverd binnen Nederland en Europa. Een uitstekende keuze voor wie erectiemiddel kopen Nederland veilig online wil bestellen",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Valif 20mg Tablet Wholesale Supplier in Europe | Buy Valif 20 in Bulk ",
   metaDescription:" Buy Valif 20mg tablets wholesale from a trusted Europe B2B supplier. Vardenafil 20mg tablets for distributors with bulk pricing, export quality packaging and fast EU delivery.",
 
@@ -2412,6 +2504,14 @@ const products = {
     "/products/valif 20 1.png",
   
   ],
+   review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Valif 20mg Vardenafil tabletten werkten effectief en werden discreet geleverd binnen Nederland. Voor klanten die vardenafil kopen of valif kopen Nederland zoeken, is ED Pharma een betrouwbare leverancier. De bestelling werd professioneel verwerkt en snel geleverd binnen Nederland en Europa. Een uitstekende keuze voor wie erectiemiddel kopen Nederland veilig online wil bestellen",
+  datePublished: "2025-11-08"
+},
   metaTitle:" Valif Oral Jelly 20mg ED Pharma Wholesale Europe | Buy in Bulk",
   metaDescription:"Wholesale Valif 20mg oral jelly by ED Pharma in Europe. Trusted vardenafil jelly supplier for distributors with bulk pricing and reliable EU delivery. ",
   
@@ -2602,6 +2702,14 @@ const products = {
     "/products/cenforce-25-side.png",
 
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce 25mg werd snel en discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce kopen zoeken, biedt ED Pharma een betrouwbare en professionele service. Een goed viagra alternatief Nederland met scherpe prijzen en veilige verzending",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Cenforce 25mg Sildenafil Tablets | European Trade Supply – ED Pharma ",
   metaDescription:"Cenforce 25mg sildenafil tablets available for European trade sourcing. ED Pharma supports distributors across the UK, Germany, France, Italy and Spain with reliable market supply. ",
   
@@ -2792,6 +2900,14 @@ const products = {
     "/products/cenforce-50-mg-1-side 1.png",
 
   ],//public\products\cenforce 50.png
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce 50mg werd snel en professioneel geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce 50 kopen zoeken, is ED Pharma een betrouwbare leverancier. Goede prijs, veilige betaling en discrete verzending binnen Nederland en Europa.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Cenforce 50mg Wholesale Supplier Europe | ED Pharma Distributor ",
   metaDescription:"Buy Cenforce 50mg ED Pharma tablets wholesale in Europe. Trusted B2B sildenafil 50mg supplier with pharma-grade quality, bulk pricing, reliable logistics and speedy EU delivery. ",
 
@@ -2981,6 +3097,14 @@ const products = {
     "/products/cenforce_100mg.png",
     "/products/cenforce-100mg-1.png",
   ],
+   review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce 100mg werd snel en discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce 100 kopen zoeken, biedt ED Pharma een betrouwbare leverancier met scherpe prijzen en professionele service. Een sterk viagra alternatief Nederland met veilige betaling en snelle verzending",
+  datePublished: "2025-11-08"
+},
   metaTitle:" Cenforce 100mg ED Pharma Wholesale Europe | Sildenafil 100mg B2B Supplier",
   metaDescription:"Buy Cenforce 100mg by ED Pharma wholesale in Europe. High-quality sildenafil 100mg tablets for B2B distributors with bulk pricing, export-grade packaging, steady supply and fast EU delivery. ",
 
@@ -3170,6 +3294,14 @@ const products = {
     "/products/cenforce_120_mg_1.webp",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce 120mg werd snel en discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce 120 kopen zoeken, biedt ED Pharma een betrouwbare leverancier met scherpe prijzen en veilige verzending. Een krachtig viagra alternatief Nederland met professionele service.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Cenforce 120mg ED Pharma Wholesale Europe | Sildenafil 120mg Supplier ",
   metaDescription:"Buy Cenforce 120mg by ED Pharma wholesale in Europe. High-quality sildenafil 120mg tablets for B2B distributors and wholesalers with bulk pricing, export packaging, reliable stock & fast EU delivery. ",
   overview: [
@@ -3358,6 +3490,14 @@ const products = {
     "/products/cenforce 130_2.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce 130mg werd snel en discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce 130 kopen zoeken, biedt ED Pharma een betrouwbare leverancier met scherpe prijzen en veilige verzending. Een sterk viagra alternatief Nederland met professionele service.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Buy Cenforce 130mg ED Pharma Wholesale Europe | Sildenafil 130mg Tablets ",
   metaDescription:"Wholesale supplier of Cenforce 130mg tablets by ED Pharma in Europe. Buy sildenafil 130mg in bulk with competitive distributor pricing, trusted supply chain and fast EU shipping. ",
   overview: [
@@ -3546,6 +3686,14 @@ const products = {
     "/products/cenforce 150_1.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce 150mg werd snel en discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce 150 kopen zoeken, biedt ED Pharma een betrouwbare leverancier met scherpe prijzen en veilige verzending. Een sterk viagra alternatief Nederland met professionele service.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Cenforce 150mg ED Pharma Wholesale Europe | Buy in Bulk",
   metaDescription:"Buy Cenforce 150mg tablets by ED Pharma wholesale in Europe. Premium sildenafil tablets for B2B buyers and distributors with competitive pricing, reliable supply and fast EU logistics. ",
 
@@ -3736,6 +3884,14 @@ const products = {
     "/products/Cenforce 200_1.png",
   
   ],
+   review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce 200mg werd snel en discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce 200 kopen zoeken, biedt ED Pharma een betrouwbare leverancier met scherpe prijzen en veilige verzending. Een sterk viagra alternatief Nederland met professionele service",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Cenforce 200mg ED Pharma Importer Europe | Wholesale Sildenafil ",
   metaDescription:"Trusted importer and wholesaler of Cenforce 200mg by ED Pharma in Europe. Buy sildenafil 200mg tablets in bulk with competitive pricing and dependable supply chain support. ",
 
@@ -4112,6 +4268,14 @@ const products = {
     "/products/cenforce-d_2.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce-D sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce-D kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Buy Cenforce D 100/60 ED Pharma Wholesale Europe | Sildenafil + Dapoxetine ",
   metaDescription:"Leading exporter of Cenforce D 100/60 by ED Pharma in Europe. B2B supply of dual action sildenafil and dapoxetine tablets for wholesalers and pharma distributors with fast delivery. ",
   overview: [
@@ -4489,6 +4653,14 @@ const products = {
     "/products/cenforce-professional-100-mg-1-front.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Cenforce Professional sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of cenforce professional kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Buy Cenforce Professional ED Pharma Wholesale Europe | ED Tablets ",
   metaDescription:"Wholesale supplier of Cenforce Professional by ED Pharma in Europe. Buy premium ED tablets in bulk with competitive distributor rates, pharma‑grade quality and dependable EU shipping.",
 
@@ -4862,6 +5034,14 @@ const products = {
     "/products/vidalista 2.5 3.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vidalista 2.5 mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vidalista 2.5 mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Vidalista 2.5mg ED Pharma Wholesale Europe | Tadalafil 2.5mg Supplier ",
   metaDescription:"Buy Vidalista 2.5mg by ED Pharma wholesale in Europe. Premium tadalafil 2.5mg tablets for B2B distributors and wholesalers with competitive bulk pricing, reliable stock, export packaging & fast EU delivery. ",
   overview: [
@@ -5050,6 +5230,15 @@ const products = {
     "/products/tadalafil-tablet-5-mg.png",//public\products\tadalafil-tablet-5-mg.png
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vidalista 5 mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vidalista 5 mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
+  
   metaTitle:"Buy Vidalista 5 mg | Daily Tadalafil Tablets for ED ",
   metaDescription:"Vidalista 5 mg offers daily Tadalafil support for erectile dysfunction. Low dose, long-lasting benefits, and consistent performance for everyday confidence. ",
   overview: [
@@ -5427,6 +5616,14 @@ const products = {
     "/products/Vidalista_3.webp",
   
   ],
+    review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vidalista 20 mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vidalista 20 mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Vidalista 20mg ED Pharma Wholesale Europe | Bulk Tadalafil Deals ",
   metaDescription:"Buy Vidalista 20mg in bulk from ED Pharma Europe’s choice for premium tadalafil 20mg tablets. Competitive pricing, reliable stock, export-ready packaging and fast EU delivery for wholesalers. ",
 
@@ -5804,6 +6001,14 @@ const products = {
     "/products/vidalista-60mg-side_3.webp",
   
   ],
+    review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vidalista 60 mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vidalista 60 mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Vidalista 60mg ED Pharma Wholesale Europe | High-Strength Tadalafil",
   metaDescription:"Europe’s trusted B2B supplier of Vidalista 60mg by ED Pharma. High-demand tadalafil 60mg tablets with competitive pricing, reliable inventory, export packaging & fast shipping for wholesalers. ",
   overview: [
@@ -6181,6 +6386,14 @@ const products = {
     "/products/vidalista-black-80mg_3.png",
   
   ],
+    review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vidalista Black 80 sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vidalista Black 80 kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Vidalista Black 80mg ED Pharma Wholesale Supplier Europe | B2B Tablets ",
   metaDescription:"Trusted importer and wholesaler of Vidalista Black 80mg by ED Pharma in Europe. Bulk tadalafil tablets with competitive pricing, dependable supply chain and fast EU logistics. ",
 
@@ -6929,6 +7142,14 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/vilitra_10_3.webp",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vilitra 10 mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vilitra 10 mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
 
   metaTitle:"Vilitra 10mg ED Pharma Wholesale Europe | Vardenafil 10mg Supplier ",
   metaDescription:"Buy Vilitra 10mg by ED Pharma wholesale in Europe. Premium vardenafil tablets for B2B distributors and wholesalers with competitive bulk pricing, pharma‑grade quality, reliable stock & fast EU delivery.",
@@ -7119,6 +7340,14 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/vilitra 20_3.jpeg",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vilitra 20 mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vilitra 20 mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Buy Vilitra 20mg ED Pharma Wholesale Europe | Bulk Vardenafil 20mg ",
   metaDescription:"Buy Vilitra 20mg tablets by ED Pharma wholesale in Europe. Premium vardenafil 20mg tablets for B2B buyers, distributors and importers with competitive bulk pricing and fast EU shipping. ",
 
@@ -7308,6 +7537,14 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/Vilitra 40_2.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Vilitra 40 mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Vilitra 40 mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Buy Vilitra 40mg ED Pharma Wholesale Europe | Bulk Vardenafil Tablets ",
   metaDescription:"Buy Vilitra 40mg tablets by ED Pharma wholesale in Europe. Premium vardenafil 40mg tablets for B2B buyers, distributors and importers with attractive bulk deals and fast EU shipping. ",
 
@@ -7677,6 +7914,14 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/super_vilitra_3.webp",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Super Vilitra sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Super Vilitra kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Super Vilitra ED Pharma Wholesale Europe | Buy in Bulk  ",
   metaDescription:"Buy Super Vilitra tablets by ED Pharma wholesale in Europe. Premium vardenafil formula for B2B buyers, distributors and importers with competitive pricing and fast EU shipping. ",
 
@@ -8057,6 +8302,14 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/avanafil-avana-50mg-tablet_3.webp",
   
   ],//public\products\Avana 200_1.png
+   review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "avana-50mg sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of avana-50mg kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Avana 50mg ED Pharma Wholesale Europe | Buy in Bulk ",
   metaDescription:"Buy Avana 50mg tablets by ED Pharma wholesale in Europe. Premium avanafil tablets for B2B buyers, distributors and importers with competitive bulk pricing and dependable EU logistics. ",
 
@@ -10390,6 +10643,14 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/Super-P-Force-Oral-Jelly15_2.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Super P-Force Oral Jelly sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Super P-Force Oral Jelly kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Buy Super P‑Force Oral Jelly ED Pharma Wholesale Europe",
   metaDescription:"Buy Super P‑Force Oral Jelly by ED Pharma wholesale in Europe. Premium fast‑acting ED jelly for distributors and wholesalers with attractive bulk pricing and reliable EU delivery. ",
 
@@ -10589,6 +10850,16 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
     "/products/Super-P-Force6-sunris_3.png",
   
   ],
+
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Super P-Force  sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Super P-Force kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
+  
   metaTitle:"Buy Super P‑Force ED Pharma Wholesale Europe ",
   metaDescription:"Stock Super P‑Force by ED Pharma for your business. Fast-acting ED tablets your customers will love, bulk deals for distributors, and reliable EU delivery — maximize satisfaction and profits. ",
 
@@ -14159,6 +14430,14 @@ administration: [
     "/products/tadarise-60-mg-back_3.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Tadarise-60 sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Tadarise-60 kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Tadarise 60 ED Pharma Wholesale Supplier Europe ",
   metaDescription:"Buy Tadarise 60 tablets by ED Pharma wholesale in Europe. Premium tadalafil 60mg formula for distributors, wholesalers and importers with competitive bulk pricing and reliable EU delivery.",
    
@@ -16499,6 +16778,14 @@ administration: [
     "/products/Malegra-100.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Malegra 100 sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Malegra 100 kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
 
   overview: [
     "Malegra 100 contains Sildenafil Citrate 100mg, a widely recognized and effective treatment option for erectile dysfunction in adult men.",
@@ -16892,6 +17179,14 @@ administration: [
     "/products/malegra-200_2.png",
   
   ],
+  review: {
+  ratingValue: "5",
+  ratingCount: "3",
+  reviewCount: "3",
+  author: "Michael",
+  reviewBody: "Malegra 200 sublingual tabletten werken snel en werden discreet geleverd binnen Nederland. Voor klanten die sildenafil kopen Nederland of Malegra 200 kopen zoeken, is ED Pharma een betrouwbare leverancier met veilige betaling en snelle verzending.",
+  datePublished: "2025-11-08"
+},
   metaTitle:"Malegra 200 ED Pharma Exporter Europe | Bulk ED Tablet Supply ",
   metaDescription:"Get Malegra 200 by ED Pharma at wholesale price in Europe. Ultra‑potent sildenafil 200mg tablets with high‑demand formula, bulk deals, reliable stock and fast EU delivery for B2B partners.",
    

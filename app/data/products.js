@@ -21916,5 +21916,1159 @@ administration: [
       "Keep out of reach of children and pets."
     ]
   },
+    {
+    id: "hab-soma-350",
+    name: {
+        en: "Soma 350 mg",
+    },
+    category: "Central Nervous System", // As per website categorization
+    brand: "Hab Pharma",
+    dosage: "350 mg",
+    price: "450", // Example price, adjust as needed
+    composition: "Carisoprodol 350mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets", // Standard bulk pack
+    casId: "78-44-4",
+    image: "/products/Soma350mg_2.png",
+    additionalImages: [
+         "/products/Soma350mg_3.jpg",
+    "/products/Soma350mg_3.jpg",
+    ],
+    metaTitle: "Buy Soma 350 mg Online | Carisoprodol Muscle Relaxant | Hab Pharma",
+    metaDescription: "Buy Soma 350 mg (Carisoprodol) online. A muscle relaxant for the relief of acute musculoskeletal pain. High-quality from Hab Pharma.",
+    description: "Soma 350 mg contains Carisoprodol, a medication used for the short-term relief of discomfort associated with acute, painful musculoskeletal conditions.",
+    slug: "soma-350",
+    overview: [
+        "Soma 350 mg is a muscle relaxant that contains Carisoprodol, used to relieve pain and discomfort from muscle injuries and spasms.",
+        "It is typically prescribed as part of a comprehensive treatment plan that includes rest and physical therapy.",
+        "This medication works by blocking pain signals between the nerves and the brain.",
+        "The 350 mg strength is the standard dose for adult patients.",
+        "Soma is intended for short-term use, usually no longer than two to three weeks.",
+        "It helps improve mobility and reduce stiffness associated with acute muscle conditions.",
+        "Relief from pain and discomfort often begins within 30 minutes of taking the medication.",
+        "The effects of a single dose typically last for 4 to 6 hours.",
+        "This product should be used only when prescribed by a healthcare professional."
+    ],
+    sideEffects: [
+        "Drowsiness and dizziness are the most common side effects.",
+        "Some individuals may experience headache or blurred vision.",
+        "Nausea, vomiting, or stomach upset can occur.",
+        "Agitation, irritability, or confusion have been reported, especially in elderly patients.",
+        "Tremors or uncontrolled muscle movements may occur rarely.",
+        "Fast heartbeat or flushing of the face may be experienced by some users.",
+        "Allergic reactions such as rash or itching are possible but uncommon."
+    ],
+    administration: [
+        "Take Soma exactly as prescribed by your healthcare provider.",
+        "The usual adult dose is one 350 mg tablet three times daily and at bedtime.",
+        "Swallow the tablet whole with a full glass of water.",
+        "It can be taken with or without food, but taking it with food may reduce stomach upset.",
+        "Do not crush, chew, or break the tablet.",
+        "Do not take more frequently or for longer than prescribed.",
+        "Avoid alcohol while taking this medication as it can increase drowsiness."
+    ],
+    warnings: [
+        "Do not use if you are allergic to Carisoprodol or meprobamate.",
+        "This medication can be habit-forming; use only as directed and do not share it.",
+        "Avoid driving, operating machinery, or engaging in hazardous activities until you know how this medication affects you.",
+        "Combining with alcohol or other CNS depressants (like benzodiazepines or opioids) can lead to severe drowsiness or respiratory depression.",
+        "Use with caution if you have a history of drug dependence, liver or kidney disease, or seizure disorders.",
+        "Elderly patients may be more sensitive to the effects and at higher risk for falls.",
+        "Not recommended during pregnancy or breastfeeding. Consult your doctor."
+    ],
+    how_it_works: [
+        "Carisoprodol, the active ingredient in Soma, is a centrally acting skeletal muscle relaxant.",
+        "Its exact mechanism is not fully understood, but it is believed to work by causing sedation and altering pain perception in the central nervous system.",
+        "It does not directly relax skeletal muscles but acts as a depressant on the CNS.",
+        "Carisoprodol is metabolized in the liver to meprobamate, an active metabolite that also contributes to its effects.",
+        "It is thought to affect communication between nerves in the spinal cord and reticular formation of the brain, leading to muscle relaxation and pain relief."
+    ],
+    tips: [
+        "Store at room temperature away from moisture and heat.",
+        "Keep the medication in its original blister pack until ready to use.",
+        "If you miss a dose, take it as soon as you remember. If it is near the time for your next dose, skip the missed dose and resume your regular schedule. Do not double the dose.",
+        "Do not stop taking this medication abruptly, especially after prolonged use, as withdrawal symptoms like anxiety, insomnia, and muscle pain may occur.",
+        "Inform all your healthcare providers that you are taking this medication."
+    ]
+},
+
+// Soma 500
+ {
+    id: "hab-soma-500",
+    name: {
+        en: "Soma 500 mg",
+    },
+    category: "Central Nervous System",
+    brand: "Hab Pharma",
+    dosage: "500 mg",
+    price: "550",
+    composition: "Carisoprodol 500mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets",
+    casId: "78-44-4",
+    image: "/products/Soma500mg.webp",
+    additionalImages: [
+        "/products/Soma500mg2.png",
+    "/products/Soma500mg_3.jpeg",
+    ],
+    metaTitle: "Buy Soma 500 mg Online | Extra Strength Carisoprodol | Hab Pharma",
+    metaDescription: "Buy Soma 500 mg (Carisoprodol) online. Extra strength muscle relaxant for more severe acute musculoskeletal pain. Trusted quality from Hab Pharma.",
+    description: "Soma 500 mg is a higher-strength formulation of Carisoprodol, a muscle relaxant used for the short-term relief of acute musculoskeletal pain and discomfort.",
+    slug: "soma-500",
+    overview: [
+        "Soma 500 mg provides a higher dose of Carisoprodol for patients requiring enhanced muscle relaxation and pain relief.",
+        "This extra strength formulation may be prescribed when the standard 350 mg dose is insufficient for managing symptoms.",
+        "It is intended for short-term use, typically up to two to three weeks, as part of a broader treatment plan.",
+        "The 500 mg strength offers a more potent effect, suitable for more severe acute muscle conditions.",
+        "As with the standard dose, it works by affecting pain signal transmission in the central nervous system.",
+        "This higher strength requires careful medical supervision due to an increased risk of side effects and dependence.",
+        "It may be more suitable for patients who have built a tolerance to lower doses under a doctor's guidance."
+    ],
+    sideEffects: [
+        "Increased drowsiness and sedation are more likely with this higher strength.",
+        "Dizziness and risk of falls, especially in elderly patients, may be more pronounced.",
+        "Headache, blurred vision, and coordination problems can occur.",
+        "Gastrointestinal issues like nausea or vomiting may be experienced.",
+        "Higher potential for cognitive impairment and confusion.",
+        "Increased risk of dependence and withdrawal symptoms with extended use.",
+        "Paradoxical reactions such as agitation or restlessness are possible."
+    ],
+    administration: [
+        "Take exactly as prescribed by your doctor. Do not increase the dose on your own.",
+        "The typical dose is one 500 mg tablet, usually taken three times daily and at bedtime, but this must be confirmed by your physician.",
+        "Swallow the tablet whole with water.",
+        "Can be taken with or without food.",
+        "Do not crush or chew the tablet.",
+        "Strictly avoid alcohol while taking this medication."
+    ],
+    warnings: [
+        "Contraindicated in patients with a history of allergy to Carisoprodol or related compounds.",
+        "Higher risk of abuse and dependence; use only under strict medical supervision.",
+        "Severe drowsiness can significantly impair your ability to drive or perform hazardous tasks.",
+        "Combining with alcohol or other CNS depressants can be dangerous and potentially fatal.",
+        "Use extreme caution in patients with liver or kidney impairment.",
+        "Not recommended for elderly patients due to increased fall risk and sensitivity.",
+        "Contraindicated in patients with acute intermittent porphyria."
+    ],
+    how_it_works: [
+        "Soma 500 mg delivers a higher concentration of Carisoprodol, leading to more pronounced CNS depression.",
+        "The elevated dose results in greater occupancy of its target sites within the central nervous system.",
+        "This leads to a stronger sedative effect and more potent alteration of pain perception.",
+        "The metabolism to meprobamate yields higher levels of this active metabolite, contributing to the enhanced therapeutic and sedative effects.",
+        "The mechanism remains the same but with amplified effects on neuronal signaling related to pain and muscle tone."
+    ],
+    tips: [
+        "Store securely, away from children and pets, due to its higher abuse potential.",
+        "Never share this medication.",
+        "Keep a strict log of your doses to avoid accidental overuse.",
+        "Do not stop taking suddenly without medical guidance, as withdrawal symptoms can be severe.",
+        "Report any unusual side effects or signs of dependence to your doctor immediately.",
+        "Dispose of any unused medication properly at a designated take-back location."
+    ]
+},
+
+// Zop 7.5 (Matches website product: ZOP 7.5 TAB)
+ {
+    id: "hab-zop-7-5",
+    name: {
+        en: "Zop 7.5 mg Tablet",
+    },
+    category: "Central Nervous System", // As per website categorization
+    brand: "Hab Pharma",
+    dosage: "7.5 mg",
+    price: "380",
+    composition: "Zopiclone 7.5mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets",
+    casId: "43200-80-2",
+    image: "/products/zop7.5mg.png",
+    additionalImages: [
+        "/products/zop7.5mg_2.jpeg",
+    "/products/zop7.5mg_3.webp",
+    ],
+    metaTitle: "Buy Zop 7.5 mg Tablet Online | Zopiclone for Insomnia | Hab Pharma",
+    metaDescription: "Buy Zop 7.5 mg (Zopiclone) tablets online. A non-benzodiazepine hypnotic for the short-term treatment of insomnia. Quality sleep aid from Hab Pharma.",
+    description: "Zop 7.5 mg Tablet contains Zopiclone, a non-benzodiazepine hypnotic agent used for the short-term management of insomnia characterized by difficulty falling asleep.",
+    slug: "zop-7-5",
+    overview: [
+        "Zop 7.5 mg contains Zopiclone, a medication that helps you fall asleep faster and stay asleep throughout the night.",
+        "It belongs to a class of drugs known as 'Z-drugs' (non-benzodiazepine hypnotics) and is used for the short-term treatment of insomnia.",
+        "This medication is typically prescribed when sleep difficulties are severe, disabling, or causing extreme distress.",
+        "The 7.5 mg strength is the standard adult dose for treating insomnia.",
+        "Treatment duration is usually short, ranging from a few days to a maximum of 4 weeks, to avoid tolerance and dependence.",
+        "It helps improve sleep quality and duration, leading to better daytime functioning.",
+        "Zopiclone is known for its rapid onset of action, typically working within an hour of administration."
+    ],
+    sideEffects: [
+        "A bitter or metallic taste in the mouth is a very common and distinctive side effect.",
+        "Daytime drowsiness, dizziness, or a 'hangover' feeling may occur the next day.",
+        "Dry mouth may be experienced by some users.",
+        "Nausea or gastrointestinal disturbances are possible.",
+        "Less commonly, users may experience confusion, memory impairment, or unusual dreams.",
+        "Rare but serious side effects include complex sleep behaviors like sleepwalking, sleep-driving, or engaging in other activities while not fully awake."
+    ],
+    administration: [
+        "Take Zop immediately before bedtime, only when you have a full night (at least 7-8 hours) available for sleep.",
+        "Swallow the tablet whole with a glass of water.",
+        "Do not take with or immediately after a heavy, high-fat meal, as it may slow absorption.",
+        "The usual adult dose is one 7.5 mg tablet once daily.",
+        "Do not exceed the recommended dose or duration of treatment.",
+        "Avoid alcohol completely while taking this medication, as it can increase side effects."
+    ],
+    warnings: [
+        "Do not use if you are allergic to Zopiclone or any other ingredients.",
+        "Zopiclone has the potential for abuse and dependence, especially with long-term use. Use exactly as prescribed.",
+        "You may experience a 'rebound' insomnia for a few days after stopping treatment.",
+        "Avoid driving or operating machinery until you know how this medication affects you. You may still feel drowsy the next day.",
+        "Do not combine with alcohol or other sedating medications.",
+        "Use with caution in patients with liver or kidney impairment, myasthenia gravis, or severe respiratory problems.",
+        "Not recommended during pregnancy or breastfeeding."
+    ],
+    how_it_works: [
+        "Zopiclone is a cyclopyrrolone derivative that acts as a hypnotic agent.",
+        "It works by binding to GABA-A receptors in the brain at a site different from benzodiazepines.",
+        "GABA (gamma-aminobutyric acid) is the brain's primary inhibitory neurotransmitter, responsible for calming nerve activity.",
+        "By enhancing the effects of GABA, Zopiclone increases inhibitory neurotransmission, leading to sedation, sleep induction, and muscle relaxation.",
+        "Its selective binding profile contributes to its effectiveness in promoting sleep with a relatively lower risk of certain side effects compared to older sedatives."
+    ],
+    tips: [
+        "Store at room temperature away from light and moisture.",
+        "Do not take it unless you are ready to sleep for a full night.",
+        "Avoid activities requiring mental alertness until the effects have worn off completely.",
+        "If you experience morning drowsiness frequently, consult your doctor; your dose may need adjustment.",
+        "Do not stop taking this medication abruptly after long-term use, as withdrawal symptoms may occur. Your doctor will guide you on how to taper the dose."
+    ]
+},
+
+// Zop 10 (Matches website product: ZOPISIGN 10 TAB)
+ {
+    id: "hab-zop-10",
+    name: {
+        en: "Zopisign 10 mg Tablet",
+    },
+    category: "Central Nervous System",
+    brand: "Hab Pharma",
+    dosage: "10 mg",
+    price: "450",
+    composition: "Zopiclone 10mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets",
+    casId: "43200-80-2",
+    image: "/products/zopisign-10mg.jpg",
+    additionalImages: [
+        "/products/zopisign-10mg_2.jpg",
+    "/products/zopisign-10mg_3.webp",
+    ],
+    metaTitle: "Buy Zopisign 10 mg Online | High Strength Zopiclone | Hab Pharma",
+    metaDescription: "Buy Zopisign 10 mg (Zopiclone) tablets online. A higher strength prescription sleep aid for severe insomnia. From Hab Pharma.",
+    description: "Zopisign 10 mg contains a higher strength of Zopiclone, indicated for the short-term treatment of severe insomnia where a lower dose (7.5 mg) is insufficient.",
+    slug: "zop-10",
+    overview: [
+        "Zopisign 10 mg is a higher-strength formulation of Zopiclone for patients with severe insomnia.",
+        "It is indicated when the standard 7.5 mg dose does not provide adequate sleep induction or maintenance.",
+        "This higher strength provides more potent sedative effects for individuals with significant sleep difficulties.",
+        "As with the standard dose, it is intended for short-term use only (up to 4 weeks) due to the risk of tolerance and dependence.",
+        "The 10 mg strength should only be used under close medical supervision.",
+        "It offers enhanced efficacy for patients who have not responded adequately to lower doses.",
+        "This higher potency may result in a more rapid onset of action and more prolonged sleep."
+    ],
+    sideEffects: [
+        "More pronounced bitter or metallic taste in the mouth.",
+        "Increased likelihood of next-day drowsiness, sedation, and 'hangover' effect.",
+        "Higher risk of dizziness, confusion, and memory impairment.",
+        "Greater potential for complex sleep-related behaviors (e.g., sleepwalking, sleep-driving).",
+        "Increased chance of falls, especially in elderly or debilitated patients.",
+        "Nausea and gastrointestinal upset may be more frequent.",
+        "Higher risk of developing tolerance and dependence with extended use."
+    ],
+    administration: [
+        "Take exactly as prescribed, immediately before bedtime with at least 7-8 hours available for sleep.",
+        "The usual dose is one 10 mg tablet, but this should only be taken if specifically prescribed by your doctor.",
+        "Swallow the tablet whole with water.",
+        "Do not take with food, especially high-fat meals, as it may delay the onset of action.",
+        "Never take more than one dose in a 24-hour period.",
+        "Do not exceed the prescribed dose or duration."
+    ],
+    warnings: [
+        "This higher strength carries an increased risk of next-day psychomotor impairment, including driving ability.",
+        "Contraindicated in patients with severe liver impairment, sleep apnea, or myasthenia gravis.",
+        "Higher potential for abuse and dependence; use only under strict medical supervision.",
+        "Do not combine with alcohol, opioids, or other CNS depressants.",
+        "Use extreme caution in elderly or debilitated patients due to fall risk.",
+        "Not recommended as a starting dose for new patients."
+    ],
+    how_it_works: [
+        "Zopisign 10 mg delivers a higher concentration of Zopiclone, leading to greater potentiation of GABAergic neurotransmission.",
+        "The increased dose results in more extensive binding to GABA-A receptors, producing a stronger inhibitory effect on the central nervous system.",
+        "This leads to more pronounced sedation and hypnosis, which is necessary for treating severe, treatment-resistant insomnia.",
+        "The mechanism of action is the same as the lower strength but with amplified effects on sleep architecture and continuity."
+    ],
+    tips: [
+        "Only use this strength under specific prescription and guidance from a healthcare provider.",
+        "Be extremely cautious about driving or operating machinery the next day.",
+        "If you experience any unusual sleep behaviors, stop taking the medication and inform your doctor immediately.",
+        "Do not use alcohol or other sedatives.",
+        "Keep a log of your sleep patterns and any side effects to share with your doctor.",
+        "Store securely due to higher abuse potential."
+    ]
+},
+
+// Modafinil
+ {
+    id: "hab-modafinil",
+    name: {
+        en: "Modafinil 200 mg Tablet",
+    },
+    category: "Central Nervous System",
+    brand: "Hab Pharma",
+    dosage: "200 mg",
+    price: "650",
+    composition: "Modafinil 200mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets",
+    casId: "68693-11-8",
+    image: "/products/Modafinil200.jpeg",
+    additionalImages: [
+        "/products/Modafinil200_2.jpg",
+    "/products/Modafinil200_3.webp",
+    ],
+    metaTitle: "Buy Modafinil 200 mg Online | Wakefulness Promoting Agent | Hab Pharma",
+    metaDescription: "Buy Modafinil 200 mg tablets online. A wakefulness-promoting agent for narcolepsy, shift work disorder, and OSA. Quality from Hab Pharma.",
+    description: "Modafinil 200 mg is a wakefulness-promoting medication used to improve wakefulness in adults with excessive sleepiness associated with narcolepsy, obstructive sleep apnea, and shift work disorder.",
+    slug: "modafinil",
+    overview: [
+        "Modafinil is a central nervous system stimulant-like medication that promotes wakefulness.",
+        "It is primarily prescribed to treat excessive daytime sleepiness caused by narcolepsy, obstructive sleep apnea (OSA), and shift work sleep disorder (SWSD).",
+        "For OSA, it is used as an adjunct to standard treatments like CPAP, not as a replacement.",
+        "The 200 mg strength is the standard and most commonly prescribed adult dose.",
+        "Modafinil helps improve alertness and reduce the tendency to fall asleep during the day.",
+        "It has a lower potential for abuse compared to traditional stimulants like amphetamines.",
+        "The effects of a single dose can last for 12-15 hours, providing all-day wakefulness.",
+        "It is not a cure for these sleep disorders but helps manage the symptom of excessive sleepiness."
+    ],
+    sideEffects: [
+        "Headache is the most frequently reported side effect, especially when starting treatment.",
+        "Nervousness, anxiety, agitation, or insomnia can occur.",
+        "Nausea, diarrhea, or dry mouth may be experienced.",
+        "Dizziness or feeling lightheaded is possible.",
+        "Decreased appetite and weight loss can occur with continued use.",
+        "Increased heart rate or palpitations may occur in some individuals.",
+        "Serious skin rashes (like Stevens-Johnson syndrome) are rare but require immediate medical attention."
+    ],
+    administration: [
+        "Take Modafinil exactly as prescribed by your doctor.",
+        "The usual dose for adults is 200 mg taken once daily.",
+        "For narcolepsy and OSA, take the dose in the morning.",
+        "For shift work disorder, take the dose approximately one hour before the start of the work shift.",
+        "Swallow the tablets whole with water. They can be taken with or without food.",
+        "Do not crush or chew the tablets.",
+        "Take at the same time each day for consistent effects."
+    ],
+    warnings: [
+        "Do not use if you are allergic to Modafinil or armodafinil.",
+        "Serious rash requiring hospitalization can occur; stop use and seek medical help immediately if a rash develops.",
+        "Not recommended for patients with a history of left ventricular hypertrophy or certain cardiac problems.",
+        "Use with caution in patients with liver or kidney impairment; a lower dose may be required.",
+        "Modafinil may reduce the effectiveness of hormonal contraceptives (pills, implants, IUDs). Use alternative or additional non-hormonal birth control during treatment and for one month after stopping.",
+        "Avoid alcohol while taking this medication."
+    ],
+    how_it_works: [
+        "The exact mechanism of action of Modafinil is not fully understood, but it differs from that of classic sympathomimetic stimulants like amphetamine.",
+        "It is believed to work by increasing the levels of dopamine in the brain by inhibiting its reuptake, but it does so in a more selective and weaker manner than classic stimulants.",
+        "It also affects other neurotransmitter systems, including orexin, histamine, and norepinephrine, which are involved in regulating wakefulness and sleep.",
+        "Its wakefulness-promoting effects are thought to be mediated through activation of specific brain regions involved in alertness."
+    ],
+    tips: [
+        "Store at room temperature away from moisture and heat.",
+        "Take early in the day (for daytime sleepiness) to avoid insomnia.",
+        "If you miss a dose and it's late in the day, skip the missed dose to avoid sleep disruption. Take your next dose at the regular time the next day.",
+        "Monitor your blood pressure regularly while taking this medication.",
+        "Use a reliable non-hormonal backup method of contraception if you are using hormonal birth control.",
+        "Report any skin changes, mood alterations, or signs of heart problems to your doctor immediately."
+    ]
+},
+
+// Armodafinil
+ {
+    id: "hab-armodafinil",
+    name: {
+        en: "Armodafinil 150 mg Tablet",
+    },
+    category: "Central Nervous System",
+    brand: "Hab Pharma",
+    dosage: "150 mg",
+    price: "750",
+    composition: "Armodafinil 150mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets",
+    casId: "112111-43-0",
+    image: "/products/armodafinil-150-mg.webp",
+    additionalImages: [
+        "/products/armodafinil-150-mg_3.jpg",
+    "/products/armodafinil-150-mg_2.jpg",
+    ],
+    metaTitle: "Buy Armodafinil 150 mg Online | R-Modafinil | Hab Pharma",
+    metaDescription: "Buy Armodafinil 150 mg tablets online. The R-enantiomer of modafinil for longer-lasting wakefulness promotion in narcolepsy, OSA, and SWSD. From Hab Pharma.",
+    description: "Armodafinil 150 mg contains the R-enantiomer of modafinil. It is a wakefulness-promoting agent used to improve wakefulness in adults with excessive sleepiness associated with narcolepsy, obstructive sleep apnea, and shift work disorder.",
+    slug: "armodafinil",
+    overview: [
+        "Armodafinil is the pure (R)-enantiomer of modafinil, providing a longer duration of action.",
+        "It is approved for the same indications as modafinil: improving wakefulness in narcolepsy, obstructive sleep apnea (OSA), and shift work sleep disorder (SWSD).",
+        "A 150 mg dose of armodafinil is approximately therapeutically equivalent to 200 mg of modafinil.",
+        "It is designed to provide more sustained and prolonged wakefulness throughout the day.",
+        "Due to its longer half-life, it may be particularly beneficial for patients who require all-day alertness.",
+        "It promotes wakefulness with a smoother onset and offset profile compared to racemic modafinil for some individuals.",
+        "This formulation provides more consistent blood levels over the dosing period."
+    ],
+    sideEffects: [
+        "The side effect profile is similar to modafinil.",
+        "Headache, nausea, dizziness, and insomnia are common.",
+        "Anxiety and nervousness may occur.",
+        "Dry mouth is a frequently reported side effect.",
+        "Increased heart rate may occur in sensitive individuals.",
+        "As with modafinil, serious skin rashes are a rare but serious risk."
+    ],
+    administration: [
+        "Take Armodafinil exactly as prescribed, typically once daily.",
+        "The standard dose is 150 mg taken at the same time each day.",
+        "For narcolepsy and OSA, take in the morning.",
+        "For SWSD, take approximately one hour before the start of the work shift.",
+        "Swallow tablets whole with water; do not crush or chew.",
+        "May be taken with or without food.",
+        "Avoid taking in the afternoon or evening to prevent insomnia."
+    ],
+    warnings: [
+        "Do not use if you have a history of allergic reaction to modafinil or armodafinil.",
+        "Stop use and seek medical attention immediately if a skin rash develops.",
+        "Caution in patients with cardiac problems, liver or kidney impairment.",
+        "Reduces the effectiveness of hormonal contraceptives; use alternative birth control.",
+        "Avoid alcohol consumption.",
+        "Not recommended during pregnancy or breastfeeding."
+    ],
+    how_it_works: [
+        "Armodafinil contains only the (R)-enantiomer of modafinil, which has a longer half-life (approximately 15 hours) than the (S)-enantiomer.",
+        "The (R)-enantiomer has a higher binding affinity for the dopamine transporter, contributing to its wakefulness-promoting effects.",
+        "This selectivity results in more sustained dopamine reuptake inhibition and a longer duration of action compared to racemic modafinil.",
+        "It provides stable blood concentrations that are maintained throughout typical waking hours, requiring only once-daily dosing."
+    ],
+    tips: [
+        "Store in a cool, dry place.",
+        "Take first thing in the morning for best results in treating daytime sleepiness.",
+        "Use reliable non-hormonal contraception if needed.",
+        "Stay well hydrated.",
+        "Do not share this medication with others.",
+        "Report any unusual symptoms, especially skin changes or signs of cardiac issues, to your doctor immediately."
+    ]
+},
+
+// Cobra 120
+ {
+    id: "hab-cobra-120",
+    name: {
+        en: "Cobra 120 mg Tablet",
+    },
+    category: "Reproductive System and Urinary System", // As per website categorization
+    brand: "Hab Pharma",
+    dosage: "120 mg",
+    price: "580",
+    composition: "Sildenafil Citrate 120mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets",
+    casId: "139755-83-2",
+    image: "/products/cobra-120.png",
+    additionalImages: [
+        "/products/cobra-120_2.png",
+    "/products/cobra-120_3.png",
+    ],
+    metaTitle: "Buy Cobra 120 mg Online | Sildenafil for ED | Hab Pharma",
+    metaDescription: "Buy Cobra 120 mg (Sildenafil Citrate) tablets online. An intermediate-strength treatment for erectile dysfunction. High-quality from Hab Pharma.",
+    description: "Cobra 120 mg contains Sildenafil Citrate, a PDE5 inhibitor used for the treatment of erectile dysfunction (impotence) in adult men.",
+    slug: "cobra-120",
+    overview: [
+        "Cobra 120 mg is a medication containing Sildenafil Citrate, used to help men achieve and maintain an erection sufficient for sexual activity.",
+        "It belongs to a class of drugs known as phosphodiesterase type 5 (PDE5) inhibitors.",
+        "The 120 mg strength offers an intermediate option, potentially suitable for those who find 100 mg insufficient but do not require the maximum 200 mg dose.",
+        "It works only with sexual stimulation and does not increase sexual desire.",
+        "This formulation is designed to provide reliable and consistent effects for managing erectile dysfunction.",
+        "The effects typically last for up to 4-6 hours, providing a sufficient window for sexual activity.",
+        "It should be used under the guidance of a healthcare professional."
+    ],
+    sideEffects: [
+        "Headache and facial flushing are the most common side effects.",
+        "Nasal congestion or a runny nose may occur.",
+        "Indigestion or heartburn can be experienced by some users.",
+        "Dizziness or lightheadedness, especially when standing up quickly.",
+        "Visual disturbances, such as a blue tinge to vision or increased sensitivity to light.",
+        "Back pain or muscle aches may occur, typically 12-24 hours after taking the medication."
+    ],
+    administration: [
+        "Take one Cobra 120 mg tablet approximately 30-60 minutes before planned sexual activity.",
+        "Swallow the tablet whole with a glass of water.",
+        "For best and fastest absorption, take on an empty stomach. A high-fat meal may delay the onset of action.",
+        "Do not take more than one dose in a 24-hour period.",
+        "Sexual stimulation is required for the medication to be effective."
+    ],
+    warnings: [
+        "Do not take Cobra if you are taking any form of nitrate medication (e.g., nitroglycerin for chest pain), as the combination can cause a sudden and dangerous drop in blood pressure.",
+        "Do not use if you are a woman or child.",
+        "Consult your doctor before use if you have heart problems, severe liver or kidney disease, low blood pressure, or a recent history of stroke or heart attack.",
+        "Seek immediate medical help if you experience a sudden loss of vision or hearing, or if you have an erection that lasts longer than 4 hours (priapism).",
+        "Avoid alcohol consumption before sexual activity, as it can increase the risk of side effects."
+    ],
+    how_it_works: [
+        "Sildenafil Citrate, the active ingredient in Cobra, is a potent and selective inhibitor of PDE5.",
+        "During sexual stimulation, nitric oxide is released in the corpus cavernosum of the penis.",
+        "This triggers the production of cGMP (cyclic guanosine monophosphate), which relaxes the smooth muscles and allows increased blood flow into the penile tissues, leading to an erection.",
+        "The PDE5 enzyme normally breaks down cGMP, ending the erection.",
+        "By inhibiting PDE5, Cobra allows cGMP to accumulate, enhancing and prolonging the natural erectile response to sexual stimulation."
+    ],
+    tips: [
+        "Store at room temperature, away from moisture and heat.",
+        "If you are new to ED medication, it's advisable to start with a lower dose (like 50mg or 100mg) to assess your tolerance, as directed by your doctor.",
+        "Avoid grapefruit or grapefruit juice, as it can increase the levels of sildenafil in your blood and the risk of side effects.",
+        "Do not take this medication if you do not have erectile dysfunction.",
+        "Keep out of reach of children."
+    ]
+},
+
+// Cobra 200
+{
+    id: "hab-cobra-200",
+    name: {
+        en: "Cobra 200 mg Tablet",
+    },
+    category: "Reproductive System and Urinary System",
+    brand: "Hab Pharma",
+    dosage: "200 mg",
+    price: "720",
+    composition: "Sildenafil Citrate 200mg",
+    form: "Tablet",
+    packSize: "10 x 10 Tablets",
+    casId: "139755-83-2",
+    image: "/products/cobra-200.webp",
+    additionalImages: [
+        "/products/cobra-200-2.webp",
+    "/products/cobra-200_3.jpg",
+    ],
+    metaTitle: "Buy Cobra 200 mg Online | Maximum Strength Sildenafil | Hab Pharma",
+    metaDescription: "Buy Cobra 200 mg (Sildenafil Citrate) tablets online. Maximum strength formulation for severe erectile dysfunction. From Hab Pharma.",
+    description: "Cobra 200 mg is the maximum-strength formulation of Sildenafil Citrate from Hab Pharma, indicated for the treatment of erectile dysfunction in adult men who require a higher dose.",
+    slug: "cobra-200",
+    overview: [
+        "Cobra 200 mg is the highest strength Sildenafil tablet available from Hab Pharma.",
+        "This maximum dose is typically reserved for men with severe erectile dysfunction who have not achieved satisfactory results with lower strengths (like 100mg or 120mg).",
+        "It provides the most potent inhibition of the PDE5 enzyme for maximal effect on penile blood flow.",
+        "The 200 mg strength offers the longest duration of action, potentially lasting up to 8-12 hours in some individuals.",
+        "This formulation should only be used under close medical supervision due to the increased risk of side effects.",
+        "It may be suitable for patients with significant vascular impairment or those who have developed tolerance to lower doses."
+    ],
+    sideEffects: [
+        "Increased likelihood and intensity of all common side effects, including severe headache and flushing.",
+        "More significant and frequent visual disturbances, such as blue-tinged vision and light sensitivity.",
+        "Higher risk of dizziness and a greater drop in blood pressure, potentially causing fainting.",
+        "Increased chance of priapism (prolonged, painful erection), which is a medical emergency.",
+        "More pronounced nasal congestion and dyspepsia.",
+        "Greater potential for back pain and muscle aches."
+    ],
+    administration: [
+        "Take exactly as prescribed, typically 30-60 minutes before sexual activity.",
+        "Do not take more than one tablet in 24 hours.",
+        "This high dose should not be the starting dose for any patient new to Sildenafil therapy.",
+        "Take on an empty stomach for optimal absorption; avoid high-fat meals.",
+        "Swallow the tablet whole with a full glass of water.",
+        "Strictly avoid alcohol."
+    ],
+    warnings: [
+        "Absolute contraindication with nitrates or nitric oxide donors.",
+        "Not for use in patients with severe cardiovascular disease, recent myocardial infarction, stroke, or life-threatening arrhythmias.",
+        "Contraindicated in patients with severe hepatic impairment or end-stage renal disease requiring dialysis.",
+        "High risk of serious adverse events; use with extreme caution.",
+        "Not recommended for patients with hypotension (blood pressure <90/50 mmHg).",
+        "Use extreme caution if taking alpha-blockers or other antihypertensives, as severe hypotension can occur.",
+        "Do not use if you have a history of non-arteritic anterior ischemic optic neuropathy (NAION) or retinitis pigmentosa."
+    ],
+    how_it_works: [
+        "Cobra 200 mg provides maximum PDE5 inhibition, leading to near-complete blockade of the enzyme in the penile tissues.",
+        "The high dose ensures that cGMP accumulates to maximal levels during sexual stimulation, resulting in the most pronounced smooth muscle relaxation and blood vessel dilation possible.",
+        "This leads to the strongest and most sustained erectile response.",
+        "The increased plasma concentration also prolongs the duration of action, offering a longer therapeutic window."
+    ],
+    tips: [
+        "Only use this maximum strength if specifically prescribed by a specialist.",
+        "Be fully aware of the significantly increased risk of side effects.",
+        "Have emergency contacts readily available.",
+        "Monitor the duration of your erection carefully; seek medical help immediately if it lasts more than 4 hours.",
+        "Do not combine with any other ED treatments.",
+        "Store securely and out of reach of children."
+    ]
+},
+
+// Cobra Jelly
+{
+    id: "hab-cobra-jelly",
+    name: {
+        en: "Cobra Oral Jelly 100 mg",
+    },
+    category: "Reproductive System and Urinary System",
+    brand: "Hab Pharma",
+    dosage: "100 mg",
+    price: "520",
+    composition: "Sildenafil Citrate 100mg",
+    form: "Oral Jelly",
+    packSize: "10 Sachets (per box)",
+    casId: "139755-83-2",
+    image: "/products/cobra_jelly.png",
+    additionalImages: [
+        "/products/cobra_jelly2.png",
+    "/products/cobra_jelly.png",
+    ],
+    metaTitle: "Buy Cobra Oral Jelly 100 mg Online | Fast-Acting Sildenafil | Hab Pharma",
+    metaDescription: "Buy Cobra Oral Jelly 100 mg online. Sildenafil Citrate in a fast-absorbing, convenient jelly format for rapid ED treatment. Various flavors. From Hab Pharma.",
+    description: "Cobra Oral Jelly 100 mg is a convenient and fast-acting formulation of Sildenafil Citrate for the treatment of erectile dysfunction. It is designed for quicker absorption and ease of use.",
+    slug: "cobra-jelly",
+    overview: [
+        "Cobra Oral Jelly offers a popular alternative to traditional Sildenafil tablets, especially for those who have difficulty swallowing pills.",
+        "Each sachet contains 100 mg of Sildenafil Citrate in a pleasant-tasting, ready-to-eat jelly form.",
+        "The jelly formulation is designed to be absorbed more quickly than tablets, potentially leading to a faster onset of action (as quick as 15-20 minutes for some individuals).",
+        "It comes in various flavors, making the experience more pleasant and discreet.",
+        "The convenient single-dose sachets are easy to carry and consume anywhere, offering spontaneity.",
+        "Like tablets, it requires sexual stimulation to be effective.",
+        "The duration of action is similar to tablet forms, lasting 4-6 hours."
+    ],
+    sideEffects: [
+        "The side effect profile is the same as Sildenafil tablets, but the faster absorption might lead to a quicker onset of side effects like headache and flushing.",
+        "Common side effects include headache, facial flushing, nasal congestion, and indigestion.",
+        "Dizziness and visual disturbances (e.g., blue tinge) can also occur.",
+        "The faster absorption does not typically change the severity or type of side effects."
+    ],
+    administration: [
+        "Tear or cut the corner of one sachet and squeeze the entire contents directly into your mouth.",
+        "You can swallow the jelly immediately or let it dissolve in your mouth for potentially faster absorption.",
+        "It is recommended to take it approximately 15-30 minutes before planned sexual activity.",
+        "Do not take with food for the fastest effect; if you have recently eaten, especially a high-fat meal, the onset may be delayed.",
+        "Do not take more than one sachet in a 24-hour period.",
+        "Sexual stimulation is required for the medication to work."
+    ],
+    warnings: [
+        "The same warnings and contraindications for Sildenafil tablets apply to the oral jelly.",
+        "Do not use if you are taking nitrates for chest pain.",
+        "Not for use in women or children.",
+        "Consult a doctor before use if you have heart problems, severe liver or kidney disease, or a history of stroke.",
+        "Seek immediate medical help for prolonged erections lasting more than 4 hours."
+    ],
+    how_it_works: [
+        "The mechanism of action of Cobra Oral Jelly is identical to Sildenafil tablets: it inhibits the PDE5 enzyme, enhancing the effect of nitric oxide and increasing cGMP levels in the penis.",
+        "This leads to smooth muscle relaxation and increased blood flow during sexual stimulation, facilitating an erection.",
+        "The key difference is the delivery method. The jelly is absorbed directly through the oral mucosa and stomach lining, potentially bypassing some initial breakdown in the liver, which can lead to a faster rise in blood levels and a quicker onset of action compared to standard tablets."
+    ],
+    tips: [
+        "Store in a cool, dry place away from direct sunlight. Do not refrigerate.",
+        "Tear the sachet carefully at the notch to avoid spilling.",
+        "Consume the entire sachet for the full 100 mg dose.",
+        "If you are new to ED medication, it's important to first determine your optimal dose with your doctor using tablets, as the jelly offers less flexibility in dosing.",
+        "Keep all medications out of reach of children. The flavored jelly may be particularly appealing to them.",
+        "Dispose of empty sachets properly."
+    ]
+},
+
+// Testogel (Matches website product: TESTOSIGN SOFT GEL)
+{
+    id: "hab-testogel",
+    name: {
+        en: "Testosign Soft Gel 40 mg",
+    },
+    category: "Endocrine Problem", // As per website categorization
+    brand: "Hab Pharma",
+    dosage: "40 mg",
+    price: "1200",
+    composition: "Testosterone Undecanoate 40mg",
+    form: "Soft Gelatin Capsule",
+    packSize: "10 x 10 Capsules",
+    casId: "58-22-0",
+    image: "/products/hab/testosign_1.png",
+    additionalImages: [
+        "/products/hab/testosign_2.png",
+        "/products/hab/testosign_3.png",
+    ],
+    metaTitle: "Buy Testosign Soft Gel 40 mg Online | Testosterone Replacement | Hab Pharma",
+    metaDescription: "Buy Testosign Soft Gel 40 mg (Testosterone Undecanoate) online. Oral testosterone replacement therapy for hypogonadism. From Hab Pharma.",
+    description: "Testosign Soft Gel 40 mg contains Testosterone Undecanoate, an oral testosterone replacement therapy indicated for men with hypogonadism (testosterone deficiency).",
+    slug: "testogel",
+    overview: [
+        "Testosign Soft Gel is an oral medication for testosterone replacement therapy (TRT) in men who have low or no testosterone due to certain medical conditions (hypogonadism).",
+        "It contains Testosterone Undecanoate, a form of testosterone that, when absorbed, helps restore normal testosterone levels.",
+        "This formulation is designed to be absorbed through the lymphatic system, bypassing the first-pass metabolism in the liver.",
+        "The 40 mg strength is a common starting or maintenance dose, but the exact dose must be determined by a doctor based on individual needs and blood tests.",
+        "TRT can help relieve symptoms of low testosterone such as decreased libido, fatigue, low mood, and loss of muscle mass.",
+        "Regular monitoring of testosterone levels and other health parameters is essential during treatment.",
+        "This is a prescription-only medication that requires medical supervision."
+    ],
+    sideEffects: [
+        "Skin reactions or acne may occur.",
+        "Increased red blood cell count (polycythemia) requiring monitoring.",
+        "Prostate changes; regular prostate exams are necessary.",
+        "Gynecomastia (breast enlargement or tenderness) may occur.",
+        "Edema (fluid retention) is possible.",
+        "Sleep apnea may worsen in predisposed individuals.",
+        "Mood changes, including increased aggression or irritability.",
+        "Decreased sperm count or infertility with prolonged use."
+    ],
+    administration: [
+        "Take exactly as prescribed by your doctor. Dosage is individualized based on blood testosterone levels and clinical response.",
+        "The capsules should be swallowed whole with water, preferably with a meal containing some fat to aid absorption.",
+        "Do not crush or chew the capsules.",
+        "The typical dosing schedule may be once or twice daily, as determined by your physician.",
+        "Do not stop taking this medication without consulting your doctor."
+    ],
+    warnings: [
+        "This is a controlled substance with potential for abuse. Use only under medical supervision.",
+        "Not for use in women, especially those who are or may become pregnant.",
+        "Contraindicated in men with prostate cancer or breast cancer.",
+        "Regular blood tests are required to monitor testosterone levels, red blood cell count, and liver function.",
+        "Can affect blood sugar control in diabetic patients.",
+        "May increase the risk of cardiovascular events; use with caution in patients with heart disease.",
+        "Inform your doctor immediately if you experience frequent or persistent erections, breathing problems during sleep, or signs of a blood clot."
+    ],
+    how_it_works: [
+        "Testosign contains Testosterone Undecanoate, an ester of the natural male hormone, testosterone.",
+        "When taken orally, the molecule is absorbed into the lymphatic system, largely bypassing the first-pass metabolism in the liver that would otherwise inactivate it.",
+        "Once in the bloodstream, it is converted to free testosterone, which then binds to androgen receptors throughout the body.",
+        "This binding activates gene expression responsible for male characteristics, libido, energy, muscle mass, and bone density.",
+        "By restoring testosterone to normal physiological levels, it alleviates the symptoms of hypogonadism."
+    ],
+    tips: [
+        "Store at room temperature below 25°C, away from moisture and light.",
+        "Take consistently with meals to ensure reliable absorption.",
+        "Do not share this medication with anyone.",
+        "Keep a log of your symptoms and any side effects to discuss with your doctor.",
+        "Attend all scheduled follow-up appointments and blood tests.",
+        "Maintain a healthy lifestyle, including a balanced diet and regular exercise, as part of your overall treatment plan.",
+        "Keep out of reach of children. This is a potent hormone and should be stored securely."
+    ]
+},
+   {
+    id: "134",
+    name: {
+        en: "Azelax - Azelaic Acid Cream",
+    },
+    category: "Skincare",
+    brand: "Healing Pharma",
+    dosage: "20% w/w",
+    price: "249", // Price in INR, adjust as needed for your store
+    composition: "Azelaic Acid 20% w/w",
+    form: "Cream",
+    packSize: "20g Tube",
+    casId: "123-99-9", // Approximate CAS for Azelaic Acid
+    image: "/products/azelaic.webp",
+    additionalImages: [
+         "/products/azelaic_2.webp",
+    "/products/azelaic_3.webp",
+    ],
+    metaTitle: "Buy Azelax Azelaic Acid Cream 20% Online | Healing Pharma",
+    metaDescription: "Buy Azelax 20% Azelaic Acid Cream online. Effective for acne and rosacea. Gentle, non-comedogenic formula. From Healing Pharma.",
+    description: "Azelax Cream contains Azelaic Acid 20%, a naturally occurring acid effective in treating mild to moderate acne and managing rosacea.",
+    slug: "azelax-cream",
+    overview: [
+        "Azelax Cream contains 20% Azelaic Acid, a dicarboxylic acid with anti-inflammatory and antibacterial properties.",
+        "It is primarily used for the topical treatment of mild to moderate inflammatory acne vulgaris.",
+        "This cream helps reduce the number of acne lesions, including blackheads, whiteheads, and pimples.",
+        "It is also effective in managing papulopustular rosacea.",
+        "Azelaic Acid works by normalizing the shedding of skin cells within hair follicles, which helps prevent blockages.",
+        "It also inhibits the growth of *Cutibacterium acnes*, a bacteria involved in acne development.",
+        "Regular use can help improve skin texture and reduce post-inflammatory hyperpigmentation (dark spots) caused by acne.",
+        "This formulation is non-comedogenic, meaning it won't clog pores further.",
+        "The 20% strength is a clinically studied concentration for effective results.",
+        "It is suitable for most skin types but a patch test is recommended for sensitive skin."
+    ],
+    sideEffects: [
+        "Mild to moderate skin irritation, such as itching, burning, or stinging, may occur, especially when starting treatment.",
+        "Some individuals may experience dryness, peeling, or flaking of the skin.",
+        "Erythema (redness) at the application site is possible.",
+        "These side effects are usually temporary and often decrease with continued use.",
+        "If irritation is severe or persists, reduce the frequency of application or consult a doctor.",
+        "Contact dermatitis (rash) can occur in rare cases."
+    ],
+    administration: [
+        "Clean and dry the affected skin area thoroughly before applying the cream.",
+        "Apply a thin layer of Azelax Cream to the entire affected area twice daily, typically in the morning and evening.",
+        "Gently massage the cream into the skin until it is absorbed.",
+        "Avoid contact with the eyes, mouth, and other mucous membranes.",
+        "Wash your hands immediately after applying the cream.",
+        "Use as directed by your healthcare professional.",
+        "Improvement is usually seen within 4 weeks, but optimal results may take several weeks."
+    ],
+    warnings: [
+        "For external use only. Do not swallow.",
+        "Avoid contact with eyes, mouth, and mucous membranes. If contact occurs, rinse thoroughly with water.",
+        "If skin irritation develops or becomes severe, discontinue use and consult a doctor.",
+        "Do not use on broken or irritated skin, including cuts, scrapes, or sunburn.",
+        "Inform your doctor if you have a known allergy to Azelaic Acid or any other ingredients.",
+        "Use with caution in patients with asthma, as very rare cases of bronchospasm have been reported."
+    ],
+    how_it_works: [
+        "Azelaic Acid works through multiple mechanisms to improve acne and rosacea.",
+        "It has antibacterial properties that help inhibit the growth of *Cutibacterium acnes* within the pilosebaceous unit.",
+        "It is a competitive inhibitor of tyrosinase, which can help reduce the production of melanin, thus fading post-inflammatory hyperpigmentation.",
+        "It normalizes the disordered keratinization process within hair follicles, reducing the formation of microcomedones (the precursor to acne lesions).",
+        "For rosacea, it helps reduce inflammation and papules/pustules, though its exact mechanism is still under study.",
+        "By reducing inflammation and bacterial load, it helps to clear existing lesions and prevent new ones from forming."
+    ],
+    tips: [
+        "Store in a cool, dry place away from direct sunlight.",
+        "Keep the tube tightly closed when not in use.",
+        "Use a moisturizer suitable for your skin type if you experience dryness while using this product.",
+        "If you forget a dose, apply it as soon as you remember. If it is almost time for your next dose, skip the missed dose.",
+        "Do not apply occlusive dressings or wrappings over the treated area unless directed by your doctor.",
+        "You may use non-comedogenic cosmetics during treatment, but ensure the cream is fully absorbed before applying them.",
+        "Protect your skin from excessive sun exposure and use sunscreen, as Azelaic Acid does not protect against sunburn."
+    ]
+},
+
+ {
+    id: "135",
+    name: {
+        en: "Bonefine Vitamin D3 60,000 IU Capsules",
+    },
+    category: "Vitamins & Supplements",
+    brand: "Healing Pharma",
+    dosage: "60,000 IU",
+    price: "210",
+    composition: "Cholecalciferol (Vitamin D3) 60,000 IU",
+    form: "Capsule",
+    packSize: "4 Capsules x Pack of 2",
+    casId: "67-97-0",
+    image: "/products/Bonefine.webp",
+    additionalImages: [
+        "/products/Bonefine.webp",
+    "/products/Bonefine.webp",
+    ],
+    metaTitle: "Buy Bonefine Vitamin D3 60,000 IU Capsules | Healing Pharma",
+    metaDescription: "Buy Bonefine D3 60,000 IU capsules for Vitamin D supplementation. High-strength cholecalciferol for bone health and immunity. From Healing Pharma.",
+    description: "Bonefine Vitamin D3 60,000 IU capsules provide a high-strength dose of cholecalciferol to treat and prevent Vitamin D deficiency.",
+    slug: "bonefine-d3-60k",
+    overview: [
+        "Bonefine D3 60,000 IU is a high-potency supplement containing Vitamin D3 (cholecalciferol).",
+        "It is used to treat and prevent Vitamin D deficiency in adults.",
+        "Vitamin D is crucial for the absorption of calcium and phosphorus, essential for maintaining healthy bones and teeth.",
+        "It also plays a vital role in supporting immune system function and muscle health.",
+        "This high-dose formulation is typically prescribed for weekly or monthly intake, as directed by a physician.",
+        "Deficiency in Vitamin D can lead to bone pain, muscle weakness, and an increased risk of fractures.",
+        "Adequate Vitamin D levels are particularly important for individuals with limited sun exposure, the elderly, and those with certain medical conditions.",
+        "Each pack contains 4 capsules, providing a full course of supplementation as per common regimens.",
+        "The product is manufactured under quality standards to ensure potency and purity."
+    ],
+    sideEffects: [
+        "When taken as directed, side effects are rare. However, taking more than the recommended dose can lead to hypercalcemia (high calcium levels).",
+        "Symptoms of hypercalcemia can include weakness, fatigue, nausea, vomiting, constipation, and frequent urination.",
+        "Some individuals might experience a metallic taste or dry mouth.",
+        "Allergic reactions are very rare but possible.",
+        "Kidney stones may occur in predisposed individuals with long-term high-dose use."
+    ],
+    administration: [
+        "Take this medication exactly as prescribed by your doctor.",
+        "The typical dosage for treating deficiency is one 60,000 IU capsule once a week for 8 weeks, followed by a lower maintenance dose.",
+        "For prevention, your doctor may recommend a different dosing schedule.",
+        "Capsules should be swallowed whole with water, preferably with a meal containing fat for better absorption.",
+        "Do not crush or chew the capsule.",
+        "Do not take more than the prescribed dose."
+    ],
+    warnings: [
+        "Do not use if you are allergic to cholecalciferol or any other ingredients.",
+        "Consult your doctor before use if you have kidney stones, severe kidney disease, or sarcoidosis.",
+        "High doses of Vitamin D should be used with caution in patients with heart disease.",
+        "Regular blood tests may be needed to monitor Vitamin D and calcium levels during high-dose therapy.",
+        "Inform your doctor about all other medications you are taking, especially thiazide diuretics and certain anticonvulsants."
+    ],
+    how_it_works: [
+        "Vitamin D3 (cholecalciferol) is a fat-soluble vitamin that is converted in the liver to calcidiol (25-hydroxyvitamin D).",
+        "It is then further converted in the kidneys to calcitriol (1,25-dihydroxyvitamin D), the active form of the vitamin.",
+        "Calcitriol acts like a hormone, regulating the absorption of calcium and phosphorus from the intestine.",
+        "By maintaining adequate calcium and phosphate levels, Vitamin D promotes proper bone mineralization and prevents conditions like rickets in children and osteomalacia in adults.",
+        "Vitamin D also binds to receptors on immune cells, influencing their function and supporting a healthy immune response."
+    ],
+    tips: [
+        "Store in a cool, dry place, away from light and moisture.",
+        "Keep out of reach of children.",
+        "Take the missed dose as soon as you remember. If it is almost time for the next dose, skip the missed dose and continue your regular schedule. Do not double the dose.",
+        "Maintain adequate calcium intake through diet or supplements as advised by your doctor.",
+        "Discuss the appropriate dosage and duration of treatment with your healthcare provider."
+    ]
+},
+
+ {
+    id: "136",
+    name: {
+        en: "ABCDZ Multivitamin Multimineral Tablets",
+    },
+    category: "Vitamins & Supplements",
+    brand: "Healing Pharma",
+    dosage: "N/A",
+    price: "159",
+    composition: "Multivitamin & Multimineral Complex",
+    form: "Tablet",
+    packSize: "15 Tablets x 2 Strips",
+    casId: "N/A",
+    image:  "/products/abcdz_tablets.webp",
+    additionalImages: [
+        "/products/abcdz_tablets_2.webp",
+    "/products/abcdz_tablets_3.webp",
+    ],
+    metaTitle: "Buy ABCDZ Multivitamin Multimineral Tablets Online | Healing Pharma",
+    metaDescription: "Buy ABCDZ multivitamin and multimineral tablets for daily nutritional support. Essential vitamins and minerals for overall health. From Healing Pharma.",
+    description: "ABCDZ tablets are a comprehensive multivitamin and multimineral supplement designed to fill nutritional gaps and support overall wellness.",
+    slug: "multivitamin-abcdz",
+    overview: [
+        "ABCDZ is a daily dietary supplement that provides a balanced combination of essential vitamins and minerals.",
+        "It is formulated to help meet the daily nutritional requirements for individuals with increased needs or those with dietary restrictions.",
+        "Key ingredients typically include Vitamin A, B-complex vitamins (like B1, B2, B6, B12), Vitamin C, Vitamin D, Vitamin E, and minerals such as Zinc, Calcium, and Magnesium.",
+        "This supplement supports various bodily functions, including energy metabolism, immune function, bone health, and cellular protection against oxidative stress.",
+        "It can be beneficial for individuals with poor appetite, those on restrictive diets, or during periods of convalescence.",
+        "Regular intake can help prevent micronutrient deficiencies and promote overall vitality.",
+        "The convenient tablet form makes it easy to incorporate into a daily routine.",
+        "This product is suitable for adults and children over 12 years, unless otherwise directed by a physician."
+    ],
+    sideEffects: [
+        "Most people do not experience side effects when taken as directed.",
+        "Some individuals may experience mild gastrointestinal discomfort, such as constipation, diarrhea, or an upset stomach.",
+        "Taking the supplement with food can often reduce these effects.",
+        "Certain vitamins like B-complex can cause urine to turn a bright yellow color, which is harmless.",
+        "Allergic reactions are very rare but possible."
+    ],
+    administration: [
+        "Take one tablet daily, preferably with a meal to enhance absorption and minimize stomach upset.",
+        "Swallow the tablet whole with a glass of water. Do not chew or crush.",
+        "Take at the same time each day to establish a routine.",
+        "Do not exceed the recommended daily dose.",
+        "Follow the advice of your healthcare professional regarding dosage and duration of use."
+    ],
+    warnings: [
+        "Do not use if you are allergic to any of the ingredients.",
+        "Consult your doctor before use if you are pregnant, breastfeeding, or have any pre-existing medical conditions.",
+        "Keep out of reach of children.",
+        "Dietary supplements should not be used as a substitute for a balanced and varied diet.",
+        "If you are taking other medications, consult your doctor or pharmacist to check for potential interactions."
+    ],
+    how_it_works: [
+        "Multivitamin supplements work by providing a concentrated source of micronutrients that the body requires for its metabolic processes.",
+        "B-complex vitamins (Thiamine, Riboflavin, Niacin, etc.) act as coenzymes, helping to convert food into energy.",
+        "Vitamin C is a potent antioxidant that protects cells from damage and is essential for collagen synthesis and immune function.",
+        "Vitamin D supports calcium absorption for bone health and modulates immune responses.",
+        "Vitamin E acts as a fat-soluble antioxidant, protecting cell membranes from oxidative damage.",
+        "Minerals like Zinc are crucial for immune function, wound healing, and cell division.",
+        "Together, these nutrients help fill dietary gaps, ensuring the body has the necessary building blocks to function optimally."
+    ],
+    tips: [
+        "Store in a cool, dry place, away from direct sunlight.",
+        "Keep the bottle tightly closed when not in use.",
+        "Maintain a healthy diet alongside supplementation for best results.",
+        "If you miss a dose, take it as soon as you remember. If it's close to your next dose, skip the missed one and continue your regular schedule. Do not double the dose."
+    ]
+},
+
+ {
+    id: "137",
+    name: {
+        en: "XHeal Pahadi Shilajit Gold Resin",
+    },
+    category: "Health & Wellness",
+    brand: "Healing Pharma",
+    dosage: "N/A",
+    price: "849",
+    composition: "Purified Shilajit Extract",
+    form: "Resin",
+    packSize: "20g Jar",
+    casId: "N/A",
+    image: "/products/shilajit_gold.webp",
+    additionalImages: [
+        "/products/shilajit_gold_2.webp",
+    "/products/shilajit_gold_3.jpg",
+    ],
+    metaTitle: "Buy XHeal Pahadi Shilajit Gold Resin Online | Healing Pharma",
+    metaDescription: "Buy XHeal Pahadi Shilajit Gold Resin. Authentic Himalayan Shilajit for vitality, stamina, and overall wellness. From Healing Pharma.",
+    description: "XHeal Pahadi Shilajit Gold Resin is a pure and potent dietary supplement derived from the Himalayan mountains, traditionally used to enhance vitality and energy.",
+    slug: "xheal-shilajit",
+    overview: [
+        "XHeal Pahadi Shilajit is a high-quality resin form of Shilajit, a natural substance found primarily in the Himalayan rocks.",
+        "It is formed over centuries by the slow decomposition of plant matter and is rich in fulvic acid and over 84 essential minerals.",
+        "Shilajit has been used for centuries in traditional Ayurvedic medicine as a powerful rejuvenator and adaptogen.",
+        "It is primarily known for its potential to enhance energy levels, improve stamina, and support overall physical performance.",
+        "The 'Gold' in its name often signifies a purified and potent form of the resin.",
+        "This supplement is believed to support healthy aging, cognitive function, and the body's natural immune defenses.",
+        "The resin form is considered the most authentic and traditional way to consume Shilajit.",
+        "It is sourced from high-altitude regions to ensure purity and potency."
+    ],
+    sideEffects: [
+        "Shilajit is generally well-tolerated when taken at recommended doses.",
+        "Some individuals might experience mild digestive issues like an upset stomach or nausea, especially when starting use.",
+        "Due to its mineral content, it may slightly lower blood pressure. Caution is advised for those on anti-hypertensive medication.",
+        "It can potentially increase uric acid levels; individuals with gout should consult a doctor.",
+        "Allergic reactions are rare but possible."
+    ],
+    administration: [
+        "Take a small, pea-sized amount (approximately 300-500 mg) of the resin.",
+        "Dissolve it in a glass of warm water, milk, or herbal tea. It dissolves more easily in warm liquid.",
+        "Stir well and drink preferably on an empty stomach in the morning for best absorption.",
+        "Alternatively, it can be taken as directed by your Ayurvedic practitioner.",
+        "Consistency is key for experiencing the benefits.",
+        "The 20g jar typically provides a 1-2 month supply depending on daily usage."
+    ],
+    warnings: [
+        "Do not use if you are allergic to Shilajit or any of its components.",
+        "Consult your healthcare provider before use if you are pregnant, nursing, have a medical condition (especially heart disease, gout, or low blood pressure), or are taking any prescription medications.",
+        "Not recommended for children.",
+        "Ensure you purchase Shilajit from a reputable source to avoid products that may contain heavy metals or other contaminants.",
+        "Start with a lower dose to assess your tolerance."
+    ],
+    how_it_works: [
+        "Shilajit's primary active component is fulvic acid, a powerful antioxidant and electrolyte that helps transport nutrients deep into cells.",
+        "It is believed to enhance mitochondrial function, which is the energy powerhouse of cells, leading to increased energy and stamina.",
+        "The fulvic acid in Shilajit helps improve the bioavailability of other nutrients and supports the body's natural detoxification processes.",
+        "It acts as an adaptogen, helping the body manage stress and maintain homeostasis.",
+        "Some research suggests it may support testosterone levels in men, contributing to vitality and strength.",
+        "Its rich mineral content helps replenish essential trace elements that may be missing from the modern diet."
+    ],
+    tips: [
+        "Store in a cool, dry place away from direct sunlight. Do not refrigerate.",
+        "Ensure the lid is tightly closed after each use to prevent the resin from drying out.",
+        "Use a clean, dry spatula or spoon to scoop out the resin to avoid contamination.",
+        "If the resin hardens, you can place the closed jar in a bowl of warm water to soften it.",
+        "It is recommended to cycle its use (e.g., take for 2-3 months, then take a 1-month break)."
+    ]
+},
+
+ {
+    id: "138",
+    name: {
+        en: "Derbeau Oil-Free Moisturizer with Hyaluronic Acid & Ceramide",
+    },
+    category: "Skincare",
+    brand: "Healing Pharma",
+    dosage: "N/A",
+    price: "299",
+    composition: "Hyaluronic Acid, Ceramide Complex",
+    form: "Moisturizer",
+    packSize: "75g Jar",
+    casId: "N/A",
+    image: "/products/derbeau.webp",
+    additionalImages: [
+        "/products/derbeau_2.webp",
+    "/products/derbeau_3.webp",
+    ],
+    metaTitle: "Buy Derbeau Oil-Free Moisturizer | Hyaluronic Acid & Ceramide | Healing Pharma",
+    metaDescription: "Buy Derbeau Oil-Free Moisturizer online. Lightweight daily moisturizer with Hyaluronic Acid and Ceramide for hydrated, healthy-looking skin. From Healing Pharma.",
+    description: "Derbeau Oil-Free Moisturizer is a lightweight, daily hydrating cream formulated with Hyaluronic Acid and Ceramides to nourish and protect the skin barrier without clogging pores.",
+    slug: "derbeau-moisturizer",
+    overview: [
+        "Derbeau Oil-Free Moisturizer is a daily facial hydrator designed for normal to oily and combination skin types.",
+        "Its lightweight, non-greasy formula provides essential hydration without adding excess oil or shine.",
+        "Infused with Hyaluronic Acid, a powerful humectant that attracts and retains moisture, keeping skin plump and hydrated.",
+        "Contains a Ceramide complex to help restore and strengthen the skin's natural protective barrier.",
+        "This helps to prevent moisture loss and protect the skin from environmental stressors.",
+        "The oil-free formulation ensures it won't clog pores, making it suitable for acne-prone skin.",
+        "Regular use can help improve skin texture, leaving it feeling soft, smooth, and refreshed.",
+        "It can be used both in the morning and at night as part of a basic skincare routine.",
+        "Free from parabens and phthalates."
+    ],
+    sideEffects: [
+        "Formulated for sensitive skin, side effects are rare.",
+        "Some individuals with extreme sensitivities might experience mild tingling or redness upon first use.",
+        "If irritation occurs, discontinue use and consult a dermatologist."
+    ],
+    administration: [
+        "Apply a small, pea-sized amount to clean, dry face and neck.",
+        "Gently massage in an upward, circular motion until fully absorbed.",
+        "Use twice daily, in the morning and evening, after cleansing and before applying sunscreen (in the AM).",
+        "For best results, use consistently as part of your daily skincare regimen."
+    ],
+    warnings: [
+        "For external use only.",
+        "Avoid direct contact with the eyes. If contact occurs, rinse thoroughly with water.",
+        "Do not apply to broken or irritated skin.",
+        "Discontinue use if signs of irritation or rash appear.",
+        "Keep out of reach of children.",
+        "Store in a cool, dry place."
+    ],
+    how_it_works: [
+        "Hyaluronic Acid acts like a moisture magnet. It can hold up to 1000 times its weight in water, drawing moisture from the environment into the skin's outer layers.",
+        "This helps to instantly hydrate the skin, reducing the appearance of fine lines and creating a smoother, plumper complexion.",
+        "Ceramides are lipid (fat) molecules that are naturally found in high concentrations in the cell membranes of the skin's top layers.",
+        "They make up a significant portion of the skin barrier (stratum corneum) and are essential for retaining moisture and preventing environmental aggressors from penetrating the skin.",
+        "Topical application of Ceramides helps replenish the skin's natural lipid barrier, improving hydration, resilience, and overall skin health."
+    ],
+    tips: [
+        "Apply to slightly damp skin to help lock in extra moisture.",
+        "For daytime use, follow up with a broad-spectrum sunscreen (SPF 30+) for complete protection.",
+        "Incorporate into your routine by applying after serums and before sunscreen or makeup.",
+        "If your skin feels particularly dry, you can apply a slightly thicker layer at night as a hydrating mask."
+    ]
+},
+ {
+    id: "139",
+    name: {
+        en: "Niacinamide and Salicylic Acid Ultra Foaming Face Wash",
+    },
+    category: "Skincare",
+    brand: "Healing Pharma",
+    dosage: "N/A",
+    price: "299",
+    composition: "Niacinamide, Salicylic Acid",
+    form: "Face Wash",
+    packSize: "100ml Tube",
+    casId: "N/A",
+    image: "/products/AcnetopFacewash.webp",
+    additionalImages: [
+        "/products/AcnetopFacewash_2.webp",
+    "/products/AcnetopFacewash_3.webp",
+    ],
+    metaTitle: "Buy Niacinamide & Salicylic Acid Ultra Foaming Face Wash | Healing Pharma",
+    metaDescription: "Buy Niacinamide and Salicylic Acid Ultra Foaming Face Wash. Deeply cleanses, exfoliates, and helps control acne. For clear, healthy-looking skin. From Healing Pharma.",
+    description: "This Ultra Foaming Face Wash combines the purifying power of Salicylic Acid with the soothing benefits of Niacinamide for a deep yet gentle cleanse, helping to clarify skin and reduce blemishes.",
+    slug: "niacinamide-face-wash",
+    overview: [
+        "This ultra-foaming face wash is formulated to deeply cleanse pores and remove excess oil, dirt, and impurities.",
+        "Contains Salicylic Acid, a beta-hydroxy acid (BHA) that penetrates deep into pores to exfoliate from within and help prevent and treat acne.",
+        "Infused with Niacinamide (Vitamin B3), known for its soothing, anti-inflammatory, and brightening properties.",
+        "Helps to reduce redness, calm irritation, and improve the appearance of uneven skin tone.",
+        "The foaming action provides a satisfying, thorough clean without stripping the skin of its natural moisture.",
+        "Ideal for oily, combination, and acne-prone skin types.",
+        "Regular use can lead to clearer, smoother, and more radiant-looking skin.",
+        "It helps control excess sebum production, reducing shine throughout the day."
+    ],
+    sideEffects: [
+        "Salicylic acid can cause mild dryness or peeling, especially when first starting use.",
+        "Some individuals might experience a slight tingling sensation.",
+        "If excessive dryness or irritation occurs, reduce frequency of use or discontinue and consult a dermatologist."
+    ],
+    administration: [
+        "Wet your face with lukewarm water.",
+        "Squeeze a small amount of face wash onto your palm.",
+        "Work into a rich lather by rubbing your hands together.",
+        "Gently massage the foam onto your face in circular motions, avoiding the immediate eye area.",
+        "Rinse thoroughly with water and pat your face dry with a clean towel.",
+        "Use once or twice daily as part of your regular skincare routine."
+    ],
+    warnings: [
+        "For external use only.",
+        "Avoid direct contact with the eyes. If contact occurs, rinse thoroughly with plenty of water.",
+        "Do not apply to broken, irritated, or sunburned skin.",
+        "If skin irritation develops or worsens, discontinue use and consult a physician.",
+        "Use sunscreen during the day, as AHAs/BHAs can increase sun sensitivity.",
+        "Keep out of reach of children."
+    ],
+    how_it_works: [
+        "Salicylic Acid is a lipophilic (oil-loving) BHA that can penetrate the lipid layers of the skin and get deep into pores.",
+        "Inside the pore, it helps dissolve excess sebum and exfoliate dead skin cells that can lead to clogs, blackheads, and acne lesions.",
+        "By keeping pores clear, it helps prevent future breakouts.",
+        "Niacinamide works synergistically by helping to regulate oil production and calm inflammation associated with acne.",
+        "It also helps to strengthen the skin's barrier function, improving resilience and reducing sensitivity that can be caused by exfoliating acids.",
+        "Together, they provide a powerful yet balanced approach to clarifying and perfecting the skin."
+    ],
+    tips: [
+        "For best results, use consistently as part of your morning and/or evening routine.",
+        "Follow up with a toner (if used), serum, moisturizer, and daytime sunscreen.",
+        "If your skin is new to exfoliating acids, start by using it once daily or every other day to allow your skin to adjust.",
+        "Avoid using other harsh exfoliating products (physical scrubs, strong chemical peels) on the same days to prevent over-exfoliation."
+    ]
+},
   
 ];

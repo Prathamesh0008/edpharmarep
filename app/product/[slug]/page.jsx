@@ -2,6 +2,64 @@
 import enData from "@/app/data/products/en";
 import ProductClient from "./ProductClient";
 
+function extractProducts(data) {
+  if (Array.isArray(data)) return data;
+  if (data?.default && Array.isArray(data.default)) return data.default;
+  if (data?.products && Array.isArray(data.products)) return data.products;
+  if (typeof data === "object" && data !== null)
+    return Object.values(data);
+  return [];
+}
+
+function generateProductSchema(product) {
+  return {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    name: product.name,
+    image: `https://www.edpharma.co${product.image}`,
+    description: product.metaDescription,
+    brand: {
+      "@type": "Brand",
+      name: "ED Pharma",
+    },
+    offers: {
+      "@type": "Offer",
+      url: `https://www.edpharma.co/product/${product.slug}`,
+      priceCurrency: "EUR",
+      price: product.price,
+      priceValidUntil: "2028-01-04",
+      availability: "https://schema.org/InStock",
+      itemCondition: "https://schema.org/NewCondition",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: product.review?.ratingValue || "5",
+      ratingCount: product.review?.ratingCount || "1",
+      reviewCount: product.review?.reviewCount || "1",
+    },
+    review: {
+      "@type": "Review",
+      name: product.name,
+      reviewBody:
+        product.review?.reviewBody ||
+        `${product.name} delivered excellent and reliable results. The tablets were genuine, professionally packaged, and delivered quickly across Europe. ED Pharma offers competitive wholesale pricing and dependable service.`,
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: product.review?.ratingValue || "5",
+      },
+      datePublished: product.review?.datePublished || "2025-11-08",
+      author: {
+        "@type": "Person",
+        name: product.review?.author || "John",
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "ED Pharma",
+      },
+    },
+  };
+}
+
 export async function generateMetadata({ params }) {
   try {
     const { slug } = await params;
@@ -95,8 +153,6 @@ export async function generateMetadata({ params }) {
       },
     };
   } catch (error) {
-
-    
     console.error("Error generating metadata:", error);
     return {
       title: "Product Details | ED Pharma",
@@ -111,5 +167,28 @@ export async function generateMetadata({ params }) {
 
 export default async function ProductPage({ params }) {
   const { slug } = await params;
-  return <ProductClient slug={slug} />;
+
+  const products = extractProducts(enData);
+  const product = products.find((p) => p.slug === slug);
+
+  if (!product) {
+    return <ProductClient slug={slug} />;
+  }
+
+  const schema = generateProductSchema(product);
+
+  return (
+    <>
+      {/* ✅ JSON-LD SCHEMA */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
+
+      {/* Your Client UI */}
+      <ProductClient slug={slug} />
+    </>
+  );
 }
