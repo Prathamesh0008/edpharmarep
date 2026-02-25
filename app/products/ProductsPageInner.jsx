@@ -85,7 +85,7 @@ const BRAND_THEMES = {
   },// NEW BRAND: Healing Pharma
   "Healing Pharma": {
     name: "Healing Pharma",
-    logo: "/logo/HealingLogo.png", // You'll need to add this image public\logo\HealingLogo.png
+    logo: "/logo/Healing.png", // You'll need to add this image public\logo\HealingLogo.png
     primary: "#2E7D32", // Deep green
     secondary: "#4CAF50", // Medium green
     accent: "#1B5E20", // Dark green
@@ -107,7 +107,7 @@ const BRAND_THEMES = {
   // NEW BRAND: Hab Pharma
   "Hab Pharma": {
     name: "Hab Pharma",
-    logo: "/logo/HabLogo.png", // You'll need to add this image public\logo\HabLogo.png
+    logo: "/logo/Hab.png", // You'll need to add this image public\logo\HabLogo.png
     primary: "#1565C0", // Deep blue
     secondary: "#1976D2", // Medium blue
     accent: "#0D47A1", // Dark blue
@@ -806,13 +806,14 @@ export default function ProductsPage() {
           )}
 
           <div className="flex items-center justify-center h-full w-full">
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28">
+            {/* Significantly larger logo container sizes */}
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36">
               <Image
                 src={b.logo}
                 alt={b.name}
                 fill
                 className="object-contain"
-                sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, 112px"
+                sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
                 priority={index === 0}
               />
             </div>
@@ -829,7 +830,7 @@ export default function ProductsPage() {
       );
     })}
   </div>
-</div> 
+</div>
 
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">

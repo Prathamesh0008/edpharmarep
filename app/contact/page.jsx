@@ -157,7 +157,7 @@ export default function ContactPage() {
       const TEMPLATE_ADMIN = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
       const TEMPLATE_USER = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_USER;
       const ADMIN_EMAIL =
-        process.env.NEXT_PUBLIC_ADMIN_EMAIL || "biopeptide07@gmail.com";
+        process.env.NEXT_PUBLIC_ADMIN_EMAIL || "sales@edpharma.co";
 
       if (!SERVICE_ID || !PUBLIC_KEY || !TEMPLATE_ADMIN || !TEMPLATE_USER) {
         throw new Error(

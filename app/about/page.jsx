@@ -23,11 +23,6 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-
-
-
-
-
 export default function AboutPage() {
   const { t, language } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
