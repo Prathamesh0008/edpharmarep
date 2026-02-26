@@ -4,8 +4,8 @@ const sq = {
   about: {
     hero: {
       tag: "RRETH NESH",
-      title: "Zbuloni ED_pharma – Mbrojmë Shëndetin Intim me Ekspertizë dhe Kujdes",
-      description1: "ED_pharma është një shpërndarës i specializuar Evropë-në-Evropë, i fokusuar në ilaçe cilësore për disfunksion erektil dhe shëndet seksual nga prodhuesit e besuar si Ajanta Pharma, Sunrise Remedies dhe Centurion.",
+      title: "Zbuloni ED pharma – Mbrojmë Shëndetin Intim me Ekspertizë dhe Kujdes",
+      description1: "ED pharma është një shpërndarës i specializuar Evropë-në-Evropë, i fokusuar në ilaçe cilësore për disfunksion erektil dhe shëndet seksual nga prodhuesit e besuar si Ajanta Pharma, Sunrise Remedies dhe Centurion.",
       description2: "Portofoliu ynë mbulon formulime të ngurta dhe xhele orale të ndërtuara rreth përbërësve aktivë të njohur përfshirë Sildenafil, Tadalafil, Avanafil, Vardenafil dhe Dapoksetinë, duke i lejuar partnerët t'i shërbejnë një spektri të gjerë të nevojave për trajtimin e DE dhe ejakulimit të parakohshëm, duke ruajtur në të njëjtën kohë standarde të forta sigurie dhe efikasiteti.",
       description3: 'Duke operuar nën moton "Evropa në Evropë", ne kombinojmë sigurimin cilësor rigoroz me logjistikë efikase, duke ndihmuar shitësit me shumicë, farmacitë dhe platformat online të kenë qasje në furnizim të qëndrueshëm nga prodhuesit indianë të vendosur, duke respektuar pritshmëritë rregullatore lokale.',
       downloadCatalogue: "Shkarkoni katalogun",
@@ -39,7 +39,7 @@ const sq = {
     journey: {
       tag: "UDHËTIMI YNË",
       title: "Ndërtimi i një rrjeti të dedikuar të furnizimit për DE në të gjithë Evropën",
-      description1: "ED_pharma u themelua për të lidhur kërkesën evropiane për terapira të besueshme të disfunksionit erektil me prodhuesit indianë me performancë të lartë. Duke u fokusuar ekskluzivisht në DE dhe indikacione të lidhura, ne mund të krijojmë një portofol që mbështet shitësit me shumicë, farmacitë dhe klinikat dixhitale me thellësi në vend të vëllimit.",
+      description1: "ED pharma u themelua për të lidhur kërkesën evropiane për terapira të besueshme të disfunksionit erektil me prodhuesit indianë me performancë të lartë. Duke u fokusuar ekskluzivisht në DE dhe indikacione të lidhura, ne mund të krijojmë një portofol që mbështet shitësit me shumicë, farmacitë dhe klinikat dixhitale me thellësi në vend të vëllimit.",
       description2: "Marrëdhëniet afatgjata me furnizuesit dhe klientët na ndihmojnë të ruajmë vazhdimësinë e furnizimit, komunikim transparent dhe pritshmëri të qarta për cilësinë, paketimin dhe dokumentimin.",
       readMore: "Lexoni më shumë",
     },
@@ -47,7 +47,7 @@ const sq = {
     howWeWork: {
       tag: "SI PUNOJMË",
       title: "Shërbim Evropë-në-Evropë me cilësinë në qendër",
-      description1: "Nga parashikimi deri te dërgimi përfundimtar, çdo porosi ED_pharma menaxhohet me gjurmueshmëri të qartë të serive, logjistikë të përshtatshme për temperaturën dhe dokumentim të përputhur me pritshmëritë evropiane.",
+      description1: "Nga parashikimi deri te dërgimi përfundimtar, çdo porosi ED pharma menaxhohet me gjurmueshmëri të qartë të serive, logjistikë të përshtatshme për temperaturën dhe dokumentim të përputhur me pritshmëritë evropiane.",
       description2: "Qëllimi është t'u japim partnerëve një pikë të vetme, të specializuar kontakti për ilaçet e DE – duke thjeshtuar furnizimin duke mbrojtur në të njëjtën kohë sigurinë e pacientëve dhe integritetin e produktit në të gjithë zinxhirin e furnizimit.",
       readMore: "Lexoni më shumë",
     },
@@ -84,18 +84,18 @@ const sq = {
       },
       network: {
         title: "Ndërtimi i një Rrjeti Furnizuesish me Thellësi",
-        intro: "Në vend që të ofrojmë një katalog të gjerë gjenerik, ED_pharma ndjek një model vertikal të specializuar të dedikuar molekulave të DE dhe shëndetit seksual të lidhur. Ky fokus i ngushtë terapeutik na lejon të ruajmë:",
+        intro: "Në vend që të ofrojmë një katalog të gjerë gjenerik, ED pharma ndjek një model vertikal të specializuar të dedikuar molekulave të DE dhe shëndetit seksual të lidhur. Ky fokus i ngushtë terapeutik na lejon të ruajmë:",
         bullets: [
           "Kontrata afatgjata me prodhues të vendosur të certifikuar GMP",
           "Furnizim i qëndrueshëm me formulime serish (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoksetinë)",
           "Paketim i kontrolluar sipas specifikave dhe dokumentim i verifikuar i eksportit",
-          "Dritare të dedikuara të planifikimit të prodhimit për porositë ED_pharma",
+          "Dritare të dedikuara të planifikimit të prodhimit për porositë ED pharma",
           "Cikle të parashikueshme MOQ për shitës me shumicë dhe klientë B2B",
         ],
       },
       europeIndia: {
         title: "Kërkesë Evropiane, Fuqi Prodhuese Indiane",
-        intro: "Tregu evropian kërkon vazhdimisht formulime DE cilësore me furnizim të qëndrueshëm dhe paketim të përputhur. Duke kombinuar prodhimin indian farmaceutik në shkallë të gjerë me operacionet logjistike të bazuara në Evropë, ED_pharma siguron:",
+        intro: "Tregu evropian kërkon vazhdimisht formulime DE cilësore me furnizim të qëndrueshëm dhe paketim të përputhur. Duke kombinuar prodhimin indian farmaceutik në shkallë të gjerë me operacionet logjistike të bazuara në Evropë, ED pharma siguron:",
         bullets: [
           "Cikle më të shpejta të rimbushjes për shitës me shumicë dhe farmaci",
           "Kompleksitet i reduktuar i transportit përmes rrugës Evropë-në-Evropë",
@@ -133,18 +133,18 @@ const sq = {
     sections: [
       {
         title: "Ndërtimi i një Rrjeti Furnizuesish me Thellësi",
-        intro: "Në vend që të ofrojmë një katalog të gjerë gjenerik, ED_pharma ndjek një model vertikal të specializuar të dedikuar molekulave të DE dhe shëndetit seksual të lidhur. Ky fokus i ngushtë terapeutik na lejon të ruajmë:",
+        intro: "Në vend që të ofrojmë një katalog të gjerë gjenerik, ED pharma ndjek një model vertikal të specializuar të dedikuar molekulave të DE dhe shëndetit seksual të lidhur. Ky fokus i ngushtë terapeutik na lejon të ruajmë:",
         bullets: [
           "Kontrata afatgjata me prodhues të vendosur të certifikuar GMP",
           "Furnizim i qëndrueshëm me formulime serish (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoksetinë)",
           "Paketim i kontrolluar sipas specifikave dhe dokumentim i verifikuar i eksportit",
-          "Dritare të dedikuara të planifikimit të prodhimit për porositë ED_pharma",
+          "Dritare të dedikuara të planifikimit të prodhimit për porositë ED pharma",
           "Cikle të parashikueshme MOQ për shitës me shumicë dhe klientë B2B",
         ],
       },
       {
         title: "Kërkesë Evropiane, Fuqi Prodhuese Indiane",
-        intro: "Tregu evropian kërkon vazhdimisht formulime DE cilësore me furnizim të qëndrueshëm dhe paketim të përputhur. Duke kombinuar prodhimin indian farmaceutik në shkallë të gjerë me operacionet logjistike të bazuara në Evropë, ED_pharma siguron:",
+        intro: "Tregu evropian kërkon vazhdimisht formulime DE cilësore me furnizim të qëndrueshëm dhe paketim të përputhur. Duke kombinuar prodhimin indian farmaceutik në shkallë të gjerë me operacionet logjistike të bazuara në Evropë, ED pharma siguron:",
         bullets: [
           "Cikle më të shpejta të rimbushjes për shitës me shumicë dhe farmaci",
           "Kompleksitet i reduktuar i transportit përmes rrugës Evropë-në-Evropë",
@@ -169,7 +169,7 @@ const sq = {
   termsPage: {
     header: {
       title: "Kushte dhe Kushtime",
-      subtitle: "Këto Kushte dhe Kushtime rregullojnë qasjen dhe përdorimin business-to-business në faqen e internetit dhe katalogun e produkteve të ED_pharma.",
+      subtitle: "Këto Kushte dhe Kushtime rregullojnë qasjen dhe përdorimin business-to-business në faqen e internetit dhe katalogun e produkteve të ED pharma.",
       complianceTitle: "Pajtueshmëria dhe Verifikimi B2B",
       complianceText: "Qasja është e kufizuar rreptësisht për shitës me shumicë të licencuar, farmaci dhe shpërndarës të autorizuar.",
     },
@@ -178,30 +178,30 @@ const sq = {
         number: "01",
         title: "Shtrirja e Përdorimit",
         text: "Kjo faqe interneti dhe katalog janë menduar ekskluzivisht për palët profesionale si shitës farmaceutikë me shumicë, farmaci, farmaci online, klinika dhe shpërndarës të licencuar brenda Evropës. Nuk është projektuar për shitje direkt me pacient apo për konsumatorë individualë.",
-        moreDetails: "Informacion shtesë:\n- Zbatohet për të gjitha produktet dhe katalogët.\n- Vetëm entitete të licencuara biznesi mund të ndërveprojnë me ED_pharma.\n- Rregulloret rajonale duhet të ndiqen gjithmonë.",
+        moreDetails: "Informacion shtesë:\n- Zbatohet për të gjitha produktet dhe katalogët.\n- Vetëm entitete të licencuara biznesi mund të ndërveprojnë me ED pharma.\n- Rregulloret rajonale duhet të ndiqen gjithmonë.",
       },
       {
         number: "02",
         title: "Marrëdhënia e Biznesit",
-        text: "Çdo ofertë, porosi apo dorëzim bëhet me kuptimin se të dyja palët veprojnë si biznese të pavarura. Asgjë në këtë faqe interneti nuk krijon një marrëdhënie punësimi, agjencije apo partneriteti midis ED_pharma dhe klientëve të saj.",
+        text: "Çdo ofertë, porosi apo dorëzim bëhet me kuptimin se të dyja palët veprojnë si biznese të pavarura. Asgjë në këtë faqe interneti nuk krijon një marrëdhënie punësimi, agjencije apo partneriteti midis ED pharma dhe klientëve të saj.",
         moreDetails: "Informacion shtesë:\n- Nuk lejohet përfaqësimi i palëve të treta.\n- Nuk nënkuptohet asnjë status françize, agjent apo partneriteti.\n- Të gjitha kontratat mbeten të pavarura midis të dy palëve.",
       },
       {
         number: "03",
         title: "Portofoli i Produkteve dhe Disponueshmëria",
-        text: "ED_pharma fokusohet në ilaçe për disfunksion erektil dhe shëndet seksual të prodhuara nga partnerë të miratuar. Gama e produkteve, markimi, paketimi dhe forcat mund të ndryshojnë pa njoftim parapublik dhe disponueshmëria mund të ndryshojë sipas vendit ose statusit rregullator.",
+        text: "ED pharma fokusohet në ilaçe për disfunksion erektil dhe shëndet seksual të prodhuara nga partnerë të miratuar. Gama e produkteve, markimi, paketimi dhe forcat mund të ndryshojnë pa njoftim parapublik dhe disponueshmëria mund të ndryshojë sipas vendit ose statusit rregullator.",
         moreDetails: "Informacion shtesë:\n- Mund të ndodhin variacione të produktit në varësi të përditësimeve të prodhuesit.\n- Paketimi mund të ndryshojë sipas vendit.\n- Disponueshmëria e stoqeve ndryshon çdo ditë.",
       },
       {
         number: "04",
         title: "Detyrimet Rregullatore dhe Licencimi",
-        text: "Çdo klient është përgjegjës për mbajtjen dhe ruajtjen e të gjitha licencave, lejeve dhe regjistrimeve të kërkuara për blerjen, depozitimin, marketingun dhe shpërndarjen e produkteve medicinale në territorin e vet. ED_pharma nuk autorizon rishitjen në jurisdiksione ku produktet nuk janë të pajtueshme me rregulloret lokale.",
-        moreDetails: "Informacion shtesë:\n- Çdo klient duhet të paraqesë dokumentet e nevojshme të pajtueshmërisë.\n- ED_pharma mund të kërkojë certifikata shtesë rregullatore.\n- Mospajtueshmëria mund të pezullojë operacionet.",
+        text: "Çdo klient është përgjegjës për mbajtjen dhe ruajtjen e të gjitha licencave, lejeve dhe regjistrimeve të kërkuara për blerjen, depozitimin, marketingun dhe shpërndarjen e produkteve medicinale në territorin e vet. ED pharma nuk autorizon rishitjen në jurisdiksione ku produktet nuk janë të pajtueshme me rregulloret lokale.",
+        moreDetails: "Informacion shtesë:\n- Çdo klient duhet të paraqesë dokumentet e nevojshme të pajtueshmërisë.\n- ED pharma mund të kërkojë certifikata shtesë rregullatore.\n- Mospajtueshmëria mund të pezullojë operacionet.",
       },
       {
         number: "05",
         title: "Porositja, Çmimet dhe Pagesa",
-        text: "Porositë janë të detyrueshme vetëm pasi të konfirmohen me shkrim nga ED_pharma. Çmimet, monedhat dhe kushtet e pagesës bien dakord nga klienti në klient dhe mund të përditësohen në oferta ose kontrata të reja. Pagesa e vonuar mund të rezultojë në pezullim të dorëzimeve ose tërheqje të lehtësive të kredisë.",
+        text: "Porositë janë të detyrueshme vetëm pasi të konfirmohen me shkrim nga ED pharma. Çmimet, monedhat dhe kushtet e pagesës bien dakord nga klienti në klient dhe mund të përditësohen në oferta ose kontrata të reja. Pagesa e vonuar mund të rezultojë në pezullim të dorëzimeve ose tërheqje të lehtësive të kredisë.",
         moreDetails: "Informacion shtesë:\n- Pranojmë pagesa në valutë të shumëfishtë bazuar në marrëveshje.\n- Porositë mund të ndalen nëse dokumentet ose pagesat vonohen.\n- Kufijtë e kredisë mund të zbatohen për disa blerës.",
       },
       {
@@ -213,25 +213,25 @@ const sq = {
       {
         number: "07",
         title: "Cilësia, Ruajtja dhe Kthimet",
-        text: "Klientët duhet të ruajnë dhe trajtojnë produktet në përputhje me kërkesat GDP, temperaturën dhe sigurinë dhe të ruajnë gjurmueshmëri të plotë serish. Kthimet pranohen vetëm kur janë para-autorizuar nga ED_pharma dhe kur mund të verifikohen integriteti, kushtet e ruajtjes dhe dokumentimi.",
+        text: "Klientët duhet të ruajnë dhe trajtojnë produktet në përputhje me kërkesat GDP, temperaturën dhe sigurinë dhe të ruajnë gjurmueshmëri të plotë serish. Kthimet pranohen vetëm kur janë para-autorizuar nga ED pharma dhe kur mund të verifikohen integriteti, kushtet e ruajtjes dhe dokumentimi.",
         moreDetails: "Informacion shtesë:\n- Kthimet pranohen vetëm me dëshmi të duhur ruajtjeje.\n- Mallrat e ndryshuara nuk mund të pranohen.\n- Të gjitha kthimet duhet të përputhen me numrat e serisë së furnizuar.",
       },
       {
         number: "08",
         title: "Farmakovigjilenca dhe Ankime",
-        text: "Reaksionet e dyshuara adverse, defektet e cilësisë ose ankimet për produktet e raportuara tek klientët duhet të komunikojnë në kohë me ED_pharma me të gjitha detajet e disponueshme në mënyrë që të mund të eskalohen te prodhuesi përkatës dhe autoritetet ku kërkohet.",
+        text: "Reaksionet e dyshuara adverse, defektet e cilësisë ose ankimet për produktet e raportuara tek klientët duhet të komunikojnë në kohë me ED pharma me të gjitha detajet e disponueshme në mënyrë që të mund të eskalohen te prodhuesi përkatës dhe autoritetet ku kërkohet.",
         moreDetails: "Informacion shtesë:\n- Çdo ngjarje serioze adverse duhet të raportohet brenda 24 orësh.\n- Të gjitha raportet eskalohen tek prodhuesit.\n- Mosraportimi mund të kufizojë porositë e ardhshme.",
       },
       {
         number: "09",
         title: "Mbrojtja e të Dhënave dhe Konfidencialiteti",
-        text: "Të dhënat e kontaktit të biznesit dhe informacionet e transaksionit përpunohen vetëm për të menaxhuar marrëdhënien komerciale, përmbushjen e porosive dhe pajtimin e detyrimeve ligjore. Listat e çmimeve, informacionet e produkteve dhe kushtet komerciale të ndara nga ED_pharma janë konfidenciale dhe nuk duhet të zbulohen palëve të treta të paautorizuara.",
-        moreDetails: "Informacion shtesë:\n- ED_pharma ndjek rreptësisht GDPR.\n- Të dhënat ruhen në mënyrë të sigurt vetëm për arsye rregullatore.\n- Nuk ndahen të dhëna me palët e treta.",
+        text: "Të dhënat e kontaktit të biznesit dhe informacionet e transaksionit përpunohen vetëm për të menaxhuar marrëdhënien komerciale, përmbushjen e porosive dhe pajtimin e detyrimeve ligjore. Listat e çmimeve, informacionet e produkteve dhe kushtet komerciale të ndara nga ED pharma janë konfidenciale dhe nuk duhet të zbulohen palëve të treta të paautorizuara.",
+        moreDetails: "Informacion shtesë:\n- ED pharma ndjek rreptësisht GDPR.\n- Të dhënat ruhen në mënyrë të sigurt vetëm për arsye rregullatore.\n- Nuk ndahen të dhëna me palët e treta.",
       },
       {
         number: "10",
         title: "Pronësia Intelektuale dhe Ndryshimet",
-        text: "Të gjitha markat tregtare, logot, veprat e artit dhe dizajnet e katalogut mbeten pronë e ED_pharma ose e prodhuesve përkatës dhe nuk mund të riprodhohen pa pëlqim me shkrim. ED_pharma mund të ndryshojë këto kushte dhe përmbajtjen e faqes së internetit në çdo kohë; përdorimi i vazhdueshëm tregon pranimin e kushteve të përditësuara.",
+        text: "Të gjitha markat tregtare, logot, veprat e artit dhe dizajnet e katalogut mbeten pronë e ED pharma ose e prodhuesve përkatës dhe nuk mund të riprodhohen pa pëlqim me shkrim. ED pharma mund të ndryshojë këto kushte dhe përmbajtjen e faqes së internetit në çdo kohë; përdorimi i vazhdueshëm tregon pranimin e kushteve të përditësuara.",
         moreDetails: "Informacion shtesë:\n- Keqpërdorimi i markës tregtare mund të çojë në veprime ligjore.\n- Paraqitja e katalogut mund të ndryshojë pa njoftim.\n- Brandimi personal kërkon miratim me shkrim.",
       },
     ],
@@ -634,11 +634,11 @@ homeProducts: {
       title: "sales@edpharma.co", 
       description: "Na dërgoni email për pyetje biznesi" 
     },
-    { 
-      icon: "📍", 
-      title: "London Eye Londër", 
-      description: "Vendndodhja kryesore e zyrës sonë" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "London Eye Londër", 
+    //   description: "Vendndodhja kryesore e zyrës sonë" 
+    // },
   ],
   form: {
     labels: {
@@ -999,6 +999,8 @@ productDetail: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
+      "Healing Pharma",
+      "Hab Pharma"
       
     ],
     contactInfo: {

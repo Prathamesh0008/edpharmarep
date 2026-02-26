@@ -37,6 +37,8 @@ export default function Footer() {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
+      "Healing Pharma",
+      "Hab Pharma"
     ],
     contactInfo: {
       address: "Europe",
@@ -122,7 +124,9 @@ export default function Footer() {
               const brandKey = {
                 "Ajanta Pharma": "ED Ajanta Pharma",
                 "Centurion Remedies": "ED Centurion Remedies",
-                "Sunrise Remedies": "ED Sunrise Remedies"
+                "Sunrise Remedies": "ED Sunrise Remedies",
+                "Healing Pharma": "Healing Pharma",
+                "Hab Pharma": "Hab Pharma",
               }[item];
               
               return (

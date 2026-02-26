@@ -23,7 +23,7 @@ const brands = [
   },
   {
     key: "Hab Pharma",
-    logo: "/logo/HabLogo.png",
+    logo: "/logo/Hab.png",
   },
 ];
 

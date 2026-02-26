@@ -37,7 +37,7 @@ export default function TermsPage() {
     header: {
       title: "Terms & Conditions",
       subtitle: "B2B Pharmaceutical Distribution Framework",
-      description: "These Terms & Conditions govern business-to-business access to and use of the ED_pharma website and product catalogue.",
+      description: "These Terms & Conditions govern business-to-business access to and use of the ED pharma website and product catalogue.",
       lastUpdated: "Last Updated: January 2026",
       version: "v2.4.1"
     },

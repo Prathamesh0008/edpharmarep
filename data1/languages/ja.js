@@ -685,11 +685,11 @@ contactPage: {
       title: "sales@edpharma.co", 
       description: "ビジネスに関するお問い合わせはメールで" 
     },
-    { 
-      icon: "📍", 
-      title: "ロンドン・アイ ロンドン", 
-      description: "本社所在地" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "ロンドン・アイ ロンドン", 
+    //   description: "本社所在地" 
+    // },
   ],
   form: {
     labels: {
@@ -1028,6 +1028,8 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
+    "Healing Pharma",
+      "Hab Pharma"
     
   ],
   contactInfo: {

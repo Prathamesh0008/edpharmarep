@@ -7,9 +7,9 @@ const en = {
     hero: {
       tag: "ABOUT US",
       title:
-        "Discover ED_pharma – Protecting Intimate Health With Expertise And Care",
+        "Discover ED pharma – Protecting Intimate Health With Expertise And Care",
       description1:
-        "ED_pharma is a specialised Europe-to-Europe distributor focused on high-quality erectile-dysfunction and sexual-health medicines from trusted manufacturers such as Ajanta Pharma, Sunrise Remedies and Centurion.",
+        "ED pharma is a specialised Europe-to-Europe distributor focused on high-quality erectile-dysfunction and sexual-health medicines from trusted manufacturers such as Ajanta Pharma, Sunrise Remedies and Centurion.",
       description2:
         "Our portfolio covers solid and oral-jelly formulations built around well-known active ingredients including Sildenafil, Tadalafil, Avanafil, Vardenafil and Dapoxetine, allowing partners to serve a broad spectrum of ED and premature-ejaculation treatment needs while maintaining strong safety and efficacy standards.",
       description3:
@@ -52,7 +52,7 @@ const en = {
       tag: "OUR JOURNEY",
       title: "Building a dedicated ED supply network across Europe",
       description1:
-        "ED_pharma was founded to bridge European demand for reliable erectile-dysfunction therapies with high-performing Indian manufacturers. By focusing exclusively on ED and related indications, we can curate a portfolio that supports wholesalers, pharmacies and digital clinics with depth instead of volume.",
+        "ED pharma was founded to bridge European demand for reliable erectile-dysfunction therapies with high-performing Indian manufacturers. By focusing exclusively on ED and related indications, we can curate a portfolio that supports wholesalers, pharmacies and digital clinics with depth instead of volume.",
       description2:
         "Long-term relationships with suppliers and customers help us maintain continuity of supply, transparent communication and clear expectations on quality, packaging and documentation.",
       readMore: "Read more",
@@ -62,7 +62,7 @@ const en = {
       tag: "HOW WE WORK",
       title: "Europe-to-Europe service with quality at the core",
       description1:
-        "From forecast to final shipment, every ED_pharma order is managed with clear batch traceability, temperature-appropriate logistics and documentation aligned to European expectations.",
+        "From forecast to final shipment, every ED pharma order is managed with clear batch traceability, temperature-appropriate logistics and documentation aligned to European expectations.",
       description2:
         "The goal is to give partners a single, specialised point of contact for ED medicines—simplifying sourcing while protecting patient safety and product integrity across the supply chain.",
       readMore: "Read more",
@@ -109,12 +109,12 @@ const en = {
     network: {
       title: "Building a Supplier Network With Depth",
       intro:
-        "Rather than offering a broad generic catalogue, ED_pharma follows a specialised vertical model dedicated to ED and related sexual-health molecules. This tight therapeutic focus enables us to maintain:",
+        "Rather than offering a broad generic catalogue, ED pharma follows a specialised vertical model dedicated to ED and related sexual-health molecules. This tight therapeutic focus enables us to maintain:",
       bullets: [
         "Long-term contracts with established GMP-certified manufacturers",
         "Batch-consistent formulation sourcing (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoxetine)",
         "Spec-controlled packaging and verified export documentation",
-        "Dedicated production planning windows for ED_pharma orders",
+        "Dedicated production planning windows for ED pharma orders",
         "Predictable MOQ cycles for wholesalers and B2B clients"
       ]
     },
@@ -122,7 +122,7 @@ const en = {
     europeIndia: {
       title: "European Demand, Indian Manufacturing Strength",
       intro:
-        "The European market continuously demands high-quality ED formulations with stable supply and compliant packaging. By combining Indian large-scale pharmaceutical production with Europe-based logistical operations, ED_pharma ensures:",
+        "The European market continuously demands high-quality ED formulations with stable supply and compliant packaging. By combining Indian large-scale pharmaceutical production with Europe-based logistical operations, ED pharma ensures:",
       bullets: [
         "Faster replenishment cycles for wholesalers and pharmacies",
         "Reduced shipping complexity via Europe-to-Europe routing",
@@ -165,18 +165,18 @@ journeyPage: {
   sections: [
     {
       title: "Building a Supplier Network With Depth",
-      intro: "Rather than offering a broad generic catalogue, ED_pharma follows a specialised vertical model dedicated to ED and related sexual-health molecules. This tight therapeutic focus enables us to maintain:",
+      intro: "Rather than offering a broad generic catalogue, ED pharma follows a specialised vertical model dedicated to ED and related sexual-health molecules. This tight therapeutic focus enables us to maintain:",
       bullets: [
         "Long-term contracts with established GMP-certified manufacturers",
         "Batch-consistent formulation sourcing (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoxetine)",
         "Spec-controlled packaging and verified export documentation",
-        "Dedicated production planning windows for ED_pharma orders",
+        "Dedicated production planning windows for ED pharma orders",
         "Predictable MOQ cycles for wholesalers and B2B clients",
       ],
     },
     {
       title: "European Demand, Indian Manufacturing Strength",
-      intro: "The European market continuously demands high-quality ED formulations with stable supply and compliant packaging. By combining Indian large-scale pharmaceutical production with Europe-based logistical operations, ED_pharma ensures:",
+      intro: "The European market continuously demands high-quality ED formulations with stable supply and compliant packaging. By combining Indian large-scale pharmaceutical production with Europe-based logistical operations, ED pharma ensures:",
       bullets: [
         "Faster replenishment cycles for wholesalers and pharmacies",
         "Reduced shipping complexity via Europe-to-Europe routing",
@@ -201,7 +201,7 @@ journeyPage: {
 termsPage: {
   header: {
     title: "Terms & Conditions",
-    subtitle: "These Terms & Conditions govern business-to-business access to and use of the ED_pharma website and product catalogue.",
+    subtitle: "These Terms & Conditions govern business-to-business access to and use of the ED pharma website and product catalogue.",
     complianceTitle: "B2B Compliance & Verification",
     complianceText: "Access is strictly limited to licensed wholesalers, pharmacies, and authorised distributors."
   },
@@ -210,30 +210,30 @@ termsPage: {
       number: "01",
       title: "Scope of Use",
       text: "This website and catalogue are intended exclusively for professional counterparties such as pharmaceutical wholesalers, pharmacies, online pharmacies, clinics and licensed distributors within Europe. It is not designed for direct-to-patient sales or for individual consumers.",
-      moreDetails: "Additional Information:\n- Applies to all products and catalogues.\n- Only licensed business entities may interact with ED_pharma.\n- Regional regulations must always be followed."
+      moreDetails: "Additional Information:\n- Applies to all products and catalogues.\n- Only licensed business entities may interact with ED pharma.\n- Regional regulations must always be followed."
     },
     {
       number: "02",
       title: "Business Relationship",
-      text: "Any quotation, order or delivery is made on the understanding that both parties operate as independent businesses. Nothing on this website creates an employment, agency or partnership relationship between ED_pharma and its customers.",
+      text: "Any quotation, order or delivery is made on the understanding that both parties operate as independent businesses. Nothing on this website creates an employment, agency or partnership relationship between ED pharma and its customers.",
       moreDetails: "Additional Information:\n- No third-party representation allowed.\n- No franchise, agent or partnership status is implied.\n- All contracts remain independent between both parties."
     },
     {
       number: "03",
       title: "Product Portfolio & Availability",
-      text: "ED_pharma focuses on erectile-dysfunction and sexual-health medicines manufactured by approved partners. Product range, branding, packaging and strengths may change without prior public notice and availability can vary by country or regulatory status.",
+      text: "ED pharma focuses on erectile-dysfunction and sexual-health medicines manufactured by approved partners. Product range, branding, packaging and strengths may change without prior public notice and availability can vary by country or regulatory status.",
       moreDetails: "Additional Information:\n- Product variations may occur depending on manufacturer updates.\n- Packaging may vary by country.\n- Stock availability changes daily."
     },
     {
       number: "04",
       title: "Regulatory & Licensing Duties",
-      text: "Each customer is responsible for holding and maintaining all licences, permits and registrations required to purchase, store, market and distribute medicinal products in its own territory. ED_pharma does not authorise resale into jurisdictions where products are not compliant with local regulations.",
-      moreDetails: "Additional Information:\n- Each customer must submit required compliance documents.\n- ED_pharma may request additional regulatory certificates.\n- Non-compliance may suspend operations."
+      text: "Each customer is responsible for holding and maintaining all licences, permits and registrations required to purchase, store, market and distribute medicinal products in its own territory. ED pharma does not authorise resale into jurisdictions where products are not compliant with local regulations.",
+      moreDetails: "Additional Information:\n- Each customer must submit required compliance documents.\n- ED pharma may request additional regulatory certificates.\n- Non-compliance may suspend operations."
     },
     {
       number: "05",
       title: "Ordering, Pricing & Payment",
-      text: "Orders are only binding once confirmed in writing by ED_pharma. Prices, currencies and payment terms are agreed on a customer-by-customer basis and may be updated in new offers or contracts. Late payment may result in suspension of deliveries or withdrawal of credit facilities.",
+      text: "Orders are only binding once confirmed in writing by ED pharma. Prices, currencies and payment terms are agreed on a customer-by-customer basis and may be updated in new offers or contracts. Late payment may result in suspension of deliveries or withdrawal of credit facilities.",
       moreDetails: "Additional Information:\n- Multi-currency payments accepted based on agreements.\n- Orders may be paused if documents or payments are delayed.\n- Credit limits may apply to some buyers."
     },
     {
@@ -245,25 +245,25 @@ termsPage: {
     {
       number: "07",
       title: "Quality, Storage & Returns",
-      text: "Customers must store and handle products in accordance with GDP, temperature and security requirements and maintain full batch traceability. Returns are only accepted when pre-authorised by ED_pharma and where integrity, storage conditions and documentation can be verified.",
+      text: "Customers must store and handle products in accordance with GDP, temperature and security requirements and maintain full batch traceability. Returns are only accepted when pre-authorised by ED pharma and where integrity, storage conditions and documentation can be verified.",
       moreDetails: "Additional Information:\n- Returns only accepted with proper storage proof.\n- Tampered goods cannot be accepted.\n- All returns must match supplied batch numbers."
     },
     {
       number: "08",
       title: "Pharmacovigilance & Complaints",
-      text: "Suspected adverse reactions, quality defects or product complaints reported to customers must be communicated promptly to ED_pharma with all available details so they can be escalated to the relevant manufacturer and authorities where required.",
+      text: "Suspected adverse reactions, quality defects or product complaints reported to customers must be communicated promptly to ED pharma with all available details so they can be escalated to the relevant manufacturer and authorities where required.",
       moreDetails: "Additional Information:\n- Any serious adverse event must be reported within 24 hours.\n- All reports are escalated to manufacturers.\n- Failure to report may restrict future orders."
     },
     {
       number: "09",
       title: "Data Protection & Confidentiality",
-      text: "Business contact data and transaction information are processed only to manage the commercial relationship, fulfil orders and comply with legal obligations. Price lists, product information and commercial terms shared by ED_pharma are confidential and must not be disclosed to unauthorised third parties.",
-      moreDetails: "Additional Information:\n- ED_pharma strictly follows GDPR.\n- Data stored securely for regulatory reasons only.\n- No data shared with third parties."
+      text: "Business contact data and transaction information are processed only to manage the commercial relationship, fulfil orders and comply with legal obligations. Price lists, product information and commercial terms shared by ED pharma are confidential and must not be disclosed to unauthorised third parties.",
+      moreDetails: "Additional Information:\n- ED pharma strictly follows GDPR.\n- Data stored securely for regulatory reasons only.\n- No data shared with third parties."
     },
     {
       number: "10",
       title: "Intellectual Property & Changes",
-      text: "All trademarks, logos, artwork and catalogue designs remain the property of ED_pharma or the respective manufacturers and may not be reproduced without written consent. ED_pharma may amend these terms and website content at any time; continued use indicates acceptance of the updated terms.",
+      text: "All trademarks, logos, artwork and catalogue designs remain the property of ED pharma or the respective manufacturers and may not be reproduced without written consent. ED pharma may amend these terms and website content at any time; continued use indicates acceptance of the updated terms.",
       moreDetails: "Additional Information:\n- Trademark misuse may lead to legal action.\n- Catalogue layouts may change without notice.\n- Custom branding requires written approval."
     }
   ]
@@ -616,11 +616,11 @@ contactPage: {
       title: "sales@edpharma.co", 
       description: "Email us for business inquiries" 
     },
-    { 
-      icon: "📍", 
-      title: "London Eye London", 
-      description: "Our main office location" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "London Eye London", 
+    //   description: "Our main office location" 
+    // },
   ],
   form: {
     labels: {
@@ -1011,6 +1011,8 @@ testimonials: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
+      "Healing Pharma",
+      "Hab Pharma"
     ],
     contactInfo: {
       address: "Europe",

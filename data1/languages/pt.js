@@ -3,9 +3,9 @@
     hero: {
       tag: "SOBRE NÓS",
       title:
-        "Descubra a ED_pharma – Protegendo a saúde íntima com experiência e cuidado",
+        "Descubra a ED pharma – Protegendo a saúde íntima com experiência e cuidado",
       description1:
-        "A ED_pharma é uma distribuidora especializada de Europa para Europa, focada em medicamentos de alta qualidade para disfunção erétil e saúde sexual, provenientes de fabricantes confiáveis como Ajanta Pharma, Sunrise Remedies e Centurion.",
+        "A ED pharma é uma distribuidora especializada de Europa para Europa, focada em medicamentos de alta qualidade para disfunção erétil e saúde sexual, provenientes de fabricantes confiáveis como Ajanta Pharma, Sunrise Remedies e Centurion.",
       description2:
         "O nosso portfólio inclui formulações sólidas e geles orais baseados em princípios ativos bem conhecidos, como Sildenafil, Tadalafil, Avanafil, Vardenafil e Dapoxetina, permitindo que os parceiros atendam a um amplo espectro de necessidades terapêuticas mantendo elevados padrões de segurança e eficácia.",
       description3:
@@ -47,7 +47,7 @@
       tag: "A NOSSA JORNADA",
       title: "Construindo uma rede dedicada de fornecimento de ED na Europa",
       description1:
-        "A ED_pharma foi fundada para ligar a procura europeia por terapias fiáveis de disfunção erétil a fabricantes indianos de alto desempenho. Ao focarmo-nos exclusivamente em ED e indicações relacionadas, oferecemos profundidade em vez de volume.",
+        "A ED pharma foi fundada para ligar a procura europeia por terapias fiáveis de disfunção erétil a fabricantes indianos de alto desempenho. Ao focarmo-nos exclusivamente em ED e indicações relacionadas, oferecemos profundidade em vez de volume.",
       description2:
         "Relações de longo prazo com fornecedores e clientes ajudam a garantir continuidade de fornecimento, comunicação transparente e expectativas claras quanto à qualidade, embalagem e documentação.",
       readMore: "Ler mais",
@@ -57,7 +57,7 @@
       tag: "COMO TRABALHAMOS",
       title: "Serviço Europa para Europa com qualidade no centro",
       description1:
-        "Desde a previsão até ao envio final, cada encomenda da ED_pharma é gerida com rastreabilidade clara de lotes, logística adequada à temperatura e documentação alinhada com as expectativas europeias.",
+        "Desde a previsão até ao envio final, cada encomenda da ED pharma é gerida com rastreabilidade clara de lotes, logística adequada à temperatura e documentação alinhada com as expectativas europeias.",
       description2:
         "O objetivo é oferecer aos parceiros um ponto de contacto único e especializado para medicamentos de ED, simplificando o abastecimento enquanto protege a segurança do paciente e a integridade do produto.",
       readMore: "Ler mais",
@@ -117,7 +117,7 @@
     network: {
       title: "Construção de uma Rede de Fornecedores Especializada",
       intro:
-        "Em vez de um catálogo genérico amplo, a ED_pharma segue um modelo vertical especializado.",
+        "Em vez de um catálogo genérico amplo, a ED pharma segue um modelo vertical especializado.",
       bullets: [
         "Contratos de longo prazo com fabricantes certificados GMP",
         "Fornecimento consistente por lote",
@@ -167,7 +167,7 @@ howWeWorkPage: {
   introCard: {
     title: "Como trabalhamos",
     description:
-      "A ED_pharma opera com um modelo B2B Europa-a-Europa focado em confiabilidade e conformidade."
+      "A ED pharma opera com um modelo B2B Europa-a-Europa focado em confiabilidade e conformidade."
   },
 
   sections: [
@@ -248,18 +248,18 @@ journeyPage: {
   sections: [
     {
       title: "Construindo uma Rede de Fornecedores com Profundidade",
-      intro: "Em vez de oferecer um catálogo genérico amplo, a ED_pharma segue um modelo vertical especializado dedicado a moléculas para DE e saúde sexual relacionada. Este foco terapêutico rigoroso permite-nos manter:",
+      intro: "Em vez de oferecer um catálogo genérico amplo, a ED pharma segue um modelo vertical especializado dedicado a moléculas para DE e saúde sexual relacionada. Este foco terapêutico rigoroso permite-nos manter:",
       bullets: [
         "Contratos de longo prazo com fabricantes estabelecidos e certificados GMP",
         "Aprovisionamento de formulações consistentes por lote (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoxetina)",
         "Embalagens com especificações controladas e documentação de exportação verificada",
-        "Janelas de planeamento de produção dedicadas para encomendas da ED_pharma",
+        "Janelas de planeamento de produção dedicadas para encomendas da ED pharma",
         "Ciclos de MOQ (Quantidade Mínima de Encomenda) previsíveis para grossistas e clientes B2B",
       ],
     },
     {
       title: "Procura Europeia, Força de Fabrico Indiana",
-      intro: "O mercado europeu exige continuamente formulações para DE de alta qualidade com fornecimento estável e embalagens em conformidade. Ao combinar a produção farmacêutica em larga escala da Índia com operações logísticas baseadas na Europa, a ED_pharma assegura:",
+      intro: "O mercado europeu exige continuamente formulações para DE de alta qualidade com fornecimento estável e embalagens em conformidade. Ao combinar a produção farmacêutica em larga escala da Índia com operações logísticas baseadas na Europa, a ED pharma assegura:",
       bullets: [
         "Ciclos de reabastecimento mais rápidos para grossistas e farmácias",
         "Complexidade de envio reduzida via rotas Europa-para-Europa",
@@ -284,7 +284,7 @@ journeyPage: {
 termsPage: {
   header: {
     title: "Termos e Condições",
-    subtitle: "Estes Termos e Condições regem o acesso e uso business-to-business (B2B) do site e catálogo de produtos da ED_pharma.",
+    subtitle: "Estes Termos e Condições regem o acesso e uso business-to-business (B2B) do site e catálogo de produtos da ED pharma.",
     complianceTitle: "Conformidade e Verificação B2B",
     complianceText: "O acesso é estritamente limitado a grossistas licenciados, farmácias e distribuidores autorizados."
   },
@@ -293,30 +293,30 @@ termsPage: {
       number: "01",
       title: "Âmbito de Uso",
       text: "Este site e catálogo destinam-se exclusivamente a contrapartes profissionais, tais como grossistas farmacêuticos, farmácias, farmácias online, clínicas e distribuidores licenciados na Europa. Não foi concebido para vendas diretas ao paciente ou para consumidores individuais.",
-      moreDetails: "Informação Adicional:\n- Aplica-se a todos os produtos e catálogos.\n- Apenas entidades comerciais licenciadas podem interagir com a ED_pharma.\n- Os regulamentos regionais devem ser sempre seguidos."
+      moreDetails: "Informação Adicional:\n- Aplica-se a todos os produtos e catálogos.\n- Apenas entidades comerciais licenciadas podem interagir com a ED pharma.\n- Os regulamentos regionais devem ser sempre seguidos."
     },
     {
       number: "02",
       title: "Relacionamento Comercial",
-      text: "Qualquer cotação, encomenda ou entrega é feita no entendimento de que ambas as partes operam como negócios independentes. Nada neste site cria uma relação de emprego, agência ou parceria entre a ED_pharma e os seus clientes.",
+      text: "Qualquer cotação, encomenda ou entrega é feita no entendimento de que ambas as partes operam como negócios independentes. Nada neste site cria uma relação de emprego, agência ou parceria entre a ED pharma e os seus clientes.",
       moreDetails: "Informação Adicional:\n- Não é permitida representação por terceiros.\n- Não está implícito nenhum estatuto de franquia, agente ou parceria.\n- Todos os contratos permanecem independentes entre ambas as partes."
     },
     {
       number: "03",
       title: "Portfólio de Produtos e Disponibilidade",
-      text: "A ED_pharma foca-se em medicamentos para disfunção erétil e saúde sexual fabricados por parceiros aprovados. A gama de produtos, marca, embalagem e dosagens podem mudar sem aviso público prévio e a disponibilidade pode variar por país ou estatuto regulamentar.",
+      text: "A ED pharma foca-se em medicamentos para disfunção erétil e saúde sexual fabricados por parceiros aprovados. A gama de produtos, marca, embalagem e dosagens podem mudar sem aviso público prévio e a disponibilidade pode variar por país ou estatuto regulamentar.",
       moreDetails: "Informação Adicional:\n- Podem ocorrer variações no produto dependendo das atualizações do fabricante.\n- A embalagem pode variar por país.\n- A disponibilidade de stock muda diariamente."
     },
     {
       number: "04",
       title: "Deveres Regulamentares e de Licenciamento",
-      text: "Cada cliente é responsável por deter e manter todas as licenças, autorizações e registos necessários para comprar, armazenar, comercializar e distribuir produtos medicinais no seu próprio território. A ED_pharma não autoriza a revenda em jurisdições onde os produtos não estejam em conformidade com os regulamentos locais.",
-      moreDetails: "Informação Adicional:\n- Cada cliente deve submeter os documentos de conformidade exigidos.\n- A ED_pharma pode solicitar certificados regulamentares adicionais.\n- A não conformidade pode suspender as operações."
+      text: "Cada cliente é responsável por deter e manter todas as licenças, autorizações e registos necessários para comprar, armazenar, comercializar e distribuir produtos medicinais no seu próprio território. A ED pharma não autoriza a revenda em jurisdições onde os produtos não estejam em conformidade com os regulamentos locais.",
+      moreDetails: "Informação Adicional:\n- Cada cliente deve submeter os documentos de conformidade exigidos.\n- A ED pharma pode solicitar certificados regulamentares adicionais.\n- A não conformidade pode suspender as operações."
     },
     {
       number: "05",
       title: "Encomendas, Preços e Pagamento",
-      text: "As encomendas só são vinculativas após confirmação por escrito da ED_pharma. Preços, moedas e termos de pagamento são acordados cliente a cliente e podem ser atualizados em novas ofertas ou contratos. O atraso no pagamento pode resultar na suspensão de entregas ou retirada de facilidades de crédito.",
+      text: "As encomendas só são vinculativas após confirmação por escrito da ED pharma. Preços, moedas e termos de pagamento são acordados cliente a cliente e podem ser atualizados em novas ofertas ou contratos. O atraso no pagamento pode resultar na suspensão de entregas ou retirada de facilidades de crédito.",
       moreDetails: "Informação Adicional:\n- Pagamentos em várias moedas aceites com base em acordos.\n- As encomendas podem ser pausadas se documentos ou pagamentos estiverem atrasados.\n- Podem aplicar-se limites de crédito a alguns compradores."
     },
     {
@@ -328,25 +328,25 @@ termsPage: {
     {
       number: "07",
       title: "Qualidade, Armazenamento e Devoluções",
-      text: "Os clientes devem armazenar e manusear os produtos de acordo com as BPD (GDP), requisitos de temperatura e segurança e manter total rastreabilidade dos lotes. Devoluções só são aceites quando pré-autorizadas pela ED_pharma e onde a integridade, condições de armazenamento e documentação possam ser verificadas.",
+      text: "Os clientes devem armazenar e manusear os produtos de acordo com as BPD (GDP), requisitos de temperatura e segurança e manter total rastreabilidade dos lotes. Devoluções só são aceites quando pré-autorizadas pela ED pharma e onde a integridade, condições de armazenamento e documentação possam ser verificadas.",
       moreDetails: "Informação Adicional:\n- Devoluções só aceites com prova de armazenamento adequado.\n- Bens adulterados não podem ser aceites.\n- Todas as devoluções devem corresponder aos números de lote fornecidos."
     },
     {
       number: "08",
       title: "Farmacovigilância e Reclamações",
-      text: "Suspeitas de reações adversas, defeitos de qualidade ou reclamações de produtos reportadas aos clientes devem ser comunicadas prontamente à ED_pharma com todos os detalhes disponíveis para que possam ser escaladas ao fabricante relevante e às autoridades, quando necessário.",
+      text: "Suspeitas de reações adversas, defeitos de qualidade ou reclamações de produtos reportadas aos clientes devem ser comunicadas prontamente à ED pharma com todos os detalhes disponíveis para que possam ser escaladas ao fabricante relevante e às autoridades, quando necessário.",
       moreDetails: "Informação Adicional:\n- Qualquer evento adverso grave deve ser reportado dentro de 24 horas.\n- Todos os relatórios são escalados aos fabricantes.\n- A falha em reportar pode restringir encomendas futuras."
     },
     {
       number: "09",
       title: "Proteção de Dados e Confidencialidade",
-      text: "Dados de contacto comercial e informações de transações são processados apenas para gerir a relação comercial, cumprir encomendas e obrigações legais. Listas de preços, informações de produtos e termos comerciais partilhados pela ED_pharma são confidenciais e não devem ser divulgados a terceiros não autorizados.",
-      moreDetails: "Informação Adicional:\n- A ED_pharma segue rigorosamente o RGPD (GDPR).\n- Dados armazenados de forma segura apenas por razões regulamentares.\n- Nenhum dado partilhado com terceiros."
+      text: "Dados de contacto comercial e informações de transações são processados apenas para gerir a relação comercial, cumprir encomendas e obrigações legais. Listas de preços, informações de produtos e termos comerciais partilhados pela ED pharma são confidenciais e não devem ser divulgados a terceiros não autorizados.",
+      moreDetails: "Informação Adicional:\n- A ED pharma segue rigorosamente o RGPD (GDPR).\n- Dados armazenados de forma segura apenas por razões regulamentares.\n- Nenhum dado partilhado com terceiros."
     },
     {
       number: "10",
       title: "Propriedade Intelectual e Alterações",
-      text: "Todas as marcas registadas, logótipos, obras de arte e designs de catálogo permanecem propriedade da ED_pharma ou dos respetivos fabricantes e não podem ser reproduzidos sem consentimento por escrito. A ED_pharma pode alterar estes termos e o conteúdo do site a qualquer momento; o uso continuado indica aceitação dos termos atualizados.",
+      text: "Todas as marcas registadas, logótipos, obras de arte e designs de catálogo permanecem propriedade da ED pharma ou dos respetivos fabricantes e não podem ser reproduzidos sem consentimento por escrito. A ED pharma pode alterar estes termos e o conteúdo do site a qualquer momento; o uso continuado indica aceitação dos termos atualizados.",
       moreDetails: "Informação Adicional:\n- O uso indevido de marca registada pode levar a ação legal.\n- Os layouts do catálogo podem mudar sem aviso prévio.\n- Branding personalizado requer aprovação por escrito."
     }
   ]
@@ -748,11 +748,11 @@ contactPage: {
       title: "sales@edpharma.co", 
       description: "Envie-nos email para consultas comerciais" 
     },
-    { 
-      icon: "📍", 
-      title: "London Eye Londres", 
-      description: "Nossa localização principal" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "London Eye Londres", 
+    //   description: "Nossa localização principal" 
+    // },
   ],
   form: {
     labels: {
@@ -1077,6 +1077,8 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
+    "Healing Pharma",
+      "Hab Pharma"
     
   ],
   contactInfo: {

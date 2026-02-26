@@ -3,9 +3,9 @@ const nl = {
     hero: {
       tag: "OVER ONS",
       title:
-        "Ontdek ED_pharma – Bescherming van intieme gezondheid met expertise en zorg",
+        "Ontdek ED pharma – Bescherming van intieme gezondheid met expertise en zorg",
       description1:
-        "ED_pharma is een gespecialiseerde Europa-tot-Europa distributeur die zich richt op hoogwaardige geneesmiddelen voor erectiestoornissen en seksuele gezondheid, afkomstig van betrouwbare fabrikanten zoals Ajanta Pharma, Sunrise Remedies en Centurion.",
+        "ED pharma is een gespecialiseerde Europa-tot-Europa distributeur die zich richt op hoogwaardige geneesmiddelen voor erectiestoornissen en seksuele gezondheid, afkomstig van betrouwbare fabrikanten zoals Ajanta Pharma, Sunrise Remedies en Centurion.",
       description2:
         "Ons portfolio omvat vaste toedieningsvormen en orale gels op basis van bekende werkzame stoffen zoals Sildenafil, Tadalafil, Avanafil, Vardenafil en Dapoxetine, waardoor partners een breed scala aan behandelingsbehoeften kunnen bedienen met behoud van hoge veiligheids- en werkzaamheidsnormen.",
       description3:
@@ -47,7 +47,7 @@ const nl = {
       tag: "ONZE REIS",
       title: "Het opbouwen van een toegewijd ED-leveringsnetwerk in Europa",
       description1:
-        "ED_pharma is opgericht om de Europese vraag naar betrouwbare therapieën voor erectiestoornissen te verbinden met hoogwaardige Indiase fabrikanten. Door exclusief te focussen op ED en gerelateerde indicaties bieden wij diepgang in plaats van volume.",
+        "ED pharma is opgericht om de Europese vraag naar betrouwbare therapieën voor erectiestoornissen te verbinden met hoogwaardige Indiase fabrikanten. Door exclusief te focussen op ED en gerelateerde indicaties bieden wij diepgang in plaats van volume.",
       description2:
         "Langdurige relaties met leveranciers en klanten helpen ons om continuïteit van levering, transparante communicatie en duidelijke verwachtingen op het gebied van kwaliteit, verpakking en documentatie te waarborgen.",
       readMore: "Lees meer",
@@ -57,7 +57,7 @@ const nl = {
       tag: "HOE WIJ WERKEN",
       title: "Europa-tot-Europa service met kwaliteit als kern",
       description1:
-        "Van prognose tot uiteindelijke verzending wordt elke ED_pharma-bestelling beheerd met duidelijke batchtraceerbaarheid, geschikte logistiek en documentatie volgens Europese normen.",
+        "Van prognose tot uiteindelijke verzending wordt elke ED pharma-bestelling beheerd met duidelijke batchtraceerbaarheid, geschikte logistiek en documentatie volgens Europese normen.",
       description2:
         "Het doel is om partners één gespecialiseerd aanspreekpunt te bieden voor ED-geneesmiddelen, waardoor inkoop wordt vereenvoudigd en tegelijkertijd patiëntveiligheid en productintegriteit worden beschermd.",
       readMore: "Lees meer",
@@ -111,7 +111,7 @@ const nl = {
   introCard: {
     title: "Onze werkwijze",
     description:
-      "ED_pharma hanteert een gestructureerd Europa-naar-Europa B2B-leveringsmodel voor distributeurs, online klinieken, apotheken en groothandels."
+      "ED pharma hanteert een gestructureerd Europa-naar-Europa B2B-leveringsmodel voor distributeurs, online klinieken, apotheken en groothandels."
   },
 
   sections: [
@@ -164,7 +164,7 @@ const nl = {
     {
       title: "Eén aanspreekpunt voor ED-geneesmiddelen",
       description:
-        "ED_pharma vereenvoudigt sourcing via één gespecialiseerde partner.",
+        "ED pharma vereenvoudigt sourcing via één gespecialiseerde partner.",
       highlight:
         "Ontworpen voor professionele kopers met hoge eisen aan betrouwbaarheid en continuïteit."
     }
@@ -188,18 +188,18 @@ journeyPage: {
   sections: [
     {
       title: "Bouwen aan een Leveranciersnetwerk met Diepgang",
-      intro: "In plaats van een brede generieke catalogus aan te bieden, volgt ED_pharma een gespecialiseerd verticaal model dat is gewijd aan ED- en gerelateerde seksuele gezondheidsmoleculen. Deze strakke therapeutische focus stelt ons in staat om het volgende te handhaven:",
+      intro: "In plaats van een brede generieke catalogus aan te bieden, volgt ED pharma een gespecialiseerd verticaal model dat is gewijd aan ED- en gerelateerde seksuele gezondheidsmoleculen. Deze strakke therapeutische focus stelt ons in staat om het volgende te handhaven:",
       bullets: [
         "Langetermijncontracten met gevestigde GMP-gecertificeerde fabrikanten",
         "Batch-consistente inkoop van formuleringen (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoxetine)",
         "Spec-gecontroleerde verpakkingen en geverifieerde exportdocumentatie",
-        "Specifieke productieplanningsvensters voor ED_pharma orders",
+        "Specifieke productieplanningsvensters voor ED pharma orders",
         "Voorspelbare MOQ-cycli voor groothandelaren en B2B-klanten",
       ],
     },
     {
       title: "Europese Vraag, Indiase Productiekracht",
-      intro: "De Europese markt vraagt continu om hoogwaardige ED-formuleringen met een stabiel aanbod en conforme verpakkingen. Door grootschalige Indiase farmaceutische productie te combineren met logistieke operaties vanuit Europa, zorgt ED_pharma voor:",
+      intro: "De Europese markt vraagt continu om hoogwaardige ED-formuleringen met een stabiel aanbod en conforme verpakkingen. Door grootschalige Indiase farmaceutische productie te combineren met logistieke operaties vanuit Europa, zorgt ED pharma voor:",
       bullets: [
         "Snellere aanvullingscycli voor groothandelaren en apotheken",
         "Verminderde verzendcomplexiteit via Europa-naar-Europa routering",
@@ -224,7 +224,7 @@ journeyPage: {
 termsPage: {
   header: {
     title: "Algemene Voorwaarden",
-    subtitle: "Deze Algemene Voorwaarden zijn van toepassing op de business-to-business toegang tot en het gebruik van de ED_pharma website en productcatalogus.",
+    subtitle: "Deze Algemene Voorwaarden zijn van toepassing op de business-to-business toegang tot en het gebruik van de ED pharma website en productcatalogus.",
     complianceTitle: "B2B Naleving & Verificatie",
     complianceText: "Toegang is strikt beperkt tot erkende groothandelaren, apotheken en geautoriseerde distributeurs."
   },
@@ -233,30 +233,30 @@ termsPage: {
       number: "01",
       title: "Gebruiksbereik",
       text: "Deze website en catalogus zijn uitsluitend bedoeld voor professionele tegenpartijen zoals farmaceutische groothandelaren, apotheken, online apotheken, klinieken en erkende distributeurs binnen Europa. Het is niet ontworpen voor directe verkoop aan patiënten of voor individuele consumenten.",
-      moreDetails: "Aanvullende Informatie:\n- Geldt voor alle producten en catalogi.\n- Alleen erkende bedrijfsentiteiten mogen communiceren met ED_pharma.\n- Regionale regelgeving moet altijd worden gevolgd."
+      moreDetails: "Aanvullende Informatie:\n- Geldt voor alle producten en catalogi.\n- Alleen erkende bedrijfsentiteiten mogen communiceren met ED pharma.\n- Regionale regelgeving moet altijd worden gevolgd."
     },
     {
       number: "02",
       title: "Zakelijke Relatie",
-      text: "Elke offerte, bestelling of levering wordt gedaan met dien verstande dat beide partijen opereren als onafhankelijke bedrijven. Niets op deze website creëert een arbeids-, agentschaps- of partnerschapsrelatie tussen ED_pharma en zijn klanten.",
+      text: "Elke offerte, bestelling of levering wordt gedaan met dien verstande dat beide partijen opereren als onafhankelijke bedrijven. Niets op deze website creëert een arbeids-, agentschaps- of partnerschapsrelatie tussen ED pharma en zijn klanten.",
       moreDetails: "Aanvullende Informatie:\n- Geen vertegenwoordiging door derden toegestaan.\n- Geen franchise-, agent- of partnerschapsstatus geïmpliceerd.\n- Alle contracten blijven onafhankelijk tussen beide partijen."
     },
     {
       number: "03",
       title: "Productportfolio & Beschikbaarheid",
-      text: "ED_pharma richt zich op geneesmiddelen voor erectiestoornissen en seksuele gezondheid, vervaardigd door goedgekeurde partners. Productassortiment, branding, verpakking en sterktes kunnen zonder voorafgaande openbare kennisgeving wijzigen en de beschikbaarheid kan variëren per land of wettelijke status.",
+      text: "ED pharma richt zich op geneesmiddelen voor erectiestoornissen en seksuele gezondheid, vervaardigd door goedgekeurde partners. Productassortiment, branding, verpakking en sterktes kunnen zonder voorafgaande openbare kennisgeving wijzigen en de beschikbaarheid kan variëren per land of wettelijke status.",
       moreDetails: "Aanvullende Informatie:\n- Productvariaties kunnen optreden afhankelijk van updates van de fabrikant.\n- Verpakking kan variëren per land.\n- Voorraadbeschikbaarheid verandert dagelijks."
     },
     {
       number: "04",
       title: "Regelgevende & Licentieplichten",
-      text: "Elke klant is verantwoordelijk voor het bezitten en behouden van alle licenties, vergunningen en registraties die nodig zijn om geneesmiddelen in zijn eigen gebied te kopen, op te slaan, op de markt te brengen en te distribueren. ED_pharma staat geen wederverkoop toe in rechtsgebieden waar producten niet voldoen aan de lokale regelgeving.",
-      moreDetails: "Aanvullende Informatie:\n- Elke klant moet de vereiste nalevingsdocumenten indienen.\n- ED_pharma kan aanvullende wettelijke certificaten opvragen.\n- Niet-naleving kan leiden tot opschorting van activiteiten."
+      text: "Elke klant is verantwoordelijk voor het bezitten en behouden van alle licenties, vergunningen en registraties die nodig zijn om geneesmiddelen in zijn eigen gebied te kopen, op te slaan, op de markt te brengen en te distribueren. ED pharma staat geen wederverkoop toe in rechtsgebieden waar producten niet voldoen aan de lokale regelgeving.",
+      moreDetails: "Aanvullende Informatie:\n- Elke klant moet de vereiste nalevingsdocumenten indienen.\n- ED pharma kan aanvullende wettelijke certificaten opvragen.\n- Niet-naleving kan leiden tot opschorting van activiteiten."
     },
     {
       number: "05",
       title: "Bestelling, Prijzen & Betaling",
-      text: "Bestellingen zijn pas bindend na schriftelijke bevestiging door ED_pharma. Prijzen, valuta's en betalingsvoorwaarden worden per klant overeengekomen en kunnen worden bijgewerkt in nieuwe aanbiedingen of contracten. Late betaling kan leiden tot opschorting van leveringen of intrekking van kredietfaciliteiten.",
+      text: "Bestellingen zijn pas bindend na schriftelijke bevestiging door ED pharma. Prijzen, valuta's en betalingsvoorwaarden worden per klant overeengekomen en kunnen worden bijgewerkt in nieuwe aanbiedingen of contracten. Late betaling kan leiden tot opschorting van leveringen of intrekking van kredietfaciliteiten.",
       moreDetails: "Aanvullende Informatie:\n- Betalingen in meerdere valuta's geaccepteerd op basis van overeenkomsten.\n- Bestellingen kunnen worden gepauzeerd als documenten of betalingen vertraagd zijn.\n- Kredietlimieten kunnen van toepassing zijn op sommige kopers."
     },
     {
@@ -268,25 +268,25 @@ termsPage: {
     {
       number: "07",
       title: "Kwaliteit, Opslag & Retourzendingen",
-      text: "Klanten moeten producten opslaan en behandelen in overeenstemming met GDP, temperatuur- en veiligheidsvereisten en volledige batchtraceerbaarheid behouden. Retourzendingen worden alleen geaccepteerd indien vooraf goedgekeurd door ED_pharma en waar integriteit, opslagcondities en documentatie kunnen worden geverifieerd.",
+      text: "Klanten moeten producten opslaan en behandelen in overeenstemming met GDP, temperatuur- en veiligheidsvereisten en volledige batchtraceerbaarheid behouden. Retourzendingen worden alleen geaccepteerd indien vooraf goedgekeurd door ED pharma en waar integriteit, opslagcondities en documentatie kunnen worden geverifieerd.",
       moreDetails: "Aanvullende Informatie:\n- Retourzendingen alleen geaccepteerd met bewijs van juiste opslag.\n- Gemanipuleerde goederen kunnen niet worden geaccepteerd.\n- Alle retourzendingen moeten overeenkomen met de geleverde batchnummers."
     },
     {
       number: "08",
       title: "Geneesmiddelenbewaking & Klachten",
-      text: "Vermoedelijke bijwerkingen, kwaliteitsgebreken of productklachten die aan klanten worden gemeld, moeten onmiddellijk aan ED_pharma worden gecommuniceerd met alle beschikbare details, zodat deze indien nodig kunnen worden geëscaleerd naar de relevante fabrikant en autoriteiten.",
+      text: "Vermoedelijke bijwerkingen, kwaliteitsgebreken of productklachten die aan klanten worden gemeld, moeten onmiddellijk aan ED pharma worden gecommuniceerd met alle beschikbare details, zodat deze indien nodig kunnen worden geëscaleerd naar de relevante fabrikant en autoriteiten.",
       moreDetails: "Aanvullende Informatie:\n- Elk ernstig ongewenst voorval moet binnen 24 uur worden gemeld.\n- Alle rapporten worden geëscaleerd naar fabrikanten.\n- Het niet melden kan toekomstige bestellingen beperken."
     },
     {
       number: "09",
       title: "Gegevensbescherming & Vertrouwelijkheid",
-      text: "Zakelijke contactgegevens en transactie-informatie worden alleen verwerkt om de commerciële relatie te beheren, bestellingen uit te voeren en te voldoen aan wettelijke verplichtingen. Prijslijsten, productinformatie en commerciële voorwaarden gedeeld door ED_pharma zijn vertrouwelijk en mogen niet worden bekendgemaakt aan onbevoegde derden.",
-      moreDetails: "Aanvullende Informatie:\n- ED_pharma volgt strikt de AVG (GDPR).\n- Gegevens alleen veilig opgeslagen om wettelijke redenen.\n- Geen gegevens gedeeld met derden."
+      text: "Zakelijke contactgegevens en transactie-informatie worden alleen verwerkt om de commerciële relatie te beheren, bestellingen uit te voeren en te voldoen aan wettelijke verplichtingen. Prijslijsten, productinformatie en commerciële voorwaarden gedeeld door ED pharma zijn vertrouwelijk en mogen niet worden bekendgemaakt aan onbevoegde derden.",
+      moreDetails: "Aanvullende Informatie:\n- ED pharma volgt strikt de AVG (GDPR).\n- Gegevens alleen veilig opgeslagen om wettelijke redenen.\n- Geen gegevens gedeeld met derden."
     },
     {
       number: "10",
       title: "Intellectueel Eigendom & Wijzigingen",
-      text: "Alle handelsmerken, logo's, illustraties en catalogusontwerpen blijven eigendom van ED_pharma of de respectieve fabrikanten en mogen niet worden gereproduceerd zonder schriftelijke toestemming. ED_pharma kan deze voorwaarden en website-inhoud te allen tijde wijzigen; voortgezet gebruik geeft acceptatie van de bijgewerkte voorwaarden aan.",
+      text: "Alle handelsmerken, logo's, illustraties en catalogusontwerpen blijven eigendom van ED pharma of de respectieve fabrikanten en mogen niet worden gereproduceerd zonder schriftelijke toestemming. ED pharma kan deze voorwaarden en website-inhoud te allen tijde wijzigen; voortgezet gebruik geeft acceptatie van de bijgewerkte voorwaarden aan.",
       moreDetails: "Aanvullende Informatie:\n- Misbruik van handelsmerken kan leiden tot juridische stappen.\n- Cataloguslay-outs kunnen zonder kennisgeving wijzigen.\n- Aangepaste branding vereist schriftelijke goedkeuring."
     }
   ]
@@ -668,11 +668,11 @@ contactPage: {
       title: "sales@edpharma.co", 
       description: "E-mail ons voor zakelijke vragen" 
     },
-    { 
-      icon: "📍", 
-      title: "London Eye Londen", 
-      description: "Onze hoofdlocatie" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "London Eye Londen", 
+    //   description: "Onze hoofdlocatie" 
+    // },
   ],
   form: {
     labels: {
@@ -1032,6 +1032,8 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
+    "Healing Pharma",
+      "Hab Pharma"
     
   ],
   contactInfo: {

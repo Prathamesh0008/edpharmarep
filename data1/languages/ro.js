@@ -3,8 +3,8 @@ const ro = {
   about: {
     hero: {
       tag: "DESPRE NOI",
-      title: "Descoperiți ED_pharma – Protejând Sănătatea Intimă cu Expertiză și Grijă",
-      description1: "ED_pharma este un distribuitor specializat Europa-în-Europa, axat pe medicamente de înaltă calitate pentru disfuncție erectilă și sănătate sexuală de la producători de încredere precum Ajanta Pharma, Sunrise Remedies și Centurion.",
+      title: "Descoperiți ED pharma – Protejând Sănătatea Intimă cu Expertiză și Grijă",
+      description1: "ED pharma este un distribuitor specializat Europa-în-Europa, axat pe medicamente de înaltă calitate pentru disfuncție erectilă și sănătate sexuală de la producători de încredere precum Ajanta Pharma, Sunrise Remedies și Centurion.",
       description2: "Portofoliul nostru acoperă formulări solide și jeleuri orale bazate pe principii active binecunoscute, inclusiv Sildenafil, Tadalafil, Avanafil, Vardenafil și Dapoxetină, permițând partenerilor să deservească o gamă largă de nevoi de tratament pentru DE și ejaculare precoce, menținând în același timp standarde puternice de siguranță și eficacitate.",
       description3: "Operând sub motto-ul „Europa în Europa”, combinăm asigurarea calității riguroase cu logistica eficientă, ajutând angrosiștii, farmaciile și platformele online să aibă acces la aprovizionare consistentă de la producători indieni stabiliți, respectând așteptările locale de reglementare.",
       downloadCatalogue: "Descărcați catalogul",
@@ -38,7 +38,7 @@ const ro = {
     journey: {
       tag: "CĂLĂTORIA NOASTRĂ",
       title: "Construirea unei rețele dedicate de aprovizionare pentru DE în Europa",
-      description1: "ED_pharma a fost fondată pentru a lega cererea europeană pentru terapii de încredere pentru disfuncție erectilă cu producătorii indieni de performanță ridicată. Concentrându-ne exclusiv pe DE și indicații conexe, putem crea un portofoliu care să sprijine angrosiștii, farmaciile și clinicile digitale cu profunzime în loc de volum.",
+      description1: "ED pharma a fost fondată pentru a lega cererea europeană pentru terapii de încredere pentru disfuncție erectilă cu producătorii indieni de performanță ridicată. Concentrându-ne exclusiv pe DE și indicații conexe, putem crea un portofoliu care să sprijine angrosiștii, farmaciile și clinicile digitale cu profunzime în loc de volum.",
       description2: "Relațiile pe termen lung cu furnizorii și clienții ne ajută să menținem continuitatea aprovizionării, comunicarea transparentă și așteptări clare privind calitatea, ambalajul și documentația.",
       readMore: "Aflați mai multe",
     },
@@ -46,7 +46,7 @@ const ro = {
     howWeWork: {
       tag: "CUM LUCRĂM",
       title: "Serviciu Europa-în-Europa cu calitatea în centru",
-      description1: "De la prognoză la expedierea finală, fiecare comandă ED_pharma este gestionată cu urmăribilitate clară a loturilor, logistică adecvată din punct de vedere al temperaturii și documentație aliniată la așteptările europene.",
+      description1: "De la prognoză la expedierea finală, fiecare comandă ED pharma este gestionată cu urmăribilitate clară a loturilor, logistică adecvată din punct de vedere al temperaturii și documentație aliniată la așteptările europene.",
       description2: "Scopul este să oferim partenerilor un singur punct de contact specializat pentru medicamentele DE – simplificând aprovizionarea, protejând în același timp siguranța pacienților și integritatea produsului în întregul lanț de aprovizionare.",
       readMore: "Aflați mai multe",
     },
@@ -83,18 +83,18 @@ const ro = {
       },
       network: {
         title: "Construirea unei Rețele de Furnizori cu Profunzime",
-        intro: "Mai degrabă decât să oferim un catalog generic larg, ED_pharma urmează un model vertical specializat dedicat moleculelor pentru DE și sănătate sexuală conexă. Această focalizare terapeutică strânsă ne permite să menținem:",
+        intro: "Mai degrabă decât să oferim un catalog generic larg, ED pharma urmează un model vertical specializat dedicat moleculelor pentru DE și sănătate sexuală conexă. Această focalizare terapeutică strânsă ne permite să menținem:",
         bullets: [
           "Contracte pe termen lung cu producători certificați GMP stabiliți",
           "Aprovizionare consistentă cu formulări pe loturi (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoxetină)",
           "Ambalaj controlat conform specificațiilor și documentație de export verificată",
-          "Ferestre dedicate de planificare a producției pentru comenzile ED_pharma",
+          "Ferestre dedicate de planificare a producției pentru comenzile ED pharma",
           "Cicluri previzibile MOQ pentru angrosiști și clienți B2B",
         ],
       },
       europeIndia: {
         title: "Cerere Europeană, Putere de Fabricație Indiană",
-        intro: "Piața europeană solicită în mod continuu formulări DE de înaltă calitate cu aprovizionare stabilă și ambalaj conform. Combinând producția farmaceutică indiană la scară largă cu operațiunile logistice bazate în Europa, ED_pharma asigură:",
+        intro: "Piața europeană solicită în mod continuu formulări DE de înaltă calitate cu aprovizionare stabilă și ambalaj conform. Combinând producția farmaceutică indiană la scară largă cu operațiunile logistice bazate în Europa, ED pharma asigură:",
         bullets: [
           "Cicluri de reaprovizionare mai rapide pentru angrosiști și farmacii",
           "Complexitate redusă a expedierii prin rutarea Europa-în-Europa",
@@ -132,18 +132,18 @@ const ro = {
     sections: [
       {
         title: "Construirea unei Rețele de Furnizori cu Profunzime",
-        intro: "Mai degrabă decât să oferim un catalog generic larg, ED_pharma urmează un model vertical specializat dedicat moleculelor pentru DE și sănătate sexuală conexă. Această focalizare terapeutică strânsă ne permite să menținem:",
+        intro: "Mai degrabă decât să oferim un catalog generic larg, ED pharma urmează un model vertical specializat dedicat moleculelor pentru DE și sănătate sexuală conexă. Această focalizare terapeutică strânsă ne permite să menținem:",
         bullets: [
           "Contracte pe termen lung cu producători certificați GMP stabiliți",
           "Aprovizionare consistentă cu formulări pe loturi (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoxetină)",
           "Ambalaj controlat conform specificațiilor și documentație de export verificată",
-          "Ferestre dedicate de planificare a producției pentru comenzile ED_pharma",
+          "Ferestre dedicate de planificare a producției pentru comenzile ED pharma",
           "Cicluri previzibile MOQ pentru angrosiști și clienți B2B",
         ],
       },
       {
         title: "Cerere Europeană, Putere de Fabricație Indiană",
-        intro: "Piața europeană solicită în mod continuu formulări DE de înaltă calitate cu aprovizionare stabilă și ambalaj conform. Combinând producția farmaceutică indiană la scară largă cu operațiunile logistice bazate în Europa, ED_pharma asigură:",
+        intro: "Piața europeană solicită în mod continuu formulări DE de înaltă calitate cu aprovizionare stabilă și ambalaj conform. Combinând producția farmaceutică indiană la scară largă cu operațiunile logistice bazate în Europa, ED pharma asigură:",
         bullets: [
           "Cicluri de reaprovizionare mai rapide pentru angrosiști și farmacii",
           "Complexitate redusă a expedierii prin rutarea Europa-în-Europa",
@@ -168,7 +168,7 @@ const ro = {
   termsPage: {
     header: {
       title: "Termeni și Condiții",
-      subtitle: "Acești Termeni și Condiții reglementează accesul și utilizarea de business-to-business a site-ului web și a catalogului de produse ED_pharma.",
+      subtitle: "Acești Termeni și Condiții reglementează accesul și utilizarea de business-to-business a site-ului web și a catalogului de produse ED pharma.",
       complianceTitle: "Conformitate și Verificare B2B",
       complianceText: "Accesul este strict limitat la angrosiști autorizați, farmacii și distribuitori autorizați.",
     },
@@ -177,30 +177,30 @@ const ro = {
         number: "01",
         title: "Domeniul de Utilizare",
         text: "Acest site web și catalog sunt destinate exclusiv contrapărților profesionale, cum ar fi angrosiști farmaceutici, farmacii, farmacii online, clinici și distribuitori autorizați din Europa. Nu este destinat vânzării directe către pacienți sau consumatorilor individuali.",
-        moreDetails: "Informații suplimentare:\n- Se aplică tuturor produselor și catalogelor.\n- Numai entități de afaceri autorizate pot interacționa cu ED_pharma.\n- Regulamentele regionale trebuie întotdeauna respectate.",
+        moreDetails: "Informații suplimentare:\n- Se aplică tuturor produselor și catalogelor.\n- Numai entități de afaceri autorizate pot interacționa cu ED pharma.\n- Regulamentele regionale trebuie întotdeauna respectate.",
       },
       {
         number: "02",
         title: "Relația de Afaceri",
-        text: "Orice ofertă, comandă sau livrare se face cu înțelegerea că ambele părți operează ca afaceri independente. Nimic de pe acest site web nu creează o relație de angajare, agenție sau parteneriat între ED_pharma și clienții săi.",
+        text: "Orice ofertă, comandă sau livrare se face cu înțelegerea că ambele părți operează ca afaceri independente. Nimic de pe acest site web nu creează o relație de angajare, agenție sau parteneriat între ED pharma și clienții săi.",
         moreDetails: "Informații suplimentare:\n- Nu este permisă reprezentarea terțelor părți.\n- Nu este implicat niciun statut de franciză, agent sau parteneriat.\n- Toate contractele rămân independente între ambele părți.",
       },
       {
         number: "03",
         title: "Portofoliu de Produse și Disponibilitate",
-        text: "ED_pharma se concentrează pe medicamente pentru disfuncție erectilă și sănătate sexuală fabricate de parteneri aprobați. Gama de produse, marca, ambalajul și concentrațiile se pot schimba fără notificare prealabilă publică, iar disponibilitatea poate varia în funcție de țară sau statutul de reglementare.",
+        text: "ED pharma se concentrează pe medicamente pentru disfuncție erectilă și sănătate sexuală fabricate de parteneri aprobați. Gama de produse, marca, ambalajul și concentrațiile se pot schimba fără notificare prealabilă publică, iar disponibilitatea poate varia în funcție de țară sau statutul de reglementare.",
         moreDetails: "Informații suplimentare:\n- Pot apărea variații de produs în funcție de actualizările producătorului.\n- Ambalajul poate varia în funcție de țară.\n- Disponibilitatea stocului se schimbă zilnic.",
       },
       {
         number: "04",
         title: "Obligații de Reglementare și Licențiere",
-        text: "Fiecare client este responsabil pentru deținerea și menținerea tuturor licențelor, permiselor și înregistrărilor necesare pentru achiziționarea, depozitarea, comercializarea și distribuirea produselor medicinale pe propriul teritoriu. ED_pharma nu autorizează revânzarea în jurisdicții în care produsele nu sunt conforme cu reglementările locale.",
-        moreDetails: "Informații suplimentare:\n- Fiecare client trebuie să depună documentele de conformitate necesare.\n- ED_pharma poate solicita certificate de reglementare suplimentare.\n- Neconformitatea poate suspenda operațiunile.",
+        text: "Fiecare client este responsabil pentru deținerea și menținerea tuturor licențelor, permiselor și înregistrărilor necesare pentru achiziționarea, depozitarea, comercializarea și distribuirea produselor medicinale pe propriul teritoriu. ED pharma nu autorizează revânzarea în jurisdicții în care produsele nu sunt conforme cu reglementările locale.",
+        moreDetails: "Informații suplimentare:\n- Fiecare client trebuie să depună documentele de conformitate necesare.\n- ED pharma poate solicita certificate de reglementare suplimentare.\n- Neconformitatea poate suspenda operațiunile.",
       },
       {
         number: "05",
         title: "Comandarea, Prețurile și Plata",
-        text: "Comenzile sunt obligatorii doar după ce sunt confirmate în scris de către ED_pharma. Prețurile, monedele și termenii de plată sunt conveniți de la client la client și pot fi actualizați în noile oferte sau contracte. Plata întârziată poate duce la suspendarea livrărilor sau retragerea facilitaților de credit.",
+        text: "Comenzile sunt obligatorii doar după ce sunt confirmate în scris de către ED pharma. Prețurile, monedele și termenii de plată sunt conveniți de la client la client și pot fi actualizați în noile oferte sau contracte. Plata întârziată poate duce la suspendarea livrărilor sau retragerea facilitaților de credit.",
         moreDetails: "Informații suplimentare:\n- Sunt acceptate plăți în mai multe valute pe baza acordurilor.\n- Comenzile pot fi întrerupte dacă documentele sau plățile sunt întârziate.\n- Pot fi aplicate limite de credit pentru unii cumpărători.",
       },
       {
@@ -212,25 +212,25 @@ const ro = {
       {
         number: "07",
         title: "Calitate, Depozitare și Returnări",
-        text: "Clienții trebuie să depoziteze și să manipuleze produsele în conformitate cu cerințele GDP, de temperatură și securitate și să mențină urmăribilitatea completă a loturilor. Returnările sunt acceptate doar atunci când sunt pre-autorizate de către ED_pharma și când integritatea, condițiile de depozitare și documentația pot fi verificate.",
+        text: "Clienții trebuie să depoziteze și să manipuleze produsele în conformitate cu cerințele GDP, de temperatură și securitate și să mențină urmăribilitatea completă a loturilor. Returnările sunt acceptate doar atunci când sunt pre-autorizate de către ED pharma și când integritatea, condițiile de depozitare și documentația pot fi verificate.",
         moreDetails: "Informații suplimentare:\n- Returnările sunt acceptate doar cu dovada depozitării corespunzătoare.\n- Mărfurile manipulate nu pot fi acceptate.\n- Toate returnările trebuie să corespundă numerelor de lot furnizate.",
       },
       {
         number: "08",
         title: "Farmacovigilență și Plângeri",
-        text: "Reacțiile adverse suspectate, defectele de calitate sau plângerile legate de produse raportate clienților trebuie comunicate prompt către ED_pharma cu toate detaliile disponibile, astfel încât acestea să poată fi escaladate către producătorul relevant și autorități, unde este necesar.",
+        text: "Reacțiile adverse suspectate, defectele de calitate sau plângerile legate de produse raportate clienților trebuie comunicate prompt către ED pharma cu toate detaliile disponibile, astfel încât acestea să poată fi escaladate către producătorul relevant și autorități, unde este necesar.",
         moreDetails: "Informații suplimentare:\n- Orice eveniment advers serios trebuie raportat în termen de 24 de ore.\n- Toate raportările sunt escaladate către producători.\n- Nerespectarea raportării poate restricționa comenzile viitoare.",
       },
       {
         number: "09",
         title: "Protecția Datelor și Confidențialitatea",
-        text: "Datele de contact de afaceri și informațiile despre tranzacții sunt procesate doar pentru gestionarea relației comerciale, executarea comenzilor și respectarea obligațiilor legale. Listele de prețuri, informațiile despre produse și termenii comerciali partajate de ED_pharma sunt confidențiale și nu trebuie divulgate terțelor părți neautorizate.",
-        moreDetails: "Informații suplimentare:\n- ED_pharma respectă strict GDPR.\n- Datele sunt stocate în siguranță doar pentru motive de reglementare.\n- Nu se partajează date cu terțe părți.",
+        text: "Datele de contact de afaceri și informațiile despre tranzacții sunt procesate doar pentru gestionarea relației comerciale, executarea comenzilor și respectarea obligațiilor legale. Listele de prețuri, informațiile despre produse și termenii comerciali partajate de ED pharma sunt confidențiale și nu trebuie divulgate terțelor părți neautorizate.",
+        moreDetails: "Informații suplimentare:\n- ED pharma respectă strict GDPR.\n- Datele sunt stocate în siguranță doar pentru motive de reglementare.\n- Nu se partajează date cu terțe părți.",
       },
       {
         number: "10",
         title: "Proprietate Intelectuală și Modificări",
-        text: "Toate mărcile comerciale, logo-urile, lucrările de artă și designurile catalogului rămân proprietatea ED_pharma sau a producătorilor respectivi și nu pot fi reproduse fără consimțământ scris. ED_pharma poate modifica acești termeni și conținutul site-ului web în orice moment; utilizarea continuă indică acceptarea termenilor actualizați.",
+        text: "Toate mărcile comerciale, logo-urile, lucrările de artă și designurile catalogului rămân proprietatea ED pharma sau a producătorilor respectivi și nu pot fi reproduse fără consimțământ scris. ED pharma poate modifica acești termeni și conținutul site-ului web în orice moment; utilizarea continuă indică acceptarea termenilor actualizați.",
         moreDetails: "Informații suplimentare:\n- Utilizarea necorespunzătoare a mărcii comerciale poate duce la acțiune legală.\n- Aspectul catalogului se poate schimba fără notificare.\n- Brandul personalizat necesită aprobare scrisă.",
       },
     ],
@@ -633,11 +633,11 @@ homeProducts: {
       title: "sales@edpharma.co", 
       description: "Trimiteți-ne email pentru întrebări de afaceri" 
     },
-    { 
-      icon: "📍", 
-      title: "London Eye Londra", 
-      description: "Locația principală a biroului nostru" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "London Eye Londra", 
+    //   description: "Locația principală a biroului nostru" 
+    // },
   ],
   form: {
     labels: {
@@ -998,6 +998,8 @@ productDetail: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
+      "Healing Pharma",
+      "Hab Pharma"
       
     ],
     contactInfo: {

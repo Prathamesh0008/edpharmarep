@@ -15,7 +15,7 @@ import pricingData from "../data/pricing"; // Import pricing data
 const BRAND_THEMES = {
   "ED Ajanta Pharma": {
     name: "Ajanta Pharma",
-    logo: "/bg/ajanta.png",
+    logo: "/logo/ajanta.webp",
     primary: "#0A2A73",
     secondary: "#2A7DB8",
     accent: "#1C5EB7",
@@ -35,7 +35,7 @@ const BRAND_THEMES = {
   },
   "ED Centurion Remedies": {
     name: "Centurion Remedies",
-    logo: "/bg/centurion.png",
+    logo: "/logo/cen.png",
     primary: "#FFB800",
     secondary: "#FFD966",
     accent: "#E6A400",
@@ -767,7 +767,7 @@ export default function ProductsPage() {
         {/* Brand Logos Grid */}
 {/* Brand Logos Grid */}
 <div className="mb-6 sm:mb-8 mt-7">
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6">
+  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 ">
     {BRAND_ORDER.map((brandKey, index) => {
       const b = BRAND_THEMES[brandKey];
       const isActive = selectedBrand === brandKey;
@@ -780,7 +780,7 @@ export default function ProductsPage() {
             setSearchInput("");
             setCategoryFilter("All");
           }}
-          className={`relative overflow-hidden rounded-xl sm:rounded-2xl p-3 sm:p-4 h-32 sm:h-36 md:h-40 transition-all duration-300 transform ${
+          className={`relative overflow-hidden cursor-pointer rounded-xl sm:rounded-2xl p-3 sm:p-4 h-32 sm:h-36 md:h-40 transition-all duration-300 transform ${
             isActive
               ? "ring-2 sm:ring-3 ring-offset-1 sm:ring-offset-2 shadow-2xl scale-105 z-10"
               : "hover:shadow-xl hover:scale-102"
@@ -859,7 +859,7 @@ export default function ProductsPage() {
               {/* Search Input */}
               <div className="w-full">
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none">
+                  <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none ">
                     <svg
                       className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400"
                       fill="none"
@@ -882,14 +882,14 @@ export default function ProductsPage() {
                       filters.searchPlaceholder ||
                       "Search products by name, composition, or description..."
                     }
-                    className="w-full pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:border-transparent transition-all duration-200 shadow-sm text-gray-900"
+                    className="w-full cursor-pointer pl-10 sm:pl-12 pr-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:border-transparent transition-all duration-200 shadow-sm text-gray-900"
                     style={{ "--tw-ring-color": theme.primary }}
                   />
                 </div>
               </div>
 
               {/* Filters Row */}
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 ">
                 {/* Compound Select */}
                 <div className="relative flex-1">
                   <select
@@ -898,21 +898,21 @@ export default function ProductsPage() {
                       setSelectedCompound(e.target.value);
                       scrollToCompound(e.target.value);
                     }}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:border-transparent transition-all duration-200 appearance-none bg-white shadow-sm text-gray-900"
-                    style={{ "--tw-ring-color": theme.primary }}
+                    className="w-full cursor-pointer px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:border-transparent transition-all duration-200 appearance-none bg-white shadow-sm text-gray-900"
+                    style={{ "--tw-ring-color ": theme.primary }}
                   >
-                    <option value="" className="text-gray-900">
+                    <option value="" className="text-gray-900 ">
                       {filters.allCompounds || "All Compounds"}
                     </option>
                     {compoundNames.map((c) => (
-                      <option key={c} value={c} className="text-gray-900">
+                      <option key={c} value={c} className="text-gray-900 ">
                         {c}
                       </option>
                     ))}
                   </select>
                   <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                     <svg
-                      className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400"
+                      className="h-4  w-4 sm:h-5 sm:w-5 text-gray-400"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 20 20"
@@ -932,16 +932,16 @@ export default function ProductsPage() {
                   <select
                     value={categoryFilter}
                     onChange={(e) => setCategoryFilter(e.target.value)}
-                    className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:border-transparent transition-all duration-200 appearance-none bg-white shadow-sm text-gray-900"
+                    className="w-full cursor-pointer px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base border border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:border-transparent transition-all duration-200 appearance-none bg-white shadow-sm text-gray-900"
                     style={{ "--tw-ring-color": theme.primary }}
                   >
                     {brandCategories.map((cat) => (
-                      <option key={cat} value={cat} className="text-gray-900">
+                      <option key={cat} value={cat} className="text-gray-900 ">
                         {cat}
                       </option>
                     ))}
                   </select>
-                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none ">
                     <svg
                       className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400"
                       fill="none"

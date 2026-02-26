@@ -32,10 +32,10 @@ export default function AboutPage() {
   const aboutTranslations = t?.about || {
     hero: {
       tag: "ABOUT US",
-      title: "Discover ED_pharma – Protecting Intimate Health With Expertise And Care",
-      description1: "ED_pharma is a specialised Europe-to-Europe distributor focused on high-quality erectile-dysfunction and sexual-health medicines from trusted manufacturers such as Ajanta Pharma, Sunrise Remedies and Centurion.",
+      title: "Discover ED pharma – Protecting Intimate Health With Expertise And Care",
+      description1: "ED pharma is a specialised Europe-to-Europe distributor focused on high-quality erectile-dysfunction and sexual-health medicines from trusted manufacturers such as Ajanta Pharma, Sunrise Remedies and Centurion.",
       description2: "Our portfolio covers solid and oral-jelly formulations built around well-known active ingredients including Sildenafil, Tadalafil, Avanafil, Vardenafil and Dapoxetine, allowing partners to serve a broad spectrum of ED and premature-ejaculation treatment needs while maintaining strong safety and efficacy standards.",
-      description3: 'Operating under the motto "Europe to Europe", we combine rigorous quality assurance with efficient logistics, helping wholesalers, pharmacies and online platforms access consistent supply from established Indian manufacturers while respecting local regulatory expectations.',
+      description3: 'Operating under the motto "Europe to Europe", we combine rigorous quality assurance with efficient logistics, helping wholesalers, pharmacies and online platforms access consistent supply from established Europian manufacturers while respecting local regulatory expectations.',
       downloadCatalogue: "Download catalogue",
       stats: [
         { value: "500+", label: "Partner Pharmacies" },
@@ -71,12 +71,12 @@ export default function AboutPage() {
     journey: {
       tag: "OUR JOURNEY",
       title: "Building a dedicated ED supply network across Europe",
-      description1: "ED_pharma was founded to bridge European demand for reliable erectile-dysfunction therapies with high-performing Indian manufacturers. By focusing exclusively on ED and related indications, we can curate a portfolio that supports wholesalers, pharmacies and digital clinics with depth instead of volume.",
+      description1: "ED pharma was founded to bridge European demand for reliable erectile-dysfunction therapies with high-performing Europian manufacturers. By focusing exclusively on ED and related indications, we can curate a portfolio that supports wholesalers, pharmacies and digital clinics with depth instead of volume.",
       description2: "Long-term relationships with suppliers and customers help us maintain continuity of supply, transparent communication and clear expectations on quality, packaging and documentation.",
       readMore: "Read more",
       milestones: [
         { year: "2018", title: "Foundation", description: "Established with focus on European ED market" },
-        { year: "2020", title: "Expansion", description: "Partnership with top Indian manufacturers" },
+        { year: "2020", title: "Expansion", description: "Partnership with top Europian manufacturers" },
         { year: "2022", title: "Growth", description: "Coverage across 15+ European countries" },
         { year: "2024", title: "Innovation", description: "Digital platform & enhanced logistics" }
       ]
@@ -84,7 +84,7 @@ export default function AboutPage() {
     howWeWork: {
       tag: "HOW WE WORK",
       title: "Europe-to-Europe service with quality at the core",
-      description1: "From forecast to final shipment, every ED_pharma order is managed with clear batch traceability, temperature-appropriate logistics and documentation aligned to European expectations.",
+      description1: "From forecast to final shipment, every ED pharma order is managed with clear batch traceability, temperature-appropriate logistics and documentation aligned to European expectations.",
       description2: "The goal is to give partners a single, specialised point of contact for ED medicines—simplifying sourcing while protecting patient safety and product integrity across the supply chain.",
       readMore: "Read more",
       process: [
@@ -104,7 +104,7 @@ export default function AboutPage() {
         },
         {
           title: "Trusted Manufacturers",
-          text: "Collaboration with established Indian manufacturers whose ED brands are recognised in international markets."
+          text: "Collaboration with established Europian manufacturers whose ED brands are recognised in international markets."
         },
         {
           title: "European Distribution",
@@ -177,7 +177,7 @@ export default function AboutPage() {
             
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
               <span className="bg-gradient-to-r from-sky-800 via-sky-600 to-cyan-500 bg-clip-text text-transparent">
-                {hero.title?.split("–")[0] || "Discover ED_pharma"}
+                {hero.title?.split("–")[0] || "Discover ED pharma"}
               </span>
               <span className="block text-slate-800 mt-2">
                 {hero.title?.split("–")[1] || "Protecting Intimate Health With Expertise And Care"}

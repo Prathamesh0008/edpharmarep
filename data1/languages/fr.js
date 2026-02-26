@@ -4,9 +4,9 @@ const fr = {
     hero: {
       tag: "À PROPOS DE NOUS",
       title:
-        "Découvrez ED_pharma – protéger la santé intime avec expertise et engagement",
+        "Découvrez ED pharma – protéger la santé intime avec expertise et engagement",
       description1:
-        "ED_pharma est un distributeur spécialisé Europe-à-Europe, axé sur des médicaments de haute qualité pour le traitement de la dysfonction érectile et de la santé sexuelle, en collaboration avec des fabricants de confiance tels qu’Ajanta Pharma, Sunrise Remedies et Centurion.",
+        "ED pharma est un distributeur spécialisé Europe-à-Europe, axé sur des médicaments de haute qualité pour le traitement de la dysfonction érectile et de la santé sexuelle, en collaboration avec des fabricants de confiance tels qu’Ajanta Pharma, Sunrise Remedies et Centurion.",
       description2:
         "Notre portefeuille comprend des formes orales solides ainsi que des gels oraux à base de principes actifs reconnus tels que le sildénafil, le tadalafil, l’avanafil, le vardénafil et la dapoxétine, permettant aux partenaires de proposer une large gamme de traitements contre la dysfonction érectile et l’éjaculation précoce, tout en respectant des normes élevées de sécurité et d’efficacité.",
       description3:
@@ -50,7 +50,7 @@ const fr = {
       title:
         "Construire un réseau spécialisé d’approvisionnement en traitements de la dysfonction érectile en Europe",
       description1:
-        "ED_pharma a été fondée pour relier la demande européenne en traitements fiables de la dysfonction érectile à des fabricants indiens performants. En se concentrant exclusivement sur la dysfonction érectile et les indications associées, nous privilégions la profondeur plutôt que la largeur du portefeuille.",
+        "ED pharma a été fondée pour relier la demande européenne en traitements fiables de la dysfonction érectile à des fabricants indiens performants. En se concentrant exclusivement sur la dysfonction érectile et les indications associées, nous privilégions la profondeur plutôt que la largeur du portefeuille.",
       description2:
         "Des relations à long terme avec les fournisseurs et les clients garantissent la continuité de l’approvisionnement, une communication transparente et des attentes claires en matière de qualité, de conditionnement et de documentation.",
       readMore: "En savoir plus",
@@ -120,7 +120,7 @@ const fr = {
       network: {
         title: "Construction d’un réseau de fournisseurs spécialisés",
         intro:
-          "Plutôt que de proposer une large gamme de génériques, ED_pharma adopte un modèle vertical spécialisé.",
+          "Plutôt que de proposer une large gamme de génériques, ED pharma adopte un modèle vertical spécialisé.",
         bullets: [
           "Contrats à long terme avec des fabricants certifiés GMP",
           "Approvisionnement en principes actifs avec cohérence des lots",
@@ -170,7 +170,7 @@ const fr = {
   introCard: {
     title: "Notre mode de fonctionnement",
     description:
-      "ED_pharma fonctionne selon un modèle B2B Europe-à-Europe structuré, conçu pour les distributeurs, cliniques en ligne, pharmacies et grossistes européens."
+      "ED pharma fonctionne selon un modèle B2B Europe-à-Europe structuré, conçu pour les distributeurs, cliniques en ligne, pharmacies et grossistes européens."
   },
 
   sections: [
@@ -201,7 +201,7 @@ const fr = {
     {
       title: "Planification des stocks basée sur les prévisions",
       description:
-        "ED_pharma collabore avec ses partenaires pour anticiper les besoins en stock.",
+        "ED pharma collabore avec ses partenaires pour anticiper les besoins en stock.",
       bullets: [
         "Réservation de capacités de production",
         "Stock prêt à expédier",
@@ -223,7 +223,7 @@ const fr = {
     {
       title: "Un point de contact unique pour les médicaments ED",
       description:
-        "ED_pharma simplifie l’approvisionnement via un partenaire spécialisé unique.",
+        "ED pharma simplifie l’approvisionnement via un partenaire spécialisé unique.",
       highlight:
         "Notre modèle est conçu pour les acheteurs professionnels exigeant fiabilité et conformité réglementaire."
     }
@@ -247,18 +247,18 @@ journeyPage: {
   sections: [
     {
       title: "Bâtir un réseau de fournisseurs avec profondeur",
-      intro: "Plutôt que d'offrir un large catalogue de génériques, ED_pharma suit un modèle vertical spécialisé dédié à la DE et aux molécules de santé sexuelle associées. Cette focalisation thérapeutique rigoureuse nous permet de maintenir :",
+      intro: "Plutôt que d'offrir un large catalogue de génériques, ED pharma suit un modèle vertical spécialisé dédié à la DE et aux molécules de santé sexuelle associées. Cette focalisation thérapeutique rigoureuse nous permet de maintenir :",
       bullets: [
         "Des contrats à long terme avec des fabricants établis et certifiés BPF (GMP)",
         "Un approvisionnement en formulations cohérentes par lot (Sildénafil, Tadalafil, Avanafil, Vardénafil, Dapoxétine)",
         "Un conditionnement contrôlé selon les spécifications et des documents d'exportation vérifiés",
-        "Des fenêtres de planification de production dédiées aux commandes d'ED_pharma",
+        "Des fenêtres de planification de production dédiées aux commandes d'ED pharma",
         "Des cycles de MOQ (Quantité Minimale de Commande) prévisibles pour les grossistes et les clients B2B",
       ],
     },
     {
       title: "Demande Européenne, Force de Fabrication Indienne",
-      intro: "Le marché européen exige continuellement des formulations DE de haute qualité avec un approvisionnement stable et un conditionnement conforme. En combinant la production pharmaceutique indienne à grande échelle avec des opérations logistiques basées en Europe, ED_pharma assure :",
+      intro: "Le marché européen exige continuellement des formulations DE de haute qualité avec un approvisionnement stable et un conditionnement conforme. En combinant la production pharmaceutique indienne à grande échelle avec des opérations logistiques basées en Europe, ED pharma assure :",
       bullets: [
         "Des cycles de réapprovisionnement plus rapides pour les grossistes et les pharmacies",
         "Une complexité d'expédition réduite via l'acheminement d'Europe à Europe",
@@ -283,7 +283,7 @@ journeyPage: {
 termsPage: {
   header: {
     title: "Conditions Générales",
-    subtitle: "Ces Conditions Générales régissent l'accès et l'utilisation interentreprises (B2B) du site web et du catalogue de produits d'ED_pharma.",
+    subtitle: "Ces Conditions Générales régissent l'accès et l'utilisation interentreprises (B2B) du site web et du catalogue de produits d'ED pharma.",
     complianceTitle: "Conformité & Vérification B2B",
     complianceText: "L'accès est strictement limité aux grossistes agréés, aux pharmacies et aux distributeurs autorisés."
   },
@@ -292,30 +292,30 @@ termsPage: {
       number: "01",
       title: "Portée de l'Utilisation",
       text: "Ce site web et ce catalogue sont destinés exclusivement aux contreparties professionnelles telles que les grossistes pharmaceutiques, les pharmacies, les pharmacies en ligne, les cliniques et les distributeurs agréés en Europe. Il n'est pas conçu pour la vente directe aux patients ou aux consommateurs individuels.",
-      moreDetails: "Informations Complémentaires :\n- S'applique à tous les produits et catalogues.\n- Seules les entités commerciales agréées peuvent interagir avec ED_pharma.\n- Les réglementations régionales doivent toujours être respectées."
+      moreDetails: "Informations Complémentaires :\n- S'applique à tous les produits et catalogues.\n- Seules les entités commerciales agréées peuvent interagir avec ED pharma.\n- Les réglementations régionales doivent toujours être respectées."
     },
     {
       number: "02",
       title: "Relation Commerciale",
-      text: "Tout devis, commande ou livraison est effectué étant entendu que les deux parties opèrent en tant qu'entreprises indépendantes. Rien sur ce site ne crée de relation d'emploi, d'agence ou de partenariat entre ED_pharma et ses clients.",
+      text: "Tout devis, commande ou livraison est effectué étant entendu que les deux parties opèrent en tant qu'entreprises indépendantes. Rien sur ce site ne crée de relation d'emploi, d'agence ou de partenariat entre ED pharma et ses clients.",
       moreDetails: "Informations Complémentaires :\n- Aucune représentation par des tiers n'est autorisée.\n- Aucun statut de franchise, d'agent ou de partenariat n'est implicite.\n- Tous les contrats restent indépendants entre les deux parties."
     },
     {
       number: "03",
       title: "Portefeuille de Produits & Disponibilité",
-      text: "ED_pharma se concentre sur les médicaments contre la dysfonction érectile et pour la santé sexuelle fabriqués par des partenaires approuvés. La gamme de produits, la marque, l'emballage et les dosages peuvent changer sans préavis public et la disponibilité peut varier selon le pays ou le statut réglementaire.",
+      text: "ED pharma se concentre sur les médicaments contre la dysfonction érectile et pour la santé sexuelle fabriqués par des partenaires approuvés. La gamme de produits, la marque, l'emballage et les dosages peuvent changer sans préavis public et la disponibilité peut varier selon le pays ou le statut réglementaire.",
       moreDetails: "Informations Complémentaires :\n- Des variations de produits peuvent survenir selon les mises à jour du fabricant.\n- L'emballage peut varier selon le pays.\n- La disponibilité des stocks change quotidiennement."
     },
     {
       number: "04",
       title: "Obligations Réglementaires & Licences",
-      text: "Chaque client est responsable de détenir et de maintenir toutes les licences, permis et enregistrements nécessaires pour acheter, stocker, commercialiser et distribuer des produits médicinaux sur son propre territoire. ED_pharma n'autorise pas la revente dans les juridictions où les produits ne sont pas conformes aux réglementations locales.",
-      moreDetails: "Informations Complémentaires :\n- Chaque client doit soumettre les documents de conformité requis.\n- ED_pharma peut demander des certificats réglementaires supplémentaires.\n- La non-conformité peut entraîner la suspension des opérations."
+      text: "Chaque client est responsable de détenir et de maintenir toutes les licences, permis et enregistrements nécessaires pour acheter, stocker, commercialiser et distribuer des produits médicinaux sur son propre territoire. ED pharma n'autorise pas la revente dans les juridictions où les produits ne sont pas conformes aux réglementations locales.",
+      moreDetails: "Informations Complémentaires :\n- Chaque client doit soumettre les documents de conformité requis.\n- ED pharma peut demander des certificats réglementaires supplémentaires.\n- La non-conformité peut entraîner la suspension des opérations."
     },
     {
       number: "05",
       title: "Commande, Tarification & Paiement",
-      text: "Les commandes ne sont contraignantes qu'une fois confirmées par écrit par ED_pharma. Les prix, devises et conditions de paiement sont convenus au cas par cas avec le client et peuvent être mis à jour dans de nouvelles offres ou contrats. Un retard de paiement peut entraîner la suspension des livraisons ou le retrait des facilités de crédit.",
+      text: "Les commandes ne sont contraignantes qu'une fois confirmées par écrit par ED pharma. Les prix, devises et conditions de paiement sont convenus au cas par cas avec le client et peuvent être mis à jour dans de nouvelles offres ou contrats. Un retard de paiement peut entraîner la suspension des livraisons ou le retrait des facilités de crédit.",
       moreDetails: "Informations Complémentaires :\n- Paiements multi-devises acceptés selon les accords.\n- Les commandes peuvent être mises en pause si les documents ou paiements sont retardés.\n- Des limites de crédit peuvent s'appliquer à certains acheteurs."
     },
     {
@@ -327,25 +327,25 @@ termsPage: {
     {
       number: "07",
       title: "Qualité, Stockage & Retours",
-      text: "Les clients doivent stocker et manipuler les produits conformément aux BPD (GDP), aux exigences de température et de sécurité, et maintenir une traçabilité complète des lots. Les retours ne sont acceptés que s'ils sont préautorisés par ED_pharma et lorsque l'intégrité, les conditions de stockage et la documentation peuvent être vérifiées.",
+      text: "Les clients doivent stocker et manipuler les produits conformément aux BPD (GDP), aux exigences de température et de sécurité, et maintenir une traçabilité complète des lots. Les retours ne sont acceptés que s'ils sont préautorisés par ED pharma et lorsque l'intégrité, les conditions de stockage et la documentation peuvent être vérifiées.",
       moreDetails: "Informations Complémentaires :\n- Retours acceptés uniquement avec preuve de stockage approprié.\n- Les marchandises altérées ne peuvent pas être acceptées.\n- Tous les retours doivent correspondre aux numéros de lots fournis."
     },
     {
       number: "08",
       title: "Pharmacovigilance & Réclamations",
-      text: "Les réactions indésirables suspectées, les défauts de qualité ou les réclamations sur les produits signalés aux clients doivent être communiqués rapidement à ED_pharma avec tous les détails disponibles afin qu'ils puissent être transmis au fabricant concerné et aux autorités si nécessaire.",
+      text: "Les réactions indésirables suspectées, les défauts de qualité ou les réclamations sur les produits signalés aux clients doivent être communiqués rapidement à ED pharma avec tous les détails disponibles afin qu'ils puissent être transmis au fabricant concerné et aux autorités si nécessaire.",
       moreDetails: "Informations Complémentaires :\n- Tout événement indésirable grave doit être signalé dans les 24 heures.\n- Tous les rapports sont transmis aux fabricants.\n- Le défaut de signalement peut restreindre les commandes futures."
     },
     {
       number: "09",
       title: "Protection des Données & Confidentialité",
-      text: "Les données de contact professionnel et les informations de transaction ne sont traitées que pour gérer la relation commerciale, exécuter les commandes et respecter les obligations légales. Les listes de prix, les informations sur les produits et les conditions commerciales partagées par ED_pharma sont confidentielles et ne doivent pas être divulguées à des tiers non autorisés.",
-      moreDetails: "Informations Complémentaires :\n- ED_pharma respecte strictement le RGPD (GDPR).\n- Données stockées de manière sécurisée uniquement pour des raisons réglementaires.\n- Aucune donnée partagée avec des tiers."
+      text: "Les données de contact professionnel et les informations de transaction ne sont traitées que pour gérer la relation commerciale, exécuter les commandes et respecter les obligations légales. Les listes de prix, les informations sur les produits et les conditions commerciales partagées par ED pharma sont confidentielles et ne doivent pas être divulguées à des tiers non autorisés.",
+      moreDetails: "Informations Complémentaires :\n- ED pharma respecte strictement le RGPD (GDPR).\n- Données stockées de manière sécurisée uniquement pour des raisons réglementaires.\n- Aucune donnée partagée avec des tiers."
     },
     {
       number: "10",
       title: "Propriété Intellectuelle & Modifications",
-      text: "Toutes les marques, logos, illustrations et conceptions de catalogues restent la propriété d'ED_pharma ou des fabricants respectifs et ne peuvent être reproduits sans consentement écrit. ED_pharma peut modifier ces conditions et le contenu du site web à tout moment ; l'utilisation continue indique l'acceptation des conditions mises à jour.",
+      text: "Toutes les marques, logos, illustrations et conceptions de catalogues restent la propriété d'ED pharma ou des fabricants respectifs et ne peuvent être reproduits sans consentement écrit. ED pharma peut modifier ces conditions et le contenu du site web à tout moment ; l'utilisation continue indique l'acceptation des conditions mises à jour.",
       moreDetails: "Informations Complémentaires :\n- L'utilisation abusive de la marque peut entraîner des poursuites judiciaires.\n- La mise en page des catalogues peut changer sans préavis.\n- Le marquage personnalisé nécessite une approbation écrite."
     }
   ]
@@ -727,11 +727,11 @@ contactPage: {
       title: "sales@edpharma.co", 
       description: "Envoyez-nous un email pour les demandes commerciales" 
     },
-    { 
-      icon: "📍", 
-      title: "London Eye Londres", 
-      description: "Notre siège principal" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "London Eye Londres", 
+    //   description: "Notre siège principal" 
+    // },
   ],
   form: {
     labels: {
@@ -1176,6 +1176,8 @@ footer: {
     "Ajanta Pharma",
     "Centurion Remedies",
     "Sunrise Remedies",
+    "Healing Pharma",
+      "Hab Pharma"
     
   ],
   contactInfo: {

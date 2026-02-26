@@ -4,8 +4,8 @@ const hr = {
   about: {
     hero: {
       tag: "O NAMA",
-      title: "Otkrijte ED_pharma – Štitimo intimno zdravlje stručnošću i brigom",
-      description1: "ED_pharma je specijalizirani distributer Europa-u-Europu, usredotočen na visokokvalitetne lijekove za erektilnu disfunkciju i seksualno zdravlje od provjerenih proizvođača poput Ajanta Pharma, Sunrise Remedies i Centurion.",
+      title: "Otkrijte ED pharma – Štitimo intimno zdravlje stručnošću i brigom",
+      description1: "ED pharma je specijalizirani distributer Europa-u-Europu, usredotočen na visokokvalitetne lijekove za erektilnu disfunkciju i seksualno zdravlje od provjerenih proizvođača poput Ajanta Pharma, Sunrise Remedies i Centurion.",
       description2: "Naš portfelj obuhvaća čvrste i oralne gel formulacije temeljene na dobro poznatim aktivnim tvarima uključujući Sildenafil, Tadalafil, Avanafil, Vardenafil i Dapoksetin, omogućujući partnerima da opslužuju širok spektar potreba za liječenjem ED-a i prerane ejakulacije, uz održavanje visokih standarda sigurnosti i učinkovitosti.",
       description3: 'Djelujući pod motom "Europa u Europu", kombiniramo rigorozno osiguranje kvalitete s učinkovitom logistikom, pomažući veletrgovcima, ljekarnama i online platformama da imaju pristup dosljednoj opskrbi od etabliranih indijskih proizvođača, uz poštivanje lokalnih regulatornih očekivanja.',
       downloadCatalogue: "Preuzmite katalog",
@@ -39,7 +39,7 @@ const hr = {
     journey: {
       tag: "NAŠ PUT",
       title: "Izgradnja namjenske mreže opskrbe za ED u Europi",
-      description1: "ED_pharma je osnovana kako bi povezala europsku potražnju za pouzdanim terapijama za erektilnu disfunkciju s indijskim proizvođačima visokih performansi. Fokusirajući se isključivo na ED i povezane indikacije, možemo kreirati portfelj koji podržava veletrgovce, ljekarne i digitalne klinike s dubinom umjesto s volumenom.",
+      description1: "ED pharma je osnovana kako bi povezala europsku potražnju za pouzdanim terapijama za erektilnu disfunkciju s indijskim proizvođačima visokih performansi. Fokusirajući se isključivo na ED i povezane indikacije, možemo kreirati portfelj koji podržava veletrgovce, ljekarne i digitalne klinike s dubinom umjesto s volumenom.",
       description2: "Dugoročni odnosi s dobavljačima i klijentima pomažu nam održavati kontinuitet opskrbe, transparentnu komunikaciju i jasna očekivanja o kvaliteti, pakiranju i dokumentaciji.",
       readMore: "Pročitajte više",
     },
@@ -47,7 +47,7 @@ const hr = {
     howWeWork: {
       tag: "KAKO RADIMO",
       title: "Usluga Europa-u-Europu s kvalitetom u središtu",
-      description1: "Od prognoze do konačne pošiljke, svaka narudžba ED_pharma upravlja se s jasnom sljedivošću serija, logistikom primjerenoj temperaturi i dokumentacijom usklađenom s europskim očekivanjima.",
+      description1: "Od prognoze do konačne pošiljke, svaka narudžba ED pharma upravlja se s jasnom sljedivošću serija, logistikom primjerenoj temperaturi i dokumentacijom usklađenom s europskim očekivanjima.",
       description2: "Cilj je ponuditi partnerima jednu, specijaliziranu kontaktnu točku za lijekove za ED – pojednostavljujući opskrbu, istovremeno štiteći sigurnost pacijenata i integritet proizvoda u cijelom lancu opskrbe.",
       readMore: "Pročitajte više",
     },
@@ -84,18 +84,18 @@ const hr = {
       },
       network: {
         title: "Izgradnja mreže dobavljača s dubinom",
-        intro: "Umjesto da nudimo širok generički katalog, ED_pharma slijedi specijalizirani vertikalni model posvećen molekulama za ED i povezano seksualno zdravlje. Ovaj uski terapeutski fokus omogućuje nam da održavamo:",
+        intro: "Umjesto da nudimo širok generički katalog, ED pharma slijedi specijalizirani vertikalni model posvećen molekulama za ED i povezano seksualno zdravlje. Ovaj uski terapeutski fokus omogućuje nam da održavamo:",
         bullets: [
           "Dugoročne ugovore s etabliranim GMP certificiranim proizvođačima",
           "Dosljedno nabavljanje formulacija po serijama (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoksetin)",
           "Pakiranje kontrolirano specifikacijama i provjerena izvozna dokumentacija",
-          "Namjenski prozori planiranja proizvodnje za narudžbe ED_pharma",
+          "Namjenski prozori planiranja proizvodnje za narudžbe ED pharma",
           "Predvidljive cikluse minimalne narudžbe (MOQ) za veletrgovce i B2B klijente",
         ],
       },
       europeIndia: {
         title: "Europska potražnja, snaga indijske proizvodnje",
-        intro: "Europsko tržište kontinuirano zahtijeva visokokvalitetne formulacije za ED sa stabilnom opskrbom i usklađenim pakiranjem. Kombiniranjem indijske farmaceutske proizvodnje velikih razmjera s logističkim operacijama baziranim u Europi, ED_pharma osigurava:",
+        intro: "Europsko tržište kontinuirano zahtijeva visokokvalitetne formulacije za ED sa stabilnom opskrbom i usklađenim pakiranjem. Kombiniranjem indijske farmaceutske proizvodnje velikih razmjera s logističkim operacijama baziranim u Europi, ED pharma osigurava:",
         bullets: [
           "Brže cikluse nadopunjavanja za veletrgovce i ljekarne",
           "Smanjenu kompleksnost otpreme putem rute Europa-u-Europu",
@@ -133,18 +133,18 @@ const hr = {
     sections: [
       {
         title: "Izgradnja mreže dobavljača s dubinom",
-        intro: "Umjesto da nudimo širok generički katalog, ED_pharma slijedi specijalizirani vertikalni model posvećen molekulama za ED i povezano seksualno zdravlje. Ovaj uski terapeutski fokus omogućuje nam da održavamo:",
+        intro: "Umjesto da nudimo širok generički katalog, ED pharma slijedi specijalizirani vertikalni model posvećen molekulama za ED i povezano seksualno zdravlje. Ovaj uski terapeutski fokus omogućuje nam da održavamo:",
         bullets: [
           "Dugoročne ugovore s etabliranim GMP certificiranim proizvođačima",
           "Dosljedno nabavljanje formulacija po serijama (Sildenafil, Tadalafil, Avanafil, Vardenafil, Dapoksetin)",
           "Pakiranje kontrolirano specifikacijama i provjerena izvozna dokumentacija",
-          "Namjenski prozori planiranja proizvodnje za narudžbe ED_pharma",
+          "Namjenski prozori planiranja proizvodnje za narudžbe ED pharma",
           "Predvidljive cikluse minimalne narudžbe (MOQ) za veletrgovce i B2B klijente",
         ],
       },
       {
         title: "Europska potražnja, snaga indijske proizvodnje",
-        intro: "Europsko tržište kontinuirano zahtijeva visokokvalitetne formulacije za ED sa stabilnom opskrbom i usklađenim pakiranjem. Kombiniranjem indijske farmaceutske proizvodnje velikih razmjera s logističkim operacijama baziranim u Europi, ED_pharma osigurava:",
+        intro: "Europsko tržište kontinuirano zahtijeva visokokvalitetne formulacije za ED sa stabilnom opskrbom i usklađenim pakiranjem. Kombiniranjem indijske farmaceutske proizvodnje velikih razmjera s logističkim operacijama baziranim u Europi, ED pharma osigurava:",
         bullets: [
           "Brže cikluse nadopunjavanja za veletrgovce i ljekarne",
           "Smanjenu kompleksnost otpreme putem rute Europa-u-Europu",
@@ -169,7 +169,7 @@ const hr = {
   termsPage: {
     header: {
       title: "Uvjeti i odredbe",
-      subtitle: "Ovi Uvjeti i odredbe reguliraju pristup i korištenje web stranice i kataloga proizvoda ED_pharma u poslovnim odnosima.",
+      subtitle: "Ovi Uvjeti i odredbe reguliraju pristup i korištenje web stranice i kataloga proizvoda ED pharma u poslovnim odnosima.",
       complianceTitle: "B2B usklađenost i provjera",
       complianceText: "Pristup je strogo ograničen na licencirane veletrgovce, ljekarne i ovlaštene distributere.",
     },
@@ -178,30 +178,30 @@ const hr = {
         number: "01",
         title: "Opseg korištenja",
         text: "Ova web stranica i katalog namijenjeni su isključivo profesionalnim suprotstranama kao što su farmaceutski veletrgovci, ljekarne, online ljekarne, klinike i licencirani distributeri unutar Europe. Nije namijenjena prodaji izravno pacijentima ili pojedinačnim potrošačima.",
-        moreDetails: "Dodatne informacije:\n- Primjenjuje se na sve proizvode i kataloge.\n- Samo licencirani poslovni subjekti mogu komunicirati s ED_pharma.\n- Regionalni propisi uvijek se moraju poštivati.",
+        moreDetails: "Dodatne informacije:\n- Primjenjuje se na sve proizvode i kataloge.\n- Samo licencirani poslovni subjekti mogu komunicirati s ED pharma.\n- Regionalni propisi uvijek se moraju poštivati.",
       },
       {
         number: "02",
         title: "Poslovni odnos",
-        text: "Svaka ponuda, narudžba ili isporuka temelji se na razumijevanju da obje strane djeluju kao neovisne tvrtke. Ništa na ovoj web stranici ne stvara radni, agentski ili partnerski odnos između ED_pharma i njenih klijenata.",
+        text: "Svaka ponuda, narudžba ili isporuka temelji se na razumijevanju da obje strane djeluju kao neovisne tvrtke. Ništa na ovoj web stranici ne stvara radni, agentski ili partnerski odnos između ED pharma i njenih klijenata.",
         moreDetails: "Dodatne informacije:\n- Nije dopušteno zastupanje trećih strana.\n- Ne podrazumijeva se status franšize, agenta ili partnerstva.\n- Svi ugovori ostaju neovisni između dviju strana.",
       },
       {
         number: "03",
         title: "Portfelj proizvoda i dostupnost",
-        text: "ED_pharma je usredotočena na lijekove za erektilnu disfunkciju i seksualno zdravlje koje proizvode odobreni partneri. Raspon proizvoda, brendiranje, pakiranje i jačine mogu se promijeniti bez prethodne javne obavijesti, a dostupnost može varirati ovisno o zemlji ili regulatornom statusu.",
+        text: "ED pharma je usredotočena na lijekove za erektilnu disfunkciju i seksualno zdravlje koje proizvode odobreni partneri. Raspon proizvoda, brendiranje, pakiranje i jačine mogu se promijeniti bez prethodne javne obavijesti, a dostupnost može varirati ovisno o zemlji ili regulatornom statusu.",
         moreDetails: "Dodatne informacije:\n- Mogu se pojaviti varijacije proizvoda ovisno o ažuriranjima proizvođača.\n- Pakiranje može varirati ovisno o zemlji.\n- Dostupnost zaliha mijenja se svakodnevno.",
       },
       {
         number: "04",
         title: "Regulatorne i licencne obveze",
-        text: "Svaki klijent odgovoran je za posjedovanje i održavanje svih dozvola, licenci i registracija potrebnih za kupnju, skladištenje, marketing i distribuciju lijekova na vlastitom teritoriju. ED_pharma ne odobrava preprodaju u jurisdikcije gdje proizvodi nisu usklađeni s lokalnim propisima.",
-        moreDetails: "Dodatne informacije:\n- Svaki klijent mora dostaviti potrebne dokumente o usklađenosti.\n- ED_pharma može zatražiti dodatne regulatorne certifikate.\n- Nesukladnost može dovesti do obustave poslovanja.",
+        text: "Svaki klijent odgovoran je za posjedovanje i održavanje svih dozvola, licenci i registracija potrebnih za kupnju, skladištenje, marketing i distribuciju lijekova na vlastitom teritoriju. ED pharma ne odobrava preprodaju u jurisdikcije gdje proizvodi nisu usklađeni s lokalnim propisima.",
+        moreDetails: "Dodatne informacije:\n- Svaki klijent mora dostaviti potrebne dokumente o usklađenosti.\n- ED pharma može zatražiti dodatne regulatorne certifikate.\n- Nesukladnost može dovesti do obustave poslovanja.",
       },
       {
         number: "05",
         title: "Narudžbe, cijene i plaćanje",
-        text: "Narudžbe su obvezujuće tek nakon što ih ED_pharma pismeno potvrdi. Cijene, valute i uvjeti plaćanja dogovaraju se po klijentu i mogu se ažurirati u novim ponudama ili ugovorima. Zakašnjelo plaćanje može rezultirati obustavom isporuka ili povlačenjem kreditnih mogućnosti.",
+        text: "Narudžbe su obvezujuće tek nakon što ih ED pharma pismeno potvrdi. Cijene, valute i uvjeti plaćanja dogovaraju se po klijentu i mogu se ažurirati u novim ponudama ili ugovorima. Zakašnjelo plaćanje može rezultirati obustavom isporuka ili povlačenjem kreditnih mogućnosti.",
         moreDetails: "Dodatne informacije:\n- Prihvaćaju se plaćanja u više valuta na temelju sporazuma.\n- Narudžbe mogu biti obustavljene ako dokumenti ili plaćanja kasne.\n- Kreditni limiti mogu se primijeniti na neke kupce.",
       },
       {
@@ -213,25 +213,25 @@ const hr = {
       {
         number: "07",
         title: "Kvaliteta, skladištenje i povrati",
-        text: "Klijenti moraju skladištiti i rukovati proizvodima u skladu s GDP zahtjevima, temperaturom i sigurnosnim zahtjevima te održavati potpunu sljedivost serija. Povrati se prihvaćaju samo kada su prethodno odobreni od strane ED_pharma i kada se mogu provjeriti integritet, uvjeti skladištenja i dokumentacija.",
+        text: "Klijenti moraju skladištiti i rukovati proizvodima u skladu s GDP zahtjevima, temperaturom i sigurnosnim zahtjevima te održavati potpunu sljedivost serija. Povrati se prihvaćaju samo kada su prethodno odobreni od strane ED pharma i kada se mogu provjeriti integritet, uvjeti skladištenja i dokumentacija.",
         moreDetails: "Dodatne informacije:\n- Povrati se prihvaćaju samo s odgovarajućim dokazom skladištenja.\n- Roba koja je bila mijenjana ne može biti prihvaćena.\n- Svi povrati moraju odgovarati isporučenim brojevima serija.",
       },
       {
         number: "08",
         title: "Farmakovigilancija i pritužbe",
-        text: "Sumnjive nuspojave, nedostatke kvalitete ili pritužbe na proizvode koje su klijenti prijavili moraju se odmah prijaviti ED_pharma sa svim dostupnim pojedinostima kako bi se mogle eskalirati odgovarajućem proizvođaču i nadležnim tijelima gdje je to potrebno.",
+        text: "Sumnjive nuspojave, nedostatke kvalitete ili pritužbe na proizvode koje su klijenti prijavili moraju se odmah prijaviti ED pharma sa svim dostupnim pojedinostima kako bi se mogle eskalirati odgovarajućem proizvođaču i nadležnim tijelima gdje je to potrebno.",
         moreDetails: "Dodatne informacije:\n- Svaki ozbiljni neželjeni događaj mora se prijaviti u roku od 24 sata.\n- Svi izvještaji eskaliraju se proizvođačima.\n- Neprijavljivanje može ograničiti buduće narudžbe.",
       },
       {
         number: "09",
         title: "Zaštita podataka i povjerljivost",
-        text: "Podaci o poslovnom kontaktu i informacije o transakcijama obrađuju se samo za upravljanje poslovnim odnosom, ispunjavanje narudžbi i ispunjavanje zakonskih obveza. Cjenici, informacije o proizvodima i poslovni uvjeti koje dijele ED_pharma su povjerljivi i ne smiju se otkrivati neovlaštenim trećim stranama.",
-        moreDetails: "Dodatne informacije:\n- ED_pharma striktno pridržava GDPR-a.\n- Podaci se pohranjuju sigurno samo iz regulatornih razloga.\n- Podaci se ne dijele s trećim stranama.",
+        text: "Podaci o poslovnom kontaktu i informacije o transakcijama obrađuju se samo za upravljanje poslovnim odnosom, ispunjavanje narudžbi i ispunjavanje zakonskih obveza. Cjenici, informacije o proizvodima i poslovni uvjeti koje dijele ED pharma su povjerljivi i ne smiju se otkrivati neovlaštenim trećim stranama.",
+        moreDetails: "Dodatne informacije:\n- ED pharma striktno pridržava GDPR-a.\n- Podaci se pohranjuju sigurno samo iz regulatornih razloga.\n- Podaci se ne dijele s trećim stranama.",
       },
       {
         number: "10",
         title: "Intelektualno vlasništvo i promjene",
-        text: "Sve žigove, logotipe, umjetnička djela i dizajne kataloga vlasništvo su ED_pharma ili odgovarajućih proizvođača i ne smiju se reproducirati bez pisanog pristanka. ED_pharma može mijenjati ove uvjete i sadržaj web stranice u bilo kojem trenutku; nastavak korištenja označava prihvaćanje ažuriranih uvjeta.",
+        text: "Sve žigove, logotipe, umjetnička djela i dizajne kataloga vlasništvo su ED pharma ili odgovarajućih proizvođača i ne smiju se reproducirati bez pisanog pristanka. ED pharma može mijenjati ove uvjete i sadržaj web stranice u bilo kojem trenutku; nastavak korištenja označava prihvaćanje ažuriranih uvjeta.",
         moreDetails: "Dodatne informacije:\n- Zlouporaba žiga može dovesti do pravnih radnji.\n- Izgled kataloga može se promijeniti bez prethodne obavijesti.\n- Prilagođeno brendiranje zahtijeva pismeno odobrenje.",
       },
     ],
@@ -634,11 +634,11 @@ homeProducts: {
       title: "sales@edpharma.co", 
       description: "Pošaljite nam email za poslovne upite" 
     },
-    { 
-      icon: "📍", 
-      title: "London Eye London", 
-      description: "Glavna lokacija našeg ureda" 
-    },
+    // { 
+    //   icon: "📍", 
+    //   title: "London Eye London", 
+    //   description: "Glavna lokacija našeg ureda" 
+    // },
   ],
   form: {
     labels: {
@@ -999,6 +999,8 @@ productDetail: {
       "Ajanta Pharma",
       "Centurion Remedies",
       "Sunrise Remedies",
+      "Healing Pharma",
+      "Hab Pharma"
       
     ],
     contactInfo: {

@@ -40,11 +40,11 @@ export default function ContactPage() {
         title: "sales@edpharma.co",
         description: "Email us for business inquiries",
       },
-      {
-        icon: "📍",
-        title: "London Eye London",
-        description: "Our main office location",
-      },
+      // {
+      //   icon: "📍",
+      //   title: "London Eye London",
+      //   description: "Our main office location",
+      // },
     ],
     form: {
       labels: {
@@ -331,7 +331,7 @@ export default function ContactPage() {
                         </div>
                       </div>
                     </div>
-                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
+                    {/* <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
                       <div className="flex items-start gap-4">
                         <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
                           📍
@@ -345,13 +345,13 @@ export default function ContactPage() {
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </>
                 )}
               </div>
 
               {/* Map/Additional Info */}
-              <div className="mt-10 pt-8 border-t border-blue-100">
+              {/* <div className="mt-10 pt-8 border-t border-blue-100">
                 <h3 className="text-lg font-semibold text-blue-900 mb-4">
                   Working Hours
                 </h3>
@@ -360,7 +360,7 @@ export default function ContactPage() {
                   <p className="text-blue-700 mt-1">Saturday: 10:00 AM - 4:00 PM</p>
                   <p className="text-blue-700 mt-1">Sunday: Closed</p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* RIGHT SIDE - CONTACT FORM */}
