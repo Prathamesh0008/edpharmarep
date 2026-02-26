@@ -54,8 +54,8 @@ export default function ContactPage() {
         message: "Message *",
       },
       placeholders: {
-        email: "Enter your email address",
-        phone: "Enter your phone number",
+        email: "Enter your email address (must be @gmail.com)",
+        phone: "Enter 10-digit phone number",
         name: "Enter your full name",
         message: "Type your message here...",
       },
@@ -67,10 +67,12 @@ export default function ContactPage() {
       email: {
         required: "Email is required",
         invalid: "Email is invalid",
+        gmailRequired: "Only Gmail addresses (@gmail.com) are accepted",
       },
       phone: {
-        required: "Phone is required",
-        invalid: "Phone number is invalid",
+        required: "Phone number is required",
+        invalid: "Phone number must be exactly 10 digits",
+        onlyDigits: "Phone number should contain only digits",
       },
       name: {
         required: "Name is required",
@@ -92,10 +94,18 @@ export default function ContactPage() {
     // ✅ if user starts typing again, hide success
     if (submitted) setSubmitted(false);
 
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    
+    // For phone field, only allow digits and limit to 10 characters
+    if (name === "phone") {
+      const digitsOnly = value.replace(/\D/g, "");
+      setForm({ ...form, [name]: digitsOnly.slice(0, 10) });
+    } else {
+      setForm({ ...form, [name]: value });
+    }
 
-    if (errors[e.target.name]) {
-      setErrors({ ...errors, [e.target.name]: null });
+    if (errors[name]) {
+      setErrors({ ...errors, [name]: null });
     }
     if (errors.submit) {
       setErrors((prev) => ({ ...prev, submit: null }));
@@ -105,31 +115,39 @@ export default function ContactPage() {
   const validate = () => {
     let newErrors = {};
 
-    // Email
+    // Email validation - must be @gmail.com
     if (!form.email?.trim()) {
       newErrors.email = validation.email?.required || "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(form.email.trim())) {
-      newErrors.email = validation.email?.invalid || "Email is invalid";
+    } else {
+      const email = form.email.trim().toLowerCase();
+      // Basic email format validation
+      if (!/\S+@\S+\.\S+/.test(email)) {
+        newErrors.email = validation.email?.invalid || "Email is invalid";
+      }
+      // Gmail domain validation
+      else if (!email.endsWith("@gmail.com")) {
+        newErrors.email = validation.email?.gmailRequired || "Only Gmail addresses (@gmail.com) are accepted";
+      }
     }
 
-    // Phone (simple, reliable)
-    const digits = (form.phone || "").replace(/\D/g, "");
+    // Phone validation - exactly 10 digits
+    const digits = form.phone || "";
     if (!digits) {
-      newErrors.phone = validation.phone?.required || "Phone is required";
-    } else if (digits.length < 7) {
-      newErrors.phone =
-        validation.phone?.invalid || "Phone number is invalid";
+      newErrors.phone = validation.phone?.required || "Phone number is required";
+    } else if (!/^\d+$/.test(digits)) {
+      newErrors.phone = validation.phone?.onlyDigits || "Phone number should contain only digits";
+    } else if (digits.length !== 10) {
+      newErrors.phone = validation.phone?.invalid || "Phone number must be exactly 10 digits";
     }
 
-    // Name
+    // Name validation
     if (!form.name?.trim()) {
       newErrors.name = validation.name?.required || "Name is required";
     }
 
-    // Message
+    // Message validation
     if (!form.message?.trim()) {
-      newErrors.message =
-        validation.message?.required || "Message is required";
+      newErrors.message = validation.message?.required || "Message is required";
     }
 
     return newErrors;
@@ -365,6 +383,7 @@ export default function ContactPage() {
                   <div>
                     <label className="form-label">
                       {formLabels.email || "Email *"}
+                      <span className="text-xs text-blue-500 ml-2">(@gmail.com only)</span>
                     </label>
                     <input
                       type="email"
@@ -373,7 +392,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       className={`form-input ${errors.email ? "input-error" : ""}`}
                       aria-invalid={errors.email ? "true" : "false"}
-                      placeholder={formPlaceholders.email || "Enter your email address"}
+                      placeholder={formPlaceholders.email || "Enter your email address (must be @gmail.com)"}
                       disabled={isLoading}
                     />
                     {errors.email && <p className="error-text">{errors.email}</p>}
@@ -382,6 +401,7 @@ export default function ContactPage() {
                   <div>
                     <label className="form-label">
                       {formLabels.phone || "Phone *"}
+                      <span className="text-xs text-blue-500 ml-2">(10 digits)</span>
                     </label>
                     <input
                       type="tel"
@@ -390,10 +410,18 @@ export default function ContactPage() {
                       onChange={handleChange}
                       className={`form-input ${errors.phone ? "input-error" : ""}`}
                       aria-invalid={errors.phone ? "true" : "false"}
-                      placeholder={formPlaceholders.phone || "Enter your phone number"}
+                      placeholder={formPlaceholders.phone || "Enter 10-digit phone number"}
                       disabled={isLoading}
+                      maxLength="10"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
                     />
                     {errors.phone && <p className="error-text">{errors.phone}</p>}
+                    {form.phone && form.phone.length > 0 && form.phone.length < 10 && (
+                      <p className="text-xs text-amber-600 mt-1">
+                        {10 - form.phone.length} more digit{10 - form.phone.length !== 1 ? 's' : ''} required
+                      </p>
+                    )}
                   </div>
                 </div>
 
