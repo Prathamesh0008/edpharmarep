@@ -16,6 +16,26 @@ const Offer = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const handleDownloadCatalog = () => {
+    // Create a link element
+    const link = document.createElement('a');
+    
+    // Set the href to your PDF file path
+    // Make sure the path is correct based on where your PDF is stored
+    link.href = '/ED.pdf';
+    
+    // Set the download attribute with the filename
+    link.download = 'ED-Pharma-Catalog.pdf';
+    
+    // Append to body, click, and remove
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    
+    // Optional: Close the modal after download starts
+    // setIsVisible(false);
+  };
+
   if (!isMounted || !isVisible) return null;
 
   return (
@@ -24,7 +44,6 @@ const Offer = () => {
       style={{ animation: "fadeIn 0.3s ease-out" }}
     >
       <div 
-        // 👇 I REMOVED THE DUPLICATE LINE HERE
         className="relative flex flex-col w-full max-w-[450px] bg-white shadow-2xl rounded-xl overflow-hidden h-auto md:h-[450px]"
         style={{ 
           animation: "scaleUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)"
@@ -83,7 +102,7 @@ const Offer = () => {
           </div>
 
           <button
-            onClick={() => setIsVisible(false)}
+            onClick={handleDownloadCatalog}
             className="w-full py-3.5 text-sm font-bold uppercase tracking-widest text-white transition-transform hover:scale-[1.02] active:scale-[0.98] rounded shadow-md"
             style={{ backgroundColor: colors.accent }}
           >
@@ -101,5 +120,3 @@ const Offer = () => {
 };
 
 export default Offer;
-
-
