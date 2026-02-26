@@ -722,12 +722,12 @@ contactPage: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "如有问题或需要支持，请致电我们" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "商务咨询请发送邮件" 
     },
     { 
@@ -1094,7 +1094,7 @@ footer: {
   contactInfo: {
     address: "印度，孟买",
     phone: "+91 98765 43210",
-    email: "info.edpharmacy@gmail.com"
+    email: "sales@edpharma.co"
   },
   copyright: "版权所有。"
 },

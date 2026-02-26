@@ -677,12 +677,12 @@ contactPage: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "ご質問やサポートはお電話ください" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "ビジネスに関するお問い合わせはメールで" 
     },
     { 
@@ -1033,7 +1033,7 @@ footer: {
   contactInfo: {
     address: "インド、ムンバイ",
     phone: "+91 98765 43210",
-    email: "info.edpharmacy@gmail.com"
+    email: "sales@edpharma.co"
   },
   copyright: "全著作権所有。"
 },

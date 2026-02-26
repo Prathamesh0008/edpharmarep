@@ -626,12 +626,12 @@ homeProducts: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "Обадете ни се за всякакви въпроси или поддръжка" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "Пишете ни имейл за бизнес запитвания" 
     },
     { 
@@ -1003,7 +1003,7 @@ productDetail: {
     contactInfo: {
       address: "Мумбай, Индия",
       phone: "+91 98765 43210",
-      email: "info.edpharmacy@gmail.com",
+      email: "sales@edpharma.co",
     },
     copyright: "Всички права запазени.",
   },

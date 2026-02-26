@@ -668,12 +668,12 @@ contactPage: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "Καλέστε μας για οποιεσδήποτε ερωτήσεις ή υποστήριξη" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "Στείλτε μας email για ερωτήματα επιχειρήσεων" 
     },
     { 
@@ -1042,7 +1042,7 @@ testimonials: {
     contactInfo: {
       address: "Μουμπάι, Ινδία",
       phone: "+91 98765 43210",
-      email: "info.edpharmacy@gmail.com"
+      email: "sales@edpharma.co"
     },
     copyright: "Με την επιφύλαξη παντός δικαιώματος."
   },

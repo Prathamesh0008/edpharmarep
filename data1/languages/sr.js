@@ -668,12 +668,12 @@ contactPage: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "Позовите нас за сва питања или подршку" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "Пошаљите нам имејл за пословна питања" 
     },
     { 
@@ -1042,7 +1042,7 @@ testimonials: {
     contactInfo: {
       address: "Mumbai, Indija",
       phone: "+91 98765 43210",
-      email: "info.edpharmacy@gmail.com"
+      email: "sales@edpharma.co"
     },
     copyright: "Sva prava zadržana."
   },

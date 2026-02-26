@@ -32,12 +32,12 @@ export default function ContactPage() {
     contactInfo: [
       {
         icon: "📞",
-        title: "(+91)-9525446820",
+        title: "+91 9892899094",
         description: "Call us for any questions or support",
       },
       {
         icon: "✉️",
-        title: "info.edpharmacy@gmail.com",
+        title: "sales@edpharma.co",
         description: "Email us for business inquiries",
       },
       {
@@ -308,7 +308,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h4 className="font-bold text-blue-900 text-lg">
-                            (+91)-9525446820
+                            +91 9892899094
                           </h4>
                           <p className="text-blue-600 mt-1">
                             Call us for any questions or support
@@ -323,7 +323,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h4 className="font-bold text-blue-900 text-lg">
-                            info.edpharmacy@gmail.com
+                            sales@edpharma.co
                           </h4>
                           <p className="text-blue-600 mt-1">
                             Email us for business inquiries

@@ -747,12 +747,12 @@ contactPage: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "اتصل بنا لأي أسئلة أو دعم" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "راسلنا عبر البريد الإلكتروني للاستفسارات التجارية" 
     },
     { 
@@ -1196,7 +1196,7 @@ testimonials: {
   contactInfo: {
     address: "مومباي، الهند",
     phone: "+91 98765 43210",
-    email: "info.edpharmacy@gmail.com"
+    email: "sales@edpharma.co"
   },
   copyright: "جميع الحقوق محفوظة."
 },

@@ -625,12 +625,12 @@ homeProducts: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "Sunați-ne pentru orice întrebări sau asistență" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "Trimiteți-ne email pentru întrebări de afaceri" 
     },
     { 
@@ -1003,7 +1003,7 @@ productDetail: {
     contactInfo: {
       address: "Mumbai, India",
       phone: "+91 98765 43210",
-      email: "info.edpharmacy@gmail.com",
+      email: "sales@edpharma.co",
     },
     copyright: "Toate Drepturile Rezervate.",
   },

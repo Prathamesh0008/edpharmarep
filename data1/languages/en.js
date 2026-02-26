@@ -608,12 +608,12 @@ contactPage: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "Call us for any questions or support" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "Email us for business inquiries" 
     },
     { 
@@ -1015,7 +1015,7 @@ testimonials: {
     contactInfo: {
       address: "Europe",
       phone: "+91 98765 43210",
-      email: "info.edpharmacy@gmail.com"
+      email: "sales@edpharma.co"
     },
     copyright: "All Rights Reserved."
   },

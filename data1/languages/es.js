@@ -741,12 +741,12 @@ contactPage: {
   contactInfo: [
     { 
       icon: "📞", 
-      title: "(+91)-9525446820", 
+      title: "+91 9892899094", 
       description: "Llámenos para cualquier pregunta o soporte" 
     },
     { 
       icon: "✉️", 
-      title: "info.edpharmacy@gmail.com", 
+      title: "sales@edpharma.co", 
       description: "Envíenos un correo para consultas comerciales" 
     },
     { 
@@ -1087,7 +1087,7 @@ footer: {
   contactInfo: {
     address: "Mumbai, India",
     phone: "+91 98765 43210",
-    email: "info.edpharmacy@gmail.com"
+    email: "sales@edpharma.co"
   },
   copyright: "Todos los derechos reservados."
 },
