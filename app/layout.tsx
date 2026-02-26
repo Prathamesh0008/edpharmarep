@@ -6,6 +6,7 @@ import LayoutController from "./components/LayoutController";
 import { CartProvider } from "./components/CartContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { AuthProvider } from "./context/AuthContext";
+import LoadingProvider from "./components/LoadingProvider"; // Create this component
 
 /* ---------------- FONTS ---------------- */
 const geistSans = Geist({
@@ -39,8 +40,6 @@ const BreadcrumbSchema = {
     "item": "https://www.edpharma.co/products"
   }]
 };
-
-
 
 const EnhancedOrganizationSchema = {
   "@context": "https://schema.org",
@@ -271,9 +270,11 @@ export default function RootLayout({
         <LanguageProvider>
           <AuthProvider>
             <CartProvider>
-              <LayoutController>
-                {children}
-              </LayoutController>
+              <LoadingProvider>
+                <LayoutController>
+                  {children}
+                </LayoutController>
+              </LoadingProvider>
             </CartProvider>
           </AuthProvider>
         </LanguageProvider>
