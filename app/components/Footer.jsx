@@ -78,9 +78,9 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center">
               <img
-                src="/logoed.svg"
+                src="/Edlogoo.png"
                 alt="ED Pharma"
-                className="h-16 w-auto object-contain"
+                className="h-12 w-auto object-contain"
               />
             </Link>
           </div>

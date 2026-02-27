@@ -787,9 +787,9 @@ export default function Navbar() {
           {/* LOGO */}
           <Link href="/" className="flex items-center cursor-pointer">
             <img
-              src="/logoed.svg"
+              src="/Edlogoo.png"
               alt="ED Pharma"
-              className="h-15 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </Link>
 
