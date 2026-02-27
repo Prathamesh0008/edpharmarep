@@ -1,3 +1,5 @@
+//app/components/LoadingProvider.tsx
+
 "use client";
 
 import { useState, useEffect, createContext, useContext } from "react";
@@ -35,7 +37,7 @@ export default function LoadingProvider({
       setTimeout(() => {
         setShowContent(true);
       }, 500);
-    }, 1500);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, []);

@@ -6,7 +6,8 @@ import LayoutController from "./components/LayoutController";
 import { CartProvider } from "./components/CartContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { AuthProvider } from "./context/AuthContext";
-import LoadingProvider from "./components/LoadingProvider"; // Create this component
+import LoadingProvider from "./components/LoadingProvider"; 
+import RouteLoader from "./components/RouteLoader";
 
 /* ---------------- FONTS ---------------- */
 const geistSans = Geist({
@@ -24,7 +25,7 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-/* ---------------- SCHEMA MARKUP ---------------- */
+/* ---------------- SCHEMA MARKUP ---------------- app\components\RouteLoader.tsx */
 const BreadcrumbSchema = {
   "@context": "https://schema.org/",
   "@type": "BreadcrumbList",
@@ -268,16 +269,21 @@ export default function RootLayout({
         </noscript>
         
         <LanguageProvider>
-          <AuthProvider>
-            <CartProvider>
-              <LoadingProvider>
-                <LayoutController>
-                  {children}
-                </LayoutController>
-              </LoadingProvider>
-            </CartProvider>
-          </AuthProvider>
-        </LanguageProvider>
+  <AuthProvider>
+    <CartProvider>
+      
+
+        {/* 🔥 ROUTE LOADER ADDED HERE */}
+        <RouteLoader />
+
+        <LayoutController>
+          {children}
+        </LayoutController>
+
+      
+    </CartProvider>
+  </AuthProvider>
+</LanguageProvider>
       </body>
     </html>
   );
