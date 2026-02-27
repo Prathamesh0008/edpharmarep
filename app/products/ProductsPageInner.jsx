@@ -171,6 +171,8 @@ const getProductPrice = (productSlug) => {
 // Smooth Product Image Gallery Component
 const ProductImageGallery = ({ product, theme, isMobile = false }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState({});
+  const [imageError, setImageError] = useState({});
   const intervalRef = useRef(null);
 
   // Get product images
@@ -211,6 +213,16 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
     }, 5000);
   };
 
+  const handleImageLoad = (index) => {
+    setImageLoaded(prev => ({ ...prev, [index]: true }));
+    setImageError(prev => ({ ...prev, [index]: false }));
+  };
+
+  const handleImageError = (index) => {
+    setImageError(prev => ({ ...prev, [index]: true }));
+    setImageLoaded(prev => ({ ...prev, [index]: true })); // Mark as loaded to hide loader
+  };
+
   // Get product name
   const productName = useMemo(() => {
     if (!product) return '';
@@ -219,6 +231,72 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
     }
     return product.name || product.slug || '';
   }, [product]);
+
+  // Circular Loader Component
+  const CircularLoader = ({ size = 'md', color = theme?.primary || '#3B82F6' }) => {
+    const sizeClasses = {
+      sm: 'w-6 h-6 border-2',
+      md: 'w-10 h-10 sm:w-12 sm:h-12 border-3',
+      lg: 'w-16 h-16 sm:w-20 sm:h-20 border-4'
+    };
+
+    const selectedSize = isMobile ? sizeClasses.sm : sizeClasses[size];
+
+    return (
+      <div className="absolute inset-0 flex items-center justify-center bg-white/60 backdrop-blur-[2px] z-20">
+        <div className="relative">
+          {/* Outer rotating circle */}
+          <div
+            className={`${selectedSize} rounded-full border-t-transparent animate-spin`}
+            style={{
+              borderColor: `${color}20`,
+              borderTopColor: color,
+            }}
+          />
+          
+          {/* Inner pulse effect - only visible on larger screens */}
+          {!isMobile && (
+            <div
+              className="absolute inset-0 rounded-full animate-ping opacity-20"
+              style={{ backgroundColor: color }}
+            />
+          )}
+          
+          {/* Loading text - hidden on mobile, shown on desktop */}
+          {!isMobile && (
+            <span
+              className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium whitespace-nowrap"
+              style={{ color }}
+            >
+              Loading...
+            </span>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  // Error Fallback Component
+  const ErrorFallback = () => (
+    <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-20">
+      <div className="text-center">
+        <svg
+          className="w-10 h-10 sm:w-12 sm:h-12 mx-auto text-gray-400 mb-2"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+          />
+        </svg>
+        <p className="text-xs sm:text-sm text-gray-500">Failed to load</p>
+      </div>
+    </div>
+  );
 
   return (
     <div className={`relative overflow-hidden ${isMobile ? 'h-60 sm:h-88' : 'h-40 sm:h-88'}`}>
@@ -257,9 +335,36 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
           transition: all 0.3s ease;
         }
         
+        @keyframes spin {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+        
+        .animate-spin {
+          animation: spin 1s linear infinite;
+        }
+        
+        @keyframes ping {
+          75%, 100% {
+            transform: scale(2);
+            opacity: 0;
+          }
+        }
+        
+        .animate-ping {
+          animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        
         @media (prefers-reduced-motion: reduce) {
           .image-slide,
-          .navigation-dot {
+          .navigation-dot,
+          .animate-spin,
+          .animate-ping {
+            animation: none;
             transition: none;
           }
         }
@@ -272,22 +377,34 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
             key={index}
             className={`image-slide ${index === currentImageIndex ? 'active' : ''}`}
           >
+            {/* Show loader while image is loading */}
+            {!imageLoaded[index] && !imageError[index] && (
+              <CircularLoader size="lg" color={theme.primary} />
+            )}
+            
+            {/* Show error state if image failed to load */}
+            {imageError[index] && <ErrorFallback />}
+            
             <Image
               src={imgSrc}
               alt={`${productName} - View ${index + 1}`}
               fill
-              className="object-contain"
+              className={`object-contain transition-opacity duration-300 ${
+                imageLoaded[index] && !imageError[index] ? 'opacity-100' : 'opacity-0'
+              }`}
               sizes={isMobile ? "60vw" : "40vw"}
               priority={index === 0}
               loading={index === 0 ? "eager" : "lazy"}
               quality={85}
+              onLoad={() => handleImageLoad(index)}
+              onError={() => handleImageError(index)}
             />
           </div>
         ))}
         
         {/* Image Navigation Dots */}
         {images.length > 1 && (
-          <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex gap-1.5 sm:gap-2">
+          <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex gap-1.5 sm:gap-2">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -307,32 +424,79 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
         )}
       </div>
 
-      {/* Thumbnail Images - Mobile Only */}
+      {/* Thumbnail Images - Mobile Only with circular loaders */}
       {isMobile && images.length > 1 && (
         <div className="flex gap-2 justify-center mt-3">
-          {images.map((imgSrc, index) => (
-            <button
-              key={index}
-              onClick={() => handleThumbnailClick(index)}
-              className={`w-8 h-8 rounded overflow-hidden border ${
-                index === currentImageIndex 
-                  ? 'border-opacity-100' 
-                  : 'border-opacity-30 border-gray-300'
-              }`}
-              style={{
-                borderColor: index === currentImageIndex ? theme.primary : 'transparent'
-              }}
-            >
-              <Image
-                src={imgSrc}
-                alt={`Thumbnail ${index + 1}`}
-                width={32}
-                height={32}
-                className="object-contain w-full h-full"
-                loading="lazy"
-              />
-            </button>
-          ))}
+          {images.map((imgSrc, index) => {
+            const [thumbLoaded, setThumbLoaded] = useState(false);
+            const [thumbError, setThumbError] = useState(false);
+            
+            return (
+              <button
+                key={index}
+                onClick={() => handleThumbnailClick(index)}
+                className={`relative w-8 h-8 rounded overflow-hidden border ${
+                  index === currentImageIndex 
+                    ? 'border-opacity-100' 
+                    : 'border-opacity-30 border-gray-300'
+                }`}
+                style={{
+                  borderColor: index === currentImageIndex ? theme.primary : 'transparent'
+                }}
+              >
+                {/* Thumbnail circular loader */}
+                {!thumbLoaded && !thumbError && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
+                    <div
+                      className="w-4 h-4 rounded-full border-2 border-t-transparent animate-spin"
+                      style={{
+                        borderColor: `${theme.primary}30`,
+                        borderTopColor: theme.primary,
+                      }}
+                    />
+                  </div>
+                )}
+                
+                {/* Thumbnail error state */}
+                {thumbError && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                    <svg
+                      className="w-3 h-3 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </div>
+                )}
+                
+                <Image
+                  src={imgSrc}
+                  alt={`Thumbnail ${index + 1}`}
+                  width={32}
+                  height={32}
+                  className={`object-contain w-full h-full transition-opacity duration-200 ${
+                    thumbLoaded && !thumbError ? 'opacity-100' : 'opacity-0'
+                  }`}
+                  loading="lazy"
+                  onLoad={() => {
+                    setThumbLoaded(true);
+                    setThumbError(false);
+                  }}
+                  onError={() => {
+                    setThumbError(true);
+                    setThumbLoaded(true);
+                  }}
+                />
+              </button>
+            );
+          })}
         </div>
       )}
     </div>

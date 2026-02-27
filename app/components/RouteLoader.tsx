@@ -23,10 +23,11 @@ export default function RouteLoader() {
     <div className="fixed inset-0 z-[99999] flex items-center justify-center bg-white">
       <div className="flex flex-col items-center gap-6">
         
-        {/* Spinner */}
-        <div className="relative">
-          <div className="w-16 h-16 border-4 border-gray-200 rounded-full"></div>
-          <div className="absolute top-0 left-0 w-16 h-16 border-4 border-transparent border-t-gray-800 rounded-full animate-spin"></div>
+        {/* Horizontal Dots Loader */}
+        <div className="flex space-x-2">
+          <div className="w-4 h-4 bg-gray-800 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+          <div className="w-4 h-4 bg-gray-800 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+          <div className="w-4 h-4 bg-gray-800 rounded-full animate-bounce"></div>
         </div>
 
         <p className="text-gray-700 font-semibold tracking-wide">

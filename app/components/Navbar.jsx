@@ -14,7 +14,7 @@ import { COMPOUNDS } from "@/app/data/compounds";
 
 export default function Navbar() {
   const router = useRouter();
-  const pathname = usePathname(); // Get current path for active state
+  const pathname = usePathname();
   const { cartItems, getCartBadgeCount } = useCart();
   const desktopSearchRef = useRef(null);
   const mobileSearchRef = useRef(null);
@@ -44,23 +44,23 @@ export default function Navbar() {
 
   /* ---------- LANGUAGES CONFIG ---------- */
   const LANGUAGE_MAPPING = {
-    "ar": { label: "Arabic", flag: "sa" },
-    "sq": { label: "Albanian", flag: "al" },
-    "bs": { label: "Bosnian", flag: "ba" },
-    "bg": { label: "Bulgarian", flag: "bg" },
-    "zh": { label: "Chinese", flag: "cn" },
-    "hr": { label: "Croatian", flag: "hr" },
-    "nl": { label: "Dutch", flag: "nl" },
+    "ar": { label: "العربية", flag: "sa" },
+    "sq": { label: "Shqip", flag: "al" },
+    "bs": { label: "Bosanski", flag: "ba" },
+    "bg": { label: "Български", flag: "bg" },
+    "zh": { label: "中文", flag: "cn" },
+    "hr": { label: "Hrvatski", flag: "hr" },
+    "nl": { label: "Nederlands", flag: "nl" },
     "en": { label: "English", flag: "us" },
-    "fr": { label: "French", flag: "fr" },
-    "de": { label: "German", flag: "de" },
-    "el": { label: "Greek", flag: "gr" },
-    "ja": { label: "Japanese", flag: "jp" },
-    "mk": { label: "Macedonian", flag: "mk" },
-    "pt": { label: "Portuguese", flag: "pt" },
-    "ro": { label: "Romanian", flag: "ro" },
-    "sr": { label: "Serbian", flag: "rs" },
-    "es": { label: "Spanish", flag: "es" },
+    "fr": { label: "Français", flag: "fr" },
+    "de": { label: "Deutsch", flag: "de" },
+    "el": { label: "Ελληνικά", flag: "gr" },
+    "ja": { label: "日本語", flag: "jp" },
+    "mk": { label: "Македонски", flag: "mk" },
+    "pt": { label: "Português", flag: "pt" },
+    "ro": { label: "Română", flag: "ro" },
+    "sr": { label: "Српски", flag: "rs" },
+    "es": { label: "Español", flag: "es" },
   };
 
   // Get current language info
@@ -198,6 +198,7 @@ export default function Navbar() {
         setSelectedBrand(null);
       }
       if (mobileSearchRef.current && !mobileSearchRef.current.contains(event.target)) {
+        setMobileSearchOpen(false);
         setSuggestions([]);
         setSelectedBrand(null);
       }
@@ -498,8 +499,8 @@ export default function Navbar() {
 
       return (
         <>
-          {/* Brand Filters Section */}
-          <div className="mt-3">
+          {/* Brand Filters Section - Hide on small mobile screens if too many */}
+          <div className="mt-3 hidden sm:block">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-center gap-2">
                 <Filter size={14} className="text-gray-400" />
@@ -517,7 +518,7 @@ export default function Navbar() {
             </div>
             
             <div className="flex flex-wrap gap-2">
-              {brands.map(brand => {
+              {brands.slice(0, 3).map(brand => {
                 const brandInfo = getBrandInfo(brand);
                 const isActive = selectedBrand === brand;
                 const brandProducts = suggestions.filter(item => item.brand === brand);
@@ -526,7 +527,7 @@ export default function Navbar() {
                   <button
                     key={brand}
                     onClick={() => handleBrandFilter(brand)}
-                    className={`px-3 py-1.5 text-xs rounded-full border transition-all flex items-center gap-1.5 cursor-pointer
+                    className={`px-2 sm:px-3 py-1.5 text-xs rounded-full border transition-all flex items-center gap-1.5 cursor-pointer
                       ${isActive ? 
                         `${brandInfo.bgColor} ${brandInfo.textColor} ${brandInfo.borderColor} font-semibold` : 
                         `bg-white ${brandInfo.textColor} ${brandInfo.borderColor} hover:${brandInfo.bgColor.replace('bg-', '')}`
@@ -534,32 +535,35 @@ export default function Navbar() {
                     title={`Show ${brandProducts.length} products from ${brandInfo.name}`}
                   >
                     <Tag size={10} />
-                    <span>{brandInfo.name}</span>
+                    <span className="hidden xs:inline">{brandInfo.name.split(' ')[0]}</span>
+                    <span className="xs:hidden">{brandInfo.name.charAt(0)}</span>
                     <span className={`px-1.5 py-0.5 rounded text-xs ${isActive ? 'bg-white' : brandInfo.bgColor}`}>
                       {brandProducts.length}
                     </span>
                   </button>
                 );
               })}
+              {brands.length > 3 && (
+                <span className="text-xs text-gray-500 self-center">+{brands.length - 3} more</span>
+              )}
             </div>
           </div>
 
           {/* Results Count */}
           <div className="mt-4 flex items-center justify-between px-1">
-            <div>
-              <p className="text-sm font-medium text-gray-700">
-                {suggestions.length} {suggestions.length === 1 ? 'product' : 'products'} found
-                {selectedBrand && ` in ${getBrandInfo(selectedBrand).name}`}
+            <div className="flex flex-col xs:flex-row xs:items-center gap-1">
+              <p className="text-xs sm:text-sm font-medium text-gray-700">
+                {suggestions.length} {suggestions.length === 1 ? 'product' : 'products'}
               </p>
-              {query.trim() && !selectedBrand && brands.length > 1 && (
+              {selectedBrand && (
                 <p className="text-xs text-gray-500">
-                  Showing results from {brands.length} brands
+                  in {getBrandInfo(selectedBrand).name.split(' ')[0]}
                 </p>
               )}
             </div>
             <button
               onClick={handleSearchSubmit}
-              className="text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1 cursor-pointer"
+              className="text-xs sm:text-sm text-blue-600 hover:text-blue-800 font-medium flex items-center gap-1 cursor-pointer"
             >
               View all
               <ChevronRight size={14} />
@@ -579,38 +583,38 @@ export default function Navbar() {
                 <button
                   key={item.id || item.name}
                   onClick={() => handleSuggestionClick(item)}
-                  className="w-full text-left px-4 py-3 hover:bg-blue-50 
+                  className="w-full text-left px-3 sm:px-4 py-3 hover:bg-blue-50 
                     flex items-start justify-between border-b last:border-b-0
                     transition-colors duration-150 active:bg-blue-100 group cursor-pointer"
                 >
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     <div className="flex items-start gap-2">
-                      <div className={`p-1 rounded mt-1 ${matchType === 'compound' ? 'bg-green-100' : 'bg-blue-100'}`}>
+                      <div className={`p-1 rounded mt-1 flex-shrink-0 ${matchType === 'compound' ? 'bg-green-100' : 'bg-blue-100'}`}>
                         {matchType === 'compound' ? (
                           <Sparkles size={12} className="text-green-600" />
                         ) : (
                           <Search size={12} className="text-blue-600" />
                         )}
                       </div>
-                      <div className="flex-1">
-                        <div className="font-medium text-left">
+                      <div className="flex-1 min-w-0">
+                        <div className="font-medium text-sm sm:text-base truncate">
                           {highlightMatch(item.name, query)}
                         </div>
                         <div className="text-xs text-gray-500 flex flex-col mt-1">
-                          <div className="flex items-center gap-2">
+                          <div className="flex flex-wrap items-center gap-2">
                             {item.strength && (
-                              <span className="font-medium bg-gray-100 px-1.5 py-0.5 rounded">
+                              <span className="font-medium bg-gray-100 px-1.5 py-0.5 rounded text-xs">
                                 {item.strength}
                               </span>
                             )}
-                            <span className={`px-2 py-0.5 rounded ${brandInfo.bgColor} ${brandInfo.textColor} ${brandInfo.borderColor}`}>
-                              {brandInfo.name}
+                            <span className={`px-2 py-0.5 rounded text-xs ${brandInfo.bgColor} ${brandInfo.textColor} ${brandInfo.borderColor}`}>
+                              {brandInfo.name.split(' ')[0]}
                             </span>
                           </div>
                           {matchedItem && matchedItem.type === 'compound' && (
                             <span className="text-green-600 text-xs mt-1 flex items-center gap-1">
                               <Sparkles size={10} />
-                              Contains: {matchedItem.composition}
+                              <span className="truncate">{matchedItem.composition}</span>
                             </span>
                           )}
                         </div>
@@ -627,7 +631,7 @@ export default function Navbar() {
           {isCompoundSearch && brands.length > 1 && !selectedBrand && (
             <div className="mt-4 pt-3 border-t border-gray-100">
               <p className="text-xs font-medium text-gray-500 mb-2">QUICK ACTIONS:</p>
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-2 xs:grid-cols-3 gap-2">
                 {brands.slice(0, 3).map(brand => {
                   const brandInfo = getBrandInfo(brand);
                   const popularProduct = brandInfo.popularProducts?.[0] || "";
@@ -638,8 +642,8 @@ export default function Navbar() {
                       onClick={() => handleBrandQuickSearch(brandInfo.name, popularProduct)}
                       className={`px-2 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors cursor-pointer`}
                     >
-                      <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
-                      <div className="text-xs opacity-75 mt-0.5">{popularProduct}</div>
+                      <div className="font-semibold truncate">{brandInfo.name.split(' ')[0]}</div>
+                      <div className="text-xs opacity-75 mt-0.5 truncate">{popularProduct}</div>
                     </button>
                   );
                 })}
@@ -654,21 +658,21 @@ export default function Navbar() {
       return (
         <div className="mt-4 text-center py-8">
           <Search size={32} className="mx-auto text-gray-300 mb-2" />
-          <p className="text-gray-500">No results found for "{query}"</p>
-          <p className="text-sm text-gray-400 mt-1 mb-4">Try searching by compound or brand name</p>
+          <p className="text-gray-500 text-sm">No results found for "{query}"</p>
+          <p className="text-xs text-gray-400 mt-1 mb-4">Try searching by compound or brand name</p>
           
           {/* Brand suggestions when no results */}
           <div className="border-t border-gray-100 pt-4">
             <p className="text-sm font-medium text-gray-700 mb-2">Browse by brand:</p>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 xs:grid-cols-3 gap-2">
               {Object.entries(BRAND_CONFIG).slice(0, 3).map(([brandKey, brandInfo]) => (
                 <button
                   key={brandKey}
                   onClick={() => handleQuickSearch(brandInfo.name)}
                   className={`px-3 py-2 text-xs rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors cursor-pointer`}
                 >
-                  <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
-                  <div className="text-xs opacity-75 mt-0.5">{brandInfo.popularProducts[0]}</div>
+                  <div className="font-semibold truncate">{brandInfo.name.split(' ')[0]}</div>
+                  <div className="text-xs opacity-75 mt-0.5 truncate">{brandInfo.popularProducts[0]}</div>
                 </button>
               ))}
             </div>
@@ -683,28 +687,28 @@ export default function Navbar() {
         <div className="mt-4">
           <div className="mb-4">
             <p className="text-sm font-medium text-gray-700 mb-2">Browse by brand:</p>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 xs:grid-cols-3 gap-2">
               {Object.entries(BRAND_CONFIG).map(([brandKey, brandInfo]) => (
                 <button
                   key={brandKey}
                   onClick={() => handleQuickSearch(brandInfo.name)}
-                  className={`px-3 py-2 text-sm rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors cursor-pointer`}
+                  className={`px-2 sm:px-3 py-2 text-xs sm:text-sm rounded-lg border ${brandInfo.bgColor} ${brandInfo.borderColor} ${brandInfo.hoverBgColor} transition-colors cursor-pointer`}
                 >
-                  <div className="font-semibold">{brandInfo.name.split(' ')[0]}</div>
-                  <div className="text-xs opacity-75 mt-0.5">{brandInfo.popularProducts[0]}</div>
+                  <div className="font-semibold truncate">{brandInfo.name.split(' ')[0]}</div>
+                  <div className="text-xs opacity-75 mt-0.5 truncate">{brandInfo.popularProducts[0]}</div>
                 </button>
               ))}
             </div>
           </div>
 
           <div className="pt-4 border-t border-gray-100">
-            <p className="text-sm font-medium text-gray-700 mb-2">Popular compound searches:</p>
+            <p className="text-sm font-medium text-gray-700 mb-2">Popular compounds:</p>
             <div className="flex flex-wrap gap-2">
               {["Sildenafil", "Tadalafil", "Vardenafil"].map((term, index) => (
                 <button
                   key={index}
                   onClick={() => handleQuickSearch(term)}
-                  className="px-3 py-1.5 text-sm bg-gray-100 hover:bg-blue-100 
+                  className="px-2 sm:px-3 py-1.5 text-xs sm:text-sm bg-gray-100 hover:bg-blue-100 
                     text-gray-700 hover:text-blue-700 rounded-full transition-colors
                     border border-gray-200 hover:border-blue-300 cursor-pointer"
                 >
@@ -783,18 +787,18 @@ export default function Navbar() {
     <>
       {/* ================= NAVBAR ================= */}
       <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-md z-[1000]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-[60px] flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 h-[60px] flex items-center justify-between">
           {/* LOGO */}
-          <Link href="/" className="flex items-center cursor-pointer">
+          <Link href="/" className="flex items-center cursor-pointer flex-shrink-0">
             <img
-              src="/Edlogoo.png"
+              src="/LogoEd.png"
               alt="ED Pharma"
-              className="h-12 w-auto object-contain"
+              className="h-9 sm:h-10 lg:h-11 w-auto object-contain"
             />
           </Link>
 
           {/* ================= DESKTOP MENU ================= */}
-          <div className="hidden md:flex items-center gap-6 text-slate-700 font-medium">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6 text-slate-700 font-medium">
             <NavLink href="/" isActive={isActiveLink('/')}>
               {currentTranslations.home || "Home"}
             </NavLink>
@@ -812,25 +816,25 @@ export default function Navbar() {
             </NavLink>
 
             {/* ================= ENHANCED DESKTOP SEARCH ================= */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 lg:gap-4">
               <div ref={desktopSearchRef} className="relative">
                 <button
                   onClick={toggleDesktopSearch}
-                  className="text-blue-700 hover:text-blue-800 transition p-2 rounded-full hover:bg-blue-50
+                  className="text-blue-700 hover:text-blue-800 transition p-1.5 lg:p-2 rounded-full hover:bg-blue-50
                     relative group cursor-pointer"
                   title="Search products"
                 >
-                  <Search size={22} />
+                  <Search size={20} className="lg:size-[22px]" />
                   {query.trim() && showDesktopSearch && (
                     <span className="absolute -top-1 -right-1 bg-blue-500 text-white text-xs 
-                      font-bold rounded-full h-5 w-5 flex items-center justify-center animate-pulse">
+                      font-bold rounded-full h-4 w-4 lg:h-5 lg:w-5 flex items-center justify-center animate-pulse">
                       !
                     </span>
                   )}
                 </button>
 
                 {showDesktopSearch && (
-                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl shadow-2xl border border-gray-200 p-4 w-[500px] z-50 ">
+                  <div className="absolute right-0 top-0 mt-12 bg-white rounded-xl shadow-2xl border border-gray-200 p-4 w-[90vw] max-w-[500px] z-50">
                     <div className="flex items-center gap-2">
                       <div className="relative flex-1">
                         <Search
@@ -844,7 +848,7 @@ export default function Navbar() {
                           value={query}
                           onChange={(e) => handleSearchChange(e.target.value)}
                           onKeyDown={handleSearch}
-                          className="w-full border border-gray-300 rounded-xl pl-11 pr-10 py-3 text-sm
+                          className="w-full border border-gray-300 rounded-xl pl-10 pr-10 py-2.5 lg:py-3 text-sm
                             focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none
                             placeholder-gray-400"
                         />
@@ -860,7 +864,7 @@ export default function Navbar() {
                       <button
                         onClick={handleSearchSubmit}
                         disabled={!query.trim()}
-                        className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-5 py-3 rounded-xl 
+                        className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-4 lg:px-5 py-2.5 lg:py-3 rounded-xl 
                           hover:from-blue-700 hover:to-blue-800 disabled:bg-gray-300 disabled:from-gray-300 
                           disabled:to-gray-400 transition-all shadow-md hover:shadow-lg cursor-pointer disabled:cursor-not-allowed"
                       >
@@ -874,52 +878,52 @@ export default function Navbar() {
                 )}
               </div>
 
-              {/* DOWNLOAD PDF */}
+              {/* DOWNLOAD PDF - Hide on smaller desktop */}
               <a
                 href="/ED.pdf"
                 download
-                className="flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-700 rounded-full 
-                  hover:bg-blue-50 transition-colors cursor-pointer"
+                className="hidden lg:flex items-center gap-2 px-4 py-2 border border-blue-600 text-blue-700 rounded-full 
+                  hover:bg-blue-50 transition-colors cursor-pointer text-sm"
               >
                 <Download size={16} />
-                {t?.en?.download || "Download catalogue"}
+                {t?.en?.download || "Download"}
               </a>
 
               {/* LANGUAGE SELECTOR */}
               <div ref={languageRef} className="relative">
                 <button
                   onClick={() => setLanguageOpen(!languageOpen)}
-                  className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-lg 
-                    hover:border-blue-400 hover:bg-blue-50 min-w-[100px] transition-colors cursor-pointer"
+                  className="flex items-center gap-1 lg:gap-2 px-2 lg:px-3 py-1.5 lg:py-2 border border-gray-300 rounded-lg 
+                    hover:border-blue-400 hover:bg-blue-50 min-w-[70px] lg:min-w-[100px] transition-colors cursor-pointer"
                 >
                   <img
                     src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
                     alt={currentLanguageInfo.label}
-                    className="w-6 h-4 rounded-sm"
+                    className="w-4 h-3 lg:w-5 lg:h-4 rounded-sm"
                   />
-                  <span className="text-sm font-medium">{language.toUpperCase()}</span>
-                  <ChevronDown size={16} />
+                  <span className="text-xs lg:text-sm font-medium">{language.toUpperCase()}</span>
+                  <ChevronDown size={14} className="lg:size-4" />
                 </button>
 
                 {languageOpen && (
-                  <div className="absolute right-0 mt-2 w-64 bg-white rounded-xl shadow-xl border z-[999] max-h-[400px] overflow-y-auto">
-                    <div className="p-3 border-b">
-                      <p className="font-semibold text-sm">Select Language</p>
+                  <div className="absolute right-0 mt-2 w-56 lg:w-64 bg-white rounded-xl shadow-xl border z-[999] max-h-[400px] overflow-y-auto">
+                    <div className="p-2 lg:p-3 border-b">
+                      <p className="font-semibold text-xs lg:text-sm">Select Language</p>
                     </div>
                     <div className="p-2">
                       {LANGUAGES.map((lang) => (
                         <button
                           key={lang.code}
                           onClick={() => handleLanguageChange(lang.code)}
-                          className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
+                          className={`w-full flex items-center gap-2 lg:gap-3 px-2 lg:px-3 py-2 text-xs lg:text-sm rounded-lg 
                             ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
                         >
                           <img
                             src={`https://flagcdn.com/w20/${lang.flag}.png`}
                             alt={lang.label}
-                            className="w-5 h-4 rounded-sm"
+                            className="w-4 h-3 lg:w-5 lg:h-4 rounded-sm"
                           />
-                          <span>{lang.label}</span>
+                          <span className="truncate">{lang.label}</span>
                         </button>
                       ))}
                     </div>
@@ -930,12 +934,12 @@ export default function Navbar() {
               {/* CART */}
               <button
                 onClick={() => router.push("/cart")}
-                className="relative text-2xl hover:scale-105 transition-transform cursor-pointer"
+                className="relative text-xl lg:text-2xl hover:scale-105 transition-transform cursor-pointer p-1"
                 title="Cart"
               >
                 🛒
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-4 w-4 lg:h-5 lg:w-5 flex items-center justify-center">
                     {cartCount > 99 ? "99+" : cartCount}
                   </span>
                 )}
@@ -946,40 +950,40 @@ export default function Navbar() {
                 <div className="relative profile-menu-container">
                   <button
                     onClick={() => setProfileMenuOpen(!profileMenuOpen)}
-                    className="flex items-center gap-2 px-4 py-2 rounded-full border border-blue-200 
-                      text-blue-700 font-semibold hover:bg-blue-50 min-w-[120px] justify-center transition-colors cursor-pointer"
+                    className="flex items-center gap-1 lg:gap-2 px-3 lg:px-4 py-1.5 lg:py-2 rounded-full border border-blue-200 
+                      text-blue-700 font-semibold hover:bg-blue-50 min-w-[100px] lg:min-w-[120px] justify-center transition-colors cursor-pointer text-xs lg:text-sm"
                   >
-                    <User size={16} />
-                    {t?.en?.hi || "Hi"}, {username.length > 8 ? `${username.substring(0, 8)}...` : username}
+                    <User size={14} className="lg:size-4" />
+                    <span className="truncate">{username.length > 8 ? `${username.substring(0, 6)}...` : username}</span>
                   </button>
 
                   {profileMenuOpen && (
-                    <div className="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border z-[999]">
-                      <div className="p-3 border-b">
-                        <p className="font-semibold text-sm">{username}</p>
+                    <div className="absolute right-0 mt-2 w-40 lg:w-48 bg-white rounded-xl shadow-xl border z-[999]">
+                      <div className="p-2 lg:p-3 border-b">
+                        <p className="font-semibold text-xs lg:text-sm truncate">{username}</p>
                       </div>
                       <Link
                         href="/orders"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors cursor-pointer"
+                        className="flex items-center gap-2 lg:gap-3 px-3 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm hover:bg-gray-50 border-b transition-colors cursor-pointer"
                       >
                         <PackageIcon />
-                        <span>{t?.en?.orders || "My Orders"}</span>
+                        <span className="truncate">{t?.en?.orders || "Orders"}</span>
                       </Link>
                       <Link
                         href="/profile"
                         onClick={() => setProfileMenuOpen(false)}
-                        className="flex items-center gap-3 px-4 py-3 text-sm hover:bg-gray-50 border-b transition-colors cursor-pointer"
+                        className="flex items-center gap-2 lg:gap-3 px-3 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm hover:bg-gray-50 border-b transition-colors cursor-pointer"
                       >
                         <User size={14} />
-                        <span>{t?.en?.profile || "My Profile"}</span>
+                        <span className="truncate">{t?.en?.profile || "Profile"}</span>
                       </Link>
                       <button
                         onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition-colors cursor-pointer"
+                        className="w-full flex items-center gap-2 lg:gap-3 px-3 lg:px-4 py-2 lg:py-3 text-xs lg:text-sm text-red-600 hover:bg-red-50 transition-colors cursor-pointer"
                       >
                         <LogOut size={14} />
-                        <span>{t?.en?.logout || "Logout"}</span>
+                        <span className="truncate">{t?.en?.logout || "Logout"}</span>
                       </button>
                     </div>
                   )}
@@ -987,49 +991,49 @@ export default function Navbar() {
               ) : (
                 <button
                   onClick={() => setIsPopupOpen(true)}
-                  className="text-blue-600 font-semibold hover:text-blue-700 px-4 py-2 transition-colors cursor-pointer"
+                  className="text-blue-600 font-semibold hover:text-blue-700 px-2 lg:px-4 py-1.5 lg:py-2 text-xs lg:text-sm transition-colors cursor-pointer"
                 >
-                  {t?.en?.login || "Log In"}
+                  {t?.en?.login || "Login"}
                 </button>
               )}
             </div>
           </div>
 
           {/* ================= MOBILE ================= */}
-          <div className="flex items-center gap-3 md:hidden">
+          <div className="flex items-center gap-1 sm:gap-2 md:hidden">
             {/* LANGUAGE */}
             <div ref={mobileLanguageRef} className="relative">
               <button
                 onClick={() => setMobileLanguageOpen(!mobileLanguageOpen)}
-                className="flex items-center gap-1 p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full transition-colors cursor-pointer"
+                className="flex items-center gap-1 p-1.5 sm:p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full transition-colors cursor-pointer"
               >
                 <img
                   src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
                   alt={currentLanguageInfo.label}
-                  className="w-5 h-4 rounded-sm"
+                  className="w-4 h-3 sm:w-5 sm:h-4 rounded-sm"
                 />
-                <ChevronDown size={16} />
+                <ChevronDown size={14} className="sm:size-4" />
               </button>
 
               {mobileLanguageOpen && (
-                <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-xl border z-[1002] max-h-[350px] overflow-y-auto">
-                  <div className="p-3 border-b">
-                    <p className="font-semibold text-sm">Select Language</p>
+                <div className="absolute right-0 mt-2 w-48 sm:w-56 bg-white rounded-xl shadow-xl border z-[1002] max-h-[350px] overflow-y-auto">
+                  <div className="p-2 sm:p-3 border-b">
+                    <p className="font-semibold text-xs sm:text-sm">Select Language</p>
                   </div>
                   <div className="p-2">
                     {LANGUAGES.map((lang) => (
                       <button
                         key={lang.code}
                         onClick={() => handleLanguageChange(lang.code)}
-                        className={`w-full flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
+                        className={`w-full flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-2 text-xs sm:text-sm rounded-lg 
                           ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
                       >
                         <img
                           src={`https://flagcdn.com/w20/${lang.flag}.png`}
                           alt={lang.label}
-                          className="w-5 h-4 rounded-sm"
+                          className="w-4 h-3 sm:w-5 sm:h-4 rounded-sm"
                         />
-                        <span className="text-xs">{lang.label}</span>
+                        <span className="truncate text-xs">{lang.label}</span>
                       </button>
                     ))}
                   </div>
@@ -1041,20 +1045,20 @@ export default function Navbar() {
             {!mobileSearchOpen && (
               <button
                 onClick={toggleMobileSearch}
-                className="text-blue-700 hover:text-blue-800 p-2 transition-colors cursor-pointer"
+                className="text-blue-700 hover:text-blue-800 p-1.5 sm:p-2 transition-colors cursor-pointer"
               >
-                <Search size={24} />
+                <Search size={20} className="sm:size-6" />
               </button>
             )}
 
             {/* CART */}
             <button
               onClick={() => router.push("/cart")}
-              className="relative text-2xl text-blue-700 hover:text-blue-800 p-1 transition-colors cursor-pointer"
+              className="relative text-xl sm:text-2xl text-blue-700 hover:text-blue-800 p-1 transition-colors cursor-pointer"
             >
               🛒
               {cartCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
+                <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full h-4 w-4 sm:h-5 sm:w-5 flex items-center justify-center">
                   {cartCount > 9 ? "9+" : cartCount}
                 </span>
               )}
@@ -1064,17 +1068,17 @@ export default function Navbar() {
             {!mobileSearchOpen && (
               <button 
                 onClick={() => setMenuOpen(true)} 
-                className="text-blue-700 hover:text-blue-800 p-2 transition-colors cursor-pointer"
+                className="text-blue-700 hover:text-blue-800 p-1.5 sm:p-2 transition-colors cursor-pointer"
               >
-                <Menu size={28} />
+                <Menu size={24} className="sm:size-7" />
               </button>
             )}
 
             {/* ENHANCED MOBILE SEARCH BAR */}
             {mobileSearchOpen && (
-              <div ref={mobileSearchRef} className="absolute top-0 left-0 right-0 min-h-[60px] bg-white px-4 flex items-center gap-2 z-[1001] shadow-md">
+              <div ref={mobileSearchRef} className="absolute top-0 left-0 right-0 min-h-[60px] bg-white px-2 sm:px-4 flex items-center gap-2 z-[1001] shadow-md">
                 <div className="relative flex-1">
-                  <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+                  <Search size={18} className="absolute left-2 sm:left-3 top-1/2 -translate-y-1/2 text-gray-400" />
                   <input
                     autoFocus
                     type="text"
@@ -1082,13 +1086,13 @@ export default function Navbar() {
                     value={query}
                     onChange={(e) => handleSearchChange(e.target.value)}
                     onKeyDown={handleSearch}
-                    className="w-full border border-gray-300 rounded-xl pl-11 pr-10 py-2.5 text-base"
+                    className="w-full border border-gray-300 rounded-xl pl-8 sm:pl-10 pr-8 py-2 text-sm sm:text-base"
                     style={{ fontSize: '16px' }}
                   />
                   {query && (
                     <button
                       onClick={() => setQuery("")}
-                      className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1 cursor-pointer"
+                      className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 p-1 cursor-pointer"
                     >
                       <X size={16} />
                     </button>
@@ -1097,7 +1101,7 @@ export default function Navbar() {
                 <button
                   onClick={handleSearchSubmit}
                   disabled={!query.trim()}
-                  className="bg-blue-600 text-white px-4 py-2.5 rounded-xl hover:bg-blue-700 disabled:bg-gray-300 transition-colors cursor-pointer disabled:cursor-not-allowed"
+                  className="bg-blue-600 text-white px-3 sm:px-4 py-2 rounded-xl hover:bg-blue-700 disabled:bg-gray-300 transition-colors cursor-pointer disabled:cursor-not-allowed"
                 >
                   <Search size={18} />
                 </button>
@@ -1110,13 +1114,13 @@ export default function Navbar() {
                   }}
                   className="text-blue-700 hover:text-blue-800 p-1 transition-colors cursor-pointer"
                 >
-                  <X size={24} />
+                  <X size={20} className="sm:size-6" />
                 </button>
 
                 {/* MOBILE SUGGESTIONS - Full height overlay */}
                 {(suggestions.length > 0 || query.trim()) && (
                   <div className="absolute top-full left-0 right-0 mt-1 bg-white border rounded-xl shadow-lg max-h-[calc(100vh-80px)] overflow-y-auto z-50">
-                    <div className="p-4">
+                    <div className="p-2 sm:p-4">
                       {renderSuggestions()}
                     </div>
                   </div>
@@ -1132,24 +1136,23 @@ export default function Navbar() {
         <>
           <div onClick={() => setMenuOpen(false)} className="fixed inset-0 bg-black/40 z-[999] cursor-pointer" />
 
-            
           <div className="fixed top-0 right-0 h-full w-[85%] max-w-[320px] bg-white z-[1001] shadow-2xl flex flex-col">
-            <div className="p-5 border-b">
+            <div className="p-4 sm:p-5 border-b">
               <div className="flex items-center justify-between">
                 <div>
                   {username ? (
-                    <p className="font-semibold">{t?.en?.hi || "Hi"}, {username.length > 12 ? `${username.substring(0, 12)}...` : username}</p>
+                    <p className="font-semibold text-sm sm:text-base">{t?.en?.hi || "Hi"}, {username.length > 12 ? `${username.substring(0, 10)}...` : username}</p>
                   ) : (
-                    <p className="font-semibold">Guest User</p>
+                    <p className="font-semibold text-sm sm:text-base">Guest User</p>
                   )}
                 </div>
-                <button onClick={() => setMenuOpen(false)} className="p-2 cursor-pointer">
-                  <X size={24} />
+                <button onClick={() => setMenuOpen(false)} className="p-1.5 sm:p-2 cursor-pointer">
+                  <X size={22} className="sm:size-6" />
                 </button>
               </div>
             </div>
 
-            <div className="flex-1 overflow-y-auto p-5 space-y-1">
+            <div className="flex-1 overflow-y-auto p-4 sm:p-5 space-y-1">
               <MobileLink href="/" onClick={() => setMenuOpen(false)} isActive={isActiveLink('/')}>
                 {currentTranslations.home || "Home"}
               </MobileLink>
@@ -1170,21 +1173,21 @@ export default function Navbar() {
               </MobileLink>
 
               <div className="pt-4 border-t">
-                <p className="text-sm font-semibold mb-3">Language</p>
+                <p className="text-xs sm:text-sm font-semibold mb-3">Language</p>
                 <div className="grid grid-cols-1 gap-1 max-h-60 overflow-y-auto">
                   {LANGUAGES.map((lang) => (
                     <button
                       key={lang.code}
                       onClick={() => handleLanguageChange(lang.code)}
-                      className={`flex items-center gap-3 px-3 py-2.5 text-sm rounded-lg 
+                      className={`flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-2 text-xs sm:text-sm rounded-lg 
                         ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
                     >
                       <img
                         src={`https://flagcdn.com/w20/${lang.flag}.png`}
                         alt={lang.label}
-                        className="w-5 h-4 rounded-sm"
+                        className="w-4 h-3 sm:w-5 sm:h-4 rounded-sm"
                       />
-                      <span>{lang.label}</span>
+                      <span className="truncate text-xs">{lang.label}</span>
                     </button>
                   ))}
                 </div>
@@ -1193,10 +1196,10 @@ export default function Navbar() {
               <a
                 href="/ED.pdf"
                 download
-                className="flex items-center gap-3 px-4 py-3 text-blue-700 font-semibold hover:bg-blue-50 rounded-xl transition-colors cursor-pointer"
+                className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 text-blue-700 font-semibold hover:bg-blue-50 rounded-xl transition-colors cursor-pointer text-sm sm:text-base"
                 onClick={() => setMenuOpen(false)}
               >
-                <Download size={20} />
+                <Download size={18} className="sm:size-5" />
                 {t?.en?.download || "Download PDF"}
               </a>
 
@@ -1210,9 +1213,9 @@ export default function Navbar() {
                       setMenuOpen(false);
                       handleLogout();
                     }}
-                    className="flex items-center gap-3 px-4 py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left transition-colors cursor-pointer"
+                    className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 text-red-600 font-semibold hover:bg-red-50 rounded-xl w-full text-left transition-colors cursor-pointer text-sm sm:text-base"
                   >
-                    <LogOut size={20} />
+                    <LogOut size={18} className="sm:size-5" />
                     {t?.en?.logout || "Logout"}
                   </button>
                 </>
@@ -1222,17 +1225,17 @@ export default function Navbar() {
                     setMenuOpen(false);
                     setIsPopupOpen(true);
                   }}
-                  className="flex items-center gap-3 px-4 py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left transition-colors cursor-pointer"
+                  className="flex items-center gap-2 sm:gap-3 px-3 sm:px-4 py-2.5 sm:py-3 text-blue-600 font-semibold hover:bg-blue-50 rounded-xl w-full text-left transition-colors cursor-pointer text-sm sm:text-base"
                 >
-                  <User size={20} />
+                  <User size={18} className="sm:size-5" />
                   {t?.en?.login || "Login"} / Register
                 </button>
               )}
             </div>
 
-            <div className="p-5 border-t bg-gray-50">
+            <div className="p-4 sm:p-5 border-t bg-gray-50">
               <p className="text-xs text-gray-500 text-center">
-                © {new Date().getFullYear()} ED Pharma. All rights reserved.
+                © {new Date().getFullYear()} ED Pharma
               </p>
             </div>
           </div>
@@ -1240,7 +1243,7 @@ export default function Navbar() {
       )}
 
       {/* Spacer */}
-      <div className="h-[64px]" />
+      <div className="h-[60px]" />
 
       {/* LOGIN MODAL */}
       <LoginPopup
@@ -1258,7 +1261,7 @@ function NavLink({ href, children, isActive }) {
   return (
     <Link
       href={href}
-      className={`text-sm font-medium transition-colors cursor-pointer ${
+      className={`text-xs lg:text-sm font-medium transition-colors cursor-pointer whitespace-nowrap ${
         isActive 
           ? 'text-blue-600 font-semibold border-b-2 border-blue-600 pb-1' 
           : 'text-gray-700 hover:text-blue-600'
@@ -1274,7 +1277,7 @@ function MobileLink({ href, children, onClick, isActive }) {
     <Link
       href={href}
       onClick={onClick}
-      className={`block px-4 py-3 text-base font-semibold rounded-xl transition-colors cursor-pointer ${
+      className={`block px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base font-semibold rounded-xl transition-colors cursor-pointer ${
         isActive 
           ? 'bg-blue-50 text-blue-600' 
           : 'text-gray-900 hover:bg-blue-50'
@@ -1288,7 +1291,7 @@ function MobileLink({ href, children, onClick, isActive }) {
 function PackageIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" 
-      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
       <path d="m7.5 4.27 9 5.15"/>
       <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
       <path d="m3.3 7 8.7 5 8.7-5"/>
