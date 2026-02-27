@@ -41,47 +41,46 @@ export default function LoadingProvider({
   }, []);
 
   return (
-    <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
-      {!showContent ? (
-        <div className={`fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-500 ${isLoading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-          {/* Mobile Loading Animation */}
-          <div className="flex flex-col items-center space-y-4 sm:space-y-6">
-            {/* Logo with pulse animation */}
-            <div className="relative">
-              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full bg-blue-100 flex items-center justify-center animate-pulse">
-                <span className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-600">ED</span>
-              </div>
-              {/* Spinning ring */}
-              <div className="absolute inset-0 rounded-full border-2 sm:border-4 border-t-blue-600 border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
-            </div>
+  <LoadingContext.Provider value={{ isLoading, setIsLoading }}>
+    {!showContent ? (
+      <div
+        className={`fixed inset-0 z-[9999] flex items-center justify-center bg-white transition-opacity duration-700 ${
+          isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col items-center space-y-8">
 
-            {/* Loading text with dots animation */}
-            <div className="text-center">
-              <p className="text-sm sm:text-base md:text-lg font-medium text-gray-700">Loading ED Pharma</p>
-              <div className="flex justify-center space-x-1 mt-2">
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></div>
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></div>
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
-              </div>
-            </div>
-
-            {/* Optional: Progress bar for larger screens */}
-            <div className="w-32 sm:w-40 md:w-48 h-1 sm:h-1.5 bg-gray-200 rounded-full overflow-hidden hidden sm:block">
-              <div 
-                className="h-full bg-blue-600 rounded-full animate-progress"
-                style={{ 
-                  animation: 'progress 1.5s ease-in-out infinite',
-                }}
-              ></div>
-            </div>
-
-            {/* Mobile-specific message */}
-            <p className="text-xs text-gray-500 sm:hidden">Please wait...</p>
+          {/* Brand Name ABOVE Circle */}
+          <div className="text-center">
+            <h1 className="text-3xl font-semibold tracking-[0.35em] text-gray-800">
+              ED PHARMA
+            </h1>
+            <p className="text-xs text-gray-500 mt-3 tracking-[0.25em] uppercase">
+              Pharmaceutical Excellence
+            </p>
           </div>
+
+          {/* Professional Spinner Circle */}
+          <div className="relative flex items-center justify-center">
+
+            {/* Base Circle */}
+            <div className="w-28 h-28 rounded-full border border-gray-200"></div>
+
+            {/* Rotating Arc */}
+            <div className="absolute w-28 h-28 rounded-full border-2 border-t-gray-700 border-r-transparent border-b-transparent border-l-transparent animate-spin"></div>
+
+          </div>
+
+          {/* Thin Loading Line */}
+          <div className="w-48 h-[1px] bg-gray-200 overflow-hidden relative">
+            <div className="absolute left-0 top-0 h-full w-1/3 bg-gray-700 animate-gray-loading"></div>
+          </div>
+
         </div>
-      ) : (
-        children
-      )}
-    </LoadingContext.Provider>
-  );
+      </div>
+    ) : (
+      children
+    )}
+  </LoadingContext.Provider>
+);
 }
