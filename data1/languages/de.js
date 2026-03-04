@@ -736,11 +736,11 @@ contactPage: {
     subtitle: "Kontaktieren Sie uns bei Fragen oder Supportanfragen"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Rufen Sie uns bei Fragen oder Support an" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Rufen Sie uns bei Fragen oder Support an" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

@@ -658,11 +658,11 @@ contactPage: {
     subtitle: "Neem contact met ons op voor vragen of ondersteuning"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Bel ons voor vragen of ondersteuning" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Bel ons voor vragen of ondersteuning" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

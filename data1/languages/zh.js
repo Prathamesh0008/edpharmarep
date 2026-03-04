@@ -720,11 +720,11 @@ contactPage: {
     subtitle: "如有任何咨询或支持需求，请与我们联系"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "如有问题或需要支持，请致电我们" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "如有问题或需要支持，请致电我们" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

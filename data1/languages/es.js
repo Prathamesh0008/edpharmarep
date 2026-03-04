@@ -739,11 +739,11 @@ contactPage: {
     subtitle: "Póngase en contacto con nosotros para cualquier consulta o soporte"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Llámenos para cualquier pregunta o soporte" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Llámenos para cualquier pregunta o soporte" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

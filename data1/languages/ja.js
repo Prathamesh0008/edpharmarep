@@ -675,11 +675,11 @@ contactPage: {
     subtitle: "ご質問やサポートについてはお気軽にお問い合わせください"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "ご質問やサポートはお電話ください" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "ご質問やサポートはお電話ください" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

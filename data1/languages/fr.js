@@ -717,11 +717,11 @@ contactPage: {
     subtitle: "Contactez-nous pour toute demande ou support"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Appelez-nous pour toute question ou support" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Appelez-nous pour toute question ou support" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

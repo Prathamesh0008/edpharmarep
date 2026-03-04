@@ -623,11 +623,11 @@ homeProducts: {
     subtitle: "Contactați-ne pentru orice întrebări sau asistență"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Sunați-ne pentru orice întrebări sau asistență" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Sunați-ne pentru orice întrebări sau asistență" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

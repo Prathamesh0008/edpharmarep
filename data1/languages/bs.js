@@ -631,11 +631,11 @@ orderDetailPage: {
     subtitle: "Kontaktirajte nas za bilo kakva pitanja ili podršku"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Pozovite nas za bilo kakva pitanja ili podršku" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Pozovite nas za bilo kakva pitanja ili podršku" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

@@ -624,11 +624,11 @@ homeProducts: {
     subtitle: "Na kontaktoni për çdo pyetje ose mbështetje"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Na telefononi për çdo pyetje ose mbështetje" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Na telefononi për çdo pyetje ose mbështetje" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

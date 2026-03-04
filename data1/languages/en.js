@@ -606,11 +606,11 @@ contactPage: {
     subtitle: "Get in touch with us for any inquiries or support"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Call us for any questions or support" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Call us for any questions or support" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

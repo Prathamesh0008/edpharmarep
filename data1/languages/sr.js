@@ -666,11 +666,11 @@ contactPage: {
     subtitle: "Контактирајте нас за сва питања или подршку"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Позовите нас за сва питања или подршку" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Позовите нас за сва питања или подршку" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

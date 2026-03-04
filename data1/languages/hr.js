@@ -624,11 +624,11 @@ homeProducts: {
     subtitle: "Kontaktirajte nas za sva pitanja ili podršku"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "Nazovite nas za sva pitanja ili podršku" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "Nazovite nas za sva pitanja ili podršku" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 

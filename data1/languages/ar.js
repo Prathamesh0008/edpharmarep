@@ -745,11 +745,11 @@ contactPage: {
     subtitle: "تواصل معنا لأي استفسارات أو دعم"
   },
   contactInfo: [
-    { 
-      icon: "📞", 
-      title: "+91 9892899094", 
-      description: "اتصل بنا لأي أسئلة أو دعم" 
-    },
+    // { 
+    //   icon: "📞", 
+    //   title: "+91 9892899094", 
+    //   description: "اتصل بنا لأي أسئلة أو دعم" 
+    // },
     { 
       icon: "✉️", 
       title: "sales@edpharma.co", 
