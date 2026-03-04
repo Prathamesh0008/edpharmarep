@@ -40,10 +40,10 @@ export const productImages = {
   ],
    },
    "kamagra-100mg-chewable-strawberry":{
-    main: "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+    main: "/products/Kamagra100_pineapple.jpg",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
   gallery: [
-    "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
-    "/products/kamagra100mg-chewable-tablets-pineapple.png",
+    "/products/Kamagra100_pineapple1.jpg",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
+    "/products/Kamagra100_pineapple2.jpg",
   
   ],
    },
@@ -65,11 +65,10 @@ export const productImages = {
   ],
    },
    "super-kamagra-100-60":{
-     main: "/products/100mg-super-kamagra-tablets.webp",
+     main: "/products/SuperKamagra.jpg",
   gallery: [
-    "/products/100mg-super-kamagra-tablets.webp",
-    "/products/100mg-super-kamagra-tablets.webp",
-  
+    "/products/SuperKamagra1.jpg",
+    "/products/SuperKamagra2.jpg",
   ],
    },
    "kamagra-expo-100mg":{
@@ -211,10 +210,10 @@ export const productImages = {
 
    },
    "cenforce-professional":{
-    main: "/products/Cenforce professional_1.png",
+    main: "/products/1.png",
    gallery: [
-    "/products/Cenforce professional_2.png",
-    "/products/cenforce-professional-100-mg-1-front.png",
+    "/products/2.png",
+    "/products/3.png",
   
   ],
    },
@@ -235,10 +234,10 @@ export const productImages = {
   ],
    },
    "vidalista-5":{
-    main: "/products/vidalista-5mg-tadalafil-tablets.png",//vidalista-5mg-0005-1000x1000.webp
+    main: "/products/Vidalista5.png",//vidalista-5mg-0005-1000x1000.webp
    gallery: [
-    "/products/vidalista-5mg-tadalafil-tablets.png",
-    "/products/tadalafil-tablet-5-mg.png",
+   "/products/Vidalista51.png",
+    "/products/Vidalista52.png",
   
   ],
    },
@@ -283,10 +282,10 @@ export const productImages = {
   ],  
     },
     "vidalista-black-80mg":{
-       main: "/products/vidalista-black-80mg_1.png",
+       main: "/products/VidalistaBlack.png",
  gallery: [
-    "/products/vidalista-black-80mg_2.png",
-    "/products/vidalista-black-80mg_3.png",
+    "/products/VidalistaBlack1.png",
+    "/products/VidalistaBlack2.png",
   
   ], 
     },
@@ -419,10 +418,10 @@ export const productImages = {
   ],  
     },
     "poxet-60mg":{
-     main: "/products/poxet-60_1.png",//public\products\poxet-60_1.png
+     main: "/products/Poxet_60.png",//public\products\poxet-60_1.png
   gallery: [
-    "/products/poxet-60_2.png",
-    "/products/poxet-60_1.png",
+    "/products/Poxet_602.png",
+    "/products/Poxet_601.png",
   
   ], 
     },
@@ -435,10 +434,10 @@ export const productImages = {
   ],
      },
     "p-force-100-caps":{
-      main: "/products/P-force 100_1.png",//public\products\P-force 100_2.png
+      main: "/products/p-force.png",//public\products\P-force 100_2.png
   gallery: [
-    "/products/P-force 100_2.png",
-    "/products/P-force 100_3.png",
+    "/products/p-force2.png",
+    "/products/p-force1.png",
   
   ],
     },
@@ -547,18 +546,18 @@ export const productImages = {
   ], 
   },
   "tadarise-2-5":{
-   main: "/products/tablet-tadarise-2.5_1.png",//public\products\tablet-tadarise-2.5_3.png
+   main: "/products/Tadarise2.5.png",//public\products\tablet-tadarise-2.5_3.png
      gallery: [
-    "/products/tablet-tadarise-2.5_2.png",
-    "/products/tablet-tadarise-2.5_3.png",
+    "/products/Tadarise2.52.png",
+    "/products/Tadarise2.51.png",
   
   ], 
   },
    "tadarise-5":{
-    main: "/products/tablet-tadarise-5_1.png",//public\products\tablet-tadarise-5_3.png
+    main: "/products/Tadarise-5.png",//public\products\tablet-tadarise-5_3.png
     gallery: [
-    "/products/tablet-tadarise-5_2.png",
-    "/products/tablet-tadarise-5_3.png",
+    "/products/Tadarise-52.png",
+    "/products/Tadarise-51.png",
   
   ],
    },
@@ -611,10 +610,10 @@ export const productImages = {
   ], 
   },
    "tadarise-60":{
-    main: "/products/tadarise-60-mg-back_1.png",//public\products\tadarise-60-mg-back_1.png
+    main: "/products/P-Force-Fort.png",//public\products\tadarise-60-mg-back_1.png
     gallery: [
-    "/products/tadarise-60-mg-back_2.png",
-    "/products/tadarise-60-mg-back_3.png",
+    "/products/P-Force-Fort1.png",
+    "/products/P-Force-Fort2.png",
   
   ],
    },
@@ -659,10 +658,10 @@ export const productImages = {
   ],
   },
    "tadasoft-40":{
-    main: "/products/tadasoft-40-mg-2_1.png",//public\products\tadasoft-40-mg_2.png
+    main: "/products/Tadasoft40.png",//public\products\tadasoft-40-mg_2.png
   gallery: [
-    "/products/tadasoft-40-mg_3.png",
-    "/products/tadasoft-40-mg_2.png",
+    "/products/Tadasoft401.png",
+    "/products/Tadasoft402.png",
   
   ],
    },
@@ -715,10 +714,10 @@ export const productImages = {
   ],
    },
    "malegra-120":{
-    main: "/products/malegra-120mg_1.png",//public\products\malegra-120mg_2.png
+    main: "/products/Malegra-120.png",//public\products\malegra-120mg_2.png
     gallery: [
-    "/products/malegra-120mg_2.png",
-    "/products/malegra-120mg_3.png",
+    "/products/Malegra-1201.png",
+    "/products/Malegra-1202.png",
   
   ],
    },
@@ -776,10 +775,10 @@ export const productImages = {
   ],
    },
    "malegra-fxt-plus":{
-   main: "/products/malegra-fxt-plus-1000x1000.png",//public\products\malegra-fxt-plus-1000x1000.png
+   main: "/products/MalegraFXTPlus.png",//public\products\malegra-fxt-plus-1000x1000.png
     gallery: [
-    "/products/malegra-fxt-plus-1000x1000.png",
-    "/products/malegra-fxt-plus-1000x1000.png",
+    "/products/MalegraFXTPlus1.png",
+    "/products/MalegraFXTPlus2.png",
   ], 
    },
   "malegra-effervescent-100":{
@@ -965,10 +964,10 @@ export const productImages = {
   ],
    },
    "Sunpecia-1mg-5mg":{
-    main: "/products/Sunpecia_5_1.png",
+    main: "/products/Sunspecia.png",
     gallery: [
-    "/products/Sunpecia_5_2.png",
-    "/products/Sunpecia_5_3.png",
+    "/products/Sunspecia1.png",
+    "/products/Sunspecia2.png",
   
   ],
    },

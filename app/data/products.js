@@ -964,10 +964,10 @@ administration: [
     cas_id: "139755-83-2",
     description: "Kamagra 100 is used to treat erectile dysfunction by helping men to achieve and maintain an erection, when sexually aroused.",
     slug: "kamagra-100mg-chewable-strawberry",
-    image: "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
+    image: "/products/Kamagra100_pineapple.jpg",//public\products\100mg-kamagra-sildenafil-citrate-tablets-chewable-tablet-1000x1000.webp
   "additionalImages": [
-    "/products/kamagra100mg-chewable-tablets-pineapple_2.png",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
-    "/products/kamagra100mg-chewable-tablets-pineapple.png",
+    "/products/Kamagra100_pineapple1.jpg",//public\products\kamagra100mg-chewable-tablets-pineapple_2.png
+    "/products/Kamagra100_pineapple2.jpg",
   
   ],
   },
@@ -1536,10 +1536,10 @@ administration: [
     },
     description: "These drugs work by dilating the blood vessels in the body particularly around the genital area.",
     slug: "super-kamagra-100-60",
-     image: "/products/100mg-super-kamagra-tablets.webp",
+     image: "/products/SuperKamagra.jpg",
   "additionalImages": [
-    "/products/100mg-super-kamagra-tablets.webp",
-    "/products/100mg-super-kamagra-tablets.webp",
+     "/products/SuperKamagra1.jpg",
+    "/products/SuperKamagra2.jpg",
   
   ],//public\products\Super_Kamagra_03.jpg
    
@@ -4909,10 +4909,10 @@ how_it_works: [
     cas_id: "139755-83-2",
     description: "Cenforce Professional can be taken at least 30 minutes prior to having sex. But ideally, for it to be highly effective and give the best results, Cenforce should be taken an hour prior to engaging in sexual activity.",
     slug: "cenforce-professional",
-    image: "/products/Cenforce professional_1.png",
+    image: "/products/1.png",
    "additionalImages": [
-    "/products/Cenforce professional_2.png",
-    "/products/cenforce-professional-100-mg-1-front.png",
+    "/products/2.png",
+    "/products/3.png",
   
   ],
     
@@ -6404,10 +6404,10 @@ warnings: [
     cas_id: "171596-29-5",
     description: "This enhances the blood flow to the male penile organ resulting in a rigid erection for a longer time.",
     slug: "vidalista-black-80mg",
-   image: "/products/vidalista-black-80mg_1.png",
+   image: "/products/VidalistaBlack.png",
  "additionalImages": [
-     "/products/vidalista-black-80mg_2.png",
-    "/products/vidalista-black-80mg_3.png",
+     "/products/VidalistaBlack1.png",
+    "/products/VidalistaBlack2.png",
   
   ],//public\products\vidalista-black-80-mg 03.jpg
    
@@ -9615,10 +9615,10 @@ warnings: [
     pack_size: "10x10",
     cas_id: "129938-20-1",
     slug: "poxet-60mg",
-    image: "/products/poxet-60_1.png",//public\products\poxet-60_1.png
+    image: "/products/Poxet_60.png",//public\products\poxet-60_1.png
   "additionalImages": [
-    "/products/poxet-60_2.png",
-    "/products/poxet-60_1.png",
+    "/products/Poxet_602.png",
+    "/products/Poxet_601.png",
   
   ],
     description: "Poxet-60 tablets are used to treat premature ejaculation (PE), one of the most common causes of sexual dysfunction in men.",
@@ -10006,10 +10006,10 @@ administration: [
     cas_id: "171599-83-0",
     description: "Sildenafil is used to treat male sexual function problems (impotence or erectile dysfunction-ED).",
     slug: "p-force-100-caps",
-    image: "/products/P-force 100_1.png",//public\products\P-force 100_2.png
+    image: "/products/p-force2.png",//public\products\P-force 100_2.png
   "additionalImages": [
-    "/products/P-force 100_2.png",
-    "/products/P-force 100_3.png",
+    "/products/p-force.png",
+    "/products/p-force1.png",
   
   ],
     
@@ -12754,11 +12754,10 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil is also used to treat the symptoms of an enlarged prostate (benign prostatic hyperplasia-BPH).",
     slug: "tadarise-2-5",
-   image: "/products/tablet-tadarise-2.5_1.png",//public\products\tablet-tadarise-2.5_3.png
+   image: "/products/Tadarise2.5.png",//public\products\tablet-tadarise-2.5_3.png
      "additionalImages": [
-    "/products/tablet-tadarise-2.5_2.png",
-    "/products/tablet-tadarise-2.5_3.png",
-  
+     "/products/Tadarise2.52.png",
+    "/products/Tadarise2.51.png",
   ],
     
   overview: [
@@ -12951,10 +12950,10 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadarise tablets 5mg (generic Cialis) is used to treat erectile dysfunction impotence in men.",
     slug: "tadarise-5",
-    image: "/products/tablet-tadarise-5_1.png",//public\products\tablet-tadarise-5_3.png
+    image: "/products/Tadarise-5.png",//public\products\tablet-tadarise-5_3.png
     "additionalImages": [
-    "/products/tablet-tadarise-5_2.png",
-    "/products/tablet-tadarise-5_3.png",
+    "/products/Tadarise-52.png",
+    "/products/Tadarise-51.png",
   
   ],
    
@@ -14321,10 +14320,10 @@ administration: [
     cas_id: "171596-29-5",
     description: "Tadalafil is used to treat male sexual function problems (impotence or erectile dysfunction-ED).",
     slug: "tadarise-60",
-    image: "/products/tadarise-60-mg-back_1.png",//public\products\tadarise-60-mg-back_1.png
+    image: "/products/P-Force-Fort.png",//public\products\tadarise-60-mg-back_1.png
     "additionalImages": [
-    "/products/tadarise-60-mg-back_2.png",
-    "/products/tadarise-60-mg-back_3.png",
+    "/products/P-Force-Fort1.png",
+    "/products/P-Force-Fort2.png",
   
   ],
    
@@ -16279,10 +16278,10 @@ administration: [
     cas_id: "171599-83-0",
     description: "Sildenafil works by increasing blood flow to the penis to help a man get and keep an erection.",
     slug: "malegra-120",
-     image: "/products/malegra-120mg_1.png",//public\products\malegra-120mg_2.png
+     image: "/products/Malegra-120.png",//public\products\malegra-120mg_2.png
     "additionalImages": [
-    "/products/malegra-120mg_2.png",
-    "/products/malegra-120mg_3.png",
+   "/products/Malegra-1201.png",
+    "/products/Malegra-1202.png",
   
   ],
     
@@ -17843,10 +17842,10 @@ administration: [
     cas_id: "171599-83-0 / 54910-89-3",
     description: "Malegra FXT Plus is prescribed for Erectile Dysfunction (ED) and Premature Ejaculation (PE).",
     slug: "malegra-fxt-plus",
-   image: "/products/malegra-fxt-plus-1000x1000.png",//public\products\malegra-fxt-plus-1000x1000.png
+   image: "/products/MalegraFXTPlus.png",//public\products\malegra-fxt-plus-1000x1000.png
     "additionalImages": [
-    "/products/malegra-fxt-plus-1000x1000.png",
-    "/products/malegra-fxt-plus-1000x1000.png",
+    "/products/MalegraFXTPlus1.png",
+    "/products/MalegraFXTPlus2.png",
   ],
   
   
@@ -21526,11 +21525,10 @@ administration: [
     cas_id: "98319-26-7",
     description: "Sunpecia is used for treating benign prostatic hyperplasia (BPH) and improving urine flow in men.",
     slug: "Sunpecia-1mg-5mg",
-     image: "/products/Sunpecia_5_1.png",
+     image: "/products/Sunspecia.png",
     "additionalImages": [
-    "/products/Sunpecia_5_2.png",
-    "/products/Sunpecia_5_3.png",
-  
+    "/products/Sunspecia1.png",
+    "/products/Sunspecia2.png",
   ],
   
   overview: [

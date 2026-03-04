@@ -290,7 +290,7 @@ export default function CartDrawer() {
                 closeDrawer();
                 router.push("/cart");
               }}
-              className="w-full py-3 rounded-2xl bg-gradient-to-r from-[#0A4C89] via-[#0D5FA8] to-[#1B78D1] text-white text-sm font-semibold shadow-lg shadow-[#0A4C89]/25 hover:shadow-xl hover:shadow-[#0A4C89]/30 hover:translate-y-0.5 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0A4C89]"
+              className="w-full cursor-pointer py-3 rounded-2xl bg-gradient-to-r from-[#0A4C89] via-[#0D5FA8] to-[#1B78D1] text-white text-sm font-semibold shadow-lg shadow-[#0A4C89]/25 hover:shadow-xl hover:shadow-[#0A4C89]/30 hover:translate-y-0.5 transition-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#0A4C89]"
             >
               Go to checkout
             </button>
