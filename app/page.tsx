@@ -1,13 +1,193 @@
-// app/page.tsx
+// "use client";
+
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { products } from "../app/data/products";
+// import Testimonials from "./components/Testimonials";
+// import Compliance from "./components/Compliance";
+
+// import HomeProducts from "../app/components/HomeProducts";
+// import { useState, useEffect } from "react";
+// import ScrollProgressLine from "../app/components/ScrollProgressLine"; 
+// import FeaturedProducts from "./components/FeaturedProducts"
+// import { useLanguage } from "@/context/LanguageContext";
+
+// // Define a type for translation objects
+// type TranslationObject = {
+//   [key: string]: string | TranslationObject;
+// };
+
+// type TranslationValue = string | TranslationObject | undefined | null;
+
+// export default function Home() {
+//   const [activeBrand, setActiveBrand] = useState("ED Ajanta Pharma");
+//   const { t, language } = useLanguage();
+
+//   // Helper function to safely get string from translation object with proper typing
+//   const getTrans = (transObj: TranslationValue, fallback: string = ''): string => {
+//     if (!transObj) return fallback;
+//     if (typeof transObj === 'string') return transObj;
+//     if (typeof transObj === 'object') {
+//       // Try current language, then English, then any first value, then fallback
+//       const obj = transObj as TranslationObject;
+      
+//       // If the object has the current language as a key and it's a string
+//       if (obj[language] && typeof obj[language] === 'string') {
+//         return obj[language] as string;
+//       }
+      
+//       // If the object has 'en' as a key and it's a string
+//       if (obj.en && typeof obj.en === 'string') {
+//         return obj.en as string;
+//       }
+      
+//       // Try to find any string value
+//       const values = Object.values(obj);
+//       for (const value of values) {
+//         if (typeof value === 'string') {
+//           return value;
+//         }
+//       }
+//     }
+//     return fallback;
+//   };
+
+//   const heroTitle = t?.homePage?.hero?.title || "Trusted Pharmaceutical Manufacturing & Global Distribution";
+//   const heroSubtitle = t?.homePage?.hero?.subtitle || "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets.";
+//   const heroCta = t?.homePage?.hero?.ctaViewProducts || "View Products";
+//   const featuredTitle = t?.homePage?.featured?.title || "Featured Products";
+  
+//   return (
+//     <>
+//       <Navbar />
+
+//       {/* Add ScrollProgressLine here - positioned right after Navbar */}
+//       <ScrollProgressLine />
+
+//       {/* FULL-WIDTH BANNER WITH IMAGE AND HERO CONTENT */}
+//       <div className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+//         {/* Background Image */}
+//         <div className="absolute inset-0 w-full h-full">
+//           <Image
+//             src="/bg/ED-banner (2).svg"
+//             alt="Pharmaceutical banner"
+//             fill
+//             priority
+//             className="object-cover"
+//           />
+//           {/* Optional overlay for better text readability */}
+//           <div className="absolute inset-0 bg-black/20" />
+//         </div>
+
+//         {/* Hero Content - Centered on banner */}
+//         <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+//           <div className="relative group max-w-4xl">
+//             {/* Border gradient fade */}
+//             <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-200/30 via-transparent to-transparent rounded-2xl blur opacity-50 group-hover:opacity-70 transition-opacity duration-300 -z-10" />
+            
+//             {/* Subtle backdrop with soft edges */}
+//             <div className="backdrop-blur-xs bg-white/50 p-6 md:p-8 lg:p-10 rounded-2xl border border-blue-100/30 shadow-sm">
+//               <div className="relative">
+//                 <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#0A2A73] leading-tight">
+//                   {heroTitle}
+//                 </h1>
+
+//                 <p className="mt-6 text-base md:text-lg lg:text-xl text-slate-600 max-w-2xl">
+//                   {heroSubtitle}
+//                 </p>
+
+//                 <Link
+//                   href="/products"
+//                   className="inline-block mt-8 px-6 py-3 md:px-8 md:py-4 rounded-xl bg-[#0A2A73] text-white font-medium shadow hover:shadow-md hover:bg-blue-800 transition-all duration-300 text-base md:text-lg"
+//                 >
+//                   {heroCta}
+//                 </Link>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* BACKGROUND SVG - now only for sections below the banner */}
+//       <div
+//         className="fixed inset-0 -z-10"
+//         style={{
+//           backgroundImage: "url('/bg/ED-banner (2).svg')",
+//           backgroundRepeat: "no-repeat",
+//           backgroundPosition: "center",
+//           backgroundSize: "cover",
+//           opacity: 0.5, // Optional: reduce opacity for sections below
+//         }}
+//       />
+
+//       {/* Remove the old HERO section - it's now in the banner above */}
+
+//       <HomeProducts
+//         activeBrand={activeBrand}
+//         setActiveBrand={setActiveBrand}
+//       />
+      
+//       <FeaturedProducts />
+     
+//       <Compliance />
+      
+//       <Testimonials />
+//     </>
+//   );
+// }
+
+// function HeroProductImage() {
+//   // remove empty / null / undefined images
+//   const images = products
+//     .map((p) => p.image)
+//     .filter(Boolean);
+
+//   const [index, setIndex] = useState(0);
+
+//   useEffect(() => {
+//     if (images.length === 0) return;
+
+//     const timer = setInterval(() => {
+//       setIndex((prev) => (prev + 1) % images.length);
+//     }, 3000);
+
+//     return () => clearInterval(timer);
+//   }, [images.length]);
+
+//   // safety guard
+//   if (images.length === 0) return null;
+
+//   return (
+//     <div className="relative h-[320px] md:h-[390px] w-full">
+//       {images.map((src, i) => (
+//         <Image
+//           key={i}
+//           src={src || "/placeholder.png"}
+//           alt="ED Pharma Product"
+//           fill
+//           priority={i === 0}
+//           className={`
+//             object-contain transition-all duration-700
+//             ${i === index ? "opacity-100 scale-100" : "opacity-0 scale-95"}
+//           `}
+//         />
+//       ))}
+//     </div>
+//   );
+// }
+
+
 "use client";
 
-import Navbar from "../app/components/Navbar";
-import Footer from "../app/components/Footer";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { products } from "../app/data/products";
-import Testimonials from "../app/components/Testimonials";
-import Compliance from "../app/components/Compliance";
+import Testimonials from "./components/Testimonials";
+import Compliance from "./components/Compliance";
 
 import HomeProducts from "../app/components/HomeProducts";
 import { useState, useEffect } from "react";
@@ -17,7 +197,7 @@ import { useLanguage } from "@/context/LanguageContext";
 
 // Define a type for translation objects
 type TranslationObject = {
-  [key: string]: string;
+  [key: string]: string | TranslationObject;
 };
 
 type TranslationValue = string | TranslationObject | undefined | null;
@@ -33,34 +213,76 @@ export default function Home() {
     if (typeof transObj === 'object') {
       // Try current language, then English, then any first value, then fallback
       const obj = transObj as TranslationObject;
-      return obj[language] || obj.en || Object.values(obj)[0] || fallback;
+      
+      // If the object has the current language as a key and it's a string
+      if (obj[language] && typeof obj[language] === 'string') {
+        return obj[language] as string;
+      }
+      
+      // If the object has 'en' as a key and it's a string
+      if (obj.en && typeof obj.en === 'string') {
+        return obj.en as string;
+      }
+      
+      // Try to find any string value
+      const values = Object.values(obj);
+      for (const value of values) {
+        if (typeof value === 'string') {
+          return value;
+        }
+      }
     }
     return fallback;
   };
 
-  // Get translations safely
-  const homeTranslations = t?.homePage || {
-    hero: {
-      title: "Trusted Pharmaceutical Manufacturing & Global Distribution",
-      subtitle: "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets.",
-      ctaViewProducts: "View Products"
-    },
-    featured: {
-      title: "Featured Products"
-    }
-  };
+  // Safely navigate through translation objects
+//   const getNestedTranslation = (path: string[], fallback: string): string => {
+//   try {
+//     let value: any = t;
 
-  // Safely extract strings from translation objects
-  const hero = {
-    title: getTrans(homeTranslations?.hero?.title, "Trusted Pharmaceutical Manufacturing & Global Distribution"),
-    subtitle: getTrans(homeTranslations?.hero?.subtitle, "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets."),
-    ctaViewProducts: getTrans(homeTranslations?.hero?.ctaViewProducts, "View Products")
-  };
+//     for (const key of path) {
+//       value = value?.[key];
+//     }
+
+//     if (!value) return fallback;
+
+//     if (typeof value === "string") return value;
+
+//     if (typeof value === "object") {
+//       return value?.[language] || value?.en || fallback;
+//     }
+
+//     return fallback;
+//   } catch {
+//     return fallback;
+//   }
+// };
+
+  // Get translations with fallbacks
+  // const heroTitle = getNestedTranslation(
+  //   ['homePage', 'hero', 'title'],
+  //   "Trusted Pharmaceutical Manufacturing & Global Distribution"
+  // );
   
-  const featured = {
-    title: getTrans(homeTranslations?.featured?.title, "Featured Products")
-  };
+  // const heroSubtitle = getNestedTranslation(
+  //   ['homePage', 'hero', 'subtitle'],
+  //   "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets."
+  // );
+  
+  // const heroCta = getNestedTranslation(
+  //   ['homePage', 'hero', 'ctaViewProducts'],
+  //   "View Products"
+  // );
+  
+  // const featuredTitle = getNestedTranslation(
+  //   ['homePage', 'featured', 'title'],
+  //   "Featured Products"
+  // );
 
+const heroTitle = t?.homePage?.hero?.title || "";
+const heroSubtitle = t?.homePage?.hero?.subtitle || "";
+const heroCta = t?.homePage?.hero?.ctaViewProducts || "";
+const featuredTitle = t?.homePage?.featured?.title || "";
   return (
     <>
       <Navbar />
@@ -92,18 +314,18 @@ export default function Home() {
             <div className="backdrop-blur-xs bg-white/50 p-6 md:p-8 rounded-2xl border border-blue-100/30 shadow-sm -mt-15">
               <div className="relative">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0A2A73] leading-tight">
-                  {hero.title}
+                  {heroTitle}
                 </h1>
 
                 <p className="mt-6 text-base md:text-lg text-slate-600 max-w-xl">
-                  {hero.subtitle}
+                  {heroSubtitle}
                 </p>
 
                 <Link
                   href="/products"
                   className="inline-block mt-8 px-6 py-3 rounded-xl bg-[#0A2A73] text-white font-medium shadow hover:shadow-md hover:bg-blue-800 transition-all duration-300"
                 >
-                  {hero.ctaViewProducts}
+                  {heroCta}
                 </Link>
               </div>
             </div>

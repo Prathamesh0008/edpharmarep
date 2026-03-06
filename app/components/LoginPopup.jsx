@@ -720,7 +720,7 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
             ${isMobile ? "text-2xl mb-2" : "text-3xl mb-3"}
           `}
           >
-            {isLogin ? "Welcome Back" : "Join EdPharma"}
+            {isLogin ? "Welcome Back" : " EdPharma"}
           </h2>
           <p
             className={`
@@ -729,7 +729,7 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
           `}
           >
             {isLogin
-              ? "Access your medical dashboard"
+              ? ""
               : "Create your secure account"}
           </p>
 
@@ -767,7 +767,7 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
           <div>
             <input
               type="email"
-              placeholder="Email Address (must be @gmail.com)"
+              placeholder="Email Address"
               value={formData.email}
               required
               className={errors.email ? errorInputStyle : inputStyle}
@@ -1013,7 +1013,7 @@ export default function LoginPopup({ isOpen, onClose, onLoginSuccess }) {
             onClick={switchMode}
             type="button"
           >
-            {isLogin ? "Register New Pharmacy" : "Login to Existing Account"}
+            {isLogin ? "Register New User" : "Login to Existing Account"}
           </button>
         </div>
       </div>
