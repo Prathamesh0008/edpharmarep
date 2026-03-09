@@ -391,10 +391,10 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   return (
     <section className="relative py-10 sm:py-14 md:py-16">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
-        {/* <LogoStrip
+        <LogoStrip
           activeBrand={activeBrand}
           setActiveBrand={setActiveBrand}
-        /> */}
+        />
 
         {/* HEADER - Fixed heights to prevent layout shift */}
         <div className="mt-10 sm:mt-12 relative">

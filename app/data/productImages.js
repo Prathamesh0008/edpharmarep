@@ -24,10 +24,10 @@ export const productImages = {
   ],
   },
    "super-kamagra-oral-jelly":{
-    main: "/products/Super-Kamagra-Oral-Jelly 2.png",
+    main: "/products/superkamagra_oral_jelly_3.png",
   gallery: [
-    "/products/Super-Kamagra-Oral-Jelly 2.png",
-    "/products/Super-Kamagra-Oral-Jelly 1.png",
+    "/products/superkamagra_oral_jelly_2.png",
+    "/products/superkamagra_oral_jelly_1.png",
   
   ],
    },

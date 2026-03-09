@@ -71,24 +71,27 @@ export default function Home() {
 <div className="relative w-full h-[240px] sm:h-[340px] md:h-[480px] lg:h-[600px] xl:h-[720px] overflow-hidden -mt-14">
 
   {/* Background Image */}
-  <div className="absolute inset-0 w-full h-full ">
-    <Image
-      src="/bg/ED-banner (2).svg"
-      alt="Pharmaceutical banner"
-      fill
-      priority
-      sizes="100vw"
-      className="object-cover object-center"
-    />
+ <div className="absolute inset-0 w-full h-full">
+  <Image
+    src="/bg/ED-banner (2).svg"
+    alt="Pharmaceutical banner"
+    fill
+    priority
+    sizes="100vw"
+    className="object-contain object-center"
+  />
 
-    {/* Overlay */}
-    <div className="absolute inset-0 " />
-  </div>
+  {/* Overlay */}
+  <div className="absolute inset-0" />
+</div>
 
   {/* Hero Content */}
   <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
 
-  <div className="relative group w-[75%] sm:w-[65%] md:w-[55%] lg:w-[50%] max-w-md md:max-w-xl lg:max-w-2xl mx-auto md:mx-0">
+  <div className="relative group 
+w-[70%] sm:w-[60%] md:w-[55%] lg:w-[50%] 
+max-w-[260px] sm:max-w-md md:max-w-xl lg:max-w-2xl
+ml-2 sm:ml-4 md:ml-0">
 
     {/* Gradient Glow */}
     <div className="absolute -inset-1 bg-gradient-to-r from-blue-200/30 via-transparent to-transparent rounded-xl blur opacity-40 group-hover:opacity-60 transition duration-300 -z-10" />
@@ -118,17 +121,7 @@ export default function Home() {
 
 
 
-      {/* BACKGROUND SVG - now only for sections below the banner */}
-      {/* <div
-        className="fixed inset-0 -z-10"
-        style={{
-          backgroundImage: "url('/bg/ED-banner (2).svg')",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          opacity: 0.5, // Optional: reduce opacity for sections below
-        }}
-      /> */}
+      
 
       {/* Remove the old HERO section - it's now in the banner above */}
 

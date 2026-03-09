@@ -338,10 +338,10 @@ const products = {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
   },
-  image: "/products/Super-Kamagra-Oral-Jelly 2.png",
+  image: "/products/superkamagra_oral_jelly_3.png",//public\products\superkamagra_oral_jelly_2.png
   "additionalImages": [
-    "/products/Super-Kamagra-Oral-Jelly 2.png",
-    "/products/Super-Kamagra-Oral-Jelly 2.png",
+    "/products/superkamagra_oral_jelly_2.png",
+    "/products/superkamagra_oral_jelly_1.png",
   
   ],
   review: {

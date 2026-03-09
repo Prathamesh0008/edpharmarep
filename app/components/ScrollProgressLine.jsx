@@ -11,25 +11,31 @@ export default function ScrollProgressLine() {
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
 
-      const scrollPercent = docHeight > 0
-        ? (scrollTop / docHeight) * 100
-        : 0;
+      const scrollPercent =
+        docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
 
       setProgress(scrollPercent);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll(); // initialize
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="fixed top-[64px] left-0 w-full h-[1px] z-[60] ">
+    <div className="fixed top-[60px] left-0 right-0 h-[2px] z-[9999]">
       <div
-        className="h-full bg-sky-500 transition-[width] duration-150 ease-out"
+         className="h-full bg-sky-500 transition-[width] duration-150 ease-out"
         style={{ width: `${progress}%` }}
-      />
+       />
     </div>
   );
 }
+
+
+
+// <div
+//         className="h-full bg-sky-500 transition-[width] duration-150 ease-out"
+//         style={{ width: `${progress}%` }}
+//       />

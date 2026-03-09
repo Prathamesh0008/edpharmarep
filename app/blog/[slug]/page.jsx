@@ -1,10 +1,10 @@
-// app/blog/[slug]/page.jsx
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import TableOfContents from "../../components/TableOfContents";
 import RelatedArticles from "../../components/RelatedArticles";
+import InteractiveFAQ from "../../components/InteractiveFAQ"; // Import the new component
 
 // FAQ Schema for each blog post
 const faqSchemas = {
@@ -469,36 +469,8 @@ const blogPosts = [
 
       <h2 id="faqs" class="text-2xl font-bold mt-8 mb-4">FAQ'S</h2>
       
-      <h3 class="font-bold mt-6 mb-2">1. Is Kamagra the same as Viagra?</h3>
-      <p class="mb-4">Kamagra contains sildenafil, the same active ingredient found in Viagra. However, Viagra is an approved branded medication, while Kamagra is typically sold online without proper European regulatory authorization.</p>
+      <!-- FAQ_ITEMS_PLACEHOLDER -->
       
-      <h3 class="font-bold mt-4 mb-2">2. What are the side effects of sildenafil tablets?</h3>
-      <p class="mb-4">Common side effects include headache, flushing, nasal congestion, dizziness, and upset stomach. Most effects are mild and temporary, but individuals with heart conditions should consult a doctor before use.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">3. How long does sildenafil last?</h3>
-      <p class="mb-4">Sildenafil typically works within 30 to 60 minutes and lasts about 4 to 6 hours. Sexual stimulation is required for effectiveness. The duration may vary depending on dosage and individual health factors.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">4. Which is safer: Kamagra or pharmacy sildenafil?</h3>
-      <p class="mb-4">Pharmacy-dispensed sildenafil tablets are safer because they meet EU regulatory standards and are prescribed after medical evaluation. Kamagra sold online may not meet these safety requirements, increasing potential health risks.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">5. Is Kamagra safe to use?</h3>
-      <p class="mb-4">Kamagra may contain sildenafil, but products sold outside regulated pharmacy systems may have inconsistent dosages or harmful ingredients. Dutch health authorities warn against buying unapproved ED medications from unverified online sources.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">6. Is Kamagra cheaper than sildenafil tablets?</h3>
-      <p class="mb-4">Kamagra often appears cheaper online compared to pharmacy sildenafil. However, lower prices may reflect lack of regulation, quality control, and safety testing, which increases potential health risks for consumers.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">7. Can I take sildenafil if I have heart problems?</h3>
-      <p class="mb-4">Men with heart conditions should consult a doctor before using sildenafil. It may interact dangerously with nitrate medications and certain blood pressure treatments, potentially causing serious cardiovascular complications.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">8. Can sildenafil be taken daily?</h3>
-      <p class="mb-4">Standard sildenafil tablets are typically taken as needed before sexual activity. Daily use depends on medical advice. Some patients may be prescribed alternative PDE5 inhibitors designed for daily dosing.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">9. What should I avoid when taking sildenafil tablets?</h3>
-      <p class="mb-4">Avoid excessive alcohol, nitrate medications, and recreational drugs when taking sildenafil. Grapefruit products may also affect drug metabolism. Always follow medical instructions to reduce the risk of side effects.</p>
-      
-      <h3 class="font-bold mt-4 mb-2">10. Can younger men use sildenafil for performance enhancement?</h3>
-      <p class="mb-4">Sildenafil is prescribed to treat diagnosed erectile dysfunction, not for recreational enhancement. Using it without medical need may mask underlying psychological or health issues and cause unnecessary side effects.</p>
-
       <h2 id="references" class="text-2xl font-bold mt-8 mb-4">Reference</h2>
       <ul class="list-disc pl-6 mb-4 space-y-2">
         <li>Erectile dysfunction overview – Wikipedia: <a href="https://en.wikipedia.org/wiki/Erectile_dysfunction" class="text-blue-600 hover:underline">https://en.wikipedia.org/wiki/Erectile_dysfunction</a></li>
@@ -659,35 +631,7 @@ const blogPosts = [
 
     <h2 id="faq" class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     
-    <h3 class="font-bold mt-6 mb-2">Can Kamagra be taken daily?</h3>
-    <p class="mb-4">Kamagra tablets should generally not be taken daily unless advised by a healthcare professional. Most sildenafil medications are intended for occasional use rather than daily consumption.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Can Kamagra affect kidneys?</h3>
-    <p class="mb-4">Sildenafil is usually safe for kidney function when taken as directed. However, people with kidney disease should consult a doctor before using erectile dysfunction medications.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">How many hours does Kamagra work?</h3>
-    <p class="mb-4">The effects of sildenafil usually last 4 to 6 hours, although the duration varies depending on metabolism and health conditions.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Does Kamagra affect sperm?</h3>
-    <p class="mb-4">Research suggests sildenafil has minimal impact on sperm quality when used occasionally. It is not designed as a fertility treatment.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Is Kamagra safer than Viagra?</h3>
-    <p class="mb-4">Both medications contain sildenafil, but approved pharmaceutical products follow strict safety standards.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Is it safe to take sildenafil every day?</h3>
-    <p class="mb-4">Daily sildenafil may be safe when prescribed in low doses by a doctor, but routine daily use without medical supervision is not recommended.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">How much Kamagra is safe to take?</h3>
-    <p class="mb-4">Typical sildenafil doses include 25 mg, 50 mg, or 100 mg, with most medical guidelines recommending one dose per day at most.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Can you take Kamagra every day?</h3>
-    <p class="mb-4">Taking Kamagra every day should only occur under medical supervision. Doctors sometimes prescribe daily PDE5 inhibitors for specific conditions.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Can I take 10 mg of Cialis daily?</h3>
-    <p class="mb-4">Low-dose tadalafil (Cialis) is sometimes prescribed for daily use. However, dosing should always follow medical advice.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">What are the side effects of daily sildenafil?</h3>
-    <p class="mb-4">Possible side effects include headaches, flushing, dizziness, nasal congestion, and indigestion. Rarely, serious cardiovascular effects may occur.</p>
+    <!-- FAQ_ITEMS_PLACEHOLDER -->
 
     <h2 id="references" class="text-2xl font-bold mt-8 mb-4">References</h2>
     
@@ -869,35 +813,7 @@ const blogPosts = [
 
     <h2 id="faq" class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     
-    <h3 class="font-bold mt-6 mb-2">Is Kamagra stronger than Viagra?</h3>
-    <p class="mb-4">Kamagra is not inherently stronger than Viagra. Both products typically contain the same active ingredient, sildenafil citrate. The effectiveness depends primarily on the dosage, such as 50 mg or 100 mg of sildenafil.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">How does Kamagra work?</h3>
-    <p class="mb-4">Kamagra works by delivering sildenafil, a PDE5 inhibitor that increases blood flow to the penis by relaxing blood vessels. This helps men achieve and maintain erections when sexually stimulated.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">How many hours does Kamagra work?</h3>
-    <p class="mb-4">Sildenafil-based medications usually remain effective for 4 to 6 hours, allowing improved erectile response during sexual stimulation within that time frame.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">What happens after taking Kamagra?</h3>
-    <p class="mb-4">After taking sildenafil tablets, the medication begins to increase blood flow in erectile tissue. Most users notice effects within 30–60 minutes, depending on metabolism and food intake.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Can a guy get hard again after ejaculating?</h3>
-    <p class="mb-4">Yes, but the body typically enters a refractory period after ejaculation. Sildenafil medications may help restore erectile function after recovery, but they do not completely eliminate the refractory phase.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Does Kamagra affect sperm quality?</h3>
-    <p class="mb-4">Research suggests sildenafil has minimal impact on sperm quality when used occasionally. It is not designed as a fertility medication.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">How to make sperm thicker and stronger?</h3>
-    <p class="mb-4">Healthy sperm production can be supported by proper nutrition, exercise, reduced stress, and avoiding smoking and alcohol.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">Can Kamagra affect kidneys?</h3>
-    <p class="mb-4">For most healthy individuals, sildenafil does not significantly affect kidney function. People with kidney disease should consult a healthcare provider before use.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">What drug increases sperm production?</h3>
-    <p class="mb-4">Medications used in fertility treatments may include clomiphene citrate or hormone therapies, prescribed by doctors to stimulate sperm production.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">How to increase sperm in 4 days?</h3>
-    <p class="mb-4">Sperm production typically takes about 64–74 days, so rapid changes in four days are unlikely. However, hydration, proper nutrition, and rest can support reproductive health.</p>
+    <!-- FAQ_ITEMS_PLACEHOLDER -->
 
     <h2 id="references" class="text-2xl font-bold mt-8 mb-4">References</h2>
     
@@ -1078,35 +994,7 @@ const blogPosts = [
 
     <h2 id="faq" class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     
-    <h3 class="font-bold mt-6 mb-2">1. Is it safe to drink alcohol while taking Kamagra tablets?</h3>
-    <p class="mb-4">Drinking small amounts of alcohol may not cause serious harm, but combining alcohol with Kamagra tablets can increase dizziness, lower blood pressure, and reduce effectiveness. Excessive alcohol significantly increases health risks.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">2. Can alcohol reduce the effectiveness of Kamagra?</h3>
-    <p class="mb-4">Yes. Alcohol can impair blood circulation and nerve function, which may counteract the intended effect of Kamagra tablets. Heavy drinking often makes it harder to achieve or maintain an erection.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">3. What happens if I mix sildenafil tablets with alcohol?</h3>
-    <p class="mb-4">Sildenafil tablets combined with alcohol may cause headaches, flushing, rapid heartbeat, and low blood pressure. The more alcohol consumed, the greater the risk of side effects.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">4. How much alcohol is safe when taking Kamagra?</h3>
-    <p class="mb-4">If approved by a doctor, one or two standard drinks may be tolerated by healthy individuals. However, binge drinking should always be avoided when using Kamagra or sildenafil tablets.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">5. Is sildenafil safer than Kamagra when drinking alcohol?</h3>
-    <p class="mb-4">Pharmacy-dispensed sildenafil tablets are safer because they are regulated and quality-controlled. However, alcohol-related risks apply to both since they contain sildenafil citrate.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">6. Can I take Kamagra after drinking beer or wine?</h3>
-    <p class="mb-4">Taking Kamagra after moderate drinking may increase mild side effects. However, heavy alcohol intake can reduce effectiveness and increase cardiovascular risks.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">7. Does alcohol worsen erectile dysfunction?</h3>
-    <p class="mb-4">Yes. Alcohol is a central nervous system depressant and can reduce testosterone levels and blood flow, worsening erectile dysfunction over time.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">8. How long should I wait between alcohol and sildenafil?</h3>
-    <p class="mb-4">There is no strict rule, but limiting alcohol intake before taking sildenafil tablets is advisable. Avoid taking ED medication during or immediately after heavy drinking.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">9. Can mixing alcohol with Kamagra cause heart problems?</h3>
-    <p class="mb-4">In men with heart disease or high blood pressure, combining alcohol and Kamagra may increase the risk of serious cardiovascular complications.</p>
-    
-    <h3 class="font-bold mt-4 mb-2">10. Does alcohol delay the action of Kamagra?</h3>
-    <p class="mb-4">Yes. Alcohol may delay absorption and reduce responsiveness, meaning Kamagra may take longer to work or may not work effectively.</p>
+    <!-- FAQ_ITEMS_PLACEHOLDER -->
 
     <h2 id="references" class="text-2xl font-bold mt-8 mb-4">References</h2>
     
@@ -1121,7 +1009,7 @@ const blogPosts = [
   },
 ];
 
-// Image mapping for each blog post - MATCHING YOUR BLOG PAGE PATTERN
+// Image mapping for each blog post
 const postImages = {
   "kamagra-vs-sildenafil-safety": {
     image1: "/1.1.jpg",
@@ -1145,7 +1033,179 @@ const postImages = {
   }
 };
 
-// Updated function to process content and insert images with larger containers
+// FAQ items for each blog post
+const faqItems = {
+  "kamagra-vs-sildenafil-safety": [
+    {
+      question: "Is Kamagra the same as Viagra?",
+      answer: "Kamagra contains sildenafil, the same active ingredient found in Viagra. However, Viagra is an approved branded medication, while Kamagra is typically sold online without proper European regulatory authorization."
+    },
+    {
+      question: "What are the side effects of sildenafil tablets?",
+      answer: "Common side effects include headache, flushing, nasal congestion, dizziness, and upset stomach. Most effects are mild and temporary, but individuals with heart conditions should consult a doctor before use."
+    },
+    {
+      question: "How long does sildenafil last?",
+      answer: "Sildenafil typically works within 30 to 60 minutes and lasts about 4 to 6 hours. Sexual stimulation is required for effectiveness. The duration may vary depending on dosage and individual health factors."
+    },
+    {
+      question: "Which is safer: Kamagra or pharmacy sildenafil?",
+      answer: "Pharmacy-dispensed sildenafil tablets are safer because they meet EU regulatory standards and are prescribed after medical evaluation. Kamagra sold online may not meet these safety requirements, increasing potential health risks."
+    },
+    {
+      question: "Is Kamagra safe to use?",
+      answer: "Kamagra may contain sildenafil, but products sold outside regulated pharmacy systems may have inconsistent dosages or harmful ingredients. Dutch health authorities warn against buying unapproved ED medications from unverified online sources."
+    },
+    {
+      question: "Is Kamagra cheaper than sildenafil tablets?",
+      answer: "Kamagra often appears cheaper online compared to pharmacy sildenafil. However, lower prices may reflect lack of regulation, quality control, and safety testing, which increases potential health risks for consumers."
+    },
+    {
+      question: "Can I take sildenafil if I have heart problems?",
+      answer: "Men with heart conditions should consult a doctor before using sildenafil. It may interact dangerously with nitrate medications and certain blood pressure treatments, potentially causing serious cardiovascular complications."
+    },
+    {
+      question: "Can sildenafil be taken daily?",
+      answer: "Standard sildenafil tablets are typically taken as needed before sexual activity. Daily use depends on medical advice. Some patients may be prescribed alternative PDE5 inhibitors designed for daily dosing."
+    },
+    {
+      question: "What should I avoid when taking sildenafil tablets?",
+      answer: "Avoid excessive alcohol, nitrate medications, and recreational drugs when taking sildenafil. Grapefruit products may also affect drug metabolism. Always follow medical instructions to reduce the risk of side effects."
+    },
+    {
+      question: "Can younger men use sildenafil for performance enhancement?",
+      answer: "Sildenafil is prescribed to treat diagnosed erectile dysfunction, not for recreational enhancement. Using it without medical need may mask underlying psychological or health issues and cause unnecessary side effects."
+    }
+  ],
+  "daily-kamagra-safety": [
+    {
+      question: "Can Kamagra be taken daily?",
+      answer: "Kamagra tablets should generally not be taken daily unless advised by a healthcare professional. Most sildenafil medications are intended for occasional use rather than daily consumption."
+    },
+    {
+      question: "Can Kamagra affect kidneys?",
+      answer: "Sildenafil is usually safe for kidney function when taken as directed. However, people with kidney disease should consult a doctor before using erectile dysfunction medications."
+    },
+    {
+      question: "How many hours does Kamagra work?",
+      answer: "The effects of sildenafil usually last 4 to 6 hours, although the duration varies depending on metabolism and health conditions."
+    },
+    {
+      question: "Does Kamagra affect sperm?",
+      answer: "Research suggests sildenafil has minimal impact on sperm quality when used occasionally. It is not designed as a fertility treatment."
+    },
+    {
+      question: "Is Kamagra safer than Viagra?",
+      answer: "Both medications contain sildenafil, but approved pharmaceutical products follow strict safety standards."
+    },
+    {
+      question: "Is it safe to take sildenafil every day?",
+      answer: "Daily sildenafil may be safe when prescribed in low doses by a doctor, but routine daily use without medical supervision is not recommended."
+    },
+    {
+      question: "How much Kamagra is safe to take?",
+      answer: "Typical sildenafil doses include 25 mg, 50 mg, or 100 mg, with most medical guidelines recommending one dose per day at most."
+    },
+    {
+      question: "Can you take Kamagra every day?",
+      answer: "Taking Kamagra every day should only occur under medical supervision. Doctors sometimes prescribe daily PDE5 inhibitors for specific conditions."
+    },
+    {
+      question: "Can I take 10 mg of Cialis daily?",
+      answer: "Low-dose tadalafil (Cialis) is sometimes prescribed for daily use. However, dosing should always follow medical advice."
+    },
+    {
+      question: "What are the side effects of daily sildenafil?",
+      answer: "Possible side effects include headaches, flushing, dizziness, nasal congestion, and indigestion. Rarely, serious cardiovascular effects may occur."
+    }
+  ],
+  "kamagra-duration-strength": [
+    {
+      question: "Is Kamagra stronger than Viagra?",
+      answer: "Kamagra is not inherently stronger than Viagra. Both products typically contain the same active ingredient, sildenafil citrate. The effectiveness depends primarily on the dosage, such as 50 mg or 100 mg of sildenafil."
+    },
+    {
+      question: "How does Kamagra work?",
+      answer: "Kamagra works by delivering sildenafil, a PDE5 inhibitor that increases blood flow to the penis by relaxing blood vessels. This helps men achieve and maintain erections when sexually stimulated."
+    },
+    {
+      question: "How many hours does Kamagra work?",
+      answer: "Sildenafil-based medications usually remain effective for 4 to 6 hours, allowing improved erectile response during sexual stimulation within that time frame."
+    },
+    {
+      question: "What happens after taking Kamagra?",
+      answer: "After taking sildenafil tablets, the medication begins to increase blood flow in erectile tissue. Most users notice effects within 30–60 minutes, depending on metabolism and food intake."
+    },
+    {
+      question: "Can a guy get hard again after ejaculating?",
+      answer: "Yes, but the body typically enters a refractory period after ejaculation. Sildenafil medications may help restore erectile function after recovery, but they do not completely eliminate the refractory phase."
+    },
+    {
+      question: "Does Kamagra affect sperm quality?",
+      answer: "Research suggests sildenafil has minimal impact on sperm quality when used occasionally. It is not designed as a fertility medication."
+    },
+    {
+      question: "How to make sperm thicker and stronger?",
+      answer: "Healthy sperm production can be supported by proper nutrition, regular exercise, reduced stress, and avoiding smoking and excessive alcohol consumption."
+    },
+    {
+      question: "Can Kamagra affect kidneys?",
+      answer: "For most healthy individuals, sildenafil does not significantly affect kidney function. People with kidney disease should consult a healthcare provider before use."
+    },
+    {
+      question: "What drug increases sperm production?",
+      answer: "Medications used in fertility treatments may include clomiphene citrate or hormone therapies, prescribed by doctors to stimulate sperm production."
+    },
+    {
+      question: "How to increase sperm in 4 days?",
+      answer: "Sperm production typically takes about 64 to 74 days, so rapid changes in four days are unlikely. However, proper hydration, balanced nutrition, and adequate rest can support overall reproductive health."
+    }
+  ],
+  "kamagra-with-alcohol": [
+    {
+      question: "Is it safe to drink alcohol while taking Kamagra tablets?",
+      answer: "Drinking small amounts of alcohol may not cause serious harm, but combining alcohol with Kamagra tablets can increase dizziness, lower blood pressure, and reduce effectiveness. Excessive alcohol significantly increases health risks."
+    },
+    {
+      question: "Can alcohol reduce the effectiveness of Kamagra?",
+      answer: "Yes. Alcohol can impair blood circulation and nerve function, which may counteract the intended effect of Kamagra tablets. Heavy drinking often makes it harder to achieve or maintain an erection."
+    },
+    {
+      question: "What happens if I mix sildenafil tablets with alcohol?",
+      answer: "Sildenafil tablets combined with alcohol may cause headaches, flushing, rapid heartbeat, and low blood pressure. The more alcohol consumed, the greater the risk of side effects."
+    },
+    {
+      question: "How much alcohol is safe when taking Kamagra?",
+      answer: "If approved by a doctor, one or two standard drinks may be tolerated by healthy individuals. However, binge drinking should always be avoided when using Kamagra or sildenafil tablets."
+    },
+    {
+      question: "Is sildenafil safer than Kamagra when drinking alcohol?",
+      answer: "Pharmacy-dispensed sildenafil tablets are safer because they are regulated and quality-controlled. However, alcohol-related risks apply to both since they contain sildenafil citrate."
+    },
+    {
+      question: "Can I take Kamagra after drinking beer or wine?",
+      answer: "Taking Kamagra after moderate drinking may increase mild side effects. However, heavy alcohol intake can reduce effectiveness and increase cardiovascular risks."
+    },
+    {
+      question: "Does alcohol worsen erectile dysfunction?",
+      answer: "Yes. Alcohol is a central nervous system depressant and can reduce testosterone levels and blood flow, worsening erectile dysfunction over time."
+    },
+    {
+      question: "How long should I wait between alcohol and sildenafil?",
+      answer: "There is no strict rule, but limiting alcohol intake before taking sildenafil tablets is advisable. Avoid taking ED medication during or immediately after heavy drinking."
+    },
+    {
+      question: "Can mixing alcohol with Kamagra cause heart problems?",
+      answer: "In men with heart disease or high blood pressure, combining alcohol and Kamagra may increase the risk of serious cardiovascular complications."
+    },
+    {
+      question: "Does alcohol delay the action of Kamagra?",
+      answer: "Yes. Alcohol may delay absorption and reduce responsiveness, meaning Kamagra may take longer to work or may not work effectively."
+    }
+  ]
+};
+
+// Updated function to process content and insert images with auto-sizing containers
 const processContentWithImages = (content, slug) => {
   // Split content by image placeholders
   const parts = content.split('<!-- IMAGE_PLACEHOLDER_');
@@ -1166,23 +1226,24 @@ const processContentWithImages = (content, slug) => {
     
     return (
       <React.Fragment key={`section-${index}`}>
-        {/* Image container with larger size for infographics */}
-        <div className="my-10 rounded-xl overflow-hidden border border-gray-200 shadow-lg bg-white">
-          <div className="relative w-full min-h-[600px] lg:min-h-[700px] bg-gray-50 flex items-center justify-center p-4">
-            <div className="relative w-full h-full flex items-center justify-center">
+        {/* Auto-sized image container - responsive and natural dimensions */}
+        <div className="my-8 rounded-xl overflow-hidden border border-gray-200 shadow-md bg-white inline-block w-full">
+          <div className="bg-gray-50 flex items-center justify-center p-2">
+            <div className="relative w-full flex items-center justify-center">
               <Image
                 src={imagePath}
                 alt={`Educational infographic ${imageNumber} for ${slug.replace(/-/g, ' ')}`}
-                width={1200}
-                height={800}
-                className="object-contain w-auto h-auto max-w-full max-h-[700px]"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1000px"
+                width={0}
+                height={0}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
+                className="w-auto h-auto max-w-full object-contain"
                 priority={imageNumber === '1'}
+                unoptimized={true}
               />
             </div>
           </div>
-          <div className="bg-gray-50 px-6 py-3 border-t border-gray-200">
-            <p className="text-sm text-gray-600 text-center font-medium">
+          <div className="bg-gray-50 px-4 py-2 border-t border-gray-200">
+            <p className="text-xs sm:text-sm text-gray-600 text-center font-medium">
               Figure {imageNumber}: Educational infographic - {imageNumber === '1' ? 'Overview' : imageNumber === '2' ? 'Mechanism of action' : 'Safety information'}
             </p>
           </div>
@@ -1215,6 +1276,7 @@ export default async function BlogPost({ params }) {
   
   const post = blogPosts.find(p => p.slug === slug);
   const faqSchema = faqSchemas[slug];
+  const currentFaqItems = faqItems[slug] || [];
 
   if (!post) {
     notFound();
@@ -1222,6 +1284,21 @@ export default async function BlogPost({ params }) {
 
   const headings = extractHeadings(post.content);
   const relatedPosts = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
+
+  // Process content and replace FAQ placeholder with interactive component
+  const processFullContent = (content) => {
+    if (content.includes('<!-- FAQ_ITEMS_PLACEHOLDER -->')) {
+      const parts = content.split('<!-- FAQ_ITEMS_PLACEHOLDER -->');
+      return (
+        <>
+          {processContentWithImages(parts[0], slug)}
+          <InteractiveFAQ faqItems={currentFaqItems} />
+          {parts[1] && <div dangerouslySetInnerHTML={{ __html: parts[1] }} />}
+        </>
+      );
+    }
+    return processContentWithImages(content, slug);
+  };
 
   return (
     <>
@@ -1288,10 +1365,10 @@ export default async function BlogPost({ params }) {
               </div>
 
               {/* Content Area */}
-              <div className="bg-white rounded-lg shadow-sm px-6 md:px-8 py-8">
-                {/* Article Content with Images */}
+              <div className="bg-white rounded-lg shadow-sm px-4 sm:px-6 md:px-8 py-8">
+                {/* Article Content with Images and Interactive FAQ */}
                 <div className="prose prose-lg max-w-none prose-headings:text-gray-800 prose-p:text-gray-600 prose-a:text-blue-600 hover:prose-a:text-blue-800 prose-strong:text-gray-800">
-                  {processContentWithImages(post.content, post.slug)}
+                  {processFullContent(post.content)}
                 </div>
 
                 {/* Tags */}
@@ -1307,7 +1384,7 @@ export default async function BlogPost({ params }) {
                       Sildenafil
                     </span>
                     <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                      Men's Health
+                      Men is Health
                     </span>
                   </div>
                 </div>
@@ -1346,24 +1423,6 @@ export default async function BlogPost({ params }) {
 
                 {/* Related Articles */}
                 <RelatedArticles posts={relatedPosts} />
-
-                {/* Newsletter Signup */}
-                <div className="bg-gray-50 rounded-lg shadow-sm p-6 border border-gray-200">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">Stay Updated</h3>
-                  <p className="text-sm text-gray-600 mb-4">
-                    Get the latest articles and health tips delivered to your inbox.
-                  </p>
-                  <form className="space-y-3">
-                    <input
-                      type="email"
-                      placeholder="Your email address"
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm"
-                    />
-                    <button className="w-full px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors">
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
               </div>
             </aside>
           </div>

@@ -588,10 +588,10 @@ export const products = [
     },
     description: "Super Kamagra Oral Jelly belongs to a group of medicines called PDE5 inhibitors. It works by relaxing the blood vessels in your penis. This allows blood to flow into the penis and produce an erection when sexually aroused.",
     slug: "super-kamagra-oral-jelly",
-    image: "/products/Super-Kamagra-Oral-Jelly 1.png",
+    image: "/products/superkamagra_oral_jelly_3.png",
   "additionalImages": [
-    "/products/Super-Kamagra-Oral-Jelly 2.png",
-    "/products/Super-Kamagra-Oral-Jelly 3.png",
+    "/products/superkamagra_oral_jelly_2.png",
+    "/products/superkamagra_oral_jelly_1.png",
   
   ], //public\products\super-kamagra-oral-jelly 01.jpg
     //overview: "Kamagra Gold 50 mg is a medically approved treatment designed to help men experiencing mild to moderate erectile dysfunction (ED). Containing Sildenafil Citrate 50mg, it improves the ability to achieve and maintain a stronger erection during sexual stimulation. This strength is often recommended for men who are trying Sildenafil for the first time or those who do not require a higher dosage. Kamagra Gold works by increasing blood flow to the penile region, allowing improved firmness, better sexual performance, and more satisfaction during intimacy. Manufactured under high-quality pharmaceutical standards, this medicine is widely used worldwide as a cost-effective alternative to Viagra 50mg. It begins working within 30–45 minutes and remains effective for up to 4–5 hours. The formulation is safe when used under proper medical guidance and offers reliable results for most men seeking ED treatment.",

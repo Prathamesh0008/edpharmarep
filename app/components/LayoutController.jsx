@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "./ScrollProgressLine";
 import CartDrawer from "./CartDrawer";
 import Toast from "./Toast";
 
