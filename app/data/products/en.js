@@ -8,7 +8,7 @@ const products = {
     price: "500",
     composition: "Sildenafil Citrate 50mg",
     form: "Tablet",
-    packSize: "1 x 4 Tablets",
+    pack_size: "1 x 4 Tablets",
     casId: "139755-83-2",
     image: "/products/kamagra50_1.png",//public\products\kamagra50_1.png
     "additionalImages": [
@@ -111,7 +111,7 @@ const products = {
     dosage: "100 mg",
     composition: "Sildenafil Citrate 100mg",
     form: "Tablet",
-    packSize: "1 x 4 Tablets",
+    pack_size: "1 x 4 Tablets",
     casId: "139755-83-2",
     
     image: "/products/kamagra100_1.png",//public\products\kamagra100_1.png
@@ -224,7 +224,7 @@ const products = {
   dosage: "100 mg",
   composition: "Sildenafil Citrate 100mg",
   form: "Oral Jelly",
-  packSize: "7 x 5 gm Sachets",
+  pack_size: "7 x 5 gm Sachets",
   casId: "139755-83-2",
   image: "/products/kamagra_oral_jelly_1.png",//public\products\kamagra_oral_jelly_1.png
   "additionalImages": [
@@ -333,7 +333,7 @@ const products = {
   dosage: "100 mg Sildenafil + 60 mg Dapoxetine",
   composition: "Sildenafil Citrate 100mg, Dapoxetine 60mg",
   form: "Oral Jelly",
-  packSize: "7 x 5 gm Sachets",
+  pack_size: "7 x 5 gm Sachets",
   casId: {
     sildenafil: "139755-83-2",
     dapoxetine: "119356-77-3"
@@ -22607,7 +22607,7 @@ administration: [
   },
 
   "soma-350": {
-    id: "hab-soma-350",
+    id: "124",
     name: {
         en: "Soma 350 mg",
     },
@@ -22617,7 +22617,7 @@ administration: [
     price: "450", // Example price, adjust as needed
     composition: "Carisoprodol 350mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets", // Standard bulk pack
+    pack_size: "10 x 10 Tablets", // Standard bulk pack
     casId: "78-44-4",
     image: "/products/Soma350mg_2.png",
     additionalImages: [
@@ -22684,7 +22684,7 @@ administration: [
 
 // Soma 500
 "soma-500": {
-    id: "hab-soma-500",
+    id: "125",
     name: {
         en: "Soma 500 mg",
     },
@@ -22694,7 +22694,7 @@ administration: [
     price: "550",
     composition: "Carisoprodol 500mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets",
+    pack_size: "10 x 10 Tablets",
     casId: "78-44-4",
     image: "/products/Soma500mg.webp",
     additionalImages: [
@@ -22759,7 +22759,7 @@ administration: [
 
 // Zop 7.5 (Matches website product: ZOP 7.5 TAB)
 "zop-7-5": {
-    id: "hab-zop-7-5",
+    id: "126",
     name: {
         en: "Zop 7.5 mg Tablet",
     },
@@ -22769,7 +22769,7 @@ administration: [
     price: "380",
     composition: "Zopiclone 7.5mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets",
+    pack_size: "10 x 10 Tablets",
     casId: "43200-80-2",
     image: "/products/zop7.5mg.png",
     additionalImages: [
@@ -22832,7 +22832,7 @@ administration: [
 
 // Zop 10 (Matches website product: ZOPISIGN 10 TAB)
 "zop-10": {
-    id: "hab-zop-10",
+    id: "127",
     name: {
         en: "Zopisign 10 mg Tablet",
     },
@@ -22842,7 +22842,7 @@ administration: [
     price: "450",
     composition: "Zopiclone 10mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets",
+    pack_size: "10 x 10 Tablets",
     casId: "43200-80-2",
     image: "/products/zopisign-10mg.jpg",
     additionalImages: [
@@ -22905,7 +22905,7 @@ administration: [
 
 // Modafinil
 "modafinil": {
-    id: "hab-modafinil",
+    id:"128",
     name: {
         en: "Modafinil 200 mg Tablet",
     },
@@ -22915,7 +22915,7 @@ administration: [
     price: "650",
     composition: "Modafinil 200mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets",
+    pack_size: "10 x 10 Tablets",
     casId: "68693-11-8",
     image: "/products/Modafinil200.jpeg",
     additionalImages: [
@@ -22990,7 +22990,7 @@ administration: [
     price: "750",
     composition: "Armodafinil 150mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets",
+    pack_size: "10 x 10 Tablets",
     casId: "112111-43-0",
     image: "/products/armodafinil-150-mg.webp",
     additionalImages: [
@@ -23063,7 +23063,7 @@ administration: [
     price: "580",
     composition: "Sildenafil Citrate 120mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets",
+    pack_size: "10 x 10 Tablets",
     casId: "139755-83-2",
     image: "/products/cobra-120.png",
     additionalImages: [
@@ -23133,7 +23133,7 @@ administration: [
     price: "720",
     composition: "Sildenafil Citrate 200mg",
     form: "Tablet",
-    packSize: "10 x 10 Tablets",
+    pack_size: "10 x 10 Tablets",
     casId: "139755-83-2",
     image: "/products/cobra-200.webp",
     additionalImages: [
@@ -23205,7 +23205,7 @@ administration: [
     price: "520",
     composition: "Sildenafil Citrate 100mg",
     form: "Oral Jelly",
-    packSize: "10 Sachets (per box)",
+    pack_size: "10 Sachets (per box)",
     casId: "139755-83-2",
     image: "/products/cobra_jelly.png",
     additionalImages: [
@@ -23273,7 +23273,7 @@ administration: [
     price: "1200",
     composition: "Testosterone Undecanoate 40mg",
     form: "Soft Gelatin Capsule",
-    packSize: "10 x 10 Capsules",
+    pack_size: "10 x 10 Capsules",
     casId: "58-22-0",
     image: "/products/Testosign-40.webp",//public\products\Testosign-40.webp
     additionalImages: [
@@ -23347,7 +23347,7 @@ administration: [
     price: "249", // Price in INR, adjust as needed for your store
     composition: "Azelaic Acid 20% w/w",
     form: "Cream",
-    packSize: "20g Tube",
+    pack_size: "20g Tube",
     casId: "123-99-9", // Approximate CAS for Azelaic Acid
     image: "/products/azelaic.webp",
     additionalImages: [
@@ -23425,7 +23425,7 @@ administration: [
     price: "210",
     composition: "Cholecalciferol (Vitamin D3) 60,000 IU",
     form: "Capsule",
-    packSize: "4 Capsules x Pack of 2",
+    pack_size: "4 Capsules x Pack of 2",
     casId: "67-97-0",
     image: "/products/Bonefine.webp",
     additionalImages: [
@@ -23496,7 +23496,7 @@ administration: [
     price: "159",
     composition: "Multivitamin & Multimineral Complex",
     form: "Tablet",
-    packSize: "15 Tablets x 2 Strips",
+    pack_size: "15 Tablets x 2 Strips",
     casId: "N/A",
     image:  "/products/abcdz_tablets.webp",
     additionalImages: [
@@ -23566,7 +23566,7 @@ administration: [
     price: "849",
     composition: "Purified Shilajit Extract",
     form: "Resin",
-    packSize: "20g Jar",
+    pack_size: "20g Jar",
     casId: "N/A",
     image: "/products/shilajit_gold.webp",
     additionalImages: [
@@ -23637,7 +23637,7 @@ administration: [
     price: "299",
     composition: "Hyaluronic Acid, Ceramide Complex",
     form: "Moisturizer",
-    packSize: "75g Jar",
+    pack_size: "75g Jar",
     casId: "N/A",
     image: "/products/derbeau.webp",
     additionalImages: [
@@ -23704,7 +23704,7 @@ administration: [
     price: "299",
     composition: "Niacinamide, Salicylic Acid",
     form: "Face Wash",
-    packSize: "100ml Tube",
+    pack_size: "100ml Tube",
     casId: "N/A",
     image: "/products/AcnetopFacewash.webp",
     additionalImages: [

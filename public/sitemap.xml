@@ -1,904 +1,868 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  
-  <!-- Main Pages -->
-  <url>
-    <loc>https://www.edpharma.co/</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/products</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/about</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/terms</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/contact</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Kamagra Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-gold-50-mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-gold-100-mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-100mg-oral-jelly-vol1</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-kamagra-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-100mg-polo-fruit</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-100mg-chewable-strawberry</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-100mg-chewable-orange</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-100mg-effervescent</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-kamagra-100-60</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/kamagra-expo-100mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Tadalafil Products (Apcalis/Tadalis/Tadarise) -->
-  <url>
-    <loc>https://www.edpharma.co/product/apcalis-sx-20mg-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadalis-sx-20mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-2-5</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-5</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-10</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-pro-20</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-20</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-20-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-40</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-pro-40</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-60</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-tadarise</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/extra-super-tadarise</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadarise-effervescent</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Female Products (Lovegra) -->
-  <url>
-    <loc>https://www.edpharma.co/product/lovegra-100mg-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/lovegra-100mg-tablet</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Vardenafil Products (Valif/Zhewitra) -->
-  <url>
-    <loc>https://www.edpharma.co/product/valif-20mg-tablet</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/valif-20mg-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/zhewitra-10</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/zhewitra-20</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/zhewitra-20-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/zhewitra-40</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/zhewitra-60</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/zhewitra-soft-20</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-zhewitra</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/extra-super-zhewitra</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Avanafil Products (Avana) -->
-  <url>
-    <loc>https://www.edpharma.co/product/avana-50mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/avana-100mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/avana-200mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/top-avana</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-avana</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/extra-super-avana</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Dapoxetine Products (Poxet) -->
-  <url>
-    <loc>https://www.edpharma.co/product/poxet-30mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/poxet-60mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/poxet-90mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Sildenafil/Dapoxetine Combo (P-Force) -->
-  <url>
-    <loc>https://www.edpharma.co/product/p-force-100-caps</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/p-force-fort</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/p-force-plus</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-p-force-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-p-force</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/extra-super-p-force</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Sildenafil Products (Sildisoft) -->
-  <url>
-    <loc>https://www.edpharma.co/product/sildisoft-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/sildisoft-50</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Sildenafil Products (Malegra) -->
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-25</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-50</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-75</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-120</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-200</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-100-oral-jelly</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-pro-50</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-pro-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-dxt</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-dxt-plus</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-fxt</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-fxt-plus</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-effervescent-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-100-green</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/malegra-100-gold</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Cream Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/penon-cream</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/naron-cream</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/grafix-cream</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Female Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/femallegra-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/tadafem-20</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Clomiphene Products (Clofi) -->
-  <url>
-    <loc>https://www.edpharma.co/product/clofi-25</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/clofi-50</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/clofi-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Udenafil Products (Zudena) -->
-  <url>
-    <loc>https://www.edpharma.co/product/zudena-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/zudena-200</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/super-zudena</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Ivermectin Products (Iversun) -->
-  <url>
-    <loc>https://www.edpharma.co/product/iversun-6</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/iversun-12</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Duloxetine Products (Cinasun) -->
-  <url>
-    <loc>https://www.edpharma.co/product/cinasun-30</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cinasun-60</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cinasun-90</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Chocolate ED Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/chocolis-20</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/chocogra-100</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Orlistat Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/orlisun-120</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Modafinil Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/modafresh-200</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Finasteride Products (Sunpecia) -->
-  <url>
-    <loc>https://www.edpharma.co/product/sunpecia-1-5</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Pirfenidone Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/pirfisun-200</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <!-- Cenforce Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-25mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-50mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-100mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-120mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-130mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-150mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-200mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-soft-100mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-d-100-60</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-fm-100mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-professional</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/cenforce-oral-jelly-100mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <!-- Vidalista Products -->
-  <url>
-    <loc>https://www.edpharma.co/product/vidalista-2-5mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.edpharma.co/product/vidalista-10mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
- <url>
-    <loc>https://www.edpharma.co/product/vidalista-20mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+<script id="eppiocemhmnlbhjplcgkofciiegomcon"/>
+<script/>
+<script/>
+<!--  Main Pages  -->
 <url>
-    <loc>https://www.edpharma.co/product/vidalista-40mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+<loc>https://www.edpharma.co/</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vidalista-60mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+<loc>https://www.edpharma.co/products</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vidalista-80mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/about</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vidalista-black-80mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/terms</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/super-vidalista-20-60</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/contact</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Kamagra Products  -->
 <url>
-    <loc>https://www.edpharma.co/product/vidalista-ct-20mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/product/kamagra-gold-50-mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vidalista-professional-20mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/product/kamagra-gold-100-mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vilitra-10mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/product/kamagra-100mg-oral-jelly-vol1</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vilitra-20mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/product/super-kamagra-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vilitra-40mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/product/kamagra-100mg-polo-fruit</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/vilitra-60mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/product/kamagra-100mg-chewable-strawberry</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/super-vilitra</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-
+<loc>https://www.edpharma.co/product/kamagra-100mg-chewable-orange</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 <url>
-    <loc>https://www.edpharma.co/product/fliban-100mg</loc>
-    <lastmod>2026-02-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+<loc>https://www.edpharma.co/product/kamagra-100mg-effervescent</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-kamagra-100-60</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/kamagra-expo-100mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Tadalafil Products (Apcalis/Tadalis/Tadarise)  -->
+<url>
+<loc>https://www.edpharma.co/product/apcalis-sx-20mg-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadalis-sx-20mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-2-5</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-5</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-10</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-pro-20</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-20</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-20-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-40</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-pro-40</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-60</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-tadarise</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/extra-super-tadarise</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadarise-effervescent</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Female Products (Lovegra)  -->
+<url>
+<loc>https://www.edpharma.co/product/lovegra-100mg-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/lovegra-100mg-tablet</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Vardenafil Products (Valif/Zhewitra)  -->
+<url>
+<loc>https://www.edpharma.co/product/valif-20mg-tablet</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/valif-20mg-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zhewitra-10</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zhewitra-20</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zhewitra-20-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zhewitra-40</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zhewitra-60</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zhewitra-soft-20</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-zhewitra</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/extra-super-zhewitra</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<!--  Avanafil Products (Avana)  -->
+<url>
+<loc>https://www.edpharma.co/product/avana-50mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/avana-100mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/avana-200mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/top-avana</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-avana</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/extra-super-avana</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<!--  Dapoxetine Products (Poxet)  -->
+<url>
+<loc>https://www.edpharma.co/product/poxet-30mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/poxet-60mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/poxet-90mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Sildenafil/Dapoxetine Combo (P-Force)  -->
+<url>
+<loc>https://www.edpharma.co/product/p-force-100-caps</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/p-force-fort</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/p-force-plus</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-p-force-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-p-force</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/extra-super-p-force</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<!--  Sildenafil Products (Sildisoft)  -->
+<url>
+<loc>https://www.edpharma.co/product/sildisoft-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/sildisoft-50</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Sildenafil Products (Malegra)  -->
+<url>
+<loc>https://www.edpharma.co/product/malegra-25</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-50</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-75</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-120</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-200</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-100-oral-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-pro-50</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-pro-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-dxt</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-dxt-plus</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-fxt</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-fxt-plus</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-effervescent-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-100-green</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/malegra-100-gold</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Cream Products  -->
+<url>
+<loc>https://www.edpharma.co/product/penon-cream</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/naron-cream</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/grafix-cream</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<!--  Female Products  -->
+<url>
+<loc>https://www.edpharma.co/product/femallegra-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/tadafem-20</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Clomiphene Products (Clofi)  -->
+<url>
+<loc>https://www.edpharma.co/product/clofi-25</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/clofi-50</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/clofi-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Udenafil Products (Zudena)  -->
+<url>
+<loc>https://www.edpharma.co/product/zudena-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zudena-200</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-zudena</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<!--  Ivermectin Products (Iversun)  -->
+<url>
+<loc>https://www.edpharma.co/product/iversun-6</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/iversun-12</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Duloxetine Products (Cinasun)  -->
+<url>
+<loc>https://www.edpharma.co/product/cinasun-30</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cinasun-60</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cinasun-90</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Chocolate ED Products  -->
+<url>
+<loc>https://www.edpharma.co/product/chocolis-20</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/chocogra-100</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Orlistat Products  -->
+<url>
+<loc>https://www.edpharma.co/product/orlisun-120</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<!--  Modafinil Products  -->
+<url>
+<loc>https://www.edpharma.co/product/modafresh-200</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<!--  Finasteride Products (Sunpecia)  -->
+<url>
+<loc>https://www.edpharma.co/product/sunpecia-1-5</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<!--  Pirfenidone Products  -->
+<url>
+<loc>https://www.edpharma.co/product/pirfisun-200</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<!--  Cenforce Products  -->
+<url>
+<loc>https://www.edpharma.co/product/cenforce-25mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-50mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-100mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-120mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-130mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-150mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-200mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-soft-100mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-d-100-60</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.9</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-fm-100mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-professional</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cenforce-oral-jelly-100mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<!--  Vidalista Products  -->
+<url>
+<loc>https://www.edpharma.co/product/vidalista-2-5mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-10mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-20mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-40mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-60mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-80mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-black-80mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-vidalista-20-60</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-ct-20mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vidalista-professional-20mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vilitra-10mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vilitra-20mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vilitra-40mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/vilitra-60mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/super-vilitra</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/fliban-100mg</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/azelax-cream</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/bonefine-d3-60k</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/multivitamin-abcdz</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/xheal-shilajit</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/derbeau-moisturizer</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/niacinamide-face-wash</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/soma-350</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/soma-500</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zop-7-5</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/zop-10</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/modafinil</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/armodafinil</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cobra-120</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cobra-200</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/cobra-jelly</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://www.edpharma.co/product/testogel</loc>
+<lastmod>2026-02-09</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.8</priority>
+</url>
 </urlset>

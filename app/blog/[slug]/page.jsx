@@ -509,13 +509,7 @@ const blogPosts = [
         <li>Information on Kamagra safety concerns – FDA Warning: <a href="https://www.fda.gov/consumers/consumer-updates/serious-safety-concerns-unapproved-ed-drugs" class="text-blue-600 hover:underline">https://www.fda.gov/consumers/consumer-updates/serious-safety-concerns-unapproved-ed-drugs</a></li>
       </ul>
       
-      <ul class="list-disc pl-6 mb-4 space-y-2">
-        <li>Dark yellow or greenish discharge</li>
-        <li>Strong, foul odor</li>
-        <li>Thick, cottage cheese-like consistency</li>
-        <li>Itching, burning, or irritation</li>
-        <li>Pain during urination or intercourse</li>
-      </ul>
+      
       
       
     `
@@ -528,6 +522,7 @@ const blogPosts = [
     <p>Erectile dysfunction (ED) is a common condition that affects millions of men worldwide. In Europe, including the Netherlands, many men search online for solutions such as Kamagra tablets or sildenafil medications to improve erectile performance. Sildenafil is the active compound used in many erectile dysfunction treatments and is widely recognized by healthcare authorities.</p>
     
     <!-- IMAGE_PLACEHOLDER_1 -->
+    
     
     <p>One of the most common questions men ask is: Is daily use of Kamagra safe? While Kamagra tablets are often discussed in relation to sildenafil-based treatments, it is important to understand how these medications work, how often they should be used, and what medical research says about daily use.</p>
     
