@@ -365,7 +365,11 @@ const blogPosts = [
     title: "Use of Kamagra vs Sildenafil Tablets: What’s the Difference?",
     date: "March 3, 2026",
     content: `
-    <p>As in many parts of the world, men facing erectile dysfunction (ED) often search for effective solutions that restore confidence and improve quality of life. Two names that frequently appear in this context are Kamagra and sildenafil tablets. With increasing online interest and demand, especially for affordable ED treatments, understanding the difference between these products is essential</p>
+    <p>As in many parts of the world, men facing erectile dysfunction (ED) often search for effective solutions that restore confidence and improve quality of life. Two names that frequently appear in this context are <a href="/blog/kamagra-vs-sildenafil-safety" style="color:#2563eb;text-decoration:underline;">Kamagra
+</a>  and 
+<a href="/blog/daily-kamagra-safety" style="color:#2563eb;text-decoration:underline;">
+sildenafil tablets
+</a>.  With increasing online interest and demand, especially for affordable ED treatments, understanding the difference between these products is essential</p>
       
       <!-- IMAGE_PLACEHOLDER_1 -->
       
@@ -376,7 +380,9 @@ const blogPosts = [
       <h2 id="sildenafil-intro" class="text-2xl font-bold mt-8 mb-4">Introduction to Sildenafil</h2>
       <h3 class="mb-4 font-semibold">Sildenafil Basics </h3>
       <p class="mb-4">Sildenafil is a drug that belongs to a class of medicines called phosphodiesterase type 5 (PDE5) inhibitors. It was originally developed to treat high blood pressure and angina, but its most well-known effect is improving erections.</p>
-      <p class="mb-4">The original brand name for sildenafil is Viagra, which became the first widely approved ED medication in the late 1990s. Viagra remains one of the most recognized names globally, including in the Netherlands.</p>
+      <p class="mb-4">The <a href="/" style="color:#2563eb;text-decoration:underline;">
+original brand name
+</a>. for sildenafil is Viagra, which became the first widely approved ED medication in the late 1990s. Viagra remains one of the most recognized names globally, including in the Netherlands.</p>
       
       <h3 class=" font-bold mt-8 mb-4">How Sildenafil Works</h3>
       <p class="mb-4">Sildenafil works by increasing blood flow to the penis during sexual stimulation. It does this by relaxing blood vessels in the penile area, enabling a firmer and longer-lasting erection when sexually aroused.</p>
@@ -444,7 +450,9 @@ const blogPosts = [
         <li>Are accurately dosed</li>
         <li>Are dispensed with medical guidance</li>
       </ul>
-      <p class="mb-4">Choosing ED Pharma's sildenafil tablets helps ensure you receive a verified and quality-controlled product.</p>
+      <p class="mb-4">Choosing <a href="/products" style="color:#2563eb;text-decoration:underline;">
+ED Pharma's sildenafil tablets
+</a>. helps ensure you receive a verified and quality-controlled product.</p>
       <p class="mb-4">Because ED treatments require personalized medical evaluation, ED Pharma encourages consultations with Dutch healthcare professionals before initiating treatment.</p>
 
       <h2 id="practical-advice" class="text-2xl font-bold mt-8 mb-4">Practical Advice for Patients in the Netherlands</h2>
@@ -498,7 +506,9 @@ const blogPosts = [
     
     <p>One of the most common questions men ask is: Is daily use of Kamagra safe? While Kamagra tablets are often discussed in relation to sildenafil-based treatments, it is important to understand how these medications work, how often they should be used, and what medical research says about daily use.</p>
     
-    <p>In this educational guide from ED Pharma, we explain the safety of daily sildenafil use, how Kamagra tablets work, possible side effects, and the safest way to approach ED treatment.</p>
+    <p>In this educational guide from <a href="/" style="color:#2563eb;text-decoration:underline;">
+ED Pharma
+</a> , we explain the safety of daily sildenafil use, how  Kamagra tablets work, possible side effects, and the safest way to approach ED treatment.</p>
 
     <h2 id="understanding-kamagra" class="text-2xl font-bold mt-8 mb-4">Understanding Kamagra Tablets and Sildenafil</h2>
     
@@ -514,7 +524,9 @@ const blogPosts = [
         <li>Other sildenafil-based ED medications</li>
     </ul>
     
-    <p class="mb-4">Some people refer to sildenafil products as Kamagra tablets, but the scientific name used in medical research is sildenafil citrate.</p>
+    <p class="mb-4">Some people refer to sildenafil products as <a href="/" style="color:#2563eb;text-decoration:underline;">
+Kamagra tablets
+</a> , but the scientific name used in medical research is sildenafil citrate.</p>
 
     <!-- IMAGE_PLACEHOLDER_2 -->
 
@@ -623,7 +635,9 @@ const blogPosts = [
 
     <h2 id="responsible-awareness" class="text-2xl font-bold mt-8 mb-4">Responsible Awareness from ED Pharma</h2>
     
-    <p class="mb-4">At ED Pharma, our goal is to provide reliable information about erectile health and treatment options. While sildenafil-based medications such as Kamagra tablets can help many individuals, they should always be used responsibly.</p>
+    <p class="mb-4">At ED Pharma, our goal is to provide reliable information about erectile health and treatment options. While sildenafil-based medications such as <a href="/" style="color:#2563eb;text-decoration:underline;">
+Kamagra tablets
+</a> can help many individuals, they should always be used responsibly.</p>
     
     <p class="mb-4">Men experiencing ongoing erectile dysfunction should consult a medical professional to identify the underlying cause and determine the safest treatment approach.</p>
     
@@ -655,13 +669,17 @@ const blogPosts = [
     
     <p>In Europe, including the Netherlands, one of the most commonly discussed medications for ED is sildenafil, the active ingredient found in well-known treatments like Viagra. Many men searching online also come across Kamagra tablets, which are often marketed as sildenafil-based alternatives.</p>
     
-    <p>In this guide by ED Pharma, we explain how Kamagra works, how long it lasts, its effects after taking it, and important facts about fertility and sperm health.</p>
+    <p>In this guide by <a href="/" style="color:#2563eb;text-decoration:underline;">
+ED Pharma
+</a> , we explain how Kamagra works, how long it lasts, its effects after taking it, and important facts about fertility and sperm health.</p>
 
     <h2 id="understanding" class="text-2xl font-bold mt-8 mb-4">Understanding Kamagra and Sildenafil in Europe</h2>
     
     <p class="mb-4">Kamagra tablets typically contain sildenafil citrate, a compound classified as a PDE5 inhibitor. Sildenafil was originally developed to treat heart conditions but later became widely used for treating erectile dysfunction.</p>
     
-    <p class="mb-4">In Europe and the Netherlands, sildenafil is generally sold under prescription medications such as Viagra or generic sildenafil tablets. Some products marketed online under names like Kamagra claim to contain the same active ingredient.</p>
+    <p class="mb-4">In Europe and the Netherlands, sildenafil is generally sold under prescription medications such as <a href="/blog/kamagra-vs-sildenafil-safety" style="color:#2563eb;text-decoration:underline;">
+Viagra or generic sildenafil tablets
+</a> . Some products marketed online under names like Kamagra claim to contain the same active ingredient.</p>
     
     <p class="mb-4">The term sildenafil is the scientific name used in medical literature, while brand names may vary by region.</p>
 
@@ -835,15 +853,19 @@ const blogPosts = [
     
     <p class="font-semibold text-lg mb-4">Is it safe to take Kamagra with alcohol?</p>
     
-    <p class="mb-4">In this article, we will explore how Kamagra works, how alcohol affects erectile function, the risks of combining Kamagra and alcohol, and what men in the Netherlands should consider before using these medications. At ED Pharma, patient safety and education remain a top priority.</p>
+    <p class="mb-4">In this article, we will explore how Kamagra works, how alcohol affects erectile function, the risks of combining Kamagra and alcohol, and what men in the Netherlands should consider before using these medications. At <a href="/" style="color:#2563eb;text-decoration:underline;">
+ED Pharma
+</a> , patient safety and education remain a top priority.</p>
 
     <!-- IMAGE_PLACEHOLDER_1 -->
 
     <h2 id="understanding-kamagra" class="text-2xl font-bold mt-8 mb-4">Understanding Kamagra Tablets</h2>
     
-    <p class="mb-4">Kamagra tablets contain sildenafil citrate, the same active ingredient found in the branded medication Viagra. Sildenafil belongs to a class of drugs called PDE5 inhibitors (phosphodiesterase type 5 inhibitors).</p>
+    <p class="mb-4"><a href="/" style="color:#2563eb;text-decoration:underline;">
+Kamagra tablets
+</a> contain sildenafil citrate, the same active ingredient found in the branded medication Viagra. Sildenafil belongs to a class of drugs called PDE5 inhibitors (phosphodiesterase type 5 inhibitors).</p>
     
-    <p class="mb-4">According to <a href="https://en.wikipedia.org/wiki/Sildenafil" class="text-blue-600 hover:underline">Sildenafil</a>, the medication works by increasing blood flow to the penis during sexual stimulation. It relaxes blood vessels, allowing improved circulation and helping men achieve and maintain an erection.</p>
+    <p class="mb-4">According to Sildenafil, the medication works by increasing blood flow to the penis during sexual stimulation. It relaxes blood vessels, allowing improved circulation and helping men achieve and maintain an erection.</p>
     
     <p class="mb-4">In the Netherlands, sildenafil is typically prescribed under the name sildenafil or sold as Viagra through licensed pharmacies. Kamagra, however, is not officially approved for sale within Dutch pharmacies and is often purchased online.</p>
 
@@ -858,9 +880,9 @@ const blogPosts = [
         <li>Impair erection quality</li>
     </ul>
     
-    <p class="mb-4">According to health information published on <a href="https://www.healthline.com/health/erectile-dysfunction/alcohol-and-ed" class="text-blue-600 hover:underline">Healthline</a>, alcohol is a central nervous system depressant. This means it slows down brain function and body responses, which can directly affect sexual arousal and performance.</p>
+    <p class="mb-4">According to health information published on Healthline , alcohol is a central nervous system depressant. This means it slows down brain function and body responses, which can directly affect sexual arousal and performance.</p>
     
-    <p class="mb-4">Additionally, chronic alcohol use is associated with long-term erectile dysfunction. The <a href="https://www.who.int/news-room/fact-sheets/detail/alcohol" class="text-blue-600 hover:underline">World Health Organization</a> highlights alcohol as a risk factor for multiple health conditions, including cardiovascular disease and sexual health disorders.</p>
+    <p class="mb-4">Additionally, chronic alcohol use is associated with long-term erectile dysfunction. The World Health Organization highlights alcohol as a risk factor for multiple health conditions, including cardiovascular disease and sexual health disorders.</p>
 
     <!-- IMAGE_PLACEHOLDER_2 -->
 
@@ -898,7 +920,7 @@ const blogPosts = [
     </ul>
     <p class="mb-4">Combining alcohol can intensify these side effects, particularly headaches and dizziness.</p>
     
-    <p class="mb-4">According to <a href="https://www.mayoclinic.org/drugs-supplements/sildenafil-oral-route/description/drg-20066989" class="text-blue-600 hover:underline">Mayo Clinic</a>, mixing ED medications with alcohol increases the likelihood of uncomfortable and potentially unsafe reactions.</p>
+    <p class="mb-4">According to Mayo Clinic, mixing ED medications with alcohol increases the likelihood of uncomfortable and potentially unsafe reactions.</p>
 
     <h2 id="moderate-alcohol" class="text-2xl font-bold mt-8 mb-4">Is Moderate Alcohol Safe with Kamagra?</h2>
     
@@ -934,7 +956,9 @@ const blogPosts = [
 
     <h2 id="who-should-avoid" class="text-2xl font-bold mt-8 mb-4">Who Should Avoid Mixing Kamagra and Alcohol?</h2>
     
-    <p class="mb-4">You should avoid combining alcohol with Kamagra tablets if you:</p>
+    <p class="mb-4">You should avoid combining alcohol with <a href="/" style="color:#2563eb;text-decoration:underline;">
+Kamagra tablets
+</a> if you:</p>
     
     <ul class="list-disc pl-6 mb-4 space-y-1">
         <li>Have heart disease</li>
@@ -957,7 +981,7 @@ const blogPosts = [
         <li>Cardiovascular disease</li>
     </ul>
     
-    <p class="mb-4">The <a href="https://www.who.int/news-room/fact-sheets/detail/alcohol" class="text-blue-600 hover:underline">World Health Organization</a> warns that harmful alcohol use is linked to over 200 health conditions. Sexual health problems are often early indicators of broader cardiovascular or metabolic issues.</p>
+    <p class="mb-4">The World Health Organization warns that harmful alcohol use is linked to over 200 health conditions. Sexual health problems are often early indicators of broader cardiovascular or metabolic issues.</p>
     
     <p class="mb-4">ED is frequently considered a "warning sign" of heart disease. Therefore, masking symptoms with Kamagra while continuing unhealthy alcohol consumption can delay necessary medical evaluation.</p>
 
@@ -1285,6 +1309,9 @@ export default async function BlogPost({ params }) {
   const headings = extractHeadings(post.content);
   const relatedPosts = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
 
+  // Generate canonical URL
+  const canonicalUrl = `https://www.invictuslogi.com/blog/${slug}`;
+
   // Process content and replace FAQ placeholder with interactive component
   const processFullContent = (content) => {
     if (content.includes('<!-- FAQ_ITEMS_PLACEHOLDER -->')) {
@@ -1302,7 +1329,33 @@ export default async function BlogPost({ params }) {
 
   return (
     <>
-      {/* Add FAQ Schema in the head */}
+      {/* Head section with canonical tag and schema */}
+      <Head>
+        {/* Canonical Tag */}
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Meta robots (optional - can help with SEO) */}
+        <meta name="robots" content="index, follow" />
+        
+        {/* Open Graph tags for better social sharing */}
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.content.substring(0, 160).replace(/<[^>]*>/g, '')} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="Invictus Logistics" />
+        
+        {/* Twitter Card tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={post.content.substring(0, 160).replace(/<[^>]*>/g, '')} />
+        
+        {/* Article specific meta tags */}
+        <meta property="article:published_time" content={new Date(post.date).toISOString()} />
+        <meta property="article:author" content="Invictus Logistics" />
+        <meta property="article:section" content="Health & Wellness" />
+      </Head>
+
+      {/* Add FAQ Schema in the head using Next.js Script component */}
       {faqSchema && (
         <script
           type="application/ld+json"
