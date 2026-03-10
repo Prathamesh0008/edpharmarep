@@ -906,7 +906,7 @@ productDetail: {
   },
   homePage: {
     hero: {
-      title: "Pouzdana farmaceutska proizvodnja & globalna distribucija",
+      title: "Službeni i pouzdani farmaceutski distributer Europa",
       subtitle:
         "ED Pharma isporučuje visokokvalitetne, GMP-uskladene farmaceutske proizvode na regulisana međunarodna tržišta.",
       ctaViewProducts: "Pogledaj proizvode",

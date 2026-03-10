@@ -990,7 +990,7 @@ productsPage: {
 },
 homePage: {
   hero: {
-    title: "Vertrauenswürdige pharmazeutische Herstellung & weltweiter Vertrieb",
+    title: "Offizieller & vertrauenswürdiger Pharma-Vertriebspartner Europa",
     subtitle: "ED Pharma liefert hochwertige, GMP-konforme pharmazeutische Produkte für regulierte internationale Märkte.",
     ctaViewProducts: "Produkte ansehen"
   },

@@ -1103,7 +1103,7 @@ productPage: {
 
 homePage: {
   hero: {
-    title: "Fabricação Farmacêutica Confiável e Distribuição Global",
+    title: "Distribuidor farmacêutico oficial e confiável Europa",
     subtitle:
       "A ED Pharma fornece produtos farmacêuticos de alta qualidade e em conformidade com as BPF para mercados internacionais regulamentados.",
     ctaViewProducts: "Ver Produtos",

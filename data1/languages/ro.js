@@ -881,7 +881,7 @@ productDetail: {
 
   homePage: {
     hero: {
-      title: "Fabricarea și Distribuția Globală de Încredere în Farmaceutice",
+      title: "Distribuitor farmaceutic oficial și de încredere Europa",
       subtitle: "ED Pharma furnizează produse farmaceutice de înaltă calitate, conforme BPF, pe piețele internaționale reglementate.",
       ctaViewProducts: "Vezi Produse",
     },

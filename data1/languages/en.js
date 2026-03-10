@@ -884,7 +884,7 @@ productsPage: {
 },
 homePage: {
   hero: {
-    title: "Trusted Pharmaceutical Manufacturing & Global Distribution",
+    title: "Official & Trusted Pharma Distributor Europe",
     subtitle:
       "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets.",
     ctaViewProducts: "View Products",

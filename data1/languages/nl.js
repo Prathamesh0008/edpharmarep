@@ -933,7 +933,7 @@ productsPage: {
 },
 homePage: {
   hero: {
-    title: "Betrouwbare farmaceutische productie en wereldwijde distributie",
+    title: "Officiële & vertrouwde farmaceutische distributeur Europa",
     subtitle: "ED Pharma levert hoogwaardige, GMP-conforme farmaceutische producten aan gereguleerde internationale markten.",
     ctaViewProducts: "Bekijk producten"
   },

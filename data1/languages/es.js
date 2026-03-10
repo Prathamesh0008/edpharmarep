@@ -993,7 +993,7 @@ productsPage: {
 },
 homePage: {
   hero: {
-    title: "Fabricación farmacéutica confiable y distribución global",
+    title: "Distribuidor farmacéutico oficial y de confianza Europa",
     subtitle: "ED Pharma suministra productos farmacéuticos de alta calidad y conformes con las GMP en mercados internacionales regulados.",
     ctaViewProducts: "Ver productos"
   },

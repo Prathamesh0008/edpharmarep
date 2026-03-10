@@ -929,7 +929,7 @@ productsPage: {
 },
 homePage: {
   hero: {
-    title: "信頼される医薬品製造とグローバルな流通",
+    title: "ヨーロッパの公式 & 信頼される医薬品卸売業者",
     subtitle: "EDファーマは、規制された国際市場において、高品質かつGMPに準拠した医薬品を提供しています。",
     ctaViewProducts: "製品を見る"
   },

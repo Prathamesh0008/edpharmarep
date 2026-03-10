@@ -882,7 +882,7 @@ productDetail: {
 
   homePage: {
     hero: {
-      title: "Prodhimi dhe Shpërndarja Globale e Besuar Farmaceutike",
+      title: "Shpërndarës zyrtar dhe i besuar farmaceutik Evropë",
       subtitle: "ED Pharma ofron produkte farmaceutike cilësore, të përputhshme me GMP, nëpër tregjet e rregulluara ndërkombëtare.",
       ctaViewProducts: "Shiko Produktet",
     },

@@ -974,7 +974,7 @@ productsPage: {
 },
 homePage: {
   hero: {
-    title: "值得信赖的药品制造与全球分销",
+    title: "欧洲官方及可信赖的药品分销商",
     subtitle:
       "ED 医药在受监管的国际市场上提供高质量、符合 GMP 标准的医药产品。",
     ctaViewProducts: "查看产品",
