@@ -525,7 +525,7 @@ ED Pharma
         <li>Other sildenafil-based ED medications</li>
     </ul>
     
-    <p class="mb-4">Some people refer to sildenafil products as <a href="/" style="color:#2563eb;text-decoration:underline;">
+    <p class="mb-4">Some people refer to sildenafil products as <a href="/products" style="color:#2563eb;text-decoration:underline;">
 Kamagra tablets
 </a> , but the scientific name used in medical research is sildenafil citrate.</p>
 
@@ -636,7 +636,7 @@ Kamagra tablets
 
     <h2 id="responsible-awareness" class="text-2xl font-bold mt-8 mb-4">Responsible Awareness from ED Pharma</h2>
     
-    <p class="mb-4">At ED Pharma, our goal is to provide reliable information about erectile health and treatment options. While sildenafil-based medications such as <a href="/" style="color:#2563eb;text-decoration:underline;">
+    <p class="mb-4">At ED Pharma, our goal is to provide reliable information about erectile health and treatment options. While sildenafil-based medications such as <a href="/products" style="color:#2563eb;text-decoration:underline;">
 Kamagra tablets
 </a> can help many individuals, they should always be used responsibly.</p>
     

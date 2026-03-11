@@ -138,8 +138,8 @@ export const COMPOUNDS = {
      "Malegra100-Oral-Jelly",
      "Malegra-Pro-50",
      "Malegra-Pro-100",
-    "Malegra100-Green",
-    "Malegra100-Gold",
+    "malegra-100-green",
+    "malegra-100-gold",
     "Chocogra-100",
 
     ],
@@ -237,7 +237,7 @@ export const COMPOUNDS = {
         "Modafresh-200",
     ],
     "Modafresh-200":[
-       "Sunpecia-1mg/5mg",
+       "Sunpecia-1mg-5mg",
 
     ],
     "Pirfenidone":[

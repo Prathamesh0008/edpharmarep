@@ -466,6 +466,15 @@ const pricing = {
   { min: 10000, max: Infinity, price:1.30 },
   ],
 
+  "malegra-100-gold":[
+     { min: 1, max: 10, price: 13.00 },
+  { min: 11, max: 99, price:9.75 },
+  { min: 100, max: 999, price:6.50 },
+  { min: 1000, max: 4999, price: 1.95 },
+  { min: 5000, max: 9999, price:1.63 },
+  { min: 10000, max: Infinity, price:1.30 },
+  ],
+
    "malegra-200":[
     { min: 1, max: 10, price: 15.00 },
   { min: 11, max: 99, price:11.25 },
@@ -474,6 +483,8 @@ const pricing = {
   { min: 5000, max: 9999, price:1.88 },
   { min: 10000, max: Infinity, price:1.50 },
    ],
+
+   
 
    "soma-350":[
     { min: 1, max: 10, price: 15.00 },

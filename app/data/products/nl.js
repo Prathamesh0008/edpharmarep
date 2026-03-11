@@ -21110,6 +21110,1140 @@ administration: [
   ]
   },
 
+  "soma-350": {
+        "id": "124",
+        "name": {
+            "en": "Soma 350 mg"
+        },
+        "category": "Centraal Zenuwstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "350 mg",
+        "price": "450",
+        "composition": "Carisoprodol 350mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "78-44-4",
+        "image": "/products/Soma350mg_2.png",
+        "additionalImages": [
+            "/products/Soma350mg_3.jpg",
+            "/products/Soma350mg_3.jpg"
+        ],
+        "metaTitle": "Buy Soma 350 mg Online | Carisoprodol Muscle Relaxant | Hab Pharma",
+        "metaDescription": "Buy Soma 350 mg (Carisoprodol) online. Een spierverslapper voor de verlichting van acute musculoskeletale pijn. Hoge kwaliteit van Hab Pharma.",
+        "description": "Soma 350 mg bevat Carisoprodol, een medicijn dat wordt gebruikt voor de kortdurende verlichting van ongemak geassocieerd met acute, pijnlijke musculoskeletale aandoeningen.",
+        "slug": "soma-350",
+        "overview": [
+            "Soma 350 mg is een spierverslapper die Carisoprodol bevat, gebruikt om pijn en ongemak van spierblessures en -krampen te verlichten.",
+            "Het wordt doorgaans voorgeschreven als onderdeel van een uitgebreid behandelplan dat rust en fysiotherapie omvat.",
+            "Dit medicijn werkt door pijnsignalen tussen de zenuwen en de hersenen te blokkeren.",
+            "De 350 mg sterkte is de standaarddosering voor volwassen patiënten.",
+            "Soma is bedoeld voor kortdurend gebruik, meestal niet langer dan twee tot drie weken.",
+            "Het helpt de mobiliteit te verbeteren en stijfheid geassocieerd met acute spieraandoeningen te verminderen.",
+            "Verlichting van pijn en ongemak begint vaak binnen 30 minuten na inname van de medicatie.",
+            "De effecten van een enkelvoudige dosis duren doorgaans 4 tot 6 uur.",
+            "Dit product mag alleen worden gebruikt wanneer voorgeschreven door een zorgverlener."
+        ],
+        "sideEffects": [
+            "Slaperigheid en duizeligheid zijn de meest voorkomende bijwerkingen.",
+            "Sommige personen kunnen last krijgen van hoofdpijn of wazig zien.",
+            "Misselijkheid, braken of maagklachten kunnen voorkomen.",
+            "Agitatie, prikkelbaarheid of verwardheid zijn gemeld, vooral bij oudere patiënten.",
+            "Tremoren of ongecontroleerde spierbewegingen kunnen zelden voorkomen.",
+            "Een snelle hartslag of blozen in het gezicht kan door sommige gebruikers worden ervaren.",
+            "Allergische reacties zoals huiduitslag of jeuk zijn mogelijk maar zeldzaam."
+        ],
+        "administration": [
+            "Neem Soma precies zoals voorgeschreven door uw zorgverlener.",
+            "De gebruikelijke dosering voor volwassenen is één 350 mg tablet driemaal daags en voor het slapengaan.",
+            "Slik de tablet in zijn geheel door met een vol glas water.",
+            "Het kan met of zonder voedsel worden ingenomen, maar innemen met voedsel kan maagklachten verminderen.",
+            "Plet, kauw of breek de tablet niet.",
+            "Neem niet meer of langer in dan voorgeschreven.",
+            "Vermijd alcohol terwijl u dit medicijn gebruikt, omdat dit de slaperigheid kan vergroten."
+        ],
+        "warnings": [
+            "Niet gebruiken als u allergisch bent voor Carisoprodol of meprobamaat.",
+            "Dit medicijn kan verslavend zijn; gebruik alleen zoals voorgeschreven en deel het niet.",
+            "Vermijd autorijden, het bedienen van machines of het uitvoeren van gevaarlijke activiteiten totdat u weet hoe dit medicijn u beïnvloedt.",
+            "Combinatie met alcohol of andere CZS-depressiva (zoals benzodiazepinen of opioïden) kan leiden tot ernstige slaperigheid of ademhalingsdepressie.",
+            "Voorzichtig gebruiken als u een voorgeschiedenis heeft van drugsmisbruik, lever- of nierziekte, of epileptische aandoeningen.",
+            "Oudere patiënten kunnen gevoeliger zijn voor de effecten en lopen een hoger risico op vallen.",
+            "Niet aanbevolen tijdens zwangerschap of borstvoeding. Raadpleeg uw arts."
+        ],
+        "how_it_works": [
+            "Carisoprodol, de werkzame stof in Soma, is een centraal werkende spierverslapper.",
+            "Het exacte werkingsmechanisme is niet volledig bekend, maar men neemt aan dat het werkt door sedatie te veroorzaken en de pijnperceptie in het centrale zenuwstelsel te veranderen.",
+            "Het ontspant de skeletspieren niet direct, maar werkt als een depressivum op het CZS.",
+            "Carisoprodol wordt in de lever gemetaboliseerd tot meprobamaat, een actieve metaboliet die ook bijdraagt aan de effecten.",
+            "Er wordt gedacht dat het de communicatie tussen zenuwen in het ruggenmerg en de reticulaire vorming van de hersenen beïnvloedt, wat leidt tot spierontspanning en pijnverlichting."
+        ],
+        "tips": [
+            "Bewaren bij kamertemperatuur, uit de buurt van vocht en warmte.",
+            "Bewaar de medicatie in de originele blisterverpakking tot gebruik.",
+            "Als u een dosis mist, neem deze dan in zodra u eraan denkt. Als het bijna tijd is voor uw volgende dosis, sla de gemiste dosis dan over en hervat uw normale schema. Neem geen dubbele dosis.",
+            "Stop niet abrupt met het innemen van dit medicijn, vooral niet na langdurig gebruik, omdat ontwenningsverschijnselen zoals angst, slapeloosheid en spierpijn kunnen optreden.",
+            "Informeer al uw zorgverleners dat u dit medicijn gebruikt."
+        ]
+    },
+    "soma-500": {
+        "id": "125",
+        "name": {
+            "en": "Soma 500 mg"
+        },
+        "category": "Centraal Zenuwstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "500 mg",
+        "price": "550",
+        "composition": "Carisoprodol 500mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "78-44-4",
+        "image": "/products/Soma500mg.webp",
+        "additionalImages": [
+            "/products/Soma500mg2.png",
+            "/products/Soma500mg_3.jpeg"
+        ],
+        "metaTitle": "Buy Soma 500 mg Online | Extra Strength Carisoprodol | Hab Pharma",
+        "metaDescription": "Buy Soma 500 mg (Carisoprodol) online. Extra sterke spierverslapper voor ernstigere acute musculoskeletale pijn. Vertrouwde kwaliteit van Hab Pharma.",
+        "description": "Soma 500 mg is een hogere sterkte formulering van Carisoprodol, een spierverslapper gebruikt voor de kortdurende verlichting van acute musculoskeletale pijn en ongemak.",
+        "slug": "soma-500",
+        "overview": [
+            "Soma 500 mg biedt een hogere dosis Carisoprodol voor patiënten die verbeterde spierverslapping en pijnverlichting nodig hebben.",
+            "Deze extra sterke formulering kan worden voorgeschreven wanneer de standaarddosis van 350 mg onvoldoende is om de symptomen te beheersen.",
+            "Het is bedoeld voor kortdurend gebruik, doorgaans tot twee tot drie weken, als onderdeel van een breder behandelplan.",
+            "De 500 mg sterkte biedt een krachtiger effect, geschikt voor ernstigere acute spieraandoeningen.",
+            "Net als bij de standaarddosering werkt het door de overdracht van pijnsignalen in het centrale zenuwstelsel te beïnvloeden.",
+            "Deze hogere sterkte vereist zorgvuldige medische supervisie vanwege een verhoogd risico op bijwerkingen en afhankelijkheid.",
+            "Het kan geschikter zijn voor patiënten die onder begeleiding van een arts een tolerantie voor lagere doses hebben opgebouwd."
+        ],
+        "sideEffects": [
+            "Verhoogde slaperigheid en sedatie komen waarschijnlijker voor bij deze hogere sterkte.",
+            "Duizeligheid en risico op vallen, vooral bij oudere patiënten, kunnen meer uitgesproken zijn.",
+            "Hoofdpijn, wazig zien en coördinatieproblemen kunnen optreden.",
+            "Maagdarmklachten zoals misselijkheid of braken kunnen voorkomen.",
+            "Hogere kans op cognitieve stoornissen en verwardheid.",
+            "Verhoogd risico op afhankelijkheid en ontwenningsverschijnselen bij langdurig gebruik.",
+            "Paradoxale reacties zoals agitatie of rusteloosheid zijn mogelijk."
+        ],
+        "administration": [
+            "Neem precies zoals voorgeschreven door uw arts. Verhoog de dosis niet zelf.",
+            "De typische dosering is één 500 mg tablet, meestal driemaal daags en voor het slapengaan, maar dit moet door uw arts worden bevestigd.",
+            "Slik de tablet in zijn geheel door met water.",
+            "Kan met of zonder voedsel worden ingenomen.",
+            "Plet of kauw de tablet niet.",
+            "Vermijd alcohol strikt tijdens het gebruik van dit medicijn."
+        ],
+        "warnings": [
+            "Gecontra-indiceerd bij patiënten met een voorgeschiedenis van allergie voor Carisoprodol of verwante verbindingen.",
+            "Hoger risico op misbruik en afhankelijkheid; uitsluitend gebruiken onder strikt medisch toezicht.",
+            "Ernstige slaperigheid kan uw vermogen om te rijden of gevaarlijke taken uit te voeren aanzienlijk beïnvloeden.",
+            "Combinatie met alcohol of andere CZS-depressiva kan gevaarlijk en mogelijk dodelijk zijn.",
+            "Wees uiterst voorzichtig bij patiënten met lever- of nierfunctiestoornissen.",
+            "Niet aanbevolen voor oudere patiënten vanwege verhoogd valrisico en gevoeligheid.",
+            "Gecontra-indiceerd bij patiënten met acute intermitterende porfyrie."
+        ],
+        "how_it_works": [
+            "Soma 500 mg levert een hogere concentratie Carisoprodol, wat leidt tot meer uitgesproken CZS-depressie.",
+            "De verhoogde dosis resulteert in een grotere bezetting van de doelwitten in het centrale zenuwstelsel.",
+            "Dit leidt tot een sterker sederend effect en een krachtigere verandering van de pijnperceptie.",
+            "De metabolisatie tot meprobamaat levert hogere niveaus van deze actieve metaboliet op, wat bijdraagt aan de versterkte therapeutische en sederende effecten.",
+            "Het mechanisme blijft hetzelfde, maar met versterkte effecten op neuronale signalering met betrekking tot pijn en spierspanning."
+        ],
+        "tips": [
+            "Bewaar het veilig, buiten bereik van kinderen en huisdieren, vanwege het hogere misbruikpotentieel.",
+            "Deel dit medicijn nooit.",
+            "Houd een strikte logboek bij van uw doses om accidenteel overmatig gebruik te voorkomen.",
+            "Stop niet plotseling zonder medisch advies, omdat ontwenningsverschijnselen ernstig kunnen zijn.",
+            "Meld ongebruikelijke bijwerkingen of tekenen van afhankelijkheid onmiddellijk aan uw arts.",
+            "Gooi ongebruikte medicatie op de juiste manier weg op een daarvoor bestemde inleverplaats."
+        ]
+    },
+    "zop-7-5": {
+        "id": "126",
+        "name": {
+            "en": "Zop 7.5 mg Tablet"
+        },
+        "category": "Centraal Zenuwstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "7.5 mg",
+        "price": "380",
+        "composition": "Zopiclone 7.5mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "43200-80-2",
+        "image": "/products/zop7.5mg.png",
+        "additionalImages": [
+            "/products/zop7.5mg_2.jpeg",
+            "/products/zop7.5mg_3.webp"
+        ],
+        "metaTitle": "Buy Zop 7.5 mg Tablet Online | Zopiclone for Insomnia | Hab Pharma",
+        "metaDescription": "Buy Zop 7.5 mg (Zopiclone) tablets online. Een niet-benzodiazepine hypnoticum voor de kortdurende behandeling van slapeloosheid. Kwaliteitsslaapmiddel van Hab Pharma.",
+        "description": "Zop 7.5 mg Tablet bevat Zopiclone, een niet-benzodiazepine hypnoticum gebruikt voor de kortdurende behandeling van slapeloosheid gekenmerkt door moeite met inslapen.",
+        "slug": "zop-7-5",
+        "overview": [
+            "Zop 7.5 mg bevat Zopiclone, een medicijn dat u helpt sneller in slaap te vallen en de hele nacht door te slapen.",
+            "Het behoort tot een klasse geneesmiddelen die bekend staan als 'Z-drugs' (niet-benzodiazepine hypnotica) en wordt gebruikt voor de kortdurende behandeling van slapeloosheid.",
+            "Dit medicijn wordt doorgaans voorgeschreven wanneer slaapproblemen ernstig, invaliderend of extreem belastend zijn.",
+            "De 7.5 mg sterkte is de standaarddosering voor volwassenen voor de behandeling van slapeloosheid.",
+            "De behandelingsduur is meestal kort, variërend van enkele dagen tot maximaal 4 weken, om tolerantie en afhankelijkheid te voorkomen.",
+            "Het helpt de slaapkwaliteit en -duur te verbeteren, wat leidt tot beter functioneren overdag.",
+            "Zopiclone staat bekend om zijn snelle werking, doorgaans binnen een uur na inname."
+        ],
+        "sideEffects": [
+            "Een bittere of metaalachtige smaak in de mond is een veel voorkomende en kenmerkende bijwerking.",
+            "Slaperigheid overdag, duizeligheid of een 'kater' gevoel kunnen de volgende dag optreden.",
+            "Een droge mond kan door sommige gebruikers worden ervaren.",
+            "Misselijkheid of maagdarmklachten zijn mogelijk.",
+            "Minder vaak kunnen gebruikers verwardheid, geheugenstoornissen of ongewone dromen ervaren.",
+            "Zeldzame maar ernstige bijwerkingen zijn complex slaapgedrag zoals slaapwandelen, slaaprijden of deelname aan andere activiteiten terwijl u niet volledig wakker bent."
+        ],
+        "administration": [
+            "Neem Zop onmiddellijk voor het slapengaan in, alleen wanneer u een volledige nacht (minstens 7-8 uur) beschikbaar heeft voor slaap.",
+            "Slik de tablet in zijn geheel door met een glas water.",
+            "Niet innemen met of onmiddellijk na een zware, vetrijke maaltijd, omdat dit de absorptie kan vertragen.",
+            "De gebruikelijke dosering voor volwassenen is één 7.5 mg tablet eenmaal daags.",
+            "Overschrijd de aanbevolen dosis of behandelingsduur niet.",
+            "Vermijd alcohol volledig tijdens het gebruik van dit medicijn, omdat dit de bijwerkingen kan versterken."
+        ],
+        "warnings": [
+            "Niet gebruiken als u allergisch bent voor Zopiclone of andere ingrediënten.",
+            "Zopiclone heeft potentieel voor misbruik en afhankelijkheid, vooral bij langdurig gebruik. Gebruik precies zoals voorgeschreven.",
+            "U kunt enkele dagen na het stoppen van de behandeling last krijgen van 'rebound' slapeloosheid.",
+            "Vermijd autorijden of het bedienen van machines totdat u weet hoe dit medicijn u beïnvloedt. U kunt zich de volgende dag nog slaperig voelen.",
+            "Niet combineren met alcohol of andere sederende medicijnen.",
+            "Voorzichtig gebruiken bij patiënten met lever- of nierfunctiestoornissen, myasthenia gravis of ernstige ademhalingsproblemen.",
+            "Niet aanbevolen tijdens zwangerschap of borstvoeding."
+        ],
+        "how_it_works": [
+            "Zopiclone is een cyclopyrrolon-derivaat dat werkt als een hypnoticum.",
+            "Het werkt door te binden aan GABA-A-receptoren in de hersenen op een andere plaats dan benzodiazepinen.",
+            "GABA (gamma-aminoboterzuur) is de primaire remmende neurotransmitter in de hersenen, verantwoordelijk voor het kalmeren van zenuwactiviteit.",
+            "Door de effecten van GABA te versterken, verhoogt Zopiclone de remmende neurotransmissie, wat leidt tot sedatie, slaapopwekking en spierontspanning.",
+            "Het selectieve bindingsprofiel draagt bij aan de effectiviteit bij het bevorderen van slaap met een relatief lager risico op bepaalde bijwerkingen in vergelijking met oudere sedativa."
+        ],
+        "tips": [
+            "Bewaren bij kamertemperatuur, uit de buurt van licht en vocht.",
+            "Neem het niet in tenzij u klaar bent om een volledige nacht te slapen.",
+            "Vermijd activiteiten die mentale alertheid vereisen totdat de effecten volledig zijn uitgewerkt.",
+            "Als u vaak ochtendslaperigheid ervaart, raadpleeg dan uw arts; uw dosis moet mogelijk worden aangepast.",
+            "Stop niet abrupt met het innemen van dit medicijn na langdurig gebruik, omdat ontwenningsverschijnselen kunnen optreden. Uw arts zal u begeleiden hoe u de dosis moet afbouwen."
+        ]
+    },
+    "zop-10": {
+        "id": "127",
+        "name": {
+            "en": "Zopisign 10 mg Tablet"
+        },
+        "category": "Centraal Zenuwstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "10 mg",
+        "price": "450",
+        "composition": "Zopiclone 10mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "43200-80-2",
+        "image": "/products/zopisign-10mg.jpg",
+        "additionalImages": [
+            "/products/zopisign-10mg_2.jpg",
+            "/products/zopisign-10mg_3.webp"
+        ],
+        "metaTitle": "Buy Zopisign 10 mg Online | High Strength Zopiclone | Hab Pharma",
+        "metaDescription": "Buy Zopisign 10 mg (Zopiclone) tablets online. Een hogere sterkte slaapmiddel op recept voor ernstige slapeloosheid. Van Hab Pharma.",
+        "description": "Zopisign 10 mg bevat een hogere sterkte Zopiclone, geïndiceerd voor de kortdurende behandeling van ernstige slapeloosheid waarbij een lagere dosis (7.5 mg) onvoldoende is.",
+        "slug": "zop-10",
+        "overview": [
+            "Zopisign 10 mg is een hogere sterkte formulering van Zopiclone voor patiënten met ernstige slapeloosheid.",
+            "Het is geïndiceerd wanneer de standaarddosis van 7.5 mg niet zorgt voor adequate slaapopwekking of -onderhoud.",
+            "Deze hogere sterkte zorgt voor krachtigere sederende effecten voor personen met aanzienlijke slaapproblemen.",
+            "Net als bij de standaarddosering is het alleen bedoeld voor kortdurend gebruik (maximaal 4 weken) vanwege het risico op tolerantie en afhankelijkheid.",
+            "De 10 mg sterkte mag alleen worden gebruikt onder nauwlettend medisch toezicht.",
+            "Het biedt verbeterde werkzaamheid voor patiënten die onvoldoende hebben gereageerd op lagere doses.",
+            "Deze hogere potentie kan resulteren in een snellere werking en langere slaapduur."
+        ],
+        "sideEffects": [
+            "Meer uitgesproken bittere of metaalachtige smaak in de mond.",
+            "Verhoogde kans op slaperigheid overdag, sedatie en 'kater' effect.",
+            "Hoger risico op duizeligheid, verwardheid en geheugenstoornissen.",
+            "Grotere kans op complex slaapgerelateerd gedrag (bijv. slaapwandelen, slaaprijden).",
+            "Verhoogde kans op vallen, vooral bij oudere of verzwakte patiënten.",
+            "Misselijkheid en maagklachten kunnen vaker voorkomen.",
+            "Hoger risico op het ontwikkelen van tolerantie en afhankelijkheid bij langdurig gebruik."
+        ],
+        "administration": [
+            "Neem precies zoals voorgeschreven, onmiddellijk voor het slapengaan met ten minste 7-8 uur beschikbaar voor slaap.",
+            "De gebruikelijke dosis is één 10 mg tablet, maar dit mag alleen worden ingenomen als het specifiek door uw arts is voorgeschreven.",
+            "Slik de tablet in zijn geheel door met water.",
+            "Niet innemen met voedsel, vooral vetrijke maaltijden, omdat dit het begin van de werking kan vertragen.",
+            "Neem nooit meer dan één dosis in een periode van 24 uur.",
+            "Overschrijd de voorgeschreven dosis of duur niet."
+        ],
+        "warnings": [
+            "Deze hogere sterkte brengt een verhoogd risico met zich mee op psychomotorische stoornissen de volgende dag, inclusief rijvaardigheid.",
+            "Gecontra-indiceerd bij patiënten met ernstige leverfunctiestoornis, slaapapneu of myasthenia gravis.",
+            "Hoger potentieel voor misbruik en afhankelijkheid; uitsluitend gebruiken onder strikt medisch toezicht.",
+            "Niet combineren met alcohol, opioïden of andere CZS-depressiva.",
+            "Wees uiterst voorzichtig bij oudere of verzwakte patiënten vanwege valrisico.",
+            "Niet aanbevolen als startdosis voor nieuwe patiënten."
+        ],
+        "how_it_works": [
+            "Zopisign 10 mg levert een hogere concentratie Zopiclone, wat leidt tot een grotere versterking van GABAerge neurotransmissie.",
+            "De verhoogde dosis resulteert in uitgebreidere binding aan GABA-A-receptoren, waardoor een sterker remmend effect op het centrale zenuwstelsel ontstaat.",
+            "Dit leidt tot meer uitgesproken sedatie en hypnose, wat noodzakelijk is voor de behandeling van ernstige, therapieresistente slapeloosheid.",
+            "Het werkingsmechanisme is hetzelfde als bij de lagere sterkte, maar met versterkte effecten op de slaaparchitectuur en -continuïteit."
+        ],
+        "tips": [
+            "Gebruik deze sterkte alleen onder specifiek voorschrift en begeleiding van een zorgverlener.",
+            "Wees uiterst voorzichtig met autorijden of het bedienen van machines de volgende dag.",
+            "Als u ongebruikelijk slaapgedrag ervaart, stop dan met het innemen van de medicatie en stel uw arts onmiddellijk op de hoogte.",
+            "Gebruik geen alcohol of andere sedativa.",
+            "Houd een logboek bij van uw slaappatronen en eventuele bijwerkingen om te delen met uw arts.",
+            "Bewaar veilig vanwege het hogere misbruikpotentieel."
+        ]
+    },
+
+       "modafinil": {
+        "id": "128",
+        "name": {
+            "en": "Modafinil 200 mg Tablet"
+        },
+        "category": "Centraal Zenuwstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "650",
+        "composition": "Modafinil 200mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "68693-11-8",
+        "image": "/products/Modafinil200.jpeg",
+        "additionalImages": [
+            "/products/Modafinil200_2.jpg",
+            "/products/Modafinil200_3.webp"
+        ],
+        "metaTitle": "Buy Modafinil 200 mg Online | Wakefulness Promoting Agent | Hab Pharma",
+        "metaDescription": "Buy Modafinil 200 mg tablets online. Een middel ter bevordering van de waakzaamheid voor narcolepsie, slaapstoornis door ploegendienst en OSA. Kwaliteit van Hab Pharma.",
+        "description": "Modafinil 200 mg is een middel dat de waakzaamheid bevordert en wordt gebruikt om de waakzaamheid te verbeteren bij volwassenen met overmatige slaperigheid geassocieerd met narcolepsie, obstructieve slaapapneu en slaapstoornis door ploegendienst.",
+        "slug": "modafinil",
+        "overview": [
+            "Modafinil is een stimulerend middel voor het centrale zenuwstelsel dat de waakzaamheid bevordert.",
+            "Het wordt voornamelijk voorgeschreven voor de behandeling van overmatige slaperigheid overdag veroorzaakt door narcolepsie, obstructieve slaapapneu (OSA) en slaapstoornis door ploegendienst (SWSD).",
+            "Bij OSA wordt het gebruikt als aanvulling op standaardbehandelingen zoals CPAP, niet als vervanging.",
+            "De 200 mg sterkte is de standaard en meest voorgeschreven dosering voor volwassenen.",
+            "Modafinil helpt de alertheid te verbeteren en de neiging om overdag in slaap te vallen te verminderen.",
+            "Het heeft een lager potentieel voor misbruik in vergelijking met traditionele stimulantia zoals amfetaminen.",
+            "De effecten van een enkelvoudige dosis kunnen 12-15 uur aanhouden en zorgen voor de hele dag waakzaamheid.",
+            "Het is geen genezing voor deze slaapstoornissen, maar helpt het symptoom van overmatige slaperigheid te beheersen."
+        ],
+        "sideEffects": [
+            "Hoofdpijn is de meest gemelde bijwerking, vooral bij het starten van de behandeling.",
+            "Nerveusiteit, angst, agitatie of slapeloosheid kunnen voorkomen.",
+            "Misselijkheid, diarree of een droge mond kunnen optreden.",
+            "Duizeligheid of een licht gevoel in het hoofd is mogelijk.",
+            "Verminderde eetlust en gewichtsverlies kunnen optreden bij voortgezet gebruik.",
+            "Een verhoogde hartslag of hartkloppingen kunnen bij sommige personen voorkomen.",
+            "Ernstige huiduitslag (zoals Stevens-Johnson-syndroom) is zeldzaam maar vereist onmiddellijke medische aandacht."
+        ],
+        "administration": [
+            "Neem Modafinil precies zoals voorgeschreven door uw arts.",
+            "De gebruikelijke dosering voor volwassenen is 200 mg eenmaal daags.",
+            "Voor narcolepsie en OSA, neem de dosis 's ochtends in.",
+            "Voor slaapstoornis door ploegendienst, neem de dosis ongeveer een uur voor aanvang van de dienst in.",
+            "Slik de tabletten in hun geheel door met water. Ze kunnen met of zonder voedsel worden ingenomen.",
+            "Plet of kauw de tabletten niet.",
+            "Neem elke dag op hetzelfde tijdstip in voor consistente effecten."
+        ],
+        "warnings": [
+            "Niet gebruiken als u allergisch bent voor Modafinil of armodafinil.",
+            "Ernstige huiduitslag die ziekenhuisopname vereist kan voorkomen; stop met gebruik en zoek onmiddellijk medische hulp als er huiduitslag ontstaat.",
+            "Niet aanbevolen voor patiënten met een voorgeschiedenis van linkerventrikelhypertrofie of bepaalde hartproblemen.",
+            "Voorzichtig gebruiken bij patiënten met lever- of nierfunctiestoornissen; een lagere dosis kan nodig zijn.",
+            "Modafinil kan de effectiviteit van hormonale anticonceptiva (pillen, implantaten, spiraaltjes) verminderen. Gebruik alternatieve of aanvullende niet-hormonale anticonceptie tijdens de behandeling en gedurende één maand na het stoppen.",
+            "Vermijd alcohol tijdens het gebruik van dit medicijn."
+        ],
+        "how_it_works": [
+            "Het exacte werkingsmechanisme van Modafinil is niet volledig bekend, maar het verschilt van dat van klassieke sympathicomimetische stimulantia zoals amfetamine.",
+            "Men denkt dat het werkt door de hoeveelheid dopamine in de hersenen te verhogen door de heropname ervan te remmen, maar het doet dit op een meer selectieve en zwakkere manier dan klassieke stimulantia.",
+            "Het beïnvloedt ook andere neurotransmittersystemen, waaronder orexine, histamine en noradrenaline, die betrokken zijn bij de regulatie van waakzaamheid en slaap.",
+            "De waakzaamheidsbevorderende effecten zouden worden gemedieerd door activering van specifieke hersengebieden die betrokken zijn bij alertheid."
+        ],
+        "tips": [
+            "Bewaren bij kamertemperatuur, uit de buurt van vocht en warmte.",
+            "Neem vroeg op de dag in (bij slaperigheid overdag) om slapeloosheid te voorkomen.",
+            "Als u een dosis mist en het is laat op de dag, sla de gemiste dosis dan over om slaapverstoring te voorkomen. Neem uw volgende dosis op het reguliere tijdstip de volgende dag.",
+            "Houd uw bloeddruk regelmatig in de gaten tijdens het gebruik van dit medicijn.",
+            "Gebruik een betrouwbare niet-hormonale back-upmethode voor anticonceptie als u hormonale anticonceptie gebruikt.",
+            "Meld huidveranderingen, stemmingswisselingen of tekenen van hartproblemen onmiddellijk aan uw arts."
+        ]
+    },
+    "armodafinil": {
+        "id": "hab-armodafinil",
+        "name": {
+            "en": "Armodafinil 150 mg Tablet"
+        },
+        "category": "Centraal Zenuwstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "150 mg",
+        "price": "750",
+        "composition": "Armodafinil 150mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "112111-43-0",
+        "image": "/products/armodafinil-150-mg.webp",
+        "additionalImages": [
+            "/products/armodafinil-150-mg_3.jpg",
+            "/products/armodafinil-150-mg_2.jpg"
+        ],
+        "metaTitle": "Buy Armodafinil 150 mg Online | R-Modafinil | Hab Pharma",
+        "metaDescription": "Buy Armodafinil 150 mg tablets online. De R-enantiomeer van modafinil voor langer aanhoudende waakzaamheidsbevordering bij narcolepsie, OSA en SWSD. Van Hab Pharma.",
+        "description": "Armodafinil 150 mg bevat de R-enantiomeer van modafinil. Het is een middel ter bevordering van de waakzaamheid, gebruikt om de waakzaamheid te verbeteren bij volwassenen met overmatige slaperigheid geassocieerd met narcolepsie, obstructieve slaapapneu en slaapstoornis door ploegendienst.",
+        "slug": "armodafinil",
+        "overview": [
+            "Armodafinil is de pure (R)-enantiomeer van modafinil en heeft een langere werkingsduur.",
+            "Het is goedgekeurd voor dezelfde indicaties als modafinil: het verbeteren van de waakzaamheid bij narcolepsie, obstructieve slaapapneu (OSA) en slaapstoornis door ploegendienst (SWSD).",
+            "Een dosis van 150 mg armodafinil is therapeutisch ongeveer gelijkwaardig aan 200 mg modafinil.",
+            "Het is ontworpen om meer aanhoudende en langdurige waakzaamheid gedurende de dag te bieden.",
+            "Vanwege de langere halfwaardetijd kan het bijzonder gunstig zijn voor patiënten die de hele dag alert moeten zijn.",
+            "Het bevordert de waakzaamheid met een vloeiender begin- en eindprofiel in vergelijking met raceme modafinil voor sommige personen.",
+            "Deze formulering zorgt voor consistentere bloedspiegels gedurende de doseringsperiode."
+        ],
+        "sideEffects": [
+            "Het bijwerkingenprofiel is vergelijkbaar met dat van modafinil.",
+            "Hoofdpijn, misselijkheid, duizeligheid en slapeloosheid komen vaak voor.",
+            "Angst en nerveusiteit kunnen optreden.",
+            "Een droge mond is een vaak gemelde bijwerking.",
+            "Een verhoogde hartslag kan voorkomen bij gevoelige personen.",
+            "Net als bij modafinil is ernstige huiduitslag een zeldzaam maar ernstig risico."
+        ],
+        "administration": [
+            "Neem Armodafinil precies zoals voorgeschreven, meestal eenmaal daags.",
+            "De standaarddosering is 150 mg, elke dag op hetzelfde tijdstip ingenomen.",
+            "Voor narcolepsie en OSA, neem het 's ochtends in.",
+            "Voor SWSD, neem het ongeveer een uur voor aanvang van de dienst in.",
+            "Slik tabletten in hun geheel door met water; niet pletten of kauwen.",
+            "Kan met of zonder voedsel worden ingenomen.",
+            "Vermijd inname in de middag of avond om slapeloosheid te voorkomen."
+        ],
+        "warnings": [
+            "Niet gebruiken als u een voorgeschiedenis heeft van allergische reactie op modafinil of armodafinil.",
+            "Stop met gebruik en zoek onmiddellijk medische hulp als er huiduitslag ontstaat.",
+            "Voorzichtigheid geboden bij patiënten met hartproblemen, lever- of nierfunctiestoornissen.",
+            "Vermindert de effectiviteit van hormonale anticonceptiva; gebruik alternatieve anticonceptie.",
+            "Vermijd alcoholgebruik.",
+            "Niet aanbevolen tijdens zwangerschap of borstvoeding."
+        ],
+        "how_it_works": [
+            "Armodafinil bevat alleen de (R)-enantiomeer van modafinil, die een langere halfwaardetijd heeft (ongeveer 15 uur) dan de (S)-enantiomeer.",
+            "De (R)-enantiomeer heeft een hogere bindingsaffiniteit voor de dopamine-transporter, wat bijdraagt aan de waakzaamheidsbevorderende effecten.",
+            "Deze selectiviteit resulteert in een meer aanhoudende remming van de dopamineheropname en een langere werkingsduur in vergelijking met raceme modafinil.",
+            "Het zorgt voor stabiele bloedconcentraties die gedurende de typische wakkere uren worden gehandhaafd, waardoor slechts eenmaal daagse dosering nodig is."
+        ],
+        "tips": [
+            "Bewaar op een koele, droge plaats.",
+            "Neem 's ochtends als eerste in voor de beste resultaten bij de behandeling van slaperigheid overdag.",
+            "Gebruik indien nodig betrouwbare niet-hormonale anticonceptie.",
+            "Blijf voldoende water drinken.",
+            "Deel dit medicijn niet met anderen.",
+            "Meld ongebruikelijke symptomen, vooral huidveranderingen of tekenen van hartproblemen, onmiddellijk aan uw arts."
+        ]
+    },
+    "cobra-120": {
+        "id": "hab-cobra-120",
+        "name": {
+            "en": "Cobra 120 mg Tablet"
+        },
+        "category": "Voortplantingsstelsel en Urinewegstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "120 mg",
+        "price": "580",
+        "composition": "Sildenafil Citrate 120mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-120.png",
+        "additionalImages": [
+            "/products/cobra-120_2.png",
+            "/products/cobra-120_3.png"
+        ],
+        "metaTitle": "Buy Cobra 120 mg Online | Sildenafil for ED | Hab Pharma",
+        "metaDescription": "Buy Cobra 120 mg (Sildenafil Citrate) tablets online. Een middensterkte behandeling voor erectiestoornissen. Hoge kwaliteit van Hab Pharma.",
+        "description": "Cobra 120 mg bevat Sildenafil Citrate, een PDE5-remmer gebruikt voor de behandeling van erectiestoornissen (impotentie) bij volwassen mannen.",
+        "slug": "cobra-120",
+        "overview": [
+            "Cobra 120 mg is een medicijn dat Sildenafil Citrate bevat, gebruikt om mannen te helpen een erectie te krijgen en te behouden die voldoende is voor seksuele activiteit.",
+            "Het behoort tot een klasse geneesmiddelen die bekend staan als fosfodiësterase type 5 (PDE5)-remmers.",
+            "De 120 mg sterkte biedt een tussenoptie, mogelijk geschikt voor degenen die 100 mg onvoldoende vinden maar de maximale dosis van 200 mg niet nodig hebben.",
+            "Het werkt alleen bij seksuele stimulatie en verhoogt het seksuele verlangen niet.",
+            "Deze formulering is ontworpen om betrouwbare en consistente effecten te bieden voor het beheersen van erectiestoornissen.",
+            "De effecten duren meestal tot 4-6 uur, wat voldoende tijd biedt voor seksuele activiteit.",
+            "Het moet worden gebruikt onder begeleiding van een zorgverlener."
+        ],
+        "sideEffects": [
+            "Hoofdpijn en blozen in het gezicht zijn de meest voorkomende bijwerkingen.",
+            "Verstopte neus of een loopneus kan voorkomen.",
+            "Sommige gebruikers kunnen last krijgen van indigestie of brandend maagzuur.",
+            "Duizeligheid of een licht gevoel in het hoofd, vooral bij snel opstaan.",
+            "Visuele stoornissen, zoals een blauwe waas voor het zien of verhoogde gevoeligheid voor licht.",
+            "Rugpijn of spierpijn kan optreden, meestal 12-24 uur na inname van het medicijn."
+        ],
+        "administration": [
+            "Neem één Cobra 120 mg tablet ongeveer 30-60 minuten voor de geplande seksuele activiteit in.",
+            "Slik de tablet in zijn geheel door met een glas water.",
+            "Voor de beste en snelste opname, neem het op een lege maag in. Een vetrijke maaltijd kan het begin van de werking vertragen.",
+            "Neem niet meer dan één dosis in een periode van 24 uur.",
+            "Seksuele stimulatie is nodig voor het medicijn om effectief te zijn."
+        ],
+        "warnings": [
+            "Neem Cobra niet in als u nitraatmedicatie gebruikt (bijv. nitroglycerine voor pijn op de borst), omdat de combinatie een plotselinge en gevaarlijke daling van de bloeddruk kan veroorzaken.",
+            "Niet gebruiken als u een vrouw of kind bent.",
+            "Raadpleeg uw arts voor gebruik als u hartproblemen, ernstige lever- of nierziekte, lage bloeddruk of een recente voorgeschiedenis van beroerte of hartaanval heeft.",
+            "Zoek onmiddellijk medische hulp als u plotseling verlies van gezichtsvermogen of gehoor ervaart, of als u een erectie heeft die langer dan 4 uur aanhoudt (priapisme).",
+            "Vermijd alcoholgebruik voor seksuele activiteit, omdat dit het risico op bijwerkingen kan vergroten."
+        ],
+        "how_it_works": [
+            "Sildenafil Citrate, de werkzame stof in Cobra, is een krachtige en selectieve PDE5-remmer.",
+            "Tijdens seksuele stimulatie komt er stikstofmonoxide vrij in de corpus cavernosum van de penis.",
+            "Dit triggert de productie van cGMP (cyclisch guanosinemonofosfaat), dat de gladde spieren ontspant en verhoogde bloedtoevoer naar de penisweefsels mogelijk maakt, wat leidt tot een erectie.",
+            "Het PDE5-enzym breekt normaal gesproken cGMP af, waarmee de erectie wordt beëindigd.",
+            "Door PDE5 te remmen, zorgt Cobra ervoor dat cGMP zich ophoopt, waardoor de natuurlijke erectierespons op seksuele stimulatie wordt versterkt en verlengd."
+        ],
+        "tips": [
+            "Bewaren bij kamertemperatuur, uit de buurt van vocht en warmte.",
+            "Als u nieuw bent met ED-medicatie, is het raadzaam om met een lagere dosis (zoals 50 mg of 100 mg) te beginnen om uw tolerantie te beoordelen, zoals voorgeschreven door uw arts.",
+            "Vermijd grapefruit of grapefruitsap, omdat dit de hoeveelheid sildenafil in uw bloed en het risico op bijwerkingen kan verhogen.",
+            "Neem dit medicijn niet in als u geen erectiestoornissen heeft.",
+            "Buiten bereik van kinderen houden."
+        ]
+    },
+    "cobra-200": {
+        "id": "hab-cobra-200",
+        "name": {
+            "en": "Cobra 200 mg Tablet"
+        },
+        "category": "Voortplantingsstelsel en Urinewegstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "720",
+        "composition": "Sildenafil Citrate 200mg",
+        "form": "Tablet",
+        "pack_size": "10 x 10 Tabletten",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-200.webp",
+        "additionalImages": [
+            "/products/cobra-200-2.webp",
+            "/products/cobra-200_3.jpg"
+        ],
+        "metaTitle": "Buy Cobra 200 mg Online | Maximum Strength Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra 200 mg (Sildenafil Citrate) tablets online. Maximale sterkte formulering voor ernstige erectiestoornissen. Van Hab Pharma.",
+        "description": "Cobra 200 mg is de maximale sterkte formulering van Sildenafil Citrate van Hab Pharma, geïndiceerd voor de behandeling van erectiestoornissen bij volwassen mannen die een hogere dosis nodig hebben.",
+        "slug": "cobra-200",
+        "overview": [
+            "Cobra 200 mg is de hoogste sterkte Sildenafil tablet die verkrijgbaar is bij Hab Pharma.",
+            "Deze maximale dosis is doorgaans bedoeld voor mannen met ernstige erectiestoornissen die geen bevredigende resultaten hebben bereikt met lagere sterktes (zoals 100 mg of 120 mg).",
+            "Het zorgt voor de krachtigste remming van het PDE5-enzym voor een maximaal effect op de bloedtoevoer naar de penis.",
+            "De 200 mg sterkte biedt de langste werkingsduur, die bij sommige personen tot 8-12 uur kan aanhouden.",
+            "Deze formulering mag alleen worden gebruikt onder nauwlettend medisch toezicht vanwege het verhoogde risico op bijwerkingen.",
+            "Het kan geschikt zijn voor patiënten met significante vasculaire problemen of degenen die tolerantie voor lagere doses hebben ontwikkeld."
+        ],
+        "sideEffects": [
+            "Verhoogde kans op en intensiteit van alle veelvoorkomende bijwerkingen, waaronder ernstige hoofdpijn en blozen.",
+            "Meer significante en frequente visuele stoornissen, zoals blauw getint zicht en lichtgevoeligheid.",
+            "Hoger risico op duizeligheid en een grotere bloeddrukdaling, wat mogelijk flauwvallen kan veroorzaken.",
+            "Verhoogde kans op priapisme (langdurige, pijnlijke erectie), wat een medisch noodgeval is.",
+            "Meer uitgesproken verstopte neus en dyspepsie.",
+            "Grotere kans op rugpijn en spierpijn."
+        ],
+        "administration": [
+            "Neem precies zoals voorgeschreven, meestal 30-60 minuten voor seksuele activiteit.",
+            "Neem niet meer dan één tablet per 24 uur.",
+            "Deze hoge dosis mag geen startdosis zijn voor een patiënt die nieuw is met Sildenafil-therapie.",
+            "Neem het op een lege maag in voor optimale absorptie; vermijd vetrijke maaltijden.",
+            "Slik de tablet in zijn geheel door met een vol glas water.",
+            "Vermijd alcohol strikt."
+        ],
+        "warnings": [
+            "Absolute contra-indicatie met nitraten of stikstofmonoxidedonoren.",
+            "Niet voor gebruik bij patiënten met ernstige cardiovasculaire aandoeningen, recent myocardinfarct, beroerte of levensbedreigende aritmieën.",
+            "Gecontra-indiceerd bij patiënten met ernstige leverfunctiestoornis of terminale nierziekte die dialyse vereist.",
+            "Hoog risico op ernstige bijwerkingen; met uiterste voorzichtigheid gebruiken.",
+            "Niet aanbevolen voor patiënten met hypotensie (bloeddruk <90/50 mmHg).",
+            "Wees uiterst voorzichtig bij gebruik van alfablokkers of andere antihypertensiva, omdat ernstige hypotensie kan optreden.",
+            "Niet gebruiken als u een voorgeschiedenis heeft van niet-arteriële anterieure ischemische opticusneuropathie (NAION) of retinitis pigmentosa."
+        ],
+        "how_it_works": [
+            "Cobra 200 mg zorgt voor maximale PDE5-remming, wat leidt tot een bijna volledige blokkade van het enzym in de penisweefsels.",
+            "De hoge dosis zorgt ervoor dat cGMP tijdens seksuele stimulatie tot maximale niveaus accumuleert, wat resulteert in de meest uitgesproken ontspanning van de gladde spieren en vaatverwijding mogelijk.",
+            "Dit leidt tot de sterkste en meest aanhoudende erectierespons.",
+            "De verhoogde plasmaconcentratie verlengt ook de werkingsduur, wat een langer therapeutisch venster biedt."
+        ],
+        "tips": [
+            "Gebruik deze maximale sterkte alleen als deze specifiek is voorgeschreven door een specialist.",
+            "Wees u volledig bewust van het aanzienlijk verhoogde risico op bijwerkingen.",
+            "Houd noodcontacten bij de hand.",
+            "Controleer zorgvuldig de duur van uw erectie; zoek onmiddellijk medische hulp als deze langer dan 4 uur aanhoudt.",
+            "Niet combineren met andere ED-behandelingen.",
+            "Bewaar veilig en buiten bereik van kinderen."
+        ]
+    },
+    "cobra-jelly": {
+        "id": "hab-cobra-jelly",
+        "name": {
+            "en": "Cobra Oral Jelly 100 mg"
+        },
+        "category": "Voortplantingsstelsel en Urinewegstelsel",
+        "brand": "Hab Pharma",
+        "dosage": "100 mg",
+        "price": "520",
+        "composition": "Sildenafil Citrate 100mg",
+        "form": "Orale Jelly",
+        "pack_size": "10 Sachets (per doos)",
+        "casId": "139755-83-2",
+        "image": "/products/cobra_jelly.png",
+        "additionalImages": [
+            "/products/cobra_jelly2.png",
+            "/products/cobra_jelly.png"
+        ],
+        "metaTitle": "Buy Cobra Oral Jelly 100 mg Online | Fast-Acting Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra Oral Jelly 100 mg online. Sildenafil Citrate in een snelabsorberende, handige jelly-formule voor snelle ED-behandeling. Verschillende smaken. Van Hab Pharma.",
+        "description": "Cobra Oral Jelly 100 mg is een handige en snelwerkende formulering van Sildenafil Citrate voor de behandeling van erectiestoornissen. Het is ontworpen voor snellere absorptie en gebruiksgemak.",
+        "slug": "cobra-jelly",
+        "overview": [
+            "Cobra Oral Jelly biedt een populair alternatief voor traditionele Sildenafil tabletten, vooral voor mensen die moeite hebben met het slikken van pillen.",
+            "Elk sachet bevat 100 mg Sildenafil Citrate in een prettig smakende, kant-en-klare jelly-vorm.",
+            "De jelly-formule is ontworpen om sneller te worden opgenomen dan tabletten, wat kan leiden tot een snellere werking (bij sommige personen al binnen 15-20 minuten).",
+            "Het is verkrijgbaar in verschillende smaken, wat de ervaring aangenamer en discreet maakt.",
+            "De handige enkelvoudige dosis sachets zijn gemakkelijk mee te nemen en overal te gebruiken, wat spontaniteit biedt.",
+            "Net als tabletten is seksuele stimulatie nodig om effectief te zijn.",
+            "De werkingsduur is vergelijkbaar met tabletvormen en duurt 4-6 uur."
+        ],
+        "sideEffects": [
+            "Het bijwerkingenprofiel is hetzelfde als dat van Sildenafil tabletten, maar de snellere absorptie kan leiden tot een snellere aanvang van bijwerkingen zoals hoofdpijn en blozen.",
+            "Vaak voorkomende bijwerkingen zijn hoofdpijn, blozen in het gezicht, verstopte neus en indigestie.",
+            "Duizeligheid en visuele stoornissen (bijv. blauw waas) kunnen ook voorkomen.",
+            "De snellere absorptie verandert doorgaans de ernst of het type bijwerkingen niet."
+        ],
+        "administration": [
+            "Scheur of knip de hoek van één sachet af en knijp de volledige inhoud direct in uw mond.",
+            "U kunt de jelly onmiddellijk doorslikken of in uw mond laten oplossen voor mogelijk snellere absorptie.",
+            "Het wordt aanbevolen om het ongeveer 15-30 minuten voor de geplande seksuele activiteit in te nemen.",
+            "Neem het niet met voedsel in voor het snelste effect; als u recent heeft gegeten, vooral een vetrijke maaltijd, kan de werking vertraagd zijn.",
+            "Neem niet meer dan één sachet per 24 uur.",
+            "Seksuele stimulatie is nodig voor het medicijn om te werken."
+        ],
+        "warnings": [
+            "Dezelfde waarschuwingen en contra-indicaties voor Sildenafil tabletten zijn van toepassing op de orale jelly.",
+            "Niet gebruiken als u nitraten gebruikt voor pijn op de borst.",
+            "Niet voor gebruik bij vrouwen of kinderen.",
+            "Raadpleeg een arts voor gebruik als u hartproblemen, ernstige lever- of nierziekte, of een voorgeschiedenis van beroerte heeft.",
+            "Zoek onmiddellijk medische hulp bij langdurige erecties die langer dan 4 uur aanhouden."
+        ],
+        "how_it_works": [
+            "Het werkingsmechanisme van Cobra Oral Jelly is identiek aan dat van Sildenafil tabletten: het remt het PDE5-enzym, versterkt het effect van stikstofmonoxide en verhoogt de cGMP-niveaus in de penis.",
+            "Dit leidt tot ontspanning van de gladde spieren en verhoogde bloedtoevoer tijdens seksuele stimulatie, waardoor een erectie wordt vergemakkelijkt.",
+            "Het belangrijkste verschil is de toedieningsmethode. De jelly wordt direct geabsorbeerd via het mondslijmvlies en het maagslijmvlies, waardoor mogelijk enige initiële afbraak in de lever wordt omzeild, wat kan leiden tot een snellere stijging van de bloedspiegels en een snellere werking in vergelijking met standaardtabletten."
+        ],
+        "tips": [
+            "Bewaren op een koele, droge plaats, uit de buurt van direct zonlicht. Niet in de koelkast bewaren.",
+            "Scheur het sachet voorzichtig bij de inkeping om morsen te voorkomen.",
+            "Consumeer het hele sachet voor de volledige dosis van 100 mg.",
+            "Als u nieuw bent met ED-medicatie, is het belangrijk om eerst uw optimale dosis met uw arts te bepalen met behulp van tabletten, omdat de jelly minder flexibiliteit in dosering biedt.",
+            "Houd alle medicijnen buiten bereik van kinderen. De gearomatiseerde jelly kan voor hen bijzonder aantrekkelijk zijn.",
+            "Gooi lege sachets op de juiste manier weg."
+        ]
+    },
+    "testogel": {
+        "id": "hab-testogel",
+        "name": {
+            "en": "Testosign Soft Gel 40 mg"
+        },
+        "category": "Endocriene Problemen",
+        "brand": "Hab Pharma",
+        "dosage": "40 mg",
+        "price": "1200",
+        "composition": "Testosteron Undecanoaat 40mg",
+        "form": "Zachte Gelatine Capsule",
+        "pack_size": "10 x 10 Capsules",
+        "casId": "58-22-0",
+        "image": "/products/Testosign-40.webp",
+        "additionalImages": [
+            "/products/Testosign-40_2.jpg",
+            "/products/Testosign-40_3.png"
+        ],
+        "metaTitle": "Buy Testosign Soft Gel 40 mg Online | Testosterone Replacement | Hab Pharma",
+        "metaDescription": "Buy Testosign Soft Gel 40 mg (Testosteron Undecanoaat) online. Orale testosteronvervangingstherapie voor hypogonadisme. Van Hab Pharma.",
+        "description": "Testosign Soft Gel 40 mg bevat Testosteron Undecanoaat, een orale testosteronvervangingstherapie geïndiceerd voor mannen met hypogonadisme (testosterontekort).",
+        "slug": "testogel",
+        "overview": [
+            "Testosign Soft Gel is een oraal medicijn voor testosteronvervangingstherapie (TRT) bij mannen met een laag of geen testosteron door bepaalde medische aandoeningen (hypogonadisme).",
+            "Het bevat Testosteron Undecanoaat, een vorm van testosteron die, wanneer geabsorbeerd, helpt de normale testosteronspiegel te herstellen.",
+            "Deze formulering is ontworpen om te worden geabsorbeerd via het lymfestelsel, waarbij het first-pass metabolisme in de lever wordt omzeild.",
+            "De 40 mg sterkte is een gebruikelijke start- of onderhoudsdosis, maar de exacte dosis moet door een arts worden bepaald op basis van individuele behoeften en bloedonderzoek.",
+            "TRT kan helpen de symptomen van lage testosteron te verlichten, zoals verminderd libido, vermoeidheid, neerslachtigheid en verlies van spiermassa.",
+            "Regelmatige controle van de testosteronspiegel en andere gezondheidsparameters is essentieel tijdens de behandeling.",
+            "Dit is een geneesmiddel op recept dat medisch toezicht vereist."
+        ],
+        "sideEffects": [
+            "Huidreacties of acne kunnen voorkomen.",
+            "Verhoogd aantal rode bloedcellen (polycythemie) vereist monitoring.",
+            "Prostaatveranderingen; regelmatige prostaatonderzoeken zijn noodzakelijk.",
+            "Gynaecomastie (borstvergroting of -gevoeligheid) kan optreden.",
+            "Oedeem (vochtophoping) is mogelijk.",
+            "Slaapapneu kan verergeren bij daarvoor gevoelige personen.",
+            "Stemmingswisselingen, waaronder verhoogde agressie of prikkelbaarheid.",
+            "Verminderd aantal zaadcellen of onvruchtbaarheid bij langdurig gebruik."
+        ],
+        "administration": [
+            "Neem precies zoals voorgeschreven door uw arts. De dosering is geïndividualiseerd op basis van testosteronspiegels in het bloed en klinische respons.",
+            "De capsules moeten in hun geheel worden doorgeslikt met water, bij voorkeur bij een maaltijd die wat vet bevat om de opname te bevorderen.",
+            "Plet of kauw de capsules niet.",
+            "Het typische doseerschema kan één- of tweemaal daags zijn, zoals bepaald door uw arts.",
+            "Stop niet met het innemen van dit medicijn zonder uw arts te raadplegen."
+        ],
+        "warnings": [
+            "Dit is een gecontroleerde stof met potentieel voor misbruik. Gebruik uitsluitend onder medisch toezicht.",
+            "Niet voor gebruik bij vrouwen, vooral degenen die zwanger zijn of kunnen worden.",
+            "Gecontra-indiceerd bij mannen met prostaatkanker of borstkanker.",
+            "Regelmatige bloedonderzoeken zijn nodig om testosteronspiegel, aantal rode bloedcellen en leverfunctie te controleren.",
+            "Kan de bloedsuikercontrole beïnvloeden bij diabetespatiënten.",
+            "Kan het risico op cardiovasculaire gebeurtenissen verhogen; voorzichtig gebruiken bij patiënten met hartaandoeningen.",
+            "Informeer uw arts onmiddellijk als u frequente of aanhoudende erecties, ademhalingsproblemen tijdens de slaap of tekenen van een bloedstolsel ervaart."
+        ],
+        "how_it_works": [
+            "Testosign bevat Testosteron Undecanoaat, een ester van het natuurlijke mannelijke hormoon, testosteron.",
+            "Bij orale inname wordt het molecuul geabsorbeerd in het lymfestelsel, waarbij het first-pass metabolisme in de lever grotendeels wordt omzeild dat het anders zou inactiveren.",
+            "Eenmaal in de bloedbaan wordt het omgezet in vrij testosteron, dat zich vervolgens bindt aan androgeenreceptoren door het hele lichaam.",
+            "Deze binding activeert genexpressie die verantwoordelijk is voor mannelijke kenmerken, libido, energie, spiermassa en botdichtheid.",
+            "Door testosteron te herstellen tot normale fysiologische niveaus, verlicht het de symptomen van hypogonadisme."
+        ],
+        "tips": [
+            "Bewaren bij kamertemperatuur beneden 25°C, uit de buurt van vocht en licht.",
+            "Neem consequent met maaltijden in voor een betrouwbare opname.",
+            "Deel dit medicijn met niemand.",
+            "Houd een logboek bij van uw symptomen en eventuele bijwerkingen om met uw arts te bespreken.",
+            "Woon alle geplande vervolgafspraken en bloedonderzoeken bij.",
+            "Hanteer een gezonde levensstijl, inclusief een uitgebalanceerd dieet en regelmatige lichaamsbeweging, als onderdeel van uw algehele behandelplan.",
+            "Buiten bereik van kinderen houden. Dit is een krachtig hormoon en moet veilig worden bewaard."
+        ]
+    },
+    "azelax-cream": {
+        "id": "134",
+        "name": {
+            "en": "Azelax - Azelaic Acid Cream"
+        },
+        "category": "Huidverzorging",
+        "brand": "Healing Pharma",
+        "dosage": "20% w/w",
+        "price": "249",
+        "composition": "Azelaïnezuur 20% w/w",
+        "form": "Creme",
+        "pack_size": "20g Tube",
+        "casId": "123-99-9",
+        "image": "/products/azelaic.webp",
+        "additionalImages": [
+            "/products/azelaic_2.webp",
+            "/products/azelaic_3.webp"
+        ],
+        "metaTitle": "Buy Azelax Azelaic Acid Cream 20% Online | Healing Pharma",
+        "metaDescription": "Buy Azelax 20% Azelaïnezuur Creme online. Effectief tegen acne en rosacea. Zachte, niet-comedogene formule. Van Healing Pharma.",
+        "description": "Azelax Creme bevat Azelaïnezuur 20%, een natuurlijk voorkomend zuur dat effectief is bij de behandeling van milde tot matige acne en het beheersen van rosacea.",
+        "slug": "azelax-cream",
+        "overview": [
+            "Azelax Creme bevat 20% Azelaïnezuur, een dicarbonzuur met ontstekingsremmende en antibacteriële eigenschappen.",
+            "Het wordt voornamelijk gebruikt voor de plaatselijke behandeling van milde tot matige inflammatoire acne vulgaris.",
+            "Deze crème helpt het aantal acne-laesies, waaronder mee-eters, whiteheads en puistjes, te verminderen.",
+            "Het is ook effectief bij de behandeling van papulopustuleuze rosacea.",
+            "Azelaïnezuur werkt door het normaliseren van de afschilfering van huidcellen in de haarzakjes, wat verstoppingen helpt voorkomen.",
+            "Het remt ook de groei van *Cutibacterium acnes*, een bacterie die betrokken is bij de ontwikkeling van acne.",
+            "Regelmatig gebruik kan de huidtextuur verbeteren en post-inflammatoire hyperpigmentatie (donkere vlekken) door acne verminderen.",
+            "Deze formulering is niet-comedogeen, wat betekent dat het de poriën niet verder verstopt.",
+            "De 20% sterkte is een klinisch bestudeerde concentratie voor effectieve resultaten.",
+            "Het is geschikt voor de meeste huidtypes, maar een patch-test wordt aanbevolen voor een gevoelige huid."
+        ],
+        "sideEffects": [
+            "Milde tot matige huidirritatie, zoals jeuk, branderigheid of steken, kan voorkomen, vooral bij het starten van de behandeling.",
+            "Sommige personen kunnen last krijgen van een droge, schilferende of vervellende huid.",
+            "Erytheem (roodheid) op de aanbrengplaats is mogelijk.",
+            "Deze bijwerkingen zijn meestal tijdelijk en nemen vaak af bij voortgezet gebruik.",
+            "Als de irritatie ernstig is of aanhoudt, verminder dan de frequentie van aanbrengen of raadpleeg een arts.",
+            "Contactdermatitis (huiduitslag) kan in zeldzame gevallen voorkomen."
+        ],
+        "administration": [
+            "Reinig en droog het aangetaste huidgebied grondig voordat u de crème aanbrengt.",
+            "Breng tweemaal daags, meestal 's ochtends en 's avonds, een dunne laag Azelax Creme aan op het gehele aangedane gebied.",
+            "Masseer de crème zachtjes in de huid totdat deze is geabsorbeerd.",
+            "Vermijd contact met de ogen, mond en andere slijmvliezen.",
+            "Was uw handen onmiddellijk na het aanbrengen van de crème.",
+            "Gebruik zoals voorgeschreven door uw zorgverlener.",
+            "Verbetering wordt meestal binnen 4 weken gezien, maar optimale resultaten kunnen enkele weken duren."
+        ],
+        "warnings": [
+            "Alleen voor uitwendig gebruik. Niet inslikken.",
+            "Vermijd contact met ogen, mond en slijmvliezen. Bij contact grondig spoelen met water.",
+            "Als huidirritatie optreedt of ernstig wordt, stop dan met gebruik en raadpleeg een arts.",
+            "Niet aanbrengen op een beschadigde of geïrriteerde huid, inclusief snijwonden, schaafwonden of zonnebrand.",
+            "Informeer uw arts als u een bekende allergie heeft voor Azelaïnezuur of andere ingrediënten.",
+            "Voorzichtig gebruiken bij patiënten met astma, omdat er in zeer zeldzame gevallen bronchospasme is gemeld."
+        ],
+        "how_it_works": [
+            "Azelaïnezuur werkt via meerdere mechanismen om acne en rosacea te verbeteren.",
+            "Het heeft antibacteriële eigenschappen die helpen de groei van *Cutibacterium acnes* in de pilosebacous eenheid te remmen.",
+            "Het is een competitieve remmer van tyrosinase, wat kan helpen de productie van melanine te verminderen, waardoor post-inflammatoire hyperpigmentatie vervaagt.",
+            "Het normaliseert het verstoorde keratinisatieproces in de haarzakjes, waardoor de vorming van microcomedonen (de voorloper van acne-laesies) wordt verminderd.",
+            "Voor rosacea helpt het ontstekingen en papels/pustels te verminderen, hoewel het exacte mechanisme nog wordt onderzocht.",
+            "Door ontstekingen en de bacteriële belasting te verminderen, helpt het bestaande laesies te verwijderen en de vorming van nieuwe te voorkomen."
+        ],
+        "tips": [
+            "Bewaren op een koele, droge plaats, uit de buurt van direct zonlicht.",
+            "Houd de tube goed gesloten wanneer u deze niet gebruikt.",
+            "Gebruik een moisturizer die geschikt is voor uw huidtype als u last krijgt van een droge huid tijdens het gebruik van dit product.",
+            "Als u een dosis vergeet, breng deze dan aan zodra u eraan denkt. Als het bijna tijd is voor uw volgende dosis, sla de gemiste dosis dan over.",
+            "Breng geen occlusieve verbanden of wikkels aan over het behandelde gebied, tenzij geadviseerd door uw arts.",
+            "U kunt tijdens de behandeling niet-comedogene cosmetica gebruiken, maar zorg ervoor dat de crème volledig is geabsorbeerd voordat u deze aanbrengt.",
+            "Bescherm uw huid tegen overmatige blootstelling aan de zon en gebruik zonnebrandcrème, omdat Azelaïnezuur niet beschermt tegen zonnebrand."
+        ]
+    },
+    "bonefine-d3-60k": {
+        "id": "135",
+        "name": {
+            "en": "Bonefine Vitamin D3 60,000 IU Capsules"
+        },
+        "category": "Vitaminen & Supplementen",
+        "brand": "Healing Pharma",
+        "dosage": "60.000 IE",
+        "price": "210",
+        "composition": "Cholecalciferol (Vitamine D3) 60.000 IE",
+        "form": "Capsule",
+        "pack_size": "4 Capsules x Verpakking van 2",
+        "casId": "67-97-0",
+        "image": "/products/Bonefine.webp",
+        "additionalImages": [
+            "/products/Bonefine.webp",
+            "/products/Bonefine.webp"
+        ],
+        "metaTitle": "Buy Bonefine Vitamin D3 60,000 IU Capsules | Healing Pharma",
+        "metaDescription": "Buy Bonefine D3 60.000 IE capsules voor vitamine D-suppletie. Hooggedoseerde cholecalciferol voor botgezondheid en immuniteit. Van Healing Pharma.",
+        "description": "Bonefine Vitamine D3 60.000 IE capsules bieden een hooggedoseerde hoeveelheid cholecalciferol voor de behandeling en preventie van vitamine D-tekort.",
+        "slug": "bonefine-d3-60k",
+        "overview": [
+            "Bonefine D3 60.000 IE is een hooggedoseerd supplement dat Vitamine D3 (cholecalciferol) bevat.",
+            "Het wordt gebruikt om vitamine D-tekort bij volwassenen te behandelen en te voorkomen.",
+            "Vitamine D is cruciaal voor de opname van calcium en fosfor, essentieel voor het behoud van gezonde botten en tanden.",
+            "Het speelt ook een vitale rol bij het ondersteunen van de immuunfunctie en de spiergezondheid.",
+            "Deze hooggedoseerde formulering wordt doorgaans voorgeschreven voor wekelijkse of maandelijkse inname, zoals voorgeschreven door een arts.",
+            "Een tekort aan vitamine D kan leiden tot botpijn, spierzwakte en een verhoogd risico op fracturen.",
+            "Adequate vitamine D-spiegels zijn vooral belangrijk voor mensen met beperkte blootstelling aan de zon, ouderen en mensen met bepaalde medische aandoeningen.",
+            "Elke verpakking bevat 4 capsules, wat een volledige kuur biedt volgens gangbare schema's.",
+            "Het product is vervaardigd volgens kwaliteitsnormen om potentie en zuiverheid te garanderen."
+        ],
+        "sideEffects": [
+            "Bij gebruik zoals voorgeschreven zijn bijwerkingen zeldzaam. Het innemen van meer dan de aanbevolen dosis kan echter leiden tot hypercalciëmie (hoge calciumspiegels).",
+            "Symptomen van hypercalciëmie kunnen zijn: zwakte, vermoeidheid, misselijkheid, braken, constipatie en vaak plassen.",
+            "Sommige personen kunnen een metaalsmaak of een droge mond ervaren.",
+            "Allergische reacties zijn zeer zeldzaam maar mogelijk.",
+            "Nierstenen kunnen optreden bij daarvoor gevoelige personen bij langdurig gebruik van hoge doses."
+        ],
+        "administration": [
+            "Neem dit medicijn precies zoals voorgeschreven door uw arts.",
+            "De typische dosering voor de behandeling van een tekort is één capsule van 60.000 IE eenmaal per week gedurende 8 weken, gevolgd door een lagere onderhoudsdosis.",
+            "Ter preventie kan uw arts een ander doseerschema aanbevelen.",
+            "Capsules in hun geheel doorslikken met water, bij voorkeur bij een maaltijd die vet bevat voor een betere opname.",
+            "Plet of kauw de capsule niet.",
+            "Neem niet meer dan de voorgeschreven dosis."
+        ],
+        "warnings": [
+            "Niet gebruiken als u allergisch bent voor cholecalciferol of andere ingrediënten.",
+            "Raadpleeg uw arts voor gebruik als u nierstenen, ernstige nierziekte of sarcoïdose heeft.",
+            "Hoge doses Vitamine D moeten met voorzichtigheid worden gebruikt bij patiënten met hartaandoeningen.",
+            "Regelmatige bloedonderzoeken kunnen nodig zijn om de vitamine D- en calciumspiegels te controleren tijdens hooggedoseerde therapie.",
+            "Informeer uw arts over alle andere medicijnen die u gebruikt, met name thiazidediuretica en bepaalde anticonvulsiva."
+        ],
+        "how_it_works": [
+            "Vitamine D3 (cholecalciferol) is een vetoplosbare vitamine die in de lever wordt omgezet in calcidiol (25-hydroxyvitamine D).",
+            "Het wordt vervolgens verder omgezet in de nieren tot calcitriol (1,25-dihydroxyvitamine D), de actieve vorm van de vitamine.",
+            "Calcitriol werkt als een hormoon en reguleert de opname van calcium en fosfor uit de darm.",
+            "Door adequate calcium- en fosfaatspiegels te handhaven, bevordert Vitamine D een goede botmineralisatie en voorkomt het aandoeningen zoals rachitis bij kinderen en osteomalacie bij volwassenen.",
+            "Vitamine D bindt ook aan receptoren op immuuncellen, wat hun functie beïnvloedt en een gezonde immuunrespons ondersteunt."
+        ],
+        "tips": [
+            "Bewaren op een koele, droge plaats, uit de buurt van licht en vocht.",
+            "Buiten bereik van kinderen houden.",
+            "Neem de gemiste dosis in zodra u eraan denkt. Als het bijna tijd is voor de volgende dosis, sla de gemiste dosis dan over en ga verder met uw normale schema. Neem geen dubbele dosis.",
+            "Zorg voor een adequate calciuminname via voeding of supplementen zoals geadviseerd door uw arts.",
+            "Bespreek de juiste dosering en duur van de behandeling met uw zorgverlener."
+        ]
+    },
+    "multivitamin-abcdz": {
+        "id": "136",
+        "name": {
+            "en": "ABCDZ Multivitamin Multimineral Tablets"
+        },
+        "category": "Vitaminen & Supplementen",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "159",
+        "composition": "Multivitamine & Multimineralen Complex",
+        "form": "Tablet",
+        "pack_size": "15 Tabletten x 2 Strips",
+        "casId": "N/A",
+        "image": "/products/abcdz_tablets.webp",
+        "additionalImages": [
+            "/products/abcdz_tablets_2.webp",
+            "/products/abcdz_tablets_3.webp"
+        ],
+        "metaTitle": "Buy ABCDZ Multivitamin Multimineral Tablets Online | Healing Pharma",
+        "metaDescription": "Buy ABCDZ multivitamine en multimineralen tabletten voor dagelijkse nutritionele ondersteuning. Essentiële vitaminen en mineralen voor de algehele gezondheid. Van Healing Pharma.",
+        "description": "ABCDZ tabletten zijn een uitgebreid multivitamine en multimineralen supplement ontworpen om voedingstekorten aan te vullen en het algemeen welzijn te ondersteunen.",
+        "slug": "multivitamin-abcdz",
+        "overview": [
+            "ABCDZ is een dagelijks voedingssupplement dat een evenwichtige combinatie van essentiële vitaminen en mineralen biedt.",
+            "Het is samengesteld om te helpen voldoen aan de dagelijkse voedingsbehoeften voor personen met een verhoogde behoefte of met dieetbeperkingen.",
+            "Belangrijke ingrediënten omvatten doorgaans Vitamine A, B-complex vitaminen (zoals B1, B2, B6, B12), Vitamine C, Vitamine D, Vitamine E en mineralen zoals Zink, Calcium en Magnesium.",
+            "Dit supplement ondersteunt verschillende lichaamsfuncties, waaronder energiemetabolisme, immuunfunctie, botgezondheid en cellulaire bescherming tegen oxidatieve stress.",
+            "Het kan gunstig zijn voor personen met een slechte eetlust, mensen met een restrictief dieet of tijdens herstelperiodes.",
+            "Regelmatige inname kan micronutriëntentekorten helpen voorkomen en de algehele vitaliteit bevorderen.",
+            "De handige tabletvorm maakt het gemakkelijk om in een dagelijkse routine op te nemen.",
+            "Dit product is geschikt voor volwassenen en kinderen ouder dan 12 jaar, tenzij anders voorgeschreven door een arts."
+        ],
+        "sideEffects": [
+            "De meeste mensen ervaren geen bijwerkingen bij gebruik zoals voorgeschreven.",
+            "Sommige personen kunnen milde maagdarmklachten ervaren, zoals constipatie, diarree of een maagklachten.",
+            "Het innemen van het supplement met voedsel kan deze effecten vaak verminderen.",
+            "Bepaalde vitaminen zoals B-complex kunnen ervoor zorgen dat urine een felgele kleur krijgt, wat onschadelijk is.",
+            "Allergische reacties zijn zeer zeldzaam maar mogelijk."
+        ],
+        "administration": [
+            "Neem dagelijks één tablet, bij voorkeur bij een maaltijd om de opname te verbeteren en maagklachten te minimaliseren.",
+            "Slik de tablet in zijn geheel door met een glas water. Niet kauwen of pletten.",
+            "Neem elke dag op hetzelfde tijdstip in om een routine op te bouwen.",
+            "Overschrijd de aanbevolen dagelijkse dosis niet.",
+            "Volg het advies van uw zorgverlener met betrekking tot dosering en gebruiksduur."
+        ],
+        "warnings": [
+            "Niet gebruiken als u allergisch bent voor een van de ingrediënten.",
+            "Raadpleeg uw arts voor gebruik als u zwanger bent, borstvoeding geeft of een bestaande medische aandoening heeft.",
+            "Buiten bereik van kinderen houden.",
+            "Voedingssupplementen mogen niet worden gebruikt als vervanging van een uitgebalanceerd en gevarieerd dieet.",
+            "Als u andere medicijnen gebruikt, raadpleeg dan uw arts of apotheker om te controleren op mogelijke interacties."
+        ],
+        "how_it_works": [
+            "Multivitaminesupplementen werken door een geconcentreerde bron te bieden van micronutriënten die het lichaam nodig heeft voor zijn metabolische processen.",
+            "B-complex vitaminen (Thiamine, Riboflavine, Niacine, etc.) fungeren als co-enzymen en helpen voedsel om te zetten in energie.",
+            "Vitamine C is een krachtige antioxidant die cellen beschermt tegen schade en essentieel is voor collageensynthese en immuunfunctie.",
+            "Vitamine D ondersteunt de calciumopname voor de botgezondheid en moduleert immuunresponsen.",
+            "Vitamine E werkt als een vetoplosbare antioxidant en beschermt celmembranen tegen oxidatieve schade.",
+            "Mineralen zoals Zink zijn cruciaal voor de immuunfunctie, wondgenezing en celdeling.",
+            "Samen helpen deze voedingsstoffen voedingstekorten op te vullen, waardoor het lichaam de nodige bouwstenen heeft om optimaal te functioneren."
+        ],
+        "tips": [
+            "Bewaren op een koele, droge plaats, uit de buurt van direct zonlicht.",
+            "Houd de fles goed gesloten wanneer u deze niet gebruikt.",
+            "Hanteer een gezond dieet naast suppletie voor de beste resultaten.",
+            "Als u een dosis mist, neem deze dan in zodra u eraan denkt. Als het bijna tijd is voor uw volgende dosis, sla de gemiste dan over en ga verder met uw normale schema. Neem geen dubbele dosis."
+        ]
+    },
+    "xheal-shilajit": {
+        "id": "137",
+        "name": {
+            "en": "XHeal Pahadi Shilajit Gold Resin"
+        },
+        "category": "Gezondheid & Welzijn",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "849",
+        "composition": "Gezuiverd Shilajit Extract",
+        "form": "Hars",
+        "pack_size": "20g Pot",
+        "casId": "N/A",
+        "image": "/products/shilajit_gold.webp",
+        "additionalImages": [
+            "/products/shilajit_gold_2.webp",
+            "/products/shilajit_gold_3.jpg"
+        ],
+        "metaTitle": "Buy XHeal Pahadi Shilajit Gold Resin Online | Healing Pharma",
+        "metaDescription": "Buy XHeal Pahadi Shilajit Gold Hars. Authentieke Himalaya Shilajit voor vitaliteit, uithoudingsvermogen en algemeen welzijn. Van Healing Pharma.",
+        "description": "XHeal Pahadi Shilajit Gold Hars is een puur en krachtig voedingssupplement afkomstig uit het Himalayagebergte, traditioneel gebruikt om vitaliteit en energie te verbeteren.",
+        "slug": "xheal-shilajit",
+        "overview": [
+            "XHeal Pahadi Shilajit is een hoogwaardige harsvorm van Shilajit, een natuurlijke substantie die voornamelijk wordt gevonden in de rotsen van de Himalaya.",
+            "Het wordt gevormd over eeuwen door de langzame ontbinding van plantaardig materiaal en is rijk aan fulvinezuur en meer dan 84 essentiële mineralen.",
+            "Shilajit wordt al eeuwenlang gebruikt in de traditionele Ayurvedische geneeskunde als een krachtig verjongingsmiddel en adaptogeen.",
+            "Het is voornamelijk bekend om zijn potentieel om energieniveaus te verhogen, het uithoudingsvermogen te verbeteren en de algehele fysieke prestaties te ondersteunen.",
+            "Het 'Goud' in de naam duidt vaak op een gezuiverde en krachtige vorm van de hars.",
+            "Dit supplement zou gezond ouder worden, cognitieve functie en de natuurlijke immuunafweer van het lichaam ondersteunen.",
+            "De harsvorm wordt beschouwd als de meest authentieke en traditionele manier om Shilajit te consumeren.",
+            "Het is afkomstig uit hooggelegen streken om zuiverheid en potentie te garanderen."
+        ],
+        "sideEffects": [
+            "Shilajit wordt over het algemeen goed verdragen bij inname van de aanbevolen doses.",
+            "Sommige personen kunnen milde spijsverteringsproblemen ervaren, zoals een maagklachten of misselijkheid, vooral bij het starten van gebruik.",
+            "Vanwege het mineraalgehalte kan het de bloeddruk licht verlagen. Voorzichtigheid is geboden voor degenen die antihypertensiva gebruiken.",
+            "Het kan mogelijk het urinezuurgehalte verhogen; personen met jicht dienen een arts te raadplegen.",
+            "Allergische reacties zijn zeldzaam maar mogelijk."
+        ],
+        "administration": [
+            "Neem een kleine, erwtgrote hoeveelheid (ongeveer 300-500 mg) van de hars.",
+            "Los het op in een glas warm water, melk of kruidenthee. Het lost gemakkelijker op in warme vloeistof.",
+            "Goed roeren en bij voorkeur 's ochtends op een lege maag drinken voor de beste opname.",
+            "Het kan ook worden ingenomen zoals voorgeschreven door uw Ayurvedische behandelaar.",
+            "Consistentie is essentieel om de voordelen te ervaren.",
+            "De pot van 20g biedt doorgaans een voorraad voor 1-2 maanden, afhankelijk van dagelijks gebruik."
+        ],
+        "warnings": [
+            "Niet gebruiken als u allergisch bent voor Shilajit of een van de bestanddelen.",
+            "Raadpleeg uw zorgverlener voor gebruik als u zwanger bent, borstvoeding geeft, een medische aandoening heeft (vooral hartziekte, jicht of lage bloeddruk), of voorgeschreven medicijnen gebruikt.",
+            "Niet aanbevolen voor kinderen.",
+            "Zorg ervoor dat u Shilajit koopt van een betrouwbare bron om producten te vermijden die zware metalen of andere verontreinigingen kunnen bevatten.",
+            "Begin met een lagere dosis om uw tolerantie te beoordelen."
+        ],
+        "how_it_works": [
+            "De primaire actieve component van Shilajit is fulvinezuur, een krachtige antioxidant en elektrolyt die helpt voedingsstoffen diep in cellen te transporteren.",
+            "Er wordt aangenomen dat het de mitochondriale functie verbetert, de energiecentrale van cellen, wat leidt tot verhoogde energie en uithoudingsvermogen.",
+            "Het fulvinezuur in Shilajit helpt de biologische beschikbaarheid van andere voedingsstoffen te verbeteren en ondersteunt de natuurlijke ontgiftingsprocessen van het lichaam.",
+            "Het werkt als een adaptogeen en helpt het lichaam stress te beheersen en homeostase te behouden.",
+            "Sommige onderzoeken suggereren dat het de testosteronspiegel bij mannen kan ondersteunen, wat bijdraagt aan vitaliteit en kracht.",
+            "Het rijke mineraalgehalte helpt essentiële sporenelementen aan te vullen die mogelijk ontbreken in het moderne dieet."
+        ],
+        "tips": [
+            "Bewaren op een koele, droge plaats, uit de buurt van direct zonlicht. Niet in de koelkast bewaren.",
+            "Zorg ervoor dat het deksel na elk gebruik goed gesloten is om te voorkomen dat de hars uitdroogt.",
+            "Gebruik een schone, droge spatel of lepel om de hars uit te scheppen om contaminatie te voorkomen.",
+            "Als de hars hard wordt, kunt u de gesloten pot in een kom met warm water plaatsen om hem zachter te maken.",
+            "Het wordt aanbevolen om het gebruik te cycleren (bijv. 2-3 maanden innemen, daarna 1 maand pauze)."
+        ]
+    },
+    "derbeau-moisturizer": {
+        "id": "138",
+        "name": {
+            "en": "Derbeau Oil-Free Moisturizer with Hyaluronic Acid & Ceramide"
+        },
+        "category": "Huidverzorging",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Hyaluronzuur, Ceramide Complex",
+        "form": "Vochtinbrengende Crème",
+        "pack_size": "75g Pot",
+        "casId": "N/A",
+        "image": "/products/derbeau.webp",
+        "additionalImages": [
+            "/products/derbeau_2.webp",
+            "/products/derbeau_3.webp"
+        ],
+        "metaTitle": "Buy Derbeau Oil-Free Moisturizer | Hyaluronic Acid & Ceramide | Healing Pharma",
+        "metaDescription": "Buy Derbeau Oil-Free Moisturizer online. Lichte dagelijkse vochtinbrengende crème met Hyaluronzuur en Ceramide voor een gehydrateerde, gezond uitziende huid. Van Healing Pharma.",
+        "description": "Derbeau Oil-Free Moisturizer is een lichte, dagelijkse hydraterende crème geformuleerd met Hyaluronzuur en Ceramiden om de huidbarrière te voeden en te beschermen zonder poriën te verstoppen.",
+        "slug": "derbeau-moisturizer",
+        "overview": [
+            "Derbeau Oil-Free Moisturizer is een dagelijkse gezichtshydrateur ontworpen voor de normale tot vette en gecombineerde huidtypes.",
+            "De lichte, niet-vette formule biedt essentiële hydratatie zonder overtollige olie of glans toe te voegen.",
+            "Verrijkt met Hyaluronzuur, een krachtige vochtbindende stof die vocht aantrekt en vasthoudt, waardoor de huid geplumperd en gehydrateerd blijft.",
+            "Bevat een Ceramide complex om de natuurlijke beschermende barrière van de huid te helpen herstellen en versterken.",
+            "Dit helpt vochtverlies te voorkomen en de huid te beschermen tegen omgevingsstressoren.",
+            "De olievrije formulering zorgt ervoor dat het de poriën niet verstopt, waardoor het geschikt is voor een acne-gevoelige huid.",
+            "Regelmatig gebruik kan de huidtextuur helpen verbeteren, waardoor het zacht, glad en verfrist aanvoelt.",
+            "Het kan zowel 's ochtends als 's avonds worden gebruikt als onderdeel van een basis huidverzorgingsroutine.",
+            "Vrij van parabenen en ftalaten."
+        ],
+        "sideEffects": [
+            "Geformuleerd voor de gevoelige huid, bijwerkingen zijn zeldzaam.",
+            "Sommige personen met extreme gevoeligheden kunnen bij het eerste gebruik milde tintelingen of roodheid ervaren.",
+            "Als irritatie optreedt, stop dan met gebruik en raadpleeg een dermatoloog."
+        ],
+        "administration": [
+            "Breng een kleine, erwtgrote hoeveelheid aan op een schoon, droog gezicht en hals.",
+            "Masseer zachtjes in een opwaartse, cirkelvormige beweging tot het volledig is geabsorbeerd.",
+            "Tweemaal daags gebruiken, 's ochtends en 's avonds, na het reinigen en voor het aanbrengen van zonnebrandcrème (in de ochtend).",
+            "Voor de beste resultaten consequent gebruiken als onderdeel van uw dagelijkse huidverzorgingsroutine."
+        ],
+        "warnings": [
+            "Alleen voor uitwendig gebruik.",
+            "Vermijd direct contact met de ogen. Bij contact grondig spoelen met water.",
+            "Niet aanbrengen op een beschadigde of geïrriteerde huid.",
+            "Stop met gebruik als tekenen van irritatie of huiduitslag optreden.",
+            "Buiten bereik van kinderen houden.",
+            "Bewaren op een koele, droge plaats."
+        ],
+        "how_it_works": [
+            "Hyaluronzuur werkt als een vochtmagneet. Het kan tot 1000 keer zijn gewicht in water vasthouden, waardoor vocht uit de omgeving naar de buitenste lagen van de huid wordt getrokken.",
+            "Dit hydrateert de huid onmiddellijk, vermindert de verschijning van fijne lijntjes en zorgt voor een gladdere, vollere teint.",
+            "Ceramiden zijn lipide (vet) moleculen die van nature in hoge concentraties voorkomen in de celmembranen van de bovenste huidlagen.",
+            "Ze vormen een significant deel van de huidbarrière (stratum corneum) en zijn essentieel voor het vasthouden van vocht en het voorkomen dat omgevingsinvloeden de huid binnendringen.",
+            "Topische toepassing van Ceramiden helpt de natuurlijke lipidenbarrière van de huid aan te vullen, waardoor de hydratatie, veerkracht en algehele huidgezondheid verbeteren."
+        ],
+        "tips": [
+            "Aanbrengen op een licht vochtige huid om extra vocht vast te houden.",
+            "Voor gebruik overdag, vervolg met een breedspectrum zonnebrandcrème (SPF 30+) voor volledige bescherming.",
+            "Neem het op in uw routine door het aan te brengen na serums en voor zonnebrandcrème of make-up.",
+            "Als uw huid bijzonder droog aanvoelt, kunt u 's nachts een iets dikkere laag aanbrengen als hydraterend masker."
+        ]
+    },
+    "niacinamide-face-wash": {
+        "id": "139",
+        "name": {
+            "en": "Niacinamide and Salicylic Acid Ultra Foaming Face Wash"
+        },
+        "category": "Huidverzorging",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Niacinamide, Salicylzuur",
+        "form": "Gezichtsreiniger",
+        "pack_size": "100ml Tube",
+        "casId": "N/A",
+        "image": "/products/AcnetopFacewash.webp",
+        "additionalImages": [
+            "/products/AcnetopFacewash_2.webp",
+            "/products/AcnetopFacewash_3.webp"
+        ],
+        "metaTitle": "Buy Niacinamide & Salicylic Acid Ultra Foaming Face Wash | Healing Pharma",
+        "metaDescription": "Buy Niacinamide and Salicylic Acid Ultra Foaming Face Wash. Reinigt diep, exfolieert en helpt acne onder controle te houden. Voor een heldere, gezond uitziende huid. Van Healing Pharma.",
+        "description": "Deze Ultra Schuimende Gezichtsreiniger combineert de zuiverende kracht van Salicylzuur met de kalmerende voordelen van Niacinamide voor een diepe maar zachte reiniging, die helpt de huid te verhelderen en oneffenheden te verminderen.",
+        "slug": "niacinamide-face-wash",
+        "overview": [
+            "Deze ultra-schuimende gezichtsreiniger is samengesteld om poriën diep te reinigen en overtollige olie, vuil en onzuiverheden te verwijderen.",
+            "Bevat Salicylzuur, een bètahydroxyzuur (BHA) dat diep in de poriën doordringt om van binnenuit te exfoliëren en acne te helpen voorkomen en behandelen.",
+            "Verrijkt met Niacinamide (Vitamine B3), bekend om zijn kalmerende, ontstekingsremmende en verhelderende eigenschappen.",
+            "Helpt roodheid te verminderen, irritatie te kalmeren en de verschijning van een ongelijkmatige huidtint te verbeteren.",
+            "De schuimende werking zorgt voor een bevredigende, grondige reiniging zonder de huid van zijn natuurlijke vocht te ontdoen.",
+            "Ideaal voor de vette, gecombineerde en acne-gevoelige huidtypes.",
+            "Regelmatig gebruik kan leiden tot een helderdere, gladdere en stralender uitziende huid.",
+            "Het helpt de overmatige talgproductie te reguleren, waardoor glans gedurende de dag vermindert."
+        ],
+        "sideEffects": [
+            "Salicylzuur kan milde droogheid of vervelling veroorzaken, vooral bij het eerste gebruik.",
+            "Sommige personen kunnen een lichte tinteling ervaren.",
+            "Als overmatige droogheid of irritatie optreedt, verminder dan de gebruiksfrequentie of stop met gebruik en raadpleeg een dermatoloog."
+        ],
+        "administration": [
+            "Maak uw gezicht nat met lauwwarm water.",
+            "Knijp een kleine hoeveelheid gezichtsreiniger in uw handpalm.",
+            "Werk tot een rijke schuim door uw handen tegen elkaar te wrijven.",
+            "Masseer het schuim zachtjes op uw gezicht in cirkelvormige bewegingen, vermijd het gebied rond de ogen.",
+            "Spoel grondig af met water en dep uw gezicht droog met een schone handdoek.",
+            "Een- of tweemaal daags gebruiken als onderdeel van uw normale huidverzorgingsroutine."
+        ],
+        "warnings": [
+            "Alleen voor uitwendig gebruik.",
+            "Vermijd direct contact met de ogen. Bij contact grondig spoelen met veel water.",
+            "Niet aanbrengen op een beschadigde, geïrriteerde of verbrande huid.",
+            "Als huidirritatie optreedt of verergert, stop dan met gebruik en raadpleeg een arts.",
+            "Gebruik overdag zonnebrandcrème, omdat AHA's/BHA's de gevoeligheid voor de zon kunnen verhogen.",
+            "Buiten bereik van kinderen houden."
+        ],
+        "how_it_works": [
+            "Salicylzuur is een lipofiel (vetminnend) BHA dat de lipidelagen van de huid kan binnendringen en diep in de poriën kan komen.",
+            "In de porie helpt het overtollig talg op te lossen en dode huidcellen te exfoliëren die kunnen leiden tot verstoppingen, mee-eters en acne-laesies.",
+            "Door poriën vrij te houden, helpt het toekomstige uitbraken te voorkomen.",
+            "Niacinamide werkt synergetisch door te helpen de olieproductie te reguleren en ontstekingen geassocieerd met acne te kalmeren.",
+            "Het helpt ook de barrièrefunctie van de huid te versterken, waardoor de veerkracht verbetert en de gevoeligheid veroorzaakt door exfoliërende zuren vermindert.",
+            "Samen bieden ze een krachtige maar evenwichtige aanpak voor het verhelderen en perfectioneren van de huid."
+        ],
+        "tips": [
+            "Voor de beste resultaten consequent gebruiken als onderdeel van uw ochtend- en/of avondroutine.",
+            "Vervolg met een toner (indien gebruikt), serum, vochtinbrengende crème en overdag zonnebrandcrème.",
+            "Als uw huid nieuw is met exfoliërende zuren, begin dan met eenmaal daags of om de dag gebruiken om uw huid de tijd te geven om te wennen.",
+            "Vermijd het gebruik van andere agressieve exfoliërende producten (fysieke scrubs, sterke chemische peelings) op dezelfde dagen om over-exfoliatie te voorkomen."
+        ]
+    },
+    
 
 
 

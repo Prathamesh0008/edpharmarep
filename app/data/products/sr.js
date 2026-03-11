@@ -21171,6 +21171,1139 @@ administration: [
         "Poštujte sve zakazane kontrolne preglede za bezbednu i efikasnu dugoročnu upotrebu."
     ]
 },
+
+ "soma-350": {
+        "id": "124",
+        "name": {
+            "en": "Soma 350 mg"
+        },
+        "category": "Centralni Nervni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "350 mg",
+        "price": "450",
+        "composition": "Karizoprodol 350mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "78-44-4",
+        "image": "/products/Soma350mg_2.png",
+        "additionalImages": [
+            "/products/Soma350mg_3.jpg",
+            "/products/Soma350mg_3.jpg"
+        ],
+        "metaTitle": "Buy Soma 350 mg Online | Carisoprodol Muscle Relaxant | Hab Pharma",
+        "metaDescription": "Buy Soma 350 mg (Karizoprodol) online. Relaksant mišića za ublažavanje akutnog mišićno-koštanog bola. Visok kvalitet od Hab Pharma.",
+        "description": "Soma 350 mg sadrži Karizoprodol, lek koji se koristi za kratkotrajno ublažavanje nelagodnosti povezane sa akutnim, bolnim mišićno-koštanim stanjima.",
+        "slug": "soma-350",
+        "overview": [
+            "Soma 350 mg je relaksant mišića koji sadrži Karizoprodol, koristi se za ublažavanje bola i nelagodnosti od povreda mišića i grčeva.",
+            "Obično se propisuje kao deo sveobuhvatnog plana lečenja koji uključuje odmor i fizikalnu terapiju.",
+            "Ovaj lek deluje tako što blokira signale bola između nerava i mozga.",
+            "Doza od 350 mg je standardna doza za odrasle pacijente.",
+            "Soma je namenjena za kratkotrajnu upotrebu, obično ne duže od dve do tri nedelje.",
+            "Pomaže u poboljšanju pokretljivosti i smanjenju ukočenosti povezane sa akutnim stanjima mišića.",
+            "Olakšanje od bola i nelagodnosti često počinje u roku od 30 minuta od uzimanja leka.",
+            "Efekti jedne doze obično traju 4 do 6 sati.",
+            "Ovaj proizvod treba koristiti samo kada ga prepiše zdravstveni radnik."
+        ],
+        "sideEffects": [
+            "Pospanost i vrtoglavica su najčešći neželjeni efekti.",
+            "Neki pojedinci mogu osetiti glavobolju ili zamagljen vid.",
+            "Može doći do mučnine, povraćanja ili želudačnih tegoba.",
+            "Prijavljeni su agitacija, razdražljivost ili konfuzija, posebno kod starijih pacijenata.",
+            "Tremor ili nekontrolisani pokreti mišića mogu se retko javiti.",
+            "Neki korisnici mogu osetiti ubrzan rad srca ili crvenilo lica.",
+            "Alergijske reakcije kao što su osip ili svrab su moguće ali nisu česte."
+        ],
+        "administration": [
+            "Uzimajte Somu tačno onako kako vam je propisao zdravstveni radnik.",
+            "Uobičajena doza za odrasle je jedna tableta od 350 mg tri puta dnevno i pred spavanje.",
+            "Progutajte tabletu celu sa punom čašom vode.",
+            "Može se uzimati sa ili bez hrane, ali uzimanje sa hranom može smanjiti želudačne tegobe.",
+            "Ne drobite, žvaćite ili lomite tabletu.",
+            "Ne uzimajte češće ili duže nego što je propisano.",
+            "Izbegavajte alkohol dok uzimate ovaj lek jer može povećati pospanost."
+        ],
+        "warnings": [
+            "Ne koristite ako ste alergični na Karizoprodol ili meprobamat.",
+            "Ovaj lek može stvoriti naviku; koristite samo prema uputstvu i nemojte ga deliti.",
+            "Izbegavajte vožnju, rukovanje mašinama ili učešće u opasnim aktivnostima dok ne saznate kako ovaj lek utiče na vas.",
+            "Kombinovanje sa alkoholom ili drugim depresorima CNS-a (poput benzodiazepina ili opioida) može dovesti do teške pospanosti ili respiratorne depresije.",
+            "Koristite sa oprezom ako imate istoriju zavisnosti od droga, bolesti jetre ili bubrega, ili poremećaje napada.",
+            "Stariji pacijenti mogu biti osetljiviji na efekte i pod većim rizikom od padova.",
+            "Ne preporučuje se tokom trudnoće ili dojenja. Posavetujte se sa svojim lekarom."
+        ],
+        "how_it_works": [
+            "Karizoprodol, aktivni sastojak u Soma, je relaksant skeletnih mišića koji deluje centralno.",
+            "Njegov tačan mehanizam nije u potpunosti razjašnjen, ali se veruje da deluje izazivanjem sedacije i menjanjem percepcije bola u centralnom nervnom sistemu.",
+            "Ne opušta direktno skeletne mišiće već deluje kao depresor na CNS.",
+            "Karizoprodol se metaboliše u jetri u meprobamat, aktivni metabolit koji takođe doprinosi njegovim efektima.",
+            "Smatra se da utiče na komunikaciju između nerava u kičmenoj moždini i retikularnoj formaciji mozga, što dovodi do opuštanja mišića i ublažavanja bola."
+        ],
+        "tips": [
+            "Čuvati na sobnoj temperaturi dalje od vlage i toplote.",
+            "Čuvajte lek u originalnom blister pakovanju dok ne bude spreman za upotrebu.",
+            "Ako propustite dozu, uzmite je čim se setite. Ako je blizu vreme za sledeću dozu, preskočite propuštenu dozu i nastavite sa redovnim rasporedom. Ne duplirajte dozu.",
+            "Nemojte naglo prestati da uzimate ovaj lek, posebno nakon produžene upotrebe, jer se mogu javiti simptomi ustezanja kao što su anksioznost, nesanica i bol u mišićima.",
+            "Obavestite sve svoje zdravstvene radnike da uzimate ovaj lek."
+        ]
+    },
+    "soma-500": {
+        "id": "125",
+        "name": {
+            "en": "Soma 500 mg"
+        },
+        "category": "Centralni Nervni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "500 mg",
+        "price": "550",
+        "composition": "Karizoprodol 500mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "78-44-4",
+        "image": "/products/Soma500mg.webp",
+        "additionalImages": [
+            "/products/Soma500mg2.png",
+            "/products/Soma500mg_3.jpeg"
+        ],
+        "metaTitle": "Buy Soma 500 mg Online | Extra Strength Carisoprodol | Hab Pharma",
+        "metaDescription": "Buy Soma 500 mg (Karizoprodol) online. Relaksant mišića sa dodatnom snagom za teži akutni mišićno-koštani bol. Pouzdan kvalitet od Hab Pharma.",
+        "description": "Soma 500 mg je formulacija Karizoprodola sa većom jačinom, relaksant mišića koji se koristi za kratkotrajno ublažavanje akutnog mišićno-koštanog bola i nelagodnosti.",
+        "slug": "soma-500",
+        "overview": [
+            "Soma 500 mg pruža veću dozu Karizoprodola za pacijente kojima je potrebno pojačano opuštanje mišića i ublažavanje bola.",
+            "Ova formulacija sa dodatnom snagom može se propisati kada standardna doza od 350 mg nije dovoljna za kontrolu simptoma.",
+            "Namenjena je za kratkotrajnu upotrebu, obično do dve do tri nedelje, kao deo šireg plana lečenja.",
+            "Doza od 500 mg nudi snažniji efekat, pogodan za teža akutna stanja mišića.",
+            "Kao i kod standardne doze, deluje tako što utiče na prenos signala bola u centralnom nervnom sistemu.",
+            "Ova veća jačina zahteva pažljiv medicinski nadzor zbog povećanog rizika od neželjenih efekata i zavisnosti.",
+            "Može biti pogodnija za pacijente koji su razvili toleranciju na niže doze pod vođstvom lekara."
+        ],
+        "sideEffects": [
+            "Povećana pospanost i sedacija su verovatniji sa ovom većom jačinom.",
+            "Vrtoglavica i rizik od padova, posebno kod starijih pacijenata, mogu biti izraženiji.",
+            "Može doći do glavobolje, zamagljenog vida i problema sa koordinacijom.",
+            "Mogu se javiti gastrointestinalni problemi poput mučnine ili povraćanja.",
+            "Veći potencijal za kognitivno oštećenje i konfuziju.",
+            "Povećan rizik od zavisnosti i simptoma ustezanja pri produženoj upotrebi.",
+            "Moguće su paradoksalne reakcije kao što su agitacija ili nemir."
+        ],
+        "administration": [
+            "Uzimajte tačno onako kako vam je lekar propisao. Nemojte sami povećavati dozu.",
+            "Tipična doza je jedna tableta od 500 mg, koja se obično uzima tri puta dnevno i pred spavanje, ali to mora potvrditi vaš lekar.",
+            "Progutajte tabletu celu sa vodom.",
+            "Može se uzimati sa ili bez hrane.",
+            "Ne drobite ili žvaćite tabletu.",
+            "Strogo izbegavajte alkohol dok uzimate ovaj lek."
+        ],
+        "warnings": [
+            "Kontraindikovano kod pacijenata sa istorijom alergije na Karizoprodol ili srodna jedinjenja.",
+            "Veći rizik od zloupotrebe i zavisnosti; koristiti samo pod strogim medicinskim nadzorom.",
+            "Teška pospanost može značajno umanjiti vašu sposobnost za vožnju ili obavljanje opasnih zadataka.",
+            "Kombinovanje sa alkoholom ili drugim depresorima CNS-a može biti opasno i potencijalno fatalno.",
+            "Koristite sa izuzetnim oprezom kod pacijenata sa oštećenjem jetre ili bubrega.",
+            "Ne preporučuje se starijim pacijentima zbog povećanog rizika od padova i osetljivosti.",
+            "Kontraindikovano kod pacijenata sa akutnom intermitentnom porfirijom."
+        ],
+        "how_it_works": [
+            "Soma 500 mg isporučuje veću koncentraciju Karizoprodola, što dovodi do izraženije depresije CNS-a.",
+            "Povećana doza rezultira većom zauzetošću njegovih ciljnih mesta unutar centralnog nervnog sistema.",
+            "Ovo dovodi do jačeg sedativnog efekta i snažnije promene percepcije bola.",
+            "Metabolizam u meprobamat daje više nivoe ovog aktivnog metabolita, doprinoseći pojačanim terapijskim i sedativnim efektima.",
+            "Mehanizam ostaje isti, ali sa pojačanim efektima na neuronsku signalizaciju vezanu za bol i tonus mišića."
+        ],
+        "tips": [
+            "Čuvati na sigurnom mestu, dalje od dece i kućnih ljubimaca, zbog većeg potencijala za zloupotrebu.",
+            "Nikada ne delite ovaj lek.",
+            "Vodite strogu evidenciju o svojim dozama kako biste izbegli slučajno prekomerno korišćenje.",
+            "Nemojte naglo prestati sa uzimanjem bez medicinskog vođstva, jer simptomi ustezanja mogu biti teški.",
+            "Odmah prijavite svom lekaru sve neobične neželjene efekte ili znake zavisnosti.",
+            "Propisno odložite svaki neiskorišćeni lek na određenom mestu za preuzimanje."
+        ]
+    },
+    "zop-7-5": {
+        "id": "126",
+        "name": {
+            "en": "Zop 7.5 mg Tablet"
+        },
+        "category": "Centralni Nervni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "7.5 mg",
+        "price": "380",
+        "composition": "Zopiklon 7.5mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "43200-80-2",
+        "image": "/products/zop7.5mg.png",
+        "additionalImages": [
+            "/products/zop7.5mg_2.jpeg",
+            "/products/zop7.5mg_3.webp"
+        ],
+        "metaTitle": "Buy Zop 7.5 mg Tablet Online | Zopiclone for Insomnia | Hab Pharma",
+        "metaDescription": "Buy Zop 7.5 mg (Zopiklon) tablete online. Ne-benzodiazepinski hipnotik za kratkotrajno lečenje nesanice. Kvalitetna pomoć za spavanje od Hab Pharma.",
+        "description": "Zop 7.5 mg Tableta sadrži Zopiklon, ne-benzodiazepinski hipnotički agens koji se koristi za kratkotrajno lečenje nesanice koju karakteriše teškoća sa uspavljivanjem.",
+        "slug": "zop-7-5",
+        "overview": [
+            "Zop 7.5 mg sadrži Zopiklon, lek koji vam pomaže da brže zaspite i ostanete u snu tokom cele noći.",
+            "Pripada klasi lekova poznatih kao 'Z-lekovi' (ne-benzodiazepinski hipnotici) i koristi se za kratkotrajno lečenje nesanice.",
+            "Ovaj lek se obično propisuje kada su poteškoće sa spavanjem ozbiljne, onesposobljavajuće ili izazivaju ekstremni stres.",
+            "Doza od 7.5 mg je standardna doza za odrasle za lečenje nesanice.",
+            "Trajanje lečenja je obično kratko, u rasponu od nekoliko dana do maksimalno 4 nedelje, kako bi se izbegla tolerancija i zavisnost.",
+            "Pomaže u poboljšanju kvaliteta i trajanja sna, što dovodi do boljeg funkcionisanja tokom dana.",
+            "Zopiklon je poznat po svom brzom početku dejstva, obično deluje u roku od sat vremena od primene."
+        ],
+        "sideEffects": [
+            "Gorak ili metalni ukus u ustima je veoma čest i karakterističan neželjeni efekat.",
+            "Pospanost tokom dana, vrtoglavica ili osećaj 'mamurluka' mogu se javiti sledećeg dana.",
+            "Neki korisnici mogu osetiti suvoću usta.",
+            "Moguća je mučnina ili gastrointestinalni poremećaji.",
+            "Ređe, korisnici mogu iskusiti konfuziju, oštećenje pamćenja ili neobične snove.",
+            "Retki, ali ozbiljni neželjeni efekti uključuju složena ponašanja u snu poput hodanja u snu, vožnje u snu ili bavljenja drugim aktivnostima dok nisu potpuno budni."
+        ],
+        "administration": [
+            "Uzmite Zop neposredno pre spavanja, samo kada imate celu noć (najmanje 7-8 sati) na raspolaganju za spavanje.",
+            "Progutajte tabletu celu sa čašom vode.",
+            "Ne uzimajte sa ili neposredno nakon obilnog obroka bogatog mastima, jer može usporiti apsorpciju.",
+            "Uobičajena doza za odrasle je jedna tableta od 7.5 mg jednom dnevno.",
+            "Nemojte prekoračiti preporučenu dozu ili trajanje lečenja.",
+            "Potpuno izbegavajte alkohol dok uzimate ovaj lek, jer može povećati neželjene efekte."
+        ],
+        "warnings": [
+            "Ne koristite ako ste alergični na Zopiklon ili bilo koji drugi sastojak.",
+            "Zopiklon ima potencijal za zloupotrebu i zavisnost, posebno pri dugotrajnoj upotrebi. Koristite tačno onako kako je propisano.",
+            "Možete iskusiti 'povratnu' nesanicu nekoliko dana nakon prekida lečenja.",
+            "Izbegavajte vožnju ili rukovanje mašinama dok ne saznate kako ovaj lek utiče na vas. Sledećeg dana se i dalje možete osećati pospano.",
+            "Ne kombinujte sa alkoholom ili drugim sedativima.",
+            "Koristite sa oprezom kod pacijenata sa oštećenjem jetre ili bubrega, mijastenijom gravis ili teškim respiratornim problemima.",
+            "Ne preporučuje se tokom trudnoće ili dojenja."
+        ],
+        "how_it_works": [
+            "Zopiklon je derivat ciklopirolona koji deluje kao hipnotički agens.",
+            "Deluje tako što se vezuje za GABA-A receptore u mozgu na mestu različitom od benzodiazepina.",
+            "GABA (gama-aminobuterna kiselina) je primarni inhibitorni neurotransmiter u mozgu, odgovoran za smirivanje nervne aktivnosti.",
+            "Pojačavanjem efekata GABA, Zopiklon povećava inhibitornu neurotransmisiju, što dovodi do sedacije, indukcije sna i opuštanja mišića.",
+            "Njegov selektivni profil vezivanja doprinosi njegovoj efikasnosti u promovisanju sna sa relativno manjim rizikom od određenih neželjenih efekata u poređenju sa starijim sedativima."
+        ],
+        "tips": [
+            "Čuvati na sobnoj temperaturi dalje od svetlosti i vlage.",
+            "Ne uzimajte ga osim ako niste spremni da spavate celu noć.",
+            "Izbegavajte aktivnosti koje zahtevaju mentalnu budnost dok efekti potpuno ne nestanu.",
+            "Ako često osećate jutarnju pospanost, posavetujte se sa svojim lekarom; vaša doza možda treba prilagođavanje.",
+            "Nemojte naglo prestati da uzimate ovaj lek nakon dugotrajne upotrebe, jer se mogu javiti simptomi ustezanja. Vaš lekar će vas uputiti kako da postepeno smanjite dozu."
+        ]
+    },
+    "zop-10": {
+        "id": "127",
+        "name": {
+            "en": "Zopisign 10 mg Tablet"
+        },
+        "category": "Centralni Nervni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "10 mg",
+        "price": "450",
+        "composition": "Zopiklon 10mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "43200-80-2",
+        "image": "/products/zopisign-10mg.jpg",
+        "additionalImages": [
+            "/products/zopisign-10mg_2.jpg",
+            "/products/zopisign-10mg_3.webp"
+        ],
+        "metaTitle": "Buy Zopisign 10 mg Online | High Strength Zopiclone | Hab Pharma",
+        "metaDescription": "Buy Zopisign 10 mg (Zopiklon) tablete online. Pomoć za spavanje veće jačine na recept za tešku nesanicu. Od Hab Pharma.",
+        "description": "Zopisign 10 mg sadrži veću jačinu Zopiklona, indiciran za kratkotrajno lečenje teške nesanice gde niža doza (7,5 mg) nije dovoljna.",
+        "slug": "zop-10",
+        "overview": [
+            "Zopisign 10 mg je formulacija Zopiklona veće jačine za pacijente sa teškom nesanicom.",
+            "Indikovan je kada standardna doza od 7,5 mg ne obezbeđuje adekvatnu indukciju ili održavanje sna.",
+            "Ova veća jačina pruža snažnije sedativne efekte za osobe sa značajnim poteškoćama sa spavanjem.",
+            "Kao i kod standardne doze, namenjena je samo za kratkotrajnu upotrebu (do 4 nedelje) zbog rizika od tolerancije i zavisnosti.",
+            "Jačina od 10 mg treba da se koristi samo pod strogim medicinskim nadzorom.",
+            "Nudi poboljšanu efikasnost za pacijente koji nisu adekvatno odgovorili na niže doze.",
+            "Ova veća potencija može rezultirati bržim početkom dejstva i produženim snom."
+        ],
+        "sideEffects": [
+            "Izraženiji gorak ili metalni ukus u ustima.",
+            "Povećana verovatnoća za pospanost, sedaciju i efekat 'mamurluka' sledećeg dana.",
+            "Veći rizik od vrtoglavice, konfuzije i oštećenja pamćenja.",
+            "Veći potencijal za složena ponašanja vezana za san (npr. hodanje u snu, vožnja u snu).",
+            "Povećana šansa za padove, posebno kod starijih ili oslabljenih pacijenata.",
+            "Mučnina i gastrointestinalne tegobe mogu biti češće.",
+            "Veći rizik od razvoja tolerancije i zavisnosti pri produženoj upotrebi."
+        ],
+        "administration": [
+            "Uzimati tačno onako kako je propisano, neposredno pre spavanja sa najmanje 7-8 sati raspoloživih za spavanje.",
+            "Uobičajena doza je jedna tableta od 10 mg, ali ovo treba uzeti samo ako vam je lekar posebno propisao.",
+            "Progutajte tabletu celu sa vodom.",
+            "Ne uzimati sa hranom, posebno obrocima bogatim mastima, jer može odložiti početak dejstva.",
+            "Nikada ne uzimajte više od jedne doze u periodu od 24 sata.",
+            "Nemojte prekoračiti propisanu dozu ili trajanje."
+        ],
+        "warnings": [
+            "Ova veća jačina nosi povećan rizik od psihomotornog oštećenja sledećeg dana, uključujući sposobnost vožnje.",
+            "Kontraindikovano kod pacijenata sa teškim oštećenjem jetre, apnejom u snu ili mijastenijom gravis.",
+            "Veći potencijal za zloupotrebu i zavisnost; koristiti samo pod strogim medicinskim nadzorom.",
+            "Ne kombinovati sa alkoholom, opioidima ili drugim depresorima CNS-a.",
+            "Koristite sa izuzetnim oprezom kod starijih ili oslabljenih pacijenata zbog rizika od pada.",
+            "Ne preporučuje se kao početna doza za nove pacijente."
+        ],
+        "how_it_works": [
+            "Zopisign 10 mg isporučuje veću koncentraciju Zopiklona, što dovodi do većeg potenciranja GABAergičke neurotransmisije.",
+            "Povećana doza rezultira opsežnijim vezivanjem za GABA-A receptore, proizvodeći jači inhibitorni efekat na centralni nervni sistem.",
+            "Ovo dovodi do izraženije sedacije i hipnoze, što je neophodno za lečenje teške, terapijski rezistentne nesanice.",
+            "Mehanizam dejstva je isti kao kod niže jačine, ali sa pojačanim efektima na arhitekturu i kontinuitet sna."
+        ],
+        "tips": [
+            "Koristite ovu jačinu samo pod posebnim receptom i vođstvom zdravstvenog radnika.",
+            "Budite izuzetno oprezni u vezi sa vožnjom ili rukovanjem mašinama sledećeg dana.",
+            "Ako iskusite bilo kakvo neobično ponašanje u snu, prestanite da uzimate lek i odmah obavestite svog lekara.",
+            "Ne koristite alkohol ili druge sedative.",
+            "Vodite evidenciju o svojim obrascima spavanja i svim neželjenim efektima kako biste ih podelili sa svojim lekarom.",
+            "Čuvati na sigurnom mestu zbog većeg potencijala za zloupotrebu."
+        ]
+    },
+     "modafinil": {
+        "id": "128",
+        "name": {
+            "en": "Modafinil 200 mg Tablet"
+        },
+        "category": "Centralni Nervni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "650",
+        "composition": "Modafinil 200mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "68693-11-8",
+        "image": "/products/Modafinil200.jpeg",
+        "additionalImages": [
+            "/products/Modafinil200_2.jpg",
+            "/products/Modafinil200_3.webp"
+        ],
+        "metaTitle": "Buy Modafinil 200 mg Online | Wakefulness Promoting Agent | Hab Pharma",
+        "metaDescription": "Buy Modafinil 200 mg tablete online. Lek koji promoviše budnost za narkolepsiju, poremećaj rada u smenama i OSA. Kvalitet od Hab Pharma.",
+        "description": "Modafinil 200 mg je lek koji promoviše budnost i koristi se za poboljšanje budnosti kod odraslih sa prekomernom pospanošću povezanom sa narkolepsijom, opstruktivnom apnejom u snu i poremećajem rada u smenama.",
+        "slug": "modafinil",
+        "overview": [
+            "Modafinil je lek sličan stimulansima centralnog nervnog sistema koji promoviše budnost.",
+            "Prvenstveno se propisuje za lečenje prekomerne dnevne pospanosti uzrokovane narkolepsijom, opstruktivnom apnejom u snu (OSA) i poremećajem sna pri radu u smenama (SWSD).",
+            "Za OSA, koristi se kao dodatak standardnim tretmanima kao što je CPAP, a ne kao zamena.",
+            "Jačina od 200 mg je standardna i najčešće propisivana doza za odrasle.",
+            "Modafinil pomaže u poboljšanju budnosti i smanjenju tendencije za spavanjem tokom dana.",
+            "Ima manji potencijal za zloupotrebu u poređenju sa tradicionalnim stimulansima poput amfetamina.",
+            "Efekti jedne doze mogu trajati 12-15 sati, obezbeđujući budnost tokom celog dana.",
+            "Nije lek za ove poremećaje spavanja, već pomaže u upravljanju simptomom prekomerne pospanosti."
+        ],
+        "sideEffects": [
+            "Glavobolja je najčešće prijavljeni neželjeni efekat, posebno na početku lečenja.",
+            "Može se javiti nervoza, anksioznost, agitacija ili nesanica.",
+            "Može se osetiti mučnina, dijareja ili suvoća usta.",
+            "Moguća je vrtoglavica ili osećaj nesvestice.",
+            "Smanjen apetit i gubitak težine mogu se javiti pri produženoj upotrebi.",
+            "Kod nekih osoba može doći do ubrzanog rada srca ili palpitacija.",
+            "Ozbiljni osipi na koži (poput Stevens-Johnsonovog sindroma) su retki, ali zahtevaju hitnu medicinsku pomoć."
+        ],
+        "administration": [
+            "Uzimajte Modafinil tačno onako kako vam je lekar propisao.",
+            "Uobičajena doza za odrasle je 200 mg uzeta jednom dnevno.",
+            "Za narkolepsiju i OSA, uzimajte dozu ujutru.",
+            "Za poremećaj rada u smenama, uzmite dozu otprilike jedan sat pre početka radne smene.",
+            "Progutajte tablete cele sa vodom. Mogu se uzimati sa ili bez hrane.",
+            "Nemojte drobiti ili žvakati tablete.",
+            "Uzimajte u isto vreme svakog dana radi postizanja doslednih efekata."
+        ],
+        "warnings": [
+            "Ne koristite ako ste alergični na Modafinil ili armodafinil.",
+            "Može se javiti ozbiljan osip koji zahteva hospitalizaciju; prekinite upotrebu i odmah potražite medicinsku pomoć ako se pojavi osip.",
+            "Ne preporučuje se pacijentima sa istorijom hipertrofije leve komore ili određenim srčanim problemima.",
+            "Koristite sa oprezom kod pacijenata sa oštećenjem jetre ili bubrega; može biti potrebna niža doza.",
+            "Modafinil može smanjiti efikasnost hormonskih kontraceptiva (pilule, implanti, spirale). Koristite alternativnu ili dodatnu nehormonsku kontracepciju tokom lečenja i mesec dana nakon prekida.",
+            "Izbegavajte alkohol dok uzimate ovaj lek."
+        ],
+        "how_it_works": [
+            "Tačan mehanizam dejstva Modafinila nije u potpunosti razjašnjen, ali se razlikuje od mehanizma klasičnih simpatomimetičkih stimulansa poput amfetamina.",
+            "Veruje se da deluje povećanjem nivoa dopamina u mozgu inhibiranjem njegovog ponovnog preuzimanja, ali to čini na selektivniji i slabiji način od klasičnih stimulansa.",
+            "Takođe utiče na druge neurotransmiterske sisteme, uključujući oreksin, histamin i norepinefrin, koji su uključeni u regulaciju budnosti i sna.",
+            "Smatra se da su njegovi efekti promocije budnosti posredovani kroz aktivaciju specifičnih regiona mozga uključenih u budnost."
+        ],
+        "tips": [
+            "Čuvati na sobnoj temperaturi dalje od vlage i toplote.",
+            "Uzimajte rano tokom dana (za dnevnu pospanost) kako biste izbegli nesanicu.",
+            "Ako propustite dozu i kasno je tokom dana, preskočite propuštenu dozu kako biste izbegli poremećaj sna. Uzmite sledeću dozu u redovno vreme sledećeg dana.",
+            "Redovno proveravajte krvni pritisak dok uzimate ovaj lek.",
+            "Ako koristite hormonsku kontracepciju, koristite pouzdanu nehormonsku rezervnu metodu kontracepcije.",
+            "Odmah prijavite svom lekaru sve promene na koži, promene raspoloženja ili znake srčanih problema."
+        ]
+    },
+    "armodafinil": {
+        "id": "hab-armodafinil",
+        "name": {
+            "en": "Armodafinil 150 mg Tablet"
+        },
+        "category": "Centralni Nervni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "150 mg",
+        "price": "750",
+        "composition": "Armodafinil 150mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "112111-43-0",
+        "image": "/products/armodafinil-150-mg.webp",
+        "additionalImages": [
+            "/products/armodafinil-150-mg_3.jpg",
+            "/products/armodafinil-150-mg_2.jpg"
+        ],
+        "metaTitle": "Buy Armodafinil 150 mg Online | R-Modafinil | Hab Pharma",
+        "metaDescription": "Buy Armodafinil 150 mg tablete online. R-enantiomer modafinila za dugotrajniju promociju budnosti kod narkolepsije, OSA i SWSD. Od Hab Pharma.",
+        "description": "Armodafinil 150 mg sadrži R-enantiomer modafinila. To je lek koji promoviše budnost i koristi se za poboljšanje budnosti kod odraslih sa prekomernom pospanošću povezanom sa narkolepsijom, opstruktivnom apnejom u snu i poremećajem rada u smenama.",
+        "slug": "armodafinil",
+        "overview": [
+            "Armodafinil je čisti (R)-enantiomer modafinila, koji pruža duže trajanje dejstva.",
+            "Odobren je za iste indikacije kao i modafinil: poboljšanje budnosti kod narkolepsije, opstruktivne apneje u snu (OSA) i poremećaja sna pri radu u smenama (SWSD).",
+            "Doza od 150 mg armodafinila je približno terapijski ekvivalentna 200 mg modafinila.",
+            "Dizajniran je da obezbedi trajniju i produženu budnost tokom dana.",
+            "Zbog dužeg poluživota, može biti posebno koristan za pacijente kojima je potrebna budnost tokom celog dana.",
+            "Za neke pojedince, promoviše budnost sa glatkijim profilom početka i prestanka dejstva u poređenju sa racemičnim modafinilom.",
+            "Ova formulacija obezbeđuje konzistentnije nivoe u krvi tokom perioda doziranja."
+        ],
+        "sideEffects": [
+            "Profil neželjenih efekata je sličan modafinilu.",
+            "Glavobolja, mučnina, vrtoglavica i nesanica su česti.",
+            "Može se javiti anksioznost i nervoza.",
+            "Suvoća usta je često prijavljivani neželjeni efekat.",
+            "Kod osetljivih osoba može doći do ubrzanog rada srca.",
+            "Kao i kod modafinila, ozbiljni osipi na koži su redak, ali ozbiljan rizik."
+        ],
+        "administration": [
+            "Uzimajte Armodafinil tačno onako kako je propisano, obično jednom dnevno.",
+            "Standardna doza je 150 mg uzeta u isto vreme svakog dana.",
+            "Za narkolepsiju i OSA, uzimajte ujutru.",
+            "Za SWSD, uzmite otprilike jedan sat pre početka radne smene.",
+            "Progutajte tablete cele sa vodom; nemojte drobiti ili žvakati.",
+            "Može se uzimati sa ili bez hrane.",
+            "Izbegavajte uzimanje popodne ili uveče kako biste sprečili nesanicu."
+        ],
+        "warnings": [
+            "Ne koristite ako imate istoriju alergijske reakcije na modafinil ili armodafinil.",
+            "Prekinite upotrebu i odmah potražite medicinsku pomoć ako se pojavi osip na koži.",
+            "Oprez kod pacijenata sa srčanim problemima, oštećenjem jetre ili bubrega.",
+            "Smanjuje efikasnost hormonskih kontraceptiva; koristite alternativnu kontracepciju.",
+            "Izbegavajte konzumiranje alkohola.",
+            "Ne preporučuje se tokom trudnoće ili dojenja."
+        ],
+        "how_it_works": [
+            "Armodafinil sadrži samo (R)-enantiomer modafinila, koji ima duži poluživot (približno 15 sati) od (S)-enantiomera.",
+            "(R)-enantiomer ima veći afinitet vezivanja za transporter dopamina, što doprinosi njegovim efektima promocije budnosti.",
+            "Ova selektivnost rezultira trajnijom inhibicijom ponovnog preuzimanja dopamina i dužim trajanjem dejstva u poređenju sa racemičnim modafinilom.",
+            "Obezbeđuje stabilne koncentracije u krvi koje se održavaju tokom tipičnih sati budnosti, zahtevajući samo jednom dnevno doziranje."
+        ],
+        "tips": [
+            "Čuvati na hladnom i suvom mestu.",
+            "Uzimajte prvo ujutru za najbolje rezultate u lečenju dnevne pospanosti.",
+            "Koristite pouzdanu nehormonsku kontracepciju ako je potrebno.",
+            "Održavajte dobru hidrataciju.",
+            "Nemojte deliti ovaj lek sa drugima.",
+            "Odmah prijavite svom lekaru sve neobične simptome, posebno promene na koži ili znake srčanih problema."
+        ]
+    },
+    "cobra-120": {
+        "id": "hab-cobra-120",
+        "name": {
+            "en": "Cobra 120 mg Tablet"
+        },
+        "category": "Reproduktivni Sistem i Urinarni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "120 mg",
+        "price": "580",
+        "composition": "Sildenafil Citrat 120mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-120.png",
+        "additionalImages": [
+            "/products/cobra-120_2.png",
+            "/products/cobra-120_3.png"
+        ],
+        "metaTitle": "Buy Cobra 120 mg Online | Sildenafil for ED | Hab Pharma",
+        "metaDescription": "Buy Cobra 120 mg (Sildenafil Citrat) tablete online. Tretman srednje jačine za erektilnu disfunkciju. Visok kvalitet od Hab Pharma.",
+        "description": "Cobra 120 mg sadrži Sildenafil Citrat, inhibitor PDE5 koji se koristi za lečenje erektilne disfunkcije (impotencije) kod odraslih muškaraca.",
+        "slug": "cobra-120",
+        "overview": [
+            "Cobra 120 mg je lek koji sadrži Sildenafil Citrat, koristi se za pomoć muškarcima da postignu i održe erekciju dovoljnu za seksualnu aktivnost.",
+            "Pripada klasi lekova poznatih kao inhibitori fosfodiesteraze tipa 5 (PDE5).",
+            "Jačina od 120 mg nudi srednju opciju, potencijalno pogodnu za one kojima je 100 mg nedovoljno, ali ne zahtevaju maksimalnu dozu od 200 mg.",
+            "Deluje samo uz seksualnu stimulaciju i ne povećava seksualnu želju.",
+            "Ova formulacija je dizajnirana da pruži pouzdane i dosledne efekte za upravljanje erektilnom disfunkcijom.",
+            "Efekti obično traju do 4-6 sati, pružajući dovoljan prozor za seksualnu aktivnost.",
+            "Treba ga koristiti pod vođstvom zdravstvenog radnika."
+        ],
+        "sideEffects": [
+            "Glavobolja i crvenilo lica su najčešći neželjeni efekti.",
+            "Može se javiti začepljenost nosa ili curenje iz nosa.",
+            "Neki korisnici mogu osetiti probavne smetnje ili žgaravicu.",
+            "Vrtoglavica ili osećaj nesvestice, posebno pri brzom ustajanju.",
+            "Poremećaji vida, poput plavičaste nijanse u vidu ili povećane osetljivosti na svetlost.",
+            "Bol u leđima ili bolovi u mišićima mogu se javiti, obično 12-24 sata nakon uzimanja leka."
+        ],
+        "administration": [
+            "Uzmite jednu tabletu Cobra 120 mg otprilike 30-60 minuta pre planirane seksualne aktivnosti.",
+            "Progutajte tabletu celu sa čašom vode.",
+            "Za najbolju i najbržu apsorpciju, uzimajte na prazan stomak. Obrok bogat mastima može odložiti početak dejstva.",
+            "Ne uzimajte više od jedne doze u periodu od 24 sata.",
+            "Seksualna stimulacija je neophodna da bi lek bio efikasan."
+        ],
+        "warnings": [
+            "Ne uzimajte Cobra ako uzimate bilo koji oblik lekova sa nitratima (npr. nitroglicerin za bol u grudima), jer kombinacija može izazvati nagli i opasan pad krvnog pritiska.",
+            "Ne koristite ako ste žena ili dete.",
+            "Posavetujte se sa svojim lekarom pre upotrebe ako imate srčanih problema, tešku bolest jetre ili bubrega, nizak krvni pritisak ili nedavnu istoriju moždanog ili srčanog udara.",
+            "Odmah potražite medicinsku pomoć ako osetite iznenadni gubitak vida ili sluha, ili ako imate erekciju koja traje duže od 4 sata (prijapizam).",
+            "Izbegavajte konzumiranje alkohola pre seksualne aktivnosti, jer može povećati rizik od neželjenih efekata."
+        ],
+        "how_it_works": [
+            "Sildenafil Citrat, aktivni sastojak u Cobri, je snažan i selektivni inhibitor PDE5.",
+            "Tokom seksualne stimulacije, oslobađa se azot-monoksid u corpus cavernosum penisa.",
+            "Ovo pokreće proizvodnju cGMP (ciklični gvanozin monofosfat), koji opušta glatke mišiće i omogućava povećan protok krvi u tkiva penisa, što dovodi do erekcije.",
+            "Enzim PDE5 normalno razgrađuje cGMP, čime se završava erekcija.",
+            "Inhibiranjem PDE5, Cobra omogućava akumulaciju cGMP-a, pojačavajući i produžavajući prirodni odgovor na erekciju na seksualnu stimulaciju."
+        ],
+        "tips": [
+            "Čuvati na sobnoj temperaturi, dalje od vlage i toplote.",
+            "Ako ste novi u lekovima za ED, preporučljivo je da počnete sa nižom dozom (poput 50mg ili 100mg) kako biste procenili svoju toleranciju, prema uputstvu vašeg lekara.",
+            "Izbegavajte grejpfrut ili sok od grejpfruta, jer mogu povećati nivoe sildenafila u krvi i rizik od neželjenih efekata.",
+            "Ne uzimajte ovaj lek ako nemate erektilnu disfunkciju.",
+            "Čuvati van domašaja dece."
+        ]
+    },
+    "cobra-200": {
+        "id": "hab-cobra-200",
+        "name": {
+            "en": "Cobra 200 mg Tablet"
+        },
+        "category": "Reproduktivni Sistem i Urinarni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "720",
+        "composition": "Sildenafil Citrat 200mg",
+        "form": "Tableta",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-200.webp",
+        "additionalImages": [
+            "/products/cobra-200-2.webp",
+            "/products/cobra-200_3.jpg"
+        ],
+        "metaTitle": "Buy Cobra 200 mg Online | Maximum Strength Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra 200 mg (Sildenafil Citrat) tablete online. Formulacija maksimalne jačine za tešku erektilnu disfunkciju. Od Hab Pharma.",
+        "description": "Cobra 200 mg je formulacija maksimalne jačine Sildenafil Citrata kompanije Hab Pharma, indikovana za lečenje erektilne disfunkcije kod odraslih muškaraca kojima je potrebna veća doza.",
+        "slug": "cobra-200",
+        "overview": [
+            "Cobra 200 mg je tableta Sildenafila najveće jačine dostupna od kompanije Hab Pharma.",
+            "Ova maksimalna doza je obično rezervisana za muškarce sa teškom erektilnom disfunkcijom koji nisu postigli zadovoljavajuće rezultate sa nižim jačinama (poput 100mg ili 120mg).",
+            "Pruža najsnažniju inhibiciju enzima PDE5 za maksimalan efekat na protok krvi u penisu.",
+            "Jačina od 200 mg nudi najduže trajanje dejstva, potencijalno traje do 8-12 sati kod nekih osoba.",
+            "Ova formulacija treba da se koristi samo pod strogim medicinskim nadzorom zbog povećanog rizika od neželjenih efekata.",
+            "Može biti pogodna za pacijente sa značajnim vaskularnim oštećenjem ili one koji su razvili toleranciju na niže doze."
+        ],
+        "sideEffects": [
+            "Povećana verovatnoća i intenzitet svih uobičajenih neželjenih efekata, uključujući jaku glavobolju i crvenilo.",
+            "Značajniji i češći poremećaji vida, poput plavičaste nijanse vida i osetljivosti na svetlost.",
+            "Veći rizik od vrtoglavice i većeg pada krvnog pritiska, što potencijalno može izazvati nesvesticu.",
+            "Povećana šansa za prijapizam (produžena, bolna erekcija), što je medicinsko hitno stanje.",
+            "Izraženija začepljenost nosa i dispepsija.",
+            "Veći potencijal za bol u leđima i bolove u mišićima."
+        ],
+        "administration": [
+            "Uzimati tačno onako kako je propisano, obično 30-60 minuta pre seksualne aktivnosti.",
+            "Ne uzimajte više od jedne tablete za 24 sata.",
+            "Ova visoka doza ne bi trebalo da bude početna doza za bilo kog pacijenta koji je nov u terapiji Sildenafilom.",
+            "Uzimati na prazan stomak radi optimalne apsorpcije; izbegavajte obroke bogate mastima.",
+            "Progutajte tabletu celu sa punom čašom vode.",
+            "Strogo izbegavajte alkohol."
+        ],
+        "warnings": [
+            "Apsolutna kontraindikacija sa nitratima ili donorima azot-monoksida.",
+            "Nije za upotrebu kod pacijenata sa teškim kardiovaskularnim oboljenjima, nedavnim infarktom miokarda, moždanim udarom ili po život opasnim aritmijama.",
+            "Kontraindikovano kod pacijenata sa teškim oštećenjem jetre ili završnom fazom bolesti bubrega koja zahteva dijalizu.",
+            "Visok rizik od ozbiljnih neželjenih događaja; koristiti sa izuzetnim oprezom.",
+            "Ne preporučuje se pacijentima sa hipotenzijom (krvni pritisak <90/50 mmHg).",
+            "Koristite sa izuzetnim oprezom ako uzimate alfa-blokatore ili druge antihipertenzive, jer može doći do teške hipotenzije.",
+            "Ne koristite ako imate istoriju nearteritične anteriorne ishemične optičke neuropatije (NAION) ili retinitis pigmentosa."
+        ],
+        "how_it_works": [
+            "Cobra 200 mg pruža maksimalnu inhibiciju PDE5, što dovodi do gotovo potpune blokade enzima u tkivima penisa.",
+            "Visoka doza osigurava da se cGMP akumulira do maksimalnih nivoa tokom seksualne stimulacije, što rezultira najizraženijim mogućim opuštanjem glatkih mišića i širenjem krvnih sudova.",
+            "Ovo dovodi do najjačeg i najtrajnijeg odgovora na erekciju.",
+            "Povećana koncentracija u plazmi takođe produžava trajanje dejstva, nudeći duži terapijski prozor."
+        ],
+        "tips": [
+            "Koristite ovu maksimalnu jačinu samo ako vam je specijalista posebno propisao.",
+            "Budite potpuno svesni značajno povećanog rizika od neželjenih efekata.",
+            "Imajte lako dostupne kontakte za hitne slučajeve.",
+            "Pažljivo pratite trajanje svoje erekcije; odmah potražite medicinsku pomoć ako traje duže od 4 sata.",
+            "Ne kombinujte sa bilo kojim drugim tretmanima za ED.",
+            "Čuvati na sigurnom mestu i van domašaja dece."
+        ]
+    },
+     "cobra-jelly": {
+        "id": "hab-cobra-jelly",
+        "name": {
+            "en": "Cobra Oral Jelly 100 mg"
+        },
+        "category": "Reproduktivni Sistem i Urinarni Sistem",
+        "brand": "Hab Pharma",
+        "dosage": "100 mg",
+        "price": "520",
+        "composition": "Sildenafil Citrat 100mg",
+        "form": "Oralni Žele",
+        "pack_size": "10 Kesica (po kutiji)",
+        "casId": "139755-83-2",
+        "image": "/products/cobra_jelly.png",
+        "additionalImages": [
+            "/products/cobra_jelly2.png",
+            "/products/cobra_jelly.png"
+        ],
+        "metaTitle": "Buy Cobra Oral Jelly 100 mg Online | Fast-Acting Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra Oral Jelly 100 mg online. Sildenafil Citrat u brzoapsorbujućem, praktičnom žele formatu za brz tretman ED. Različiti ukusi. Od Hab Pharma.",
+        "description": "Cobra Oral Jelly 100 mg je praktična i brzodelujuća formulacija Sildenafil Citrata za lečenje erektilne disfunkcije. Dizajniran je za bržu apsorpciju i lakoću upotrebe.",
+        "slug": "cobra-jelly",
+        "overview": [
+            "Cobra Oral Jelly nudi popularnu alternativu tradicionalnim tabletama Sildenafila, posebno za one koji imaju poteškoća sa gutanjem pilula.",
+            "Svaka kesica sadrži 100 mg Sildenafil Citrata u obliku želea prijatnog ukusa, spremnog za konzumiranje.",
+            "Formulacija u želeu je dizajnirana da se apsorbuje brže od tableta, potencijalno dovodeći do bržeg početka dejstva (za neke osobe za samo 15-20 minuta).",
+            "Dolazi u različitim ukusima, čineći iskustvo prijatnijim i diskretnijim.",
+            "Praktične kesice sa pojedinačnom dozom lako se nose i konzumiraju bilo gde, pružajući spontanost.",
+            "Kao i tablete, zahteva seksualnu stimulaciju da bi bio efikasan.",
+            "Trajanje dejstva je slično tabletama, traje 4-6 sati."
+        ],
+        "sideEffects": [
+            "Profil neželjenih efekata je isti kao kod tableta Sildenafila, ali brža apsorpcija može dovesti do bržeg početka neželjenih efekata poput glavobolje i crvenila.",
+            "Uobičajeni neželjeni efekti uključuju glavobolju, crvenilo lica, začepljenost nosa i probavne smetnje.",
+            "Takođe se mogu javiti vrtoglavica i poremećaji vida (npr. plavičasta nijansa).",
+            "Brža apsorpcija obično ne menja ozbiljnost ili vrstu neželjenih efekata."
+        ],
+        "administration": [
+            "Pocepajte ili odsecite ugao jedne kesice i istisnite ceo sadržaj direktno u usta.",
+            "Žele možete odmah progutati ili ostaviti da se rastvori u ustima radi potencijalno brže apsorpcije.",
+            "Preporučuje se uzimanje otprilike 15-30 minuta pre planirane seksualne aktivnosti.",
+            "Ne uzimajte sa hranom radi najbržeg efekta; ako ste nedavno jeli, posebno obrok bogat mastima, početak dejstva može biti odložen.",
+            "Ne uzimajte više od jedne kesice u periodu od 24 sata.",
+            "Seksualna stimulacija je neophodna da bi lek delovao."
+        ],
+        "warnings": [
+            "Ista upozorenja i kontraindikacije za tablete Sildenafila važe i za oralni žele.",
+            "Ne koristite ako uzimate nitrate za bol u grudima.",
+            "Nije za upotrebu kod žena ili dece.",
+            "Posavetujte se sa lekarom pre upotrebe ako imate srčanih problema, tešku bolest jetre ili bubrega, ili istoriju moždanog udara.",
+            "Odmah potražite medicinsku pomoć u slučaju produženih erekcija koje traju duže od 4 sata."
+        ],
+        "how_it_works": [
+            "Mehanizam dejstva Cobra Oral Jelly je identičan tabletama Sildenafila: inhibira enzim PDE5, pojačavajući efekat azot-monoksida i povećavajući nivoe cGMP u penisu.",
+            "Ovo dovodi do opuštanja glatkih mišića i povećanog protoka krvi tokom seksualne stimulacije, olakšavajući erekciju.",
+            "Ključna razlika je način isporuke. Žele se apsorbuje direktno kroz oralnu mukozu i sluzokožu želuca, potencijalno zaobilazeći inicijalni metabolizam u jetri, što može dovesti do bržeg porasta nivoa u krvi i bržeg početka dejstva u poređenju sa standardnim tabletama."
+        ],
+        "tips": [
+            "Čuvati na hladnom i suvom mestu dalje od direktne sunčeve svetlosti. Ne čuvati u frižideru.",
+            "Pažljivo pocepajte kesicu na zarezu da biste izbegli prosipanje.",
+            "Konzumirajte celu kesicu za punu dozu od 100 mg.",
+            "Ako ste novi u lekovima za ED, važno je da prvo odredite optimalnu dozu sa svojim lekarom koristeći tablete, jer žele nudi manje fleksibilnosti u doziranju.",
+            "Čuvajte sve lekove van domašaja dece. Aromatizovani žele može biti posebno privlačan za njih.",
+            "Prazne kesice propisno odložite."
+        ]
+    },
+    "testogel": {
+        "id": "hab-testogel",
+        "name": {
+            "en": "Testosign Soft Gel 40 mg"
+        },
+        "category": "Endokrini Problemi",
+        "brand": "Hab Pharma",
+        "dosage": "40 mg",
+        "price": "1200",
+        "composition": "Testosteron Undekanoat 40mg",
+        "form": "Meka Gelatin Kapsula",
+        "pack_size": "10 x 10 Kapsula",
+        "casId": "58-22-0",
+        "image": "/products/Testosign-40.webp",
+        "additionalImages": [
+            "/products/Testosign-40_2.jpg",
+            "/products/Testosign-40_3.png"
+        ],
+        "metaTitle": "Buy Testosign Soft Gel 40 mg Online | Testosterone Replacement | Hab Pharma",
+        "metaDescription": "Buy Testosign Soft Gel 40 mg (Testosteron Undekanoat) online. Oralna terapija zamene testosterona za hipogonadizam. Od Hab Pharma.",
+        "description": "Testosign Soft Gel 40 mg sadrži Testosteron Undekanoat, oralnu terapiju zamene testosterona koja je indikovana za muškarce sa hipogonadizmom (nedostatak testosterona).",
+        "slug": "testogel",
+        "overview": [
+            "Testosign Soft Gel je oralni lek za terapiju zamene testosterona (TRT) kod muškaraca koji imaju nizak ili nikakav testosteron zbog određenih medicinskih stanja (hipogonadizam).",
+            "Sadrži Testosteron Undekanoat, oblik testosterona koji, kada se apsorbuje, pomaže u obnavljanju normalnih nivoa testosterona.",
+            "Ova formulacija je dizajnirana da se apsorbuje kroz limfni sistem, zaobilazeći prvi prolazak kroz jetru.",
+            "Jačina od 40 mg je uobičajena početna doza ili doza održavanja, ali tačnu dozu mora odrediti lekar na osnovu individualnih potreba i analiza krvi.",
+            "TRT može pomoći u ublažavanju simptoma niskog testosterona kao što su smanjen libido, umor, loše raspoloženje i gubitak mišićne mase.",
+            "Redovno praćenje nivoa testosterona i drugih zdravstvenih parametara je neophodno tokom lečenja.",
+            "Ovo je lek koji se izdaje samo na recept i zahteva medicinski nadzor."
+        ],
+        "sideEffects": [
+            "Mogu se javiti kožne reakcije ili akne.",
+            "Povećan broj crvenih krvnih zrnaca (policitemija) koji zahteva praćenje.",
+            "Promene na prostati; neophodni su redovni pregledi prostate.",
+            "Može se javiti ginekomastija (povećanje ili osetljivost grudi).",
+            "Edem (zadržavanje tečnosti) je moguć.",
+            "Apneja u snu se može pogoršati kod predisponiranih osoba.",
+            "Promene raspoloženja, uključujući povećanu agresivnost ili razdražljivost.",
+            "Smanjen broj spermatozoida ili neplodnost pri produženoj upotrebi."
+        ],
+        "administration": [
+            "Uzimati tačno onako kako vam je lekar propisao. Doziranje je individualizovano na osnovu nivoa testosterona u krvi i kliničkog odgovora.",
+            "Kapsule treba progutati cele sa vodom, po mogućstvu sa obrokom koji sadrži malo masti radi bolje apsorpcije.",
+            "Ne drobiti niti žvakati kapsule.",
+            "Tipičan raspored doziranja može biti jednom ili dva puta dnevno, kako odredi vaš lekar.",
+            "Ne prestajete da uzimate ovaj lek bez konsultacije sa svojim lekarom."
+        ],
+        "warnings": [
+            "Ovo je kontrolisana supstanca sa potencijalom za zloupotrebu. Koristiti samo pod medicinskim nadzorom.",
+            "Nije za upotrebu kod žena, posebno onih koje jesu ili mogu postati trudne.",
+            "Kontraindikovano kod muškaraca sa rakom prostate ili rakom dojke.",
+            "Potrebne su redovne analize krvi za praćenje nivoa testosterona, broja crvenih krvnih zrnaca i funkcije jetre.",
+            "Može uticati na kontrolu šećera u krvi kod dijabetičara.",
+            "Može povećati rizik od kardiovaskularnih događaja; koristiti sa oprezom kod pacijenata sa srčanim oboljenjima.",
+            "Odmah obavestite svog lekara ako osetite česte ili uporne erekcije, probleme sa disanjem tokom sna ili znake krvnog ugruška."
+        ],
+        "how_it_works": [
+            "Testosign sadrži Testosteron Undekanoat, estar prirodnog muškog hormona, testosterona.",
+            "Kada se uzima oralno, molekul se apsorbuje u limfni sistem, u velikoj meri zaobilazeći prvi prolazak kroz jetru koji bi ga inače inaktivirao.",
+            "Jednom u krvotoku, pretvara se u slobodni testosteron, koji se zatim vezuje za androgene receptore širom tela.",
+            "Ovo vezivanje aktivira ekspresiju gena odgovornih za muške karakteristike, libido, energiju, mišićnu masu i gustinu kostiju.",
+            "Vraćanjem testosterona na normalne fiziološke nivoe, ublažava simptome hipogonadizma."
+        ],
+        "tips": [
+            "Čuvati na sobnoj temperaturi ispod 25°C, dalje od vlage i svetlosti.",
+            "Uzimajte dosledno uz obroke kako biste osigurali pouzdanu apsorpciju.",
+            "Nemojte deliti ovaj lek ni sa kim.",
+            "Vodite dnevnik svojih simptoma i svih neželjenih efekata kako biste ih razgovarali sa svojim lekarom.",
+            "Pohađajte sve zakazane kontrolne preglede i analize krvi.",
+            "Održavajte zdrav način života, uključujući uravnoteženu ishranu i redovnu vežbu, kao deo vašeg ukupnog plana lečenja.",
+            "Čuvati van domašaja dece. Ovo je snažan hormon i treba ga čuvati na sigurnom mestu."
+        ]
+    },
+    "azelax-cream": {
+        "id": "134",
+        "name": {
+            "en": "Azelax - Azelaic Acid Cream"
+        },
+        "category": "Nega Kože",
+        "brand": "Healing Pharma",
+        "dosage": "20% w/w",
+        "price": "249",
+        "composition": "Azelainska Kiselina 20% w/w",
+        "form": "Krema",
+        "pack_size": "Tuba od 20g",
+        "casId": "123-99-9",
+        "image": "/products/azelaic.webp",
+        "additionalImages": [
+            "/products/azelaic_2.webp",
+            "/products/azelaic_3.webp"
+        ],
+        "metaTitle": "Buy Azelax Azelaic Acid Cream 20% Online | Healing Pharma",
+        "metaDescription": "Buy Azelax 20% Krema sa Azelainskom Kiselinom online. Efikasna za akne i rozaceu. Blaga, nekomedogena formula. Od Healing Pharma.",
+        "description": "Azelax Krema sadrži 20% Azelainske Kiseline, prirodne kiseline efikasne u lečenju blagih do umerenih akni i kontroli rozacee.",
+        "slug": "azelax-cream",
+        "overview": [
+            "Azelax Krema sadrži 20% Azelainske Kiseline, dikarboksilnu kiselinu sa antiinflamatornim i antibakterijskim svojstvima.",
+            "Prvenstveno se koristi za lokalni tretman blagih do umerenih inflamatornih akni vulgaris.",
+            "Ova krema pomaže u smanjenju broja lezija akni, uključujući komedone, bele tačke i bubuljice.",
+            "Takođe je efikasna u kontroli papulopustulozne rozacee.",
+            "Azelainska kiselina deluje tako što normalizuje odvajanje ćelija kože unutar folikula dlake, što pomaže u sprečavanju začepljenja.",
+            "Takođe inhibira rast *Cutibacterium acnes*, bakterije uključene u razvoj akni.",
+            "Redovna upotreba može poboljšati teksturu kože i smanjiti postinflamatornu hiperpigmentaciju (tamne mrlje) izazvanu aknama.",
+            "Ova formulacija je nekomedogena, što znači da neće dodatno začepiti pore.",
+            "Jačina od 20% je klinički ispitivana koncentracija za efikasne rezultate.",
+            "Pogodna je za većinu tipova kože, ali se preporučuje test na maloj površini za osetljivu kožu."
+        ],
+        "sideEffects": [
+            "Može se javiti blaga do umerena iritacija kože, kao što je svrab, peckanje ili žarenje, posebno na početku tretmana.",
+            "Neki pojedinci mogu osetiti suvoću, ljuštenje ili perutanje kože.",
+            "Moguć je eritem (crvenilo) na mestu primene.",
+            "Ovi neželjeni efekti su obično privremeni i često se smanjuju sa nastavkom upotrebe.",
+            "Ako je iritacija jaka ili potraje, smanjite učestalost primene ili se posavetujte sa lekarom.",
+            "Kontaktni dermatitis (osip) može se javiti u retkim slučajevima."
+        ],
+        "administration": [
+            "Pre nanošenja kreme, temeljno očistite i osušite zahvaćeno područje kože.",
+            "Nanesite tanak sloj Azelax kreme na celo zahvaćeno područje dva puta dnevno, obično ujutru i uveče.",
+            "Nežno umasirajte kremu u kožu dok se ne upije.",
+            "Izbegavajte kontakt sa očima, ustima i drugim sluzokožama.",
+            "Odmah operite ruke nakon nanošenja kreme.",
+            "Koristite prema uputstvima vašeg zdravstvenog radnika.",
+            "Poboljšanje se obično vidi u roku od 4 nedelje, ali optimalni rezultati mogu potrajati nekoliko nedelja."
+        ],
+        "warnings": [
+            "Samo za spoljašnju upotrebu. Ne gutati.",
+            "Izbegavajte kontakt sa očima, ustima i sluzokožama. Ako dođe do kontakta, temeljno isperite vodom.",
+            "Ako se iritacija kože pojavi ili postane jaka, prekinite upotrebu i posavetujte se sa lekarom.",
+            "Ne nanositi na oštećenu ili iritiranu kožu, uključujući posekotine, ogrebotine ili opekotine od sunca.",
+            "Obavestite svog lekara ako imate poznatu alergiju na Azelainsku kiselinu ili bilo koji drugi sastojak.",
+            "Koristite sa oprezom kod pacijenata sa astmom, jer su prijavljeni veoma retki slučajevi bronhospazma."
+        ],
+        "how_it_works": [
+            "Azelainska kiselina deluje kroz više mehanizama za poboljšanje akni i rozacee.",
+            "Ima antibakterijska svojstva koja pomažu u inhibiciji rasta *Cutibacterium acnes* unutar pilosebacealne jedinice.",
+            "To je kompetitivni inhibitor tirozinaze, što može pomoći u smanjenju proizvodnje melanina, čime se smanjuje postinflamatorna hiperpigmentacija.",
+            "Normalizuje poremećeni proces keratinizacije unutar folikula dlake, smanjujući stvaranje mikrokomedona (prekursora lezija akni).",
+            "Kod rozacee, pomaže u smanjenju inflamacije i papula/pustula, iako je njen tačan mehanizam još uvek u fazi proučavanja.",
+            "Smanjenjem inflamacije i bakterijskog opterećenja, pomaže u čišćenju postojećih lezija i sprečavanju stvaranja novih."
+        ],
+        "tips": [
+            "Čuvati na hladnom i suvom mestu dalje od direktne sunčeve svetlosti.",
+            "Držite tubu dobro zatvorenu kada nije u upotrebi.",
+            "Ako osetite suvoću tokom upotrebe ovog proizvoda, koristite hidratantnu kremu prikladnu za vaš tip kože.",
+            "Ako zaboravite dozu, nanesite je čim se setite. Ako je skoro vreme za sledeću dozu, preskočite propuštenu dozu.",
+            "Ne nanosite okluzivne zavoje ili omote preko tretiranog područja osim ako vam to ne preporuči lekar.",
+            "Tokom tretmana možete koristiti nekomedogenu kozmetiku, ali se uverite da je krema potpuno upijena pre njihovog nanošenja.",
+            "Zaštitite kožu od prekomernog izlaganja suncu i koristite kremu za sunčanje, jer Azelainska kiselina ne štiti od opekotina od sunca."
+        ]
+    },
+    "bonefine-d3-60k": {
+        "id": "135",
+        "name": {
+            "en": "Bonefine Vitamin D3 60,000 IU Capsules"
+        },
+        "category": "Vitamini i Suplementi",
+        "brand": "Healing Pharma",
+        "dosage": "60,000 IU",
+        "price": "210",
+        "composition": "Kolekalciferol (Vitamin D3) 60,000 IU",
+        "form": "Kapsula",
+        "pack_size": "4 Kapsule x Pakovanje od 2",
+        "casId": "67-97-0",
+        "image": "/products/Bonefine.webp",
+        "additionalImages": [
+            "/products/Bonefine.webp",
+            "/products/Bonefine.webp"
+        ],
+        "metaTitle": "Buy Bonefine Vitamin D3 60,000 IU Capsules | Healing Pharma",
+        "metaDescription": "Buy Bonefine D3 60,000 IU kapsule za suplementaciju Vitaminom D. Kolekalciferol visoke jačine za zdravlje kostiju i imunitet. Od Healing Pharma.",
+        "description": "Bonefine Vitamin D3 60,000 IU kapsule pružaju dozu kolekalciferola visoke jačine za lečenje i prevenciju nedostatka Vitamina D.",
+        "slug": "bonefine-d3-60k",
+        "overview": [
+            "Bonefine D3 60,000 IU je suplement visoke potencije koji sadrži Vitamin D3 (kolekalciferol).",
+            "Koristi se za lečenje i prevenciju nedostatka Vitamina D kod odraslih.",
+            "Vitamin D je ključan za apsorpciju kalcijuma i fosfora, neophodnih za održavanje zdravih kostiju i zuba.",
+            "Takođe igra vitalnu ulogu u podršci funkciji imunog sistema i zdravlju mišića.",
+            "Ova formulacija sa visokom dozom se obično propisuje za nedeljno ili mesečno uzimanje, prema uputstvu lekara.",
+            "Nedostatak Vitamina D može dovesti do bolova u kostima, slabosti mišića i povećanog rizika od preloma.",
+            "Adekvatni nivoi Vitamina D su posebno važni za osobe sa ograničenim izlaganjem suncu, starije osobe i one sa određenim medicinskim stanjima.",
+            "Svako pakovanje sadrži 4 kapsule, pružajući pun kurs suplementacije prema uobičajenim režimima.",
+            "Proizvod se proizvodi prema standardima kvaliteta kako bi se osigurala potencija i čistoća."
+        ],
+        "sideEffects": [
+            "Kada se uzima prema uputstvu, neželjeni efekti su retki. Međutim, uzimanje više od preporučene doze može dovesti do hiperkalcemije (visok nivo kalcijuma).",
+            "Simptomi hiperkalcemije mogu uključivati slabost, umor, mučninu, povraćanje, zatvor i učestalo mokrenje.",
+            "Neki pojedinci mogu osetiti metalni ukus ili suvoću usta.",
+            "Alergijske reakcije su veoma retke, ali moguće.",
+            "Kod predisponiranih osoba sa dugotrajnom upotrebom visokih doza mogu se javiti bubrežni kamenci."
+        ],
+        "administration": [
+            "Uzimajte ovaj lek tačno onako kako vam je lekar propisao.",
+            "Tipična doza za lečenje nedostatka je jedna kapsula od 60,000 IU jednom nedeljno tokom 8 nedelja, nakon čega sledi niža doza održavanja.",
+            "Za prevenciju, vaš lekar može preporučiti drugačiji raspored doziranja.",
+            "Kapsule treba progutati cele sa vodom, po mogućstvu sa obrokom koji sadrži masti radi bolje apsorpcije.",
+            "Ne drobiti niti žvakati kapsulu.",
+            "Ne uzimajte više od propisane doze."
+        ],
+        "warnings": [
+            "Ne koristite ako ste alergični na kolekalciferol ili bilo koji drugi sastojak.",
+            "Posavetujte se sa svojim lekarom pre upotrebe ako imate bubrežne kamence, tešku bolest bubrega ili sarkoidozu.",
+            "Visoke doze Vitamina D treba koristiti sa oprezom kod pacijenata sa srčanim oboljenjima.",
+            "Redovne analize krvi mogu biti potrebne za praćenje nivoa Vitamina D i kalcijuma tokom terapije visokim dozama.",
+            "Obavestite svog lekara o svim drugim lekovima koje uzimate, posebno o tiazidnim diureticima i određenim antikonvulzivima."
+        ],
+        "how_it_works": [
+            "Vitamin D3 (kolekalciferol) je vitamin rastvorljiv u mastima koji se u jetri pretvara u kalcidiol (25-hidroksivitamin D).",
+            "Zatim se dalje pretvara u bubrezima u kalcitriol (1,25-dihidroksivitamin D), aktivni oblik vitamina.",
+            "Kalcitriol deluje kao hormon, regulišući apsorpciju kalcijuma i fosfora iz creva.",
+            "Održavanjem adekvatnih nivoa kalcijuma i fosfata, Vitamin D promoviše pravilnu mineralizaciju kostiju i sprečava stanja poput rahitisa kod dece i osteomalacije kod odraslih.",
+            "Vitamin D se takođe vezuje za receptore na imunim ćelijama, utičući na njihovu funkciju i podržavajući zdrav imuni odgovor."
+        ],
+        "tips": [
+            "Čuvati na hladnom i suvom mestu, dalje od svetlosti i vlage.",
+            "Čuvati van domašaja dece.",
+            "Propuštenu dozu uzmite čim se setite. Ako je skoro vreme za sledeću dozu, preskočite propuštenu i nastavite sa redovnim rasporedom. Ne duplirajte dozu.",
+            "Održavajte adekvatan unos kalcijuma putem ishrane ili suplemenata prema savetu vašeg lekara.",
+            "Razgovarajte sa svojim zdravstvenim radnikom o odgovarajućoj dozi i trajanju lečenja."
+        ]
+    },
+     "multivitamin-abcdz": {
+        "id": "136",
+        "name": {
+            "en": "ABCDZ Multivitamin Multimineral Tablets"
+        },
+        "category": "Vitamini i Suplementi",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "159",
+        "composition": "Kompleks Multivitamina i Multiminerala",
+        "form": "Tableta",
+        "pack_size": "15 Tableta x 2 Trake",
+        "casId": "N/A",
+        "image": "/products/abcdz_tablets.webp",
+        "additionalImages": [
+            "/products/abcdz_tablets_2.webp",
+            "/products/abcdz_tablets_3.webp"
+        ],
+        "metaTitle": "Buy ABCDZ Multivitamin Multimineral Tablets Online | Healing Pharma",
+        "metaDescription": "Buy ABCDZ multivitamin i multimineral tablete za svakodnevnu nutritivnu podršku. Esencijalni vitamini i minerali za celokupno zdravlje. Od Healing Pharma.",
+        "description": "ABCDZ tablete su sveobuhvatan multivitaminski i multimineralni suplement dizajniran da popuni nutritivne praznine i podrži opšte blagostanje.",
+        "slug": "multivitamin-abcdz",
+        "overview": [
+            "ABCDZ je svakodnevni dijetetski suplement koji pruža uravnoteženu kombinaciju esencijalnih vitamina i minerala.",
+            "Formulisan je da pomogne u zadovoljavanju dnevnih nutritivnih potreba za osobe sa povećanim potrebama ili one sa dijetetskim ograničenjima.",
+            "Ključni sastojci obično uključuju Vitamin A, vitamine B-kompleksa (poput B1, B2, B6, B12), Vitamin C, Vitamin D, Vitamin E i minerale kao što su Cink, Kalcijum i Magnezijum.",
+            "Ovaj suplement podržava različite telesne funkcije, uključujući metabolizam energije, funkciju imuniteta, zdravlje kostiju i ćelijsku zaštitu od oksidativnog stresa.",
+            "Može biti koristan za osobe sa slabim apetitom, one na restriktivnim dijetama ili tokom perioda oporavka.",
+            "Redovan unos može pomoći u prevenciji nedostatka mikronutrijenata i promovisati opštu vitalnost.",
+            "Praktičan oblik tablete olakšava uključivanje u svakodnevnu rutinu.",
+            "Ovaj proizvod je pogodan za odrasle i decu preko 12 godina, osim ako lekar ne odredi drugačije."
+        ],
+        "sideEffects": [
+            "Većina ljudi ne oseća neželjene efekte kada se uzima prema uputstvu.",
+            "Neki pojedinci mogu osetiti blagu gastrointestinalnu nelagodnost, kao što su zatvor, dijareja ili želudačne tegobe.",
+            "Uzimanje suplementa sa hranom često može smanjiti ove efekte.",
+            "Određeni vitamini poput B-kompleksa mogu uzrokovati da urin postane jarko žute boje, što je bezopasno.",
+            "Alergijske reakcije su veoma retke, ali moguće."
+        ],
+        "administration": [
+            "Uzimajte jednu tabletu dnevno, po mogućstvu uz obrok radi poboljšanja apsorpcije i smanjenja želudačnih tegoba.",
+            "Progutajte tabletu celu sa čašom vode. Nemojte žvakati ili drobiti.",
+            "Uzimajte u isto vreme svakog dana kako biste uspostavili rutinu.",
+            "Nemojte prekoračiti preporučenu dnevnu dozu.",
+            "Pridržavajte se saveta vašeg zdravstvenog radnika u vezi sa doziranjem i dužinom upotrebe."
+        ],
+        "warnings": [
+            "Ne koristite ako ste alergični na bilo koji od sastojaka.",
+            "Posavetujte se sa svojim lekarom pre upotrebe ako ste trudni, dojite ili imate bilo koje postojeće medicinsko stanje.",
+            "Čuvati van domašaja dece.",
+            "Dijetetski suplementi ne bi trebalo da se koriste kao zamena za uravnoteženu i raznovrsnu ishranu.",
+            "Ako uzimate druge lekove, posavetujte se sa svojim lekarom ili farmaceutom radi provere potencijalnih interakcija."
+        ],
+        "how_it_works": [
+            "Multivitaminski suplementi deluju tako što obezbeđuju koncentrisan izvor mikronutrijenata koji su telu potrebni za metaboličke procese.",
+            "Vitamini B-kompleksa (Tiamin, Riboflavin, Niacin, itd.) deluju kao koenzimi, pomažući u pretvaranju hrane u energiju.",
+            "Vitamin C je snažan antioksidans koji štiti ćelije od oštećenja i neophodan je za sintezu kolagena i funkciju imuniteta.",
+            "Vitamin D podržava apsorpciju kalcijuma za zdravlje kostiju i moduliše imune odgovore.",
+            "Vitamin E deluje kao antioksidans rastvorljiv u mastima, štiteći ćelijske membrane od oksidativnog oštećenja.",
+            "Minerali poput Cinka su ključni za funkciju imuniteta, zarastanje rana i deobu ćelija.",
+            "Zajedno, ovi nutrijenti pomažu u popunjavanju nutritivnih praznina, osiguravajući da telo ima neophodne gradivne blokove za optimalno funkcionisanje."
+        ],
+        "tips": [
+            "Čuvati na hladnom i suvom mestu, dalje od direktne sunčeve svetlosti.",
+            "Držati flašicu dobro zatvorenu kada nije u upotrebi.",
+            "Održavajte zdravu ishranu zajedno sa suplementacijom za najbolje rezultate.",
+            "Ako propustite dozu, uzmite je čim se setite. Ako je blizu vreme za sledeću dozu, preskočite propuštenu i nastavite sa redovnim rasporedom. Ne duplirajte dozu."
+        ]
+    },
+    "xheal-shilajit": {
+        "id": "137",
+        "name": {
+            "en": "XHeal Pahadi Shilajit Gold Resin"
+        },
+        "category": "Zdravlje i Wellness",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "849",
+        "composition": "Pročišćeni Ekstrakt Shilajita",
+        "form": "Smola",
+        "pack_size": "Tegla od 20g",
+        "casId": "N/A",
+        "image": "/products/shilajit_gold.webp",
+        "additionalImages": [
+            "/products/shilajit_gold_2.webp",
+            "/products/shilajit_gold_3.jpg"
+        ],
+        "metaTitle": "Buy XHeal Pahadi Shilajit Gold Resin Online | Healing Pharma",
+        "metaDescription": "Buy XHeal Pahadi Shilajit Gold Resin. Autentični Himalajski Shilajit za vitalnost, izdržljivost i opšte blagostanje. Od Healing Pharma.",
+        "description": "XHeal Pahadi Shilajit Gold Resin je čist i snažan dijetetski suplement dobijen iz Himalajskih planina, tradicionalno korišćen za povećanje vitalnosti i energije.",
+        "slug": "xheal-shilajit",
+        "overview": [
+            "XHeal Pahadi Shilajit je visokokvalitetna smola Shilajita, prirodne supstance koja se prvenstveno nalazi u stenama Himalaja.",
+            "Nastaje vekovima sporim razlaganjem biljne materije i bogat je fulvičnom kiselinom i preko 84 esencijalna minerala.",
+            "Shilajit se vekovima koristi u tradicionalnoj ajurvedskoj medicini kao snažan rejuvenator i adaptogen.",
+            "Poznat je prvenstveno po svom potencijalu da poveća nivoe energije, poboljša izdržljivost i podrži ukupne fizičke performanse.",
+            "'Zlato' u njegovom nazivu često označava pročišćen i snažan oblik smole.",
+            "Veruje se da ovaj suplement podržava zdravo starenje, kognitivnu funkciju i prirodnu odbranu imuniteta tela.",
+            "Oblik smole se smatra najautentičnijim i tradicionalnim načinom konzumiranja Shilajita.",
+            "Potiče iz regiona na visokim nadmorskim visinama kako bi se osigurala čistoća i potentnost."
+        ],
+        "sideEffects": [
+            "Shilajit se generalno dobro podnosi kada se uzima u preporučenim dozama.",
+            "Neki pojedinci mogu osetiti blage probavne smetnje poput želudačnih tegoba ili mučnine, posebno na početku upotrebe.",
+            "Zbog svog mineralnog sadržaja, može blago sniziti krvni pritisak. Savetuje se oprez za one koji su na antihipertenzivnoj terapiji.",
+            "Potencijalno može povećati nivoe mokraćne kiseline; osobe sa gihtom treba da se posavetuju sa lekarom.",
+            "Alergijske reakcije su retke, ali moguće."
+        ],
+        "administration": [
+            "Uzmite malu količinu smole veličine zrna graška (otprilike 300-500 mg).",
+            "Rastvorite je u čaši tople vode, mleka ili biljnog čaja. Lakše se rastvara u toploj tečnosti.",
+            "Dobro promešajte i popijte po mogućstvu na prazan stomak ujutru radi najbolje apsorpcije.",
+            "Alternativno, može se uzimati prema uputstvima vašeg ajurvedskog praktičara.",
+            "Doslednost je ključna za doživljavanje benefita.",
+            "Tegla od 20g obezbeđuje zalihe za 1-2 meseca u zavisnosti od dnevne upotrebe."
+        ],
+        "warnings": [
+            "Ne koristite ako ste alergični na Shilajit ili bilo koji od njegovih sastojaka.",
+            "Posavetujte se sa svojim zdravstvenim radnikom pre upotrebe ako ste trudni, dojite, imate medicinsko stanje (posebno srčano oboljenje, giht ili nizak krvni pritisak) ili uzimate bilo koje lekove na recept.",
+            "Ne preporučuje se deci.",
+            "Uverite se da kupujete Shilajit od renomiranog izvora kako biste izbegli proizvode koji mogu sadržati teške metale ili druge zagađivače.",
+            "Počnite sa nižom dozom kako biste procenili svoju toleranciju."
+        ],
+        "how_it_works": [
+            "Primarni aktivni sastojak Shilajita je fulvična kiselina, snažan antioksidans i elektrolit koji pomaže u transportu hranljivih materija duboko u ćelije.",
+            "Veruje se da poboljšava funkciju mitohondrija, koji su energetski centar ćelija, što dovodi do povećanja energije i izdržljivosti.",
+            "Fulvična kiselina u Shilajitu pomaže u poboljšanju bioraspoloživosti drugih nutrijenata i podržava prirodne procese detoksikacije tela.",
+            "Deluje kao adaptogen, pomažući telu da upravlja stresom i održava homeostazu.",
+            "Neka istraživanja sugerišu da može podržati nivoe testosterona kod muškaraca, doprinoseći vitalnosti i snazi.",
+            "Njegov bogat mineralni sadržaj pomaže u obnavljanju esencijalnih elemenata u tragovima koji možda nedostaju u modernoj ishrani."
+        ],
+        "tips": [
+            "Čuvati na hladnom i suvom mestu dalje od direktne sunčeve svetlosti. Ne čuvati u frižideru.",
+            "Nakon svake upotrebe uverite se da je poklopac dobro zatvoren kako biste sprečili isušivanje smole.",
+            "Koristite čistu, suvu lopaticu ili kašiku za uzimanje smole kako biste izbegli kontaminaciju.",
+            "Ako se smola stvrdne, možete staviti zatvorenu teglu u posudu sa toplom vodom da omekša.",
+            "Preporučuje se ciklično korišćenje (npr. uzimati 2-3 meseca, zatim napraviti pauzu od 1 meseca)."
+        ]
+    },
+    "derbeau-moisturizer": {
+        "id": "138",
+        "name": {
+            "en": "Derbeau Oil-Free Moisturizer with Hyaluronic Acid & Ceramide"
+        },
+        "category": "Nega Kože",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Hijaluronska Kiselina, Kompleks Ceramida",
+        "form": "Hidratantna Krema",
+        "pack_size": "Tegla od 75g",
+        "casId": "N/A",
+        "image": "/products/derbeau.webp",
+        "additionalImages": [
+            "/products/derbeau_2.webp",
+            "/products/derbeau_3.webp"
+        ],
+        "metaTitle": "Buy Derbeau Oil-Free Moisturizer | Hyaluronic Acid & Ceramide | Healing Pharma",
+        "metaDescription": "Buy Derbeau Oil-Free Moisturizer online. Lagana svakodnevna hidratantna krema sa Hijaluronskom Kiselinom i Ceramidima za hidriranu, zdravo izgledajuću kožu. Od Healing Pharma.",
+        "description": "Derbeau Oil-Free Moisturizer je lagana, svakodnevna hidratantna krema formulisana sa Hijaluronskom Kiselinom i Ceramidima za negu i zaštitu barijere kože bez začepljenja pora.",
+        "slug": "derbeau-moisturizer",
+        "overview": [
+            "Derbeau Oil-Free Moisturizer je svakodnevni hidratantni gel za lice dizajniran za normalnu do masnu i mešovitu kožu.",
+            "Njegova lagana formula bez masnoće pruža esencijalnu hidrataciju bez dodavanja viška ulja ili sjaja.",
+            "Obogaćen Hijaluronskom Kiselinom, snažnim humektansom koji privlači i zadržava vlagu, održavajući kožu punom i hidriranom.",
+            "Sadrži kompleks Ceramida koji pomaže u obnavljanju i jačanju prirodne zaštitne barijere kože.",
+            "Ovo pomaže u sprečavanju gubitka vlage i zaštiti kože od stresa iz okoline.",
+            "Formula bez ulja osigurava da neće začepiti pore, što je čini pogodnom za kožu sklonu aknama.",
+            "Redovna upotreba može poboljšati teksturu kože, ostavljajući je mekom, glatkom i svežom.",
+            "Može se koristiti i ujutru i uveče kao deo osnovne rutine nege kože.",
+            "Bez parabena i ftalata."
+        ],
+        "sideEffects": [
+            "Formulisan za osetljivu kožu, neželjeni efekti su retki.",
+            "Neke osobe sa ekstremnom osetljivošću mogu osetiti blago peckanje ili crvenilo pri prvoj upotrebi.",
+            "Ako dođe do iritacije, prekinite upotrebu i posavetujte se sa dermatologom."
+        ],
+        "administration": [
+            "Nanesite malu količinu veličine zrna graška na čisto i suvo lice i vrat.",
+            "Nežno umasirajte kružnim pokretima prema gore dok se potpuno ne upije.",
+            "Koristite dva puta dnevno, ujutru i uveče, nakon čišćenja i pre nanošenja kreme za sunčanje (ujutru).",
+            "Za najbolje rezultate, koristite dosledno kao deo vaše svakodnevne rutine nege kože."
+        ],
+        "warnings": [
+            "Samo za spoljašnju upotrebu.",
+            "Izbegavajte direktan kontakt sa očima. Ako dođe do kontakta, temeljno isperite vodom.",
+            "Ne nanositi na oštećenu ili iritiranu kožu.",
+            "Prekinite upotrebu ako se pojave znaci iritacije ili osipa.",
+            "Čuvati van domašaja dece.",
+            "Čuvati na hladnom i suvom mestu."
+        ],
+        "how_it_works": [
+            "Hijaluronska kiselina deluje kao magnet za vlagu. Može zadržati do 1000 puta više vode od svoje težine, privlačeći vlagu iz okoline u spoljašnje slojeve kože.",
+            "Ovo pomaže u trenutnom hidriranju kože, smanjujući pojavu finih linija i stvarajući glatkiji i puniji ten.",
+            "Ceramidi su lipidni (masni) molekuli koji se prirodno nalaze u visokim koncentracijama u ćelijskim membranama gornjih slojeva kože.",
+            "Oni čine značajan deo kožne barijere (stratum corneum) i neophodni su za zadržavanje vlage i sprečavanje prodiranja agresivnih faktora iz okoline u kožu.",
+            "Lokalna primena Ceramida pomaže u obnavljanju prirodne lipidne barijere kože, poboljšavajući hidrataciju, otpornost i celokupno zdravlje kože."
+        ],
+        "tips": [
+            "Nanesite na blago vlažnu kožu kako biste zadržali dodatnu vlagu.",
+            "Za upotrebu tokom dana, nastavite sa nanošenjem kreme za sunčanje širokog spektra (SPF 30+) radi potpune zaštite.",
+            "Uključite u svoju rutinu nanošenjem nakon seruma, a pre kreme za sunčanje ili šminke.",
+            "Ako vam je koža posebno suva, možete naneti malo deblji sloj noću kao hidratantnu masku."
+        ]
+    },
+    "niacinamide-face-wash": {
+        "id": "139",
+        "name": {
+            "en": "Niacinamide and Salicylic Acid Ultra Foaming Face Wash"
+        },
+        "category": "Nega Kože",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Niacinamid, Salicilna Kiselina",
+        "form": "Sredstvo za Pranje Lica",
+        "pack_size": "Tuba od 100ml",
+        "casId": "N/A",
+        "image": "/products/AcnetopFacewash.webp",
+        "additionalImages": [
+            "/products/AcnetopFacewash_2.webp",
+            "/products/AcnetopFacewash_3.webp"
+        ],
+        "metaTitle": "Buy Niacinamide & Salicylic Acid Ultra Foaming Face Wash | Healing Pharma",
+        "metaDescription": "Buy Niacinamide and Salicylic Acid Ultra Foaming Face Wash. Dubinski čisti, pilingira i pomaže u kontroli akni. Za čistu, zdravo izgledajuću kožu. Od Healing Pharma.",
+        "description": "Ovo Ultra Penušavo Sredstvo za Pranje Lica kombinuje moć čišćenja Salicilne Kiseline sa umirujućim prednostima Niacinamida za dubinsko, ali nežno čišćenje, pomažući u bistrenju kože i smanjenju nesavršenosti.",
+        "slug": "niacinamide-face-wash",
+        "overview": [
+            "Ovo ultra-penušavo sredstvo za pranje lica formulisano je za dubinsko čišćenje pora i uklanjanje viška ulja, prljavštine i nečistoća.",
+            "Sadrži Salicilnu Kiselinu, beta-hidroksi kiselinu (BHA) koja prodire duboko u pore radi pilinga iznutra i pomaže u prevenciji i tretmanu akni.",
+            "Obogaćen Niacinamidom (Vitamin B3), poznatim po svojim umirujućim, antiinflamatornim i svojstvima posvetljivanja.",
+            "Pomaže u smanjenju crvenila, smirivanju iritacije i poboljšanju izgleda neujednačenog tena.",
+            "Penušavo dejstvo pruža zadovoljavajuće, temeljno čišćenje bez skidanja prirodne vlage kože.",
+            "Idealan za masnu, mešovitu i kožu sklonu aknama.",
+            "Redovna upotreba može dovesti do bistrije, glatke i blistavije kože.",
+            "Pomaže u kontroli prekomerne proizvodnje sebuma, smanjujući sjaj tokom dana."
+        ],
+        "sideEffects": [
+            "Salicilna kiselina može izazvati blagu suvoću ili ljuštenje, posebno na početku upotrebe.",
+            "Neki pojedinci mogu osetiti blago peckanje.",
+            "Ako dođe do prekomerne suvoće ili iritacije, smanjite učestalost upotrebe ili prekinite i posavetujte se sa dermatologom."
+        ],
+        "administration": [
+            "Nakvasite lice mlakom vodom.",
+            "Istisnite malu količinu sredstva za pranje lica na dlan.",
+            "Utrljajte ruke da biste dobili bogatu penu.",
+            "Nežno umasirajte penu na lice kružnim pokretima, izbegavajući područje oko očiju.",
+            "Temeljno isperite vodom i osušite lice tapkanjem čistim peškirom.",
+            "Koristite jednom ili dva puta dnevno kao deo svoje redovne rutine nege kože."
+        ],
+        "warnings": [
+            "Samo za spoljašnju upotrebu.",
+            "Izbegavajte direktan kontakt sa očima. Ako dođe do kontakta, temeljno isperite sa dosta vode.",
+            "Ne nanositi na oštećenu, iritiranu ili izgorelu kožu.",
+            "Ako se iritacija kože pojavi ili pogorša, prekinite upotrebu i posavetujte se sa lekarom.",
+            "Koristite kremu za sunčanje tokom dana, jer AHA/BHA mogu povećati osetljivost na sunce.",
+            "Čuvati van domašaja dece."
+        ],
+        "how_it_works": [
+            "Salicilna kiselina je lipofilni (voli ulje) BHA koji može prodreti kroz lipidne slojeve kože i dospeti duboko u pore.",
+            "Unutar pora, pomaže u rastvaranju viška sebuma i ljuštenju mrtvih ćelija kože koje mogu dovesti do začepljenja, komedona i lezija akni.",
+            "Održavajući pore čistima, pomaže u sprečavanju budućih izbijanja.",
+            "Niacinamid deluje sinergistički pomažući u regulaciji proizvodnje ulja i smirivanju inflamacije povezane sa aknama.",
+            "Takođe pomaže u jačanju funkcije kožne barijere, poboljšavajući otpornost i smanjujući osetljivost koju mogu izazvati kiseline za piling.",
+            "Zajedno, pružaju snažan, ali uravnotežen pristup bistrenju i usavršavanju kože."
+        ],
+        "tips": [
+            "Za najbolje rezultate, koristite dosledno kao deo svoje jutarnje i/ili večernje rutine.",
+            "Nastavite sa tonikom (ako se koristi), serumom, hidratantnom kremom i dnevnim zaštitnim faktorom.",
+            "Ako je vaša koža nova u korišćenju kiselina za piling, počnite sa upotrebom jednom dnevno ili svaki drugi dan kako biste omogućili koži da se prilagodi.",
+            "Izbegavajte korišćenje drugih oštrih proizvoda za piling (fizički pilingi, jaki hemijski pilinzi) istih dana kako biste sprečili prekomerni piling."
+        ]
+    }
 };
 
 export default products;

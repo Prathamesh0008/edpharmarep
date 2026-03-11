@@ -1,3 +1,5 @@
+
+
 // app/checkout/CheckoutClient.jsx
 "use client";
 
@@ -945,6 +947,11 @@ function Row({ label, value, bold }) {
 }
 
 
+
+
+//Email js code 
+
+
 // // app/checkout/CheckoutClient.jsx
 // "use client";
 
@@ -955,6 +962,8 @@ function Row({ label, value, bold }) {
 // import Navbar from "../components/Navbar";
 // import { getLoggedInUser } from "@/lib/auth";
 // import { useLanguage } from "@/context/LanguageContext";
+// import LoginPopup from "../components/LoginPopup";
+// import emailjs from "@emailjs/browser";
 
 // import {
 //   MapPin,
@@ -1045,8 +1054,12 @@ function Row({ label, value, bold }) {
 //   const [orderNotes, setOrderNotes] = useState("");
 //   const [savedAddresses, setSavedAddresses] = useState([]);
 //   const [showAddressList, setShowAddressList] = useState(false);
-//   const [isLoading, setIsLoading] = useState(false);
+//   const [isLoading, setIsLoading] = useState(true);
 //   const [currentUser, setCurrentUser] = useState(null);
+//   const [showLoginPopup, setShowLoginPopup] = useState(false);
+//   // Email sending state
+//   const [emailError, setEmailError] = useState(null);
+//   const [emailSent, setEmailSent] = useState(false);
 
 //   const [form, setForm] = useState({
 //     fullName: "",
@@ -1057,6 +1070,15 @@ function Row({ label, value, bold }) {
 //     pincode: "",
 //     country: "India",
 //   });
+
+//   // Initialize EmailJS
+//   useEffect(() => {
+//     // Initialize EmailJS with public key
+//     const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+//     if (publicKey) {
+//       emailjs.init(publicKey);
+//     }
+//   }, []);
 
 //   // Get translations from context with fallbacks
 //   const checkoutTranslations = t?.checkoutPage || {
@@ -1142,7 +1164,9 @@ function Row({ label, value, bold }) {
 //       saveSuccess: "Address saved successfully!",
 //       sessionExpired: "Session expired. Please login again.",
 //       orderFailed: "Order failed",
-//       networkError: "Network error. Please try again."
+//       networkError: "Network error. Please try again.",
+//       emailSuccess: "Order confirmation email sent!",
+//       emailError: "Failed to send confirmation email"
 //     }
 //   };
 
@@ -1176,21 +1200,25 @@ function Row({ label, value, bold }) {
 //     return null;
 //   };
 
-//   // Check authentication and load user-specific addresses
+//   // Check authentication
 //   useEffect(() => {
-//     const loadUserAndAddresses = async () => {
+//     const checkAuth = async () => {
 //       try {
 //         setIsLoading(true);
+        
+//         // Check if cart is empty
+//         if (cartItems.length === 0) {
+//           setIsLoading(false);
+//           return;
+//         }
 
 //         // Get current logged in user
-//         const user = getLoggedInUser();
+//         const user = await getLoggedInUser();
 
 //         if (!user || !user._id) {
-//           // User is not logged in - show alert and redirect
-//           setTimeout(() => {
-//             alert(checkoutTranslations.messages.loginRequired);
-//             router.push("/");
-//           }, 100);
+//           // User is not logged in - show login popup
+//           setShowLoginPopup(true);
+//           setIsLoading(false);
 //           return;
 //         }
 
@@ -1208,19 +1236,16 @@ function Row({ label, value, bold }) {
 //         }
 //       } catch (error) {
 //         console.error("Error loading user/addresses:", error);
+//         setShowLoginPopup(true);
 //       } finally {
 //         setIsLoading(false);
 //       }
 //     };
 
-//     loadUserAndAddresses();
-//   }, [router]);
+//     checkAuth();
+//   }, [router, cartItems.length]);
 
-//   const isDisabled =
-//     validateForm(form, cartItems, payment) !== null ||
-//     isLoading ||
-//     !currentUser;
-
+//   // Input change handlers
 //   const onChange = (k) => (e) =>
 //     setForm((p) => ({ ...p, [k]: e.target.value }));
 
@@ -1247,6 +1272,26 @@ function Row({ label, value, bold }) {
 //   const onCityChange = (e) => {
 //     const cleaned = e.target.value.replace(/[^A-Za-z ]/g, "");
 //     setForm((p) => ({ ...p, city: cleaned }));
+//   };
+
+//   const handleLoginSuccess = (user) => {
+//     setCurrentUser(user);
+//     setShowLoginPopup(false);
+    
+//     // Reload addresses for the new user
+//     const addresses = getUserAddresses(user._id);
+//     setSavedAddresses(addresses);
+    
+//     if (addresses.length > 0) {
+//       setForm(addresses[0]);
+//       setShowAddressList(true);
+//     }
+//   };
+
+//   const handleLoginPopupClose = () => {
+//     setShowLoginPopup(false);
+//     // If user closes popup without logging in, redirect to cart
+//     router.push("/cart");
 //   };
 
 //   // Function to load a saved address
@@ -1279,7 +1324,7 @@ function Row({ label, value, bold }) {
 //   // Function to save current address
 //   const handleSaveAddress = () => {
 //     if (!currentUser?._id) {
-//       alert(checkoutTranslations.messages.loginRequired);
+//       setShowLoginPopup(true);
 //       return;
 //     }
 
@@ -1293,13 +1338,102 @@ function Row({ label, value, bold }) {
 //     alert(checkoutTranslations.messages.saveSuccess);
 //   };
 
+//   // Function to send order confirmation emails
+//   const sendOrderEmails = async (orderData, orderId) => {
+//     try {
+//       setEmailError(null);
+      
+//       const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+//       const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+//       const TEMPLATE_ADMIN = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
+//       const TEMPLATE_USER = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_USER;
+//       const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "sales@edpharma.co";
+
+//       if (!SERVICE_ID || !PUBLIC_KEY || !TEMPLATE_ADMIN || !TEMPLATE_USER) {
+//         throw new Error("Email service not configured. Please check EmailJS env variables.");
+//       }
+
+//       // Format order items for email
+//       const orderItemsList = orderData.items.map(item => 
+//         `${item.name} - Qty: ${item.qty} units (${Math.ceil(item.qty / 50)} batches) - ₹${item.price * item.qty}`
+//       ).join('\n');
+
+//       const orderNumber = `ORD-${orderId.slice(-8)}`;
+//       const submittedAt = new Date().toLocaleString("en-IN", {
+//         year: "numeric",
+//         month: "long",
+//         day: "numeric",
+//         hour: "2-digit",
+//         minute: "2-digit",
+//       });
+
+//       // Prepare address string
+//       const addressString = `${orderData.address.address}, ${orderData.address.city}, ${orderData.address.pincode}, ${orderData.address.country}`;
+
+//       // Payment method mapping
+//       const paymentMethods = {
+//         card: "Credit/Debit Card",
+//         bank: "Bank Transfer (UPI/Net Banking)",
+//         crypto: "Cryptocurrency"
+//       };
+
+//       // Admin email payload
+//       const payloadAdmin = {
+//         to_email: ADMIN_EMAIL,
+//         from_name: orderData.address.fullName,
+//         from_email: orderData.address.email,
+//         phone: orderData.address.phone,
+//         order_number: orderNumber,
+//         order_id: orderId,
+//         items: orderItemsList,
+//         total_amount: `₹${orderData.totals.totalPrice}`,
+//         total_units: orderData.totals.totalQty,
+//         total_batches: orderData.totals.totalBulkUnits,
+//         payment_method: paymentMethods[orderData.paymentMethod] || orderData.paymentMethod,
+//         delivery_address: addressString,
+//         order_notes: orderData.orderNotes || "No special instructions",
+//         date: submittedAt,
+//       };
+
+//       // User email payload
+//       const payloadUser = {
+//         to_email: orderData.address.email,
+//         to_name: orderData.address.fullName,
+//         from_name: "ED Pharma",
+//         order_number: orderNumber,
+//         order_id: orderId,
+//         items: orderItemsList,
+//         total_amount: `₹${orderData.totals.totalPrice}`,
+//         total_units: orderData.totals.totalQty,
+//         total_batches: orderData.totals.totalBulkUnits,
+//         payment_method: paymentMethods[orderData.paymentMethod] || orderData.paymentMethod,
+//         delivery_address: addressString,
+//         order_notes: orderData.orderNotes || "No special instructions",
+//         date: submittedAt,
+//       };
+
+//       // Send both emails
+//       const [adminRes, userRes] = await Promise.all([
+//         emailjs.send(SERVICE_ID, TEMPLATE_ADMIN, payloadAdmin, PUBLIC_KEY),
+//         emailjs.send(SERVICE_ID, TEMPLATE_USER, payloadUser, PUBLIC_KEY),
+//       ]);
+
+//       console.log("✅ Order confirmation emails sent successfully");
+//       setEmailSent(true);
+//       return true;
+
+//     } catch (error) {
+//       console.error("❌ Error sending order emails:", error);
+//       setEmailError(error.message || "Failed to send confirmation email");
+//       return false;
+//     }
+//   };
+
 //   const placeOrder = async () => {
 //     try {
 //       // Check authentication again before placing order
-//       const user = getLoggedInUser();
-//       if (!user || !user._id) {
-//         alert(checkoutTranslations.messages.loginRequired);
-//         router.push("/");
+//       if (!currentUser || !currentUser._id) {
+//         setShowLoginPopup(true);
 //         return;
 //       }
 
@@ -1310,9 +1444,10 @@ function Row({ label, value, bold }) {
 //       }
 
 //       setIsLoading(true);
+//       setEmailError(null);
 
 //       // Save address to user's localStorage
-//       saveAddressToUser(form, user._id);
+//       saveAddressToUser(form, currentUser._id);
 
 //       console.log("Sending order request...");
       
@@ -1328,7 +1463,7 @@ function Row({ label, value, bold }) {
 //           totals,
 //           address: form,
 //           paymentMethod: payment,
-//           orderNotes: orderNotes, // Include order notes in API call
+//           orderNotes: orderNotes,
 //         }),
 //       });
 
@@ -1352,6 +1487,21 @@ function Row({ label, value, bold }) {
 
 //       console.log("✅ Order created successfully! Order ID:", data.orderId);
       
+//       // Send order confirmation emails (don't wait for this to complete)
+//       sendOrderEmails({
+//         items: cartItems,
+//         totals,
+//         address: form,
+//         paymentMethod: payment,
+//         orderNotes,
+//       }, data.orderId).then(success => {
+//         if (success) {
+//           console.log("✅ Order confirmation emails sent");
+//         } else {
+//           console.warn("⚠️ Order confirmation emails failed");
+//         }
+//       });
+      
 //       // Save order ID to localStorage for reference
 //       if (typeof window !== 'undefined') {
 //         localStorage.setItem('lastOrderId', data.orderId);
@@ -1374,36 +1524,64 @@ function Row({ label, value, bold }) {
 //     }
 //   };
 
+//   const isDisabled = !currentUser || validateForm(form, cartItems, payment) !== null || isLoading;
+
+//   // Show loading state
+//   if (isLoading) {
+//     return (
+//       <>
+//         <Navbar />
+//         <div className="min-h-screen bg-gradient-to-br from-[#f5f9ff] via-[#edf3ff] to-[#e6eeff] flex items-center justify-center">
+//           <div className="text-center">
+//             <div className="w-16 h-16 border-4 border-[#0A4C89] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+//             <p className="text-gray-600">Loading checkout...</p>
+//           </div>
+//         </div>
+//       </>
+//     );
+//   }
+
 //   if (cartItems.length === 0) {
 //     return (
-//       <div className="min-h-[60vh] flex items-center justify-center px-4">
-//         <div className="max-w-md w-full bg-white/80 backdrop-blur-md border border-slate-100 rounded-2xl shadow-sm px-6 py-10 text-center">
-//           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#0A4C89]/10 text-[#0A4C89]">
-//             <ShoppingCart size={28} />
+//       <>
+//         <Navbar />
+//         <div className="min-h-[60vh] flex items-center justify-center px-4">
+//           <div className="max-w-md w-full bg-white/80 backdrop-blur-md border border-slate-100 rounded-2xl shadow-sm px-6 py-10 text-center">
+//             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#0A4C89]/10 text-[#0A4C89]">
+//               <ShoppingCart size={28} />
+//             </div>
+
+//             <h1 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+//               {checkoutTranslations.emptyState.title}
+//             </h1>
+//             <p className="text-sm md:text-base text-gray-500 mb-6">
+//               {checkoutTranslations.emptyState.description}
+//             </p>
+
+//             <Link
+//               href="/products"
+//               className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#0A4C89] to-[#0D5FA8] text-white text-sm font-semibold shadow-md hover:shadow-lg hover:translate-y-0.5 transition-transform"
+//             >
+//               {checkoutTranslations.emptyState.browseButton}
+//               <span aria-hidden>→</span>
+//             </Link>
 //           </div>
-
-//           <h1 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-//             {checkoutTranslations.emptyState.title}
-//           </h1>
-//           <p className="text-sm md:text-base text-gray-500 mb-6">
-//             {checkoutTranslations.emptyState.description}
-//           </p>
-
-//           <Link
-//             href="/products"
-//             className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#0A4C89] to-[#0D5FA8] text-white text-sm font-semibold shadow-md hover:shadow-lg hover:translate-y-0.5 transition-transform"
-//           >
-//             {checkoutTranslations.emptyState.browseButton}
-//             <span aria-hidden>→</span>
-//           </Link>
 //         </div>
-//       </div>
+//       </>
 //     );
 //   }
 
 //   return (
 //     <>
 //       <Navbar />
+      
+//       {/* Login Popup */}
+//       <LoginPopup 
+//         isOpen={showLoginPopup}
+//         onClose={handleLoginPopupClose}
+//         onLoginSuccess={handleLoginSuccess}
+//       />
+      
 //       <div className="min-h-screen bg-gradient-to-br from-[#f5f9ff] via-[#edf3ff] to-[#e6eeff]">
 //         <div className="max-w-7xl mx-auto px-4 py-10 lg:py-14">
 //           {/* HEADER */}
@@ -1707,6 +1885,16 @@ function Row({ label, value, bold }) {
 //                     />
 //                   </div>
 
+//                   {/* Email status message */}
+//                   {emailError && (
+//                     <div className="mt-3 p-2 bg-amber-50 border border-amber-200 rounded-lg">
+//                       <p className="text-xs text-amber-700 flex items-center gap-1">
+//                         <span>⚠️</span>
+//                         {checkoutTranslations.messages.emailError}: {emailError}
+//                       </p>
+//                     </div>
+//                   )}
+
 //                   <button
 //                     onClick={placeOrder}
 //                     disabled={isDisabled}
@@ -1842,3 +2030,4 @@ function Row({ label, value, bold }) {
 //     </div>
 //   );
 // }
+

@@ -19150,7 +19150,7 @@ administration: [
   ]
   },
   
-  "malegra-100-en":{
+  "malegra-100-gold-en":{
     id: "101",
     name: "Malegra 100 Gold",
     brand: "ED Sunrise Remedies",
@@ -19161,7 +19161,7 @@ administration: [
     pack_size: "1x5 Tablets",
     cas_id: "171599-83-0",
     description: "Malegra Gold 100 Tablet is used to treat erectile dysfunction in men.",
-    slug: "malegra-100",
+    slug: "malegra-100-gold",
     image: "/products/malegra-gold_1.png",//public\products\malegra-gold_1.png
     "additionalImages": [
     "/products/malegra-gold_2.png",

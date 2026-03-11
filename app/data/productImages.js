@@ -795,7 +795,7 @@ export const productImages = {
     "/products/Malegra-100 Green_1.png",
   ],
    },
-  "malegra-100":{
+  "malegra-100-gold":{
     main: "/products/malegra-gold_1.png",//public\products\malegra-gold_1.png
     gallery: [
     "/products/malegra-gold_2.png",

@@ -18740,7 +18740,1139 @@ tips: [
       "Exercițiile regulate sub îndrumare medicală pot îmbunătăți respirația și rezistența.",
       "Participați la toate programările de urmărire planificate pentru a asigura o utilizare sigură și eficientă pe termen lung."
     ]
-  }
+  },
+  "soma-350": {
+        "id": "124",
+        "name": {
+            "en": "Soma 350 mg"
+        },
+        "category": "Sistemul Nervos Central",
+        "brand": "Hab Pharma",
+        "dosage": "350 mg",
+        "price": "450",
+        "composition": "Carisoprodol 350mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "78-44-4",
+        "image": "/products/Soma350mg_2.png",
+        "additionalImages": [
+            "/products/Soma350mg_3.jpg",
+            "/products/Soma350mg_3.jpg"
+        ],
+        "metaTitle": "Buy Soma 350 mg Online | Carisoprodol Muscle Relaxant | Hab Pharma",
+        "metaDescription": "Buy Soma 350 mg (Carisoprodol) online. Un relaxant muscular pentru ameliorarea durerii musculo-scheletice acute. De înaltă calitate de la Hab Pharma.",
+        "description": "Soma 350 mg conține Carisoprodol, un medicament utilizat pentru ameliorarea pe termen scurt a disconfortului asociat cu afecțiuni musculo-scheletice acute și dureroase.",
+        "slug": "soma-350",
+        "overview": [
+            "Soma 350 mg este un relaxant muscular care conține Carisoprodol, utilizat pentru ameliorarea durerii și disconfortului cauzat de leziuni musculare și spasme.",
+            "Este de obicei prescris ca parte a unui plan de tratament cuprinzător care include odihnă și fizioterapie.",
+            "Acest medicament acționează prin blocarea semnalelor de durere dintre nervi și creier.",
+            "Doza de 350 mg este doza standard pentru pacienții adulți.",
+            "Soma este destinată utilizării pe termen scurt, de obicei nu mai mult de două până la trei săptămâni.",
+            "Ajută la îmbunătățirea mobilității și la reducerea rigidității asociate cu afecțiunile musculare acute.",
+            "Ameliorarea durerii și disconfortului începe adesea în 30 de minute de la administrarea medicamentului.",
+            "Efectele unei singure doze durează de obicei 4 până la 6 ore.",
+            "Acest produs trebuie utilizat numai atunci când este prescris de un profesionist din domeniul sănătății."
+        ],
+        "sideEffects": [
+            "Somnolența și amețeala sunt cele mai frecvente efecte secundare.",
+            "Unii indivizi pot experimenta dureri de cap sau vedere încețoșată.",
+            "Pot apărea greață, vărsături sau disconfort gastric.",
+            "Au fost raportate agitație, iritabilitate sau confuzie, în special la pacienții vârstnici.",
+            "Tremurături sau mișcări musculare necontrolate pot apărea rareori.",
+            "Bătăi accelerate ale inimii sau înroșirea feței pot fi experimentate de unii utilizatori.",
+            "Reacțiile alergice, cum ar fi erupții cutanate sau mâncărime, sunt posibile, dar neobișnuite."
+        ],
+        "administration": [
+            "Luați Soma exact așa cum v-a prescris medicul dumneavoastră.",
+            "Doza obișnuită pentru adulți este un comprimat de 350 mg de trei ori pe zi și la culcare.",
+            "Înghițiți comprimatul întreg cu un pahar plin cu apă.",
+            "Poate fi administrat cu sau fără alimente, dar administrarea cu alimente poate reduce disconfortul gastric.",
+            "Nu zdrobiți, mestecați sau rupeți comprimatul.",
+            "Nu luați mai frecvent sau mai mult timp decât v-a fost prescris.",
+            "Evitați alcoolul în timp ce luați acest medicament, deoarece poate crește somnolența."
+        ],
+        "warnings": [
+            "Nu utilizați dacă sunteți alergic la Carisoprodol sau meprobamat.",
+            "Acest medicament poate crea dependență; utilizați numai conform instrucțiunilor și nu îl partajați.",
+            "Evitați conducerea vehiculelor, operarea utilajelor sau implicarea în activități periculoase până când știți cum vă afectează acest medicament.",
+            "Combinarea cu alcool sau alte depresive ale SNC (cum ar fi benzodiazepinele sau opioidele) poate duce la somnolență severă sau depresie respiratorie.",
+            "Utilizați cu prudență dacă aveți antecedente de dependență de droguri, boli hepatice sau renale sau tulburări convulsive.",
+            "Pacienții vârstnici pot fi mai sensibili la efecte și au un risc mai mare de căderi.",
+            "Nu este recomandat în timpul sarcinii sau alăptării. Consultați medicul dumneavoastră."
+        ],
+        "how_it_works": [
+            "Carisoprodol, ingredientul activ din Soma, este un relaxant muscular scheletic cu acțiune centrală.",
+            "Mecanismul său exact nu este pe deplin înțeles, dar se crede că acționează prin provocarea sedării și alterarea percepției durerii în sistemul nervos central.",
+            "Nu relaxează direct mușchii scheletici, ci acționează ca un depresiv asupra SNC.",
+            "Carisoprodolul este metabolizat în ficat în meprobamat, un metabolit activ care contribuie, de asemenea, la efectele sale.",
+            "Se crede că afectează comunicarea dintre nervii din măduva spinării și formațiunea reticulară a creierului, ducând la relaxare musculară și ameliorarea durerii."
+        ],
+        "tips": [
+            "A se păstra la temperatura camerei, ferit de umiditate și căldură.",
+            "Păstrați medicamentul în blisterul original până când sunteți gata de utilizare.",
+            "Dacă omiteți o doză, luați-o imediat ce vă amintiți. Dacă este aproape timpul pentru următoarea doză, săriți peste doza uitată și reluați programul obișnuit. Nu dublați doza.",
+            "Nu încetați brusc să luați acest medicament, mai ales după utilizare prelungită, deoarece pot apărea simptome de sevraj precum anxietate, insomnie și dureri musculare.",
+            "Informați toți furnizorii de servicii medicale că luați acest medicament."
+        ]
+    },
+    "soma-500": {
+        "id": "125",
+        "name": {
+            "en": "Soma 500 mg"
+        },
+        "category": "Sistemul Nervos Central",
+        "brand": "Hab Pharma",
+        "dosage": "500 mg",
+        "price": "550",
+        "composition": "Carisoprodol 500mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "78-44-4",
+        "image": "/products/Soma500mg.webp",
+        "additionalImages": [
+            "/products/Soma500mg2.png",
+            "/products/Soma500mg_3.jpeg"
+        ],
+        "metaTitle": "Buy Soma 500 mg Online | Extra Strength Carisoprodol | Hab Pharma",
+        "metaDescription": "Buy Soma 500 mg (Carisoprodol) online. Relaxant muscular cu putere suplimentară pentru durerea musculo-scheletică acută mai severă. Calitate de încredere de la Hab Pharma.",
+        "description": "Soma 500 mg este o formulare cu doză mai mare de Carisoprodol, un relaxant muscular utilizat pentru ameliorarea pe termen scurt a durerii și disconfortului musculo-scheletic acut.",
+        "slug": "soma-500",
+        "overview": [
+            "Soma 500 mg oferă o doză mai mare de Carisoprodol pentru pacienții care necesită relaxare musculară și ameliorare a durerii sporite.",
+            "Această formulare cu putere suplimentară poate fi prescrisă atunci când doza standard de 350 mg este insuficientă pentru gestionarea simptomelor.",
+            "Este destinată utilizării pe termen scurt, de obicei până la două până la trei săptămâni, ca parte a unui plan de tratament mai larg.",
+            "Doza de 500 mg oferă un efect mai puternic, potrivit pentru afecțiuni musculare acute mai severe.",
+            "Ca și în cazul dozei standard, acționează prin afectarea transmiterii semnalelor de durere în sistemul nervos central.",
+            "Această doză mai mare necesită supraveghere medicală atentă din cauza riscului crescut de efecte secundare și dependență.",
+            "Poate fi mai potrivit pentru pacienții care au dezvoltat toleranță la doze mai mici sub îndrumarea medicului."
+        ],
+        "sideEffects": [
+            "Somnolența și sedarea crescute sunt mai probabile cu această doză mai mare.",
+            "Amețeala și riscul de căderi, mai ales la pacienții vârstnici, pot fi mai pronunțate.",
+            "Pot apărea dureri de cap, vedere încețoșată și probleme de coordonare.",
+            "Pot apărea probleme gastrointestinale, cum ar fi greață sau vărsături.",
+            "Potențial mai mare de afectare cognitivă și confuzie.",
+            "Risc crescut de dependență și simptome de sevraj la utilizarea prelungită.",
+            "Sunt posibile reacții paradoxale, cum ar fi agitație sau neliniște."
+        ],
+        "administration": [
+            "Luați exact așa cum v-a prescris medicul dumneavoastră. Nu creșteți singuri doza.",
+            "Doza tipică este un comprimat de 500 mg, de obicei administrat de trei ori pe zi și la culcare, dar aceasta trebuie confirmată de medicul dumneavoastră.",
+            "Înghițiți comprimatul întreg cu apă.",
+            "Poate fi administrat cu sau fără alimente.",
+            "Nu zdrobiți sau mestecați comprimatul.",
+            "Evitați strict alcoolul în timp ce luați acest medicament."
+        ],
+        "warnings": [
+            "Contraindicat la pacienții cu antecedente de alergie la Carisoprodol sau compuși înrudiți.",
+            "Risc mai mare de abuz și dependență; utilizați numai sub stricta supraveghere medicală.",
+            "Somnolența severă poate afecta semnificativ capacitatea de a conduce vehicule sau de a efectua sarcini periculoase.",
+            "Combinarea cu alcool sau alte depresive ale SNC poate fi periculoasă și potențial fatală.",
+            "Utilizați cu extremă prudență la pacienții cu insuficiență hepatică sau renală.",
+            "Nu este recomandat pacienților vârstnici din cauza riscului crescut de căderi și sensibilității.",
+            "Contraindicat la pacienții cu porfirie intermitentă acută."
+        ],
+        "how_it_works": [
+            "Soma 500 mg furnizează o concentrație mai mare de Carisoprodol, ducând la o depresie mai pronunțată a SNC.",
+            "Doza crescută are ca rezultat o ocupare mai mare a situsurilor sale țintă din sistemul nervos central.",
+            "Aceasta duce la un efect sedativ mai puternic și la o alterare mai puternică a percepției durerii.",
+            "Metabolismul în meprobamat produce niveluri mai ridicate ale acestui metabolit activ, contribuind la efectele terapeutice și sedative sporite.",
+            "Mecanismul rămâne același, dar cu efecte amplificate asupra semnalizării neuronale legate de durere și tonusul muscular."
+        ],
+        "tips": [
+            "A se păstra în siguranță, departe de copii și animale de companie, din cauza potențialului său mai mare de abuz.",
+            "Nu partajați niciodată acest medicament.",
+            "Păstrați un jurnal strict al dozelor pentru a evita utilizarea excesivă accidentală.",
+            "Nu încetați brusc administrarea fără îndrumare medicală, deoarece simptomele de sevraj pot fi severe.",
+            "Raportați imediat medicului dumneavoastră orice efecte secundare neobișnuite sau semne de dependență.",
+            "Eliminați corespunzător orice medicament neutilizat la un punct de colectare desemnat."
+        ]
+    },
+    "zop-7-5": {
+        "id": "126",
+        "name": {
+            "en": "Zop 7.5 mg Tablet"
+        },
+        "category": "Sistemul Nervos Central",
+        "brand": "Hab Pharma",
+        "dosage": "7.5 mg",
+        "price": "380",
+        "composition": "Zopiclonă 7.5mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "43200-80-2",
+        "image": "/products/zop7.5mg.png",
+        "additionalImages": [
+            "/products/zop7.5mg_2.jpeg",
+            "/products/zop7.5mg_3.webp"
+        ],
+        "metaTitle": "Buy Zop 7.5 mg Tablet Online | Zopiclone for Insomnia | Hab Pharma",
+        "metaDescription": "Buy Zop 7.5 mg (Zopiclonă) comprimate online. Un hipnotic non-benzodiazepinic pentru tratamentul pe termen scurt al insomniei. Ajutor de somn de calitate de la Hab Pharma.",
+        "description": "Zop 7.5 mg Comprimat conține Zopiclonă, un agent hipnotic non-benzodiazepinic utilizat pentru gestionarea pe termen scurt a insomniei caracterizată prin dificultăți de adormire.",
+        "slug": "zop-7-5",
+        "overview": [
+            "Zop 7.5 mg conține Zopiclonă, un medicament care vă ajută să adormiți mai repede și să rămâneți adormit pe tot parcursul nopții.",
+            "Aparține unei clase de medicamente cunoscute sub numele de 'Z-drugs' (hipnotice non-benzodiazepinice) și este utilizat pentru tratamentul pe termen scurt al insomniei.",
+            "Acest medicament este de obicei prescris atunci când dificultățile de somn sunt severe, invalidante sau cauzează suferință extremă.",
+            "Doza de 7.5 mg este doza standard pentru adulți pentru tratarea insomniei.",
+            "Durata tratamentului este de obicei scurtă, variind de la câteva zile la maximum 4 săptămâni, pentru a evita toleranța și dependența.",
+            "Ajută la îmbunătățirea calității și duratei somnului, ducând la o funcționare mai bună în timpul zilei.",
+            "Zopiclona este cunoscută pentru debutul său rapid de acțiune, acționând de obicei în decurs de o oră de la administrare."
+        ],
+        "sideEffects": [
+            "Un gust amar sau metalic în gură este un efect secundar foarte frecvent și distinctiv.",
+            "Somnolență în timpul zilei, amețeală sau o senzație de 'mahmureală' pot apărea a doua zi.",
+            "Unii utilizatori pot experimenta uscăciunea gurii.",
+            "Sunt posibile greață sau tulburări gastro-intestinale.",
+            "Mai puțin frecvent, utilizatorii pot experimenta confuzie, afectarea memoriei sau vise neobișnuite.",
+            "Efectele secundare rare, dar grave, includ comportamente complexe de somn, cum ar fi somnambulismul, condusul în somn sau implicarea în alte activități în timp ce nu sunt complet treji."
+        ],
+        "administration": [
+            "Luați Zop imediat înainte de culcare, numai când aveți o noapte întreagă (cel puțin 7-8 ore) disponibilă pentru somn.",
+            "Înghițiți comprimatul întreg cu un pahar cu apă.",
+            "Nu luați cu sau imediat după o masă grea, bogată în grăsimi, deoarece poate încetini absorbția.",
+            "Doza obișnuită pentru adulți este un comprimat de 7.5 mg o dată pe zi.",
+            "Nu depășiți doza sau durata de tratament recomandată.",
+            "Evitați complet alcoolul în timp ce luați acest medicament, deoarece poate crește efectele secundare."
+        ],
+        "warnings": [
+            "Nu utilizați dacă sunteți alergic la Zopiclonă sau la orice alte ingrediente.",
+            "Zopiclona are potențial de abuz și dependență, în special la utilizarea pe termen lung. Utilizați exact așa cum este prescris.",
+            "Este posibil să experimentați o insomnie de 'rebound' câteva zile după oprirea tratamentului.",
+            "Evitați conducerea vehiculelor sau operarea utilajelor până când știți cum vă afectează acest medicament. Este posibil să vă simțiți încă somnoros a doua zi.",
+            "Nu combinați cu alcool sau alte medicamente sedative.",
+            "Utilizați cu prudență la pacienții cu insuficiență hepatică sau renală, miastenia gravis sau probleme respiratorii severe.",
+            "Nu este recomandat în timpul sarcinii sau alăptării."
+        ],
+        "how_it_works": [
+            "Zopiclona este un derivat de ciclopirolonă care acționează ca agent hipnotic.",
+            "Acționează prin legarea de receptorii GABA-A din creier la un situs diferit de benzodiazepine.",
+            "GABA (acidul gama-aminobutiric) este principalul neurotransmițător inhibitor al creierului, responsabil pentru calmarea activității nervoase.",
+            "Prin creșterea efectelor GABA, Zopiclona crește neurotransmisia inhibitorie, ducând la sedare, inducerea somnului și relaxare musculară.",
+            "Profilul său de legare selectivă contribuie la eficacitatea sa în promovarea somnului, cu un risc relativ mai scăzut de anumite efecte secundare în comparație cu sedativele mai vechi."
+        ],
+        "tips": [
+            "A se păstra la temperatura camerei, ferit de lumină și umiditate.",
+            "Nu o luați decât dacă sunteți pregătit să dormiți o noapte întreagă.",
+            "Evitați activitățile care necesită alertă mentală până când efectele au dispărut complet.",
+            "Dacă experimentați frecvent somnolență matinală, consultați medicul; este posibil ca doza dumneavoastră să necesite ajustare.",
+            "Nu încetați brusc să luați acest medicament după utilizare pe termen lung, deoarece pot apărea simptome de sevraj. Medicul dumneavoastră vă va ghida cum să reduceți treptat doza."
+        ]
+    },
+    "zop-10": {
+        "id": "127",
+        "name": {
+            "en": "Zopisign 10 mg Tablet"
+        },
+        "category": "Sistemul Nervos Central",
+        "brand": "Hab Pharma",
+        "dosage": "10 mg",
+        "price": "450",
+        "composition": "Zopiclonă 10mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "43200-80-2",
+        "image": "/products/zopisign-10mg.jpg",
+        "additionalImages": [
+            "/products/zopisign-10mg_2.jpg",
+            "/products/zopisign-10mg_3.webp"
+        ],
+        "metaTitle": "Buy Zopisign 10 mg Online | High Strength Zopiclone | Hab Pharma",
+        "metaDescription": "Buy Zopisign 10 mg (Zopiclonă) comprimate online. Un ajutor de somn de mare concentrație pentru insomnia severă. De la Hab Pharma.",
+        "description": "Zopisign 10 mg conține o doză mai mare de Zopiclonă, indicată pentru tratamentul pe termen scurt al insomniei severe atunci când o doză mai mică (7,5 mg) este insuficientă.",
+        "slug": "zop-10",
+        "overview": [
+            "Zopisign 10 mg este o formulare cu doză mai mare de Zopiclonă pentru pacienții cu insomnie severă.",
+            "Este indicată atunci când doza standard de 7,5 mg nu asigură inducerea sau menținerea adecvată a somnului.",
+            "Această doză mai mare oferă efecte sedative mai puternice pentru persoanele cu dificultăți semnificative de somn.",
+            "Ca și în cazul dozei standard, este destinată numai pentru utilizare pe termen scurt (până la 4 săptămâni) din cauza riscului de toleranță și dependență.",
+            "Doza de 10 mg trebuie utilizată numai sub strictă supraveghere medicală.",
+            "Oferă o eficacitate sporită pentru pacienții care nu au răspuns adecvat la doze mai mici.",
+            "Această putere mai mare poate duce la un debut mai rapid al acțiunii și la un somn mai prelungit."
+        ],
+        "sideEffects": [
+            "Gust amar sau metalic mai pronunțat în gură.",
+            "Probabilitate crescută de somnolență în ziua următoare, sedare și efect de 'mahmureală'.",
+            "Risc mai mare de amețeală, confuzie și afectare a memoriei.",
+            "Potențial mai mare pentru comportamente complexe legate de somn (de exemplu, somnambulism, condus în somn).",
+            "Șanse crescute de căderi, în special la pacienții vârstnici sau debilitați.",
+            "Greața și disconfortul gastro-intestinal pot fi mai frecvente.",
+            "Risc mai mare de a dezvolta toleranță și dependență la utilizarea prelungită."
+        ],
+        "administration": [
+            "Luați exact așa cum este prescris, imediat înainte de culcare, cu cel puțin 7-8 ore disponibile pentru somn.",
+            "Doza obișnuită este un comprimat de 10 mg, dar aceasta trebuie administrată numai dacă este prescrisă în mod specific de medicul dumneavoastră.",
+            "Înghițiți comprimatul întreg cu apă.",
+            "Nu luați cu alimente, în special mese bogate în grăsimi, deoarece poate întârzia debutul acțiunii.",
+            "Nu luați niciodată mai mult de o doză într-o perioadă de 24 de ore.",
+            "Nu depășiți doza sau durata prescrisă."
+        ],
+        "warnings": [
+            "Această doză mai mare prezintă un risc crescut de afectare psihomotorie în ziua următoare, inclusiv capacitatea de a conduce vehicule.",
+            "Contraindicat la pacienții cu insuficiență hepatică severă, apnee în somn sau miastenia gravis.",
+            "Potențial mai mare de abuz și dependență; utilizați numai sub stricta supraveghere medicală.",
+            "Nu combinați cu alcool, opioide sau alte depresive ale SNC.",
+            "Utilizați cu extremă prudență la pacienții vârstnici sau debilitați din cauza riscului de cădere.",
+            "Nu este recomandată ca doză de început pentru pacienții noi."
+        ],
+        "how_it_works": [
+            "Zopisign 10 mg furnizează o concentrație mai mare de Zopiclonă, ducând la o potențare mai mare a neurotransmisiei GABAergice.",
+            "Doza crescută are ca rezultat o legare mai extensivă la receptorii GABA-A, producând un efect inhibitor mai puternic asupra sistemului nervos central.",
+            "Aceasta duce la sedare și hipnoză mai pronunțate, ceea ce este necesar pentru tratarea insomniei severe, rezistente la tratament.",
+            "Mecanismul de acțiune este același ca la doza mai mică, dar cu efecte amplificate asupra arhitecturii și continuității somnului."
+        ],
+        "tips": [
+            "Utilizați această doză numai sub prescripție specifică și îndrumarea unui profesionist din domeniul sănătății.",
+            "Fiți extrem de precaut în ceea ce privește conducerea vehiculelor sau operarea utilajelor în ziua următoare.",
+            "Dacă experimentați orice comportamente neobișnuite de somn, încetați să luați medicamentul și informați imediat medicul.",
+            "Nu utilizați alcool sau alte sedative.",
+            "Păstrați un jurnal al tiparelor de somn și al oricăror efecte secundare pentru a le împărtăși medicului dumneavoastră.",
+            "A se păstra în siguranță din cauza potențialului mai mare de abuz."
+        ]
+    },
+     "modafinil": {
+        "id": "128",
+        "name": {
+            "en": "Modafinil 200 mg Tablet"
+        },
+        "category": "Sistemul Nervos Central",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "650",
+        "composition": "Modafinil 200mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "68693-11-8",
+        "image": "/products/Modafinil200.jpeg",
+        "additionalImages": [
+            "/products/Modafinil200_2.jpg",
+            "/products/Modafinil200_3.webp"
+        ],
+        "metaTitle": "Buy Modafinil 200 mg Online | Wakefulness Promoting Agent | Hab Pharma",
+        "metaDescription": "Buy Modafinil 200 mg tablets online. Un agent de promovare a stării de veghe pentru narcolepsie, tulburarea de muncă în schimburi și AOS. Calitate de la Hab Pharma.",
+        "description": "Modafinil 200 mg este un medicament care promovează starea de veghe, utilizat pentru a îmbunătăți starea de veghe la adulții cu somnolență excesivă asociată cu narcolepsia, apneea obstructivă de somn și tulburarea de muncă în schimburi.",
+        "slug": "modafinil",
+        "overview": [
+            "Modafinilul este un medicament asemănător unui stimulent al sistemului nervos central care promovează starea de veghe.",
+            "Este prescris în principal pentru a trata somnolența excesivă în timpul zilei cauzată de narcolepsie, apneea obstructivă de somn (AOS) și tulburarea de somn prin muncă în schimburi (SWSD).",
+            "Pentru AOS, este utilizat ca adjuvant la tratamentele standard precum CPAP, nu ca înlocuitor.",
+            "Doza de 200 mg este doza standard pentru adulți și cea mai frecvent prescrisă.",
+            "Modafinilul ajută la îmbunătățirea stării de alertă și la reducerea tendinței de a adormi în timpul zilei.",
+            "Are un potențial mai scăzut de abuz în comparație cu stimulentele tradiționale precum amfetaminele.",
+            "Efectele unei singure doze pot dura 12-15 ore, oferind stare de veghe toată ziua.",
+            "Nu este un leac pentru aceste tulburări de somn, ci ajută la gestionarea simptomului de somnolență excesivă."
+        ],
+        "sideEffects": [
+            "Durerea de cap este cel mai frecvent raportat efect secundar, mai ales la începutul tratamentului.",
+            "Pot apărea nervozitate, anxietate, agitație sau insomnie.",
+            "Pot fi experimentate greață, diaree sau uscăciunea gurii.",
+            "Este posibilă amețeala sau senzația de leșin.",
+            "Scăderea poftei de mâncare și pierderea în greutate pot apărea la utilizarea continuă.",
+            "Creșterea ritmului cardiac sau palpitațiile pot apărea la unele persoane.",
+            "Erupțiile cutanate grave (cum ar fi sindromul Stevens-Johnson) sunt rare, dar necesită asistență medicală imediată."
+        ],
+        "administration": [
+            "Luați Modafinil exact așa cum v-a prescris medicul dumneavoastră.",
+            "Doza obișnuită pentru adulți este de 200 mg administrată o dată pe zi.",
+            "Pentru narcolepsie și AOS, luați doza dimineața.",
+            "Pentru tulburarea de muncă în schimburi, luați doza cu aproximativ o oră înainte de începerea schimbului de lucru.",
+            "Înghițiți comprimatele întregi cu apă. Pot fi administrate cu sau fără alimente.",
+            "Nu zdrobiți sau mestecați comprimatele.",
+            "Luați la aceeași oră în fiecare zi pentru efecte constante."
+        ],
+        "warnings": [
+            "Nu utilizați dacă sunteți alergic la Modafinil sau armodafinil.",
+            "Pot apărea erupții cutanate grave care necesită spitalizare; întrerupeți utilizarea și solicitați imediat ajutor medical dacă apare o erupție cutanată.",
+            "Nu este recomandat pacienților cu antecedente de hipertrofie ventriculară stângă sau anumite probleme cardiace.",
+            "Utilizați cu prudență la pacienții cu insuficiență hepatică sau renală; poate fi necesară o doză mai mică.",
+            "Modafinilul poate reduce eficacitatea contraceptivelor hormonale (pilule, implanturi, DIU). Folosiți metode contraceptive non-hormonale alternative sau suplimentare în timpul tratamentului și timp de o lună după întrerupere.",
+            "Evitați alcoolul în timp ce luați acest medicament."
+        ],
+        "how_it_works": [
+            "Mecanismul exact de acțiune al Modafinilului nu este pe deplin înțeles, dar diferă de cel al stimulentelor simpatomimetice clasice, cum ar fi amfetamina.",
+            "Se crede că acționează prin creșterea nivelului de dopamină din creier prin inhibarea recaptării sale, dar o face într-un mod mai selectiv și mai slab decât stimulentele clasice.",
+            "De asemenea, afectează alte sisteme de neurotransmițători, inclusiv orexina, histamina și norepinefrina, care sunt implicate în reglarea stării de veghe și a somnului.",
+            "Se consideră că efectele sale de promovare a stării de veghe sunt mediate prin activarea unor regiuni specifice ale creierului implicate în starea de alertă."
+        ],
+        "tips": [
+            "A se păstra la temperatura camerei, ferit de umiditate și căldură.",
+            "Luați devreme în cursul zilei (pentru somnolența diurnă) pentru a evita insomnia.",
+            "Dacă omiteți o doză și este târziu în cursul zilei, săriți peste doza uitată pentru a evita perturbarea somnului. Luați următoarea doză la ora obișnuită a doua zi.",
+            "Monitorizați-vă tensiunea arterială în mod regulat în timp ce luați acest medicament.",
+            "Utilizați o metodă contraceptivă non-hormonală de rezervă de încredere dacă utilizați contracepție hormonală.",
+            "Raportați imediat medicului dumneavoastră orice modificări ale pielii, modificări ale dispoziției sau semne de probleme cardiace."
+        ]
+    },
+    "armodafinil": {
+        "id": "hab-armodafinil",
+        "name": {
+            "en": "Armodafinil 150 mg Tablet"
+        },
+        "category": "Sistemul Nervos Central",
+        "brand": "Hab Pharma",
+        "dosage": "150 mg",
+        "price": "750",
+        "composition": "Armodafinil 150mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "112111-43-0",
+        "image": "/products/armodafinil-150-mg.webp",
+        "additionalImages": [
+            "/products/armodafinil-150-mg_3.jpg",
+            "/products/armodafinil-150-mg_2.jpg"
+        ],
+        "metaTitle": "Buy Armodafinil 150 mg Online | R-Modafinil | Hab Pharma",
+        "metaDescription": "Buy Armodafinil 150 mg tablets online. R-enantiomerul modafinilului pentru promovarea mai îndelungată a stării de veghe în narcolepsie, AOS și SWSD. De la Hab Pharma.",
+        "description": "Armodafinil 150 mg conține R-enantiomerul modafinilului. Este un agent de promovare a stării de veghe utilizat pentru a îmbunătăți starea de veghe la adulții cu somnolență excesivă asociată cu narcolepsia, apneea obstructivă de somn și tulburarea de muncă în schimburi.",
+        "slug": "armodafinil",
+        "overview": [
+            "Armodafinilul este (R)-enantiomerul pur al modafinilului, oferind o durată mai lungă de acțiune.",
+            "Este aprobat pentru aceleași indicații ca și modafinilul: îmbunătățirea stării de veghe în narcolepsie, apneea obstructivă de somn (AOS) și tulburarea de somn prin muncă în schimburi (SWSD).",
+            "O doză de 150 mg de armodafinil este aproximativ echivalentă terapeutic cu 200 mg de modafinil.",
+            "Este conceput pentru a oferi o stare de veghe mai susținută și prelungită pe parcursul zilei.",
+            "Datorită timpului său de înjumătățire mai lung, poate fi deosebit de benefic pentru pacienții care necesită alertă pe tot parcursul zilei.",
+            "Promovează starea de veghe cu un profil de debut și sfârșit mai lin în comparație cu modafinilul racemic pentru unii indivizi.",
+            "Această formulare oferă niveluri sanguine mai constante pe perioada de dozare."
+        ],
+        "sideEffects": [
+            "Profilul efectelor secundare este similar cu cel al modafinilului.",
+            "Durerea de cap, greața, amețeala și insomnia sunt frecvente.",
+            "Pot apărea anxietate și nervozitate.",
+            "Uscăciunea gurii este un efect secundar raportat frecvent.",
+            "Creșterea ritmului cardiac poate apărea la persoanele sensibile.",
+            "Ca și în cazul modafinilului, erupțiile cutanate grave sunt un risc rar, dar grav."
+        ],
+        "administration": [
+            "Luați Armodafinil exact așa cum este prescris, de obicei o dată pe zi.",
+            "Doza standard este de 150 mg administrată la aceeași oră în fiecare zi.",
+            "Pentru narcolepsie și AOS, luați dimineața.",
+            "Pentru SWSD, luați cu aproximativ o oră înainte de începerea schimbului de lucru.",
+            "Înghițiți comprimatele întregi cu apă; nu zdrobiți sau mestecați.",
+            "Poate fi administrat cu sau fără alimente.",
+            "Evitați administrarea după-amiaza sau seara pentru a preveni insomnia."
+        ],
+        "warnings": [
+            "Nu utilizați dacă aveți antecedente de reacție alergică la modafinil sau armodafinil.",
+            "Întrerupeți utilizarea și solicitați imediat asistență medicală dacă apare o erupție cutanată.",
+            "Prudență la pacienții cu probleme cardiace, insuficiență hepatică sau renală.",
+            "Reduce eficacitatea contraceptivelor hormonale; utilizați metode contraceptive alternative.",
+            "Evitați consumul de alcool.",
+            "Nu este recomandat în timpul sarcinii sau alăptării."
+        ],
+        "how_it_works": [
+            "Armodafinilul conține numai (R)-enantiomerul modafinilului, care are un timp de înjumătățire mai lung (aproximativ 15 ore) decât (S)-enantiomerul.",
+            "(R)-enantiomerul are o afinitate de legare mai mare pentru transportorul de dopamină, contribuind la efectele sale de promovare a stării de veghe.",
+            "Această selectivitate are ca rezultat o inhibare mai susținută a recaptării dopaminei și o durată mai lungă de acțiune în comparație cu modafinilul racemic.",
+            "Oferă concentrații sanguine stabile care se mențin pe parcursul orelor tipice de veghe, necesitând doar o singură dozare zilnică."
+        ],
+        "tips": [
+            "A se păstra într-un loc răcoros și uscat.",
+            "Luați primul lucru dimineața pentru cele mai bune rezultate în tratarea somnolenței diurne.",
+            "Utilizați contracepție non-hormonală de încredere dacă este necesar.",
+            "Mențineți o hidratare adecvată.",
+            "Nu partajați acest medicament cu alții.",
+            "Raportați imediat medicului dumneavoastră orice simptome neobișnuite, în special modificări ale pielii sau semne de probleme cardiace."
+        ]
+    },
+    "cobra-120": {
+        "id": "hab-cobra-120",
+        "name": {
+            "en": "Cobra 120 mg Tablet"
+        },
+        "category": "Sistemul Reproductor și Sistemul Urinar",
+        "brand": "Hab Pharma",
+        "dosage": "120 mg",
+        "price": "580",
+        "composition": "Citrat de Sildenafil 120mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-120.png",
+        "additionalImages": [
+            "/products/cobra-120_2.png",
+            "/products/cobra-120_3.png"
+        ],
+        "metaTitle": "Buy Cobra 120 mg Online | Sildenafil for ED | Hab Pharma",
+        "metaDescription": "Buy Cobra 120 mg (Citrat de Sildenafil) comprimate online. Un tratament de putere intermediară pentru disfuncția erectilă. De înaltă calitate de la Hab Pharma.",
+        "description": "Cobra 120 mg conține Citrat de Sildenafil, un inhibitor PDE5 utilizat pentru tratamentul disfuncției erectile (impotență) la bărbații adulți.",
+        "slug": "cobra-120",
+        "overview": [
+            "Cobra 120 mg este un medicament care conține Citrat de Sildenafil, utilizat pentru a ajuta bărbații să obțină și să mențină o erecție suficientă pentru activitatea sexuală.",
+            "Aparține unei clase de medicamente cunoscute sub numele de inhibitori ai fosfodiesterazei de tip 5 (PDE5).",
+            "Doza de 120 mg oferă o opțiune intermediară, potențial potrivită pentru cei care consideră 100 mg insuficient, dar nu necesită doza maximă de 200 mg.",
+            "Funcționează numai cu stimulare sexuală și nu crește dorința sexuală.",
+            "Această formulare este concepută pentru a oferi efecte fiabile și consistente pentru gestionarea disfuncției erectile.",
+            "Efectele durează de obicei până la 4-6 ore, oferind o fereastră suficientă pentru activitatea sexuală.",
+            "Trebuie utilizat sub îndrumarea unui profesionist din domeniul sănătății."
+        ],
+        "sideEffects": [
+            "Durerea de cap și înroșirea feței sunt cele mai frecvente efecte secundare.",
+            "Pot apărea congestie nazală sau rinoree.",
+            "Unii utilizatori pot experimenta indigestie sau arsuri la stomac.",
+            "Amețeală sau senzație de leșin, mai ales la ridicarea rapidă în picioare.",
+            "Tulburări vizuale, cum ar fi o nuanță albastră a vederii sau sensibilitate crescută la lumină.",
+            "Pot apărea dureri de spate sau dureri musculare, de obicei la 12-24 de ore după administrarea medicamentului."
+        ],
+        "administration": [
+            "Luați un comprimat Cobra 120 mg cu aproximativ 30-60 de minute înainte de activitatea sexuală planificată.",
+            "Înghițiți comprimatul întreg cu un pahar cu apă.",
+            "Pentru o absorbție optimă și mai rapidă, administrați pe stomacul gol. O masă bogată în grăsimi poate întârzia debutul acțiunii.",
+            "Nu luați mai mult de o doză într-o perioadă de 24 de ore.",
+            "Stimularea sexuală este necesară pentru ca medicamentul să fie eficient."
+        ],
+        "warnings": [
+            "Nu luați Cobra dacă luați orice formă de medicamente cu nitrați (de exemplu, nitroglicerină pentru durerea în piept), deoarece combinația poate provoca o scădere bruscă și periculoasă a tensiunii arteriale.",
+            "Nu utilizați dacă sunteți femeie sau copil.",
+            "Consultați medicul înainte de utilizare dacă aveți probleme cardiace, boli hepatice sau renale severe, tensiune arterială scăzută sau antecedente recente de accident vascular cerebral sau atac de cord.",
+            "Solicitați imediat ajutor medical dacă experimentați o pierdere bruscă a vederii sau auzului sau dacă aveți o erecție care durează mai mult de 4 ore (priapism).",
+            "Evitați consumul de alcool înainte de activitatea sexuală, deoarece poate crește riscul de efecte secundare."
+        ],
+        "how_it_works": [
+            "Citratul de Sildenafil, ingredientul activ din Cobra, este un inhibitor puternic și selectiv al PDE5.",
+            "În timpul stimulării sexuale, oxidul nitric este eliberat în corpii cavernoși ai penisului.",
+            "Acest lucru declanșează producția de cGMP (monofosfat ciclic de guanozină), care relaxează mușchii netezi și permite creșterea fluxului sanguin în țesuturile peniene, ducând la o erecție.",
+            "Enzima PDE5 descompune în mod normal cGMP, încheind erecția.",
+            "Prin inhibarea PDE5, Cobra permite acumularea cGMP, îmbunătățind și prelungind răspunsul erectil natural la stimularea sexuală."
+        ],
+        "tips": [
+            "A se păstra la temperatura camerei, ferit de umiditate și căldură.",
+            "Dacă sunteți nou în ceea ce privește medicația pentru DE, este recomandabil să începeți cu o doză mai mică (cum ar fi 50mg sau 100mg) pentru a evalua toleranța, conform indicațiilor medicului dumneavoastră.",
+            "Evitați grepfrutul sau sucul de grepfrut, deoarece poate crește nivelul de sildenafil din sânge și riscul de efecte secundare.",
+            "Nu luați acest medicament dacă nu aveți disfuncție erectilă.",
+            "A nu se lăsa la îndemâna copiilor."
+        ]
+    },
+    "cobra-200": {
+        "id": "hab-cobra-200",
+        "name": {
+            "en": "Cobra 200 mg Tablet"
+        },
+        "category": "Sistemul Reproductor și Sistemul Urinar",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "720",
+        "composition": "Citrat de Sildenafil 200mg",
+        "form": "Comprimat",
+        "pack_size": "10 x 10 Comprimate",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-200.webp",
+        "additionalImages": [
+            "/products/cobra-200-2.webp",
+            "/products/cobra-200_3.jpg"
+        ],
+        "metaTitle": "Buy Cobra 200 mg Online | Maximum Strength Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra 200 mg (Citrat de Sildenafil) comprimate online. Formulare de rezistență maximă pentru disfuncția erectilă severă. De la Hab Pharma.",
+        "description": "Cobra 200 mg este formularea de rezistență maximă a Citratului de Sildenafil de la Hab Pharma, indicată pentru tratamentul disfuncției erectile la bărbații adulți care necesită o doză mai mare.",
+        "slug": "cobra-200",
+        "overview": [
+            "Cobra 200 mg este comprimatul de Sildenafil cu cea mai mare concentrație disponibil de la Hab Pharma.",
+            "Această doză maximă este de obicei rezervată bărbaților cu disfuncție erectilă severă care nu au obținut rezultate satisfăcătoare cu concentrații mai mici (cum ar fi 100mg sau 120mg).",
+            "Oferă cea mai puternică inhibiție a enzimei PDE5 pentru un efect maxim asupra fluxului sanguin penian.",
+            "Doza de 200 mg oferă cea mai lungă durată de acțiune, putând dura până la 8-12 ore la unii indivizi.",
+            "Această formulare trebuie utilizată numai sub strictă supraveghere medicală din cauza riscului crescut de efecte secundare.",
+            "Poate fi potrivită pentru pacienții cu afectare vasculară semnificativă sau pentru cei care au dezvoltat toleranță la doze mai mici."
+        ],
+        "sideEffects": [
+            "Probabilitate și intensitate crescute ale tuturor efectelor secundare comune, inclusiv durere de cap severă și înroșirea feței.",
+            "Tulburări vizuale mai semnificative și frecvente, cum ar fi vederea cu nuanță albastră și sensibilitatea la lumină.",
+            "Risc mai mare de amețeală și o scădere mai mare a tensiunii arteriale, putând cauza leșin.",
+            "Șanse crescute de priapism (erecție prelungită și dureroasă), care reprezintă o urgență medicală.",
+            "Congestie nazală și dispepsie mai pronunțate.",
+            "Potențial mai mare pentru dureri de spate și dureri musculare."
+        ],
+        "administration": [
+            "Luați exact așa cum este prescris, de obicei cu 30-60 de minute înainte de activitatea sexuală.",
+            "Nu luați mai mult de un comprimat în 24 de ore.",
+            "Această doză mare nu trebuie să fie doza de început pentru niciun pacient nou în terapia cu Sildenafil.",
+            "Administrați pe stomacul gol pentru o absorbție optimă; evitați mesele bogate în grăsimi.",
+            "Înghițiți comprimatul întreg cu un pahar plin cu apă.",
+            "Evitați strict alcoolul."
+        ],
+        "warnings": [
+            "Contraindicație absolută cu nitrați sau donori de oxid nitric.",
+            "Nu pentru utilizare la pacienții cu boli cardiovasculare severe, infarct miocardic recent, accident vascular cerebral sau aritmii care pun viața în pericol.",
+            "Contraindicat la pacienții cu insuficiență hepatică severă sau boală renală în stadiu terminal care necesită dializă.",
+            "Risc ridicat de evenimente adverse grave; utilizați cu extremă prudență.",
+            "Nu este recomandat pacienților cu hipotensiune arterială (tensiune arterială <90/50 mmHg).",
+            "Utilizați cu extremă prudență dacă luați alfablocante sau alte antihipertensive, deoarece poate apărea hipotensiune arterială severă.",
+            "Nu utilizați dacă aveți antecedente de neuropatie optică ischemică anterioară non-arteritică (NAION) sau retinită pigmentară."
+        ],
+        "how_it_works": [
+            "Cobra 200 mg asigură o inhibare maximă a PDE5, ducând la blocarea aproape completă a enzimei în țesuturile peniene.",
+            "Doza mare asigură acumularea cGMP la niveluri maxime în timpul stimulării sexuale, rezultând cea mai pronunțată relaxare a mușchilor netezi și dilatare a vaselor de sânge posibilă.",
+            "Aceasta duce la cel mai puternic și mai susținut răspuns erectil.",
+            "Concentrația plasmatică crescută prelungește, de asemenea, durata de acțiune, oferind o fereastră terapeutică mai lungă."
+        ],
+        "tips": [
+            "Utilizați această concentrație maximă numai dacă este prescrisă în mod specific de un specialist.",
+            "Fiți pe deplin conștienți de riscul semnificativ crescut de efecte secundare.",
+            "Aveți la îndemână contacte de urgență.",
+            "Monitorizați cu atenție durata erecției; solicitați imediat ajutor medical dacă durează mai mult de 4 ore.",
+            "Nu combinați cu niciun alt tratament pentru DE.",
+            "A se păstra în siguranță și la îndemâna copiilor."
+        ]
+    },
+     "cobra-jelly": {
+        "id": "hab-cobra-jelly",
+        "name": {
+            "en": "Cobra Oral Jelly 100 mg"
+        },
+        "category": "Sistemul Reproductor și Sistemul Urinar",
+        "brand": "Hab Pharma",
+        "dosage": "100 mg",
+        "price": "520",
+        "composition": "Citrat de Sildenafil 100mg",
+        "form": "Gel Oral",
+        "pack_size": "10 Plicuri (per cutie)",
+        "casId": "139755-83-2",
+        "image": "/products/cobra_jelly.png",
+        "additionalImages": [
+            "/products/cobra_jelly2.png",
+            "/products/cobra_jelly.png"
+        ],
+        "metaTitle": "Buy Cobra Oral Jelly 100 mg Online | Fast-Acting Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra Oral Jelly 100 mg online. Citrat de Sildenafil într-un format de gel cu absorbție rapidă, convenabil pentru tratamentul rapid al DE. Diverse arome. De la Hab Pharma.",
+        "description": "Cobra Oral Jelly 100 mg este o formulare convenabilă și cu acțiune rapidă a Citratului de Sildenafil pentru tratamentul disfuncției erectile. Este concepută pentru o absorbție mai rapidă și ușurință în utilizare.",
+        "slug": "cobra-jelly",
+        "overview": [
+            "Cobra Oral Jelly oferă o alternativă populară la comprimatele tradiționale de Sildenafil, în special pentru cei care au dificultăți la înghițirea pastilelor.",
+            "Fiecare plic conține 100 mg de Citrat de Sildenafil sub formă de gel cu gust plăcut, gata de consum.",
+            "Formularea în gel este concepută pentru a fi absorbită mai rapid decât comprimatele, putând duce la un debut mai rapid al acțiunii (chiar și 15-20 de minute pentru unii indivizi).",
+            "Este disponibil în diverse arome, făcând experiența mai plăcută și discretă.",
+            "Plicurile convenabile de unică doză sunt ușor de transportat și consumat oriunde, oferind spontaneitate.",
+            "Ca și comprimatele, necesită stimulare sexuală pentru a fi eficient.",
+            "Durata acțiunii este similară cu cea a formelor de comprimate, durând 4-6 ore."
+        ],
+        "sideEffects": [
+            "Profilul efectelor secundare este același ca la comprimatele de Sildenafil, dar absorbția mai rapidă poate duce la un debut mai rapid al efectelor secundare precum durerea de cap și înroșirea feței.",
+            "Efectele secundare comune includ durerea de cap, înroșirea feței, congestia nazală și indigestia.",
+            "Pot apărea, de asemenea, amețeli și tulburări vizuale (de exemplu, nuanță albastră).",
+            "Absorbția mai rapidă nu modifică de obicei severitatea sau tipul efectelor secundare."
+        ],
+        "administration": [
+            "Rupeți sau tăiați colțul unui plic și stoarceți întregul conținut direct în gură.",
+            "Puteți înghiți gelul imediat sau îl puteți lăsa să se dizolve în gură pentru o absorbție potențial mai rapidă.",
+            "Se recomandă administrarea cu aproximativ 15-30 de minute înainte de activitatea sexuală planificată.",
+            "Nu administrați cu alimente pentru cel mai rapid efect; dacă ați mâncat recent, în special o masă bogată în grăsimi, debutul poate fi întârziat.",
+            "Nu luați mai mult de un plic într-o perioadă de 24 de ore.",
+            "Stimularea sexuală este necesară pentru ca medicamentul să funcționeze."
+        ],
+        "warnings": [
+            "Aceleași avertismente și contraindicații ca pentru comprimatele de Sildenafil se aplică și gelului oral.",
+            "Nu utilizați dacă luați nitrați pentru durerea în piept.",
+            "Nu pentru utilizare la femei sau copii.",
+            "Consultați un medic înainte de utilizare dacă aveți probleme cardiace, boli hepatice sau renale severe sau antecedente de accident vascular cerebral.",
+            "Solicitați imediat ajutor medical pentru erecții prelungite care durează mai mult de 4 ore."
+        ],
+        "how_it_works": [
+            "Mecanismul de acțiune al Cobra Oral Jelly este identic cu cel al comprimatelor de Sildenafil: inhibă enzima PDE5, potențând efectul oxidului nitric și crescând nivelurile de cGMP în penis.",
+            "Aceasta duce la relaxarea mușchilor netezi și la creșterea fluxului sanguin în timpul stimulării sexuale, facilitând o erecție.",
+            "Diferența cheie este metoda de administrare. Gelul este absorbit direct prin mucoasa orală și mucoasa stomacului, ocolind potențial o parte din descompunerea inițială din ficat, ceea ce poate duce la o creștere mai rapidă a nivelurilor sanguine și un debut mai rapid al acțiunii în comparație cu comprimatele standard."
+        ],
+        "tips": [
+            "A se păstra într-un loc răcoros și uscat, ferit de lumina directă a soarelui. Nu refrigerați.",
+            "Rupeți plicul cu grijă la crestătură pentru a evita vărsarea.",
+            "Consumați întregul plic pentru doza completă de 100 mg.",
+            "Dacă sunteți nou în ceea ce privește medicația pentru DE, este important să determinați mai întâi doza optimă cu medicul dumneavoastră folosind comprimate, deoarece gelul oferă mai puțină flexibilitate în dozare.",
+            "Păstrați toate medicamentele la îndemâna copiilor. Gelul aromatizat poate fi deosebit de atractiv pentru aceștia.",
+            "Eliminați corect plicurile goale."
+        ]
+    },
+    "testogel": {
+        "id": "hab-testogel",
+        "name": {
+            "en": "Testosign Soft Gel 40 mg"
+        },
+        "category": "Probleme Endocrinologice",
+        "brand": "Hab Pharma",
+        "dosage": "40 mg",
+        "price": "1200",
+        "composition": "Undecanoat de Testosteron 40mg",
+        "form": "Capsulă Moale de Gelatină",
+        "pack_size": "10 x 10 Capsule",
+        "casId": "58-22-0",
+        "image": "/products/Testosign-40.webp",
+        "additionalImages": [
+            "/products/Testosign-40_2.jpg",
+            "/products/Testosign-40_3.png"
+        ],
+        "metaTitle": "Buy Testosign Soft Gel 40 mg Online | Testosterone Replacement | Hab Pharma",
+        "metaDescription": "Buy Testosign Soft Gel 40 mg (Undecanoat de Testosteron) online. Terapie orală de substituție cu testosteron pentru hipogonadism. De la Hab Pharma.",
+        "description": "Testosign Soft Gel 40 mg conține Undecanoat de Testosteron, o terapie orală de substituție cu testosteron indicată pentru bărbații cu hipogonadism (deficiență de testosteron).",
+        "slug": "testogel",
+        "overview": [
+            "Testosign Soft Gel este un medicament oral pentru terapia de substituție cu testosteron (TRT) la bărbații care au niveluri scăzute sau inexistente de testosteron din cauza anumitor afecțiuni medicale (hipogonadism).",
+            "Conține Undecanoat de Testosteron, o formă de testosteron care, atunci când este absorbită, ajută la restabilirea nivelurilor normale de testosteron.",
+            "Această formulare este concepută pentru a fi absorbită prin sistemul limfatic, ocolind metabolismul de prim pasaj din ficat.",
+            "Doza de 40 mg este o doză de început sau de întreținere comună, dar doza exactă trebuie determinată de un medic pe baza nevoilor individuale și a analizelor de sânge.",
+            "TRT poate ajuta la ameliorarea simptomelor nivelului scăzut de testosteron, cum ar fi scăderea libidoului, oboseala, starea de spirit scăzută și pierderea masei musculare.",
+            "Monitorizarea regulată a nivelurilor de testosteron și a altor parametri de sănătate este esențială în timpul tratamentului.",
+            "Acesta este un medicament care necesită prescripție medicală și necesită supraveghere medicală."
+        ],
+        "sideEffects": [
+            "Pot apărea reacții cutanate sau acnee.",
+            "Creșterea numărului de globule roșii (policitemie) care necesită monitorizare.",
+            "Modificări ale prostatei; examenele regulate ale prostatei sunt necesare.",
+            "Poate apărea ginecomastia (mărirea sau sensibilitatea sânilor).",
+            "Edemul (retenția de lichide) este posibil.",
+            "Apneea în somn se poate agrava la persoanele predispuse.",
+            "Modificări ale dispoziției, inclusiv creșterea agresivității sau iritabilității.",
+            "Scăderea numărului de spermatozoizi sau infertilitate la utilizarea prelungită."
+        ],
+        "administration": [
+            "Luați exact așa cum v-a prescris medicul dumneavoastră. Dozajul este individualizat pe baza nivelurilor de testosteron din sânge și a răspunsului clinic.",
+            "Capsulele trebuie înghițite întregi cu apă, de preferință cu o masă care conține ceva grăsime pentru a ajuta absorbția.",
+            "Nu zdrobiți sau mestecați capsulele.",
+            "Programul tipic de dozare poate fi o dată sau de două ori pe zi, conform deciziei medicului dumneavoastră.",
+            "Nu încetați să luați acest medicament fără a vă consulta medicul."
+        ],
+        "warnings": [
+            "Aceasta este o substanță controlată cu potențial de abuz. Utilizați numai sub supraveghere medicală.",
+            "Nu pentru utilizare la femei, în special la cele care sunt sau pot rămâne însărcinate.",
+            "Contraindicat la bărbații cu cancer de prostată sau cancer mamar.",
+            "Sunt necesare analize de sânge regulate pentru a monitoriza nivelurile de testosteron, numărul de globule roșii și funcția hepatică.",
+            "Poate afecta controlul glicemiei la pacienții diabetici.",
+            "Poate crește riscul de evenimente cardiovasculare; utilizați cu prudență la pacienții cu boli de inimă.",
+            "Informați imediat medicul dacă experimentați erecții frecvente sau persistente, probleme de respirație în timpul somnului sau semne de cheag de sânge."
+        ],
+        "how_it_works": [
+            "Testosign conține Undecanoat de Testosteron, un ester al hormonului masculin natural, testosteronul.",
+            "Atunci când este administrat oral, molecula este absorbită în sistemul limfatic, ocolind în mare măsură metabolismul de prim pasaj din ficat care altfel l-ar inactiva.",
+            "Odată ajuns în fluxul sanguin, este convertit în testosteron liber, care apoi se leagă de receptorii de androgeni din tot corpul.",
+            "Această legare activează expresia genelor responsabile pentru caracteristicile masculine, libido, energie, masă musculară și densitate osoasă.",
+            "Prin restabilirea testosteronului la niveluri fiziologice normale, ameliorează simptomele hipogonadismului."
+        ],
+        "tips": [
+            "A se păstra la temperatura camerei sub 25°C, ferit de umiditate și lumină.",
+            "Luați în mod constant cu mesele pentru a asigura o absorbție fiabilă.",
+            "Nu partajați acest medicament cu nimeni.",
+            "Păstrați un jurnal al simptomelor și al oricăror efecte secundare pentru a le discuta cu medicul dumneavoastră.",
+            "Participați la toate programările de urmărire și analizele de sânge programate.",
+            "Mențineți un stil de viață sănătos, inclusiv o dietă echilibrată și exerciții fizice regulate, ca parte a planului dumneavoastră general de tratament.",
+            "A nu se lăsa la îndemâna copiilor. Acesta este un hormon puternic și trebuie păstrat în siguranță."
+        ]
+    },
+    "azelax-cream": {
+        "id": "134",
+        "name": {
+            "en": "Azelax - Azelaic Acid Cream"
+        },
+        "category": "Îngrijirea Pielii",
+        "brand": "Healing Pharma",
+        "dosage": "20% g/g",
+        "price": "249",
+        "composition": "Acid Azelaic 20% g/g",
+        "form": "Cremă",
+        "pack_size": "Tube de 20g",
+        "casId": "123-99-9",
+        "image": "/products/azelaic.webp",
+        "additionalImages": [
+            "/products/azelaic_2.webp",
+            "/products/azelaic_3.webp"
+        ],
+        "metaTitle": "Buy Azelax Azelaic Acid Cream 20% Online | Healing Pharma",
+        "metaDescription": "Buy Azelax 20% Cremă cu Acid Azelaic online. Eficientă pentru acnee și rozacee. Formulă blândă, non-comedogenică. De la Healing Pharma.",
+        "description": "Azelax Cremă conține Acid Azelaic 20%, un acid natural eficient în tratarea acneei ușoare până la moderate și în gestionarea rozaceei.",
+        "slug": "azelax-cream",
+        "overview": [
+            "Azelax Cremă conține 20% Acid Azelaic, un acid dicarboxilic cu proprietăți antiinflamatorii și antibacteriene.",
+            "Este utilizat în principal pentru tratamentul topic al acneei vulgare inflamatorii ușoare până la moderate.",
+            "Această cremă ajută la reducerea numărului de leziuni de acnee, inclusiv puncte negre, puncte albe și coșuri.",
+            "Este, de asemenea, eficientă în gestionarea rozaceei papulopustuloase.",
+            "Acidul Azelaic acționează prin normalizarea eliminării celulelor pielii din interiorul foliculilor de păr, ceea ce ajută la prevenirea blocajelor.",
+            "De asemenea, inhibă creșterea *Cutibacterium acnes*, o bacterie implicată în dezvoltarea acneei.",
+            "Utilizarea regulată poate ajuta la îmbunătățirea texturii pielii și la reducerea hiperpigmentării post-inflamatorii (petelor întunecate) cauzate de acnee.",
+            "Această formulare este non-comedogenică, ceea ce înseamnă că nu va înfunda suplimentar porii.",
+            "Concentrația de 20% este o concentrație studiată clinic pentru rezultate eficiente.",
+            "Este potrivit pentru majoritatea tipurilor de piele, dar se recomandă un test cutanat pentru pielea sensibilă."
+        ],
+        "sideEffects": [
+            "Pot apărea iritații cutanate ușoare până la moderate, cum ar fi mâncărime, arsură sau înțepături, mai ales la începutul tratamentului.",
+            "Unii indivizi pot experimenta uscăciune, descuamare sau exfoliere a pielii.",
+            "Este posibil eritemul (roșeața) la locul aplicării.",
+            "Aceste efecte secundare sunt de obicei temporare și adesea scad odată cu utilizarea continuată.",
+            "Dacă iritația este severă sau persistă, reduceți frecvența aplicării sau consultați un medic.",
+            "Dermatita de contact (erupție cutanată) poate apărea în cazuri rare."
+        ],
+        "administration": [
+            "Curățați și uscați bine zona afectată a pielii înainte de a aplica crema.",
+            "Aplicați un strat subțire de Azelax Cremă pe întreaga zonă afectată de două ori pe zi, de obicei dimineața și seara.",
+            "Masați ușor crema în piele până când este absorbită.",
+            "Evitați contactul cu ochii, gura și alte membrane mucoase.",
+            "Spălați-vă imediat pe mâini după aplicarea cremei.",
+            "Utilizați conform indicațiilor profesionistului dumneavoastră din domeniul sănătății.",
+            "Îmbunătățirea este de obicei observată în decurs de 4 săptămâni, dar rezultatele optime pot dura câteva săptămâni."
+        ],
+        "warnings": [
+            "Numai pentru uz extern. Nu înghițiți.",
+            "Evitați contactul cu ochii, gura și membranele mucoase. Dacă apare contactul, clătiți bine cu apă.",
+            "Dacă apare iritația pielii sau devine severă, întrerupeți utilizarea și consultați un medic.",
+            "Nu aplicați pe pielea ruptă sau iritată, inclusiv tăieturi, zgârieturi sau arsuri solare.",
+            "Informați medicul dacă aveți o alergie cunoscută la Acidul Azelaic sau la orice alte ingrediente.",
+            "Utilizați cu prudență la pacienții cu astm, deoarece au fost raportate cazuri foarte rare de bronhospasm."
+        ],
+        "how_it_works": [
+            "Acidul Azelaic acționează prin multiple mecanisme pentru a îmbunătăți acneea și rozaceea.",
+            "Are proprietăți antibacteriene care ajută la inhibarea creșterii *Cutibacterium acnes* în cadrul unității pilosebacee.",
+            "Este un inhibitor competitiv al tirozinazei, ceea ce poate ajuta la reducerea producției de melanină, estompând astfel hiperpigmentarea post-inflamatorie.",
+            "Normalizează procesul de keratinizare dezordonat din interiorul foliculilor de păr, reducând formarea microcomedoanelor (precursorul leziunilor de acnee).",
+            "Pentru rozacee, ajută la reducerea inflamației și a papulelor/pustulelor, deși mecanismul său exact este încă în studiu.",
+            "Prin reducerea inflamației și a încărcăturii bacteriene, ajută la curățarea leziunilor existente și la prevenirea formării altora noi."
+        ],
+        "tips": [
+            "A se păstra într-un loc răcoros și uscat, ferit de lumina directă a soarelui.",
+            "Păstrați tubul bine închis atunci când nu este utilizat.",
+            "Utilizați o cremă hidratantă potrivită tipului dumneavoastră de piele dacă experimentați uscăciune în timpul utilizării acestui produs.",
+            "Dacă uitați o doză, aplicați-o imediat ce vă amintiți. Dacă este aproape timpul pentru următoarea doză, săriți peste doza uitată.",
+            "Nu aplicați pansamente sau învelitori ocluzive peste zona tratată, decât dacă medicul vă recomandă acest lucru.",
+            "Puteți folosi produse cosmetice non-comedogenice în timpul tratamentului, dar asigurați-vă că crema este complet absorbită înainte de a le aplica.",
+            "Protejați-vă pielea de expunerea excesivă la soare și folosiți protecție solară, deoarece Acidul Azelaic nu protejează împotriva arsurilor solare."
+        ]
+    },
+    "bonefine-d3-60k": {
+        "id": "135",
+        "name": {
+            "en": "Bonefine Vitamin D3 60,000 IU Capsules"
+        },
+        "category": "Vitamine & Suplimente",
+        "brand": "Healing Pharma",
+        "dosage": "60.000 UI",
+        "price": "210",
+        "composition": "Colecalciferol (Vitamina D3) 60.000 UI",
+        "form": "Capsulă",
+        "pack_size": "4 Capsule x Pachet de 2",
+        "casId": "67-97-0",
+        "image": "/products/Bonefine.webp",
+        "additionalImages": [
+            "/products/Bonefine.webp",
+            "/products/Bonefine.webp"
+        ],
+        "metaTitle": "Buy Bonefine Vitamin D3 60,000 IU Capsules | Healing Pharma",
+        "metaDescription": "Buy Bonefine D3 60.000 UI capsule pentru suplimentarea cu Vitamina D. Colecalciferol de mare concentrație pentru sănătatea oaselor și imunitate. De la Healing Pharma.",
+        "description": "Bonefine Vitamina D3 60.000 UI capsule oferă o doză de mare concentrație de colecalciferol pentru a trata și preveni deficiența de Vitamina D.",
+        "slug": "bonefine-d3-60k",
+        "overview": [
+            "Bonefine D3 60.000 UI este un supliment de mare potență care conține Vitamina D3 (colecalciferol).",
+            "Este utilizat pentru a trata și preveni deficiența de Vitamina D la adulți.",
+            "Vitamina D este crucială pentru absorbția calciului și fosforului, esențiale pentru menținerea oaselor și dinților sănătoși.",
+            "De asemenea, joacă un rol vital în susținerea funcției sistemului imunitar și a sănătății musculare.",
+            "Această formulare de mare concentrație este de obicei prescrisă pentru administrare săptămânală sau lunară, conform indicațiilor medicului.",
+            "Deficiența de Vitamina D poate duce la dureri osoase, slăbiciune musculară și un risc crescut de fracturi.",
+            "Nivelurile adecvate de Vitamina D sunt deosebit de importante pentru persoanele cu expunere limitată la soare, vârstnici și cei cu anumite afecțiuni medicale.",
+            "Fiecare pachet conține 4 capsule, oferind un curs complet de suplimentare conform regimurilor comune.",
+            "Produsul este fabricat conform standardelor de calitate pentru a asigura potența și puritatea."
+        ],
+        "sideEffects": [
+            "Atunci când sunt administrate conform indicațiilor, efectele secundare sunt rare. Cu toate acestea, administrarea unei doze mai mari decât cea recomandată poate duce la hipercalcemie (niveluri ridicate de calciu).",
+            "Simptomele hipercalcemiei pot include slăbiciune, oboseală, greață, vărsături, constipație și urinare frecventă.",
+            "Unii indivizi pot experimenta un gust metalic sau uscăciunea gurii.",
+            "Reacțiile alergice sunt foarte rare, dar posibile.",
+            "Pot apărea pietre la rinichi la persoanele predispuse cu utilizarea prelungită a dozelor mari."
+        ],
+        "administration": [
+            "Luați acest medicament exact așa cum v-a prescris medicul dumneavoastră.",
+            "Doza tipică pentru tratarea deficienței este o capsulă de 60.000 UI o dată pe săptămână timp de 8 săptămâni, urmată de o doză de întreținere mai mică.",
+            "Pentru prevenire, medicul dumneavoastră poate recomanda un program de dozare diferit.",
+            "Capsulele trebuie înghițite întregi cu apă, de preferință cu o masă care conține grăsimi pentru o absorbție mai bună.",
+            "Nu zdrobiți sau mestecați capsula.",
+            "Nu luați mai mult decât doza prescrisă."
+        ],
+        "warnings": [
+            "Nu utilizați dacă sunteți alergic la colecalciferol sau la orice alte ingrediente.",
+            "Consultați medicul înainte de utilizare dacă aveți pietre la rinichi, boli renale severe sau sarcoidoză.",
+            "Dozele mari de Vitamina D trebuie utilizate cu prudență la pacienții cu boli de inimă.",
+            "Pot fi necesare analize de sânge regulate pentru a monitoriza nivelurile de Vitamina D și calciu în timpul terapiei cu doze mari.",
+            "Informați medicul despre toate celelalte medicamente pe care le luați, în special diuretice tiazidice și anumite anticonvulsivante."
+        ],
+        "how_it_works": [
+            "Vitamina D3 (colecalciferol) este o vitamină liposolubilă care este convertită în ficat în calcidiol (25-hidroxivitamina D).",
+            "Apoi este convertită în rinichi în calcitriol (1,25-dihidroxivitamina D), forma activă a vitaminei.",
+            "Calcitriolul acționează ca un hormon, reglând absorbția calciului și fosforului din intestin.",
+            "Prin menținerea unor niveluri adecvate de calciu și fosfat, Vitamina D promovează mineralizarea osoasă corectă și previne afecțiuni precum rahitismul la copii și osteomalacia la adulți.",
+            "Vitamina D se leagă, de asemenea, de receptorii de pe celulele imunitare, influențându-le funcția și susținând un răspuns imunitar sănătos."
+        ],
+        "tips": [
+            "A se păstra într-un loc răcoros și uscat, ferit de lumină și umiditate.",
+            "A nu se lăsa la îndemâna copiilor.",
+            "Luați doza uitată imediat ce vă amintiți. Dacă este aproape timpul pentru următoarea doză, săriți peste doza uitată și continuați programul obișnuit. Nu dublați doza.",
+            "Mențineți un aport adecvat de calciu prin dietă sau suplimente, conform recomandărilor medicului.",
+            "Discutați doza și durata adecvată a tratamentului cu furnizorul dumneavoastră de servicii medicale."
+        ]
+    },
+    "multivitamin-abcdz": {
+        "id": "136",
+        "name": {
+            "en": "ABCDZ Multivitamin Multimineral Tablets"
+        },
+        "category": "Vitamine și Suplimente",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "159",
+        "composition": "Complex Multivitaminic și Multimineral",
+        "form": "Comprimat",
+        "pack_size": "15 Comprimate x 2 Stripuri",
+        "casId": "N/A",
+        "image": "/products/abcdz_tablets.webp",
+        "additionalImages": [
+            "/products/abcdz_tablets_2.webp",
+            "/products/abcdz_tablets_3.webp"
+        ],
+        "metaTitle": "Buy ABCDZ Multivitamin Multimineral Tablets Online | Healing Pharma",
+        "metaDescription": "Buy ABCDZ comprimate multivitaminice și multiminerale pentru suport nutrițional zilnic. Vitamine și minerale esențiale pentru sănătatea generală. De la Healing Pharma.",
+        "description": "Comprimatele ABCDZ sunt un supliment complex multivitaminic și multimineral conceput pentru a completa deficitul nutrițional și a susține starea generală de bine.",
+        "slug": "multivitamin-abcdz",
+        "overview": [
+            "ABCDZ este un supliment alimentar zilnic care oferă o combinație echilibrată de vitamine și minerale esențiale.",
+            "Este formulat pentru a ajuta la îndeplinirea cerințelor nutriționale zilnice pentru persoanele cu nevoi crescute sau cu restricții alimentare.",
+            "Ingredientele cheie includ de obicei Vitamina A, vitaminele complexului B (precum B1, B2, B6, B12), Vitamina C, Vitamina D, Vitamina E și minerale precum Zinc, Calciu și Magneziu.",
+            "Acest supliment susține diverse funcții corporale, inclusiv metabolismul energetic, funcția imunitară, sănătatea oaselor și protecția celulară împotriva stresului oxidativ.",
+            "Poate fi benefic pentru persoanele cu apetit scăzut, cele cu diete restrictive sau în perioadele de convalescență.",
+            "Consumul regulat poate ajuta la prevenirea deficiențelor de micronutrienți și la promovarea vitalității generale.",
+            "Forma convenabilă de comprimat facilitează încorporarea în rutina zilnică.",
+            "Acest produs este potrivit pentru adulți și copii peste 12 ani, cu excepția cazului în care medicul recomandă altfel."
+        ],
+        "sideEffects": [
+            "Majoritatea persoanelor nu experimentează efecte secundare atunci când sunt administrate conform indicațiilor.",
+            "Unele persoane pot prezenta un ușor disconfort gastro-intestinal, cum ar fi constipație, diaree sau stomac deranjat.",
+            "Administrarea suplimentului cu alimente poate reduce adesea aceste efecte.",
+            "Anumite vitamine, cum ar fi complexul B, pot face ca urina să capete o culoare galbenă strălucitoare, ceea ce este inofensiv.",
+            "Reacțiile alergice sunt foarte rare, dar posibile."
+        ],
+        "administration": [
+            "Luați un comprimat zilnic, de preferință cu o masă pentru a îmbunătăți absorbția și a minimiza disconfortul stomacal.",
+            "Înghițiți comprimatul întreg cu un pahar cu apă. Nu mestecați sau zdrobiți.",
+            "Luați la aceeași oră în fiecare zi pentru a stabili o rutină.",
+            "Nu depășiți doza zilnică recomandată.",
+            "Urmați sfatul medicului sau farmacistului cu privire la dozaj și durata administrării."
+        ],
+        "warnings": [
+            "Nu utilizați dacă sunteți alergic la oricare dintre ingrediente.",
+            "Consultați medicul înainte de utilizare dacă sunteți gravidă, alăptați sau aveți orice afecțiuni medicale preexistente.",
+            "A nu se lăsa la îndemâna copiilor.",
+            "Suplimentele alimentare nu trebuie utilizate ca substitut pentru o dietă echilibrată și variată.",
+            "Dacă luați alte medicamente, consultați medicul sau farmacistul pentru a verifica potențialele interacțiuni."
+        ],
+        "how_it_works": [
+            "Suplimentele multivitaminice funcționează prin furnizarea unei surse concentrate de micronutrienți de care organismul are nevoie pentru procesele sale metabolice.",
+            "Vitaminele complexului B (Tiamină, Riboflavină, Niacină etc.) acționează ca coenzime, ajutând la transformarea alimentelor în energie.",
+            "Vitamina C este un antioxidant puternic care protejează celulele de deteriorare și este esențială pentru sinteza colagenului și funcția imunitară.",
+            "Vitamina D susține absorbția calciului pentru sănătatea oaselor și modulează răspunsurile imunitare.",
+            "Vitamina E acționează ca un antioxidant liposolubil, protejând membranele celulare de deteriorarea oxidativă.",
+            "Mineralele precum Zincul sunt cruciale pentru funcția imunitară, vindecarea rănilor și diviziunea celulară.",
+            "Împreună, acești nutrienți ajută la completarea golurilor alimentare, asigurând că organismul are elementele de bază necesare pentru a funcționa optim."
+        ],
+        "tips": [
+            "A se păstra într-un loc răcoros și uscat, ferit de lumina directă a soarelui.",
+            "Păstrați flaconul bine închis atunci când nu este utilizat.",
+            "Mențineți o dietă sănătoasă împreună cu suplimentarea pentru cele mai bune rezultate.",
+            "Dacă uitați o doză, luați-o imediat ce vă amintiți. Dacă este aproape de următoarea doză, săriți peste cea uitată și continuați programul obișnuit. Nu dublați doza."
+        ]
+    },
+    "xheal-shilajit": {
+        "id": "137",
+        "name": {
+            "en": "XHeal Pahadi Shilajit Gold Resin"
+        },
+        "category": "Sănătate și Stare de Bine",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "849",
+        "composition": "Extract Purificat de Shilajit",
+        "form": "Rășină",
+        "pack_size": "Borcan de 20g",
+        "casId": "N/A",
+        "image": "/products/shilajit_gold.webp",
+        "additionalImages": [
+            "/products/shilajit_gold_2.webp",
+            "/products/shilajit_gold_3.jpg"
+        ],
+        "metaTitle": "Buy XHeal Pahadi Shilajit Gold Resin Online | Healing Pharma",
+        "metaDescription": "Buy XHeal Pahadi Shilajit Gold Resin. Shilajit autentic din Himalaya pentru vitalitate, rezistență și bunăstare generală. De la Healing Pharma.",
+        "description": "XHeal Pahadi Shilajit Gold Resin este un supliment alimentar pur și puternic derivat din munții Himalaya, folosit în mod tradițional pentru a spori vitalitatea și energia.",
+        "slug": "xheal-shilajit",
+        "overview": [
+            "XHeal Pahadi Shilajit este o formă de rășină de înaltă calitate a Shilajit-ului, o substanță naturală găsită în principal în rocile din Himalaya.",
+            "Se formează de-a lungul secolelor prin descompunerea lentă a materiei vegetale și este bogat în acid fulvic și peste 84 de minerale esențiale.",
+            "Shilajit-ul a fost folosit de secole în medicina tradițională ayurvedică ca un puternic agent de rejuvenare și adaptogen.",
+            "Este cunoscut în principal pentru potențialul său de a spori nivelul de energie, de a îmbunătăți rezistența și de a susține performanța fizică generală.",
+            "'Auriu' din numele său semnifică adesea o formă purificată și puternică a rășinii.",
+            "Se crede că acest supliment susține îmbătrânirea sănătoasă, funcția cognitivă și apărarea imunitară naturală a organismului.",
+            "Forma de rășină este considerată cea mai autentică și tradițională modalitate de a consuma Shilajit.",
+            "Este procurat din regiuni de mare altitudine pentru a asigura puritatea și potența."
+        ],
+        "sideEffects": [
+            "Shilajit-ul este, în general, bine tolerat atunci când este administrat în dozele recomandate.",
+            "Unele persoane pot prezenta probleme digestive ușoare, cum ar fi stomac deranjat sau greață, mai ales la începutul utilizării.",
+            "Datorită conținutului său mineral, poate scădea ușor tensiunea arterială. Se recomandă prudență pentru cei care urmează tratamente antihipertensive.",
+            "Poate crește potențial nivelul acidului uric; persoanele cu gută ar trebui să consulte un medic.",
+            "Reacțiile alergice sunt rare, dar posibile."
+        ],
+        "administration": [
+            "Luați o cantitate mică, cât un bob de mazăre (aproximativ 300-500 mg) din rășină.",
+            "Dizolvați-o într-un pahar cu apă caldă, lapte sau ceai de plante. Se dizolvă mai ușor în lichid cald.",
+            "Amestecați bine și beți, de preferință pe stomacul gol dimineața, pentru o absorbție optimă.",
+            "Alternativ, poate fi administrat conform indicațiilor practicianului ayurvedic.",
+            "Consecvența este cheia pentru a experimenta beneficiile.",
+            "Borcanul de 20g asigură de obicei o rezervă pentru 1-2 luni, în funcție de utilizarea zilnică."
+        ],
+        "warnings": [
+            "Nu utilizați dacă sunteți alergic la Shilajit sau la oricare dintre componentele sale.",
+            "Consultați medicul înainte de utilizare dacă sunteți gravidă, alăptați, aveți o afecțiune medicală (în special boli de inimă, gută sau tensiune arterială scăzută) sau luați medicamente eliberate pe bază de prescripție medicală.",
+            "Nu este recomandat copiilor.",
+            "Asigurați-vă că achiziționați Shilajit dintr-o sursă de încredere pentru a evita produsele care pot conține metale grele sau alți contaminanți.",
+            "Începeți cu o doză mai mică pentru a evalua toleranța."
+        ],
+        "how_it_works": [
+            "Componenta activă principală a Shilajit-ului este acidul fulvic, un antioxidant și electrolit puternic care ajută la transportul nutrienților adânc în celule.",
+            "Se crede că îmbunătățește funcția mitocondrială, care este centrala energetică a celulelor, ducând la creșterea energiei și rezistenței.",
+            "Acidul fulvic din Shilajit ajută la îmbunătățirea biodisponibilității altor nutrienți și susține procesele naturale de detoxifiere ale organismului.",
+            "Acționează ca un adaptogen, ajutând organismul să gestioneze stresul și să mențină homeostazia.",
+            "Unele cercetări sugerează că poate susține nivelul de testosteron la bărbați, contribuind la vitalitate și forță.",
+            "Conținutul său bogat de minerale ajută la refacerea oligoelementelor esențiale care pot lipsi din dieta modernă."
+        ],
+        "tips": [
+            "A se păstra într-un loc răcoros și uscat, ferit de lumina directă a soarelui. Nu refrigerați.",
+            "Asigurați-vă că capacul este bine închis după fiecare utilizare pentru a preveni uscarea rășinii.",
+            "Folosiți o spatulă sau o lingură curată și uscată pentru a scoate rășina, pentru a evita contaminarea.",
+            "Dacă rășina se întărește, puteți pune borcanul închis într-un castron cu apă caldă pentru a o înmuia.",
+            "Se recomandă ciclizarea utilizării sale (de exemplu, luați timp de 2-3 luni, apoi faceți o pauză de 1 lună)."
+        ]
+    },
+    "derbeau-moisturizer": {
+        "id": "138",
+        "name": {
+            "en": "Derbeau Oil-Free Moisturizer with Hyaluronic Acid & Ceramide"
+        },
+        "category": "Îngrijirea Pielii",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Acid Hialuronic, Complex de Ceramide",
+        "form": "Cremă Hidratantă",
+        "pack_size": "Borcan de 75g",
+        "casId": "N/A",
+        "image": "/products/derbeau.webp",
+        "additionalImages": [
+            "/products/derbeau_2.webp",
+            "/products/derbeau_3.webp"
+        ],
+        "metaTitle": "Buy Derbeau Oil-Free Moisturizer | Hyaluronic Acid & Ceramide | Healing Pharma",
+        "metaDescription": "Buy Derbeau Oil-Free Moisturizer online. Cremă hidratantă zilnică ușoară cu Acid Hialuronic și Ceramide pentru o piele hidratată și cu aspect sănătos. De la Healing Pharma.",
+        "description": "Derbeau Oil-Free Moisturizer este o cremă hidratantă zilnică ușoară, formulată cu Acid Hialuronic și Ceramide pentru a hrăni și proteja bariera pielii fără a înfunda porii.",
+        "slug": "derbeau-moisturizer",
+        "overview": [
+            "Derbeau Oil-Free Moisturizer este un hidratant facial zilnic conceput pentru tenul normal spre uleios și mixt.",
+            "Formula sa ușoară, nengrasoasă, oferă hidratare esențială fără a adăuga exces de ulei sau luciu.",
+            "Infuzat cu Acid Hialuronic, un umectant puternic care atrage și reține umezeala, menținând pielea plină și hidratată.",
+            "Conține un complex de Ceramide pentru a ajuta la refacerea și întărirea barierei naturale de protecție a pielii.",
+            "Acest lucru ajută la prevenirea pierderii de umiditate și la protejarea pielii de factorii de stres din mediu.",
+            "Formularea fără ulei asigură că nu va înfunda porii, făcându-l potrivit pentru tenul predispus la acnee.",
+            "Utilizarea regulată poate ajuta la îmbunătățirea texturii pielii, lăsând-o cu o senzație de moale, netedă și revigorată.",
+            "Poate fi folosit atât dimineața, cât și seara, ca parte a unei rutine de bază de îngrijire a pielii.",
+            "Fără parabeni și ftalați."
+        ],
+        "sideEffects": [
+            "Formulat pentru piele sensibilă, efectele secundare sunt rare.",
+            "Unele persoane cu sensibilități extreme pot prezenta o ușoară senzație de furnicături sau roșeață la prima utilizare.",
+            "Dacă apare iritația, întrerupeți utilizarea și consultați un dermatolog."
+        ],
+        "administration": [
+            "Aplicați o cantitate mică, cât un bob de mazăre, pe fața și gâtul curate și uscate.",
+            "Masați ușor cu mișcări circulare ascendente până la absorbția completă.",
+            "Utilizați de două ori pe zi, dimineața și seara, după curățare și înainte de aplicarea protecției solare (dimineața).",
+            "Pentru cele mai bune rezultate, utilizați în mod constant ca parte a regimului zilnic de îngrijire a pielii."
+        ],
+        "warnings": [
+            "Numai pentru uz extern.",
+            "Evitați contactul direct cu ochii. Dacă apare contactul, clătiți bine cu apă.",
+            "Nu aplicați pe pielea ruptă sau iritată.",
+            "Întrerupeți utilizarea dacă apar semne de iritație sau erupții cutanate.",
+            "A nu se lăsa la îndemâna copiilor.",
+            "A se păstra într-un loc răcoros și uscat."
+        ],
+        "how_it_works": [
+            "Acidul Hialuronic acționează ca un magnet de umezeală. Poate reține de până la 1000 de ori greutatea sa în apă, atrăgând umezeala din mediu în straturile exterioare ale pielii.",
+            "Acest lucru ajută la hidratarea instantanee a pielii, reducând aspectul liniilor fine și creând un ten mai neted și mai plin.",
+            "Ceramidele sunt molecule lipidice (grăsimi) care se găsesc în mod natural în concentrații mari în membranele celulare ale straturilor superioare ale pielii.",
+            "Ele constituie o parte semnificativă a barierei pielii (stratul cornos) și sunt esențiale pentru reținerea umezelii și prevenirea pătrunderii agresorilor din mediu în piele.",
+            "Aplicarea topică a Ceramidelor ajută la refacerea barierei lipidice naturale a pielii, îmbunătățind hidratarea, rezistența și sănătatea generală a pielii."
+        ],
+        "tips": [
+            "Aplicați pe pielea ușor umedă pentru a ajuta la fixarea umezelii suplimentare.",
+            "Pentru utilizarea pe timp de zi, continuați cu o protecție solară cu spectru larg (SPF 30+) pentru o protecție completă.",
+            "Includeți în rutina dvs. aplicând după seruri și înainte de protecția solară sau machiaj.",
+            "Dacă pielea dvs. este deosebit de uscată, puteți aplica un strat puțin mai gros noaptea ca o mască hidratantă."
+        ]
+    },
+    "niacinamide-face-wash": {
+        "id": "139",
+        "name": {
+            "en": "Niacinamide and Salicylic Acid Ultra Foaming Face Wash"
+        },
+        "category": "Îngrijirea Pielii",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Niacinamidă, Acid Salicilic",
+        "form": "Gel de Curățare Facială",
+        "pack_size": "Tube de 100ml",
+        "casId": "N/A",
+        "image": "/products/AcnetopFacewash.webp",
+        "additionalImages": [
+            "/products/AcnetopFacewash_2.webp",
+            "/products/AcnetopFacewash_3.webp"
+        ],
+        "metaTitle": "Buy Niacinamide & Salicylic Acid Ultra Foaming Face Wash | Healing Pharma",
+        "metaDescription": "Buy Niacinamide and Salicylic Acid Ultra Foaming Face Wash. Curăță profund, exfoliază și ajută la controlul acneei. Pentru o piele curată și cu aspect sănătos. De la Healing Pharma.",
+        "description": "Acest Gel de Curățare Facială Ultra Spumant combină puterea de purificare a Acidului Salicilic cu beneficiile calmante ale Niacinamidei pentru o curățare profundă, dar blândă, ajutând la clarificarea pielii și reducerea imperfecțiunilor.",
+        "slug": "niacinamide-face-wash",
+        "overview": [
+            "Acest gel de curățare facială ultra-spumant este formulat pentru a curăța profund porii și a elimina excesul de sebum, murdăria și impuritățile.",
+            "Conține Acid Salicilic, un beta-hidroxiacid (BHA) care pătrunde adânc în pori pentru a exfolia din interior și a ajuta la prevenirea și tratarea acneei.",
+            "Infuzat cu Niacinamidă (Vitamina B3), cunoscută pentru proprietățile sale calmante, antiinflamatorii și iluminatoare.",
+            "Ajută la reducerea roșeții, calmarea iritației și îmbunătățirea aspectului tenului neuniform.",
+            "Acțiunea spumantă asigură o curățare satisfăcătoare și temeinică, fără a îndepărta umezeala naturală a pielii.",
+            "Ideal pentru tenul gras, mixt și predispus la acnee.",
+            "Utilizarea regulată poate duce la o piele cu aspect mai curat, mai neted și mai radiant.",
+            "Ajută la controlul producției excesive de sebum, reducând strălucirea pe parcursul zilei."
+        ],
+        "sideEffects": [
+            "Acidul salicilic poate provoca o ușoară uscăciune sau descuamare, mai ales la începutul utilizării.",
+            "Unele persoane pot simți o ușoară senzație de furnicături.",
+            "Dacă apare uscăciunea excesivă sau iritația, reduceți frecvența utilizării sau întrerupeți și consultați un dermatolog."
+        ],
+        "administration": [
+            "Umeziți-vă fața cu apă călduță.",
+            "Stoarceți o cantitate mică de gel de curățare în palmă.",
+            "Frecați mâinile pentru a crea o spumă bogată.",
+            "Masați ușor spuma pe față cu mișcări circulare, evitând zona ochilor.",
+            "Clătiți bine cu apă și uscați fața cu un prosop curat, prin tapotare.",
+            "Utilizați o dată sau de două ori pe zi, ca parte a rutinei obișnuite de îngrijire a pielii."
+        ],
+        "warnings": [
+            "Numai pentru uz extern.",
+            "Evitați contactul direct cu ochii. Dacă apare contactul, clătiți bine cu multă apă.",
+            "Nu aplicați pe pielea ruptă, iritată sau arsă de soare.",
+            "Dacă iritația pielii se dezvoltă sau se agravează, întrerupeți utilizarea și consultați un medic.",
+            "Utilizați protecție solară în timpul zilei, deoarece AHA/BHA pot crește sensibilitatea la soare.",
+            "A nu se lăsa la îndemâna copiilor."
+        ],
+        "how_it_works": [
+            "Acidul Salicilic este un BHA lipofil (iubește uleiurile) care poate pătrunde în straturile lipidice ale pielii și poate ajunge adânc în pori.",
+            "În interiorul porului, ajută la dizolvarea excesului de sebum și la exfolierea celulelor moarte ale pielii care pot duce la înfundarea porilor, puncte negre și leziuni de acnee.",
+            "Prin menținerea porilor curați, ajută la prevenirea viitoarelor erupții.",
+            "Niacinamida acționează sinergic, ajutând la reglarea producției de sebum și la calmarea inflamației asociate acneei.",
+            "De asemenea, ajută la întărirea funcției de barieră a pielii, îmbunătățind rezistența și reducând sensibilitatea care poate fi cauzată de acizii exfolianți.",
+            "Împreună, oferă o abordare puternică, dar echilibrată, pentru clarificarea și perfecționarea pielii."
+        ],
+        "tips": [
+            "Pentru cele mai bune rezultate, utilizați în mod constant ca parte a rutinei de dimineață și/sau seară.",
+            "Continuați cu un toner (dacă este folosit), ser, cremă hidratantă și protecție solară pe timp de zi.",
+            "Dacă pielea dvs. este nouă în ceea ce privește acizii exfolianți, începeți prin a-l folosi o dată pe zi sau o dată la două zile pentru a permite pielii să se adapteze.",
+            "Evitați utilizarea altor produse exfoliante agresive (exfolieri fizice, peelinguri chimice puternice) în aceleași zile pentru a preveni exfolierea excesivă."
+        ]
+    }
 
 
     };

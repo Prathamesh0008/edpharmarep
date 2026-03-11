@@ -18876,7 +18876,1139 @@ tips: [
       "Ushtrimet e rregullta nën udhëzim mjekësor mund të përmirësojnë frymëmarrjen dhe qëndrueshmërinë.",
       "Prisni të gjitha takimet e planifikuara të ndërvijimit për të siguruar përdorim të sigurt, efektiv afatgjatë."
     ]
-  } 
+  },
+   "soma-350": {
+        "id": "124",
+        "name": {
+            "en": "Soma 350 mg"
+        },
+        "category": "Sistemi Nervor Qendror",
+        "brand": "Hab Pharma",
+        "dosage": "350 mg",
+        "price": "450",
+        "composition": "Carisoprodol 350mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "78-44-4",
+        "image": "/products/Soma350mg_2.png",
+        "additionalImages": [
+            "/products/Soma350mg_3.jpg",
+            "/products/Soma350mg_3.jpg"
+        ],
+        "metaTitle": "Buy Soma 350 mg Online | Carisoprodol Muscle Relaxant | Hab Pharma",
+        "metaDescription": "Buy Soma 350 mg (Carisoprodol) online. Një relaksues muskulor për lehtësimin e dhimbjeve akute muskuloskeletore. Cilësi e lartë nga Hab Pharma.",
+        "description": "Soma 350 mg përmban Carisoprodol, një medikament i përdorur për lehtësimin afatshkurtër të shqetësimit të lidhur me gjendjet akute, të dhimbshme muskuloskeletore.",
+        "slug": "soma-350",
+        "overview": [
+            "Soma 350 mg është një relaksues muskulor që përmban Carisoprodol, i përdorur për të lehtësuar dhimbjen dhe shqetësimin nga lëndimet dhe spazmat e muskujve.",
+            "Zakonisht përshkruhet si pjesë e një plani gjithëpërfshirës trajtimi që përfshin pushim dhe terapi fizike.",
+            "Ky medikament funksionon duke bllokuar sinjalet e dhimbjes midis nervave dhe trurit.",
+            "Doza prej 350 mg është doza standarde për pacientët e rritur.",
+            "Soma është menduar për përdorim afatshkurtër, zakonisht jo më shumë se dy deri në tre javë.",
+            "Ndihmon në përmirësimin e lëvizshmërisë dhe reduktimin e ngurtësimit të lidhur me gjendjet akute të muskujve.",
+            "Lehtësimi nga dhimbja dhe shqetësimi shpesh fillon brenda 30 minutash nga marrja e medikamentit.",
+            "Efektet e një doze të vetme zakonisht zgjasin 4 deri në 6 orë.",
+            "Ky produkt duhet të përdoret vetëm kur përshkruhet nga një profesionist i kujdesit shëndetësor."
+        ],
+        "sideEffects": [
+            "Përgjumja dhe marramendja janë efektet anësore më të zakonshme.",
+            "Disa individë mund të përjetojnë dhimbje koke ose shikim të turbullt.",
+            "Mund të shfaqen të përziera, të vjella ose shqetësim stomaku.",
+            "Agjitacion, nervozizëm ose konfuzion janë raportuar, veçanërisht te pacientët e moshuar.",
+            "Dridhje ose lëvizje të pakontrolluara të muskujve mund të ndodhin rrallë.",
+            "Rrahje të shpejta të zemrës ose skuqje e fytyrës mund të përjetohen nga disa përdorues.",
+            "Reaksionet alergjike si skuqje ose kruajtje janë të mundshme por të pazakonta."
+        ],
+        "administration": [
+            "Merrni Soma saktësisht siç përshkruhet nga profesionisti juaj i kujdesit shëndetësor.",
+            "Doza e zakonshme për të rritur është një tabletë 350 mg tri herë në ditë dhe para gjumit.",
+            "Gëlltisni tabletën të tërë me një gotë të plotë ujë.",
+            "Mund të merret me ose pa ushqim, por marrja me ushqim mund të reduktojë shqetësimin e stomakut.",
+            "Mos e shtypni, përtypni ose thyeni tabletën.",
+            "Mos e merrni më shpesh ose më gjatë se sa është përshkruar.",
+            "Shmangni alkoolin gjatë marrjes së këtij medikamenti pasi mund të rrisë përgjumjen."
+        ],
+        "warnings": [
+            "Mos e përdorni nëse jeni alergjik ndaj Carisoprodol ose meprobamatit.",
+            "Ky medikament mund të krijojë varësi; përdorni vetëm siç udhëzohet dhe mos e ndani atë.",
+            "Shmangni drejtimin e automjetit, përdorimin e makinerive ose përfshirjen në aktivitete të rrezikshme derisa të dini se si ju ndikon ky medikament.",
+            "Kombinimi me alkool ose depresues të tjerë të SNQ (si benzodiazepinat ose opioidët) mund të çojë në përgjumje të rëndë ose depresion respirator.",
+            "Përdorni me kujdes nëse keni histori të varësisë nga droga, sëmundje të mëlçisë ose veshkave, ose çrregullime konvulsive.",
+            "Pacientët e moshuar mund të jenë më të ndjeshëm ndaj efekteve dhe në rrezik më të lartë për rrëzime.",
+            "Nuk rekomandohet gjatë shtatzënisë ose ushqyerjes me gji. Konsultohuni me mjekun tuaj."
+        ],
+        "how_it_works": [
+            "Carisoprodol, përbërësi aktiv në Soma, është një relaksues i muskujve skeletorë me veprim qendror.",
+            "Mekanizmi i tij i saktë nuk kuptohet plotësisht, por besohet se funksionon duke shkaktuar qetësim dhe duke ndryshuar perceptimin e dhimbjes në sistemin nervor qendror.",
+            "Ai nuk i relakson drejtpërdrejt muskujt skeletorë, por vepron si një depresues në SNQ.",
+            "Carisoprodol metabolizohet në mëlçi në meprobamat, një metabolit aktiv që gjithashtu kontribuon në efektet e tij.",
+            "Mendohet se ndikon në komunikimin midis nervave në palcën kurrizore dhe formacionin retikular të trurit, duke çuar në relaksim muskulor dhe lehtësim të dhimbjes."
+        ],
+        "tips": [
+            "Ruajeni në temperaturë dhome, larg lagështirës dhe nxehtësisë.",
+            "Mbajeni medikamentin në paketimin e tij origjinal derisa të jeni gati për ta përdorur.",
+            "Nëse harroni një dozë, merreni sa më shpejt që të mbani mend. Nëse është afër kohës për dozën tuaj të radhës, anashkaloni dozën e harruar dhe vazhdoni orarin tuaj të rregullt. Mos e dyfishoni dozën.",
+            "Mos e ndaloni marrjen e këtij medikamenti papritmas, veçanërisht pas përdorimit të zgjatur, pasi mund të shfaqen simptoma të tërheqjes si ankthi, pagjumësia dhe dhimbje muskujsh.",
+            "Informoni të gjithë ofruesit tuaj të kujdesit shëndetësor se jeni duke marrë këtë medikament."
+        ]
+    },
+    "soma-500": {
+        "id": "125",
+        "name": {
+            "en": "Soma 500 mg"
+        },
+        "category": "Sistemi Nervor Qendror",
+        "brand": "Hab Pharma",
+        "dosage": "500 mg",
+        "price": "550",
+        "composition": "Carisoprodol 500mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "78-44-4",
+        "image": "/products/Soma500mg.webp",
+        "additionalImages": [
+            "/products/Soma500mg2.png",
+            "/products/Soma500mg_3.jpeg"
+        ],
+        "metaTitle": "Buy Soma 500 mg Online | Extra Strength Carisoprodol | Hab Pharma",
+        "metaDescription": "Buy Soma 500 mg (Carisoprodol) online. Relaksues muskulor me forcë shtesë për dhimbje më të rënda akute muskuloskeletore. Cilësi e besuar nga Hab Pharma.",
+        "description": "Soma 500 mg është një formulim me fuqi më të lartë i Carisoprodol, një relaksues muskulor i përdorur për lehtësimin afatshkurtër të dhimbjes dhe shqetësimit akut muskuloskeletor.",
+        "slug": "soma-500",
+        "overview": [
+            "Soma 500 mg siguron një dozë më të lartë të Carisoprodol për pacientët që kërkojnë relaksim të shtuar muskulor dhe lehtësim të dhimbjes.",
+            "Ky formulim me forcë shtesë mund të përshkruhet kur doza standarde prej 350 mg është e pamjaftueshme për menaxhimin e simptomave.",
+            "Është menduar për përdorim afatshkurtër, zakonisht deri në dy deri në tre javë, si pjesë e një plani më të gjerë trajtimi.",
+            "Doza prej 500 mg ofron një efekt më të fuqishëm, të përshtatshëm për gjendje më të rënda akute të muskujve.",
+            "Ashtu si me dozën standarde, ajo funksionon duke ndikuar në transmetimin e sinjalit të dhimbjes në sistemin nervor qendror.",
+            "Kjo fuqi më e lartë kërkon mbikëqyrje të kujdesshme mjekësore për shkak të rrezikut të shtuar të efekteve anësore dhe varësisë.",
+            "Mund të jetë më i përshtatshëm për pacientët që kanë ndërtuar tolerancë ndaj dozave më të ulëta nën udhëzimin e mjekut."
+        ],
+        "sideEffects": [
+            "Përgjumja dhe qetësimi i shtuar janë më të mundshme me këtë fuqi më të lartë.",
+            "Marramendja dhe rreziku i rrëzimeve, veçanërisht te pacientët e moshuar, mund të jenë më të theksuara.",
+            "Mund të shfaqen dhimbje koke, shikim i turbullt dhe probleme me koordinimin.",
+            "Probleme gastrointestinale si të përziera ose të vjella mund të përjetohen.",
+            "Potencial më i lartë për dëmtim kognitiv dhe konfuzion.",
+            "Rrezik i shtuar i varësisë dhe simptomave të tërheqjes me përdorim të zgjatur.",
+            "Reaksione paradoksale si agjitacion ose shqetësim janë të mundshme."
+        ],
+        "administration": [
+            "Merrni saktësisht siç përshkruhet nga mjeku juaj. Mos e rritni dozën vetë.",
+            "Doza tipike është një tabletë 500 mg, zakonisht e marrë tri herë në ditë dhe para gjumit, por kjo duhet të konfirmohet nga mjeku juaj.",
+            "Gëlltisni tabletën të tërë me ujë.",
+            "Mund të merret me ose pa ushqim.",
+            "Mos e shtypni ose përtypni tabletën.",
+            "Shmangni rreptësisht alkoolin gjatë marrjes së këtij medikamenti."
+        ],
+        "warnings": [
+            "Kundërindikuar te pacientët me histori alergjie ndaj Carisoprodol ose përbërjeve të ngjashme.",
+            "Rrezik më i lartë i abuzimit dhe varësisë; përdorni vetëm nën mbikëqyrje të rreptë mjekësore.",
+            "Përgjumja e rëndë mund të dëmtojë ndjeshëm aftësinë tuaj për të drejtuar makinën ose për të kryer detyra të rrezikshme.",
+            "Kombinimi me alkool ose depresues të tjerë të SNQ mund të jetë i rrezikshëm dhe potencialisht fatal.",
+            "Përdorni kujdes ekstrem te pacientët me dëmtim të mëlçisë ose veshkave.",
+            "Nuk rekomandohet për pacientët e moshuar për shkak të rrezikut të shtuar të rrëzimeve dhe ndjeshmërisë.",
+            "Kundërindikuar te pacientët me porfiri intermitente akute."
+        ],
+        "how_it_works": [
+            "Soma 500 mg jep një përqendrim më të lartë të Carisoprodol, duke çuar në depresion më të theksuar të SNQ.",
+            "Doza e ngritur rezulton në zënie më të madhe të vendeve të tij të synuara brenda sistemit nervor qendror.",
+            "Kjo çon në një efekt më të fortë qetësues dhe ndryshim më të fuqishëm të perceptimit të dhimbjes.",
+            "Metabolizmi në meprobamat jep nivele më të larta të këtij metaboliti aktiv, duke kontribuar në efektet e përmirësuara terapeutike dhe qetësuese.",
+            "Mekanizmi mbetet i njëjtë, por me efekte të përforcuara në sinjalizimin neuronal në lidhje me dhimbjen dhe tonin e muskujve."
+        ],
+        "tips": [
+            "Ruajeni të sigurt, larg fëmijëve dhe kafshëve shtëpiake, për shkak të potencialit të tij më të lartë për abuzim.",
+            "Kurrë mos e ndani këtë medikament.",
+            "Mbani një regjistër të rreptë të dozave tuaja për të shmangur përdorimin e tepërt aksidental.",
+            "Mos ndaloni marrjen papritmas pa udhëzim mjekësor, pasi simptomat e tërheqjes mund të jenë të rënda.",
+            "Raportoni çdo efekt anësor të pazakontë ose shenja të varësisë tek mjeku juaj menjëherë.",
+            "Hidhni siç duhet çdo medikament të papërdorur në një vend të caktuar grumbullimi."
+        ]
+    },
+    "zop-7-5": {
+        "id": "126",
+        "name": {
+            "en": "Zop 7.5 mg Tablet"
+        },
+        "category": "Sistemi Nervor Qendror",
+        "brand": "Hab Pharma",
+        "dosage": "7.5 mg",
+        "price": "380",
+        "composition": "Zopiklonë 7.5mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "43200-80-2",
+        "image": "/products/zop7.5mg.png",
+        "additionalImages": [
+            "/products/zop7.5mg_2.jpeg",
+            "/products/zop7.5mg_3.webp"
+        ],
+        "metaTitle": "Buy Zop 7.5 mg Tablet Online | Zopiclone for Insomnia | Hab Pharma",
+        "metaDescription": "Buy Zop 7.5 mg (Zopiklonë) tableta online. Një hipnotik jo-benzodiazepin për trajtimin afatshkurtër të pagjumësisë. Ndihmë cilësore për gjumë nga Hab Pharma.",
+        "description": "Zop 7.5 mg Tabletë përmban Zopiklonë, një agjent hipnotik jo-benzodiazepin i përdorur për menaxhimin afatshkurtër të pagjumësisë e karakterizuar nga vështirësi në fillimin e gjumit.",
+        "slug": "zop-7-5",
+        "overview": [
+            "Zop 7.5 mg përmban Zopiklonë, një medikament që ju ndihmon të bini në gjumë më shpejt dhe të qëndroni në gjumë gjatë gjithë natës.",
+            "I përket një klase barnash të njohura si 'Z-drugs' (hipnotikë jo-benzodiazepinë) dhe përdoret për trajtimin afatshkurtër të pagjumësisë.",
+            "Ky medikament zakonisht përshkruhet kur vështirësitë e gjumit janë të rënda, paaftësuese ose shkaktojnë shqetësim ekstrem.",
+            "Doza prej 7.5 mg është doza standarde për të rritur për trajtimin e pagjumësisë.",
+            "Kohëzgjatja e trajtimit është zakonisht e shkurtër, duke filluar nga disa ditë deri në maksimum 4 javë, për të shmangur tolerancën dhe varësinë.",
+            "Ndihmon në përmirësimin e cilësisë dhe kohëzgjatjes së gjumit, duke çuar në funksionim më të mirë gjatë ditës.",
+            "Zopikloni njihet për fillimin e shpejtë të veprimit, zakonisht duke vepruar brenda një ore nga administrimi."
+        ],
+        "sideEffects": [
+            "Shija e hidhur ose metalike në gojë është një efekt anësor shumë i zakonshëm dhe dallues.",
+            "Përgjumje gjatë ditës, marramendje ose ndjenjë 'e turbullt' mund të shfaqen të nesërmen.",
+            "Disa përdorues mund të përjetojnë tharje të gojës.",
+            "Të përziera ose çrregullime gastrointestinale janë të mundshme.",
+            "Më rrallë, përdoruesit mund të përjetojnë konfuzion, dëmtim të kujtesës ose ëndrra të pazakonta.",
+            "Efektet anësore të rralla por serioze përfshijnë sjellje komplekse të gjumit si ecja në gjumë, drejtimi i makinës në gjumë ose përfshirja në aktivitete të tjera gjatë kohës që nuk jeni plotësisht zgjuar."
+        ],
+        "administration": [
+            "Merrni Zop menjëherë para gjumit, vetëm kur keni një natë të plotë (të paktën 7-8 orë) në dispozicion për gjumë.",
+            "Gëlltisni tabletën të tërë me një gotë ujë.",
+            "Mos e merrni me ose menjëherë pas një vakti të rëndë dhe të pasur me yndyrë, pasi mund të ngadalësojë përthithjen.",
+            "Doza e zakonshme për të rritur është një tabletë 7.5 mg një herë në ditë.",
+            "Mos e kaloni dozën ose kohëzgjatjen e rekomanduar të trajtimit.",
+            "Shmangni plotësisht alkoolin gjatë marrjes së këtij medikamenti, pasi mund të rrisë efektet anësore."
+        ],
+        "warnings": [
+            "Mos e përdorni nëse jeni alergjik ndaj Zopiklonës ose ndonjë përbërësi tjetër.",
+            "Zopikloni ka potencial për abuzim dhe varësi, veçanërisht me përdorim afatgjatë. Përdorni saktësisht siç përshkruhet.",
+            "Mund të përjetoni pagjumësi 'rikthim' për disa ditë pas ndërprerjes së trajtimit.",
+            "Shmangni drejtimin e automjetit ose përdorimin e makinerive derisa të dini se si ju ndikon ky medikament. Mund të ndiheni ende të përgjumur të nesërmen.",
+            "Mos e kombinoni me alkool ose medikamente të tjera qetësuese.",
+            "Përdorni me kujdes te pacientët me dëmtim të mëlçisë ose veshkave, myasthenia gravis ose probleme të rënda respiratore.",
+            "Nuk rekomandohet gjatë shtatzënisë ose ushqyerjes me gji."
+        ],
+        "how_it_works": [
+            "Zopikloni është një derivat i ciklopirrolonit që vepron si agjent hipnotik.",
+            "Funksionon duke u lidhur me receptorët GABA-A në tru në një vend të ndryshëm nga benzodiazepinat.",
+            "GABA (acidi gama-aminobutirik) është neurotransmetuesi kryesor frenues i trurit, përgjegjës për qetësimin e aktivitetit nervor.",
+            "Duke rritur efektet e GABA-s, Zopikloni rrit neurotransmetimin frenues, duke çuar në qetësim, induksion të gjumit dhe relaksim muskulor.",
+            "Profili i tij selektiv i lidhjes kontribuon në efektivitetin e tij në nxitjen e gjumit me një rrezik relativisht më të ulët të disa efekteve anësore në krahasim me qetësuesit më të vjetër."
+        ],
+        "tips": [
+            "Ruajeni në temperaturë dhome, larg dritës dhe lagështirës.",
+            "Mos e merrni nëse nuk jeni gati të flini një natë të plotë.",
+            "Shmangni aktivitetet që kërkojnë vigjilencë mendore derisa efektet të jenë zhdukur plotësisht.",
+            "Nëse përjetoni shpesh përgjumje në mëngjes, konsultohuni me mjekun tuaj; doza juaj mund të ketë nevojë për rregullim.",
+            "Mos e ndaloni marrjen e këtij medikamenti papritmas pas përdorimit afatgjatë, pasi mund të shfaqen simptoma të tërheqjes. Mjeku juaj do t'ju udhëzojë se si ta ulni gradualisht dozën."
+        ]
+    },
+    "zop-10": {
+        "id": "127",
+        "name": {
+            "en": "Zopisign 10 mg Tablet"
+        },
+        "category": "Sistemi Nervor Qendror",
+        "brand": "Hab Pharma",
+        "dosage": "10 mg",
+        "price": "450",
+        "composition": "Zopiklonë 10mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "43200-80-2",
+        "image": "/products/zopisign-10mg.jpg",
+        "additionalImages": [
+            "/products/zopisign-10mg_2.jpg",
+            "/products/zopisign-10mg_3.webp"
+        ],
+        "metaTitle": "Buy Zopisign 10 mg Online | High Strength Zopiclone | Hab Pharma",
+        "metaDescription": "Buy Zopisign 10 mg (Zopiklonë) tableta online. Një ndihmës për gjumë me fuqi më të lartë për pagjumësi të rëndë. Nga Hab Pharma.",
+        "description": "Zopisign 10 mg përmban një fuqi më të lartë të Zopiklonës, e indikuar për trajtimin afatshkurtër të pagjumësisë së rëndë kur një dozë më e ulët (7.5 mg) është e pamjaftueshme.",
+        "slug": "zop-10",
+        "overview": [
+            "Zopisign 10 mg është një formulim me fuqi më të lartë i Zopiklonës për pacientët me pagjumësi të rëndë.",
+            "Indikohet kur doza standarde prej 7.5 mg nuk siguron induksion ose mirëmbajtje adekuate të gjumit.",
+            "Kjo fuqi më e lartë siguron efekte qetësuese më të fuqishme për individët me vështirësi të konsiderueshme të gjumit.",
+            "Ashtu si me dozën standarde, është menduar vetëm për përdorim afatshkurtër (deri në 4 javë) për shkak të rrezikut të tolerancës dhe varësisë.",
+            "Fuqia prej 10 mg duhet të përdoret vetëm nën mbikëqyrje të ngushtë mjekësore.",
+            "Ofron efikasitet të përmirësuar për pacientët që nuk janë përgjigjur në mënyrë adekuate ndaj dozave më të ulëta.",
+            "Kjo fuqi më e lartë mund të rezultojë në një fillim më të shpejtë të veprimit dhe gjumë më të zgjatur."
+        ],
+        "sideEffects": [
+            "Shije e hidhur ose metalike më e theksuar në gojë.",
+            "Mundësi e shtuar e përgjumjes ditën tjetër, qetësimit dhe efektit 'të turbullt'.",
+            "Rrezik më i lartë i marramendjes, konfuzionit dhe dëmtimit të kujtesës.",
+            "Potencial më i madh për sjellje komplekse të lidhura me gjumin (p.sh., ecje në gjumë, drejtim makine në gjumë).",
+            "Shanse të shtuara për rrëzime, veçanërisht te pacientët e moshuar ose të dobësuar.",
+            "Të përzierat dhe shqetësimet gastrointestinale mund të jenë më të shpeshta.",
+            "Rrezik më i lartë për zhvillimin e tolerancës dhe varësisë me përdorim të zgjatur."
+        ],
+        "administration": [
+            "Merrni saktësisht siç përshkruhet, menjëherë para gjumit me të paktën 7-8 orë në dispozicion për gjumë.",
+            "Doza e zakonshme është një tabletë 10 mg, por kjo duhet të merret vetëm nëse përshkruhet në mënyrë specifike nga mjeku juaj.",
+            "Gëlltisni tabletën të tërë me ujë.",
+            "Mos e merrni me ushqim, veçanërisht vakte të pasura me yndyrë, pasi mund të vonojë fillimin e veprimit.",
+            "Asnjëherë mos merrni më shumë se një dozë në një periudhë 24-orëshe.",
+            "Mos e kaloni dozën ose kohëzgjatjen e përshkruar."
+        ],
+        "warnings": [
+            "Kjo fuqi më e lartë mbart një rrezik të shtuar të dëmtimit psikomotor ditën tjetër, duke përfshirë aftësinë për të drejtuar makinën.",
+            "Kundërindikuar te pacientët me dëmtim të rëndë të mëlçisë, apne të gjumit ose myasthenia gravis.",
+            "Potencial më i lartë për abuzim dhe varësi; përdorni vetëm nën mbikëqyrje të rreptë mjekësore.",
+            "Mos e kombinoni me alkool, opioidë ose depresues të tjerë të SNQ.",
+            "Përdorni kujdes ekstrem te pacientët e moshuar ose të dobësuar për shkak të rrezikut të rrëzimit.",
+            "Nuk rekomandohet si dozë fillestare për pacientët e rinj."
+        ],
+        "how_it_works": [
+            "Zopisign 10 mg jep një përqendrim më të lartë të Zopiklonës, duke çuar në fuqizim më të madh të neurotransmetimit GABAergjik.",
+            "Doza e rritur rezulton në lidhje më të gjerë me receptorët GABA-A, duke prodhuar një efekt frenues më të fortë në sistemin nervor qendror.",
+            "Kjo çon në qetësim dhe hipnozë më të theksuar, e cila është e nevojshme për trajtimin e pagjumësisë së rëndë, rezistente ndaj trajtimit.",
+            "Mekanizmi i veprimit është i njëjtë me atë të fuqisë më të ulët, por me efekte të përforcuara në arkitekturën dhe vazhdimësinë e gjumit."
+        ],
+        "tips": [
+            "Përdorni këtë fuqi vetëm nën recetë specifike dhe udhëzim të një profesionisti të kujdesit shëndetësor.",
+            "Jini jashtëzakonisht të kujdesshëm në lidhje me drejtimin e automjetit ose përdorimin e makinerive të nesërmen.",
+            "Nëse përjetoni ndonjë sjellje të pazakontë gjumi, ndaloni marrjen e medikamentit dhe informoni menjëherë mjekun tuaj.",
+            "Mos përdorni alkool ose qetësues të tjerë.",
+            "Mbani një regjistër të modeleve tuaja të gjumit dhe çdo efekti anësor për ta ndarë me mjekun tuaj.",
+            "Ruajeni të sigurt për shkak të potencialit më të lartë për abuzim."
+        ]
+    },
+    "modafinil": {
+        "id": "128",
+        "name": {
+            "en": "Modafinil 200 mg Tablet"
+        },
+        "category": "Sistemi Nervor Qendror",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "650",
+        "composition": "Modafinil 200mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "68693-11-8",
+        "image": "/products/Modafinil200.jpeg",
+        "additionalImages": [
+            "/products/Modafinil200_2.jpg",
+            "/products/Modafinil200_3.webp"
+        ],
+        "metaTitle": "Buy Modafinil 200 mg Online | Wakefulness Promoting Agent | Hab Pharma",
+        "metaDescription": "Buy Modafinil 200 mg tableta online. Një agjent që nxit zgjimin për narkolepsinë, çrregullimin e punës me turne dhe OSA. Cilësi nga Hab Pharma.",
+        "description": "Modafinil 200 mg është një medikament që nxit zgjimin, i përdorur për të përmirësuar zgjimin tek të rriturit me përgjumje të tepërt të lidhur me narkolepsinë, apnenë obstruktive të gjumit dhe çrregullimin e punës me turne.",
+        "slug": "modafinil",
+        "overview": [
+            "Modafinil është një medikament i ngjashëm me stimuluesit e sistemit nervor qendror që nxit zgjimin.",
+            "Përshkruhet kryesisht për të trajtuar përgjumjen e tepërt gjatë ditës të shkaktuar nga narkolepsia, apnea obstruktive e gjumit (OSA) dhe çrregullimi i gjumit për shkak të punës me turne (SWSD).",
+            "Për OSA, përdoret si ndihmës i trajtimeve standarde si CPAP, jo si zëvendësim.",
+            "Fuqia prej 200 mg është doza standarde dhe më e zakonshme e përshkruar për të rritur.",
+            "Modafinil ndihmon në përmirësimin e vigjilencës dhe reduktimin e tendencës për të fjetur gjatë ditës.",
+            "Ka një potencial më të ulët për abuzim krahasuar me stimuluesit tradicionalë si amfetaminat.",
+            "Efektet e një doze të vetme mund të zgjasin 12-15 orë, duke siguruar zgjim gjatë gjithë ditës.",
+            "Nuk është kurë për këto çrregullime të gjumit, por ndihmon në menaxhimin e simptomës së përgjumjes së tepërt."
+        ],
+        "sideEffects": [
+            "Dhimbja e kokës është efekti anësor më i shpeshtë, veçanërisht kur filloni trajtimin.",
+            "Mund të shfaqen nervozizëm, ankth, agjitacion ose pagjumësi.",
+            "Mund të përjetohen të përziera, diarre ose tharje e gojës.",
+            "Marramendje ose ndjenjë e dobët është e mundur.",
+            "Ulja e oreksit dhe humbja e peshës mund të ndodhin me përdorim të vazhdueshëm.",
+            "Rritje e rrahjeve të zemrës ose palpitacione mund të ndodhin te disa individë.",
+            "Skuqje serioze të lëkurës (si sindroma Stevens-Johnson) janë të rralla, por kërkojnë vëmendje të menjëhershme mjekësore."
+        ],
+        "administration": [
+            "Merrni Modafinil saktësisht siç përshkruhet nga mjeku juaj.",
+            "Doza e zakonshme për të rritur është 200 mg e marrë një herë në ditë.",
+            "Për narkolepsi dhe OSA, merrni dozën në mëngjes.",
+            "Për çrregullimin e punës me turne, merrni dozën afërsisht një orë para fillimit të turnit të punës.",
+            "Gëlltitni tabletat të tëra me ujë. Ato mund të merren me ose pa ushqim.",
+            "Mos i shtypni ose përtypni tabletat.",
+            "Merrni në të njëjtën kohë çdo ditë për efekte të qëndrueshme."
+        ],
+        "warnings": [
+            "Mos e përdorni nëse jeni alergjik ndaj Modafinil ose armodafinil.",
+            "Mund të ndodhë skuqje serioze që kërkon shtrimin në spital; ndërprisni përdorimin dhe kërkoni ndihmë mjekësore menjëherë nëse shfaqet skuqje.",
+            "Nuk rekomandohet për pacientët me histori të hipertrofisë së ventrikulit të majtë ose disa probleme kardiake.",
+            "Përdorni me kujdes te pacientët me dëmtim të mëlçisë ose veshkave; mund të kërkohet një dozë më e ulët.",
+            "Modafinil mund të zvogëlojë efektivitetin e kontraceptivëve hormonalë (pilula, implante, DIU). Përdorni kontroll të lindjes alternative ose shtesë jo-hormonale gjatë trajtimit dhe për një muaj pas ndërprerjes.",
+            "Shmangni alkoolin gjatë marrjes së këtij medikamenti."
+        ],
+        "how_it_works": [
+            "Mekanizmi i saktë i veprimit të Modafinilit nuk kuptohet plotësisht, por ai ndryshon nga ai i stimuluesve klasikë simpatomimetikë si amfetamina.",
+            "Besohet se funksionon duke rritur nivelet e dopaminës në tru duke penguar rimarrjen e saj, por e bën këtë në një mënyrë më selektive dhe më të dobët se stimuluesit klasikë.",
+            "Ai gjithashtu ndikon në sisteme të tjera neurotransmetuese, duke përfshirë oreksinën, histaminën dhe norepinefrinën, të cilat janë të përfshira në rregullimin e zgjimit dhe gjumit.",
+            "Efektet e tij nxitëse të zgjimit mendohet se ndërmjetësohen përmes aktivizimit të rajoneve specifike të trurit të përfshira në vigjilencë."
+        ],
+        "tips": [
+            "Ruajeni në temperaturë dhome, larg lagështirës dhe nxehtësisë.",
+            "Merrni herët gjatë ditës (për përgjumje gjatë ditës) për të shmangur pagjumësinë.",
+            "Nëse harroni një dozë dhe është vonë gjatë ditës, anashkaloni dozën e humbur për të shmangur prishjen e gjumit. Merrni dozën tuaj të radhës në kohën e rregullt të nesërmen.",
+            "Monitoroni rregullisht presionin e gjakut gjatë marrjes së këtij medikamenti.",
+            "Përdorni një metodë të besueshme jo-hormonale kontraceptive rezervë nëse përdorni kontroll hormonal të lindjes.",
+            "Raportoni çdo ndryshim të lëkurës, ndryshim të humorit ose shenja të problemeve të zemrës tek mjeku juaj menjëherë."
+        ]
+    },
+    "armodafinil": {
+        "id": "hab-armodafinil",
+        "name": {
+            "en": "Armodafinil 150 mg Tablet"
+        },
+        "category": "Sistemi Nervor Qendror",
+        "brand": "Hab Pharma",
+        "dosage": "150 mg",
+        "price": "750",
+        "composition": "Armodafinil 150mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "112111-43-0",
+        "image": "/products/armodafinil-150-mg.webp",
+        "additionalImages": [
+            "/products/armodafinil-150-mg_3.jpg",
+            "/products/armodafinil-150-mg_2.jpg"
+        ],
+        "metaTitle": "Buy Armodafinil 150 mg Online | R-Modafinil | Hab Pharma",
+        "metaDescription": "Buy Armodafinil 150 mg tableta online. R-enantiomeri i modafinilit për nxitje më të gjatë të zgjimit në narkolepsi, OSA dhe SWSD. Nga Hab Pharma.",
+        "description": "Armodafinil 150 mg përmban R-enantiomerin e modafinilit. Është një agjent që nxit zgjimin, i përdorur për të përmirësuar zgjimin tek të rriturit me përgjumje të tepërt të lidhur me narkolepsinë, apnenë obstruktive të gjumit dhe çrregullimin e punës me turne.",
+        "slug": "armodafinil",
+        "overview": [
+            "Armodafinil është (R)-enantiomeri i pastër i modafinilit, duke siguruar një kohëzgjatje më të gjatë veprimi.",
+            "Është aprovuar për të njëjtat indikacione si modafinili: përmirësimi i zgjimit në narkolepsi, apnea obstruktive e gjumit (OSA) dhe çrregullimi i gjumit për shkak të punës me turne (SWSD).",
+            "Një dozë prej 150 mg e armodafinilit është afërsisht terapeutikisht ekuivalente me 200 mg modafinil.",
+            "Është projektuar për të siguruar zgjim më të qëndrueshëm dhe të zgjatur gjatë gjithë ditës.",
+            "Për shkak të gjysmëjetës së tij më të gjatë, mund të jetë veçanërisht i dobishëm për pacientët që kërkojnë vigjilencë gjatë gjithë ditës.",
+            "Nxit zgjimin me një profil më të butë fillimi dhe mbarimi në krahasim me modafinilin racemik për disa individë.",
+            "Ky formulim siguron nivele më të qëndrueshme në gjak gjatë periudhës së dozimit."
+        ],
+        "sideEffects": [
+            "Profili i efekteve anësore është i ngjashëm me modafinilin.",
+            "Dhimbja e kokës, të përzierat, marramendja dhe pagjumësia janë të zakonshme.",
+            "Mund të shfaqen ankth dhe nervozizëm.",
+            "Tharja e gojës është një efekt anësor i raportuar shpesh.",
+            "Rritje e rrahjeve të zemrës mund të ndodhë te individët e ndjeshëm.",
+            "Ashtu si me modafinilin, skuqjet serioze të lëkurës janë një rrezik i rrallë por serioz."
+        ],
+        "administration": [
+            "Merrni Armodafinil saktësisht siç përshkruhet, zakonisht një herë në ditë.",
+            "Doza standarde është 150 mg e marrë në të njëjtën kohë çdo ditë.",
+            "Për narkolepsi dhe OSA, merrni në mëngjes.",
+            "Për SWSD, merrni afërsisht një orë para fillimit të turnit të punës.",
+            "Gëlltitni tabletat të tëra me ujë; mos i shtypni ose përtypni.",
+            "Mund të merret me ose pa ushqim.",
+            "Shmangni marrjen pasdite ose në mbrëmje për të parandaluar pagjumësinë."
+        ],
+        "warnings": [
+            "Mos e përdorni nëse keni histori të reaksionit alergjik ndaj modafinilit ose armodafinilit.",
+            "Ndërprisni përdorimin dhe kërkoni menjëherë kujdes mjekësor nëse shfaqet skuqje e lëkurës.",
+            "Kujdes te pacientët me probleme kardiake, dëmtim të mëlçisë ose veshkave.",
+            "Redukton efektivitetin e kontraceptivëve hormonalë; përdorni kontroll alternativ të lindjes.",
+            "Shmangni konsumimin e alkoolit.",
+            "Nuk rekomandohet gjatë shtatzënisë ose ushqyerjes me gji."
+        ],
+        "how_it_works": [
+            "Armodafinili përmban vetëm (R)-enantiomerin e modafinilit, i cili ka një gjysmëjetë më të gjatë (afërsisht 15 orë) se (S)-enantiomeri.",
+            "(R)-enantiomeri ka një afinitet më të lartë lidhës për transportuesin e dopaminës, duke kontribuar në efektet e tij nxitëse të zgjimit.",
+            "Kjo selektivitet rezulton në frenim më të qëndrueshëm të rimarrjes së dopaminës dhe një kohëzgjatje më të gjatë veprimi në krahasim me modafinilin racemik.",
+            "Siguron përqendrime të qëndrueshme në gjak që mbahen gjatë orëve tipike të zgjimit, duke kërkuar vetëm një dozim një herë në ditë."
+        ],
+        "tips": [
+            "Ruajeni në një vend të freskët dhe të thatë.",
+            "Merrni gjëja e parë në mëngjes për rezultatet më të mira në trajtimin e përgjumjes gjatë ditës.",
+            "Përdorni kontracepsion të besueshëm jo-hormonal nëse është e nevojshme.",
+            "Qëndroni të hidratuar mirë.",
+            "Mos e ndani këtë medikament me të tjerët.",
+            "Raportoni çdo simptomë të pazakontë, veçanërisht ndryshime të lëkurës ose shenja të problemeve kardiake, tek mjeku juaj menjëherë."
+        ]
+    },
+    "cobra-120": {
+        "id": "hab-cobra-120",
+        "name": {
+            "en": "Cobra 120 mg Tablet"
+        },
+        "category": "Sistemi Riprodhues dhe Sistemi Urinar",
+        "brand": "Hab Pharma",
+        "dosage": "120 mg",
+        "price": "580",
+        "composition": "Citrat Sildenafil 120mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-120.png",
+        "additionalImages": [
+            "/products/cobra-120_2.png",
+            "/products/cobra-120_3.png"
+        ],
+        "metaTitle": "Buy Cobra 120 mg Online | Sildenafil for ED | Hab Pharma",
+        "metaDescription": "Buy Cobra 120 mg (Citrat Sildenafil) tableta online. Një trajtim me fuqi të ndërmjetme për mosfunksionimin erektil. Cilësi e lartë nga Hab Pharma.",
+        "description": "Cobra 120 mg përmban Citrat Sildenafil, një frenues PDE5 i përdorur për trajtimin e mosfunksionimit erektil (impotencës) te meshkujt e rritur.",
+        "slug": "cobra-120",
+        "overview": [
+            "Cobra 120 mg është një medikament që përmban Citrat Sildenafil, i përdorur për të ndihmuar meshkujt të arrijnë dhe të mbajnë një ereksion të mjaftueshëm për aktivitet seksual.",
+            "I përket një klase barnash të njohura si frenues të fosfodiesterazës tip 5 (PDE5).",
+            "Fuqia prej 120 mg ofron një opsion të ndërmjetëm, potencialisht i përshtatshëm për ata që e shohin 100 mg të pamjaftueshme, por nuk kërkojnë dozën maksimale prej 200 mg.",
+            "Funksionon vetëm me stimulim seksual dhe nuk rrit dëshirën seksuale.",
+            "Ky formulim është projektuar për të siguruar efekte të besueshme dhe të qëndrueshme për menaxhimin e mosfunksionimit erektil.",
+            "Efektet zakonisht zgjasin deri në 4-6 orë, duke siguruar një dritare kohore të mjaftueshme për aktivitet seksual.",
+            "Duhet të përdoret nën udhëzimin e një profesionisti të kujdesit shëndetësor."
+        ],
+        "sideEffects": [
+            "Dhimbja e kokës dhe skuqja e fytyrës janë efektet anësore më të zakonshme.",
+            "Mund të ndodhë kongjestion nazal ose rrjedhje hunde.",
+            "Disa përdorues mund të përjetojnë dispepsi ose urth.",
+            "Marramendje ose ndjenjë e dobët, veçanërisht kur ngriheni shpejt.",
+            "Çrregullime të shikimit, si një nuancë blu në shikim ose rritje e ndjeshmërisë ndaj dritës.",
+            "Dhimbje shpine ose dhimbje muskujsh mund të ndodhin, zakonisht 12-24 orë pas marrjes së medikamentit."
+        ],
+        "administration": [
+            "Merrni një tabletë Cobra 120 mg afërsisht 30-60 minuta para aktivitetit seksual të planifikuar.",
+            "Gëlltisni tabletën të tërë me një gotë ujë.",
+            "Për thithjen më të mirë dhe më të shpejtë, merrni me stomak bosh. Një vakt me yndyrë të lartë mund të vonojë fillimin e veprimit.",
+            "Mos merrni më shumë se një dozë në një periudhë 24-orëshe.",
+            "Stimulimi seksual kërkohet që medikamenti të jetë efektiv."
+        ],
+        "warnings": [
+            "Mos merrni Cobra nëse jeni duke marrë ndonjë formë të medikamentit nitrat (p.sh., nitroglicerinë për dhimbje gjoksi), pasi kombinimi mund të shkaktojë një rënie të papritur dhe të rrezikshme të presionit të gjakut.",
+            "Mos e përdorni nëse jeni grua ose fëmijë.",
+            "Konsultohuni me mjekun tuaj para përdorimit nëse keni probleme me zemrën, sëmundje të rënda të mëlçisë ose veshkave, presion të ulët të gjakut ose një histori të fundit të goditjes në tru ose sulmit në zemër.",
+            "Kërkoni ndihmë të menjëhershme mjekësore nëse përjetoni humbje të papritur të shikimit ose dëgjimit, ose nëse keni një ereksion që zgjat më shumë se 4 orë (priapizëm).",
+            "Shmangni konsumimin e alkoolit para aktivitetit seksual, pasi mund të rrisë rrezikun e efekteve anësore."
+        ],
+        "how_it_works": [
+            "Citrat Sildenafil, përbërësi aktiv në Cobra, është një frenues i fuqishëm dhe selektiv i PDE5.",
+            "Gjatë stimulimit seksual, oksidi nitrik lirohet në trupin shpellor të penisit.",
+            "Kjo shkakton prodhimin e cGMP (monofosfat ciklik guanozinë), i cili relakson muskujt e lëmuar dhe lejon rritjen e rrjedhjes së gjakut në indet penile, duke çuar në një ereksion.",
+            "Enzima PDE5 normalisht zbërthen cGMP, duke i dhënë fund ereksionit.",
+            "Duke frenuar PDE5, Cobra lejon që cGMP të grumbullohet, duke përmirësuar dhe zgjatur përgjigjen natyrore erektile ndaj stimulimit seksual."
+        ],
+        "tips": [
+            "Ruajeni në temperaturë dhome, larg lagështirës dhe nxehtësisë.",
+            "Nëse jeni i ri në medikamentet për DE, këshillohet të filloni me një dozë më të ulët (si 50 mg ose 100 mg) për të vlerësuar tolerancën tuaj, siç udhëzohet nga mjeku juaj.",
+            "Shmangni grejpfrutin ose lëngun e grejpfrutit, pasi mund të rrisë nivelet e sildenafilit në gjak dhe rrezikun e efekteve anësore.",
+            "Mos e merrni këtë medikament nëse nuk keni mosfunksionim erektil.",
+            "Mbajeni jashtë mundësive të fëmijëve."
+        ]
+    },
+    "cobra-200": {
+        "id": "hab-cobra-200",
+        "name": {
+            "en": "Cobra 200 mg Tablet"
+        },
+        "category": "Sistemi Riprodhues dhe Sistemi Urinar",
+        "brand": "Hab Pharma",
+        "dosage": "200 mg",
+        "price": "720",
+        "composition": "Citrat Sildenafil 200mg",
+        "form": "Tabletë",
+        "pack_size": "10 x 10 Tableta",
+        "casId": "139755-83-2",
+        "image": "/products/cobra-200.webp",
+        "additionalImages": [
+            "/products/cobra-200-2.webp",
+            "/products/cobra-200_3.jpg"
+        ],
+        "metaTitle": "Buy Cobra 200 mg Online | Maximum Strength Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra 200 mg (Citrat Sildenafil) tableta online. Formulim me fuqi maksimale për mosfunksionim të rëndë erektil. Nga Hab Pharma.",
+        "description": "Cobra 200 mg është formulimi me fuqi maksimale i Citrat Sildenafil nga Hab Pharma, i indikuar për trajtimin e mosfunksionimit erektil te meshkujt e rritur që kërkojnë një dozë më të lartë.",
+        "slug": "cobra-200",
+        "overview": [
+            "Cobra 200 mg është tableta Sildenafil me fuqi më të lartë e disponueshme nga Hab Pharma.",
+            "Kjo dozë maksimale zakonisht është e rezervuar për meshkujt me mosfunksionim të rëndë erektil që nuk kanë arritur rezultate të kënaqshme me fuqi më të ulëta (si 100 mg ose 120 mg).",
+            "Siguron frenimin më të fuqishëm të enzimës PDE5 për efekt maksimal në rrjedhjen e gjakut penil.",
+            "Fuqia prej 200 mg ofron kohëzgjatjen më të gjatë të veprimit, potencialisht duke zgjatur deri në 8-12 orë në disa individë.",
+            "Ky formulim duhet të përdoret vetëm nën mbikëqyrje të ngushtë mjekësore për shkak të rrezikut të shtuar të efekteve anësore.",
+            "Mund të jetë i përshtatshëm për pacientët me dëmtim të konsiderueshëm vaskular ose ata që kanë zhvilluar tolerancë ndaj dozave më të ulëta."
+        ],
+        "sideEffects": [
+            "Mundësi dhe intensitet i shtuar i të gjitha efekteve anësore të zakonshme, duke përfshirë dhimbje koke të forta dhe skuqje.",
+            "Çrregullime vizuale më të shpeshta dhe të rëndësishme, si shikim me nuancë blu dhe ndjeshmëri ndaj dritës.",
+            "Rrezik më i lartë i marramendjes dhe një rënie më e madhe e presionit të gjakut, potencialisht duke shkaktuar të fikët.",
+            "Shanse të shtuara për priapizëm (ereksion i zgjatur dhe i dhimbshëm), i cili është një emergjencë mjekësore.",
+            "Kongjestion nazal dhe dispepsi më të theksuara.",
+            "Potencial më i madh për dhimbje shpine dhe dhimbje muskujsh."
+        ],
+        "administration": [
+            "Merrni saktësisht siç përshkruhet, zakonisht 30-60 minuta para aktivitetit seksual.",
+            "Mos merrni më shumë se një tabletë në 24 orë.",
+            "Kjo dozë e lartë nuk duhet të jetë doza fillestare për asnjë pacient të ri në terapinë me Sildenafil.",
+            "Merrni me stomak bosh për thithje optimale; shmangni vaktet me yndyrë të lartë.",
+            "Gëlltisni tabletën të tërë me një gotë të plotë ujë.",
+            "Shmangni rreptësisht alkoolin."
+        ],
+        "warnings": [
+            "Kundërindikim absolut me nitrat ose donatorë të oksidit nitrik.",
+            "Jo për përdorim te pacientët me sëmundje të rënda kardiovaskulare, infarkt të fundit të miokardit, goditje në tru ose aritmi kërcënuese për jetën.",
+            "Kundërindikuar te pacientët me dëmtim të rëndë hepatik ose sëmundje të veshkave në fazën përfundimtare që kërkojnë dializë.",
+            "Rrezik i lartë i ngjarjeve të rënda anësore; përdorni me kujdes ekstrem.",
+            "Nuk rekomandohet për pacientët me hipotension (presion gjaku <90/50 mmHg).",
+            "Përdorni kujdes ekstrem nëse merrni alfa-bllokues ose antihipertensivë të tjerë, pasi mund të ndodhë hipotension i rëndë.",
+            "Mos e përdorni nëse keni histori të neuropatisë optike ishemike anteriore jo-arteritike (NAION) ose retinitit pigmentoz."
+        ],
+        "how_it_works": [
+            "Cobra 200 mg siguron frenim maksimal të PDE5, duke çuar në bllokim pothuajse të plotë të enzimës në indet penile.",
+            "Doza e lartë siguron që cGMP të grumbullohet në nivele maksimale gjatë stimulimit seksual, duke rezultuar në relaksimin më të theksuar të muskujve të lëmuar dhe zgjerimin e enëve të gjakut të mundshëm.",
+            "Kjo çon në përgjigjen më të fortë dhe më të qëndrueshme erektile.",
+            "Përqendrimi i shtuar plazmatik gjithashtu zgjat kohëzgjatjen e veprimit, duke ofruar një dritare më të gjatë terapeutike."
+        ],
+        "tips": [
+            "Përdorni këtë fuqi maksimale vetëm nëse përshkruhet në mënyrë specifike nga një specialist.",
+            "Jini plotësisht të vetëdijshëm për rrezikun e rritur ndjeshëm të efekteve anësore.",
+            "Keni kontaktet e emergjencës lehtësisht të disponueshme.",
+            "Monitoroni me kujdes kohëzgjatjen e ereksionit tuaj; kërkoni ndihmë mjekësore menjëherë nëse zgjat më shumë se 4 orë.",
+            "Mos e kombinoni me asnjë trajtim tjetër për DE.",
+            "Ruajeni të sigurt dhe jashtë mundësive të fëmijëve."
+        ]
+    },
+    "cobra-jelly": {
+        "id": "hab-cobra-jelly",
+        "name": {
+            "en": "Cobra Oral Jelly 100 mg"
+        },
+        "category": "Sistemi Riprodhues dhe Sistemi Urinar",
+        "brand": "Hab Pharma",
+        "dosage": "100 mg",
+        "price": "520",
+        "composition": "Citrat Sildenafil 100mg",
+        "form": "Xhel Oral",
+        "pack_size": "10 Qese (për kuti)",
+        "casId": "139755-83-2",
+        "image": "/products/cobra_jelly.png",
+        "additionalImages": [
+            "/products/cobra_jelly2.png",
+            "/products/cobra_jelly.png"
+        ],
+        "metaTitle": "Buy Cobra Oral Jelly 100 mg Online | Fast-Acting Sildenafil | Hab Pharma",
+        "metaDescription": "Buy Cobra Oral Jelly 100 mg online. Citrat Sildenafil në një format xheli me përthithje të shpejtë dhe të përshtatshëm për trajtim të shpejtë të DE. Shije të ndryshme. Nga Hab Pharma.",
+        "description": "Cobra Oral Jelly 100 mg është një formulim i përshtatshëm dhe me veprim të shpejtë i Citrat Sildenafil për trajtimin e mosfunksionimit erektil. Është projektuar për përthithje më të shpejtë dhe lehtësi në përdorim.",
+        "slug": "cobra-jelly",
+        "overview": [
+            "Cobra Oral Jelly ofron një alternativë popullore ndaj tabletave tradicionale të Sildenafil, veçanërisht për ata që kanë vështirësi në gëlltitjen e pilulave.",
+            "Çdo qese përmban 100 mg Citrat Sildenafil në formën e një xheli me shije të këndshme, gati për konsum.",
+            "Formulimi në xhel është projektuar të përthithet më shpejt se tabletat, potencialisht duke çuar në një fillim më të shpejtë të veprimit (deri në 15-20 minuta për disa individë).",
+            "Vjen në shije të ndryshme, duke e bërë përvojën më të këndshme dhe diskrete.",
+            "Qeset e përshtatshme me një dozë të vetme janë të lehta për t'u bartur dhe konsumuar kudo, duke ofruar spontanitet.",
+            "Ashtu si tabletat, kërkon stimulim seksual për të qenë efektiv.",
+            "Kohëzgjatja e veprimit është e ngjashme me format e tabletave, duke zgjatur 4-6 orë."
+        ],
+        "sideEffects": [
+            "Profili i efekteve anësore është i njëjtë me tabletat e Sildenafil, por përthithja më e shpejtë mund të çojë në një fillim më të shpejtë të efekteve anësore si dhimbja e kokës dhe skuqja.",
+            "Efektet anësore të zakonshme përfshijnë dhimbje koke, skuqje të fytyrës, kongjestion nazal dhe dispepsi.",
+            "Marramendja dhe çrregullimet e shikimit (p.sh., nuancë blu) gjithashtu mund të ndodhin.",
+            "Përthithja më e shpejtë zakonisht nuk ndryshon ashpërsinë ose llojin e efekteve anësore."
+        ],
+        "administration": [
+            "Shqyeni ose prisni cepin e një qeseje dhe shtrydhni të gjithë përmbajtjen direkt në gojën tuaj.",
+            "Mund ta gëlltisni xhelin menjëherë ose ta lini të tretet në gojë për përthithje potencialisht më të shpejtë.",
+            "Rekomandohet ta merrni afërsisht 15-30 minuta para aktivitetit seksual të planifikuar.",
+            "Mos e merrni me ushqim për efektin më të shpejtë; nëse keni ngrënë kohët e fundit, veçanërisht një vakt me yndyrë të lartë, fillimi mund të vonohet.",
+            "Mos merrni më shumë se një qese në një periudhë 24-orëshe.",
+            "Stimulimi seksual kërkohet që medikamenti të funksionojë."
+        ],
+        "warnings": [
+            "Të njëjtat paralajmërime dhe kundërindikacione për tabletat e Sildenafil vlejnë për xhelin oral.",
+            "Mos e përdorni nëse jeni duke marrë nitrate për dhimbje gjoksi.",
+            "Jo për përdorim te gratë ose fëmijët.",
+            "Konsultohuni me një mjek para përdorimit nëse keni probleme me zemrën, sëmundje të rënda të mëlçisë ose veshkave, ose një histori të goditjes në tru.",
+            "Kërkoni ndihmë të menjëhershme mjekësore për ereksione të zgjatura që zgjasin më shumë se 4 orë."
+        ],
+        "how_it_works": [
+            "Mekanizmi i veprimit të Cobra Oral Jelly është identik me tabletat e Sildenafil: ai frenon enzimën PDE5, duke rritur efektin e oksidit nitrik dhe duke rritur nivelet e cGMP në penis.",
+            "Kjo çon në relaksim të muskujve të lëmuar dhe rritje të rrjedhjes së gjakut gjatë stimulimit seksual, duke lehtësuar një ereksion.",
+            "Dallimi kryesor është metoda e dhënies. Xheli përthithet drejtpërdrejt përmes mukozës orale dhe rreshtimit të stomakut, potencialisht duke anashkaluar disa zbërthime fillestare në mëlçi, gjë që mund të çojë në një rritje më të shpejtë të niveleve në gjak dhe një fillim më të shpejtë të veprimit në krahasim me tabletat standarde."
+        ],
+        "tips": [
+            "Ruajeni në një vend të freskët dhe të thatë, larg rrezeve të diellit. Mos e vendosni në frigorifer.",
+            "Shqyeni qesen me kujdes në pikën e caktuar për të shmangur derdhjen.",
+            "Konsumoni të gjithë qesen për dozën e plotë prej 100 mg.",
+            "Nëse jeni i ri në medikamentet për DE, është e rëndësishme që së pari të përcaktoni dozën tuaj optimale me mjekun tuaj duke përdorur tableta, pasi xheli ofron më pak fleksibilitet në dozim.",
+            "Mbani të gjitha medikamentet jashtë mundësive të fëmijëve. Xheli me shije mund të jetë veçanërisht tërheqës për ta.",
+            "Hidhni siç duhet qeset e zbrazëta."
+        ]
+    },
+    "testogel": {
+        "id": "hab-testogel",
+        "name": {
+            "en": "Testosign Soft Gel 40 mg"
+        },
+        "category": "Probleme Endokrine",
+        "brand": "Hab Pharma",
+        "dosage": "40 mg",
+        "price": "1200",
+        "composition": "Undekanoat Testosterone 40mg",
+        "form": "Kapsulë e butë xhelatine",
+        "pack_size": "10 x 10 Kapsula",
+        "casId": "58-22-0",
+        "image": "/products/Testosign-40.webp",
+        "additionalImages": [
+            "/products/Testosign-40_2.jpg",
+            "/products/Testosign-40_3.png"
+        ],
+        "metaTitle": "Buy Testosign Soft Gel 40 mg Online | Testosterone Replacement | Hab Pharma",
+        "metaDescription": "Buy Testosign Soft Gel 40 mg (Undekanoat Testosterone) online. Terapi orale zëvendësuese e testosteronit për hipogonadizëm. Nga Hab Pharma.",
+        "description": "Testosign Soft Gel 40 mg përmban Undekanoat Testosterone, një terapi orale zëvendësuese e testosteronit e indikuar për burrat me hipogonadizëm (mungesë testosteroni).",
+        "slug": "testogel",
+        "overview": [
+            "Testosign Soft Gel është një medikament oral për terapinë zëvendësuese të testosteronit (TRT) te burrat që kanë testosteron të ulët ose aspak për shkak të disa kushteve mjekësore (hipogonadizëm).",
+            "Përmban Undekanoat Testosterone, një formë e testosteronit që, kur përthithet, ndihmon në rivendosjen e niveleve normale të testosteronit.",
+            "Ky formulim është projektuar për t'u përthithur përmes sistemit limfatik, duke anashkaluar metabolizmin e kalimit të parë në mëlçi.",
+            "Fuqia prej 40 mg është një dozë e zakonshme fillestare ose mirëmbajtëse, por doza e saktë duhet të përcaktohet nga një mjek bazuar në nevojat individuale dhe analizat e gjakut.",
+            "TRT mund të ndihmojë në lehtësimin e simptomave të testosteronit të ulët, të tilla si ulja e libidos, lodhja, humori i ulët dhe humbja e masës muskulore.",
+            "Monitorimi i rregullt i niveleve të testosteronit dhe parametrave të tjerë shëndetësorë është thelbësor gjatë trajtimit.",
+            "Ky është një medikament që kërkon recetë dhe kërkon mbikëqyrje mjekësore."
+        ],
+        "sideEffects": [
+            "Mund të ndodhin reaksione të lëkurës ose akne.",
+            "Rritje e numrit të qelizave të kuqe të gjakut (polycythemia) që kërkon monitorim.",
+            "Ndryshime të prostatës; ekzaminimet e rregullta të prostatës janë të nevojshme.",
+            "Mund të ndodhë gjinekomastia (zmadhimi ose ndjeshmëria e gjoksit).",
+            "Edema (mbajtja e lëngjeve) është e mundur.",
+            "Apnea e gjumit mund të përkeqësohet te individët e predispozuar.",
+            "Ndryshime të humorit, duke përfshirë rritje të agresivitetit ose nervozizmit.",
+            "Ulje e numrit të spermës ose infertilitet me përdorim të zgjatur."
+        ],
+        "administration": [
+            "Merrni saktësisht siç përshkruhet nga mjeku juaj. Dozimi është individualizuar bazuar në nivelet e testosteronit në gjak dhe përgjigjen klinike.",
+            "Kapsulat duhet të gëlltiten të tëra me ujë, mundësisht me një vakt që përmban pak yndyrë për të ndihmuar përthithjen.",
+            "Mos i shtypni ose përtypni kapsulat.",
+            "Orari tipik i dozimit mund të jetë një herë ose dy herë në ditë, siç përcaktohet nga mjeku juaj.",
+            "Mos ndaloni marrjen e këtij medikamenti pa u konsultuar me mjekun tuaj."
+        ],
+        "warnings": [
+            "Kjo është një substancë e kontrolluar me potencial për abuzim. Përdorni vetëm nën mbikëqyrje mjekësore.",
+            "Jo për përdorim te gratë, veçanërisht ato që janë ose mund të mbeten shtatzënë.",
+            "Kundërindikuar te burrat me kancer të prostatës ose kancer të gjirit.",
+            "Kërkohen analiza të rregullta gjaku për të monitoruar nivelet e testosteronit, numrin e qelizave të kuqe të gjakut dhe funksionin e mëlçisë.",
+            "Mund të ndikojë në kontrollin e sheqerit në gjak te pacientët diabetikë.",
+            "Mund të rrisë rrezikun e ngjarjeve kardiovaskulare; përdorni me kujdes te pacientët me sëmundje të zemrës.",
+            "Informoni menjëherë mjekun tuaj nëse përjetoni ereksione të shpeshta ose të vazhdueshme, probleme me frymëmarrjen gjatë gjumit ose shenja të mpiksjes së gjakut."
+        ],
+        "how_it_works": [
+            "Testosign përmban Undekanoat Testosterone, një ester i hormonit natyral mashkullor, testosteronit.",
+            "Kur merret nga goja, molekula përthithet në sistemin limfatik, duke anashkaluar kryesisht metabolizmin e kalimit të parë në mëlçi që përndryshe do ta inaktivizonte atë.",
+            "Pasi në qarkullimin e gjakut, shndërrohet në testosteron të lirë, i cili më pas lidhet me receptorët e androgjenit në të gjithë trupin.",
+            "Kjo lidhje aktivizon shprehjen e gjeneve përgjegjëse për karakteristikat mashkullore, libidon, energjinë, masën muskulore dhe densitetin e kockave.",
+            "Duke rivendosur testosteronin në nivele normale fiziologjike, ai lehtëson simptomat e hipogonadizmit."
+        ],
+        "tips": [
+            "Ruajeni në temperaturë dhome nën 25°C, larg lagështirës dhe dritës.",
+            "Merrni vazhdimisht me vakte për të siguruar përthithje të besueshme.",
+            "Mos e ndani këtë medikament me askënd.",
+            "Mbani një regjistër të simptomave tuaja dhe çdo efekti anësor për t'i diskutuar me mjekun tuaj.",
+            "Merrni pjesë në të gjitha takimet e planifikuara të ndjekjes dhe analizat e gjakut.",
+            "Mbani një stil jetese të shëndetshëm, duke përfshirë një dietë të ekuilibruar dhe ushtrime të rregullta, si pjesë e planit tuaj të përgjithshëm të trajtimit.",
+            "Mbajeni jashtë mundësive të fëmijëve. Ky është një hormon i fuqishëm dhe duhet të ruhet në mënyrë të sigurt."
+        ]
+    },
+    "azelax-cream": {
+        "id": "134",
+        "name": {
+            "en": "Azelax - Azelaic Acid Cream"
+        },
+        "category": "Kujdesi i Lëkurës",
+        "brand": "Healing Pharma",
+        "dosage": "20% w/w",
+        "price": "249",
+        "composition": "Acid Azelaik 20% w/w",
+        "form": "Krem",
+        "pack_size": "Tube 20g",
+        "casId": "123-99-9",
+        "image": "/products/azelaic.webp",
+        "additionalImages": [
+            "/products/azelaic_2.webp",
+            "/products/azelaic_3.webp"
+        ],
+        "metaTitle": "Buy Azelax Azelaic Acid Cream 20% Online | Healing Pharma",
+        "metaDescription": "Buy Azelax 20% Krem me Acid Azelaik online. Efektiv për aknet dhe rosacean. Formulë e butë, jo-komedogjene. Nga Healing Pharma.",
+        "description": "Azelax Krem përmban Acid Azelaik 20%, një acid natyral efektiv në trajtimin e akneve të lehta deri në mesatare dhe menaxhimin e rosaceas.",
+        "slug": "azelax-cream",
+        "overview": [
+            "Azelax Krem përmban 20% Acid Azelaik, një acid dikarboksilik me veti anti-inflamatore dhe antibakteriale.",
+            "Përdoret kryesisht për trajtimin topikal të akneve vulgares inflamatore të lehta deri në mesatare.",
+            "Ky krem ndihmon në zvogëlimin e numrit të lezioneve të akneve, duke përfshirë pikat e zeza, pikat e bardha dhe puçrrat.",
+            "Është gjithashtu efektiv në menaxhimin e rosaceas papulopustulare.",
+            "Acidi Azelaik funksionon duke normalizuar derdhjen e qelizave të lëkurës brenda gjëndrave të flokëve, gjë që ndihmon në parandalimin e bllokimeve.",
+            "Gjithashtu pengon rritjen e *Cutibacterium acnes*, një bakter i përfshirë në zhvillimin e akneve.",
+            "Përdorimi i rregullt mund të ndihmojë në përmirësimin e teksturës së lëkurës dhe reduktimin e hiperpigmentimit post-inflamator (njollat e errëta) të shkaktuar nga aknet.",
+            "Ky formulim është jo-komedogjen, që do të thotë se nuk do të bllokojë më tej poret.",
+            "Fuqia prej 20% është një përqendrim i studiuar klinikisht për rezultate efektive.",
+            "Është i përshtatshëm për shumicën e llojeve të lëkurës, por një test patch rekomandohet për lëkurë të ndjeshme."
+        ],
+        "sideEffects": [
+            "Mund të ndodhë acarim i lehtë deri në mesatar i lëkurës, si kruajtje, djegie ose shpim, veçanërisht kur filloni trajtimin.",
+            "Disa individë mund të përjetojnë tharje, pealing ose rrëshqitje të lëkurës.",
+            "Eritema (skuqje) në vendin e aplikimit është e mundur.",
+            "Këto efekte anësore janë zakonisht të përkohshme dhe shpesh zvogëlohen me përdorim të vazhdueshëm.",
+            "Nëse acarimi është i rëndë ose vazhdon, zvogëloni frekuencën e aplikimit ose konsultohuni me një mjek.",
+            "Dermatiti i kontaktit (skuqje) mund të ndodhë në raste të rralla."
+        ],
+        "administration": [
+            "Pastroni dhe thani mirë zonën e prekur të lëkurës para se të aplikoni kremin.",
+            "Aplikoni një shtresë të hollë të Azelax Krem në të gjithë zonën e prekur dy herë në ditë, zakonisht në mëngjes dhe në mbrëmje.",
+            "Masazhoni butësisht kremin në lëkurë derisa të përthithet.",
+            "Shmangni kontaktin me sytë, gojën dhe membranat e tjera mukoze.",
+            "Lani duart menjëherë pas aplikimit të kremit.",
+            "Përdorni siç udhëzohet nga profesionisti juaj i kujdesit shëndetësor.",
+            "Përmirësimi zakonisht shihet brenda 4 javësh, por rezultatet optimale mund të zgjasin disa javë."
+        ],
+        "warnings": [
+            "Vetëm për përdorim të jashtëm. Mos e gëlltisni.",
+            "Shmangni kontaktin me sytë, gojën dhe membranat mukoze. Nëse ndodh kontakti, shpëlajeni tërësisht me ujë.",
+            "Nëse acarimi i lëkurës zhvillohet ose bëhet i rëndë, ndërprisni përdorimin dhe konsultohuni me një mjek.",
+            "Mos e përdorni në lëkurë të plasaritur ose të irrituar, duke përfshirë prerje, gërvishtje ose djegie nga dielli.",
+            "Informoni mjekun tuaj nëse keni një alergji të njohur ndaj Acidit Azelaik ose ndonjë përbërësi tjetër.",
+            "Përdorni me kujdes te pacientët me astmë, pasi janë raportuar raste shumë të rralla të bronkospazmës."
+        ],
+        "how_it_works": [
+            "Acidi Azelaik punon përmes mekanizmave të shumëfishtë për të përmirësuar aknet dhe rosacean.",
+            "Ka veti antibakteriale që ndihmojnë në frenimin e rritjes së *Cutibacterium acnes* brenda njësisë pilosebace.",
+            "Është një frenues konkurrues i tirozinazës, i cili mund të ndihmojë në reduktimin e prodhimit të melaninës, duke zbehur kështu hiperpigmentimin post-inflamator.",
+            "Normalizon procesin e çrregulluar të keratinizimit brenda gjëndrave të flokëve, duke reduktuar formimin e mikrokomedoneve (pararendës i lezioneve të akneve).",
+            "Për rosacea, ndihmon në reduktimin e inflamacionit dhe papulave/pustulave, megjithëse mekanizmi i tij i saktë është ende në studim.",
+            "Duke reduktuar inflamacionin dhe ngarkesën bakteriale, ndihmon në pastrimin e lezioneve ekzistuese dhe parandalimin e formimit të të rejave."
+        ],
+        "tips": [
+            "Ruajeni në një vend të freskët dhe të thatë, larg rrezeve të diellit.",
+            "Mbajeni tubin të mbyllur fort kur nuk është në përdorim.",
+            "Përdorni një hidratues të përshtatshëm për llojin e lëkurës tuaj nëse përjetoni tharje gjatë përdorimit të këtij produkti.",
+            "Nëse harroni një dozë, aplikojeni sa më shpejt që të mbani mend. Nëse është pothuajse koha për dozën tuaj të radhës, anashkaloni dozën e humbur.",
+            "Mos aplikoni veshje ose mbështjellje okluzive mbi zonën e trajtuar, përveç nëse udhëzohet nga mjeku juaj.",
+            "Mund të përdorni kozmetikë jo-komedogjene gjatë trajtimit, por sigurohuni që kremi të përthithet plotësisht para se t'i aplikoni ato.",
+            "Mbroni lëkurën tuaj nga ekspozimi i tepërt në diell dhe përdorni krem kundër diellit, pasi Acidi Azelaik nuk mbron nga djegia e diellit."
+        ]
+    },
+    "bonefine-d3-60k": {
+        "id": "135",
+        "name": {
+            "en": "Bonefine Vitamin D3 60,000 IU Capsules"
+        },
+        "category": "Vitamina dhe Suplemente",
+        "brand": "Healing Pharma",
+        "dosage": "60,000 IU",
+        "price": "210",
+        "composition": "Kolekalciferol (Vitamina D3) 60,000 IU",
+        "form": "Kapsulë",
+        "pack_size": "4 Kapsula x Paketë prej 2",
+        "casId": "67-97-0",
+        "image": "/products/Bonefine.webp",
+        "additionalImages": [
+            "/products/Bonefine.webp",
+            "/products/Bonefine.webp"
+        ],
+        "metaTitle": "Buy Bonefine Vitamin D3 60,000 IU Capsules | Healing Pharma",
+        "metaDescription": "Buy Bonefine D3 60,000 IU kapsula për suplementim me Vitaminë D. Kolekalciferol me fuqi të lartë për shëndetin e kockave dhe imunitetin. Nga Healing Pharma.",
+        "description": "Bonefine Vitamin D3 60,000 IU kapsula ofrojnë një dozë me fuqi të lartë të kolekalciferolit për të trajtuar dhe parandaluar mungesën e Vitaminës D.",
+        "slug": "bonefine-d3-60k",
+        "overview": [
+            "Bonefine D3 60,000 IU është një suplement me fuqi të lartë që përmban Vitaminë D3 (kolekalciferol).",
+            "Përdoret për të trajtuar dhe parandaluar mungesën e Vitaminës D tek të rriturit.",
+            "Vitamina D është thelbësore për thithjen e kalciumit dhe fosforit, thelbësore për ruajtjen e kockave dhe dhëmbëve të shëndetshëm.",
+            "Gjithashtu luan një rol jetik në mbështetjen e funksionit të sistemit imunitar dhe shëndetit të muskujve.",
+            "Ky formulim me dozë të lartë zakonisht përshkruhet për marrje javore ose mujore, siç udhëzohet nga një mjek.",
+            "Mungesa e Vitaminës D mund të çojë në dhimbje kockash, dobësi muskulore dhe rrezik të shtuar të frakturave.",
+            "Nivelet e përshtatshme të Vitaminës D janë veçanërisht të rëndësishme për individët me ekspozim të kufizuar në diell, të moshuarit dhe ata me kushte të caktuara mjekësore.",
+            "Çdo paketë përmban 4 kapsula, duke siguruar një kurs të plotë suplementimi sipas regjimeve të zakonshme.",
+            "Produkti është prodhuar sipas standardeve të cilësisë për të siguruar fuqinë dhe pastërtinë."
+        ],
+        "sideEffects": [
+            "Kur merret siç udhëzohet, efektet anësore janë të rralla. Megjithatë, marrja e më shumë se dozës së rekomanduar mund të çojë në hiperkalcemi (nivele të larta të kalciumit).",
+            "Simptomat e hiperkalcemisë mund të përfshijnë dobësi, lodhje, të përziera, të vjella, kapsllëk dhe urinim të shpeshtë.",
+            "Disa individë mund të përjetojnë shije metalike ose tharje të gojës.",
+            "Reaksionet alergjike janë shumë të rralla por të mundshme.",
+            "Gurët në veshka mund të ndodhin te individët e predispozuar me përdorim afatgjatë të dozave të larta."
+        ],
+        "administration": [
+            "Merrni këtë medikament saktësisht siç përshkruhet nga mjeku juaj.",
+            "Dozimi tipik për trajtimin e mungesës është një kapsulë 60,000 IU një herë në javë për 8 javë, e ndjekur nga një dozë më e ulët mirëmbajtëse.",
+            "Për parandalim, mjeku juaj mund të rekomandojë një orar të ndryshëm dozimi.",
+            "Kapsulat duhet të gëlltiten të tëra me ujë, mundësisht me një vakt që përmban yndyrë për përthithje më të mirë.",
+            "Mos e shtypni ose përtypni kapsulën.",
+            "Mos merrni më shumë se doza e përshkruar."
+        ],
+        "warnings": [
+            "Mos e përdorni nëse jeni alergjik ndaj kolekalciferolit ose ndonjë përbërësi tjetër.",
+            "Konsultohuni me mjekun tuaj para përdorimit nëse keni gurë në veshka, sëmundje të rënda të veshkave ose sarkoidozë.",
+            "Dozat e larta të Vitaminës D duhet të përdoren me kujdes te pacientët me sëmundje të zemrës.",
+            "Mund të nevojiten analiza të rregullta gjaku për të monitoruar nivelet e Vitaminës D dhe kalciumit gjatë terapisë me doza të larta.",
+            "Informoni mjekun tuaj për të gjitha medikamentet e tjera që po merrni, veçanërisht diuretikët tiazidë dhe disa antikonvulsantë."
+        ],
+        "how_it_works": [
+            "Vitamina D3 (kolekalciferoli) është një vitaminë e tretshme në yndyrë që shndërrohet në mëlçi në kalcidioll (25-hidroksivitaminë D).",
+            "Më pas shndërrohet më tej në veshka në kalcitriol (1,25-dihidroksivitaminë D), forma aktive e vitaminës.",
+            "Kalcitrioli vepron si një hormon, duke rregulluar thithjen e kalciumit dhe fosforit nga zorra.",
+            "Duke ruajtur nivele adekuate të kalciumit dhe fosfatit, Vitamina D promovon mineralizimin e duhur të kockave dhe parandalon kushte të tilla si rakitizmi tek fëmijët dhe osteomalacia tek të rriturit.",
+            "Vitamina D gjithashtu lidhet me receptorët në qelizat imune, duke ndikuar në funksionin e tyre dhe duke mbështetur një përgjigje të shëndetshme imune."
+        ],
+        "tips": [
+            "Ruajeni në një vend të freskët dhe të thatë, larg dritës dhe lagështirës.",
+            "Mbajeni jashtë mundësive të fëmijëve.",
+            "Merrni dozën e humbur sa më shpejt që të mbani mend. Nëse është pothuajse koha për dozën e radhës, anashkaloni dozën e humbur dhe vazhdoni orarin tuaj të rregullt. Mos e dyfishoni dozën.",
+            "Mbani marrjen adekuate të kalciumit përmes dietës ose suplementeve siç këshillohet nga mjeku juaj.",
+            "Diskutoni dozën e duhur dhe kohëzgjatjen e trajtimit me ofruesin tuaj të kujdesit shëndetësor."
+        ]
+    },
+    "multivitamin-abcdz": {
+        "id": "136",
+        "name": {
+            "en": "ABCDZ Multivitamin Multimineral Tablets"
+        },
+        "category": "Vitamina dhe Suplemente",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "159",
+        "composition": "Kompleks Multivitaminash dhe Multimineralesh",
+        "form": "Tabletë",
+        "pack_size": "15 Tableta x 2 Rripa",
+        "casId": "N/A",
+        "image": "/products/abcdz_tablets.webp",
+        "additionalImages": [
+            "/products/abcdz_tablets_2.webp",
+            "/products/abcdz_tablets_3.webp"
+        ],
+        "metaTitle": "Buy ABCDZ Multivitamin Multimineral Tablets Online | Healing Pharma",
+        "metaDescription": "Buy ABCDZ tableta multivitamina dhe multiminerale për mbështetje ditore ushqyese. Vitamina dhe minerale esenciale për shëndetin e përgjithshëm. Nga Healing Pharma.",
+        "description": "Tabletat ABCDZ janë një suplement gjithëpërfshirës multivitaminash dhe multimineralesh i krijuar për të plotësuar boshllëqet ushqyese dhe për të mbështetur mirëqenien e përgjithshme.",
+        "slug": "multivitamin-abcdz",
+        "overview": [
+            "ABCDZ është një suplement ditor ushqimor që siguron një kombinim të balancuar të vitaminave dhe mineraleve esenciale.",
+            "Është formuluar për të ndihmuar në plotësimin e kërkesave ditore ushqyese për individët me nevoja të shtuara ose ata me kufizime dietike.",
+            "Përbërësit kryesorë zakonisht përfshijnë Vitaminën A, vitaminat e kompleksit B (si B1, B2, B6, B12), Vitaminën C, Vitaminën D, Vitaminën E dhe minerale të tilla si Zinku, Kalciumi dhe Magnezi.",
+            "Ky suplement mbështet funksione të ndryshme trupore, duke përfshirë metabolizmin e energjisë, funksionin imunitar, shëndetin e kockave dhe mbrojtjen qelizore kundër stresit oksidativ.",
+            "Mund të jetë i dobishëm për individët me oreks të dobët, ata me dieta kufizuese ose gjatë periudhave të konvaleshencës.",
+            "Marrja e rregullt mund të ndihmojë në parandalimin e mungesave të mikronutrientëve dhe të promovojë vitalitetin e përgjithshëm.",
+            "Forma e përshtatshme e tabletës e bën të lehtë përfshirjen në rutinën e përditshme.",
+            "Ky produkt është i përshtatshëm për të rritur dhe fëmijë mbi 12 vjeç, përveç rasteve kur udhëzohet ndryshe nga një mjek."
+        ],
+        "sideEffects": [
+            "Shumica e njerëzve nuk përjetojnë efekte anësore kur merren sipas udhëzimeve.",
+            "Disa individë mund të përjetojnë shqetësime të lehta gastrointestinale, të tilla si kapsllëk, diarre ose shqetësim stomaku.",
+            "Marrja e suplementit me ushqim shpesh mund t'i reduktojë këto efekte.",
+            "Disa vitamina si kompleksi B mund të bëjnë që urina të marrë një ngjyrë të verdhë të ndezur, gjë që është e padëmshme.",
+            "Reaksionet alergjike janë shumë të rralla por të mundshme."
+        ],
+        "administration": [
+            "Merrni një tabletë në ditë, mundësisht me një vakt për të përmirësuar përthithjen dhe për të minimizuar shqetësimin e stomakut.",
+            "Gëlltisni tabletën të tërë me një gotë ujë. Mos e përtypni ose shtypni.",
+            "Merrni në të njëjtën kohë çdo ditë për të krijuar një rutinë.",
+            "Mos e kaloni dozën e rekomanduar ditore.",
+            "Ndiqni këshillat e profesionistit tuaj shëndetësor në lidhje me dozën dhe kohëzgjatjen e përdorimit."
+        ],
+        "warnings": [
+            "Mos e përdorni nëse jeni alergjik ndaj ndonjërit prej përbërësve.",
+            "Konsultohuni me mjekun tuaj para përdorimit nëse jeni shtatzënë, ushqeni me gji ose keni ndonjë gjendje mjekësore para-ekzistuese.",
+            "Mbajeni jashtë mundësive të fëmijëve.",
+            "Suplementet dietike nuk duhet të përdoren si zëvendësim për një dietë të ekuilibruar dhe të larmishme.",
+            "Nëse jeni duke marrë medikamente të tjera, konsultohuni me mjekun ose farmacistin tuaj për të kontrolluar për ndërveprime të mundshme."
+        ],
+        "how_it_works": [
+            "Suplementet multivitamina punojnë duke siguruar një burim të koncentruar të mikronutrientëve që trupi ka nevojë për proceset e tij metabolike.",
+            "Vitaminat e kompleksit B (Tiamina, Riboflavina, Niacina, etj.) veprojnë si koenzima, duke ndihmuar në shndërrimin e ushqimit në energji.",
+            "Vitamina C është një antioksidant i fuqishëm që mbron qelizat nga dëmtimi dhe është thelbësore për sintezën e kolagjenit dhe funksionin imunitar.",
+            "Vitamina D mbështet thithjen e kalciumit për shëndetin e kockave dhe modulon përgjigjet imune.",
+            "Vitamina E vepron si një antioksidant i tretshëm në yndyrë, duke mbrojtur membranat qelizore nga dëmtimi oksidativ.",
+            "Mineralet si Zinku janë thelbësore për funksionin imunitar, shërimin e plagëve dhe ndarjen e qelizave.",
+            "Së bashku, këta lëndë ushqyese ndihmojnë në plotësimin e boshllëqeve dietike, duke siguruar që trupi të ketë blloqet e nevojshme ndërtuese për të funksionuar në mënyrë optimale."
+        ],
+        "tips": [
+            "Ruajeni në një vend të freskët dhe të thatë, larg rrezeve të diellit.",
+            "Mbajeni shishen të mbyllur fort kur nuk është në përdorim.",
+            "Mbani një dietë të shëndetshme së bashku me suplementimin për rezultatet më të mira.",
+            "Nëse harroni një dozë, merreni sa më shpejt që të mbani mend. Nëse është afër dozës suaj të radhës, anashkaloni atë të humburin dhe vazhdoni orarin tuaj të rregullt. Mos e dyfishoni dozën."
+        ]
+    },
+    "xheal-shilajit": {
+        "id": "137",
+        "name": {
+            "en": "XHeal Pahadi Shilajit Gold Resin"
+        },
+        "category": "Shëndet dhe Mirëqenie",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "849",
+        "composition": "Ekstrakt i Pastruar Shilajit",
+        "form": "Rrëshirë",
+        "pack_size": "Kavanoz 20g",
+        "casId": "N/A",
+        "image": "/products/shilajit_gold.webp",
+        "additionalImages": [
+            "/products/shilajit_gold_2.webp",
+            "/products/shilajit_gold_3.jpg"
+        ],
+        "metaTitle": "Buy XHeal Pahadi Shilajit Gold Resin Online | Healing Pharma",
+        "metaDescription": "Buy XHeal Pahadi Shilajit Gold Resin. Shilajit autentik i Himalajeve për vitalitet, qëndrueshmëri dhe mirëqenie të përgjithshme. Nga Healing Pharma.",
+        "description": "XHeal Pahadi Shilajit Gold Resin është një suplement dietik i pastër dhe i fuqishëm i nxjerrë nga malet e Himalajeve, i përdorur tradicionalisht për të rritur vitalitetin dhe energjinë.",
+        "slug": "xheal-shilajit",
+        "overview": [
+            "XHeal Pahadi Shilajit është një formë rrëshire me cilësi të lartë e Shilajit-it, një substancë natyrore që gjendet kryesisht në shkëmbinjtë e Himalajeve.",
+            "Formohet me shekuj nga dekompozimi i ngadaltë i lëndës bimore dhe është i pasur me acid fulvik dhe mbi 84 minerale esenciale.",
+            "Shilajit është përdorur për shekuj në mjekësinë tradicionale Ayurvedike si një rinovues dhe adaptogen i fuqishëm.",
+            "Njihet kryesisht për potencialin e tij për të rritur nivelet e energjisë, për të përmirësuar qëndrueshmërinë dhe për të mbështetur performancën e përgjithshme fizike.",
+            "'Ari' në emrin e tij shpesh nënkupton një formë të pastruar dhe të fuqishme të rrëshirës.",
+            "Ky suplement besohet se mbështet plakjen e shëndetshme, funksionin njohës dhe mbrojtjet natyrore imune të trupit.",
+            "Forma e rrëshirës konsiderohet mënyra më autentike dhe tradicionale për të konsumuar Shilajit.",
+            "Burimi i tij është nga rajonet me lartësi të madhe për të siguruar pastërtinë dhe fuqinë."
+        ],
+        "sideEffects": [
+            "Shilajit përgjithësisht tolerohet mirë kur merret në dozat e rekomanduara.",
+            "Disa individë mund të përjetojnë probleme të lehta tretjeje si shqetësim stomaku ose të përziera, veçanërisht kur filloni përdorimin.",
+            "Për shkak të përmbajtjes së tij minerale, mund të ulë pak presionin e gjakut. Këshillohet kujdes për ata që marrin ilaçe antihipertensive.",
+            "Potencialisht mund të rrisë nivelet e acidit urik; individët me përdhes duhet të konsultohen me një mjek.",
+            "Reaksionet alergjike janë të rralla por të mundshme."
+        ],
+        "administration": [
+            "Merrni një sasi të vogël, sa një bizele (afërsisht 300-500 mg) të rrëshirës.",
+            "Shpërndajeni në një gotë me ujë të ngrohtë, qumësht ose çaj bimor. Shpërndahet më lehtë në lëng të ngrohtë.",
+            "Përziejeni mirë dhe pijeni mundësisht me stomak bosh në mëngjes për përthithje më të mirë.",
+            "Përndryshe, mund të merret siç udhëzohet nga praktikuesi juaj Ayurvedik.",
+            "Konsistenca është çelësi për të përjetuar përfitimet.",
+            "Kavanozi 20g zakonisht siguron një furnizim për 1-2 muaj në varësi të përdorimit ditor."
+        ],
+        "warnings": [
+            "Mos e përdorni nëse jeni alergjik ndaj Shilajit ose ndonjë prej përbërësve të tij.",
+            "Konsultohuni me ofruesin tuaj të kujdesit shëndetësor para përdorimit nëse jeni shtatzënë, ushqeni me gji, keni një gjendje mjekësore (veçanërisht sëmundje të zemrës, përdhes ose presion të ulët të gjakut), ose jeni duke marrë ndonjë medikament me recetë.",
+            "Nuk rekomandohet për fëmijë.",
+            "Sigurohuni që të blini Shilajit nga një burim i besueshëm për të shmangur produktet që mund të përmbajnë metale të rënda ose ndotës të tjerë.",
+            "Filloni me një dozë më të ulët për të vlerësuar tolerancën tuaj."
+        ],
+        "how_it_works": [
+            "Përbërësi kryesor aktiv i Shilajit është acidi fulvik, një antioksidant dhe elektrolit i fuqishëm që ndihmon në transportimin e lëndëve ushqyese thellë në qeliza.",
+            "Besohet se përmirëson funksionin mitokondrial, i cili është qendra energjetike e qelizave, duke çuar në rritjen e energjisë dhe qëndrueshmërisë.",
+            "Acidi fulvik në Shilajit ndihmon në përmirësimin e biodisponueshmërisë së lëndëve të tjera ushqyese dhe mbështet proceset natyrore të detoksifikimit të trupit.",
+            "Vepron si një adaptogen, duke ndihmuar trupin të menaxhojë stresin dhe të ruajë homeostazën.",
+            "Disa kërkime sugjerojnë se mund të mbështesë nivelet e testosteronit te meshkujt, duke kontribuar në vitalitet dhe forcë.",
+            "Përmbajtja e tij e pasur minerale ndihmon në rimbushjen e elementëve gjurmë esencialë që mund të mungojnë në dietën moderne."
+        ],
+        "tips": [
+            "Ruajeni në një vend të freskët dhe të thatë, larg rrezeve të diellit. Mos e vendosni në frigorifer.",
+            "Sigurohuni që kapaku të mbyllet mirë pas çdo përdorimi për të parandaluar tharjen e rrëshirës.",
+            "Përdorni një shpatull ose lugë të pastër dhe të thatë për të nxjerrë rrëshirën për të shmangur kontaminimin.",
+            "Nëse rrëshira ngurtësohet, mund ta vendosni kavanozin e mbyllur në një tas me ujë të ngrohtë për ta zbutur.",
+            "Rekomandohet të ciklohet përdorimi i tij (p.sh., merrni për 2-3 muaj, pastaj bëni një pushim 1-mujor)."
+        ]
+    },
+    "derbeau-moisturizer": {
+        "id": "138",
+        "name": {
+            "en": "Derbeau Oil-Free Moisturizer with Hyaluronic Acid & Ceramide"
+        },
+        "category": "Kujdesi i Lëkurës",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Acid Hialuronik, Kompleks Ceramidesh",
+        "form": "Hidratues",
+        "pack_size": "Kavanoz 75g",
+        "casId": "N/A",
+        "image": "/products/derbeau.webp",
+        "additionalImages": [
+            "/products/derbeau_2.webp",
+            "/products/derbeau_3.webp"
+        ],
+        "metaTitle": "Buy Derbeau Oil-Free Moisturizer | Hyaluronic Acid & Ceramide | Healing Pharma",
+        "metaDescription": "Buy Derbeau Oil-Free Moisturizer online. Hidratues i lehtë ditor me Acid Hialuronik dhe Ceramide për lëkurë të hidratuar dhe me pamje të shëndetshme. Nga Healing Pharma.",
+        "description": "Derbeau Oil-Free Moisturizer është një krem hidratues i lehtë, ditor i formuluar me Acid Hialuronik dhe Ceramide për të ushqyer dhe mbrojtur barrierën e lëkurës pa bllokuar poret.",
+        "slug": "derbeau-moisturizer",
+        "overview": [
+            "Derbeau Oil-Free Moisturizer është një hidratues ditor i fytyrës i krijuar për lëkurë normale deri në të yndyrshme dhe të kombinuar.",
+            "Formula e tij e lehtë, jo e yndyrshme siguron hidratim esencial pa shtuar vaj ose shkëlqim të tepërt.",
+            "I pasuruar me Acid Hialuronik, një humektant i fuqishëm që tërheq dhe ruan lagështinë, duke e mbajtur lëkurën të mbushur dhe të hidratuar.",
+            "Përmban një kompleks Ceramidesh për të ndihmuar në rivendosjen dhe forcimin e barrierës natyrore mbrojtëse të lëkurës.",
+            "Kjo ndihmon në parandalimin e humbjes së lagështirës dhe mbrojtjen e lëkurës nga agresorët mjedisorë.",
+            "Formulimi pa vaj siguron që nuk do të bllokojë poret, duke e bërë të përshtatshëm për lëkurë të prirur ndaj akneve.",
+            "Përdorimi i rregullt mund të ndihmojë në përmirësimin e strukturës së lëkurës, duke e lënë atë të ndihet e butë, e lëmuar dhe e freskët.",
+            "Mund të përdoret si në mëngjes ashtu edhe në mbrëmje si pjesë e një rutine bazë të kujdesit të lëkurës.",
+            "Pa parabene dhe ftalate."
+        ],
+        "sideEffects": [
+            "I formuluar për lëkurë të ndjeshme, efektet anësore janë të rralla.",
+            "Disa individë me ndjeshmëri ekstreme mund të përjetojnë ndjesi të lehtë shpimi ose skuqje në përdorimin e parë.",
+            "Nëse shfaqet acarim, ndërprisni përdorimin dhe konsultohuni me një dermatolog."
+        ],
+        "administration": [
+            "Aplikoni një sasi të vogël, sa një bizele, në fytyrë dhe qafë të pastër dhe të thatë.",
+            "Masazhoni butësisht me lëvizje rrethore lart derisa të përthithet plotësisht.",
+            "Përdorni dy herë në ditë, në mëngjes dhe në mbrëmje, pas pastrimit dhe para aplikimit të kremit kundër diellit (në mëngjes).",
+            "Për rezultatet më të mira, përdorni vazhdimisht si pjesë e regjimit tuaj ditor të kujdesit të lëkurës."
+        ],
+        "warnings": [
+            "Vetëm për përdorim të jashtëm.",
+            "Shmangni kontaktin e drejtpërdrejtë me sytë. Nëse ndodh kontakti, shpëlajeni tërësisht me ujë.",
+            "Mos aplikoni në lëkurë të plasaritur ose të irrituar.",
+            "Ndërprisni përdorimin nëse shfaqen shenja acarimi ose skuqjeje.",
+            "Mbajeni jashtë mundësive të fëmijëve.",
+            "Ruajeni në një vend të freskët dhe të thatë."
+        ],
+        "how_it_works": [
+            "Acidi Hialuronik vepron si një magnet lagështie. Mund të mbajë deri në 1000 herë peshën e tij në ujë, duke tërhequr lagështinë nga mjedisi në shtresat e jashtme të lëkurës.",
+            "Kjo ndihmon në hidratimin e menjëhershëm të lëkurës, duke reduktuar pamjen e vijave të holla dhe duke krijuar një çehre më të lëmuar dhe më të mbushur.",
+            "Ceramidet janë molekula lipidike (yndyrore) që gjenden natyrshëm në përqendrime të larta në membranat qelizore të shtresave të sipërme të lëkurës.",
+            "Ato përbëjnë një pjesë të konsiderueshme të barrierës së lëkurës (stratum corneum) dhe janë thelbësore për ruajtjen e lagështirës dhe parandalimin e depërtimit të agresorëve mjedisorë në lëkurë.",
+            "Aplikimi topik i Ceramideve ndihmon në rimbushjen e barrierës natyrore lipidike të lëkurës, duke përmirësuar hidratimin, qëndrueshmërinë dhe shëndetin e përgjithshëm të lëkurës."
+        ],
+        "tips": [
+            "Aplikoni në lëkurë pak të lagur për të ndihmuar në ruajtjen e lagështirës shtesë.",
+            "Për përdorim gjatë ditës, vazhdoni me një krem kundër diellit me spektër të gjerë (SPF 30+) për mbrojtje të plotë.",
+            "Përfshijeni në rutinën tuaj duke aplikuar pas serumit dhe para kremit kundër diellit ose make-up-it.",
+            "Nëse lëkura juaj ndihet veçanërisht e thatë, mund të aplikoni një shtresë pak më të trashë gjatë natës si maskë hidratuese."
+        ]
+    },
+    "niacinamide-face-wash": {
+        "id": "139",
+        "name": {
+            "en": "Niacinamide and Salicylic Acid Ultra Foaming Face Wash"
+        },
+        "category": "Kujdesi i Lëkurës",
+        "brand": "Healing Pharma",
+        "dosage": "N/A",
+        "price": "299",
+        "composition": "Niacinamide, Acid Salicilik",
+        "form": "Pastrues Fytyre",
+        "pack_size": "Tube 100ml",
+        "casId": "N/A",
+        "image": "/products/AcnetopFacewash.webp",
+        "additionalImages": [
+            "/products/AcnetopFacewash_2.webp",
+            "/products/AcnetopFacewash_3.webp"
+        ],
+        "metaTitle": "Buy Niacinamide & Salicylic Acid Ultra Foaming Face Wash | Healing Pharma",
+        "metaDescription": "Buy Niacinamide and Salicylic Acid Ultra Foaming Face Wash. Pastron thellë, eksfolion dhe ndihmon në kontrollin e akneve. Për lëkurë të pastër dhe me pamje të shëndetshme. Nga Healing Pharma.",
+        "description": "Ky Pastrues Fytyre Ultra Shkumëzues kombinon fuqinë pastruese të Acidit Salicilik me përfitimet qetësuese të Niacinamide për një pastrim të thellë por të butë, duke ndihmuar në pastrimin e lëkurës dhe reduktimin e njollave.",
+        "slug": "niacinamide-face-wash",
+        "overview": [
+            "Ky pastrues fytyre ultra-shkumëzues është formuluar për të pastruar thellë poret dhe për të hequr vajin e tepërt, papastërtitë dhe ndotësit.",
+            "Përmban Acid Salicilik, një beta-hidroksiacid (BHA) që depërton thellë në pore për të eksfoliuar nga brenda dhe për të ndihmuar në parandalimin dhe trajtimin e akneve.",
+            "I pasuruar me Niacinamide (Vitaminë B3), e njohur për vetitë e saj qetësuese, anti-inflamatore dhe ndriçuese.",
+            "Ndihmon në reduktimin e skuqjes, qetësimin e irritimit dhe përmirësimin e pamjes së tonit të pabarabartë të lëkurës.",
+            "Veprimi shkumëzues siguron një pastrim të kënaqshëm dhe të plotë pa hequr lagështinë natyrore të lëkurës.",
+            "Ideale për lëkurë të yndyrshme, të kombinuar dhe të prirur ndaj akneve.",
+            "Përdorimi i rregullt mund të çojë në lëkurë më të pastër, më të lëmuar dhe më rrezatuese.",
+            "Ndihmon në kontrollin e prodhimit të tepërt të sebumit, duke reduktuar shkëlqimin gjatë gjithë ditës."
+        ],
+        "sideEffects": [
+            "Acidi salicilik mund të shkaktojë tharje ose rrëshqitje të lehtë, veçanërisht kur filloni përdorimin.",
+            "Disa individë mund të ndjejnë një ndjesi të lehtë shpimi.",
+            "Nëse ndodh tharje ose acarim i tepërt, zvogëloni frekuencën e përdorimit ose ndërprisni dhe konsultohuni me një dermatolog."
+        ],
+        "administration": [
+            "Lagni fytyrën me ujë të vakët.",
+            "Shtrydhni një sasi të vogël pastruesi në pëllëmbën e dorës.",
+            "Fërkoni duart për të krijuar një shkumë të pasur.",
+            "Masazhoni butësisht shkumën në fytyrë me lëvizje rrethore, duke shmangur zonën e syve.",
+            "Shpëlajeni tërësisht me ujë dhe thajeni fytyrën me një peshqir të pastër duke e shtypur butësisht.",
+            "Përdorni një herë ose dy herë në ditë si pjesë e rutinës suaj të rregullt të kujdesit të lëkurës."
+        ],
+        "warnings": [
+            "Vetëm për përdorim të jashtëm.",
+            "Shmangni kontaktin e drejtpërdrejtë me sytë. Nëse ndodh kontakti, shpëlajeni tërësisht me shumë ujë.",
+            "Mos aplikoni në lëkurë të plasaritur, të irrituar ose të djegur nga dielli.",
+            "Nëse acarimi i lëkurës zhvillohet ose përkeqësohet, ndërprisni përdorimin dhe konsultohuni me një mjek.",
+            "Përdorni krem kundër diellit gjatë ditës, pasi AHA/BHA mund të rrisin ndjeshmërinë ndaj diellit.",
+            "Mbajeni jashtë mundësive të fëmijëve."
+        ],
+        "how_it_works": [
+            "Acidi Salicilik është një BHA lipofilik (që e do vajin) që mund të depërtojë në shtresat lipidike të lëkurës dhe të hyjë thellë në pore.",
+            "Brenda poreve, ndihmon në shpërbërjen e sebumit të tepërt dhe eksfolimin e qelizave të vdekura të lëkurës që mund të çojnë në bllokime, pika të zeza dhe lezione akne.",
+            "Duke i mbajtur poret të pastra, ndihmon në parandalimin e shpërthimeve të ardhshme.",
+            "Niacinamida punon në mënyrë sinergjike duke ndihmuar në rregullimin e prodhimit të vajit dhe qetësimin e inflamacionit të lidhur me aknet.",
+            "Gjithashtu ndihmon në forcimin e funksionit të barrierës së lëkurës, duke përmirësuar qëndrueshmërinë dhe duke reduktuar ndjeshmërinë që mund të shkaktohet nga acidet eksfoliuese.",
+            "Së bashku, ato ofrojnë një qasje të fuqishme por të balancuar për pastrimin dhe përsosjen e lëkurës."
+        ],
+        "tips": [
+            "Për rezultatet më të mira, përdorni vazhdimisht si pjesë e rutinës suaj të mëngjesit dhe/ose mbrëmjes.",
+            "Vazhdoni me një tonik (nëse përdoret), serum, hidratues dhe krem kundër diellit gjatë ditës.",
+            "Nëse lëkura juaj është e re ndaj acideve eksfoliuese, filloni duke e përdorur një herë në ditë ose çdo ditë tjetër për të lejuar lëkurën tuaj të përshtatet.",
+            "Shmangni përdorimin e produkteve të tjera të forta eksfoliuese (pastrime fizike, pilingë të fortë kimikë) në të njëjtat ditë për të parandaluar eksfolimin e tepërt."
+        ]
+    } 
 
 
 
