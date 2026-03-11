@@ -91,7 +91,7 @@ export default function Home() {
   <div className="relative group 
 w-[70%] sm:w-[60%] md:w-[55%] lg:w-[50%] 
 max-w-[260px] sm:max-w-md md:max-w-xl lg:max-w-2xl
-ml-2 sm:ml-4 md:ml-0">
+ml-2 sm:ml-4 md:ml-32">
 
     {/* Gradient Glow */}
     <div className="absolute -inset-1 bg-gradient-to-r from-blue-200/30 via-transparent to-transparent rounded-xl blur opacity-40 group-hover:opacity-60 transition duration-300 -z-10" />
