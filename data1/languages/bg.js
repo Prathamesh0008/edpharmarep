@@ -611,7 +611,7 @@ homeProducts: {
     form: "Форма:",
     pack: "Опаковка:",
     details: "Подробности",
-    enquire: "Запитване"
+    enquire: "Свържете се с нас"
   },
   buttons: {
     viewBrandProducts: "Вижте Продукти {brand}",

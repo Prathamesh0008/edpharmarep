@@ -726,7 +726,7 @@ homeProducts: {
     form: "Forma:",
     pack: "Envase:",
     details: "Detalles",
-    enquire: "Consultar"
+    enquire: "Contáctenos"
   },
   buttons: {
     viewBrandProducts: "Ver Productos {brand}",

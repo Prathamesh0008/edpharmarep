@@ -732,7 +732,7 @@ homeProducts: {
     form: "الشكل:",
     pack: "التغليف:",
     details: "التفاصيل",
-    enquire: "استعلام"
+    enquire: "اتصل بنا"
   },
   buttons: {
     viewBrandProducts: "عرض منتجات {brand}",

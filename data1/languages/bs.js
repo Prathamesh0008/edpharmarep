@@ -694,7 +694,7 @@ homeProducts: {
     form: "Oblik:",
     pack: "Pakiranje:",
     details: "Detalji",
-    enquire: "Upit"
+    enquire: "Kontaktirajte nas"
   },
   buttons: {
     viewBrandProducts: "Pogledajte Proizvode {brand}",

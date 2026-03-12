@@ -611,7 +611,7 @@ homeProducts: {
     form: "Forma:",
     pack: "Paketimi:",
     details: "Detaje",
-    enquire: "Kërkoni informacion"
+    enquire: "Na kontaktoni"
   },
   buttons: {
     viewBrandProducts: "Shiko Produktet {brand}",

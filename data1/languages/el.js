@@ -653,7 +653,7 @@ homeProducts: {
     form: "Μορφή:",
     pack: "Συσκευασία:",
     details: "Λεπτομέρειες",
-    enquire: "Αίτηση πληροφοριών"
+    enquire: "Επικοινωνήστε μαζί μας"
   },
   buttons: {
     viewBrandProducts: "Δείτε Προϊόντα {brand}",

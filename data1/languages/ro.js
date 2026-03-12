@@ -610,7 +610,7 @@ homeProducts: {
     form: "Formă:",
     pack: "Ambalaj:",
     details: "Detalii",
-    enquire: "Solicită informații"
+    enquire: "Contactați-ne"
   },
   buttons: {
     viewBrandProducts: "Vezi Produsele {brand}",

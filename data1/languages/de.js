@@ -723,7 +723,7 @@ homeProducts: {
     form: "Form:",
     pack: "Verpackung:",
     details: "Details",
-    enquire: "Anfrage stellen"
+    enquire: "Kontaktieren Sie uns"
   },
   buttons: {
     viewBrandProducts: "{brand} Produkte Anzeigen",

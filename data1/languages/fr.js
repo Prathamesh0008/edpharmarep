@@ -780,7 +780,7 @@ homeProducts: {
     form: "Forme:",
     pack: "Conditionnement:",
     details: "Détails",
-    enquire: "Demander des informations"
+    enquire: "Contactez-nous"
   },
   buttons: {
     viewBrandProducts: "Voir les Produits {brand}",

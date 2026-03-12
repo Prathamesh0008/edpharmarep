@@ -718,7 +718,7 @@ homeProducts: {
     form: "Form:",
     pack: "Pack:",
     details: "Details",
-    enquire: "Enquire"
+    enquire: "Contact Us"
   },
   buttons: {
     viewBrandProducts: "View {brand} Products",
@@ -884,7 +884,7 @@ productsPage: {
 },
 homePage: {
   hero: {
-    title: "Official & Trusted Pharma Distributor Europe",
+    title: "Official Pharmaceutical Distributor Europe",
     subtitle:
       "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets.",
     ctaViewProducts: "View Products",

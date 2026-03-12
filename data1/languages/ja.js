@@ -662,7 +662,7 @@ homeProducts: {
     form: "形態:",
     pack: "包装:",
     details: "詳細",
-    enquire: "問い合わせる"
+    enquire: "お問い合わせ"
   },
   buttons: {
     viewBrandProducts: "{brand}製品を見る",

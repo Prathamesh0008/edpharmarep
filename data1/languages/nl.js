@@ -721,7 +721,7 @@ homeProducts: {
     form: "Vorm:",
     pack: "Verpakking:",
     details: "Details",
-    enquire: "Vraag informatie"
+    enquire: "Neem contact met ons op"
   },
   buttons: {
     viewBrandProducts: "Bekijk {brand} Producten",

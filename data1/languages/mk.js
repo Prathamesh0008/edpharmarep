@@ -653,7 +653,7 @@ homeProducts: {
     form: "Форма:",
     pack: "Пакет:",
     details: "Детали",
-    enquire: "Побарај информации"
+    enquire: "Контактирајте не"
   },
   buttons: {
     viewBrandProducts: "Види Производи {brand}",

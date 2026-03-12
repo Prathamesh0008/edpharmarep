@@ -707,7 +707,7 @@ homeProducts: {
     form: "剂型:",
     pack: "包装:",
     details: "详情",
-    enquire: "咨询"
+    enquire: "联系我们"
   },
   buttons: {
     viewBrandProducts: "查看 {brand} 产品",

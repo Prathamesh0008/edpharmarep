@@ -338,7 +338,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   // Get translations safely with proper fallbacks
   const homeProductsTrans = t?.homeProducts || {
     header: {
-      tag: "All Products",
+      tag: "",
       showingAll: "Showing all {count} products",
       noProductsInStock: "No products in stock for",
       tryAnotherBrand: "Please try selecting another brand or check back later."
@@ -389,7 +389,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   };
 
   return (
-    <section className="relative py-10 sm:py-14 md:py-16">
+    <section className="relative py-10 sm:py-14 md:py-0">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         <LogoStrip
           activeBrand={activeBrand}
@@ -402,15 +402,10 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
           
           <div className="relative flex flex-col gap-4 sm:gap-5 md:gap-6 sm:flex-row sm:items-end sm:justify-between p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl">
             <div className="flex-1">
-              <div className="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2 min-h-[20px] sm:min-h-[24px]">
-                <div className="w-2 h-0.1 sm:w-7 sm:h-01 md:w-4 md:h-1 bg-gradient-to-r from-[#0A2A73] to-blue-500 rounded-full"></div>
-                <span className="text-xs sm:text-sm font-semibold text-[#0A2A73] uppercase tracking-wide inline-block min-w-[120px] sm:min-w-[140px] whitespace-nowrap">
-                  {headerTag}
-                </span>
-              </div>
+              
               
               {/* Fixed height for brand name */}
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-900 leading-tight min-h-[32px] sm:min-h-[38px] md:min-h-[44px] flex items-center">
+              <h2 className="text-xl sm:text-2xl md:text-3xl  text-slate-900 leading-tight min-h-[32px] sm:min-h-[38px] md:min-h-[44px] flex items-center">
                 {activeBrand.replace("ED ", "")}
               </h2>
               
@@ -422,11 +417,11 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
 
             <div className="flex items-center gap-2 sm:gap-3 md:gap-4 mt-2 sm:mt-0 min-h-[40px]">
               {/* Product count badge - fixed width with truncation */}
-              <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-blue-50 border border-blue-100 min-w-[100px] sm:min-w-[120px] text-center">
+              {/* <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-blue-50 border border-blue-100 min-w-[100px] sm:min-w-[120px] text-center">
                 <span className="text-xs sm:text-sm font-semibold text-[#0A2A73] whitespace-nowrap overflow-hidden text-ellipsis block">
                   {productCountText}
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -611,7 +611,7 @@ homeProducts: {
     form: "Oblik:",
     pack: "Pakiranje:",
     details: "Pojedinosti",
-    enquire: "Upišite zahtjev"
+    enquire: "Kontaktirajte nas"
   },
   buttons: {
     viewBrandProducts: "Pogledajte Proizvode {brand}",
