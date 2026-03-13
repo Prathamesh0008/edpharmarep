@@ -8,6 +8,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import { AuthProvider } from "./context/AuthContext";
 import LoadingProvider from "./components/LoadingProvider"; 
 import RouteLoader from "./components/RouteLoader";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 /* ---------------- FONTS ---------------- */
 const geistSans = Geist({
@@ -278,6 +279,7 @@ export default function RootLayout({
 
         <LayoutController>
           {children}
+          <WhatsAppButton />
         </LayoutController>
 
       
