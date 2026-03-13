@@ -207,6 +207,7 @@ import Image from "next/image";
 import { products } from "../app/data/products";
 import Testimonials from "./components/Testimonials";
 import Compliance from "./components/Compliance";
+import Hero from "./components/Hero";
 
 import HomeProducts from "../app/components/HomeProducts";
 import { useState, useEffect } from "react";
@@ -261,84 +262,21 @@ export default function Home() {
   
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
 
       {/* Add ScrollProgressLine here - positioned right after Navbar */}
-      <ScrollProgressLine />
+      {/* <ScrollProgressLine /> */}
 
       {/* FULL-WIDTH BANNER WITH IMAGE AND HERO CONTENT */}
       
-<div className="relative w-full h-[400px] sm:h-[340px] md:h-[480px] lg:h-[600px] xl:h-[720px] overflow-hidden -mt-25">
-
-  {/* Background Image */}
- <div className="absolute inset-0 w-full h-full">
-  <Image
-    src="/bg/ED-banner (2).svg"
-    alt="Pharmaceutical banner"
-    fill
-    priority
-    sizes="100vw"
-    className="object-contain object-center"
-  />
-
-  {/* Overlay */}
-  <div className="absolute inset-0" />
-</div>
-
-  {/* Hero Content */}
-  <div className="relative h-full mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-  <div className="relative group 
-    w-[60%] sm:w-[60%] md:w-[55%] lg:w-[100%] 
-     sm:max-w-md md:max-w-xl lg:max-w-4xl
-    ml-2 sm:ml-4 md:ml-32">
-
-    {/* Gradient Glow */}
-    <div className="absolute -inset-1 bg-gradient-to-r from-blue-200/30 via-transparent to-transparent rounded-xl blur opacity-40 group-hover:opacity-60 transition duration-300 -z-10" />
-
-    {/* Content Card */}
-    <div className="backdrop-blur-sm bg-white/40 p-3 sm:p-4 md:p-5 lg:p-6 rounded-xl border border-blue-100/30 shadow-sm">
-      <h1 className="text-lg sm:text-xl md:text-3xl lg:text-4xl xl:text-5xl text-[#0A2A73] leading-tight">
-        {heroTitle}
-      </h1>
-
-      <p className="mt-2 sm:mt-3 md:mt-4 text-xs sm:text-sm md:text-base lg:text-lg text-slate-600 max-w-lg">
-        {heroSubtitle}
-      </p>
-
-      {/* Responsive Button Container */}
-      <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3 md:gap-4 mt-6 sm:mt-10 md:mt-10">
-        
-        {/* View Products Button */}
-        <Link
-          href="/products"
-          className="w-full sm:w-auto px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-5 rounded-lg bg-[#0A2A73] text-white font-medium shadow hover:shadow-lg hover:bg-blue-800 transition-all duration-300 text-xs sm:text-sm md:text-base text-center"
-        >
-          {heroCta}
-        </Link>
-
-        {/* 24/7 Support */}
-        <div className="w-full sm:w-auto px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-5 rounded-lg bg-[#0A2A73] text-white font-medium shadow hover:shadow-lg hover:bg-blue-800 transition-all duration-300 text-xs sm:text-sm md:text-base text-center">
-          24 × 7 Support
-        </div>
-
-        {/* Live Tracking */}
-        <div className="w-full sm:w-auto px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-5 rounded-lg bg-[#0A2A73] text-white font-medium shadow hover:shadow-lg hover:bg-blue-800 transition-all duration-300 text-xs sm:text-sm md:text-base text-center">
-          Live Tracking
-        </div>
-
-        {/* 44+ European Countries - Special handling for text */}
-        <div className="w-full sm:w-auto px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 rounded-lg bg-[#0A2A73] text-white font-medium shadow hover:shadow-lg hover:bg-blue-800 transition-all duration-300 text-xs sm:text-sm md:text-base text-center whitespace-normal">
-          44+ European <br className="hidden sm:hidden md:block" /> Countries Covered
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-
 
       
+
+
+      <Hero
+      heroTitle={heroTitle}
+    heroSubtitle={heroSubtitle}
+      />
 
       {/* Remove the old HERO section - it's now in the banner above */}
 
