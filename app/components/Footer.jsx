@@ -89,7 +89,7 @@ export default function Footer() {
           <div className="flex items-center gap-2">
             <Link href="/" className="flex items-center">
               <img
-                src="/LogoEd.png"
+                src="/Ed_5.png"
                 alt="ED Pharma"
                 className="h-12 w-auto object-contain"
               />

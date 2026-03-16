@@ -278,7 +278,9 @@ export default function RootLayout({
         <RouteLoader />
 
         <LayoutController>
+          <LoadingProvider>
           {children}
+        </LoadingProvider>
           <WhatsAppButton />
         </LayoutController>
 

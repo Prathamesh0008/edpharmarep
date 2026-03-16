@@ -59,42 +59,42 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
             </p>
 
             {/* BUTTONS */}
-           <div className="flex flex-wrap sm:flex-nowrap gap-3 mt-6 sm:mt-8">
-
+           <div className="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 w-full">
   {/* SHIPPING */}
-  <div className="flex items-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 rounded-xl 
- bg-[#0A2A73] text-white font-medium
-  shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300
-  text-xs sm:text-sm md:text-base whitespace-nowrap">
+  <div className="flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-5 md:px-6 py-3 rounded-xl 
+    bg-[#0A2A73] text-white font-medium
+    shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300
+    text-sm sm:text-base md:text-lg w-full sm:w-auto
+    cursor-pointer hover:bg-[#0A2A73]/90">
 
-    <Truck size={18} />
-    Express Shipping EU
+    <Truck size={20} className="flex-shrink-0" />
+    <span className="whitespace-nowrap">Express Shipping EU</span>
 
   </div>
 
   {/* TRACKING */}
-  <div className="flex items-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 rounded-xl 
-  bg-[#0A2A73] text-white font-medium
-  shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300
-  text-xs sm:text-sm md:text-base whitespace-nowrap">
+  <div className="flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-5 md:px-6 py-3 rounded-xl 
+    bg-[#0A2A73] text-white font-medium
+    shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300
+    text-sm sm:text-base md:text-lg w-full sm:w-auto
+    cursor-pointer hover:bg-[#0A2A73]/90">
 
-    <Globe size={18} />
-    Real Time Order Tracking
+    <Globe size={20} className="flex-shrink-0" />
+    <span className="whitespace-nowrap">Real Time Order Tracking</span>
 
   </div>
 
-    {/* CUSTOMER SERVICE */}
-<div className="flex items-center gap-2 px-4 sm:px-5 md:px-6 py-2.5 rounded-xl 
-bg-[#0A2A73]  text-white font-medium
-shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300
-text-xs sm:text-sm md:text-base whitespace-nowrap">
+  {/* CUSTOMER SERVICE */}
+  <div className="flex items-center justify-center sm:justify-start gap-2 px-4 sm:px-5 md:px-6 py-3 rounded-xl 
+    bg-[#0A2A73] text-white font-medium
+    shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300
+    text-sm sm:text-base md:text-lg w-full sm:w-auto
+    cursor-pointer hover:bg-[#0A2A73]/90">
 
-  <Headset size={18} />
-  24/7 Customer Support
+    <Headset size={20} className="flex-shrink-0" />
+    <span className="whitespace-nowrap">24/7 Customer Support</span>
 
-</div>
-
-
+  </div>
 </div>
 
           </div>

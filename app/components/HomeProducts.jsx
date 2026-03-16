@@ -43,6 +43,121 @@ const getTranslationString = (translation, language) => {
   return '';
 };
 
+/* ---------------- LOADING SPINNER COMPONENT ---------------- */
+const LoadingSpinner = ({ themeColor = "#0A2A73" }) => {
+  return (
+    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-b from-slate-50 to-white z-20">
+      <div className="relative flex flex-col items-center">
+        {/* Pulse ring */}
+        <div className="absolute inset-0 rounded-full animate-ping opacity-20" 
+          style={{ backgroundColor: themeColor, width: '48px', height: '48px', margin: 'auto' }}
+        />
+        
+        {/* Spinner */}
+        <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
+          <div className="absolute top-0 left-0 w-full h-full">
+            {[...Array(3)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute top-0 left-0 w-full h-full rounded-full border-2 border-transparent animate-spin"
+                style={{
+                  borderTopColor: themeColor,
+                  borderRightColor: i === 1 ? themeColor : 'transparent',
+                  borderBottomColor: i === 2 ? themeColor : 'transparent',
+                  animationDuration: `${1 + i * 0.2}s`,
+                  animationDelay: `${i * 0.1}s`,
+                  opacity: 0.8 - i * 0.2,
+                }}
+              />
+            ))}
+          </div>
+          
+          {/* Inner dot */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div 
+              className="w-2 h-2 sm:w-2.5 sm:h-2.5 md:w-3 md:h-3 rounded-full animate-pulse"
+              style={{ backgroundColor: themeColor }}
+            />
+          </div>
+        </div>
+        
+        {/* Loading text - visible only on larger screens */}
+        <span className="mt-2 text-[8px] sm:text-[10px] md:text-xs font-medium text-slate-500 animate-pulse hidden sm:block">
+          Loading...
+        </span>
+      </div>
+      
+      {/* CSS for animations */}
+      <style jsx>{`
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        .animate-spin {
+          animation: spin linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .animate-spin, .animate-ping, .animate-pulse {
+            animation: none !important;
+          }
+        }
+      `}</style>
+    </div>
+  );
+};
+
+/* ---------------- IMAGE WITH LOADING STATE ---------------- */
+const ImageWithLoading = ({ src, alt, fill, className, sizes, priority, themeColor }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div className="relative w-full h-full">
+      {/* Loading Spinner */}
+      {isLoading && !hasError && <LoadingSpinner themeColor={themeColor} />}
+      
+      {/* Error State */}
+      {hasError && (
+        <div className="absolute inset-0 flex items-center justify-center bg-slate-100 z-20">
+          <div className="text-center">
+            <svg 
+              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 mx-auto text-slate-400" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={1.5} 
+                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
+              />
+            </svg>
+            <p className="text-[8px] sm:text-[10px] mt-1 text-slate-500">Failed to load</p>
+          </div>
+        </div>
+      )}
+
+      {/* Actual Image */}
+      <Image
+        src={hasError ? "/placeholder.jpg" : src}
+        alt={alt}
+        fill={fill}
+        className={`${className} transition-opacity duration-300 ${
+          isLoading ? 'opacity-0' : 'opacity-100'
+        }`}
+        sizes={sizes}
+        priority={priority}
+        onLoad={() => setIsLoading(false)}
+        onError={() => {
+          setIsLoading(false);
+          setHasError(true);
+        }}
+      />
+    </div>
+  );
+};
+
 /* ---------------- SMOOTH PRODUCT IMAGE GALLERY ---------------- */
 const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -188,23 +303,24 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
             key={index}
             className={`image-slide ${index === currentImageIndex ? 'active' : 'inactive'}`}
           >
-            <Image
+            <ImageWithLoading
               src={imgSrc}
               alt={`${getProductName()} - View ${index + 1}`}
               fill
               className="object-contain p-3 sm:p-4 md:p-5 lg:p-6 transition-transform duration-200 group-hover:scale-105"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
               priority={index === 0}
+              themeColor={themeColor}
             />
           </div>
         ))}
         
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none"></div>
         
         {/* Image Navigation Dots - Compact for homepage */}
         {images.length > 1 && (
-          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 flex gap-1">
+          <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-30 flex gap-1">
             {images.map((_, index) => (
               <button
                 key={index}
@@ -228,7 +344,7 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
 
         {/* Auto-rotation Indicator - Show on hover */}
         {images.length > 1 && (
-          <div className="absolute top-1.5 right-1.5 z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <div className="absolute top-1.5 right-1.5 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
             <div 
               className="px-1.5 py-0.5 rounded-full text-[8px] font-medium backdrop-blur-sm bg-white/90 image-indicator"
               style={{ color: themeColor }}
@@ -284,16 +400,17 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
                 ].join(" ")}
               >
                 <div className="relative h-3/4 w-3/4 mx-auto">
-                  <Image 
-                    src={b.logo} 
-                    alt={b.key} 
-                    fill 
+                  <ImageWithLoading
+                    src={b.logo}
+                    alt={b.key}
+                    fill
                     sizes="(max-width: 640px) 200px, (max-width: 768px) 240px, (max-width: 1024px) 280px, 320px"
                     className={[
                       "object-contain transition-all duration-300",
                       active ? "opacity-100 scale-105" : "opacity-85 group-hover:opacity-100 group-hover:scale-105"
                     ].join(" ")}
                     priority={active}
+                    themeColor={BRAND}
                   />
                 </div>
                 
@@ -532,7 +649,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
           <div className="mt-8 sm:mt-10 rounded-xl sm:rounded-2xl md:rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 md:p-8 text-center min-h-[200px] sm:min-h-[250px] flex flex-col justify-center">
             <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto bg-slate-100 rounded-full flex items-center justify-center mb-3 sm:mb-4 flex-shrink-0">
               <svg className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-9 9 9 9 0 019-9z" />
               </svg>
             </div>
             <h3 className="text-base sm:text-lg md:text-xl font-semibold text-slate-900 mb-1 sm:mb-2 min-h-[24px] sm:min-h-[28px] md:min-h-[32px] flex items-center justify-center">
