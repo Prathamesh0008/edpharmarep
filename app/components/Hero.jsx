@@ -68,7 +68,7 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
   text-xs sm:text-sm md:text-base whitespace-nowrap">
 
     <Truck size={18} />
-    Express EU Shipping
+    Express Shipping EU
 
   </div>
 
@@ -90,7 +90,7 @@ shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300
 text-xs sm:text-sm md:text-base whitespace-nowrap">
 
   <Headset size={18} />
-  24×7 Customer Support
+  24/7 Customer Support
 
 </div>
 
