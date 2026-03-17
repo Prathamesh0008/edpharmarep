@@ -358,7 +358,6 @@ const faqSchemas = {
   }
 };
 
-
 // Blog posts data
 const blogPosts = [
   {
@@ -1310,8 +1309,14 @@ export default async function BlogPost({ params }) {
   const headings = extractHeadings(post.content);
   const relatedPosts = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
 
-  // Generate canonical URL
-  const canonicalUrl = `https://www.invictuslogi.com/blog/${slug}`;
+  // Generate canonical URL - ensure it's the absolute URL
+  const canonicalUrl = `https://www.edpharma.co/blog/${slug}`;
+  
+  // Generate meta description from content
+  const metaDescription = post.content
+    .replace(/<[^>]*>/g, '')
+    .substring(0, 160)
+    .trim() + '...';
 
   // Process content and replace FAQ placeholder with interactive component
   const processFullContent = (content) => {
@@ -1332,31 +1337,47 @@ export default async function BlogPost({ params }) {
     <>
       {/* Head section with canonical tag and schema */}
       <Head>
-        {/* Canonical Tag */}
+        {/* Title - important for SEO */}
+        <title>{post.title} | ED Pharma Blog</title>
+        
+        {/* Meta Description */}
+        <meta name="description" content={metaDescription} />
+        
+        {/* Canonical Tag - this is the most important for preventing duplicate content */}
         <link rel="canonical" href={canonicalUrl} />
         
-        {/* Meta robots (optional - can help with SEO) */}
-        <meta name="robots" content="index, follow" />
+        {/* Meta robots - helps with SEO */}
+        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
         
         {/* Open Graph tags for better social sharing */}
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.content.substring(0, 160).replace(/<[^>]*>/g, '')} />
-        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Invictus Logistics" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:site_name" content="ED Pharma" />
+        <meta property="og:image" content="https://www.edpharma.co/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         
         {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.content.substring(0, 160).replace(/<[^>]*>/g, '')} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content="https://www.edpharma.co/twitter-image.jpg" />
         
         {/* Article specific meta tags */}
         <meta property="article:published_time" content={new Date(post.date).toISOString()} />
-        <meta property="article:author" content="Invictus Logistics" />
-        <meta property="article:section" content="Health & Wellness" />
+        <meta property="article:author" content="ED Pharma" />
+        <meta property="article:section" content="Men's Health" />
+        
+        {/* Additional SEO tags */}
+        <meta name="author" content="ED Pharma" />
+        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
+        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
       </Head>
 
-      {/* Add FAQ Schema in the head using Next.js Script component */}
+      {/* Add FAQ Schema in the head using script tag */}
       {faqSchema && (
         <script
           type="application/ld+json"
@@ -1366,8 +1387,8 @@ export default async function BlogPost({ params }) {
       
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Breadcrumb navigation */}
-          <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6">
+          {/* Breadcrumb navigation with schema markup */}
+          <nav className="flex items-center space-x-2 text-sm text-gray-600 mb-6" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-blue-600 transition-colors">
               Home
             </Link>
@@ -1438,7 +1459,7 @@ export default async function BlogPost({ params }) {
                       Sildenafil
                     </span>
                     <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                      Men is Health
+                      Men's Health
                     </span>
                   </div>
                 </div>
