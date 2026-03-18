@@ -9,6 +9,7 @@ import { AuthProvider } from "./context/AuthContext";
 import LoadingProvider from "./components/LoadingProvider"; 
 import RouteLoader from "./components/RouteLoader";
 import WhatsAppButton from "./components/WhatsAppButton";
+import VisitorTracker from "./components/VisitorTracker";
 
 /* ---------------- FONTS ---------------- */
 const geistSans = Geist({
@@ -279,6 +280,7 @@ export default function RootLayout({
 
         <LayoutController>
           <LoadingProvider>
+             <VisitorTracker />
           {children}
         </LoadingProvider>
           <WhatsAppButton />

@@ -52,22 +52,24 @@ export default function Footer() {
 
   // Fetch real visitor count from API
   useEffect(() => {
-    const fetchVisitorCount = async () => {
-      try {
-        const response = await fetch('/api/visitors');
-        const data = await response.json();
-        setVisitorCount(data.count);
-      } catch (error) {
-        console.error('Error fetching visitor count:', error);
-        // Fallback to a default or cached value
-        setVisitorCount(15234); // Example fallback
-      } finally {
-        setLoading(false);
-      }
-    };
+  const fetchVisitorCount = async () => {
+    try {
+      const res = await fetch("/api/visitors", {
+        cache: "no-store",
+      });
 
-    fetchVisitorCount();
-  }, []);
+      const data = await res.json();
+
+      setVisitorCount(data.count);
+    } catch (err) {
+      console.error("Visitor error:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchVisitorCount();
+}, []);
 
   const quickLinks = footerData.links;
   const categories = footerData.categories;
