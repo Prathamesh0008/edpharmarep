@@ -357,6 +357,7 @@ const faqSchemas = {
   }
 };
 
+
 // Blog posts data
 const blogPosts = [
   {
@@ -1291,6 +1292,7 @@ const extractHeadings = (content) => {
 };
 
 // ADD THIS METADATA EXPORT FUNCTION
+// UPDATE THIS generateMetadata FUNCTION
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const post = blogPosts.find(p => p.slug === slug);
@@ -1307,7 +1309,8 @@ export async function generateMetadata({ params }) {
     .substring(0, 160)
     .trim() + '...';
   
-  return {
+  // Base metadata
+  const metadata = {
     title: `${post.title} | ED Pharma Blog`,
     description: metaDescription,
     alternates: {
@@ -1348,17 +1351,12 @@ export async function generateMetadata({ params }) {
       description: metaDescription,
       images: ['https://www.edpharma.co/twitter-image.jpg'],
     },
-    other: {
-      'article:published_time': new Date(post.date).toISOString(),
-      'article:author': 'ED Pharma',
-      'article:section': 'Men\'s Health',
-    },
-    ...(faqSchema && {
-      other: {
-        'script:ld+json': JSON.stringify(faqSchema),
-      },
-    }),
   };
+
+  // Add schema if it exists
+ 
+
+  return metadata;
 }
 
 export default async function BlogPost({ params }) {
@@ -1366,6 +1364,7 @@ export default async function BlogPost({ params }) {
   
   const post = blogPosts.find(p => p.slug === slug);
   const currentFaqItems = faqItems[slug] || [];
+  const faqSchema = faqSchemas[slug];
 
   if (!post) {
     notFound();
@@ -1391,6 +1390,14 @@ export default async function BlogPost({ params }) {
 
   return (
     <>
+     {faqSchema && (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+    )}
       {/* REMOVED THE Head COMPONENT COMPLETELY */}
       
       <div className="min-h-screen bg-gray-50">
