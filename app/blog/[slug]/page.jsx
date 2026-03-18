@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 import { notFound } from "next/navigation";
 import TableOfContents from "../../components/TableOfContents";
 import RelatedArticles from "../../components/RelatedArticles";
-import InteractiveFAQ from "../../components/InteractiveFAQ"; // Import the new component
+import InteractiveFAQ from "../../components/InteractiveFAQ";
 
 // FAQ Schema for each blog post
 const faqSchemas = {
@@ -488,10 +487,6 @@ ED Pharma's sildenafil tablets
         <li>PDE5 inhibitors explanation – Healthline: <a href="https://www.healthline.com/health/erectile-dysfunction/types-of-ed-medication" class="text-blue-600 hover:underline">https://www.healthline.com/health/erectile-dysfunction/types-of-ed-medication</a></li>
         <li>Information on Kamagra safety concerns – FDA Warning: <a href="https://www.fda.gov/consumers/consumer-updates/serious-safety-concerns-unapproved-ed-drugs" class="text-blue-600 hover:underline">https://www.fda.gov/consumers/consumer-updates/serious-safety-concerns-unapproved-ed-drugs</a></li>
       </ul>
-      
-      
-      
-      
     `
   },
   {
@@ -1295,11 +1290,81 @@ const extractHeadings = (content) => {
   return headings;
 };
 
+// ADD THIS METADATA EXPORT FUNCTION
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = blogPosts.find(p => p.slug === slug);
+  const faqSchema = faqSchemas[slug];
+  
+  if (!post) {
+    return {
+      title: 'Post Not Found | ED Pharma Blog',
+    };
+  }
+  
+  const metaDescription = post.content
+    .replace(/<[^>]*>/g, '')
+    .substring(0, 160)
+    .trim() + '...';
+  
+  return {
+    title: `${post.title} | ED Pharma Blog`,
+    description: metaDescription,
+    alternates: {
+      canonical: `https://www.edpharma.co/blog/${slug}`,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+        'max-video-preview': -1,
+      },
+    },
+    openGraph: {
+      title: post.title,
+      description: metaDescription,
+      url: `https://www.edpharma.co/blog/${slug}`,
+      siteName: 'ED Pharma',
+      locale: 'en_US',
+      type: 'article',
+      publishedTime: new Date(post.date).toISOString(),
+      authors: ['ED Pharma'],
+      images: [
+        {
+          url: 'https://www.edpharma.co/og-image.jpg',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: metaDescription,
+      images: ['https://www.edpharma.co/twitter-image.jpg'],
+    },
+    other: {
+      'article:published_time': new Date(post.date).toISOString(),
+      'article:author': 'ED Pharma',
+      'article:section': 'Men\'s Health',
+    },
+    ...(faqSchema && {
+      other: {
+        'script:ld+json': JSON.stringify(faqSchema),
+      },
+    }),
+  };
+}
+
 export default async function BlogPost({ params }) {
   const { slug } = await params;
   
   const post = blogPosts.find(p => p.slug === slug);
-  const faqSchema = faqSchemas[slug];
   const currentFaqItems = faqItems[slug] || [];
 
   if (!post) {
@@ -1308,15 +1373,6 @@ export default async function BlogPost({ params }) {
 
   const headings = extractHeadings(post.content);
   const relatedPosts = blogPosts.filter(p => p.slug !== post.slug).slice(0, 3);
-
-  // Generate canonical URL - ensure it's the absolute URL
-  const canonicalUrl = `https://www.edpharma.co/blog/${slug}`;
-  
-  // Generate meta description from content
-  const metaDescription = post.content
-    .replace(/<[^>]*>/g, '')
-    .substring(0, 160)
-    .trim() + '...';
 
   // Process content and replace FAQ placeholder with interactive component
   const processFullContent = (content) => {
@@ -1335,55 +1391,7 @@ export default async function BlogPost({ params }) {
 
   return (
     <>
-      {/* Head section with canonical tag and schema */}
-      <Head>
-        {/* Title - important for SEO */}
-        <title>{post.title} | ED Pharma Blog</title>
-        
-        {/* Meta Description */}
-        <meta name="description" content={metaDescription} />
-        
-        {/* Canonical Tag - this is the most important for preventing duplicate content */}
-        <link rel="canonical" href={canonicalUrl} />
-        
-        {/* Meta robots - helps with SEO */}
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        
-        {/* Open Graph tags for better social sharing */}
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={metaDescription} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:site_name" content="ED Pharma" />
-        <meta property="og:image" content="https://www.edpharma.co/og-image.jpg" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        
-        {/* Twitter Card tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content="https://www.edpharma.co/twitter-image.jpg" />
-        
-        {/* Article specific meta tags */}
-        <meta property="article:published_time" content={new Date(post.date).toISOString()} />
-        <meta property="article:author" content="ED Pharma" />
-        <meta property="article:section" content="Men's Health" />
-        
-        {/* Additional SEO tags */}
-        <meta name="author" content="ED Pharma" />
-        <link rel="alternate" hrefLang="en" href={canonicalUrl} />
-        <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
-      </Head>
-
-      {/* Add FAQ Schema in the head using script tag */}
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
+      {/* REMOVED THE Head COMPONENT COMPLETELY */}
       
       <div className="min-h-screen bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
