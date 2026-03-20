@@ -317,7 +317,7 @@ export default function OrdersPage() {
                           <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 overflow-hidden shadow-sm group-hover:shadow-md transition-all">
                             {firstItem?.image ? (
                               <Image
-                                src={firstItem.image}
+                                 src={firstItem.image.trimEnd()} 
                                 alt={firstItem.name}
                                 width={48}
                                 height={48}

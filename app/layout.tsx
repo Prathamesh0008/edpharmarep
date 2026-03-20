@@ -275,8 +275,8 @@ export default function RootLayout({
     <CartProvider>
       
 
-        {/* 🔥 ROUTE LOADER ADDED HERE */}
-        <RouteLoader />
+        {/* 🔥 ROUTE LOADER ADDED HERE
+        <RouteLoader /> */}
 
         <LayoutController>
           
