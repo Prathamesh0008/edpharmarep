@@ -186,8 +186,8 @@ useEffect(() => {
     const emailData = {
       orderId: orderId,
       customerEmail: orderData?.customerEmail || userEmail,
-      customerName: orderData?.customerName || form?.fullName || 'Customer',
-      totalAmount: orderData?.totalAmount || totals?.totalPrice || '0',
+      customerName: orderData?.customerName || 'Customer', // REMOVED form?.fullName
+      totalAmount: orderData?.totalAmount || '0', // REMOVED totals reference
       paymentMethod: orderData?.paymentMethod || paymentMethod,
       items: orderData?.items || []
     };
@@ -628,20 +628,7 @@ const openFallbackEmail = (data) => {
             )}
           </p>
           
-          <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-500">
-            <Link href="/help" className="hover:text-gray-700 transition-colors">
-              {orderSuccessTranslations.footer.links.helpCenter}
-            </Link>
-            <Link href="/shipping" className="hover:text-gray-700 transition-colors">
-              {orderSuccessTranslations.footer.links.shippingPolicy}
-            </Link>
-            <Link href="/returns" className="hover:text-gray-700 transition-colors">
-              {orderSuccessTranslations.footer.links.returnsRefunds}
-            </Link>
-            <Link href="/contact" className="hover:text-gray-700 transition-colors">
-              {orderSuccessTranslations.footer.links.contactUs}
-            </Link>
-          </div>
+          
         </div>
       </div>
     </div>

@@ -77,7 +77,7 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
           py-2 sm:py-2.5 md:py-3 
           rounded-xl bg-[#0A2A73] text-white font-medium
           shadow-md hover:shadow-lg hover:scale-[1.02] md:hover:scale-[1.03] 
-          transition-all duration-300 cursor-pointer
+          transition-all duration-300 
           text-xs sm:text-sm md:text-base lg:text-lg
           whitespace-nowrap hover:bg-[#0A2A73]/90
           w-full">
@@ -91,7 +91,7 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
           py-2 sm:py-2.5 md:py-3 
           rounded-xl bg-[#0A2A73] text-white font-medium
           shadow-md hover:shadow-lg hover:scale-[1.02] md:hover:scale-[1.03] 
-          transition-all duration-300 cursor-pointer
+          transition-all duration-300 
           text-xs sm:text-sm md:text-base lg:text-lg
           whitespace-nowrap hover:bg-[#0A2A73]/90
           w-full">
@@ -105,7 +105,7 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
           py-2 sm:py-2.5 md:py-3 
           rounded-xl bg-[#0A2A73] text-white font-medium
           shadow-md hover:shadow-lg hover:scale-[1.02] md:hover:scale-[1.03] 
-          transition-all duration-300 cursor-pointer
+          transition-all duration-300 
           text-xs sm:text-sm md:text-base lg:text-lg
           whitespace-nowrap hover:bg-[#0A2A73]/90
           w-full sm:col-span-2 lg:col-span-1">

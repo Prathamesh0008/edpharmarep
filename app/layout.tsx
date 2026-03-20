@@ -279,10 +279,10 @@ export default function RootLayout({
         <RouteLoader />
 
         <LayoutController>
-          <LoadingProvider>
+          
              <VisitorTracker />
           {children}
-        </LoadingProvider>
+        
           <WhatsAppButton />
         </LayoutController>
 

@@ -7,6 +7,9 @@ import { products as allProducts } from "../data/products";
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import pricingData from "../data/pricing"; // Import pricing data
+import { useCart } from "./CartContext"; // Import cart context
+import { getPriceByQuantity } from "@/app/utils/getPriceByQuantity"; // Import price utility
+import { ShoppingCart, Check } from "lucide-react"; // Import icons
 
 /* ---------------- BRANDS ---------------- */
 const brands = [
@@ -194,7 +197,7 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
       }, 400);
     };
 
-    intervalRef.current = setInterval(rotateImage, 1000);
+    intervalRef.current = setInterval(rotateImage, 3000);
 
     return () => {
       if (intervalRef.current) {
@@ -430,6 +433,81 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
   );
 }
 
+/* ---------------- COMPACT ADD TO CART BUTTON (ICON ONLY) ---------------- */
+const CompactAddToCartButton = ({ product, themeColor }) => {
+  const { addToCart, cartItems } = useCart();
+  const [isAdded, setIsAdded] = useState(false);
+  const [isAdding, setIsAdding] = useState(false);
+  
+  // Default bulk quantity from cart context (usually 100)
+  const DEFAULT_QUANTITY = 100;
+  
+  // Check if product is already in cart
+  const isInCart = cartItems.some(item => item.slug === product.slug);
+  
+  // Get unit price based on default quantity
+  const unitPrice = getPriceByQuantity(product.slug, DEFAULT_QUANTITY);
+  
+  const handleAddToCart = (e) => {
+    e.preventDefault(); // Prevent navigation
+    e.stopPropagation(); // Prevent event bubbling
+    
+    if (isAdding) return;
+    
+    setIsAdding(true);
+    
+    // Prepare cart item
+    const cartItem = {
+      slug: product.slug,
+      name: typeof product.name === 'object' ? product.name.en || product.name.fr || product.name : product.name,
+      image: product.image || "/placeholder.jpg",
+      price: unitPrice,
+      qty: DEFAULT_QUANTITY,
+      brand: product.brand,
+      category: product.category,
+    };
+    
+    // Add to cart
+    addToCart(cartItem);
+    
+    // Show success state
+    setIsAdded(true);
+    
+    // Reset after animation
+    setTimeout(() => {
+      setIsAdded(false);
+      setIsAdding(false);
+    }, 2000);
+  };
+  
+  return (
+    <button
+      onClick={handleAddToCart}
+      disabled={isAdding || isAdded}
+      className={[
+        "flex items-center justify-center rounded-full w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 transition-all duration-300",
+        "hover:scale-110 active:scale-95 shadow-sm hover:shadow-md",
+        isAdded 
+          ? "bg-green-500 text-white hover:bg-green-600" 
+          : isInCart
+            ? "bg-amber-500 text-white hover:bg-amber-600"
+            : "bg-white text-[#0A2A73] hover:bg-[#0A2A73] hover:text-white border-2"
+      ].join(" ")}
+      style={{ 
+        borderColor: !isAdded && !isInCart ? themeColor : undefined,
+        backgroundColor: isAdded ? undefined : isInCart ? undefined : undefined,
+      }}
+      title={isInCart ? "Already in cart" : "Add to cart"}
+    >
+      {isAdded ? (
+        <Check size={16} className="sm:size-18 md:size-5" />
+      ) : (
+        <ShoppingCart size={16} className="sm:size-18 md:size-5" />
+      )}
+    </button>
+  );
+};
+
 /* ---------------- RESPONSIVE HOME PRODUCTS ---------------- */
 export default function HomeProducts({ activeBrand, setActiveBrand }) {
   const { t, language } = useLanguage();
@@ -565,6 +643,11 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       themeColor={BRAND} 
                       isCompact={true}
                     />
+                    
+                    {/* Compact Add to Cart Button - Positioned on image */}
+                    <div className="absolute top-2 right-2 z-20">
+                      <CompactAddToCartButton product={p} themeColor={BRAND} />
+                    </div>
                   </div>
 
                   {/* CONTENT - Fixed heights for text sections */}
@@ -617,11 +700,12 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       </span>
                     </div>
 
-                    {/* ACTION BUTTONS - Fixed height with text overflow handling */}
-                    <div className="mt-auto pt-1 sm:pt-2 flex gap-1.5 sm:gap-2 md:gap-3 min-h-[36px] sm:min-h-[40px] md:min-h-[44px]">
+                    {/* ACTION BUTTONS - Two buttons layout (Details & Enquire) */}
+                    <div className="mt-auto pt-1 sm:pt-2 grid grid-cols-2 gap-1.5 sm:gap-2 md:gap-3 min-h-[36px] sm:min-h-[40px] md:min-h-[44px]">
+                      {/* Details Button */}
                       <Link
                         href={`/product/${p.slug}`}
-                        className="flex-1 min-w-0 flex items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl px-1 sm:px-2 md:px-3 text-[10px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90 min-h-[32px] sm:min-h-[36px]"
+                        className="flex items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl px-1 sm:px-2 md:px-3 text-[10px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90 min-h-[32px] sm:min-h-[36px]"
                         style={{ backgroundColor: BRAND }}
                       >
                         <span className="truncate whitespace-nowrap px-1">
@@ -629,9 +713,10 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                         </span>
                       </Link>
 
+                      {/* Enquire Button */}
                       <Link
                         href={`/contact?product=${encodeURIComponent(p.slug)}`}
-                        className="flex-1 min-w-0 flex items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl px-1 sm:px-2 md:px-3 text-[10px] sm:text-xs md:text-sm font-semibold border bg-white transition hover:bg-slate-50 min-h-[32px] sm:min-h-[36px] text-center"
+                        className="flex items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl px-1 sm:px-2 md:px-3 text-[10px] sm:text-xs md:text-sm font-semibold border bg-white transition hover:bg-slate-50 min-h-[32px] sm:min-h-[36px] text-center"
                         style={{ borderColor: BRAND, color: BRAND }}
                       >
                         <span className="truncate whitespace-nowrap px-1">
