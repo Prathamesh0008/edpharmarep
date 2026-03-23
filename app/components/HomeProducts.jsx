@@ -345,32 +345,7 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
           </div>
         )}
 
-        {/* Auto-rotation Indicator - Show on hover */}
-        {images.length > 1 && (
-          <div className="absolute top-1.5 right-1.5 z-30 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            <div 
-              className="px-1.5 py-0.5 rounded-full text-[8px] font-medium backdrop-blur-sm bg-white/90 image-indicator"
-              style={{ color: themeColor }}
-            >
-              <div className="flex items-center gap-0.5">
-                <svg 
-                  className="w-2 h-2" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" 
-                  />
-                </svg>
-                <span>Auto</span>
-              </div>
-            </div>
-          </div>
-        )}
+        
       </div>
     </div>
   );
@@ -433,8 +408,8 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
   );
 }
 
-/* ---------------- COMPACT ADD TO CART BUTTON (ICON ONLY) ---------------- */
-const CompactAddToCartButton = ({ product, themeColor }) => {
+/* ---------------- COMPACT ADD TO CART BUTTON ---------------- */
+const AddToCartButton = ({ product, themeColor }) => {
   const { addToCart, cartItems } = useCart();
   const [isAdded, setIsAdded] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
@@ -485,8 +460,11 @@ const CompactAddToCartButton = ({ product, themeColor }) => {
       onClick={handleAddToCart}
       disabled={isAdding || isAdded}
       className={[
-        "flex items-center justify-center rounded-full w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 transition-all duration-300",
-        "hover:scale-110 active:scale-95 shadow-sm hover:shadow-md",
+        "flex items-center justify-center gap-1.5 rounded-lg transition-all duration-300",
+        "px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2",
+        "text-[11px] sm:text-xs md:text-sm font-semibold",
+        "hover:scale-105 active:scale-95 shadow-sm hover:shadow-md w-full",
+        "whitespace-nowrap",
         isAdded 
           ? "bg-green-500 text-white hover:bg-green-600" 
           : isInCart
@@ -495,14 +473,19 @@ const CompactAddToCartButton = ({ product, themeColor }) => {
       ].join(" ")}
       style={{ 
         borderColor: !isAdded && !isInCart ? themeColor : undefined,
-        backgroundColor: isAdded ? undefined : isInCart ? undefined : undefined,
       }}
       title={isInCart ? "Already in cart" : "Add to cart"}
     >
       {isAdded ? (
-        <Check size={16} className="sm:size-18 md:size-5" />
+        <>
+          <Check size={14} className="sm:size-4 md:size-4" />
+          <span>Added!</span>
+        </>
       ) : (
-        <ShoppingCart size={16} className="sm:size-18 md:size-5" />
+        <>
+          <ShoppingCart size={14} className="sm:size-4 md:size-4" />
+          <span>{isInCart ? "In Cart" : "Add"}</span>
+        </>
       )}
     </button>
   );
@@ -545,6 +528,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
     productCard: {
       details: "Details",
       enquire: "Enquire",
+      addToCart: "Add",
       dosage: "Dosage:",
       form: "Form:",
       pack: "Pack:"
@@ -570,6 +554,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   // Product card translations
   const detailsText = getTrans(homeProductsTrans?.productCard?.details, "Details");
   const enquireText = getTrans(homeProductsTrans?.productCard?.enquire, "Enquire");
+  const addToCartText = getTrans(homeProductsTrans?.productCard?.addToCart, "Add");
   const dosageLabel = getTrans(homeProductsTrans?.productCard?.dosage, "Dosage:");
   const formLabel = getTrans(homeProductsTrans?.productCard?.form, "Form:");
   const packLabel = getTrans(homeProductsTrans?.productCard?.pack, "Pack:");
@@ -598,7 +583,6 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
           <div className="relative flex flex-col gap-4 sm:gap-5 md:gap-6 sm:flex-row sm:items-end sm:justify-between p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl">
             <div className="flex-1">
               
-              
               {/* Fixed height for brand name */}
               <h2 className="text-xl sm:text-2xl md:text-3xl  text-slate-900 leading-tight min-h-[32px] sm:min-h-[38px] md:min-h-[44px] flex items-center">
                 {activeBrand.replace("ED ", "")}
@@ -623,7 +607,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
 
         {/* PRODUCT GRID - Fixed heights for consistent layout */}
         {brandProducts.length > 0 ? (
-          <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+          <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
             {brandProducts.map((p, index) => {
               // Create a truly unique key by combining brand, slug, and index
               const uniqueKey = `${activeBrand}-${p.slug}-${index}`;
@@ -637,25 +621,20 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                   onMouseLeave={handleProductMouseLeave}
                 >
                   {/* IMAGE - Fixed aspect ratio with animation */}
-                  <div className="relative aspect-square h-40 sm:h-44 md:h-48 lg:h-52 xl:h-56 2xl:h-60 rounded-t-xl sm:rounded-t-2xl md:rounded-t-3xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden flex-shrink-0">
+                  <div className="relative aspect-square h-44 sm:h-48 md:h-52 lg:h-56 xl:h-60 rounded-t-xl sm:rounded-t-2xl md:rounded-t-3xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden flex-shrink-0">
                     <SmoothProductImageGallery 
                       product={p} 
                       themeColor={BRAND} 
                       isCompact={true}
                     />
-                    
-                    {/* Compact Add to Cart Button - Positioned on image */}
-                    <div className="absolute top-2 right-2 z-20">
-                      <CompactAddToCartButton product={p} themeColor={BRAND} />
-                    </div>
                   </div>
 
                   {/* CONTENT - Fixed heights for text sections */}
-                  <div className="p-3 sm:p-4 md:p-5 flex flex-col gap-2 sm:gap-3 md:gap-4 flex-grow">
+                  <div className="p-4 sm:p-5 md:p-6 flex flex-col gap-3 sm:gap-4 md:gap-5 flex-grow">
                     {/* CATEGORY - Fixed height with truncation */}
-                    <div className="min-h-[24px] sm:min-h-[26px] md:min-h-[28px] flex items-center">
+                    <div className="min-h-[28px] flex items-center">
                       <span
-                        className="inline-block text-[9px] sm:text-[10px] md:text-[11px] font-semibold px-2 sm:px-3 py-0.5 sm:py-1 rounded-full border truncate max-w-full"
+                        className="inline-block text-[10px] sm:text-[11px] md:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border truncate max-w-full"
                         style={{
                           borderColor: BRAND + "30",
                           color: BRAND,
@@ -668,47 +647,47 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                     </div>
 
                     {/* NAME - Fixed height with line clamp */}
-                    <h3 className="text-xs sm:text-sm md:text-base font-bold text-slate-900 leading-tight line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[3.5rem] overflow-hidden">
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-tight line-clamp-2 min-h-[3rem] sm:min-h-[3.5rem] md:min-h-[4rem] overflow-hidden">
                       {typeof p.name === 'object' ? p.name.en || p.name.fr || '' : p.name}
                     </h3>
 
                     {/* META INFO - Fixed height container */}
-                    <div className="min-h-[60px] sm:min-h-[65px] md:min-h-[70px] flex flex-wrap gap-1 sm:gap-1.5 md:gap-2 text-[10px] sm:text-[11px] md:text-[12px] text-slate-700">
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 min-h-[24px] sm:min-h-[26px] md:min-h-[28px]">
-                        <span className="font-semibold mr-1 whitespace-nowrap">
+                    <div className="min-h-[70px] sm:min-h-[75px] md:min-h-[80px] flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs md:text-sm text-slate-700">
+                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="font-semibold mr-1.5 whitespace-nowrap">
                           {dosageLabel}
                         </span> 
-                        <span className="truncate max-w-[60px] sm:max-w-[70px] md:max-w-[80px]" title={p.dosage}>
+                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.dosage}>
                           {p.dosage}
                         </span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 min-h-[24px] sm:min-h-[26px] md:min-h-[28px]">
-                        <span className="font-semibold mr-1 whitespace-nowrap">
+                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="font-semibold mr-1.5 whitespace-nowrap">
                           {formLabel}
                         </span> 
-                        <span className="truncate max-w-[60px] sm:max-w-[70px] md:max-w-[80px]" title={p.form}>
+                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.form}>
                           {p.form}
                         </span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 md:px-3 py-0.5 sm:py-1 min-h-[24px] sm:min-h-[26px] md:min-h-[28px]">
-                        <span className="font-semibold mr-1 whitespace-nowrap">
+                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="font-semibold mr-1.5 whitespace-nowrap">
                           {packLabel}
                         </span> 
-                        <span className="truncate max-w-[60px] sm:max-w-[70px] md:max-w-[80px]" title={p.pack_size}>
+                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.pack_size}>
                           {p.pack_size}
                         </span>
                       </span>
                     </div>
 
-                    {/* ACTION BUTTONS - Two buttons layout (Details & Enquire) */}
-                    <div className="mt-auto pt-1 sm:pt-2 grid grid-cols-2 gap-1.5 sm:gap-2 md:gap-3 min-h-[36px] sm:min-h-[40px] md:min-h-[44px]">
+                    {/* ACTION BUTTONS - Details and Enquire buttons in a row */}
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
                       {/* Details Button */}
                       <Link
                         href={`/product/${p.slug}`}
-                        className="flex items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl px-1 sm:px-2 md:px-3 text-[10px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90 min-h-[32px] sm:min-h-[36px]"
+                        className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90"
                         style={{ backgroundColor: BRAND }}
                       >
-                        <span className="truncate whitespace-nowrap px-1">
+                        <span className="truncate whitespace-nowrap">
                           {detailsText}
                         </span>
                       </Link>
@@ -716,13 +695,18 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       {/* Enquire Button */}
                       <Link
                         href={`/contact?product=${encodeURIComponent(p.slug)}`}
-                        className="flex items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl px-1 sm:px-2 md:px-3 text-[10px] sm:text-xs md:text-sm font-semibold border bg-white transition hover:bg-slate-50 min-h-[32px] sm:min-h-[36px] text-center"
+                        className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold border bg-white transition hover:bg-slate-50"
                         style={{ borderColor: BRAND, color: BRAND }}
                       >
-                        <span className="truncate whitespace-nowrap px-1">
+                        <span className="truncate whitespace-nowrap">
                           {enquireText}
                         </span>
                       </Link>
+                    </div>
+
+                    {/* Add to Cart Button - Below the other two buttons */}
+                    <div className="mt-1">
+                      <AddToCartButton product={p} themeColor={BRAND} />
                     </div>
                   </div>
                 </article>

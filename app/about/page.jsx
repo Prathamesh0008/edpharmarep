@@ -188,18 +188,23 @@ export default function AboutPage() {
               <p className="text-lg leading-relaxed">
                 {hero.description1}
               </p>
-              <p className="text-lg leading-relaxed">
+              <p className="text-lg leading-relaxed"> 
                 {hero.description2}
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="group relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-gradient-to-r from-sky-600 to-cyan-500 rounded-full hover:from-sky-700 hover:to-cyan-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden">
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
-                <FileText className="w-4 h-4 mr-2" />
-                {hero.downloadCatalogue || "Download catalogue"}
-                <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
+              
+<Link
+  href="/ED.pdf"
+  download
+  className="group relative inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-white bg-gradient-to-r from-sky-600 to-cyan-500 rounded-full hover:from-sky-700 hover:to-cyan-600 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 overflow-hidden"
+>
+  <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div>
+  <FileText className="w-4 h-4 mr-2" />
+  {hero.downloadCatalogue || "Download catalogue"}
+  <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+</Link>
               
               <Link
                 href="/contact"
