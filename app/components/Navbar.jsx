@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-import { Menu, X, Download, LogOut, ChevronRight, User, ChevronDown } from "lucide-react";
+import { Menu, X, Download, LogOut, ChevronRight, User, ChevronDown, Globe } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useCart } from "./CartContext";
 import LoginPopup from "./LoginPopup";
@@ -170,7 +170,8 @@ export default function Navbar() {
     products: "Products", 
     about: "About", 
     terms: "Terms", 
-    contact: "Contact" 
+    contact: "Contact",
+    blog: "Blog"
   };
 
   return (
@@ -221,7 +222,7 @@ export default function Navbar() {
                 {t?.en?.download || "Download"}
               </a>
 
-              {/* LANGUAGE SELECTOR */}
+              {/* LANGUAGE SELECTOR - DESKTOP */}
               <div ref={languageRef} className="relative">
                 <button
                   onClick={() => setLanguageOpen(!languageOpen)}
@@ -331,48 +332,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* ================= MOBILE ================= */}
+          {/* ================= MOBILE MENU BUTTONS ================= */}
           <div className="flex items-center gap-1 sm:gap-2 md:hidden">
-            {/* LANGUAGE */}
-            <div ref={mobileLanguageRef} className="relative">
-              <button
-                onClick={() => setMobileLanguageOpen(!mobileLanguageOpen)}
-                className="flex items-center gap-1 p-1.5 sm:p-2 text-blue-700 hover:text-blue-800 hover:bg-blue-50 rounded-full transition-colors cursor-pointer"
-              >
-                <img
-                  src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
-                  alt={currentLanguageInfo.label}
-                  className="w-4 h-3 sm:w-5 sm:h-4 rounded-sm"
-                />
-                <ChevronDown size={14} className="sm:size-4" />
-              </button>
-
-              {mobileLanguageOpen && (
-                <div className="absolute right-0 mt-2 w-48 sm:w-56 bg-white rounded-xl shadow-xl border z-[1002] max-h-[350px] overflow-y-auto">
-                  <div className="p-2 sm:p-3 border-b">
-                    <p className="font-semibold text-xs sm:text-sm">Select Language</p>
-                  </div>
-                  <div className="p-2">
-                    {LANGUAGES.map((lang) => (
-                      <button
-                        key={lang.code}
-                        onClick={() => handleLanguageChange(lang.code)}
-                        className={`w-full flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-2 text-xs sm:text-sm rounded-lg 
-                          ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
-                      >
-                        <img
-                          src={`https://flagcdn.com/w20/${lang.flag}.png`}
-                          alt={lang.label}
-                          className="w-4 h-3 sm:w-5 sm:h-4 rounded-sm"
-                        />
-                        <span className="truncate text-xs">{lang.label}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-
             {/* CART */}
             <button
               onClick={() => router.push("/cart")}
@@ -441,24 +402,75 @@ export default function Navbar() {
                 {t?.en?.orders || "My Orders"}
               </MobileLink>
 
-              <div className="pt-4 border-t">
-                <p className="text-xs sm:text-sm font-semibold mb-3">Language</p>
-                <div className="grid grid-cols-1 gap-1 max-h-60 overflow-y-auto">
-                  {LANGUAGES.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => handleLanguageChange(lang.code)}
-                      className={`flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-2 text-xs sm:text-sm rounded-lg 
-                        ${language === lang.code ? 'bg-blue-50 text-blue-700' : 'hover:bg-gray-50'} transition-colors cursor-pointer`}
-                    >
-                      <img
-                        src={`https://flagcdn.com/w20/${lang.flag}.png`}
-                        alt={lang.label}
-                        className="w-4 h-3 sm:w-5 sm:h-4 rounded-sm"
+              {/* ================= LANGUAGE SELECTOR - MOBILE DROPDOWN ================= */}
+              <div className="pt-4 border-t mt-2">
+                <div 
+                  ref={mobileLanguageRef} 
+                  className="relative w-full"
+                >
+                  <button
+                    onClick={() => setMobileLanguageOpen(!mobileLanguageOpen)}
+                    className="w-full flex items-center justify-between px-3 sm:px-4 py-2.5 sm:py-3 bg-gray-50 hover:bg-gray-100 rounded-xl transition-colors cursor-pointer"
+                  >
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <Globe size={18} className="sm:size-5 text-blue-600" />
+                      <span className="text-sm sm:text-base font-semibold text-gray-700">
+                        {t?.en?.language || "Language"}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1.5">
+                        <img
+                          src={`https://flagcdn.com/w20/${currentLanguageInfo.flag}.png`}
+                          alt={currentLanguageInfo.label}
+                          className="w-4 h-3 sm:w-5 sm:h-4 rounded-sm"
+                        />
+                        <span className="text-xs sm:text-sm font-medium text-gray-600">
+                          {language.toUpperCase()}
+                        </span>
+                      </div>
+                      <ChevronDown 
+                        size={16} 
+                        className={`sm:size-5 transition-transform duration-200 ${mobileLanguageOpen ? 'rotate-180' : ''}`}
                       />
-                      <span className="truncate text-xs">{lang.label}</span>
-                    </button>
-                  ))}
+                    </div>
+                  </button>
+
+                  {/* Mobile Language Dropdown Menu */}
+                  {mobileLanguageOpen && (
+                    <div className="absolute left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border z-[1002] max-h-[300px] overflow-y-auto animate-fade-in">
+                      <div className="sticky top-0 bg-white p-2 sm:p-3 border-b">
+                        <p className="font-semibold text-xs sm:text-sm text-gray-700">
+                          Select your language
+                        </p>
+                      </div>
+                      <div className="p-2">
+                        {LANGUAGES.map((lang) => (
+                          <button
+                            key={lang.code}
+                            onClick={() => handleLanguageChange(lang.code)}
+                            className={`w-full flex items-center gap-2 sm:gap-3 px-2 sm:px-3 py-2.5 sm:py-3 text-xs sm:text-sm rounded-lg 
+                              ${language === lang.code 
+                                ? 'bg-blue-50 text-blue-700 border-l-4 border-blue-600' 
+                                : 'hover:bg-gray-50'
+                              } transition-all duration-200 cursor-pointer`}
+                          >
+                            <img
+                              src={`https://flagcdn.com/w20/${lang.flag}.png`}
+                              alt={lang.label}
+                              className="w-5 h-4 sm:w-6 sm:h-5 rounded-sm object-cover"
+                            />
+                            <span className="flex-1 text-left font-medium">{lang.label}</span>
+                            {language === lang.code && (
+                              <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                              </svg>
+                            )}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -502,11 +514,8 @@ export default function Navbar() {
               )}
             </div>
 
-            <div className="p-4 sm:p-5 border-t bg-gray-50">
-              <p className="text-xs text-gray-500 text-center">
-                © {new Date().getFullYear()} ED Pharma
-              </p>
-            </div>
+            
+            
           </div>
         </>
       )}

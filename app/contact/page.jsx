@@ -18,7 +18,7 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [sentTo, setSentTo] = useState(""); // ✅ to show email after form resets
+  const [sentTo, setSentTo] = useState("");
   const [errors, setErrors] = useState({});
   const [shake, setShake] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -30,21 +30,11 @@ export default function ContactPage() {
       subtitle: "Get in touch with us for any inquiries or support",
     },
     contactInfo: [
-      // {
-      //   icon: "📞",
-      //   title: "+91 9892899094",
-      //   description: "Call us for any questions or support",
-      // },
       {
         icon: "✉️",
         title: "sales@edpharma.co",
         description: "Email us for business inquiries",
       },
-      // {
-      //   icon: "📍",
-      //   title: "London Eye London",
-      //   description: "Our main office location",
-      // },
     ],
     form: {
       labels: {
@@ -91,12 +81,10 @@ export default function ContactPage() {
   const validation = contactTranslations?.validation || {};
 
   const handleChange = (e) => {
-    // ✅ if user starts typing again, hide success
     if (submitted) setSubmitted(false);
 
     const { name, value } = e.target;
     
-    // For phone field, only allow digits and limit to 10 characters
     if (name === "phone") {
       const digitsOnly = value.replace(/\D/g, "");
       setForm({ ...form, [name]: digitsOnly.slice(0, 10) });
@@ -120,11 +108,9 @@ export default function ContactPage() {
       newErrors.email = validation.email?.required || "Email is required";
     } else {
       const email = form.email.trim().toLowerCase();
-      // Basic email format validation
       if (!/\S+@\S+\.\S+/.test(email)) {
         newErrors.email = validation.email?.invalid || "Email is invalid";
       }
-      // Gmail domain validation
       else if (!email.endsWith("@gmail.com")) {
         newErrors.email = validation.email?.gmailRequired || "Only Gmail addresses (@gmail.com) are accepted";
       }
@@ -169,7 +155,6 @@ export default function ContactPage() {
     setSubmitted(false);
 
     try {
-      // ✅ env check
       const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
       const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
       const TEMPLATE_ADMIN = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
@@ -212,18 +197,14 @@ export default function ContactPage() {
         date: submittedAt,
       };
 
-      // ✅ send admin + user
-      const [adminRes, userRes] = await Promise.all([
+      await Promise.all([
         emailjs.send(SERVICE_ID, TEMPLATE_ADMIN, payloadAdmin, PUBLIC_KEY),
         emailjs.send(SERVICE_ID, TEMPLATE_USER, payloadUser, PUBLIC_KEY),
       ]);
 
-      // If EmailJS returns an error, it will throw (catch below)
-
       setSentTo(form.email.trim());
       setSubmitted(true);
 
-      // Reset form
       setForm({
         email: "",
         phone: "",
@@ -246,53 +227,54 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 text-[#0c2d3e]">
+    <main className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50 text-[#0c2d3e] overflow-x-hidden">
       {/* <Navbar/> */}
 
-      {/* HERO */}
-      <section className="text-center px-4 py-20 bg-gradient-to-r from-blue-900 to-cyan-600">
+      {/* HERO - Responsive padding and text sizes */}
+      <section className="text-center px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-gradient-to-r from-blue-900 to-cyan-600">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 sm:mb-3 md:mb-4">
             {hero.title || "Contact Us"}
           </h1>
-          <p className="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 max-w-2xl mx-auto px-2 sm:px-4">
             {hero.subtitle || "Get in touch with us for any inquiries or support"}
           </p>
-          <div className="mt-8 w-20 h-1 bg-white/40 mx-auto rounded-full"></div>
+          <div className="mt-6 sm:mt-8 w-16 sm:w-20 h-1 bg-white/40 mx-auto rounded-full"></div>
         </div>
       </section>
 
-      {/* 2-Column Layout */}
-      <section className="max-w-6xl mx-auto px-4 -mt-10 mb-20">
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-blue-100">
-          <div className="grid md:grid-cols-2 gap-8 p-8">
+      {/* Main Content - Responsive margins and padding */}
+      <section className="max-w-6xl mx-auto px-3 sm:px-4 md:px-6 -mt-6 sm:-mt-8 md:-mt-10 mb-12 sm:mb-16 md:mb-20">
+        <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl overflow-hidden border border-blue-100">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 md:gap-8 p-4 sm:p-6 md:p-8">
+            
             {/* LEFT SIDE - INFO CARDS */}
-            <div>
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-blue-900 mb-2">
+            <div className="order-2 md:order-1">
+              <div className="mb-6 sm:mb-8">
+                <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1 sm:mb-2">
                   Get in Touch
                 </h2>
-                <p className="text-blue-700">
+                <p className="text-sm sm:text-base text-blue-700">
                   We're here to help and answer any questions you might have.
                 </p>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {contactInfo.length > 0 ? (
                   contactInfo.map((item, i) => (
                     <div
                       key={i}
-                      className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md"
+                      className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md"
                     >
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
+                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
                           {item.icon || "📞"}
                         </div>
-                        <div>
-                          <h4 className="font-bold text-blue-900 text-lg">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-blue-900 text-sm sm:text-base md:text-lg break-words">
                             {item.title || "Contact Info"}
                           </h4>
-                          <p className="text-blue-600 mt-1">
+                          <p className="text-blue-600 mt-1 text-xs sm:text-sm break-words">
                             {item.description || "Contact description"}
                           </p>
                         </div>
@@ -301,114 +283,86 @@ export default function ContactPage() {
                   ))
                 ) : (
                   <>
-                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
+                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
+                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
                           📞
                         </div>
-                        <div>
-                          <h4 className="font-bold text-blue-900 text-lg">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-blue-900 text-sm sm:text-base md:text-lg break-words">
                             +91 9892899094
                           </h4>
-                          <p className="text-blue-600 mt-1">
+                          <p className="text-blue-600 mt-1 text-xs sm:text-sm break-words">
                             Call us for any questions or support
                           </p>
                         </div>
                       </div>
                     </div>
-                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
+                    <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
+                      <div className="flex items-start gap-3 sm:gap-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-lg sm:text-xl flex-shrink-0">
                           ✉️
                         </div>
-                        <div>
-                          <h4 className="font-bold text-blue-900 text-lg">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="font-bold text-blue-900 text-sm sm:text-base md:text-lg break-words">
                             sales@edpharma.co
                           </h4>
-                          <p className="text-blue-600 mt-1">
+                          <p className="text-blue-600 mt-1 text-xs sm:text-sm break-words">
                             Email us for business inquiries
                           </p>
                         </div>
                       </div>
                     </div>
-                    {/* <div className="group bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-100 hover:border-blue-300 transition-all duration-300 hover:shadow-md">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white text-xl">
-                          📍
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-blue-900 text-lg">
-                            London Eye London
-                          </h4>
-                          <p className="text-blue-600 mt-1">
-                            Our main office location
-                          </p>
-                        </div>
-                      </div>
-                    </div> */}
                   </>
                 )}
               </div>
-
-              {/* Map/Additional Info */}
-              {/* <div className="mt-10 pt-8 border-t border-blue-100">
-                <h3 className="text-lg font-semibold text-blue-900 mb-4">
-                  Working Hours
-                </h3>
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <p className="text-blue-700">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-blue-700 mt-1">Saturday: 10:00 AM - 4:00 PM</p>
-                  <p className="text-blue-700 mt-1">Sunday: Closed</p>
-                </div>
-              </div> */}
             </div>
 
             {/* RIGHT SIDE - CONTACT FORM */}
-            <div className="bg-gradient-to-b from-white to-blue-50 p-6 rounded-xl border border-blue-100">
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-blue-900 mb-2">
+            <div className="bg-gradient-to-b from-white to-blue-50 p-4 sm:p-5 md:p-6 rounded-lg sm:rounded-xl border border-blue-100 order-1 md:order-2">
+              <div className="mb-4 sm:mb-6 md:mb-8">
+                <h2 className="text-xl sm:text-2xl font-bold text-blue-900 mb-1 sm:mb-2">
                   Send us a Message
                 </h2>
-                <p className="text-blue-700">
+                <p className="text-sm sm:text-base text-blue-700">
                   Fill out the form below and we'll get back to you shortly.
                 </p>
               </div>
 
               <form
                 onSubmit={handleSubmit}
-                className={`space-y-6 ${shake ? "animate-shake" : ""}`}
+                className={`space-y-4 sm:space-y-5 md:space-y-6 ${shake ? "animate-shake" : ""}`}
                 noValidate
               >
-                <div className="grid md:grid-cols-2 gap-4">
+                {/* Responsive grid - stack on mobile, side by side on tablet+ */}
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-4">
                   <div>
-                    <label className="form-label">
+                    <label className="form-label text-xs sm:text-sm">
                       {formLabels.email || "Email *"}
-                      <span className="text-xs text-blue-500 ml-2"></span>
                     </label>
                     <input
                       type="email"
                       name="email"
                       value={form.email}
                       onChange={handleChange}
-                      className={`form-input ${errors.email ? "input-error" : ""}`}
+                      className={`form-input text-sm sm:text-base p-2.5 sm:p-3 md:p-4 ${errors.email ? "input-error" : ""}`}
                       aria-invalid={errors.email ? "true" : "false"}
                       placeholder={formPlaceholders.email || "Enter your email address (must be @gmail.com)"}
                       disabled={isLoading}
                     />
-                    {errors.email && <p className="error-text">{errors.email}</p>}
+                    {errors.email && <p className="error-text text-xs sm:text-sm">{errors.email}</p>}
                   </div>
 
                   <div>
-                    <label className="form-label">
+                    <label className="form-label text-xs sm:text-sm">
                       {formLabels.phone || "Phone *"}
-                      <span className="text-xs text-blue-500 ml-2"></span>
                     </label>
                     <input
                       type="tel"
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
-                      className={`form-input ${errors.phone ? "input-error" : ""}`}
+                      className={`form-input text-sm sm:text-base p-2.5 sm:p-3 md:p-4 ${errors.phone ? "input-error" : ""}`}
                       aria-invalid={errors.phone ? "true" : "false"}
                       placeholder={formPlaceholders.phone || "Enter 10-digit phone number"}
                       disabled={isLoading}
@@ -416,7 +370,7 @@ export default function ContactPage() {
                       inputMode="numeric"
                       pattern="[0-9]*"
                     />
-                    {errors.phone && <p className="error-text">{errors.phone}</p>}
+                    {errors.phone && <p className="error-text text-xs sm:text-sm">{errors.phone}</p>}
                     {form.phone && form.phone.length > 0 && form.phone.length < 10 && (
                       <p className="text-xs text-amber-600 mt-1">
                         {10 - form.phone.length} more digit{10 - form.phone.length !== 1 ? 's' : ''} required
@@ -426,47 +380,47 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label className="form-label">{formLabels.name || "Name *"}</label>
+                  <label className="form-label text-xs sm:text-sm">{formLabels.name || "Name *"}</label>
                   <input
                     type="text"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className={`form-input ${errors.name ? "input-error" : ""}`}
+                    className={`form-input text-sm sm:text-base p-2.5 sm:p-3 md:p-4 ${errors.name ? "input-error" : ""}`}
                     aria-invalid={errors.name ? "true" : "false"}
                     placeholder={formPlaceholders.name || "Enter your full name"}
                     disabled={isLoading}
                   />
-                  {errors.name && <p className="error-text">{errors.name}</p>}
+                  {errors.name && <p className="error-text text-xs sm:text-sm">{errors.name}</p>}
                 </div>
 
                 <div>
-                  <label className="form-label">
+                  <label className="form-label text-xs sm:text-sm">
                     {formLabels.message || "Message *"}
                   </label>
                   <textarea
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    className={`form-input h-32 resize-none ${errors.message ? "input-error" : ""}`}
+                    className={`form-input h-24 sm:h-28 md:h-32 resize-none text-sm sm:text-base p-2.5 sm:p-3 md:p-4 ${errors.message ? "input-error" : ""}`}
                     aria-invalid={errors.message ? "true" : "false"}
                     placeholder={formPlaceholders.message || "Type your message here..."}
                     disabled={isLoading}
-                    rows={5}
+                    rows={4}
                   />
-                  {errors.message && <p className="error-text">{errors.message}</p>}
+                  {errors.message && <p className="error-text text-xs sm:text-sm">{errors.message}</p>}
                 </div>
 
                 {errors.submit && (
-                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                    <p className="error-text text-center">{errors.submit}</p>
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-3 sm:p-4">
+                    <p className="error-text text-center text-xs sm:text-sm">{errors.submit}</p>
                   </div>
                 )}
 
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className={`btn-primary group w-full ${
+                  className={`btn-primary group w-full text-sm sm:text-base p-3 sm:p-4 ${
                     isLoading ? "opacity-70 cursor-not-allowed" : ""
                   }`}
                 >
@@ -474,7 +428,7 @@ export default function ContactPage() {
                     {isLoading ? (
                       <>
                         <svg
-                          className="animate-spin h-5 w-5 text-white"
+                          className="animate-spin h-4 w-4 sm:h-5 sm:w-5 text-white"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
@@ -499,7 +453,7 @@ export default function ContactPage() {
                       <>
                         <span>{formButtons.submitButton || "Submit Message"}</span>
                         <svg
-                          className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                          className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -518,11 +472,11 @@ export default function ContactPage() {
                 </button>
 
                 {submitted && (
-                  <div className="mt-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg animate-fade-in">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
+                  <div className="mt-4 p-3 sm:p-4 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-lg animate-fade-in">
+                    <div className="flex items-center gap-2 sm:gap-3">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
                         <svg
-                          className="w-6 h-6 text-green-600"
+                          className="w-4 h-4 sm:w-5 sm:h-5 text-green-600"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
@@ -536,12 +490,12 @@ export default function ContactPage() {
                           ></path>
                         </svg>
                       </div>
-                      <div>
-                        <p className="text-green-800 font-medium">
+                      <div className="flex-1 min-w-0">
+                        <p className="text-green-800 font-medium text-xs sm:text-sm break-words">
                           {formButtons.successMessage ||
                             "✅ Message sent successfully! Check your email for confirmation."}
                         </p>
-                        <p className="text-green-700 text-sm mt-1">
+                        <p className="text-green-700 text-xs mt-1 break-words">
                           We've sent a confirmation email to{" "}
                           <span className="font-semibold">{sentTo}</span>
                         </p>
@@ -557,67 +511,85 @@ export default function ContactPage() {
 
       {/* <Footer/> */}
 
-      {/* INLINE STYLES */}
+      {/* RESPONSIVE STYLES */}
       <style jsx>{`
         .form-label {
           display: block;
-          font-size: 14px;
+          font-size: 0.875rem;
           font-weight: 500;
-          margin-bottom: 6px;
+          margin-bottom: 0.375rem;
           color: #1e3a8a;
         }
+        
+        @media (max-width: 640px) {
+          .form-label {
+            font-size: 0.75rem;
+            margin-bottom: 0.25rem;
+          }
+        }
+        
         .form-input {
           width: 100%;
-          padding: 14px 16px;
-          border-radius: 10px;
+          border-radius: 0.625rem;
           border: 2px solid #dbeafe;
           background: white;
           color: #1e3a8a;
-          font-size: 15px;
           outline: none;
           transition: all 0.3s ease;
         }
+        
         .form-input:focus {
           border-color: #3b82f6;
           box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
           background: #f8fafc;
         }
+        
         .form-input:disabled {
           background-color: #f1f5f9;
           cursor: not-allowed;
           border-color: #cbd5e1;
         }
+        
         .form-input::placeholder {
           color: #94a3b8;
         }
+        
         .input-error {
           border-color: #ef4444 !important;
           background: #fef2f2;
         }
+        
         .input-error:focus {
           border-color: #dc2626 !important;
           box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
         }
+        
         .error-text {
           color: #dc2626;
-          font-size: 13px;
-          margin-top: 4px;
+          font-size: 0.75rem;
+          margin-top: 0.25rem;
           font-weight: 500;
         }
+        
+        @media (min-width: 640px) {
+          .error-text {
+            font-size: 0.875rem;
+          }
+        }
+        
         .btn-primary {
           background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
-          padding: 16px 24px;
-          border-radius: 10px;
+          border-radius: 0.625rem;
           color: white;
           font-weight: 600;
           cursor: pointer;
           transition: all 0.3s ease;
           border: none;
           outline: none;
-          font-size: 16px;
           position: relative;
           overflow: hidden;
         }
+        
         .btn-primary:before {
           content: "";
           position: absolute;
@@ -633,19 +605,23 @@ export default function ContactPage() {
           );
           transition: 0.5s;
         }
+        
         .btn-primary:hover:not(:disabled):before {
           left: 100%;
         }
+        
         .btn-primary:hover:not(:disabled) {
           transform: translateY(-2px);
           box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
         }
+        
         .btn-primary:disabled {
           opacity: 0.7;
           cursor: not-allowed;
           transform: none;
           box-shadow: none;
         }
+        
         @keyframes shake {
           0%,
           100% {
@@ -653,28 +629,44 @@ export default function ContactPage() {
           }
           20%,
           60% {
-            transform: translateX(-6px);
+            transform: translateX(-4px);
           }
           40%,
           80% {
-            transform: translateX(6px);
+            transform: translateX(4px);
           }
         }
+        
         @keyframes fade-in {
           from {
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-8px);
           }
           to {
             opacity: 1;
             transform: translateY(0);
           }
         }
+        
         .animate-shake {
           animation: shake 0.3s;
         }
+        
         .animate-fade-in {
           animation: fade-in 0.5s ease-out;
+        }
+        
+        /* Prevent horizontal scroll on mobile */
+        @media (max-width: 640px) {
+          main {
+            overflow-x: hidden;
+          }
+          
+          .break-words {
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            word-break: break-word;
+          }
         }
       `}</style>
     </main>
