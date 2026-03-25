@@ -61,6 +61,41 @@ const BlogPage = () => {
       image: "/4.1.jpg",
       imageAlt: "Kamagra tablets and alcoholic drinks - safety concept"
     },
+    {
+      id: 5,
+      title: " Top 7 ED Medicines Pharmacies Should Stock in 2026",
+      date: "March 25, 2026",
+      comments: 15,
+      excerpt:
+        "Discover the top 7 ED medicines pharmacies should stock in 2026, including Sildenafil, Tadalafil, and Avanafil. Learn trends, benefits, and best-selling erectile dysfunction drugs to boost sales and meet rising demand.",
+      slug: "top-7-ed-medicines-2026",
+      image: "/5.1.jpg",
+      imageAlt: "Top 7 Ed Medicines"
+    },
+    {
+      id: 6,
+      title: " Buy Kamagra & Sildenafil Citrate in Bulk Europe ",
+      date: "March 25, 2026",
+      comments: 19,
+      excerpt:
+        "Purchase Kamagra & Sildenafil Citrate tablets in bulk across Europe from trusted suppliers. Ensure quality, compliance, and fast delivery with ED Pharma.",
+      slug: "kamagra-sildenafil-bulk-europe",
+      image: "/6.1.jpg",
+      imageAlt: "Buy Kamagra & Sildenafil Citrate in Bulk"
+    },
+    {
+      id: 7,
+      title: " Top Benefits of Oral Jelly ED Medications",
+      date: "March 25, 2026",
+      comments: 28,
+      excerpt:
+        "Discover the top benefits of oral jelly ED medications including fast action, easy use, and better results. Buy ED medications online in Europe from trusted suppliers like ED Pharma.",
+      slug: "benefits-oraljelly",
+      image: "/7.1.jpg",
+      imageAlt: " Benefits of Oral Jelly ED Medications"
+    },  
+
+
   ];
 
   // Search state
