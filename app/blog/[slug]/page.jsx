@@ -1188,9 +1188,9 @@ Kamagra tablets
     <!-- IMAGE_PLACEHOLDER_1 -->
     <p>What’s even more surprising is how widespread the condition really is. Studies indicate that around 52% of men between 40 and 70 experience some degree of ED, and the numbers are increasing due to lifestyle changes, stress, diabetes, and cardiovascular issues.</p>
     
-    <p>This surge in demand directly impacts pharmacies. Think about it — if millions of men are silently looking for solutions, pharmacies become the first accessible point of care. That’s why stocking the right <a href="/" style="color:#2563eb;text-decoration:underline;">
+    <p>This surge in demand directly impacts pharmacies. Think about it  if millions of men are silently looking for solutions, pharmacies become the first accessible point of care. That’s why stocking the right <a href="/" style="color:#2563eb;text-decoration:underline;">
 ED medications in 2026 
-</a> is not just about business — it’s about meeting a growing healthcare need.</p>
+</a> is not just about business  it’s about meeting a growing healthcare need.</p>
 
     <h2 id="why-pharmacies-must-stay-updated" class="text-2xl font-bold mt-8 mb-4">Why Pharmacies Must Stay Updated</h2>
     
@@ -1222,8 +1222,8 @@ ED medications in 2026
     <p>If ED medications were a movie industry, <a href="/" style="color:#2563eb;text-decoration:underline;">
 Sildenafil
 </a> would be the superstar. Known widely under the brand Viagra, it remains one of the most prescribed drugs worldwide.</p>
-    <p>Why is it still dominating in 2026? Simple — it works, it’s affordable, and it’s trusted. With generic versions available, prices have dropped significantly, making it accessible to a larger population.</p>
-    <p>Pharmacies should prioritize stocking multiple strengths and generic options because demand is consistently high. For many patients, sildenafil is the first medication they try — and often, it’s the one they stick with.</p>
+    <p>Why is it still dominating in 2026? Simple  it works, it’s affordable, and it’s trusted. With generic versions available, prices have dropped significantly, making it accessible to a larger population.</p>
+    <p>Pharmacies should prioritize stocking multiple strengths and generic options because demand is consistently high. For many patients, sildenafil is the first medication they try   and often, it’s the one they stick with.</p>
 
 
 
@@ -2204,36 +2204,7 @@ export default async function BlogPost({ params }) {
       }}
     />
     
-    {/* Breadcrumb Schema */}
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://www.edpharma.co/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Blog",
-              "item": "https://www.edpharma.co/blog/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": post.title,
-              "item": `https://www.edpharma.co/blog/${slug}`
-            }
-          ]
-        })
-      }}
-    />
+    
      {faqSchema && (
       <script
         type="application/ld+json"
