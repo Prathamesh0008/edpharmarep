@@ -19,7 +19,9 @@ export default function LayoutController({ children }) {
       {!isAdmin && <CartDrawer />}
       {!isAdmin && <Toast />}
 
-      <main>{children}</main>
+      <main className="pt-[80px] min-h-screen flex flex-col">
+        <div className="flex-grow">{children}</div>
+      </main>
 
       {!isAdmin && <Footer />}
     </>

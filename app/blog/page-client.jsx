@@ -1,7 +1,7 @@
 // app/blog/page.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { 
@@ -11,7 +11,8 @@ import {
   ChevronRight,
   BookOpen,
   X,
-  ImageIcon
+  ImageIcon,
+  Loader2
 } from "lucide-react";
 
 const BlogPage = () => {
@@ -94,14 +95,14 @@ const BlogPage = () => {
       image: "/7.1.jpg",
       imageAlt: " Benefits of Oral Jelly ED Medications"
     },  
-
-
   ];
 
   // Search state
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredPosts, setFilteredPosts] = useState(allBlogPosts);
   const [imageErrors, setImageErrors] = useState({});
+  const [imageDimensions, setImageDimensions] = useState({});
+  const [imageLoading, setImageLoading] = useState({});
 
   // Handle search
   const handleSearch = (e) => {
@@ -151,12 +152,45 @@ const BlogPage = () => {
   // Handle image error
   const handleImageError = (postId) => {
     setImageErrors(prev => ({ ...prev, [postId]: true }));
+    setImageLoading(prev => ({ ...prev, [postId]: false }));
   };
+
+  // Handle image load start
+  const handleImageLoadStart = (postId) => {
+    setImageLoading(prev => ({ ...prev, [postId]: true }));
+  };
+
+  // Handle image load to get dimensions
+  const handleImageLoad = (postId, event) => {
+    const img = event.target;
+    setImageDimensions(prev => ({
+      ...prev,
+      [postId]: {
+        width: img.naturalWidth,
+        height: img.naturalHeight,
+        aspectRatio: img.naturalWidth / img.naturalHeight
+      }
+    }));
+    setImageLoading(prev => ({ ...prev, [postId]: false }));
+  };
+
+  // Loading Spinner Component
+  const LoadingSpinner = () => (
+    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-sky-50 to-cyan-50">
+      <div className="flex flex-col items-center gap-3">
+        <Loader2 className="w-10 h-10 text-sky-500 animate-spin" />
+        <span className="text-sm text-sky-600 font-medium">Loading image...</span>
+      </div>
+    </div>
+  );
 
   // Placeholder component for missing images
   const ImagePlaceholder = () => (
-    <div className="w-full h-full bg-gradient-to-br from-sky-100 to-cyan-100 flex items-center justify-center">
-      <ImageIcon className="w-16 h-16 text-sky-400/50" />
+    <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-sky-100 to-cyan-100">
+      <div className="flex flex-col items-center gap-2">
+        <ImageIcon className="w-12 h-12 text-sky-400/70" />
+        <span className="text-sm text-sky-600">Image not available</span>
+      </div>
     </div>
   );
 
@@ -232,79 +266,110 @@ const BlogPage = () => {
           {searchQuery && ` for "${searchQuery}"`}
         </div>
 
-        {/* Blog Posts Grid - With LARGER images */}
+        {/* Blog Posts Grid - With AUTO-ADJUSTING image containers and loading states */}
         {filteredPosts.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {filteredPosts.map((post) => (
-              <article
-                key={post.id}
-                className="group relative"
-              >
-                {/* Background Glow Effect - Matching About page cards */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
-                
-                {/* Card Content - Adjusted padding for larger images */}
-                <div className="relative bg-gradient-to-b from-white to-blue-50 rounded-2xl p-6 border border-sky-100 hover:border-sky-200 transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col">
+            {filteredPosts.map((post) => {
+              const dimensions = imageDimensions[post.id];
+              const isLoading = imageLoading[post.id] === true;
+              const hasError = imageErrors[post.id];
+              
+              const containerStyle = dimensions ? {
+                paddingBottom: `${(dimensions.height / dimensions.width) * 100}%`
+              } : {
+                paddingBottom: '56.25%' // Default 16:9 aspect ratio while loading
+              };
+
+              return (
+                <article
+                  key={post.id}
+                  className="group relative"
+                >
+                  {/* Background Glow Effect - Matching About page cards */}
+                  <div className="absolute -inset-1 bg-gradient-to-r from-sky-500 to-cyan-500 rounded-3xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-500"></div>
                   
-                  {/* Image Section - SIGNIFICANTLY INCREASED SIZE for infographics */}
-                  <div className="relative w-full h-80 mb-5 overflow-hidden rounded-xl bg-sky-50 shadow-md">
-                    <div className="absolute inset-0 bg-gradient-to-r from-sky-500 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
+                  {/* Card Content - Adjusted padding for larger images */}
+                  <div className="relative bg-gradient-to-b from-white to-blue-50 rounded-2xl p-3 border border-sky-100 hover:border-sky-200 transition-all duration-500 group-hover:-translate-y-2 h-full flex flex-col">
                     
-                    {post.image && !imageErrors[post.id] ? (
-                      <Image
-                        src={post.image}
-                        alt={post.imageAlt || "Blog article image"}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-contain p-2 group-hover:scale-105 transition-transform duration-700"
-                        onError={() => handleImageError(post.id)}
-                        priority={post.id <= 2}
-                      />
-                    ) : (
-                      <ImagePlaceholder />
-                    )}
-                  </div>
+                    {/* Image Section - AUTO-ADJUSTING container based on image dimensions */}
+                    <div className="relative w-full mb-5 overflow-hidden rounded-xl bg-sky-50 shadow-md">
+                      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-500 z-10"></div>
+                      
+                      {/* Responsive container that maintains image aspect ratio */}
+                      <div style={containerStyle} className="relative w-full">
+                        {/* Loading Spinner */}
+                        {isLoading && !hasError && <LoadingSpinner />}
+                        
+                        {/* Image or Placeholder */}
+                        {post.image && !hasError ? (
+                          <>
+                            <Image
+                              src={post.image}
+                              alt={post.imageAlt || "Blog article image"}
+                              fill
+                              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                              className={`object-contain p-2 group-hover:scale-105 transition-all duration-700 ${
+                                isLoading ? 'opacity-0' : 'opacity-100'
+                              }`}
+                              onError={() => handleImageError(post.id)}
+                              onLoad={(e) => handleImageLoad(post.id, e)}
+                              onLoadStart={() => handleImageLoadStart(post.id)}
+                              priority={post.id <= 2}
+                            />
+                            {/* Skeleton loader while image is loading */}
+                            {isLoading && (
+                              <div className="absolute inset-0 bg-gradient-to-r from-sky-100 via-sky-50 to-sky-100 animate-pulse rounded-lg">
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <ImagePlaceholder />
+                        )}
+                      </div>
+                    </div>
 
-                  {/* Title */}
-                  <h2 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2">
-                    <Link href={`/blog/${post.slug}`} className="hover:text-sky-600 transition-colors">
-                      {post.title}
+                    {/* Title */}
+                    <h2 className="text-xl font-bold text-slate-900 mb-3 line-clamp-2">
+                      <Link href={`/blog/${post.slug}`} className="hover:text-sky-600 transition-colors">
+                        {post.title}
+                      </Link>
+                    </h2>
+
+                    {/* Meta Info */}
+                    <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-4 pb-4 border-b border-dashed border-sky-100">
+                      <span className="flex items-center gap-1.5">
+                        <Calendar className="w-4 h-4" />
+                        {post.date}
+                      </span>
+                      <span className="flex items-center gap-1.5">
+                        <MessageCircle className="w-4 h-4" />
+                        {post.comments} comments
+                      </span>
+                    </div>
+
+                    {/* Excerpt */}
+                    <p className="text-base text-slate-600 mb-4 flex-1 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+
+                    {/* Read More Link */}
+                    <Link
+                      href={`/blog/${post.slug}`}
+                      className="inline-flex items-center gap-2 text-sky-600 text-base font-medium hover:text-cyan-600 transition-colors group/link"
+                    >
+                      Read full article
+                      <ChevronRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
                     </Link>
-                  </h2>
 
-                  {/* Meta Info */}
-                  <div className="flex flex-wrap items-center gap-4 text-sm text-slate-500 mb-4 pb-4 border-b border-dashed border-sky-100">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="w-4 h-4" />
-                      {post.date}
-                    </span>
-                    <span className="flex items-center gap-1.5">
-                      <MessageCircle className="w-4 h-4" />
-                      {post.comments} comments
-                    </span>
+                    {/* Bottom Accent */}
+                    <div className="mt-5 pt-4 border-t border-sky-100 group-hover:border-sky-200 transition-colors">
+                      <div className="w-14 h-1.5 bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full"></div>
+                    </div>
                   </div>
-
-                  {/* Excerpt */}
-                  <p className="text-base text-slate-600 mb-4 flex-1 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-
-                  {/* Read More Link */}
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-sky-600 text-base font-medium hover:text-cyan-600 transition-colors group/link"
-                  >
-                    Read full article
-                    <ChevronRight className="w-5 h-5 group-hover/link:translate-x-1 transition-transform" />
-                  </Link>
-
-                  {/* Bottom Accent */}
-                  <div className="mt-5 pt-4 border-t border-sky-100 group-hover:border-sky-200 transition-colors">
-                    <div className="w-14 h-1.5 bg-gradient-to-r from-sky-500 to-cyan-400 rounded-full"></div>
-                  </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
         ) : (
           // No results state
@@ -314,7 +379,7 @@ const BlogPage = () => {
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-2">No articles found</h3>
             <p className="text-slate-600 mb-6">
-              We couldn't find any articles matching "{searchQuery}"
+              We could not find any articles matching "{searchQuery}"
             </p>
             <button
               onClick={clearSearch}
@@ -326,6 +391,21 @@ const BlogPage = () => {
           </div>
         )}
       </div>
+
+      {/* Add custom CSS for shimmer animation */}
+      <style jsx>{`
+        @keyframes shimmer {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+        .animate-shimmer {
+          animation: shimmer 1.5s infinite;
+        }
+      `}</style>
     </div>
   );
 };

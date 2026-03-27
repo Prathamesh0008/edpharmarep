@@ -8,6 +8,7 @@ import { useCart } from "./CartContext";
 import LoginPopup from "./LoginPopup";
 import { useLanguage } from "@/context/LanguageContext";
 
+
 /* ================= NAVBAR ================= */
 
 export default function Navbar() {
