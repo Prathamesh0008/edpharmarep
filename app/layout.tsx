@@ -10,6 +10,7 @@ import LoadingProvider from "./components/LoadingProvider";
 import RouteLoader from "./components/RouteLoader";
 import WhatsAppButton from "./components/WhatsAppButton";
 import VisitorTracker from "./components/VisitorTracker";
+import GlobalLoader from "./components/GlobalLoader";
 
 /* ---------------- FONTS ---------------- */
 const geistSans = Geist({
@@ -277,6 +278,9 @@ export default function RootLayout({
 
         {/* 🔥 ROUTE LOADER ADDED HERE
         <RouteLoader /> */}
+
+          {/* Simple Global Loader - No context needed */}
+  <GlobalLoader />
 
         <LayoutController>
           
