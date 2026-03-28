@@ -57,7 +57,7 @@ export default function ContactPage() {
       email: {
         required: "Email is required",
         invalid: "Email is invalid",
-        gmailRequired: "Only Gmail addresses (@gmail.com) are accepted",
+        
       },
       phone: {
         required: "Phone number is required",
@@ -111,9 +111,7 @@ export default function ContactPage() {
       if (!/\S+@\S+\.\S+/.test(email)) {
         newErrors.email = validation.email?.invalid || "Email is invalid";
       }
-      else if (!email.endsWith("@gmail.com")) {
-        newErrors.email = validation.email?.gmailRequired || "Only Gmail addresses (@gmail.com) are accepted";
-      }
+      
     }
 
     // Phone validation - exactly 10 digits
@@ -347,7 +345,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       className={`form-input text-sm sm:text-base p-2.5 sm:p-3 md:p-4 ${errors.email ? "input-error" : ""}`}
                       aria-invalid={errors.email ? "true" : "false"}
-                      placeholder={formPlaceholders.email || "Enter your email address (must be @gmail.com)"}
+                      placeholder={formPlaceholders.email || "Enter your email address "}
                       disabled={isLoading}
                     />
                     {errors.email && <p className="error-text text-xs sm:text-sm">{errors.email}</p>}
