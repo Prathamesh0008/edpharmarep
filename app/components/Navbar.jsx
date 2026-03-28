@@ -173,7 +173,7 @@ export default function Navbar() {
     terms: "Terms", 
     contact: "Contact",
     blog: "Blog"
-  };
+  }
 
   return (
     <>
