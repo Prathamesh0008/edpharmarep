@@ -1,4 +1,3 @@
-// app/components/CartContext.jsx
 "use client";
 
 import {
@@ -17,6 +16,28 @@ const LS_KEY = "edpharma_cart_v1";
 const INITIAL_BULK_QUANTITY = 100; // Initial bulk quantity
 const INCREMENT_STEP = 10; // Step for + and - buttons
 
+// Helper function to extract product name from object or string
+const getProductName = (product) => {
+  if (!product) return "Unknown Product";
+  
+  // If name is a string, return it
+  if (typeof product.name === 'string') {
+    return product.name;
+  }
+  
+  // If name is an object with language keys (like {en: "..."})
+  if (product.name && typeof product.name === 'object') {
+    // Try to get English version first, then any other language, or fallback to slug
+    return product.name.en || 
+           product.name[Object.keys(product.name)[0]] || 
+           product.slug || 
+           "Unknown Product";
+  }
+  
+  // Fallback to slug or default
+  return product.slug || "Unknown Product";
+};
+
 /* ================= PROVIDER ================= */
 
 export function CartProvider({ children }) {
@@ -34,7 +55,17 @@ export function CartProvider({ children }) {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(LS_KEY);
-      if (raw) setCartItems(JSON.parse(raw));
+      if (raw) {
+        const loadedItems = JSON.parse(raw);
+        // Ensure all items have proper name strings (migrate old data)
+        const migratedItems = loadedItems.map(item => ({
+          ...item,
+          name: typeof item.name === 'object' 
+            ? (item.name.en || item.name[Object.keys(item.name)[0]] || item.slug || "Unknown Product")
+            : item.name
+        }));
+        setCartItems(migratedItems);
+      }
     } catch (err) {
       console.error("Cart load error", err);
     }
@@ -90,10 +121,13 @@ export function CartProvider({ children }) {
 
     // Get the correct price based on quantity
     const unitPrice = getPriceForQuantity(product, qty);
+    
+    // Extract the product name as a string
+    const productName = getProductName(product);
 
     const validatedProduct = {
       ...product,
-      name: product.name || "Unknown Product",
+      name: productName, // Store as string, not object
       slug: product.slug || product.id || `product-${Date.now()}`,
       price: Number(unitPrice) || 0,
       originalPrice: Number(product.price) || 0,
@@ -124,7 +158,7 @@ export function CartProvider({ children }) {
     });
 
     if (shouldOpenDrawer) openDrawer();
-    if (shouldToast) showToast(`Added ${qty} units: ${validatedProduct.name}`);
+    if (shouldToast) showToast(`Added ${qty} units: ${productName}`);
   };
 
   /* ---------- UPDATE QTY WITH MANUAL INPUT ---------- */
