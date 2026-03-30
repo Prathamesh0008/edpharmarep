@@ -287,7 +287,7 @@ export default function Home() {
       
       <FeaturedProducts />
      
-      <Compliance />
+      
       
       <Testimonials />
     </>

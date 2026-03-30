@@ -605,9 +605,10 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
           </div>
         </div>
 
-        {/* PRODUCT GRID - Fixed heights for consistent layout */}
-        {brandProducts.length > 0 ? (
-          <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
+        {/* PRODUCT GRID - 2 columns on all screen sizes up to large screens */}
+        {/* PRODUCT GRID - 2 columns on mobile, original layout on larger screens */}
+{brandProducts.length > 0 ? (
+  <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
             {brandProducts.map((p, index) => {
               // Create a truly unique key by combining brand, slug, and index
               const uniqueKey = `${activeBrand}-${p.slug}-${index}`;

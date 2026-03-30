@@ -59,9 +59,9 @@ export default function Compliance() {
   ];
 
   return (
-    <section className="px-4 md:px-6 fade-up -mb-55  ">
+    <section className="px-4 md:px-6 fade-up pb-0 mb-0">
       <h2
-        className="text-3xl font-bold text-center "
+        className="text-3xl font-bold text-center mb-8"
         style={{ color: BRAND_PRIMARY }}
       >
         Compliance, documentation & certifications

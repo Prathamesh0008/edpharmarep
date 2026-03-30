@@ -13,7 +13,7 @@ const Offer = () => {
   useEffect(() => {
     setIsMounted(true);
     const timer = setTimeout(() => setIsVisible(true), 5000); 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer); 
   }, []);
 
   const handleDownloadCatalog = () => {
