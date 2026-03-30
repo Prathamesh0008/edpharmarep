@@ -1007,6 +1007,7 @@ homePage: {
 },
 "es": {
     "home": "Inicio",
+    "blog":"Blog",
     "products": "Productos",
     "about": "Nosotros",
     "terms": "Términos",

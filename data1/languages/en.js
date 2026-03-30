@@ -907,6 +907,7 @@ homePage: {
 
 "en": {
     "home": "Home",
+    "blog": "Blog",
     "products": "Products",
     "about": "About",
     "terms": "Terms",

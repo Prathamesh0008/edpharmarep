@@ -90,6 +90,7 @@ const fr = {
   },
   "en":{
   "home": "Accueil",
+  "blog":"Blog",
   "products": "Produits",
   "about": "À propos",
   "terms": "Conditions",

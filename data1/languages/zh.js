@@ -991,6 +991,7 @@ homePage: {
 },
 "en":{
   "home": "首页",
+  "blog":"博客",
   "products": "产品",
   "about": "关于我们",
   "terms": "条款",

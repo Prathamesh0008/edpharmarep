@@ -87,6 +87,7 @@ const nl = {
   },
   "en":{
   "home": "Home",
+  "blog":"Blog",
   "products": "Producten",
   "about": "Over ons",
   "terms": "Voorwaarden",

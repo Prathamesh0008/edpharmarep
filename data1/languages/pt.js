@@ -87,6 +87,7 @@
   },
   "en":{
   "home": "Início",
+  "blog":"Blog",
   "products": "Produtos",
   "about": "Sobre",
   "terms": "Termos",

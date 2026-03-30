@@ -938,6 +938,7 @@ homePage: {
 
 "sr": {
     "home": "Početna",
+    "blog":"Блог",
     "products": "Proizvodi",
     "about": "O nama",
     "terms": "Uslovi",

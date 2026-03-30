@@ -897,6 +897,7 @@ productDetail: {
 
   "en": {
     "home": "Početna",
+    "blog":"Blog",
     "products": "Proizvodi",
     "about": "O nama",
     "terms": "Uvjeti",

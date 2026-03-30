@@ -896,6 +896,7 @@ productDetail: {
 
   "en": {
     "home": "Начало",
+    "blog":"Блог",
     "products": "Продукти",
     "about": "За нас",
     "terms": "Общи условия",

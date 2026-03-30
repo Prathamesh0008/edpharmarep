@@ -89,6 +89,7 @@ const de = {
   },
   "en":{
   "home": "Startseite",
+  "blog":"Blog",
   "products": "Produkte",
   "about": "Über uns",
   "terms": "Bedingungen",

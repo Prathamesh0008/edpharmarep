@@ -896,6 +896,7 @@ productDetail: {
 
   "en": {
     "home": "Acasă",
+    "blog":"Blog",
     "products": "Produse",
     "about": "Despre",
     "terms": "Termeni",

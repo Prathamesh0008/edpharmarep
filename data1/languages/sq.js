@@ -897,6 +897,7 @@ productDetail: {
 
   "en": {
     "home": "Kryefaqja",
+    "blog":"Blog",
     "products": "Produktet",
     "about": "Rreth Nesh",
     "terms": "Kushtet",

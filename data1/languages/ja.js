@@ -87,6 +87,8 @@ const ja = {
   },
   "en":{
   "home": "ホーム",
+  "blog":"ブログ",
+  
   "products": "製品",
   "about": "私たちについて",
   "terms": "利用規約",

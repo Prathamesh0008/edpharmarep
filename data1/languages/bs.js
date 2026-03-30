@@ -924,6 +924,7 @@ productDetail: {
 
   "en": { // Ovdje je vjerovatno greška u originalu, trebalo bi biti "bs" za prevod ključa, ali prevodim sadržaj unutar ovog objekta:
     "home": "Početna",
+    "blog":"Blog",
     "products": "Proizvodi",
     "about": "O nama",
     "terms": "Uslovi",
