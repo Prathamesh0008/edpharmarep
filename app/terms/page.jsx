@@ -175,7 +175,7 @@ export default function TermsPage() {
                   className="bg-clip-text text-transparent"
                   style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.accent} 100%)`, WebkitBackgroundClip: "text" }}
                 >
-                  {header.title}
+                  {header.title} 
                 </span>
               </h1>
 
