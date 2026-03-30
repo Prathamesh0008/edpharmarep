@@ -510,6 +510,7 @@ const blogPosts = [
   {
     slug: "kamagra-vs-sildenafil-safety",
     title: "Use of Kamagra vs Sildenafil Tablets: What’s the Difference?",
+    description:" Compare Kamagra and pharmacy sildenafil tablets. Discover safety differences, side effects, and why regulated ED treatment matters in the Netherlands.",
     date: "March 3, 2026",
     content: `
     <p>As in many parts of the world, men facing erectile dysfunction (ED) often search for effective solutions that restore confidence and improve quality of life. Two names that frequently appear in this context are <a href="/blog/kamagra-vs-sildenafil-safety" style="color:#2563eb;text-decoration:underline;">Kamagra
@@ -640,6 +641,7 @@ ED Pharma's sildenafil tablets
   {
     slug: "daily-kamagra-safety",
     title: "Is Daily Use of Kamagra Safe?",
+    description:"Learn whether daily Kamagra use is safe, how sildenafil works, correct dosage, side effects, and when to consult a doctor in the Netherlands.",
     date: "March 2, 2026",
     content: `
     <p>Erectile dysfunction (ED) is a common condition that affects millions of men worldwide. In Europe, including the Netherlands, many men search online for solutions such as Kamagra tablets or sildenafil medications to improve erectile performance. Sildenafil is the active compound used in many erectile dysfunction treatments and is widely recognized by healthcare authorities.</p>
@@ -804,6 +806,7 @@ Kamagra tablets
   {
     slug: "kamagra-duration-strength",
     title: "How Long Does Kamagra Take to Work?",
+    description:"How long does Kamagra last? Learn about sildenafil onset (30–60 minutes), 4–6 hour duration, side effects, sperm health, and safety guidance.",
     date: "February 28, 2026",
     content: `
     <p>Erectile dysfunction (ED) is a common condition affecting millions of men worldwide. According to global health research and data referenced by the World Health Organization (WHO) and other medical institutions, erectile dysfunction can occur due to stress, aging, lifestyle factors, or medical conditions such as diabetes and cardiovascular disease.</p>
@@ -990,6 +993,7 @@ Viagra or generic sildenafil tablets
   {
     slug: "kamagra-with-alcohol",
     title: "Is It Safe to Take Kamagra with Alcohol?",
+    description:"Is it safe to drink alcohol while taking sildenafil or Kamagra? Understand interaction risks, dizziness, low blood pressure, and ED treatment safety.",
     date: "February 27, 2026",
     content: `
     <p>Erectile dysfunction (ED) is a common condition affecting men worldwide, including in the Netherlands. Many men search online for solutions such as Kamagra tablets or sildenafil tablets to improve sexual performance. However, one common and important question arises:</p>
@@ -1178,6 +1182,7 @@ Kamagra tablets
   {
     slug: "top-7-ed-medicines-2026",
     title: "Top 7 ED Medicines Pharmacies Should Stock in 2026",
+    description:"Discover the top 7 ED medicines pharmacies should stock in 2026, including Sildenafil, Tadalafil, and Avanafil. Learn trends, benefits, and best-selling erectile dysfunction drugs to boost sales and meet rising demand.",
     date: "February 27, 2026",
 
   content: `
@@ -1355,6 +1360,7 @@ tadalafil and sildenafil dominate prescriptions
  {
     slug: "kamagra-sildenafil-bulk-europe",
     title: "Where to Purchase Kamagra & Sildenafil Citrate tablets in bulk Europe ",
+    description:"Purchase Kamagra & Sildenafil Citrate tablets in bulk across Europe from trusted suppliers. Ensure quality, compliance, and fast delivery with ED Pharma.",
     date: "March 25, 2026",
     content: `
     <p> Purchase Kamagra & Sildenafil Citrate tablets in bulk across Europe from trusted suppliers. Ensure quality, compliance, and fast delivery with ED Pharma.</p>
@@ -1377,11 +1383,11 @@ Sildenafil Citrate
     
     <p>Now, let’s talk about Kamagra, a name you’ve probably heard if you’ve searched for affordable ED solutions. Kamagra is essentially a generic version of Sildenafil Citrate, often marketed as a cheaper alternative to branded medications. It comes in various forms like tablets, oral jelly, and chewables.</p>
     
-    <p>But here’s where things get tricky — Kamagra operates in a regulatory grey area in Europe. Unlike approved Sildenafil products, Kamagra is not officially registered in many EU countries. This means it cannot be legally sold or distributed through standard pharmaceutical channels.</p>
+    <p>But here’s where things get tricky Kamagra operates in a regulatory grey area in Europe. Unlike approved Sildenafil products, Kamagra is not officially registered in many EU countries. This means it cannot be legally sold or distributed through standard pharmaceutical channels.</p>
     
     <p>Think of it like buying a branded smartphone versus a replica. Both may look similar, but the quality, safety, and performance can vary drastically. Some Kamagra products may contain inconsistent dosages or unverified ingredients, which raises serious concerns.</p>
     
-    <p>Despite this, Kamagra remains popular due to its affordability and availability through online suppliers. However, bulk buyers — especially businesses — must be extremely cautious and prioritize compliance and quality.</p>
+    <p>Despite this, Kamagra remains popular due to its affordability and availability through online suppliers. However, bulk buyers especially businesses must be extremely cautious and prioritize compliance and quality.</p>
 
     <h2 id="market-demand" class="text-2xl font-bold mt-8 mb-4">Market Demand for ED Medications in Europe</h2>
     
@@ -1414,7 +1420,7 @@ Sildenafil Citrate
     <p>Kamagra, on the other hand, is not officially approved in most EU countries. This means it cannot be legally sold through pharmacies or licensed distributors.</p>
     
     <h3 class="font-bold mt-4 mb-2">Country-Wise Regulations</h3>
-    <p>The legality of Kamagra varies slightly across Europe, but the general rule remains the same — it is not authorized for commercial sale.</p>
+    <p>The legality of Kamagra varies slightly across Europe, but the general rule remains the same it is not authorized for commercial sale.</p>
     
     <div class="overflow-x-auto mb-4">
         <table class="min-w-full bg-white border border-gray-300 text-sm">
@@ -1503,7 +1509,7 @@ Kamagra and Sildenafil Citrate tablets in bulk in Europe
     
     <p>For bulk buyers, the key is simply to prioritize quality, compliance, and trusted suppliers. Platforms like <a href="/" style="color:#2563eb;text-decoration:underline;">ED Pharma</a> provide a reliable pathway for sourcing pharmaceutical products while maintaining regulatory standards and product integrity.</p>
     
-    <p>Think of it this way: when you’re dealing with healthcare products, you’re not just running a business — you’re handling someone’s well-being. And that responsibility should never be compromised.</p>
+    <p>Think of it this way: when you’re dealing with healthcare products, you’re not just running a business  you’re handling someone’s well-being. And that responsibility should never be compromised.</p>
 
      <h2 id="faq" class="text-2xl font-bold mt-8 mb-4">FAQ</h2>
     
@@ -1524,6 +1530,7 @@ Kamagra and Sildenafil Citrate tablets in bulk in Europe
  {
   slug :"benefits-oraljelly",
   title: "Top Benefits of Oral Jelly ED Medications",
+  description:"Discover the top benefits of oral jelly ED medications including fast action, easy use, and better results. Buy ED medications online in Europe from trusted suppliers like ED Pharma.",
   date: "March 25, 2026",
   content: `
   <p> Discover the top benefits of oral jelly ED medications including fast action, easy use, and better results. Buy ED medications online in Europe from trusted suppliers like ED Pharma.</p>
@@ -2088,10 +2095,10 @@ export async function generateMetadata({ params }) {
     };
   }
   
-  const metaDescription = post.content
+  const metaDescription = post.description
     .replace(/<[^>]*>/g, '')
-    .substring(0, 160)
-    .trim() + '...';
+    .substring(0, 250)
+    ;
   
   // Base metadata
   const metadata = {
