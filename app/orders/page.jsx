@@ -82,7 +82,7 @@ export default function OrdersPage() {
   const statusOptions = [
     { key: "all", label: ordersTranslations.search.filterAll },
     { key: "pending", label: ordersTranslations.search.filterPending },
-    { key: "processing", label: ordersTranslations.search.filterProcessing },
+    // { key: "processing", label: ordersTranslations.search.filterProcessing },
     { key: "shipped", label: ordersTranslations.search.filterShipped },
     { key: "rejected", label: ordersTranslations.search.filterRejected },
   ];
