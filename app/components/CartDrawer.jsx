@@ -318,15 +318,15 @@ export default function CartDrawer() {
         )}
       </aside>
 
-      <ProductQuickView
+      {/* <ProductQuickView
         open={!!openItem}
         item={openItem}
         onClose={() => setOpenItem(null)}
         onGoToProduct={(slug) => {
           closeDrawer();
-          router.push(`/products/${slug}`);
+          router.push(`/product/${slug}`);
         }}
-      />
+      /> */}
     </>
   );
 }

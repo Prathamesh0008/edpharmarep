@@ -64,7 +64,7 @@ export default function ProductQuickView({ open, item, onClose, onGoToProduct })
   const meta = useMemo(() => {
     // You can replace these with DB values per product later
     return {
-      delivery: "Delivery in 2–5 days • Free above ₹999",
+      delivery: "Delivery in 2–5 days ",
       returnPolicy: "7-day replacement (sealed packs)",
       authenticity: "COA / batch docs available",
       highlights: [
