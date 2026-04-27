@@ -379,7 +379,7 @@ const BlogPage = () => {
             </div>
             <h3 className="text-2xl font-bold text-slate-900 mb-2">No articles found</h3>
             <p className="text-slate-600 mb-6">
-              We could not find any articles matching "{searchQuery}"
+              We could not find any articles matching &quot;{searchQuery}&quot;
             </p>
             <button
               onClick={clearSearch}

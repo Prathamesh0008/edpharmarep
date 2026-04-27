@@ -253,7 +253,7 @@ export default function ContactPage() {
                   Get in Touch
                 </h2>
                 <p className="text-sm sm:text-base text-blue-700">
-                  We're here to help and answer any questions you might have.
+                  We&apos;re here to help and answer any questions you might have.
                 </p>
               </div>
 
@@ -323,7 +323,7 @@ export default function ContactPage() {
                   Send us a Message
                 </h2>
                 <p className="text-sm sm:text-base text-blue-700">
-                  Fill out the form below and we'll get back to you shortly.
+                  Fill out the form below and we&apos;ll get back to you shortly.
                 </p>
               </div>
 
@@ -494,7 +494,7 @@ export default function ContactPage() {
                             "✅ Message sent successfully! Check your email for confirmation."}
                         </p>
                         <p className="text-green-700 text-xs mt-1 break-words">
-                          We've sent a confirmation email to{" "}
+                          We&apos;ve sent a confirmation email to{" "}
                           <span className="font-semibold">{sentTo}</span>
                         </p>
                       </div>

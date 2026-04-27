@@ -7,7 +7,7 @@ Disallow: /?s=
 Allow: /wp-admin/admin-ajax.php
 
 # Sitemap location
-Sitemap: https://www.edpharma.co//sitemap.xml
+Sitemap: https://www.edpharma.co/sitemap.xml
 
 # --- Search Engine Bots ---
 User-agent: Googlebot
@@ -67,4 +67,4 @@ Disallow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://www.edpharma.co//sitemap.xml
+Sitemap: https://www.edpharma.co/sitemap.xml

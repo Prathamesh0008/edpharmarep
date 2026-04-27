@@ -1,22 +1,41 @@
-// app/product/[slug]/page.jsx
-import enData from "@/app/data/products/en";
 import ProductClient from "./ProductClient";
+import dbConnect from "@/lib/db";
+import Product from "@/app/models/Product";
 
-function extractProducts(data) {
-  if (Array.isArray(data)) return data;
-  if (data?.default && Array.isArray(data.default)) return data.default;
-  if (data?.products && Array.isArray(data.products)) return data.products;
-  if (typeof data === "object" && data !== null)
-    return Object.values(data);
-  return [];
+function formatProduct(product) {
+  if (!product) return null;
+
+  const translations = product.translations || {};
+  const localized = translations.en || {};
+
+  return {
+    slug: product.slug || "",
+    name: localized.name || product.name || product.slug || "",
+    image: product.image || "/placeholder.jpg",
+    price: product.price || "",
+    metaTitle: localized.metaTitle || "",
+    metaDescription: localized.metaDescription || "",
+    description: localized.description || "",
+    review: product.review || {},
+  };
+}
+
+async function getProductBySlug(slug) {
+  await dbConnect();
+  const product = await Product.findOne({ slug }).lean();
+  return formatProduct(product);
 }
 
 function generateProductSchema(product) {
+  const imageUrl = product.image?.startsWith("http")
+    ? product.image
+    : `https://www.edpharma.co${product.image}`;
+
   return {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: product.name,
-    image: `https://www.edpharma.co${product.image}`,
+    image: imageUrl,
     description: product.metaDescription,
     brand: {
       "@type": "Brand",
@@ -63,28 +82,9 @@ function generateProductSchema(product) {
 export async function generateMetadata({ params }) {
   try {
     const { slug } = await params;
-    
-    // Try to extract products from the imported data
-    let enProducts = [];
-    
-    if (Array.isArray(enData)) {
-      enProducts = enData;
-    } else if (enData && Array.isArray(enData.default)) {
-      enProducts = enData.default;
-    } else if (enData && Array.isArray(enData.products)) {
-      enProducts = enData.products;
-    } else if (typeof enData === 'object' && enData !== null) {
-      // If enData is an object with product slugs as keys
-      enProducts = Object.values(enData);
-    }
-    
-    console.log("DEBUG: Looking for product with slug:", slug);
-    console.log("DEBUG: Total products available:", enProducts.length);
-    
-    const product = enProducts.find((p) => p.slug === slug);
+    const product = await getProductBySlug(slug);
     
     if (!product) {
-      console.log("DEBUG: Product not found for slug:", slug);
       return {
         title: "Product Not Found | ED Pharma",
         description: "This product is not available. Browse our other high-quality pharmaceutical products.",
@@ -95,11 +95,6 @@ export async function generateMetadata({ params }) {
       };
     }
 
-    console.log("DEBUG: Product found:", product.name);
-    console.log("DEBUG: metaTitle:", product.metaTitle);
-    console.log("DEBUG: metaDescription:", product.metaDescription);
-
-    // Use the exact property names from your data
     const title = product.metaTitle || 
                   product.name || 
                   "ED Pharma Product";
@@ -109,7 +104,6 @@ export async function generateMetadata({ params }) {
                        (product.name ? `${product.name} - High-quality pharmaceutical product from ED Pharma` : 
                        "High-quality pharmaceutical product from ED Pharma");
 
-    // Truncate description if it's too long (160-320 characters is optimal)
     const truncatedDescription = description.length > 160 
       ? description.slice(0, 157) + "..." 
       : description;
@@ -167,9 +161,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ProductPage({ params }) {
   const { slug } = await params;
-
-  const products = extractProducts(enData);
-  const product = products.find((p) => p.slug === slug);
+  const product = await getProductBySlug(slug);
 
   if (!product) {
     return <ProductClient slug={slug} />;
@@ -187,7 +179,6 @@ export default async function ProductPage({ params }) {
         }}
       />
 
-      {/* Your Client UI */}
       <ProductClient slug={slug} />
     </>
   );

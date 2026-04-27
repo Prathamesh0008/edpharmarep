@@ -1,58 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function RouteLoader() {
   const pathname = usePathname();
-  const router = useRouter();
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    let timeoutId: NodeJS.Timeout | undefined;
-
-    const handleRouteChangeStart = () => {
-      // Show loader only if navigation takes more than 200ms
-      timeoutId = setTimeout(() => {
-        setLoading(true);
-      }, 200);
-    };
-
-    const handleRouteChangeComplete = () => {
-      // Clear the timeout and hide loader immediately
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      setLoading(false);
-    };
-
-    // For Next.js App Router, we need to use the router events
-    // Since App Router doesn't have router events, we use a different approach
-    
-    // Override router methods to detect navigation start
-    const originalPush = router.push;
-    const originalReplace = router.replace;
-    
-    // Override router methods to detect navigation start
-    router.push = (...args) => {
-      handleRouteChangeStart();
-      return originalPush.apply(router, args);
-    };
-    
-    router.replace = (...args) => {
-      handleRouteChangeStart();
-      return originalReplace.apply(router, args);
-    };
-    
-    // Clean up on component unmount
-    return () => {
-      if (timeoutId) {
-        clearTimeout(timeoutId);
-      }
-      router.push = originalPush;
-      router.replace = originalReplace;
-    };
-  }, [router]);
 
   // Also detect pathname changes (navigation completion)
   useEffect(() => {

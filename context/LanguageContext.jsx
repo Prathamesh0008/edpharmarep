@@ -1,10 +1,7 @@
-
 "use client";
 
-import { createContext, useContext, useState, useEffect } from "react";
-import { productImages } from "@/app/data/productImages";
+import { createContext, useCallback, useContext, useEffect, useState } from "react";
 
-/* ================= UI TEXT ================= */
 import en from "../data1/languages/en";
 import es from "../data1/languages/es";
 import pt from "../data1/languages/pt";
@@ -23,115 +20,115 @@ import sr from "../data1/languages/sr";
 import hr from "../data1/languages/hr";
 import bs from "../data1/languages/bs";
 
-/* ================= PRODUCTS ================= */
-import enProducts from "@/app/data/products/en";
-import deProducts from "@/app/data/products/de";
-import frProducts from "@/app/data/products/fr";
-import esProducts from "@/app/data/products/es";
-import ptProducts from "@/app/data/products/pt";
-import nlProducts from "@/app/data/products/nl";
-import jaProducts from "@/app/data/products/ja";
-import zhProducts from "@/app/data/products/zh";
-import arProducts from "@/app/data/products/ar";
-import hrProducts from "@/app/data/products/hr";
-import bsProducts from "@/app/data/products/bs";
-import bgProducts from "@/app/data/products/bg";
-import mkProducts from "@/app/data/products/mk";
-import srProducts from "@/app/data/products/sr";
-import roProducts from "@/app/data/products/ro";
-import sqProducts from "@/app/data/products/sq";
-import elProducts from "@/app/data/products/el";
-
-/* ================= CONFIG ================= */
-
-const LANGUAGES = {
-  en, es, pt, zh, ar, de, fr, ja, nl,
-  ro, sq, el, bg, mk, sr, hr, bs
+const UI_LANGUAGES = {
+  en,
+  es,
+  pt,
+  zh,
+  ar,
+  de,
+  fr,
+  ja,
+  nl,
+  ro,
+  sq,
+  el,
+  bg,
+  mk,
+  sr,
+  hr,
+  bs,
 };
 
-const convertProductsToArray = (obj) =>
-  Array.isArray(obj) ? obj : Object.values(obj || {});
-
-const PRODUCT_LANGUAGES = {
-  en: convertProductsToArray(enProducts),
-  de: convertProductsToArray(deProducts),
-  fr: convertProductsToArray(frProducts),
-  es: convertProductsToArray(esProducts),
-  pt: convertProductsToArray(ptProducts),
-  nl: convertProductsToArray(nlProducts),
-  ja: convertProductsToArray(jaProducts),
-  zh: convertProductsToArray(zhProducts),
-  ar: convertProductsToArray(arProducts),
-  hr: convertProductsToArray(hrProducts),
-  bs: convertProductsToArray(bsProducts),
-  bg: convertProductsToArray(bgProducts),
-  mk: convertProductsToArray(mkProducts),
-  sr: convertProductsToArray(srProducts),
-  ro: convertProductsToArray(roProducts),
-  sq: convertProductsToArray(sqProducts),
-  el: convertProductsToArray(elProducts),
-};
-
-/* ================= CONTEXT ================= */
+const LANGUAGES = [
+  "en",
+  "ar",
+  "bg",
+  "bs",
+  "de",
+  "el",
+  "es",
+  "fr",
+  "hr",
+  "ja",
+  "mk",
+  "nl",
+  "pt",
+  "ro",
+  "sq",
+  "sr",
+  "zh",
+];
 
 const LanguageContext = createContext();
-
-/* ================= PROVIDER ================= */
 
 export function LanguageProvider({ children }) {
   const [lang, setLang] = useState("en");
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  /* ✅ ALWAYS inject images */
-  const injectImages = (list) =>
-    (list || []).map((p) => ({
-      ...p,
-      images: productImages[p.slug] || {
-        main: "/placeholder.jpg",
-        gallery: [],
-      },
-    }));
+  const fetchProducts = useCallback(async (language) => {
+    setLoading(true);
 
-  /* ✅ INITIAL LOAD (FIXES REFRESH BUG) */
-  useEffect(() => {
-    const saved = localStorage.getItem("app-lang");
-    const activeLang = saved && LANGUAGES[saved] ? saved : "en";
+    try {
+      const response = await fetch(`/api/products?lang=${language}&limit=200`);
+      const result = await response.json();
 
-    setLang(activeLang);
-    setProducts(injectImages(PRODUCT_LANGUAGES[activeLang]));
+      if (result?.success && Array.isArray(result.data)) {
+        setProducts([...result.data]);
+      } else {
+        console.error("Invalid products response:", result);
+        setProducts([]);
+      }
+    } catch (error) {
+      console.error("Error fetching products:", error);
+      setProducts([]);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
-  /* ✅ CHANGE LANGUAGE */
-  const changeLanguage = (code) => {
-    if (!LANGUAGES[code]) return;
+  useEffect(() => {
+    const saved = localStorage.getItem("app-lang");
+    const activeLang = saved && LANGUAGES.includes(saved) ? saved : "en";
 
-    setLang(code);
-    setProducts(injectImages(PRODUCT_LANGUAGES[code]));
-    localStorage.setItem("app-lang", code);
-  };
+    setLang(activeLang);
+    fetchProducts(activeLang);
+  }, [fetchProducts]);
 
-  /* ✅ SAFE PRODUCT GETTER */
-  const getProductBySlug = (slug) => {
-    const local = products.find((p) => p.slug === slug);
-    if (local) return local;
+  const changeLanguage = useCallback(
+    async (code) => {
+      if (!LANGUAGES.includes(code)) return;
 
-    const fallback = PRODUCT_LANGUAGES.en.find((p) => p.slug === slug);
-    return fallback
-      ? injectImages([fallback])[0]
-      : null;
-  };
+      setLang(code);
+      localStorage.setItem("app-lang", code);
+      await fetchProducts(code);
+    },
+    [fetchProducts]
+  );
 
-  const getProductsByBrand = (brand) =>
-    products.filter((p) => p.brand === brand);
+  const getProductBySlug = useCallback(
+    (slug) => products.find((product) => product.slug === slug) || null,
+    [products]
+  );
+
+  const getProductsByBrand = useCallback(
+    (brand) => {
+      if (!brand) return products;
+      return products.filter((product) => product.brand === brand);
+    },
+    [products]
+  );
 
   return (
     <LanguageContext.Provider
       value={{
         language: lang,
         changeLanguage,
-        availableLanguages: Object.keys(LANGUAGES),
-        t: LANGUAGES[lang] || LANGUAGES.en,
+        availableLanguages: LANGUAGES,
+        t: UI_LANGUAGES[lang] || UI_LANGUAGES.en,
         products,
+        loading,
         getProductBySlug,
         getProductsByBrand,
       }}
@@ -140,7 +137,5 @@ export function LanguageProvider({ children }) {
     </LanguageContext.Provider>
   );
 }
-
-/* ================= HOOK ================= */
 
 export const useLanguage = () => useContext(LanguageContext);

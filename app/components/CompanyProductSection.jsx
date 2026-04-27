@@ -3,17 +3,18 @@
 
 import { useState } from "react";
 import { COMPANIES } from "@/app/data/companies";
-import { products } from "@/app/data/products";
+import { useLanguage } from "@/context/LanguageContext";
 import Link from "next/link";
 
 export default function CompanyProductSection() {
   const [activeCompany, setActiveCompany] = useState(COMPANIES[0].id);
+  const { products } = useLanguage();
 
   const filteredProducts = products
   .filter(
     (p) =>
-      p.company &&
-      p.company.toLowerCase().trim() ===
+      p.brand &&
+      p.brand.toLowerCase().trim() ===
         activeCompany.toLowerCase().trim()
   )
   .slice(0, 4);
@@ -62,7 +63,7 @@ export default function CompanyProductSection() {
       {/* IMAGE */}
 <div className="w-full h-40 bg-slate-100 rounded-lg overflow-hidden flex items-center justify-center">
   <img
-    src="/productbottle.jpg"
+    src={product.image || "/placeholder.jpg"}
     alt={product.name}
     className="max-w-full max-h-full object-contain transition-transform duration-300 hover:scale-105"
   />
@@ -75,7 +76,7 @@ export default function CompanyProductSection() {
       </h3>
 
       {/* STRENGTH */}
-      <p className="text-slate-500 text-xs">{product.strength}</p>
+      <p className="text-slate-500 text-xs">{product.dosage}</p>
 
       {/* PRICE */}
       <p className="text-blue-700 font-bold text-sm mt-2">

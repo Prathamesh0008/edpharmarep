@@ -1,4 +1,101 @@
-// app/products/page.jsx
+// "use client";
+
+// import { useLanguage } from "@/context/LanguageContext";
+// import Link from "next/link";
+// import Image from "next/image";
+// import { useState, useEffect } from "react";
+
+// export default function ProductsPageInner() {
+//   const { products, loading, language } = useLanguage();
+//   const [selectedBrand, setSelectedBrand] = useState("All");
+
+//   // Get unique brands
+//   const brands = ["All", ...new Set(products.map(p => p.brand))];
+  
+//   // Filter products by brand
+//   const filteredProducts = selectedBrand === "All" 
+//     ? products 
+//     : products.filter(p => p.brand === selectedBrand);
+
+//   if (loading) {
+//     return (
+//       <div className="min-h-screen flex items-center justify-center">
+//         <div className="text-center">
+//           <div className="text-xl">Loading products...</div>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   if (!products || products.length === 0) {
+//     return (
+//       <div className="min-h-screen flex items-center justify-center">
+//         <div className="text-center">
+//           <div className="text-xl text-red-600">No products found!</div>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className="max-w-7xl mx-auto px-4 py-8">
+//       <h1 className="text-3xl font-bold mb-6">
+//         Products ({filteredProducts.length})
+//       </h1>
+      
+//       {/* Brand Filter */}
+//       <div className="mb-6 flex flex-wrap gap-2">
+//         {brands.map(brand => (
+//           <button
+//             key={brand}
+//             onClick={() => setSelectedBrand(brand)}
+//             className={`px-4 py-2 rounded-lg transition-all ${
+//               selectedBrand === brand
+//                 ? "bg-blue-600 text-white"
+//                 : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+//             }`}
+//           >
+//             {brand === "All" ? "All Products" : brand}
+//           </button>
+//         ))}
+//       </div>
+
+//       {/* Products Grid */}
+//       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+//         {filteredProducts.map((product) => (
+//           <Link
+//             key={product.slug}
+//             href={`/product/${product.slug}`}
+//             className="border rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white"
+//           >
+//             <div className="relative h-48 bg-gray-50">
+//               <Image
+//                 src={product.image || "/placeholder.jpg"}
+//                 alt={product.name}
+//                 fill
+//                 className="object-contain p-4"
+//               />
+//             </div>
+//             <div className="p-4">
+//               <h2 className="font-semibold text-lg mb-1 line-clamp-2">
+//                 {product.name}
+//               </h2>
+//               <p className="text-sm text-gray-500 mb-2">{product.category}</p>
+//               <p className="text-sm text-gray-600 mb-3">{product.dosage}</p>
+//               <div className="flex items-center justify-between">
+//                 <span className="text-xl font-bold text-blue-600">
+//                   €{product.price}
+//                 </span>
+//                 <span className="text-xs text-gray-400">{product.form}</span>
+//               </div>
+//             </div>
+//           </Link>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
+
 "use client";
 
 import Navbar from "../components/Navbar";
@@ -20,8 +117,6 @@ const BRAND_THEMES = {
     secondary: "#2A7DB8",
     accent: "#1C5EB7",
     lightBg: "#E8EEF5",
-
-
     extraLight: "#F0F5FA",
     bgImage: "/bg/bg1.png",
     bgUpImage: "/bg/bgup.png",
@@ -82,18 +177,16 @@ const BRAND_THEMES = {
       "linear-gradient(135deg, #081A3E 0%, #122A5C 50%, #1C4A8C 100%)",
     compoundHeaderShadow: "0 4px 20px rgba(8, 26, 62, 0.25)",
     buttonHover: "#0D234F",
-  },// NEW BRAND: Healing Pharma
+  },
   "Healing Pharma": {
     name: "Healing Pharma",
-    logo: "/logo/Healing.png", // You'll need to add this image public\logo\HealingLogo.png
-    primary: "#2E7D32", // Deep green
-    secondary: "#4CAF50", // Medium green
-    accent: "#1B5E20", // Dark green
-    lightBg: "#E8F5E9", // Very light green
-    extraLight: "#F1F8E9", // Light green with yellow tint
-    bgImage: "/bg/healing-bg.png", // You'll need to add this image
-    bgUpImage: "/bg/healing-up.png", // Optional
-    bgDownImage: "/bg/healing-down.png", // Optional
+    logo: "/logo/Healing.png",
+    primary: "#2E7D32",
+    secondary: "#4CAF50",
+    accent: "#1B5E20",
+    lightBg: "#E8F5E9",
+    extraLight: "#F1F8E9",
+    bgImage: "/bg/healing-bg.png",
     gradient: "linear-gradient(135deg, #2E7D32 0%, #4CAF50 100%)",
     priceGradient: "linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%)",
     compoundHeaderGradient:
@@ -103,19 +196,15 @@ const BRAND_THEMES = {
     imageBorderColor: "#FFFFFF",
     imageBorderStyle: "embossed",
   },
-
-  // NEW BRAND: Hab Pharma
   "Hab Pharma": {
     name: "Hab Pharma",
-    logo: "/logo/Hab.png", // You'll need to add this image public\logo\HabLogo.png
-    primary: "#1565C0", // Deep blue
-    secondary: "#1976D2", // Medium blue
-    accent: "#0D47A1", // Dark blue
-    lightBg: "#E3F2FD", // Very light blue
-    extraLight: "#E1F5FE", // Light blue with cyan tint
-    bgImage: "/bg/hab-bg.png", // You'll need to add this image
-    bgUpImage: "/bg/hab-up.png", // Optional
-    bgDownImage: "/bg/hab-down.png", // Optional
+    logo: "/logo/Hab.png",
+    primary: "#1565C0",
+    secondary: "#1976D2",
+    accent: "#0D47A1",
+    lightBg: "#E3F2FD",
+    extraLight: "#E1F5FE",
+    bgImage: "/bg/hab-bg.png",
     gradient: "linear-gradient(135deg, #1565C0 0%, #1976D2 100%)",
     priceGradient: "linear-gradient(135deg, #1565C0 0%, #0D47A1 100%)",
     compoundHeaderGradient:
@@ -131,8 +220,8 @@ const BRAND_ORDER = [
   "ED Ajanta Pharma",
   "ED Centurion Remedies",
   "ED Sunrise Remedies",
-  "Healing Pharma", // Add new brand
-  "Hab Pharma",     // Add new brand
+  "Healing Pharma",
+  "Hab Pharma",
 ];
 
 const makeId = (str) => str.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -147,20 +236,26 @@ const normalizeText = (text) => {
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
 };
-
+// Helper function to remove language suffix from slug (en, ar, zh, etc.)
+const getBaseSlug = (slug) => {
+  if (!slug) return slug;
+  // Remove language suffixes like -en, -ar, -zh, -bg, -bs, -de, -el, -es, -fr, -hr, -ja, -mk, -nl, -pt, -ro, -sq, -sr
+  return slug.replace(/-(en|ar|zh|bg|bs|de|el|es|fr|hr|ja|mk|nl|pt|ro|sq|sr)$/, '');
+};
 // Helper function to check if product has pricing
 const hasProductPricing = (productSlug) => {
-  return pricingData.hasOwnProperty(productSlug);
+  const baseSlug = getBaseSlug(productSlug);
+  return pricingData.hasOwnProperty(baseSlug);
 };
 
 // Helper function to get product price for minimum quantity
 const getProductPrice = (productSlug) => {
-  if (!pricingData[productSlug]) return null;
+  const baseSlug = getBaseSlug(productSlug);
+  if (!pricingData[baseSlug]) return null;
   
-  const pricingTiers = pricingData[productSlug];
+  const pricingTiers = pricingData[baseSlug];
   if (!Array.isArray(pricingTiers) || pricingTiers.length === 0) return null;
   
-  // Get the price for minimum quantity (first tier)
   const minTier = pricingTiers.find(tier => tier.min === 1) || pricingTiers[0];
   return {
     price: minTier.price,
@@ -173,28 +268,21 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [imageLoaded, setImageLoaded] = useState({});
   const [imageError, setImageError] = useState({});
+  const [thumbLoaded, setThumbLoaded] = useState({});
+  const [thumbError, setThumbError] = useState({});
   const intervalRef = useRef(null);
 
-  // Get product images
   const images = useMemo(() => {
-    if (!product?.images) {
-      return ["/placeholder.jpg"];
-    }
+  const mainImage = product?.image || "/placeholder.jpg";
+  const galleryImages = product?.additionalImages || [];
+  return [mainImage, ...galleryImages].filter(Boolean);
+}, [product]);
 
-    return [
-      product.images.main,
-      ...(product.images.gallery || []),
-    ].filter(Boolean);
-  }, [product]);
-
-  // Simplified auto-rotation
   useEffect(() => {
     if (images.length <= 1) return;
-
     intervalRef.current = setInterval(() => {
       setCurrentImageIndex(prev => (prev + 1) % images.length);
     }, 5000);
-
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
@@ -204,7 +292,6 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
 
   const handleThumbnailClick = (index) => {
     setCurrentImageIndex(index);
-    // Reset timer
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
@@ -220,32 +307,29 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
 
   const handleImageError = (index) => {
     setImageError(prev => ({ ...prev, [index]: true }));
-    setImageLoaded(prev => ({ ...prev, [index]: true })); // Mark as loaded to hide loader
+    setImageLoaded(prev => ({ ...prev, [index]: true }));
   };
 
-  // Get product name
-  const productName = useMemo(() => {
+  const getProductName = () => {
     if (!product) return '';
     if (product.name && typeof product.name === 'object') {
       return product.name.en || product.slug || '';
     }
     return product.name || product.slug || '';
-  }, [product]);
+  };
 
-  // Circular Loader Component
+  const productName = getProductName();
+
   const CircularLoader = ({ size = 'md', color = theme?.primary || '#3B82F6' }) => {
     const sizeClasses = {
       sm: 'w-6 h-6 border-2',
       md: 'w-10 h-10 sm:w-12 sm:h-12 border-3',
       lg: 'w-16 h-16 sm:w-20 sm:h-20 border-4'
     };
-
     const selectedSize = isMobile ? sizeClasses.sm : sizeClasses[size];
-
     return (
       <div className="absolute inset-0 flex items-center justify-center bg-white/60 backdrop-blur-[2px] z-20">
         <div className="relative">
-          {/* Outer rotating circle */}
           <div
             className={`${selectedSize} rounded-full border-t-transparent animate-spin`}
             style={{
@@ -253,16 +337,12 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
               borderTopColor: color,
             }}
           />
-          
-          {/* Inner pulse effect - only visible on larger screens */}
           {!isMobile && (
             <div
               className="absolute inset-0 rounded-full animate-ping opacity-20"
               style={{ backgroundColor: color }}
             />
           )}
-          
-          {/* Loading text - hidden on mobile, shown on desktop */}
           {!isMobile && (
             <span
               className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 text-xs font-medium whitespace-nowrap"
@@ -276,7 +356,6 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
     );
   };
 
-  // Error Fallback Component
   const ErrorFallback = () => (
     <div className="absolute inset-0 flex items-center justify-center bg-gray-100 z-20">
       <div className="text-center">
@@ -309,7 +388,6 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
           border-radius: 0.5rem;
           transform: translateZ(0);
         }
-        
         .image-slide {
           position: absolute;
           top: 0;
@@ -320,71 +398,48 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
           transform: scale(0.98);
           transition: opacity 0.5s ease, transform 0.5s ease;
         }
-        
         .image-slide.active {
           opacity: 1;
           transform: scale(1);
           z-index: 10;
         }
-        
-        .image-slide img {
-          transform: translateZ(0);
-        }
-        
         .navigation-dot {
           transition: all 0.3s ease;
         }
-        
         @keyframes spin {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
         }
-        
         .animate-spin {
           animation: spin 1s linear infinite;
         }
-        
         @keyframes ping {
           75%, 100% {
             transform: scale(2);
             opacity: 0;
           }
         }
-        
         .animate-ping {
           animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
         }
-        
         @media (prefers-reduced-motion: reduce) {
-          .image-slide,
-          .navigation-dot,
-          .animate-spin,
-          .animate-ping {
+          .image-slide, .navigation-dot, .animate-spin, .animate-ping {
             animation: none;
             transition: none;
           }
         }
       `}</style>
 
-      {/* Main Image Container */}
       <div className="image-container cursor-pointer">
         {images.map((imgSrc, index) => (
           <div
             key={index}
             className={`image-slide ${index === currentImageIndex ? 'active' : ''}`}
           >
-            {/* Show loader while image is loading */}
             {!imageLoaded[index] && !imageError[index] && (
               <CircularLoader size="lg" color={theme.primary} />
             )}
-            
-            {/* Show error state if image failed to load */}
             {imageError[index] && <ErrorFallback />}
-            
             <Image
               src={imgSrc}
               alt={`${productName} - View ${index + 1}`}
@@ -401,8 +456,6 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
             />
           </div>
         ))}
-        
-        {/* Image Navigation Dots */}
         {images.length > 1 && (
           <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 z-30 flex gap-1.5 sm:gap-2">
             {images.map((_, index) => (
@@ -424,14 +477,9 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
         )}
       </div>
 
-      {/* Thumbnail Images - Mobile Only with circular loaders */}
       {isMobile && images.length > 1 && (
         <div className="flex gap-2 justify-center mt-3">
-          {images.map((imgSrc, index) => {
-            const [thumbLoaded, setThumbLoaded] = useState(false);
-            const [thumbError, setThumbError] = useState(false);
-            
-            return (
+          {images.map((imgSrc, index) => (
               <button
                 key={index}
                 onClick={() => handleThumbnailClick(index)}
@@ -444,8 +492,7 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
                   borderColor: index === currentImageIndex ? theme.primary : 'transparent'
                 }}
               >
-                {/* Thumbnail circular loader */}
-                {!thumbLoaded && !thumbError && (
+                {!thumbLoaded[index] && !thumbError[index] && (
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-50">
                     <div
                       className="w-4 h-4 rounded-full border-2 border-t-transparent animate-spin"
@@ -456,47 +503,33 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
                     />
                   </div>
                 )}
-                
-                {/* Thumbnail error state */}
-                {thumbError && (
+                {thumbError[index] && (
                   <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-                    <svg
-                      className="w-3 h-3 text-gray-400"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M6 18L18 6M6 6l12 12"
-                      />
+                    <svg className="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
                 )}
-                
                 <Image
                   src={imgSrc}
                   alt={`Thumbnail ${index + 1}`}
                   width={32}
                   height={32}
                   className={`object-contain w-full h-full transition-opacity duration-200 ${
-                    thumbLoaded && !thumbError ? 'opacity-100' : 'opacity-0'
+                    thumbLoaded[index] && !thumbError[index] ? 'opacity-100' : 'opacity-0'
                   }`}
                   loading="lazy"
                   onLoad={() => {
-                    setThumbLoaded(true);
-                    setThumbError(false);
+                    setThumbLoaded(prev => ({ ...prev, [index]: true }));
+                    setThumbError(prev => ({ ...prev, [index]: false }));
                   }}
                   onError={() => {
-                    setThumbError(true);
-                    setThumbLoaded(true);
+                    setThumbError(prev => ({ ...prev, [index]: true }));
+                    setThumbLoaded(prev => ({ ...prev, [index]: true }));
                   }}
                 />
               </button>
-            );
-          })}
+          ))}
         </div>
       )}
     </div>
@@ -514,16 +547,13 @@ const smoothScrollCSS = `
       transform: translateY(0);
     }
   }
-  
   .compound-section {
     animation: fadeInUp 0.6s ease-out;
     will-change: opacity, transform;
   }
-  
   * {
     scroll-behavior: smooth;
   }
-  
   @media (prefers-reduced-motion: reduce) {
     .compound-section {
       animation: none;
@@ -531,11 +561,12 @@ const smoothScrollCSS = `
   }
 `;
 
-export default function ProductsPage() {
+export default function ProductsPageInner() {
   const { addToCart } = useCart();
   const searchParams = useSearchParams();
   const brandFromUrl = searchParams.get("brand");
-  const { t, language, getProductsByBrand } = useLanguage();
+  // ✅ IMPORTANT: products added here for API data
+  const { t, language, getProductsByBrand, products } = useLanguage();
 
   // Get translations
   const productsTranslations = t?.productsPage || {
@@ -589,12 +620,25 @@ export default function ProductsPage() {
   const sectionRefs = useRef({});
   const productsStartRef = useRef(null);
 
+  // ✅ FIXED: brandProducts from API data instead of getProductsByBrand
+  const brandProducts = useMemo(() => {
+    if (!products || products.length === 0) return [];
+    if (selectedBrand === "All") return products;
+    return products.filter(p => p.brand === selectedBrand);
+  }, [products, selectedBrand]);
+
+  // Debug log
+  useEffect(() => {
+    console.log("🔴 brandProducts length:", brandProducts.length);
+    console.log("🔴 selectedBrand:", selectedBrand);
+    console.log("🔴 total products:", products?.length);
+  }, [brandProducts, selectedBrand, products]);
+
   // Debounce search input
   useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedSearch(searchInput);
     }, 300);
-
     return () => clearTimeout(timer);
   }, [searchInput]);
 
@@ -602,10 +646,8 @@ export default function ProductsPage() {
   useEffect(() => {
     let lastScrollY = window.scrollY;
     let ticking = false;
-    
     const handleScroll = () => {
       lastScrollY = window.scrollY;
-      
       if (!ticking) {
         window.requestAnimationFrame(() => {
           setIsScrolled(lastScrollY > 100);
@@ -614,7 +656,6 @@ export default function ProductsPage() {
         ticking = true;
       }
     };
-    
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -622,9 +663,14 @@ export default function ProductsPage() {
   // Memoized theme
   const theme = useMemo(() => BRAND_THEMES[selectedBrand], [selectedBrand]);
 
-  const brandCompounds = COMPOUNDS[selectedBrand] || {};
-  const compoundNames = Object.keys(brandCompounds);
-  const brandProducts = getProductsByBrand(selectedBrand);
+ const brandCompounds = COMPOUNDS[selectedBrand] || {};
+let compoundNames = Object.keys(brandCompounds);
+
+// Fallback: If no compounds, create "All Products"
+if (compoundNames.length === 0 && brandProducts.length > 0) {
+  compoundNames = ["All Products"];
+  brandCompounds["All Products"] = brandProducts.map(p => p.slug);
+}
   const brandCategories = [
     "All",
     ...new Set(brandProducts.map((p) => p.category)),
@@ -634,37 +680,37 @@ export default function ProductsPage() {
   const getProductName = useMemo(() => {
     return (product) => {
       if (!product) return '';
-      
       if (product.name && typeof product.name === 'object') {
         return product.name[language] || product.name.en || product.slug || '';
       }
-      
       return product.name || product.slug || '';
     };
   }, [language]);
 
   // Simple product match function
-  const productMatchesIdentifier = useCallback((product, identifier) => {
-    if (!product || !identifier) return false;
-    
-    const productSlug = normalizeText(product.slug || '');
-    const identifierLower = normalizeText(identifier);
-    
-    return productSlug === identifierLower;
-  }, []);
+  // Replace your existing productMatchesIdentifier with this:
+const productMatchesIdentifier = useCallback((product, identifier) => {
+  if (!product || !identifier) return false;
+  
+  // Normalize both for comparison
+  const productSlug = normalizeText(product.slug || '');
+  const identifierNormalized = normalizeText(identifier);
+  
+  // Check if product slug contains the identifier or vice versa
+  return productSlug === identifierNormalized || 
+         productSlug.includes(identifierNormalized) ||
+         identifierNormalized.includes(productSlug);
+}, []);
 
   // Simple search function
   const searchInProduct = useCallback((product, searchQuery) => {
     const query = searchQuery.toLowerCase().trim();
     if (!query) return true;
-    
     const currentName = getProductName(product).toLowerCase();
     if (currentName.includes(query)) return true;
-    
     if (product.composition?.toLowerCase().includes(query)) return true;
     if (product.category?.toLowerCase().includes(query)) return true;
     if (product.dosage?.toLowerCase().includes(query)) return true;
-    
     return false;
   }, [getProductName]);
 
@@ -679,10 +725,8 @@ export default function ProductsPage() {
   // Simplified Intersection Observer
   useEffect(() => {
     if (!compoundNames.length) return;
-
     let observer;
     let animationFrameId;
-    
     const handleIntersection = (entries) => {
       animationFrameId = requestAnimationFrame(() => {
         entries.forEach((entry) => {
@@ -694,7 +738,6 @@ export default function ProductsPage() {
         });
       });
     };
-
     observer = new IntersectionObserver(
       handleIntersection,
       { 
@@ -703,14 +746,12 @@ export default function ProductsPage() {
         threshold: 0.1
       }
     );
-
     setTimeout(() => {
       compoundNames.forEach((compound) => {
         const el = sectionRefs.current[compound];
         if (el) observer.observe(el);
       });
     }, 50);
-
     return () => {
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
@@ -738,68 +779,61 @@ export default function ProductsPage() {
       const distance = targetPosition - startPosition;
       const duration = 800;
       let startTime = null;
-
       const easeInOutCubic = (t) => {
         return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
       };
-
       const scrollAnimation = (currentTime) => {
         if (!startTime) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
         const easeProgress = easeInOutCubic(progress);
-        
         window.scrollTo(0, startPosition + distance * easeProgress);
-        
         if (timeElapsed < duration) {
           requestAnimationFrame(scrollAnimation);
         }
       };
-
       requestAnimationFrame(scrollAnimation);
     }
   }, []);
 
   const scrollToProductsStart = useCallback(() => {
     if (!productsStartRef.current) return;
-
     const offset = 140;
     const y =
       productsStartRef.current.getBoundingClientRect().top +
       window.scrollY -
       offset;
-
     window.scrollTo({ top: y, behavior: "smooth" });
   }, []);
 
   // Memoized filtered products for each compound
-  const filteredProductsByCompound = useMemo(() => {
-    const result = {};
+ const filteredProductsByCompound = useMemo(() => {
+  const result = {};
+  
+  compoundNames.forEach(compound => {
+    const identifiers = brandCompounds[compound] || [];
     
-    compoundNames.forEach(compound => {
-      const identifiers = brandCompounds[compound] || [];
+    let items = brandProducts.filter((product) => {
+      // For "All Products" compound, show all products
+      if (compound === "All Products") return true;
       
-      let items = brandProducts.filter((product) => {
-        const belongsToCompound = identifiers.some(identifier => 
-          productMatchesIdentifier(product, identifier)
-        );
-        
-        if (!belongsToCompound) return false;
-        
-        if (categoryFilter !== "All" && product.category !== categoryFilter) return false;
-        
-        if (debouncedSearch.trim()) {
-          return searchInProduct(product, debouncedSearch);
-        }
-        
-        return true;
-      });
+      const belongsToCompound = identifiers.some(identifier => 
+        productMatchesIdentifier(product, identifier)
+      );
       
-      result[compound] = items;
+      if (!belongsToCompound) return false;
+      if (categoryFilter !== "All" && product.category !== categoryFilter) return false;
+      if (debouncedSearch.trim()) {
+        return searchInProduct(product, debouncedSearch);
+      }
+      return true;
     });
     
-    return result;
-  }, [compoundNames, brandCompounds, brandProducts, productMatchesIdentifier, categoryFilter, debouncedSearch, searchInProduct]);
+    result[compound] = items;
+  });
+  
+  return result;
+}, [compoundNames, brandCompounds, brandProducts, productMatchesIdentifier, categoryFilter, debouncedSearch, searchInProduct]);
 
   // Check if any compound has results
   const hasAnyResults = useMemo(() => {
@@ -818,28 +852,34 @@ export default function ProductsPage() {
     }
   };
 
+  // Loading state
+  if (!products || products.length === 0) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="text-xl">Loading products...</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full relative min-h-screen">
-      {/* Add the smooth CSS styles */}
       <style jsx global>{smoothScrollCSS}</style>
       <Navbar />
 
       {/* Background with brand image */}
       <div className="fixed inset-0 -z-10 cursor-pointer">
-        {/* Brand background image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-fixed bg-no-repeat "
           style={{
             backgroundImage: `url(${theme.bgImage})`,
           }}
         ></div>
-
-        {/* Conditional Ajanta Pharma specific background images */}
         {selectedBrand === "ED Ajanta Pharma" &&
           theme.bgUpImage &&
           theme.bgDownImage && (
             <>
-              {/* Top right image */}
               <div
                 className="absolute -top-20 -right-35 w-130 h-200 opacity-80"
                 style={{
@@ -850,8 +890,6 @@ export default function ProductsPage() {
                   mixBlendMode: "multiply",
                 }}
               ></div>
-
-              {/* Bottom left image */}
               <div
                 className="absolute -bottom-20 -left-35 w-110 h-204 opacity-80"
                 style={{
@@ -864,8 +902,6 @@ export default function ProductsPage() {
               ></div>
             </>
           )}
-
-        {/* White overlay for better readability but still showing background */}
         <div className="absolute inset-0 bg-white/30"></div>
       </div>
 
@@ -881,7 +917,6 @@ export default function ProductsPage() {
           {BRAND_ORDER.map((brandKey) => {
             const b = BRAND_THEMES[brandKey];
             const isActive = selectedBrand === brandKey;
-
             return (
               <button
                 key={brandKey}
@@ -928,73 +963,66 @@ export default function ProductsPage() {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 ">
         {/* Brand Logos Grid */}
-        {/* Brand Logos Grid */}
-{/* Brand Logos Grid */}
-<div className="mb-6 sm:mb-8 mt-7">
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 ">
-    {BRAND_ORDER.map((brandKey, index) => {
-      const b = BRAND_THEMES[brandKey];
-      const isActive = selectedBrand === brandKey;
-
-      return (
-        <button
-          key={brandKey}
-          onClick={() => {
-            setSelectedBrand(brandKey);
-            setSearchInput("");
-            setCategoryFilter("All");
-          }}
-          className={`relative overflow-hidden cursor-pointer rounded-xl sm:rounded-2xl p-3 sm:p-4 h-32 sm:h-36 md:h-40 transition-all duration-300 transform ${
-            isActive
-              ? "ring-2 sm:ring-3 ring-offset-1 sm:ring-offset-2 shadow-2xl scale-105 z-10"
-              : "hover:shadow-xl hover:scale-102"
-          }`}
-          style={{
-            border: `2px solid ${isActive ? b.primary : "#e5e7eb"}`,
-            boxShadow: isActive
-              ? `0 10px 25px -5px ${b.primary}40`
-              : "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
-            backgroundColor: 'white',
-          }}
-        >
-          {isActive && (
-            <div className="absolute top-1 right-1 sm:top-2 sm:right-2 z-10">
-              <div
-                className="w-2 h-2 sm:w-3 sm:h-3 rounded-full animate-pulse"
-                style={{
-                  backgroundColor: b.primary,
-                  boxShadow: `0 0 10px ${b.primary}`,
-                }}
-              ></div>
-            </div>
-          )}
-
-          <div className="flex items-center justify-center h-full w-full">
-            {/* Significantly larger logo container sizes */}
-            <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36">
-              <Image
-                src={b.logo}
-                alt={b.name}
-                fill
-                className="object-contain"
-                sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
-                priority={index === 0}
-              />
-            </div>
+        <div className="mb-6 sm:mb-8 mt-7">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 sm:gap-6 ">
+            {BRAND_ORDER.map((brandKey, index) => {
+              const b = BRAND_THEMES[brandKey];
+              const isActive = selectedBrand === brandKey;
+              return (
+                <button
+                  key={brandKey}
+                  onClick={() => {
+                    setSelectedBrand(brandKey);
+                    setSearchInput("");
+                    setCategoryFilter("All");
+                  }}
+                  className={`relative overflow-hidden cursor-pointer rounded-xl sm:rounded-2xl p-3 sm:p-4 h-32 sm:h-36 md:h-40 transition-all duration-300 transform ${
+                    isActive
+                      ? "ring-2 sm:ring-3 ring-offset-1 sm:ring-offset-2 shadow-2xl scale-105 z-10"
+                      : "hover:shadow-xl hover:scale-102"
+                  }`}
+                  style={{
+                    border: `2px solid ${isActive ? b.primary : "#e5e7eb"}`,
+                    boxShadow: isActive
+                      ? `0 10px 25px -5px ${b.primary}40`
+                      : "0 4px 6px -1px rgba(0, 0, 0, 0.1)",
+                    backgroundColor: 'white',
+                  }}
+                >
+                  {isActive && (
+                    <div className="absolute top-1 right-1 sm:top-2 sm:right-2 z-10">
+                      <div
+                        className="w-2 h-2 sm:w-3 sm:h-3 rounded-full animate-pulse"
+                        style={{
+                          backgroundColor: b.primary,
+                          boxShadow: `0 0 10px ${b.primary}`,
+                        }}
+                      ></div>
+                    </div>
+                  )}
+                  <div className="flex items-center justify-center h-full w-full">
+                    <div className="relative w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36">
+                      <Image
+                        src={b.logo}
+                        alt={b.name}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 640px) 112px, (max-width: 768px) 128px, 144px"
+                        priority={index === 0}
+                      />
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-1 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                    <span className="text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full bg-white/95 shadow-sm whitespace-nowrap" 
+                      style={{ color: b.primary, border: `1px solid ${b.primary}30` }}>
+                      {b.name}
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
           </div>
-          
-          {/* Brand name tooltip on hover */}
-          <div className="absolute -bottom-1 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-            <span className="text-[10px] sm:text-xs font-medium px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-full bg-white/95 shadow-sm whitespace-nowrap" 
-              style={{ color: b.primary, border: `1px solid ${b.primary}30` }}>
-              {b.name}
-            </span>
-          </div>
-        </button>
-      );
-    })}
-  </div>
-</div>
+        </div>
 
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
@@ -1010,7 +1038,6 @@ export default function ProductsPage() {
                 {hero.suffix || "Products"}
               </span>
             </h1>
-
             <p className="text-base xs:text-lg sm:text-lg text-gray-700 max-w-2xl mx-auto px-2">
               {hero.subtitle ||
                 "Browse through our comprehensive range of pharmaceutical products"}
@@ -1020,7 +1047,6 @@ export default function ProductsPage() {
           {/* Advanced Filters - White background */}
           <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-xl p-4 sm:p-6 mb-6 sm:mb-8 border border-gray-100">
             <div className="flex flex-col gap-4 sm:gap-6">
-              {/* Search Input */}
               <div className="w-full">
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 sm:pl-4 flex items-center pointer-events-none ">
@@ -1051,10 +1077,7 @@ export default function ProductsPage() {
                   />
                 </div>
               </div>
-
-              {/* Filters Row */}
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 ">
-                {/* Compound Select */}
                 <div className="relative flex-1">
                   <select
                     value={selectedCompound}
@@ -1090,8 +1113,6 @@ export default function ProductsPage() {
                     </svg>
                   </div>
                 </div>
-
-                {/* Category Select */}
                 <div className="relative flex-1">
                   <select
                     value={categoryFilter}
@@ -1151,7 +1172,6 @@ export default function ProductsPage() {
                 {/* Compound Header */}
                 <div className="mb-6 sm:mb-8 transition-all duration-300 transform hover:scale-[1.01]">
                   <div className="relative">
-                    {/* Main Header Container */}
                     <div
                       className="relative overflow-hidden rounded-xl mb-3 sm:mb-4"
                       style={{
@@ -1159,21 +1179,16 @@ export default function ProductsPage() {
                         boxShadow: theme.compoundHeaderShadow,
                       }}
                     >
-                      {/* Top accent line */}
                       <div
                         className="absolute top-0 left-0 right-0 h-1"
                         style={{
                           background: `linear-gradient(90deg, ${theme.primary} 0%, ${theme.secondary} 100%)`,
                         }}
                       ></div>
-
-                      {/* Main content */}
                       <div className="px-4 sm:px-6 py-3 sm:py-4">
                         <div className="flex items-center justify-between gap-2 sm:gap-4">
-                          {/* Left side - Compound name */}
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 sm:gap-3">
-                              {/* Active indicator dot */}
                               <div className="flex-shrink-0">
                                 <div className="relative">
                                   <div
@@ -1182,8 +1197,6 @@ export default function ProductsPage() {
                                   ></div>
                                 </div>
                               </div>
-
-                              {/* Compound name */}
                               <div className="min-w-0">
                                 <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white truncate drop-shadow-sm">
                                   {compound}
@@ -1200,8 +1213,6 @@ export default function ProductsPage() {
                               </div>
                             </div>
                           </div>
-
-                          {/* Right side - Product count */}
                           <div className="flex-shrink-0">
                             <div
                               className="px-3 py-1.5 rounded-lg backdrop-blur-sm bg-white/10 border border-white/20"
@@ -1221,8 +1232,6 @@ export default function ProductsPage() {
                           </div>
                         </div>
                       </div>
-
-                      {/* Bottom shine */}
                       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
                     </div>
                   </div>
@@ -1254,13 +1263,10 @@ export default function ProductsPage() {
                           {/* MOBILE VIEW */}
                           <div className="lg:hidden">
                             <div className="space-y-4 sm:space-y-6">
-                              {/* Product Image with Animation */}
                               <div className="sm:rounded-xl p-3 sm:p-4 relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
                                 <ProductImageGallery product={p} theme={theme} isMobile={true} />
                               </div>
-
-                              {/* Product Details */}
                               <div className="space-y-3 sm:space-y-4">
                                 <div>
                                   <h3
@@ -1270,8 +1276,6 @@ export default function ProductsPage() {
                                     {productName}
                                   </h3>
                                 </div>
-
-                                {/* Price Display - Brand Colors */}
                                 {isInStock && priceInfo && (
                                   <div 
                                     className="rounded-lg p-3 border shadow-sm"
@@ -1320,8 +1324,6 @@ export default function ProductsPage() {
                                     </div>
                                   </div>
                                 )}
-
-                                {/* Specifications */}
                                 <div className="space-y-2">
                                   {p.dosage && (
                                     <div className="flex items-start">
@@ -1356,7 +1358,6 @@ export default function ProductsPage() {
                                     </div>
                                   )}
                                 </div>
-
                                 {p.description && (
                                   <p className="text-gray-600 text-xs sm:text-sm pt-3 border-t border-gray-100 line-clamp-2">
                                     {typeof p.description === 'object' 
@@ -1364,8 +1365,6 @@ export default function ProductsPage() {
                                       : p.description}
                                   </p>
                                 )}
-
-                                {/* Action Buttons */}
                                 <div className="flex flex-col gap-2 sm:gap-3 pt-3 sm:pt-4">
                                   {isInStock ? (
                                     <>
@@ -1380,7 +1379,6 @@ export default function ProductsPage() {
                                       >
                                         {productCard.viewDetails || "View Details"}
                                       </Link>
-
                                       <button
                                         onClick={() => handleAddToCart(p)}
                                         className="w-full inline-flex items-center justify-center gap-1 sm:gap-2 px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
@@ -1408,15 +1406,12 @@ export default function ProductsPage() {
                           <div className="hidden lg:grid lg:grid-cols-2 gap-6 sm:gap-8">
                             {isEven ? (
                               <>
-                                {/* Image Left */}
                                 <div className="flex items-center justify-center">
                                   <div className="p-6 w-full relative overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
                                     <ProductImageGallery product={p} theme={theme} />
                                   </div>
                                 </div>
-
-                                {/* Details Right */}
                                 <div className="flex flex-col justify-center">
                                   <div className="space-y-3 sm:space-y-4">
                                     <h3
@@ -1425,16 +1420,11 @@ export default function ProductsPage() {
                                     >
                                       {productName}
                                     </h3>
-
-                                    
-
-                                    {/* Specifications List */}
                                     <div className="space-y-2 sm:space-y-3">
                                       {p.dosage && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.dosageLabel ||
-                                              "Dosage:"}
+                                            {productCard.dosageLabel || "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.dosage}
@@ -1444,8 +1434,7 @@ export default function ProductsPage() {
                                       {p.composition && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.compositionLabel ||
-                                              "Composition:"}
+                                            {productCard.compositionLabel || "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.composition}
@@ -1455,8 +1444,7 @@ export default function ProductsPage() {
                                       {p.pack_size && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.packSizeLabel ||
-                                              "Pack Size:"}
+                                            {productCard.packSizeLabel || "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.pack_size}
@@ -1464,7 +1452,6 @@ export default function ProductsPage() {
                                         </div>
                                       )}
                                     </div>
-
                                     {p.description && (
                                       <div className="pt-3 border-t border-gray-100">
                                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -1474,8 +1461,6 @@ export default function ProductsPage() {
                                         </p>
                                       </div>
                                     )}
-
-                                    {/* Price Display - Brand Colors */}
                                     {isInStock && priceInfo && (
                                       <div 
                                         className="rounded-xl p-4 border shadow-sm"
@@ -1524,8 +1509,6 @@ export default function ProductsPage() {
                                         </div>
                                       </div>
                                     )}
-
-                                    {/* Action Buttons */}
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">
                                       {isInStock ? (
                                         <>
@@ -1538,10 +1521,8 @@ export default function ProductsPage() {
                                               backgroundColor: `${theme.primary}08`,
                                             }}
                                           >
-                                            {productCard.viewDetails ||
-                                              "View Details"}
+                                            {productCard.viewDetails || "View Details"}
                                           </Link>
-
                                           <button
                                             onClick={() => handleAddToCart(p)}
                                             className="flex-1 inline-flex items-center justify-center cursor-pointer gap-2 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
@@ -1566,7 +1547,6 @@ export default function ProductsPage() {
                               </>
                             ) : (
                               <>
-                                {/* Details Left */}
                                 <div className="flex flex-col justify-center">
                                   <div className="space-y-3 sm:space-y-4">
                                     <h3
@@ -1575,16 +1555,11 @@ export default function ProductsPage() {
                                     >
                                       {productName}
                                     </h3>
-
-                                    
-
-                                    {/* Specifications List */}
                                     <div className="space-y-2 sm:space-y-3">
                                       {p.dosage && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.dosageLabel ||
-                                              "Dosage:"}
+                                            {productCard.dosageLabel || "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.dosage}
@@ -1594,8 +1569,7 @@ export default function ProductsPage() {
                                       {p.composition && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.compositionLabel ||
-                                              "Composition:"}
+                                            {productCard.compositionLabel || "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.composition}
@@ -1605,8 +1579,7 @@ export default function ProductsPage() {
                                       {p.pack_size && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
-                                            {productCard.packSizeLabel ||
-                                              "Pack Size:"}
+                                            {productCard.packSizeLabel || "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
                                             {p.pack_size}
@@ -1614,7 +1587,6 @@ export default function ProductsPage() {
                                         </div>
                                       )}
                                     </div>
-
                                     {p.description && (
                                       <div className="pt-3 border-t border-gray-100">
                                         <p className="text-gray-600 text-sm leading-relaxed">
@@ -1624,8 +1596,6 @@ export default function ProductsPage() {
                                         </p>
                                       </div>
                                     )}
-
-                                    {/* Price Display - Brand Colors */}
                                     {isInStock && priceInfo && (
                                       <div 
                                         className="rounded-xl p-4 border shadow-sm"
@@ -1674,8 +1644,6 @@ export default function ProductsPage() {
                                         </div>
                                       </div>
                                     )}
-
-                                    {/* Action Buttons */}
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">
                                       {isInStock ? (
                                         <>
@@ -1688,10 +1656,8 @@ export default function ProductsPage() {
                                               backgroundColor: `${theme.primary}08`,
                                             }}
                                           >
-                                            {productCard.viewDetails ||
-                                              "View Details"}
+                                            {productCard.viewDetails || "View Details"}
                                           </Link>
-
                                           <button
                                             onClick={() => handleAddToCart(p)}
                                             className="flex-1 inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2 sm:py-2 cursor-pointer rounded-lg font-medium text-sm sm:text-base text-white transition-all duration-200 hover:shadow-lg"
@@ -1713,8 +1679,6 @@ export default function ProductsPage() {
                                     </div>
                                   </div>
                                 </div>
-
-                                {/* Image Right */}
                                 <div className="flex items-center justify-center">
                                   <div className="p-6 w-full relative overflow-hidden">
                                     <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
@@ -1764,7 +1728,6 @@ export default function ProductsPage() {
                 {emptyState.description ||
                   "We couldn't find any products matching your search criteria."}
               </p>
-
               <div className="flex flex-col sm:flex-row gap-3 justify-center items-center w-full">
                 <button
                   onClick={() => setSearchInput("")}
@@ -1776,7 +1739,6 @@ export default function ProductsPage() {
                 >
                   {filters.clearSearch || "Clear Search"}
                 </button>
-
                 <button
                   onClick={() => {
                     setSearchInput("");

@@ -2298,7 +2298,7 @@ export default async function BlogPost({ params }) {
                       Sildenafil
                     </span>
                     <span className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                      Men's Health
+                      Men&apos;s Health
                     </span>
                   </div>
                 </div>

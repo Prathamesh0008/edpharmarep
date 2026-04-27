@@ -112,6 +112,8 @@ export default function Testimonials() {
           box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
           text-align: left;
           transition: transform 0.3s ease;
+          margin-top:20;
+          margin-bottom:80
         }
 
         .card:hover {

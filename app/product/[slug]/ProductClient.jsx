@@ -83,7 +83,7 @@ export default function ProductClient({ slug }) {
   if (!product) {
     return (
       <div className="p-8 sm:p-12 md:p-20 text-center text-lg sm:text-xl text-gray-600">
-        Product "{slug}" not found. Please check the URL or try another product.
+        Product &quot;{slug}&quot; not found. Please check the URL or try another product.
       </div>
     );
   }
