@@ -183,7 +183,7 @@ export default function Navbar() {
           {/* LOGO */}
           <Link href="/" className="flex items-center cursor-pointer flex-shrink-0">
             <img
-              src="/Ed_5.svg"
+              src="/ed_5.svg"
               alt="ED Pharma"
               className="h-10 sm:h-10 lg:h-11 w-auto object-contain"
             />
