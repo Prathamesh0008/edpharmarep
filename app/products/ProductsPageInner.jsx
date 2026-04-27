@@ -448,8 +448,8 @@ const ProductImageGallery = ({ product, theme, isMobile = false }) => {
                 imageLoaded[index] && !imageError[index] ? 'opacity-100' : 'opacity-0'
               }`}
               sizes={isMobile ? "60vw" : "40vw"}
-              priority={index === 0}
-              loading={index === 0 ? "eager" : "lazy"}
+              priority={false}
+              loading="lazy"
               quality={85}
               onLoad={() => handleImageLoad(index)}
               onError={() => handleImageError(index)}

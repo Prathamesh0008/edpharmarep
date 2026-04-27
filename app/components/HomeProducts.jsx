@@ -96,7 +96,7 @@ const LoadingSpinner = ({ themeColor = "#0A2A73" }) => {
 };
 
 /* ---------------- IMAGE WITH LOADING STATE ---------------- */
-const ImageWithLoading = ({ src, alt, fill, className, sizes, priority, themeColor }) => {
+const ImageWithLoading = ({ src, alt, fill, className, sizes, priority, loading = "lazy", themeColor }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
@@ -120,6 +120,7 @@ const ImageWithLoading = ({ src, alt, fill, className, sizes, priority, themeCol
         className={`${className} transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         sizes={sizes}
         priority={priority}
+        loading={priority ? undefined : loading}
         onLoad={() => setIsLoading(false)}
         onError={() => {
           setIsLoading(false);
@@ -139,11 +140,11 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
 
   const images = useMemo(() => {
     const imageArray = [
-      product?.image || "/placeholder.jpg",
-      product?.additionalImages?.[0] || "/placeholder.jpg",
-      product?.additionalImages?.[1] || "/placeholder.jpg",
+      product?.image,
+      ...(product?.additionalImages || []),
     ];
-    return imageArray.filter(img => img && img.trim() !== "");
+    const validImages = imageArray.filter(img => img && img.trim() !== "");
+    return validImages.length ? validImages : ["/placeholder.jpg"];
   }, [product]);
 
   useEffect(() => {
@@ -208,7 +209,8 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
               fill
               className="object-contain p-3 sm:p-4 md:p-5 lg:p-6 transition-transform duration-200 group-hover:scale-105"
               sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              priority={index === 0}
+              priority={false}
+              loading="lazy"
               themeColor={themeColor}
             />
           </div>

@@ -15,29 +15,42 @@ export default function ProductClient({ slug }) {
   const { t, language, getProductBySlug } = useLanguage();
   const [quantity, setQuantity] = useState(100);
 
-  console.log("DEBUG ProductClient - props slug:", slug);
-  console.log("DEBUG ProductClient - language:", language);
-  console.log(
-    "DEBUG ProductClient - getProductBySlug exists:",
-    !!getProductBySlug,
-  );
-
   useEffect(() => {
-    if (slug && getProductBySlug) {
-      console.log("DEBUG Fetching product for slug:", slug);
-      try {
-        const translated = getProductBySlug(slug);
-        console.log("DEBUG Translated product:", translated);
-        setProduct(translated);
-      } catch (error) {
-        console.error("ERROR fetching product:", error);
-      } finally {
+    let cancelled = false;
+
+    async function loadProduct() {
+      if (!slug) {
         setLoading(false);
+        return;
       }
-    } else {
-      console.log("DEBUG Missing slug or getProductBySlug");
-      setLoading(false);
+
+      setLoading(true);
+      const cachedProduct = getProductBySlug?.(slug) || null;
+
+      try {
+        const response = await fetch(`/api/products/${slug}?lang=${language}`);
+        const result = await response.json();
+
+        if (!cancelled) {
+          setProduct(result?.success ? result.data : cachedProduct);
+        }
+      } catch (error) {
+        console.error("Error loading product:", error);
+        if (!cancelled) {
+          setProduct(cachedProduct);
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false);
+        }
+      }
     }
+
+    loadProduct();
+
+    return () => {
+      cancelled = true;
+    };
   }, [slug, getProductBySlug, language]);
 
   // Helper function to get localized product name
@@ -128,12 +141,14 @@ export default function ProductClient({ slug }) {
   const productName = getLocalizedName(product);
   const productDescription = getLocalizedDescription(product);
 
-  // Default product images
   const productImages = [
-    product?.image || "/placeholder.jpg",
-    product?.additionalImages?.[0] || "/placeholder.jpg",
-    product?.additionalImages?.[1] || "/placeholder.jpg",
-  ];
+    product?.image,
+    ...(product?.additionalImages || []),
+  ].filter(Boolean);
+
+  if (productImages.length === 0) {
+    productImages.push("/placeholder.jpg");
+  }
 
   /* ================= BRAND THEMES ================= */
   const BRAND_THEMES = {

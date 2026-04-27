@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import Product from "@/app/models/Product";
+import { optimizeCloudinaryImage, optimizeCloudinaryImages } from "@/lib/cloudinaryImage";
 
 export async function GET(request, { params }) {
   try {
@@ -35,8 +36,8 @@ export async function GET(request, { params }) {
       form: product.form || "",
       pack_size: product.pack_size || "",
       casId: product.casId || "",
-      image: product.image || "/placeholder.jpg",
-      additionalImages: product.additionalImages || [],
+      image: optimizeCloudinaryImage(product.image || "/placeholder.jpg", 1000),
+      additionalImages: optimizeCloudinaryImages(product.additionalImages || [], 1000),
       description: localized.description || translations.en?.description || "",
       metaTitle: localized.metaTitle || translations.en?.metaTitle || "",
       metaDescription: localized.metaDescription || translations.en?.metaDescription || "",
@@ -53,7 +54,14 @@ export async function GET(request, { params }) {
       ),
     };
     
-    return NextResponse.json({ success: true, data: formattedProduct });
+    return NextResponse.json(
+      { success: true, data: formattedProduct },
+      {
+        headers: {
+          "Cache-Control": "public, s-maxage=300, stale-while-revalidate=3600",
+        },
+      }
+    );
   } catch (error) {
     console.error("API Error:", error);
     return NextResponse.json(
