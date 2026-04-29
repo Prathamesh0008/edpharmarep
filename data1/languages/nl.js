@@ -936,7 +936,10 @@ homePage: {
   hero: {
     title: "Officiële & vertrouwde farmaceutische distributeur Europa",
     subtitle: "ED Pharma levert hoogwaardige, GMP-conforme farmaceutische producten aan gereguleerde internationale markten.",
-    ctaViewProducts: "Bekijk producten"
+    ctaViewProducts: "Bekijk producten",
+    expressShipping: "Snelle verzending binnen de EU",
+realTimeTracking: "Realtime tracking",
+support247: "24/7 ondersteuning",
   },
   featured: {
     title: "Uitgelichte producten",

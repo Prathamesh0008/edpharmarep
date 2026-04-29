@@ -924,6 +924,9 @@ homePage: {
     subtitle:
       "ED Pharma испорачува висококвалитетни, GMP-усогласени фармацевтски производи на регулирани меѓународни пазари.",
     ctaViewProducts: "Види производи",
+    expressShipping: "Експресна испорака во ЕУ",
+realTimeTracking: "Следење во реално време",
+support247: "Поддршка 24/7",
   },
 
   featured: {

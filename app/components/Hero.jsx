@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { Truck, Headset , Globe } from "lucide-react";
 
-export default function HeroBanner({ heroTitle, heroSubtitle }) {
+export default function HeroBanner({ heroTitle, heroSubtitle, hero = {} }) {
   return (
     <div className="relative w-full min-h-[600px] overflow-hidden">
 
@@ -82,7 +82,9 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
           whitespace-nowrap hover:bg-[#0A2A73]/90
           w-full">
           <Truck size={16} className="sm:w-[18px] sm:h-[18px] md:w-5 md:h-5 flex-shrink-0" />
-          <span className="truncate">Express Shipping EU</span>
+          <span className="truncate">
+            {hero?.expressShipping || "Express Shipping EU"}
+          </span>
         </div>
 
         {/* TRACKING */}
@@ -96,7 +98,9 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
           whitespace-nowrap hover:bg-[#0A2A73]/90
           w-full">
           <Globe size={16} className="sm:w-[18px] sm:h-[18px] md:w-5 md:h-5 flex-shrink-0" />
-          <span className="truncate">Real Time Tracking</span>
+          <span className="truncate">
+            {hero?.realTimeTracking || "Real Time Tracking"}
+          </span>
         </div>
 
         {/* CUSTOMER SERVICE */}
@@ -110,7 +114,9 @@ export default function HeroBanner({ heroTitle, heroSubtitle }) {
           whitespace-nowrap hover:bg-[#0A2A73]/90
           w-full sm:col-span-2 lg:col-span-1">
           <Headset size={16} className="sm:w-[18px] sm:h-[18px] md:w-5 md:h-5 flex-shrink-0" />
-          <span className="truncate">24/7 Support</span>
+          <span className="truncate">
+            {hero?.support247 || "24/7 Support"}
+          </span>
         </div>
       </div>
     </div>

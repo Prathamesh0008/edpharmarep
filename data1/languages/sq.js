@@ -885,6 +885,9 @@ productDetail: {
       title: "Shpërndarës zyrtar dhe i besuar farmaceutik Evropë",
       subtitle: "ED Pharma ofron produkte farmaceutike cilësore, të përputhshme me GMP, nëpër tregjet e rregulluara ndërkombëtare.",
       ctaViewProducts: "Shiko Produktet",
+      expressShipping: "Dërgesë e shpejtë në BE",
+realTimeTracking: "Ndjekje në kohë reale",
+support247: "Mbështetje 24/7",
     },
     featured: {
       title: "Produkte të Veçuara",

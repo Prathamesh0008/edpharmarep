@@ -888,6 +888,9 @@ homePage: {
     subtitle:
       "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets.",
     ctaViewProducts: "View Products",
+    expressShipping: "Express Shipping EU",
+    realTimeTracking: "Real Time Tracking",
+    support247: "24/7 Support",
   },
 
   featured: {

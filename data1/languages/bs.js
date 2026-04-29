@@ -910,6 +910,9 @@ productDetail: {
       subtitle:
         "ED Pharma isporučuje visokokvalitetne, GMP-uskladene farmaceutske proizvode na regulisana međunarodna tržišta.",
       ctaViewProducts: "Pogledaj proizvode",
+      expressShipping: "Brza dostava u EU",
+realTimeTracking: "Praćenje u realnom vremenu",
+support247: "Podrška 24/7",
     },
 
     featured: {

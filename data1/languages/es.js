@@ -995,7 +995,10 @@ homePage: {
   hero: {
     title: "Distribuidor farmacéutico oficial y de confianza Europa",
     subtitle: "ED Pharma suministra productos farmacéuticos de alta calidad y conformes con las GMP en mercados internacionales regulados.",
-    ctaViewProducts: "Ver productos"
+    ctaViewProducts: "Ver productos",
+    expressShipping: "Envío exprés en la UE",
+realTimeTracking: "Seguimiento en tiempo real",
+support247: "Soporte 24/7",
   },
   featured: {
     title: "Productos destacados",

@@ -885,6 +885,9 @@ productDetail: {
       title: "Službeni i pouzdani farmaceutski distributer Europa",
       subtitle: "ED Pharma isporučuje visokokvalitetne farmaceutske proizvode koji su u skladu s GMP-om na regulirana međunarodna tržišta.",
       ctaViewProducts: "Pogledaj proizvode",
+      expressShipping: "Ekspresna dostava u EU",
+realTimeTracking: "Praćenje u stvarnom vremenu",
+support247: "Podrška 24/7",
     },
     featured: {
       title: "Istaknuti proizvodi",

@@ -1108,6 +1108,9 @@ homePage: {
     subtitle:
       "A ED Pharma fornece produtos farmacêuticos de alta qualidade e em conformidade com as BPF para mercados internacionais regulamentados.",
     ctaViewProducts: "Ver Produtos",
+    expressShipping: "Envio expresso na UE",
+realTimeTracking: "Rastreamento em tempo real",
+support247: "Suporte 24/7",
   },
 
   featured: {

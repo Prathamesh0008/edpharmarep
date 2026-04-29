@@ -993,7 +993,10 @@ homePage: {
   hero: {
     title: "Offizieller & vertrauenswürdiger Pharma-Vertriebspartner Europa",
     subtitle: "ED Pharma liefert hochwertige, GMP-konforme pharmazeutische Produkte für regulierte internationale Märkte.",
-    ctaViewProducts: "Produkte ansehen"
+    ctaViewProducts: "Produkte ansehen",
+    expressShipping: "Expressversand in der EU",
+realTimeTracking: "Echtzeitverfolgung",
+support247: "24/7 Support",
   },
   featured: {
     title: "Ausgewählte Produkte",

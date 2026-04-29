@@ -978,6 +978,9 @@ homePage: {
     subtitle:
       "ED 医药在受监管的国际市场上提供高质量、符合 GMP 标准的医药产品。",
     ctaViewProducts: "查看产品",
+    expressShipping: "欧盟快速配送",
+realTimeTracking: "实时追踪",
+support247: "全天候 24/7 支持",
   },
 
   featured: {

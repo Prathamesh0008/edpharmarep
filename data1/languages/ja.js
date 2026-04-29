@@ -933,7 +933,10 @@ homePage: {
   hero: {
     title: "ヨーロッパの公式 & 信頼される医薬品卸売業者",
     subtitle: "EDファーマは、規制された国際市場において、高品質かつGMPに準拠した医薬品を提供しています。",
-    ctaViewProducts: "製品を見る"
+    ctaViewProducts: "製品を見る",
+    expressShipping: "EUへの迅速配送",
+realTimeTracking: "リアルタイム追跡",
+support247: "24時間年中無休サポート",
   },
   featured: {
     title: "注目の製品",

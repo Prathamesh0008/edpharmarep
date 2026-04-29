@@ -17,10 +17,11 @@ export default function Home() {
   const heroSubtitle =
     t?.homePage?.hero?.subtitle ||
     "ED Pharma delivers high-quality, GMP-compliant pharmaceutical products across regulated international markets.";
+  const hero = t?.homePage?.hero || {};
 
   return (
     <>
-      <Hero heroTitle={heroTitle} heroSubtitle={heroSubtitle} />
+      <Hero heroTitle={heroTitle} heroSubtitle={heroSubtitle} hero={hero} />
       <HomeProducts activeBrand={activeBrand} setActiveBrand={setActiveBrand} />
       <FeaturedProducts />
       <Testimonials />

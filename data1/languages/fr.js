@@ -1080,7 +1080,10 @@ homePage: {
   hero: {
     title: "Distributeur pharmaceutique officiel et de confiance Europe",
     subtitle: "ED Pharma fournit des produits pharmaceutiques de haute qualité, conformes aux BPF, sur les marchés internationaux réglementés.",
-    ctaViewProducts: "Voir les produits"
+    ctaViewProducts: "Voir les produits",
+    expressShipping: "Livraison express en UE",
+realTimeTracking: "Suivi en temps réel",
+support247: "Support 24/7",
   },
   featured: {
     title: "Produits en vedette",

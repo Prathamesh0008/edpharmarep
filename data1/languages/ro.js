@@ -884,6 +884,9 @@ productDetail: {
       title: "Distribuitor farmaceutic oficial și de încredere Europa",
       subtitle: "ED Pharma furnizează produse farmaceutice de înaltă calitate, conforme BPF, pe piețele internaționale reglementate.",
       ctaViewProducts: "Vezi Produse",
+      expressShipping: "Livrare rapidă în UE",
+realTimeTracking: "Urmărire în timp real",
+support247: "Suport 24/7",
     },
     featured: {
       title: "Produse Recomandate",
