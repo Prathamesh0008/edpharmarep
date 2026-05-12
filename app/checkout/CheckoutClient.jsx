@@ -9,6 +9,7 @@ import Navbar from "../components/Navbar";
 import { getLoggedInUser } from "@/lib/auth";
 import { useLanguage } from "@/context/LanguageContext";
 import LoginPopup from "../components/LoginPopup";
+import emailjs from "@emailjs/browser";
 
 import {
   MapPin,
@@ -354,6 +355,132 @@ export default function CheckoutClient() {
     setForm((p) => ({ ...p, city: cleaned }));
   };
 
+  const formatPaymentMethod = (method) => {
+    return (
+      {
+        card: "Credit / Debit Card",
+        bank: "Bank Transfer",
+        crypto: "Cryptocurrency",
+        upi: "UPI",
+        cod: "Cash on Delivery",
+      }[method] || method
+    );
+  };
+
+  const buildItemsSummary = (items = []) =>
+    items
+      .map((i) => {
+        const qty = Number(i.qty || 0);
+        const price = Number(i.price || 0);
+        return `${i.name} | Qty: ${qty} | Unit: ${price} | Total: ${qty * price}`;
+      })
+      .join("\n");
+
+  const buildEmailJsOrders = (items = []) =>
+    items.map((i) => {
+      const qty = Number(i.qty || 0);
+      const price = Number(i.price || 0);
+      return {
+        image_url: i.image || i.imageUrl || "",
+        name: i.name || "Item",
+        units: qty,
+        price,
+      };
+    });
+
+  const sendOrderEmailsViaEmailJS = async ({ orderId, formData, items, totals, paymentType, notes }) => {
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const TEMPLATE_CONTACT_ADMIN =
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT_ADMIN ||
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
+    const TEMPLATE_ORDER_ADMIN =
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ORDER_ADMIN ||
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
+    const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "sales@edpharma.co";
+
+    if (!SERVICE_ID || !PUBLIC_KEY || !TEMPLATE_ORDER_ADMIN) {
+      throw new Error("EmailJS config missing for admin order emails");
+    }
+
+    const submittedAt = new Date().toLocaleString("en-IN", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+
+    const itemsSummary = buildItemsSummary(items);
+    const customerAddress = `${formData.address}, ${formData.city}, ${formData.pincode}, ${formData.country}`;
+
+    const payloadAdmin = {
+      to_email: ADMIN_EMAIL,
+      subject: `New Order Received: ${orderId}`,
+      order_id: orderId,
+      order_date: submittedAt,
+      payment_method: formatPaymentMethod(paymentType),
+      total_amount: totals?.totalPrice ?? 0,
+      total_qty: totals?.totalQty ?? 0,
+      total_distinct: totals?.totalDistinct ?? 0,
+      customer_name: formData.fullName,
+      customer_email: formData.email,
+      customer_phone: formData.phone,
+      customer_address: customerAddress,
+      order_notes: notes || "N/A",
+      items_summary: itemsSummary,
+      orders: buildEmailJsOrders(items),
+      cost: {
+        shipping: 0,
+        tax: 0,
+        total: totals?.totalPrice ?? 0,
+      },
+      submitted_from: "Website Checkout",
+      inquiry_type: "Order",
+      customer_details:
+        `Name: ${formData.fullName}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Address: ${customerAddress}\n` +
+        `Order ID: ${orderId}\n` +
+        `Date: ${submittedAt}\n` +
+        `Payment: ${formatPaymentMethod(paymentType)}\n` +
+        `Total: ${totals?.totalPrice ?? 0}\n` +
+        `Qty: ${totals?.totalQty ?? 0}`,
+
+      // Backward compatibility aliases for older template variable names
+      title: `Order ${orderId}`,
+      name: formData.fullName,
+      email: ADMIN_EMAIL,
+      customer_email: formData.email,
+      phone_number: formData.phone,
+      time: submittedAt,
+      message:
+        `Order ID: ${orderId}\n` +
+        `Payment: ${formatPaymentMethod(paymentType)}\n` +
+        `Total: ${totals?.totalPrice ?? 0}\n` +
+        `Items:\n${itemsSummary}\n` +
+        `Notes: ${notes || "N/A"}`,
+    };
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ORDER_ADMIN, payloadAdmin, PUBLIC_KEY);
+    } catch (primaryError) {
+      console.error("Primary order-admin template failed:", {
+        status: primaryError?.status,
+        text: primaryError?.text,
+        message: primaryError?.message,
+      });
+
+      // Fallback: try contact-admin template if it is different
+      if (TEMPLATE_CONTACT_ADMIN && TEMPLATE_CONTACT_ADMIN !== TEMPLATE_ORDER_ADMIN) {
+        await emailjs.send(SERVICE_ID, TEMPLATE_CONTACT_ADMIN, payloadAdmin, PUBLIC_KEY);
+      } else {
+        throw primaryError;
+      }
+    }
+  };
+
   // Function to load a saved address
   const loadSavedAddress = (address) => {
     setForm(address);
@@ -454,6 +581,19 @@ export default function CheckoutClient() {
       }
 
       console.log("✅ Order created successfully! Order ID:", data.orderId);
+
+      try {
+        await sendOrderEmailsViaEmailJS({
+          orderId: data.orderId,
+          formData: form,
+          items: cartItems,
+          totals,
+          paymentType: payment,
+          notes: orderNotes,
+        });
+      } catch (emailErr) {
+        console.error("Order EmailJS error:", emailErr);
+      }
       
       // Save order ID to localStorage for reference
       if (typeof window !== 'undefined') {

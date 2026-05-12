@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import ActionMenu from "./ActionMenu";
 
-export default function OrdersTable({ orders = [], refresh }) {
+export default function OrdersTable({ orders = [] }) {
   const [localOrders, setLocalOrders] = useState([]);
   const [rowState, setRowState] = useState({});
 
@@ -58,9 +58,11 @@ export default function OrdersTable({ orders = [], refresh }) {
             <th className="p-3 text-center">Order ID</th>
             <th className="p-3 text-center">Customer Name</th>
             <th className="p-3 text-center">Email</th>
+            <th className="p-3 text-center">Phone</th>
             <th className="p-3 text-center">Address</th>
             <th className="p-3 text-center">Status</th>
             <th className="p-3 text-center">Amount</th>
+            <th className="p-3 text-center">Items</th>
             <th className="p-3 text-center">Date & Time</th>
             <th className="p-3 text-center">Transaction ID</th>
             <th className="p-3 text-center">Mode Of Payment</th>
@@ -79,17 +81,22 @@ export default function OrdersTable({ orders = [], refresh }) {
                 </td>
 
                 <td className="p-3 text-center">
-                  {order.address?.fullName || "Guest"}
+                  {order.customer?.name || order.address?.fullName || "Guest"}
                 </td>
 
                 <td className="p-3 text-slate-500 text-center">
-                  {order.userEmail || "—"}
+                  {order.customer?.email || order.userEmail || "—"}
+                </td>
+
+                <td className="p-3 text-slate-500 text-center">
+                  {order.customer?.phone || order.address?.phone || "—"}
                 </td>
 
                 <td className="p-3 text-slate-500 text-center max-w-xs mx-auto">
-                  {order.address
-                    ? `${order.address.address}, ${order.address.city}`
-                    : "—"}
+                  {order.customer?.fullAddress ||
+                    (order.address
+                      ? `${order.address.address}, ${order.address.city}`
+                      : "—")}
                 </td>
 
                 <td className="p-3 text-center">
@@ -102,6 +109,10 @@ export default function OrdersTable({ orders = [], refresh }) {
                   €{order.totals?.totalPrice ?? 0}
                 </td>
 
+                <td className="p-3 text-center text-slate-600">
+                  {(order.items || []).length} items / qty {order.totals?.totalQty ?? 0}
+                </td>
+
                 <td className="p-3 text-center">
                   {order.createdAt
                     ? new Date(order.createdAt).toLocaleString()
@@ -112,7 +123,6 @@ export default function OrdersTable({ orders = [], refresh }) {
                   {order.transactionId || "—"}
                 </td>
 
-                {/* ✅ MODE OF PAYMENT (ONLY ADDITION) */}
                 <td className="p-3 text-center">
                   {order.paymentMethod || "—"}
                 </td>
@@ -135,7 +145,7 @@ export default function OrdersTable({ orders = [], refresh }) {
           {localOrders.length === 0 && (
             <tr>
               <td
-                colSpan={10}
+                colSpan={12}
                 className="p-6 text-center text-slate-500"
               >
                 No orders found

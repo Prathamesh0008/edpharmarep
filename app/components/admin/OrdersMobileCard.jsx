@@ -38,15 +38,11 @@ export default function OrdersMobileCard({ orders = [], refresh }) {
                 </div>
 
                 <div className="text-xs text-gray-500">
-                  {order.customerName ||
-                    order.user?.name ||
-                    ""}
+                  {order.customer?.name || order.address?.fullName || "Guest"}
                 </div>
 
                 <div className="text-xs text-gray-500">
-                  {order.email ||
-                    order.user?.email ||
-                    ""}
+                  {order.customer?.email || order.userEmail || "—"}
                 </div>
               </div>
 
@@ -64,18 +60,25 @@ export default function OrdersMobileCard({ orders = [], refresh }) {
             {/* ADDRESS */}
             <div className="text-xs text-gray-500">
               Address:{" "}
-              {order.address
-                ? `${order.address.street || ""} ${
-                    order.address.city || ""
-                  }`
-                : "—"}
+              {order.customer?.fullAddress ||
+                (order.address
+                  ? `${order.address.address || ""} ${order.address.city || ""}`
+                  : "—")}
+            </div>
+
+            <div className="text-xs text-gray-500">
+              Phone: {order.customer?.phone || order.address?.phone || "—"}
+            </div>
+
+            <div className="text-xs text-gray-500">
+              Items: {(order.items || []).length} / Qty {order.totals?.totalQty ?? 0}
             </div>
 
             {/* AMOUNT */}
             <div className="flex justify-between text-sm pt-2">
               <span className="text-gray-500">Amount</span>
               <span className="font-semibold">
-                €{order.amount ?? 0}
+                €{order.totals?.totalPrice ?? 0}
               </span>
             </div>
           </div>

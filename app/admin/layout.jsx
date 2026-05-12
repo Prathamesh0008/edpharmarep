@@ -8,9 +8,16 @@ import { useAuth } from "@/app/context/AuthContext"; // Add this import
 
 export default function AdminLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [checked, setChecked] = useState(false); // ✅ ADDED
   const router = useRouter();
   const { user, isAdmin, loading } = useAuth(); // Use AuthContext
+
+  const handleLogout = async () => {
+    await fetch("/api/auth/logout", { method: "POST", credentials: "include" });
+    localStorage.removeItem("bio-user");
+    localStorage.removeItem("auth_token");
+    router.push("/login");
+    router.refresh();
+  };
 
   // 🔒 AUTH GUARD (UPDATED)
   useEffect(() => {
@@ -110,11 +117,7 @@ export default function AdminLayout({ children }) {
           
           {/* Logout Button */}
           <button
-            onClick={() => {
-              localStorage.removeItem("bio-user");
-              router.push("/");
-              window.location.reload(); // Refresh to clear context
-            }}
+            onClick={handleLogout}
             className="w-full text-left px-3 py-2 rounded hover:bg-red-50 text-red-600 flex items-center gap-2 mt-4"
           >
             <span>🚪</span> Logout
@@ -142,11 +145,7 @@ export default function AdminLayout({ children }) {
               {user.email}
             </span>
             <button
-              onClick={() => {
-                localStorage.removeItem("bio-user");
-                router.push("/");
-                window.location.reload();
-              }}
+              onClick={handleLogout}
               className="text-sm text-red-600 hover:text-red-800"
             >
               Logout

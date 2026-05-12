@@ -53,11 +53,6 @@ export default function LoginPopup({
   const abortControllerRef = useRef(null);
   const modalRef = useRef(null);
 
-  // Admin credentials from environment variables
-  const ADMIN_EMAIL =
-    process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin@edpharma.com";
-  const ADMIN_PASSWORD = process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "admin@123";
-
   // Check if we're on the cart page
   const isCartPage = pathname === "/cart";
 
@@ -418,11 +413,6 @@ export default function LoginPopup({
     });
   };
 
-  // Simple login function for localStorage
-  const loginUser = (userData) => {
-    localStorage.setItem("bio-user", JSON.stringify(userData));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -461,52 +451,6 @@ export default function LoginPopup({
     console.log("🔍 LoginPopup: Form submitted");
     console.log("🔍 LoginPopup: Email entered:", formData.email);
     console.log("🔍 LoginPopup: Password entered:", formData.password);
-
-    // Admin credentials from environment variables
-    const ADMIN_EMAIL =
-      process.env.NEXT_PUBLIC_ADMIN_EMAIL || "admin@edpharma.com";
-    const ADMIN_PASSWORD =
-      process.env.NEXT_PUBLIC_ADMIN_PASSWORD || "admin@123";
-
-    console.log("🔍 LoginPopup: Admin email from env:", ADMIN_EMAIL);
-    console.log("🔍 LoginPopup: Admin password from env:", ADMIN_PASSWORD);
-
-    // Check if admin credentials are entered
-    if (
-      isLogin &&
-      formData.email === ADMIN_EMAIL &&
-      formData.password === ADMIN_PASSWORD
-    ) {
-      console.log("🔍 LoginPopup: ADMIN CREDENTIALS MATCHED!");
-
-      // Create admin user object
-      const adminUser = {
-        _id: "admin",
-        username: "Admin",
-        email: ADMIN_EMAIL,
-        role: "admin",
-      };
-
-      console.log("🔍 LoginPopup: Admin user object created:", adminUser);
-
-      // Store in context and localStorage
-      login(adminUser);
-
-      // Call success callback if provided
-      if (onLoginSuccess) {
-        onLoginSuccess(adminUser);
-      }
-
-      // Close popup
-      onClose();
-
-      console.log("🔍 LoginPopup: Redirecting to /admin/dashboard");
-
-      // Redirect to admin panel
-      router.push("/admin/dashboard");
-
-      return;
-    }
 
     if (!isLogin && formData.password !== formData.confirmPassword) {
       setMessage("Passwords do not match");
@@ -565,6 +509,7 @@ export default function LoginPopup({
           _id: data.user._id,
           username: data.user.username,
           email: data.user.email,
+          role: data.user.role || "user",
           mobile: data.user.mobile,
           gender: data.user.gender,
           street: data.user.street,

@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactPage() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
   const [form, setForm] = useState({
     email: "",
@@ -51,7 +51,7 @@ export default function ContactPage() {
       },
       submitButton: "Submit Message",
       submittingButton: "Sending...",
-      successMessage: "✅ Message sent successfully! Check your email for confirmation.",
+      successMessage: "✅ Message sent successfully! Our admin team has received your details.",
     },
     validation: {
       email: {
@@ -155,12 +155,13 @@ export default function ContactPage() {
     try {
       const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
       const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-      const TEMPLATE_ADMIN = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
-      const TEMPLATE_USER = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_USER;
+      const TEMPLATE_CONTACT_ADMIN =
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT_ADMIN ||
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
       const ADMIN_EMAIL =
         process.env.NEXT_PUBLIC_ADMIN_EMAIL || "sales@edpharma.co";
 
-      if (!SERVICE_ID || !PUBLIC_KEY || !TEMPLATE_ADMIN || !TEMPLATE_USER) {
+      if (!SERVICE_ID || !PUBLIC_KEY || !TEMPLATE_CONTACT_ADMIN) {
         throw new Error(
           "Email service not configured. Please check EmailJS env variables."
         );
@@ -175,32 +176,39 @@ export default function ContactPage() {
         minute: "2-digit",
       });
 
+      const cleanName = form.name.trim();
+      const cleanEmail = form.email.trim();
+      const cleanPhone = form.phone.trim();
+      const cleanMessage = form.message.trim();
+      const customerDetails =
+        `Name: ${cleanName}\n` +
+        `Email: ${cleanEmail}\n` +
+        `Phone: ${cleanPhone}\n` +
+        `Reference: ${reference}\n` +
+        `Submitted At: ${submittedAt}`;
+
       const payloadAdmin = {
         to_email: ADMIN_EMAIL,
-        from_name: form.name.trim(),
-        from_email: form.email.trim(),
-        phone: form.phone.trim(),
-        message: form.message.trim(),
+        subject: `New Contact Form: ${cleanName} (${reference})`,
+        from_name: cleanName,
+        from_email: cleanEmail,
+        phone: cleanPhone,
+        message: cleanMessage,
+        customer_details: customerDetails,
+        submitted_from: "Website Contact Form",
+        inquiry_type: "General Inquiry",
         reference,
         date: submittedAt,
       };
 
-      const payloadUser = {
-        to_email: form.email.trim(),
-        to_name: form.name.trim(),
-        from_name: "ED Pharma",
-        phone: form.phone.trim(),
-        message: form.message.trim(),
-        reference,
-        date: submittedAt,
-      };
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_CONTACT_ADMIN,
+        payloadAdmin,
+        PUBLIC_KEY
+      );
 
-      await Promise.all([
-        emailjs.send(SERVICE_ID, TEMPLATE_ADMIN, payloadAdmin, PUBLIC_KEY),
-        emailjs.send(SERVICE_ID, TEMPLATE_USER, payloadUser, PUBLIC_KEY),
-      ]);
-
-      setSentTo(form.email.trim());
+      setSentTo(ADMIN_EMAIL);
       setSubmitted(true);
 
       setForm({
@@ -210,11 +218,20 @@ export default function ContactPage() {
         message: "",
       });
     } catch (error) {
-      console.error("❌ EmailJS error:", error);
+      const details = {
+        status: error?.status,
+        text: error?.text,
+        message: error?.message,
+        name: error?.name,
+      };
+      console.error("❌ EmailJS error details:", details, error);
       setErrors({
         submit:
           error?.text ||
           error?.message ||
+          (error?.status
+            ? `Email service error (${error.status}). Check template variables.`
+            : null) ||
           "Failed to send message. Please try again.",
       });
       setShake(true);
@@ -493,10 +510,10 @@ export default function ContactPage() {
                           {formButtons.successMessage ||
                             "✅ Message sent successfully! Check your email for confirmation."}
                         </p>
-                        <p className="text-green-700 text-xs mt-1 break-words">
-                          We&apos;ve sent a confirmation email to{" "}
-                          <span className="font-semibold">{sentTo}</span>
-                        </p>
+                <p className="text-green-700 text-xs mt-1 break-words">
+                  Admin notification sent to{" "}
+                  <span className="font-semibold">{sentTo}</span>
+                </p>
                       </div>
                     </div>
                   </div>

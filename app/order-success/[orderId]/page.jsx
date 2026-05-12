@@ -21,6 +21,7 @@ import { useCart } from "../../components/CartContext";
 import Confetti from "react-confetti";
 import { useLanguage } from "@/context/LanguageContext";
 import { jsPDF } from "jspdf"; // ADD THIS IMPORT FOR PDF GENERATION
+import emailjs from "@emailjs/browser";
 
 export default function OrderSuccessPage() {
   const router = useRouter();
@@ -194,59 +195,80 @@ useEffect(() => {
     
     console.log('Sending email with data:', emailData);
     
-    // Validate email
-    if (!emailData.customerEmail) {
-      alert('❌ Email address not found. Please contact support.');
-      setIsSendingEmail(false);
-      return;
+    const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    const TEMPLATE_CONTACT_ADMIN =
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_CONTACT_ADMIN ||
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
+    const TEMPLATE_ORDER_ADMIN =
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ORDER_ADMIN ||
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ADMIN;
+    const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL || "sales@edpharma.co";
+
+    if (!SERVICE_ID || !PUBLIC_KEY || !TEMPLATE_ORDER_ADMIN) {
+      throw new Error("EmailJS template not configured for admin order mail");
     }
-    
-    // Call API to send email
-    const response = await fetch('/api/send-receipt', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
+
+    const itemsSummary = (emailData.items || [])
+      .map((item) => {
+        const qty = Number(item.quantity || item.qty || 1);
+        const price = Number(item.price || 0);
+        return `${item.name} | Qty: ${qty} | Unit: ${price} | Total: ${qty * price}`;
+      })
+      .join("\n");
+
+    const orders = (emailData.items || []).map((item) => ({
+      image_url: item.image || item.imageUrl || "",
+      name: item.name || "Item",
+      units: Number(item.quantity || item.qty || 1),
+      price: Number(item.price || 0),
+    }));
+
+    const payloadAdmin = {
+      to_email: ADMIN_EMAIL,
+      subject: `New Order Received: ${emailData.orderId}`,
+      order_id: emailData.orderId,
+      order_date: formatDate(),
+      payment_method: emailData.paymentMethod || "Cash on Delivery",
+      total_amount: emailData.totalAmount || 0,
+      customer_name: emailData.customerName,
+      customer_email: emailData.customerEmail || "N/A",
+      items_summary: itemsSummary || "N/A",
+      orders,
+      cost: {
+        shipping: 0,
+        tax: 0,
+        total: emailData.totalAmount || 0,
       },
-      body: JSON.stringify(emailData),
-    });
-    
-    const result = await response.json();
-    console.log('Email API response:', result);
-    
-    if (result.success) {
-      alert('✅ Receipt has been sent to your email!');
-    } else {
-      alert(`❌ Failed to send email: ${result.message}`);
-      openFallbackEmail(emailData);
+      submitted_from: "Order Success Page",
+      inquiry_type: "Order",
+      title: `Order ${emailData.orderId}`,
+      name: emailData.customerName,
+      email: ADMIN_EMAIL,
+      message:
+        `Order ID: ${emailData.orderId}\n` +
+        `Payment: ${emailData.paymentMethod || "Cash on Delivery"}\n` +
+        `Total: ${emailData.totalAmount || 0}\n` +
+        `Items:\n${itemsSummary || "N/A"}`,
+    };
+
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ORDER_ADMIN, payloadAdmin, PUBLIC_KEY);
+    } catch (primaryError) {
+      if (TEMPLATE_CONTACT_ADMIN && TEMPLATE_CONTACT_ADMIN !== TEMPLATE_ORDER_ADMIN) {
+        await emailjs.send(SERVICE_ID, TEMPLATE_CONTACT_ADMIN, payloadAdmin, PUBLIC_KEY);
+      } else {
+        throw primaryError;
+      }
     }
+    alert('✅ Order details shared with admin team.');
   } catch (error) {
     console.error('Error sending email:', error);
-    alert('❌ Error sending email. Please try again or contact support.');
-    
-    // Fallback
-    if (orderData || userEmail) {
-      openFallbackEmail({
-        orderId,
-        customerEmail: orderData?.customerEmail || userEmail,
-        customerName: orderData?.customerName || 'Customer',
-      });
-    }
+    alert('❌ Error sending admin email. Please try again.');
   } finally {
     setIsSendingEmail(false);
   }
 };
-// Fallback email function
-const openFallbackEmail = (data) => {
-  const emailSubject = `Order Confirmation #${data.orderId} - EdPharma`;
-  const emailBody = `Dear ${data.customerName},\n\nThank you for your order with EdPharma!\n\nOrder ID: ${data.orderId}\nDate: ${isClient ? formatDate() : new Date().toLocaleDateString()}\n\nYou can view your order details here:\n${typeof window !== 'undefined' ? window.location.origin : ''}/orders/${data.orderId}\n\nBest regards,\nEdPharma Team`;
-  
-  if (data.customerEmail) {
-    window.location.href = `mailto:${data.customerEmail}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-  } else {
-    window.location.href = `mailto:?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
-  }
-};
-
   // Format date
   const formatDate = () => {
     const options = {
