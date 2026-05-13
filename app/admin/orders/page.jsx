@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useEffect, useState } from "react";
 import OrdersFilters from "@/app/components/admin/OrdersFilters";
@@ -12,10 +12,8 @@ export default function AdminOrdersPage() {
 
   async function fetchOrders() {
     try {
-      const res = await fetch("/api/admin/orders");
+      const res = await fetch("/api/admin/orders", { credentials: "include" });
       const data = await res.json();
-
-      // ✅ MAIN FIX: API returns ARRAY, not { orders }
       setOrders(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error("FETCH ORDERS ERROR:", err);
@@ -32,26 +30,33 @@ export default function AdminOrdersPage() {
   const filteredOrders =
     active === "All"
       ? orders
-      : orders.filter((o) => o.status === active);
+      : orders.filter(
+          (o) =>
+            String(o.status || "").toLowerCase() ===
+            String(active || "").toLowerCase()
+        );
 
   if (loading) {
-    return <div className="p-6">Loading orders…</div>;
+    return <div className="p-6 text-slate-600">Loading orders...</div>;
   }
 
   return (
-    <div className="p-4 md:p-6 space-y-6 overflow-x-visible">
-      <h1 className="text-2xl font-bold">
-        EdPharma Order Console
-      </h1>
+    <div className="space-y-6 overflow-x-visible">
+      <div className="rounded-2xl bg-gradient-to-r from-slate-900 to-slate-700 text-white border border-slate-800 p-5 shadow-sm">
+        <h1 className="text-2xl font-bold text-white">Order Console</h1>
+        <p className="text-sm text-slate-200 mt-1">
+          Manage all customer orders, status updates, and payment details.
+        </p>
+      </div>
 
-      <OrdersFilters active={active} setActive={setActive} />
+      <div className="rounded-2xl bg-white border border-slate-200 p-4 shadow-sm">
+        <OrdersFilters active={active} setActive={setActive} />
+      </div>
 
-      {/* MOBILE */}
       <div className="block md:hidden">
         <OrdersMobileCard orders={filteredOrders} refresh={fetchOrders} />
       </div>
 
-      {/* DESKTOP */}
       <div className="hidden md:block">
         <OrdersTable orders={filteredOrders} refresh={fetchOrders} />
       </div>

@@ -66,11 +66,9 @@ export default function StatCard({ title, value, color }) {
   const { bg, icon, Icon } = styles[color] || styles.blue;
 
   return (
-    <div className="flex items-center gap-4 p-4 bg-white rounded-xl shadow border border-slate-200">
+    <div className="flex items-center gap-4 p-4 bg-white rounded-2xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow">
       {/* ICON */}
-      <div
-        className={`w-12 h-12 rounded-lg flex items-center justify-center ${bg}`}
-      >
+      <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${bg}`}>
         <Icon className={`w-6 h-6 ${icon}`} />
       </div>
 

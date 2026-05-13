@@ -1,8 +1,12 @@
-"use client";
+﻿"use client";
 
+import { useState } from "react";
 import ActionMenu from "./ActionMenu";
+import OrderDetailsModal from "./OrderDetailsModal";
 
 export default function OrdersMobileCard({ orders = [], refresh }) {
+  const [selectedOrder, setSelectedOrder] = useState(null);
+
   async function updateStatus(orderId, status) {
     await fetch("/api/admin/orders/update-status", {
       method: "PATCH",
@@ -13,77 +17,56 @@ export default function OrdersMobileCard({ orders = [], refresh }) {
   }
 
   if (!orders.length) {
-    return (
-      <div className="text-center text-gray-500 py-10">
-        No orders found
-      </div>
-    );
+    return <div className="text-center text-gray-500 py-10">No orders found</div>;
   }
 
   return (
-    <div className="space-y-4">
-      {orders.map((order, index) => {
-        const key = order._id || order.orderId || index;
+    <>
+      <div className="space-y-4">
+        {orders.map((order, index) => {
+          const key = order._id || order.orderId || index;
 
-        return (
-          <div
-            key={key}
-            className="bg-white rounded-xl shadow p-4 space-y-2 relative overflow-visible"
-          >
-            {/* TOP ROW */}
-            <div className="flex justify-between items-start gap-2">
-              <div>
-                <div className="font-semibold">
-                  {order.orderId}
+          return (
+            <div key={key} className="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 space-y-2 relative overflow-visible">
+              <div className="flex justify-between items-start gap-2">
+                <div>
+                  <div className="font-semibold">{order.orderId}</div>
+
+                  <div className="text-xs text-gray-500">{order.customer?.name || order.address?.fullName || "Guest"}</div>
+
+                  <div className="text-xs text-gray-500">{order.customer?.email || order.userEmail || "-"}</div>
                 </div>
 
-                <div className="text-xs text-gray-500">
-                  {order.customer?.name || order.address?.fullName || "Guest"}
-                </div>
-
-                <div className="text-xs text-gray-500">
-                  {order.customer?.email || order.userEmail || "—"}
+                <div className="relative z-[9999] pointer-events-auto w-full max-w-[140px]">
+                  <ActionMenu currentStatus={order.status} onChange={(status) => updateStatus(order._id, status)} />
                 </div>
               </div>
 
-              {/* ✅ FIXED ACTION MENU */}
-<div className="relative z-[9999] pointer-events-auto w-full max-w-[140px]">
-                <ActionMenu
-                  currentStatus={order.status}
-                  onChange={(status) =>
-                    updateStatus(order._id, status)
-                  }
-                />
+              <div className="text-xs text-gray-500">
+                Address: {order.customer?.fullAddress || (order.address ? `${order.address.address || ""} ${order.address.city || ""}` : "-")}
               </div>
-            </div>
 
-            {/* ADDRESS */}
-            <div className="text-xs text-gray-500">
-              Address:{" "}
-              {order.customer?.fullAddress ||
-                (order.address
-                  ? `${order.address.address || ""} ${order.address.city || ""}`
-                  : "—")}
-            </div>
+              <div className="text-xs text-gray-500">Phone: {order.customer?.phone || order.address?.phone || "-"}</div>
 
-            <div className="text-xs text-gray-500">
-              Phone: {order.customer?.phone || order.address?.phone || "—"}
-            </div>
+              <div className="text-xs text-gray-500">Items: {(order.items || []).length} / Qty {order.totals?.totalQty ?? 0}</div>
 
-            <div className="text-xs text-gray-500">
-              Items: {(order.items || []).length} / Qty {order.totals?.totalQty ?? 0}
-            </div>
+              <div className="flex justify-between text-sm pt-2">
+                <span className="text-gray-500">Amount</span>
+                <span className="font-semibold">€{order.totals?.totalPrice ?? 0}</span>
+              </div>
 
-            {/* AMOUNT */}
-            <div className="flex justify-between text-sm pt-2">
-              <span className="text-gray-500">Amount</span>
-              <span className="font-semibold">
-                €{order.totals?.totalPrice ?? 0}
-              </span>
+              <button
+                onClick={() => setSelectedOrder(order)}
+                className="w-full mt-2 px-3 py-2 rounded-lg border border-slate-300 text-sm font-medium hover:bg-slate-50"
+              >
+                View Details
+              </button>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+
+      <OrderDetailsModal order={selectedOrder} onClose={() => setSelectedOrder(null)} />
+    </>
   );
 }

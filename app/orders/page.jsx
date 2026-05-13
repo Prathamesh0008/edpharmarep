@@ -148,19 +148,18 @@ export default function OrdersPage() {
         }
 
         const data = await res.json();
-        mounted && setOrders(data.ok ? data.orders : []);
+        if (mounted) setOrders(data.ok ? data.orders : []);
       } catch {
-        mounted && setOrders([]);
+        if (mounted) setOrders([]);
       } finally {
-        mounted && setLoading(false);
-        
+        if (mounted) setLoading(false);
       }
     })();
 
     return () => {
       mounted = false;
     };
-  }, []);
+  }, [router]);
 
   const filtered = useMemo(() => {
     const qq = q.trim().toLowerCase();

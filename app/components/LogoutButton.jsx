@@ -13,7 +13,7 @@ export default function LogoutButton() {
     });
 
     localStorage.removeItem("bio-user");
-    router.push("/login");
+    router.push("/");
     router.refresh();
   };
 

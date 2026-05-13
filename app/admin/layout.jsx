@@ -1,293 +1,122 @@
-// app/admin/layout.jsx
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { useAuth } from "@/app/context/AuthContext"; // Add this import
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { Menu, LayoutDashboard, ShoppingCart, Package, Users, Settings, LogOut } from "lucide-react";
+import { useAuth } from "@/app/context/AuthContext";
+
+const NAV_ITEMS = [
+  { href: "/admin/dashboard", label: "Dashboard", Icon: LayoutDashboard },
+  { href: "/admin/orders", label: "Orders", Icon: ShoppingCart },
+  { href: "/admin/products", label: "Products", Icon: Package },
+  { href: "/admin/users", label: "Users", Icon: Users },
+  { href: "/admin/settings", label: "Settings", Icon: Settings },
+];
 
 export default function AdminLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const router = useRouter();
-  const { user, isAdmin, loading } = useAuth(); // Use AuthContext
+  const pathname = usePathname();
+  const { user, isAdmin, loading } = useAuth();
+
+  useEffect(() => {
+    if (loading) return;
+    if (!user || !isAdmin()) router.replace("/");
+  }, [loading, user, isAdmin, router]);
+
+  const activeHref = useMemo(() => {
+    return NAV_ITEMS.find((item) => pathname?.startsWith(item.href))?.href;
+  }, [pathname]);
 
   const handleLogout = async () => {
     await fetch("/api/auth/logout", { method: "POST", credentials: "include" });
     localStorage.removeItem("bio-user");
     localStorage.removeItem("auth_token");
-    router.push("/login");
+    router.push("/");
     router.refresh();
   };
 
-  // 🔒 AUTH GUARD (UPDATED)
-  useEffect(() => {
-    // Skip if still loading
-    if (loading) return;
-
-    // Check if user is authenticated and is admin
-    if (!user || !isAdmin()) {
-      router.replace("/"); // Redirect to home if not admin
-    }
-  }, [user, isAdmin, loading, router]);
-
-  // Show loading while checking auth
   if (loading) {
     return (
       <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-        <div className="text-xl">Loading Admin Panel...</div>
+        <div className="text-base text-slate-700">Loading Admin Panel...</div>
       </div>
     );
   }
 
-  // Don't render admin layout if not admin (will redirect in useEffect)
-  if (!user || !isAdmin()) {
-    return null;
-  }
+  if (!user || !isAdmin()) return null;
 
   return (
-    <div className="min-h-screen bg-slate-50 flex">
-      {/* ===== MOBILE OVERLAY ===== */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 flex">
       {sidebarOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 z-30 md:hidden"
-          onClick={() => setSidebarOpen(false)}
-        />
+        <div className="fixed inset-0 bg-black/40 z-30 md:hidden" onClick={() => setSidebarOpen(false)} />
       )}
 
-      {/* ===== SIDEBAR ===== */}
       <aside
-        className={`
-          fixed md:static
-          top-0 left-0
-          h-full md:h-auto
-          w-64
-          bg-white
-          border-r
-          z-40
-          transform transition-transform duration-300
-          ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0
-        `}
+        className={`fixed md:static top-0 left-0 h-full md:h-auto w-72 bg-white/95 backdrop-blur border-r border-slate-200 z-40
+        transform transition-transform duration-300 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0`}
       >
-        {/* Sidebar Header */}
-        <div className="h-14 flex items-center px-4 border-b font-semibold">
-          EdPharma Admin
+        <div className="h-16 flex items-center px-5 border-b border-slate-200">
+          <div>
+            <p className="text-xs font-medium text-slate-500 tracking-wide">CONTROL PANEL</p>
+            <p className="text-base font-bold text-slate-900">EdPharma Admin</p>
+          </div>
         </div>
 
-        {/* Admin Info */}
-        <div className="px-4 py-3 border-b">
-          <p className="text-sm text-gray-600">Logged in as:</p>
-          <p className="font-medium truncate">{user.email}</p>
-          <p className="text-xs text-green-600 mt-1">Administrator</p>
+        <div className="px-5 py-4 border-b border-slate-200">
+          <p className="text-xs text-slate-500">Logged in as</p>
+          <p className="text-sm font-semibold text-slate-800 truncate">{user.email}</p>
+          <p className="text-xs text-emerald-600 mt-1">Administrator</p>
         </div>
 
-        {/* Sidebar Links */}
-        <nav className="p-3 space-y-1 text-sm">
-          <Link
-            href="/admin/dashboard"
-            className="block px-3 py-2 rounded hover:bg-slate-100 flex items-center gap-2"
-            onClick={() => setSidebarOpen(false)}
-          >
-            <span>📊</span> Dashboard
-          </Link>
+        <nav className="p-4 space-y-2 text-sm">
+          {NAV_ITEMS.map(({ href, label, Icon }) => {
+            const isActive = activeHref === href;
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setSidebarOpen(false)}
+                className={`flex items-center gap-3 px-3 py-2.5 rounded-xl transition ${
+                  isActive
+                    ? "bg-slate-900 text-white shadow-sm"
+                    : "hover:bg-slate-100 text-slate-700"
+                }`}
+              >
+                <Icon className="w-4 h-4" />
+                <span>{label}</span>
+              </Link>
+            );
+          })}
 
-          <Link
-            href="/admin/orders"
-            className="block px-3 py-2 rounded hover:bg-slate-100 flex items-center gap-2"
-            onClick={() => setSidebarOpen(false)}
-          >
-            <span>📦</span> Orders
-          </Link>
-
-          <Link
-            href="/admin/products"
-            className="block px-3 py-2 rounded hover:bg-slate-100 flex items-center gap-2"
-            onClick={() => setSidebarOpen(false)}
-          >
-            <span>💊</span> Products
-          </Link>
-
-          <Link
-            href="/admin/users"
-            className="block px-3 py-2 rounded hover:bg-slate-100 flex items-center gap-2"
-            onClick={() => setSidebarOpen(false)}
-          >
-            <span>👥</span> Users
-          </Link>
-          
-          {/* Logout Button */}
           <button
             onClick={handleLogout}
-            className="w-full text-left px-3 py-2 rounded hover:bg-red-50 text-red-600 flex items-center gap-2 mt-4"
+            className="w-full mt-4 flex items-center gap-3 text-left px-3 py-2.5 rounded-xl hover:bg-red-50 text-red-600"
           >
-            <span>🚪</span> Logout
+            <LogOut className="w-4 h-4" />
+            <span>Logout</span>
           </button>
         </nav>
       </aside>
 
-      {/* ===== MAIN CONTENT ===== */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* TOP BAR (MOBILE HEADER) */}
-        <header className="h-14 bg-white border-b flex items-center justify-between px-4 md:px-6">
+        <header className="h-16 bg-white/90 backdrop-blur border-b border-slate-200 flex items-center justify-between px-4 md:px-6">
           <div className="flex items-center">
             <button
               onClick={() => setSidebarOpen(true)}
-              className="text-xl mr-3 md:hidden"
-              aria-label="Open Menu"
+              className="mr-3 md:hidden text-slate-700"
+              aria-label="Open menu"
             >
-              ☰
+              <Menu className="w-5 h-5" />
             </button>
-            <span className="font-semibold">EdPharma Admin Dashboard</span>
+            <span className="font-semibold text-slate-900">EdPharma Admin Panel</span>
           </div>
-          
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600 hidden md:inline">
-              {user.email}
-            </span>
-            <button
-              onClick={handleLogout}
-              className="text-sm text-red-600 hover:text-red-800"
-            >
-              Logout
-            </button>
-          </div>
+          <span className="hidden sm:inline text-xs sm:text-sm text-slate-600 truncate max-w-[40vw]">{user.email}</span>
         </header>
 
-        {/* PAGE CONTENT */}
-        <main className="flex-1 overflow-x-hidden p-4 md:p-6">
-          {children}
-        </main>
+        <main className="flex-1 overflow-x-hidden p-4 md:p-6 lg:p-8">{children}</main>
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-// "use client";
-
-// import { useState, useEffect } from "react";
-// import Link from "next/link";
-// import { useRouter } from "next/navigation";
-
-// export default function AdminLayout({ children }) {
-//   const [sidebarOpen, setSidebarOpen] = useState(false);
-//   const [checked, setChecked] = useState(false); // ✅ ADDED
-//   const router = useRouter();
-
-//   // 🔒 AUTH GUARD (ONLY LOGIC ADDED)
-//   useEffect(() => {
-//     const userStr = localStorage.getItem("bio-user");
-
-//     // ❌ not logged in
-//     if (!userStr) {
-//       router.replace("/login");
-//       return;
-//     }
-
-//     const user = JSON.parse(userStr);
-
-//     // ❌ not admin
-//     if (user.role !== "admin") {
-//       router.replace("/login");
-//     }
-//   }, []);
-
-//   return (
-//     <div className="min-h-screen bg-slate-50 flex">
-
-//       {/* ===== MOBILE OVERLAY ===== */}
-//       {sidebarOpen && (
-//         <div
-//           className="fixed inset-0 bg-black/40 z-30 md:hidden"
-//           onClick={() => setSidebarOpen(false)}
-//         />
-//       )}
-
-//       {/* ===== SIDEBAR ===== */}
-//       <aside
-//         className={`
-//           fixed md:static
-//           top-0 left-0
-//           h-full md:h-auto
-//           w-64
-//           bg-white
-//           border-r
-//           z-40
-//           transform transition-transform duration-300
-//           ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
-//           md:translate-x-0
-//         `}
-//       >
-//         {/* Sidebar Header */}
-//         <div className="h-14 flex items-center px-4 border-b font-semibold">
-//           EdPharma Admin
-//         </div>
-
-//         {/* Sidebar Links */}
-//         <nav className="p-3 space-y-1 text-sm">
-//           <Link
-//             href="/admin"
-//             className="block px-3 py-2 rounded hover:bg-slate-100"
-//             onClick={() => setSidebarOpen(false)}
-//           >
-//             Dashboard
-//           </Link>
-
-//           <Link
-//             href="/admin/orders"
-//             className="block px-3 py-2 rounded hover:bg-slate-100"
-//             onClick={() => setSidebarOpen(false)}
-//           >
-//             Orders
-//           </Link>
-
-//           <Link
-//             href="/admin/products"
-//             className="block px-3 py-2 rounded hover:bg-slate-100"
-//             onClick={() => setSidebarOpen(false)}
-//           >
-//             Products
-//           </Link>
-
-//           <Link
-//             href="/admin/users"
-//             className="block px-3 py-2 rounded hover:bg-slate-100"
-//             onClick={() => setSidebarOpen(false)}
-//           >
-//             Users
-//           </Link>
-//         </nav>
-//       </aside>
-
-//       {/* ===== MAIN CONTENT ===== */}
-//       <div className="flex-1 flex flex-col min-w-0">
-
-//         {/* TOP BAR (MOBILE HEADER) */}
-//         <header className="h-14 bg-white border-b flex items-center px-4 md:hidden">
-//           <button
-//             onClick={() => setSidebarOpen(true)}
-//             className="text-xl mr-3"
-//             aria-label="Open Menu"
-//           >
-//             ☰
-//           </button>
-//           <span className="font-semibold">EdPharma Admin</span>
-//         </header>
-
-//         {/* PAGE CONTENT */}
-//         <main className="flex-1 overflow-x-hidden">
-//           {children}
-//         </main>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-

@@ -508,7 +508,7 @@ const downloadInvoice = async () => {
         clearTimeout(timeoutId);
 
         if (res.status === 401) {
-          router.push("/login");
+          router.push("/");
           return;
         }
 

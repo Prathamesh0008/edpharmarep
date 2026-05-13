@@ -3,24 +3,31 @@
 import { useEffect, useState } from "react";
 
 const STATUSES = [
-  "Order Placed",
+  "Pending",
+  "Processing",
+  "Approved",
   "Rejected",
   "Shipped",
   "Delivered",
 ];
 
 export default function ActionMenu({ currentStatus, onChange }) {
+  const normalizedCurrent = String(currentStatus || "").toLowerCase();
+  const matchedStatus =
+    STATUSES.find((s) => s.toLowerCase() === normalizedCurrent) || null;
+
   const initialStatus =
-    STATUSES.includes(currentStatus)
-      ? currentStatus
-      : "Order Placed";
+    matchedStatus
+      ? matchedStatus
+      : "Pending";
 
   const [selected, setSelected] = useState(initialStatus);
   const [updating, setUpdating] = useState(false);
 
   useEffect(() => {
-    if (STATUSES.includes(currentStatus)) {
-      setSelected(currentStatus);
+    const next = STATUSES.find((s) => s.toLowerCase() === String(currentStatus || "").toLowerCase());
+    if (next) {
+      setSelected(next);
     }
   }, [currentStatus]);
 

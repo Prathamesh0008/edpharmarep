@@ -9,7 +9,7 @@ export async function middleware(req) {
 
   if (path.startsWith("/admin")) {
     if (!token || !process.env.JWT_SECRET) {
-      return NextResponse.redirect(new URL("/login", req.url));
+      return NextResponse.redirect(new URL("/", req.url));
     }
 
     try {
@@ -18,13 +18,13 @@ export async function middleware(req) {
         return NextResponse.redirect(new URL("/", req.url));
       }
     } catch {
-      return NextResponse.redirect(new URL("/login", req.url));
+      return NextResponse.redirect(new URL("/", req.url));
     }
   }
 
   if (path.startsWith("/checkout")) {
     if (!token) {
-      const loginUrl = new URL("/login", req.url);
+      const loginUrl = new URL("/", req.url);
       loginUrl.searchParams.set("redirect", "/checkout");
       return NextResponse.redirect(loginUrl);
     }
@@ -36,4 +36,3 @@ export async function middleware(req) {
 export const config = {
   matcher: ["/checkout/:path*", "/admin/:path*"],
 };
-
