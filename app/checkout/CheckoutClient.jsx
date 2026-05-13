@@ -385,6 +385,7 @@ export default function CheckoutClient() {
         name: i.name || "Item",
         units: qty,
         price,
+        row_total: qty * price,
       };
     });
 
@@ -451,8 +452,20 @@ export default function CheckoutClient() {
       // Backward compatibility aliases for older template variable names
       title: `Order ${orderId}`,
       name: formData.fullName,
-      email: ADMIN_EMAIL,
-      customer_email: formData.email,
+      email: formData.email,
+      from_email: formData.email,
+      from_name: formData.fullName,
+      phone: formData.phone,
+      delivery_address: customerAddress,
+      full_address: customerAddress,
+      user_name: formData.fullName,
+      user_email: formData.email,
+      user_phone: formData.phone,
+      user_details:
+        `Name: ${formData.fullName}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Delivery Address: ${customerAddress}`,
       phone_number: formData.phone,
       time: submittedAt,
       message:

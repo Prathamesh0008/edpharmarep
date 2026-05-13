@@ -172,7 +172,7 @@ export default function ProductQuickView({ open, item, onClose, onGoToProduct })
                       {item.name}
                     </h4>
                     <p className="text-sm text-gray-600 mt-1">
-                      ₹{item.price?.toLocaleString()} / unit
+                      €{item.price?.toLocaleString()} / unit
                     </p>
                   </div>
                   <span className="shrink-0 text-[11px] px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">

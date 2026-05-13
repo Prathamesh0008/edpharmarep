@@ -80,7 +80,7 @@ export default function CompanyProductSection() {
 
       {/* PRICE */}
       <p className="text-blue-700 font-bold text-sm mt-2">
-        â‚¹{product.price}
+        €{product.price}
       </p>
 
       {/* BUTTON */}
@@ -103,3 +103,4 @@ export default function CompanyProductSection() {
     </section>
   );
 }
+
