@@ -463,15 +463,15 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                   </div>
 
                   <div className="p-2.5 sm:p-3 md:p-4 flex flex-col gap-2 sm:gap-2.5 flex-grow">
-                    <div className="min-h-[22px] flex items-center">
-                      {/* <span
+                    {/* <div className="min-h-[22px] flex items-center">
+                      <span
                         className="inline-block text-[9px] sm:text-[10px] md:text-[11px] font-semibold px-2 py-0.5 sm:py-1 rounded-full border truncate max-w-full"
                         style={{ borderColor: BRAND + "30", color: BRAND, backgroundColor: BRAND + "10" }}
                         title={p.category}
                       >
                         {p.category}
-                      </span> */}
-                    </div>
+                      </span>
+                    </div> */}
 
                     <h3 className="text-xs sm:text-sm md:text-base font-bold text-slate-900 leading-tight line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] overflow-hidden">
                       {typeof p.name === 'object' ? p.name.en || p.name.fr || '' : p.name}
