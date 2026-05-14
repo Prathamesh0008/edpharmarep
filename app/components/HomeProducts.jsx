@@ -447,61 +447,61 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
         </div>
 
         {brandProducts.length > 0 ? (
-          <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
+          <div className="mt-5 sm:mt-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-3 md:gap-4">
             {brandProducts.map((p, index) => {
               const uniqueKey = `${activeBrand}-${p.slug}-${index}`;
               return (
                 <article
                   key={uniqueKey}
-                  className="group relative rounded-xl sm:rounded-2xl md:rounded-3xl bg-white border shadow-sm hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col"
+                  className="group relative rounded-lg sm:rounded-xl bg-white border shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden h-full flex flex-col"
                   style={{ borderColor: "rgba(10,42,115,0.15)" }}
                   onMouseEnter={() => handleProductMouseEnter(uniqueKey)}
                   onMouseLeave={handleProductMouseLeave}
                 >
-                  <div className="relative aspect-square h-44 sm:h-48 md:h-52 lg:h-56 xl:h-60 rounded-t-xl sm:rounded-t-2xl md:rounded-t-3xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden flex-shrink-0">
+                  <div className="relative aspect-square h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 rounded-t-lg sm:rounded-t-xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden flex-shrink-0">
                     <SmoothProductImageGallery product={p} themeColor={BRAND} isCompact={true} />
                   </div>
 
-                  <div className="p-4 sm:p-5 md:p-6 flex flex-col gap-3 sm:gap-4 md:gap-5 flex-grow">
-                    <div className="min-h-[28px] flex items-center">
-                      <span
-                        className="inline-block text-[10px] sm:text-[11px] md:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border truncate max-w-full"
+                  <div className="p-2.5 sm:p-3 md:p-4 flex flex-col gap-2 sm:gap-2.5 flex-grow">
+                    <div className="min-h-[22px] flex items-center">
+                      {/* <span
+                        className="inline-block text-[9px] sm:text-[10px] md:text-[11px] font-semibold px-2 py-0.5 sm:py-1 rounded-full border truncate max-w-full"
                         style={{ borderColor: BRAND + "30", color: BRAND, backgroundColor: BRAND + "10" }}
                         title={p.category}
                       >
                         {p.category}
-                      </span>
+                      </span> */}
                     </div>
 
-                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-tight line-clamp-2 min-h-[3rem] sm:min-h-[3.5rem] md:min-h-[4rem] overflow-hidden">
+                    <h3 className="text-xs sm:text-sm md:text-base font-bold text-slate-900 leading-tight line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] overflow-hidden">
                       {typeof p.name === 'object' ? p.name.en || p.name.fr || '' : p.name}
                     </h3>
 
-                    <div className="min-h-[70px] sm:min-h-[75px] md:min-h-[80px] flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs md:text-sm text-slate-700">
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                    <div className="min-h-[54px] sm:min-h-[58px] flex flex-wrap gap-1 text-[10px] sm:text-[11px] md:text-xs text-slate-700">
+                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 py-0.5 sm:py-1 min-h-[22px] sm:min-h-[26px]">
                         <span className="font-semibold mr-1.5 whitespace-nowrap">{dosageLabel}</span> 
-                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.dosage}>{p.dosage}</span>
+                        <span className="truncate max-w-[56px] sm:max-w-[70px] md:max-w-[90px]" title={p.dosage}>{p.dosage}</span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 py-0.5 sm:py-1 min-h-[22px] sm:min-h-[26px]">
                         <span className="font-semibold mr-1.5 whitespace-nowrap">{formLabel}</span> 
-                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.form}>{p.form}</span>
+                        <span className="truncate max-w-[56px] sm:max-w-[70px] md:max-w-[90px]" title={p.form}>{p.form}</span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 py-0.5 sm:py-1 min-h-[22px] sm:min-h-[26px]">
                         <span className="font-semibold mr-1.5 whitespace-nowrap">{packLabel}</span> 
-                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.pack_size}>{p.pack_size}</span>
+                        <span className="truncate max-w-[56px] sm:max-w-[70px] md:max-w-[90px]" title={p.pack_size}>{p.pack_size}</span>
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
-                      <Link href={`/product/${p.slug}`} className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: BRAND }}>
+                    <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+                      <Link href={`/product/${p.slug}`} className="flex items-center justify-center rounded-md sm:rounded-lg px-2 py-1.5 text-[10px] sm:text-xs font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: BRAND }}>
                         <span className="truncate whitespace-nowrap">{detailsText}</span>
                       </Link>
-                      <Link href={`/contact?product=${encodeURIComponent(p.slug)}`} className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold border bg-white transition hover:bg-slate-50" style={{ borderColor: BRAND, color: BRAND }}>
+                      <Link href={`/contact?product=${encodeURIComponent(p.slug)}`} className="flex items-center justify-center rounded-md sm:rounded-lg px-2 py-1.5 text-[10px] sm:text-xs font-semibold border bg-white transition hover:bg-slate-50" style={{ borderColor: BRAND, color: BRAND }}>
                         <span className="truncate whitespace-nowrap">{enquireText}</span>
                       </Link>
                     </div>
 
-                    <div className="mt-1">
+                    <div>
                       <AddToCartButton product={p} themeColor={BRAND} />
                     </div>
                   </div>
