@@ -1,7 +1,7 @@
 //app\profile\page.jsx
 
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 // --- ICONS (SVG Components for cleaner code) ---
@@ -129,7 +129,6 @@ export default function ProfilePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("general");
-  const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [isEditing, setIsEditing] = useState(false);
 
@@ -172,7 +171,7 @@ export default function ProfilePage() {
 
   // ✅ FIRST: function declare करा
   // In ProfilePage.jsx - Update loadUserData
-  const loadUserData = async () => {
+  const loadUserData = useCallback(async () => {
     try {
       setLoading(true);
 
@@ -211,7 +210,6 @@ export default function ProfilePage() {
 
         // Update localStorage
         localStorage.setItem("bio-user", JSON.stringify(data.user));
-        setUsername(data.user.username);
       } else {
         console.error("❌ Failed to load user data:", data.message);
       }
@@ -220,7 +218,7 @@ export default function ProfilePage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [router]);
 
   // Update useEffect:
   useEffect(() => {
@@ -230,10 +228,8 @@ export default function ProfilePage() {
       return;
     }
 
-    const user = JSON.parse(stored);
-    setUsername(user.username);
     loadUserData(); // No email parameter
-  }, [router]);
+  }, [router, loadUserData]);
 
   const handleLogout = () => {
     localStorage.removeItem("bio-user");
@@ -296,7 +292,6 @@ export default function ProfilePage() {
       }
 
       // Update state
-      setUsername(data.user.username);
       setProfile({
         username: data.user.username,
         email: data.user.email,

@@ -16,7 +16,7 @@ export default function Sidebar({ open, onClose }) {
     setUserRole(role);
 
     if (role !== "admin" && pathname.startsWith("/admin")) {
-      router.push("/login");
+      router.push("/");
     }
   }, [pathname, router]);
 

@@ -21,9 +21,7 @@ export default function GlobalLoader() {
 
     // Fallback timer
     const timer = setTimeout(() => {
-      if (showLoader) {
-        handleLoad();
-      }
+      handleLoad();
     }, 2000);
 
     return () => {

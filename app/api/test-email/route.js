@@ -2,10 +2,15 @@
 import nodemailer from "nodemailer";
 
 export async function GET() {
+  if (process.env.NODE_ENV === "production") {
+    return Response.json(
+      { success: false, message: "Not available in production" },
+      { status: 404 }
+    );
+  }
+
   try {
-    console.log("📧 Testing email configuration...");
-    console.log("SMTP Email:", process.env.SMTP_EMAIL);
-    console.log("Admin Email:", process.env.ADMIN_EMAIL);
+    console.log("Testing email configuration...");
     
     // 1. Transporter create करें
     const transporter = nodemailer.createTransport({
@@ -17,12 +22,12 @@ export async function GET() {
     });
 
     // 2. SMTP connection test करें
-    console.log("🔌 Testing SMTP connection...");
+    console.log("Testing SMTP connection...");
     await transporter.verify();
-    console.log("✅ SMTP Connection successful!");
+    console.log("SMTP connection successful");
 
     // 3. Test email भेजें
-    console.log("📤 Sending test email...");
+    console.log("Sending test email...");
     
     const mailOptions = {
       from: `"ED Pharma" <${process.env.SMTP_EMAIL}>`,
@@ -45,31 +50,24 @@ export async function GET() {
     };
 
     const info = await transporter.sendMail(mailOptions);
-    console.log("✅ Test email sent! Message ID:", info.messageId);
+    console.log("Test email sent. Message ID:", info.messageId);
 
     return Response.json({
       success: true,
       message: "Email test successful! Check your inbox.",
       details: {
-        from: process.env.SMTP_EMAIL,
-        to: process.env.ADMIN_EMAIL,
         messageId: info.messageId,
         timestamp: new Date().toISOString()
       }
     });
 
   } catch (error) {
-    console.error("❌ Email test failed:", error.message);
+    console.error("Email test failed:", error.message);
     
     return Response.json({
       success: false,
       error: error.message,
-      solution: "Check if 2-Step Verification is ON and using App Password",
-      yourConfig: {
-        smtpEmail: process.env.SMTP_EMAIL,
-        hasPassword: !!process.env.SMTP_PASSWORD,
-        adminEmail: process.env.ADMIN_EMAIL
-      }
+      solution: "Check if 2-Step Verification is ON and using App Password"
     }, { status: 500 });
   }
 }

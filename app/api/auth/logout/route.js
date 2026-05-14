@@ -3,12 +3,12 @@ import { NextResponse } from "next/server";
 export async function POST() {
   const response = NextResponse.json({ success: true });
 
-  // 🔥 FORCE DELETE auth cookie (MATCH LOGIN COOKIE EXACTLY)
+  // Delete auth cookie using the same attributes used during login
   response.cookies.set("auth", "", {
     httpOnly: true,
-    secure: false,        // must match (localhost / IP)
-    sameSite: "lax",      // must match
-    path: "/",            // must match
+    secure: process.env.NODE_ENV === "production",
+    sameSite: "strict",
+    path: "/",
     maxAge: 0,
   });
 

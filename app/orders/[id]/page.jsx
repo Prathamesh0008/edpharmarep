@@ -19,7 +19,6 @@ import {
   Calendar,
   User,
   Download,
-  Printer,
   ChevronRight,
   Sparkles,
   AlertTriangle,
@@ -230,7 +229,7 @@ export default function OrderDetailsPage() {
   }
 
   // Enhanced loading skeleton
-  function LoadingSkeleton() {
+  function renderLoadingSkeleton() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30 pt-6 pb-16">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -509,7 +508,7 @@ const downloadInvoice = async () => {
         clearTimeout(timeoutId);
 
         if (res.status === 401) {
-          router.push("/login");
+          router.push("/");
           return;
         }
 
@@ -544,7 +543,7 @@ const downloadInvoice = async () => {
   }, [orderId, router]);
 
   if (loading) {
-    return <LoadingSkeleton />;
+    return renderLoadingSkeleton();
   }
 
   if (error || !order) {
@@ -884,7 +883,10 @@ const downloadInvoice = async () => {
                         : orderDetailTranslations.orderProgress.expectedBy + " "}
                       <span className="font-medium">
                         {formatShortDate(
-                          new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+                          new Date(
+                            new Date(order.createdAt).getTime() +
+                              7 * 24 * 60 * 60 * 1000
+                          )
                         )}
                       </span>
                     </p>
