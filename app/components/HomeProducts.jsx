@@ -408,6 +408,9 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
 
   const handleProductMouseEnter = (productId) => setHoveredProductId(productId);
   const handleProductMouseLeave = () => setHoveredProductId(null);
+  const normalizeText = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
+  const stripDosageFromName = (name) =>
+    normalizeText(name).replace(/\bmg\b/gi, "").replace(/\s+/g, " ").trim();
 
   // Show loading state
   if (loading) {
@@ -447,9 +450,14 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
         </div>
 
         {brandProducts.length > 0 ? (
-          <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
+          <div className="mt-8 sm:mt-10 grid grid-cols-1 min-[520px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
             {brandProducts.map((p, index) => {
               const uniqueKey = `${activeBrand}-${p.slug}-${index}`;
+              const productName = stripDosageFromName(typeof p.name === "object" ? p.name.en || p.name.fr || "" : p.name);
+              const productCategory = normalizeText(p.category);
+              const productDosage = normalizeText(p.dosage);
+              const productForm = normalizeText(p.form);
+              const productPackSize = normalizeText(p.pack_size);
               return (
                 <article
                   key={uniqueKey}
@@ -462,37 +470,37 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                     <SmoothProductImageGallery product={p} themeColor={BRAND} isCompact={true} />
                   </div>
 
-                  <div className="p-4 sm:p-5 md:p-6 flex flex-col gap-3 sm:gap-4 md:gap-5 flex-grow">
+                  <div className="p-4 sm:p-5 md:p-6 flex flex-col gap-2.5 sm:gap-3 md:gap-4 flex-grow">
                     <div className="min-h-[28px] flex items-center">
                       <span
                         className="inline-block text-[10px] sm:text-[11px] md:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border truncate max-w-full"
                         style={{ borderColor: BRAND + "30", color: BRAND, backgroundColor: BRAND + "10" }}
-                        title={p.category}
+                        title={productCategory}
                       >
-                        {p.category}
+                        {productCategory}
                       </span>
                     </div>
 
-                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-tight line-clamp-2 min-h-[3rem] sm:min-h-[3.5rem] md:min-h-[4rem] overflow-hidden">
-                      {typeof p.name === 'object' ? p.name.en || p.name.fr || '' : p.name}
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-tight line-clamp-2 overflow-hidden">
+                      {productName}
                     </h3>
 
-                    <div className="min-h-[70px] sm:min-h-[75px] md:min-h-[80px] flex flex-wrap gap-1.5 sm:gap-2 text-[11px] sm:text-xs md:text-sm text-slate-700">
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="font-semibold mr-1.5 whitespace-nowrap">{dosageLabel}</span> 
-                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.dosage}>{p.dosage}</span>
+                    <div className="space-y-2 text-[11px] sm:text-xs md:text-sm text-slate-700">
+                      <span className="inline-flex w-full items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="font-semibold mr-1.5 shrink-0 whitespace-nowrap">{dosageLabel}</span>
+                        <span className="truncate min-w-0" title={productDosage}>{productDosage}</span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="font-semibold mr-1.5 whitespace-nowrap">{formLabel}</span> 
-                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.form}>{p.form}</span>
+                      <span className="inline-flex w-full items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="font-semibold mr-1.5 shrink-0 whitespace-nowrap">{formLabel}</span>
+                        <span className="truncate min-w-0" title={productForm}>{productForm}</span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="font-semibold mr-1.5 whitespace-nowrap">{packLabel}</span> 
-                        <span className="truncate max-w-[70px] sm:max-w-[80px] md:max-w-[100px]" title={p.pack_size}>{p.pack_size}</span>
+                      <span className="inline-flex w-full items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="font-semibold mr-1.5 shrink-0 whitespace-nowrap">{packLabel}</span>
+                        <span className="truncate min-w-0" title={productPackSize}>{productPackSize}</span>
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                    <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 sm:gap-3">
                       <Link href={`/product/${p.slug}`} className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: BRAND }}>
                         <span className="truncate whitespace-nowrap">{detailsText}</span>
                       </Link>

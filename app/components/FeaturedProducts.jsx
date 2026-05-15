@@ -5,6 +5,9 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useCallback, useMemo } from "react";
 
+const normalizeText = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
+const stripMgWord = (name) => normalizeText(name).replace(/\bmg\b/gi, "").replace(/\s+/g, " ").trim();
+
 export default function FeaturedProducts() {
   // ✅ ALL HOOKS MUST BE CALLED AT THE TOP - BEFORE ANY CONDITIONAL RETURNS
   const { t, getProductBySlug, language, products, loading } = useLanguage();
@@ -178,7 +181,7 @@ export default function FeaturedProducts() {
 
                 {/* Product Content */}
                 <div className="p-4 sm:p-5 md:p-6 lg:p-7">
-                  <div className="space-y-3 sm:space-y-4">
+                  <div className="space-y-2 sm:space-y-3">
                     <div className="inline-block">
                       <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-[#0A2A73] bg-blue-50 px-2 sm:px-2.5 md:px-3 py-1 sm:py-1.5 rounded-full">
                         {product.category || sectionText.defaultCategory}
@@ -186,8 +189,8 @@ export default function FeaturedProducts() {
                     </div>
 
                     <Link href={`/product/${product.slug}`} prefetch={false} className="block">
-                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-tight line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem] md:min-h-[3.5rem] group-hover:text-[#0A2A73] transition-colors">
-                        {product.name}
+                      <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-tight line-clamp-2 group-hover:text-[#0A2A73] transition-colors">
+                        {stripMgWord(product.name)}
                       </h3>
                     </Link>
 
