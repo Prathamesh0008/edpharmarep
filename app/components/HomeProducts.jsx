@@ -461,19 +461,19 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
               return (
                 <article
                   key={uniqueKey}
-                  className="group relative rounded-xl sm:rounded-2xl md:rounded-3xl bg-white border shadow-sm hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 overflow-hidden h-full flex flex-col"
+                  className="group relative rounded-lg sm:rounded-xl bg-white border shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden h-full flex flex-col"
                   style={{ borderColor: "rgba(10,42,115,0.15)" }}
                   onMouseEnter={() => handleProductMouseEnter(uniqueKey)}
                   onMouseLeave={handleProductMouseLeave}
                 >
-                  <div className="relative aspect-square h-44 sm:h-48 md:h-52 lg:h-56 xl:h-60 rounded-t-xl sm:rounded-t-2xl md:rounded-t-3xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden flex-shrink-0">
+                  <div className="relative aspect-square h-32 sm:h-36 md:h-40 lg:h-44 xl:h-48 rounded-t-lg sm:rounded-t-xl bg-gradient-to-b from-slate-50 to-white border-b overflow-hidden flex-shrink-0">
                     <SmoothProductImageGallery product={p} themeColor={BRAND} isCompact={true} />
                   </div>
 
                   <div className="p-4 sm:p-5 md:p-6 flex flex-col gap-2.5 sm:gap-3 md:gap-4 flex-grow">
                     <div className="min-h-[28px] flex items-center">
                       <span
-                        className="inline-block text-[10px] sm:text-[11px] md:text-xs font-semibold px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full border truncate max-w-full"
+                        className="inline-block text-[9px] sm:text-[10px] md:text-[11px] font-semibold px-2 py-0.5 sm:py-1 rounded-full border truncate max-w-full"
                         style={{ borderColor: BRAND + "30", color: BRAND, backgroundColor: BRAND + "10" }}
                         title={productCategory}
                       >
@@ -504,12 +504,12 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       <Link href={`/product/${p.slug}`} className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: BRAND }}>
                         <span className="truncate whitespace-nowrap">{detailsText}</span>
                       </Link>
-                      <Link href={`/contact?product=${encodeURIComponent(p.slug)}`} className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold border bg-white transition hover:bg-slate-50" style={{ borderColor: BRAND, color: BRAND }}>
+                      <Link href={`/contact?product=${encodeURIComponent(p.slug)}`} className="flex items-center justify-center rounded-md sm:rounded-lg px-2 py-1.5 text-[10px] sm:text-xs font-semibold border bg-white transition hover:bg-slate-50" style={{ borderColor: BRAND, color: BRAND }}>
                         <span className="truncate whitespace-nowrap">{enquireText}</span>
                       </Link>
                     </div>
 
-                    <div className="mt-1">
+                    <div>
                       <AddToCartButton product={p} themeColor={BRAND} />
                     </div>
                   </div>
