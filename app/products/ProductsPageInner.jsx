@@ -1238,7 +1238,7 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                 </div>
 
                 {/* Products List */}
-                <div className="space-y-6 sm:space-y-8">
+                <div className="grid grid-cols-1 gap-6 sm:gap-8">
                   {items.map((p, itemIndex) => {
                     const isEven = itemIndex % 2 === 0;
                     const productName = getProductName(p);

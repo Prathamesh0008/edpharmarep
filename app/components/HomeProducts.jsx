@@ -450,7 +450,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
         </div>
 
         {brandProducts.length > 0 ? (
-          <div className="mt-8 sm:mt-10 grid grid-cols-1 min-[520px]:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7">
+          <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-7">
             {brandProducts.map((p, index) => {
               const uniqueKey = `${activeBrand}-${p.slug}-${index}`;
               const productName = stripDosageFromName(typeof p.name === "object" ? p.name.en || p.name.fr || "" : p.name);
