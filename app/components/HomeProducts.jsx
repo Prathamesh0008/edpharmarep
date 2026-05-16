@@ -293,7 +293,7 @@ const AddToCartButton = ({ product, themeColor }) => {
   const DEFAULT_QUANTITY = 100;
   
   const isInCart = cartItems.some(item => item.slug === product.slug);
-  const unitPrice = getPriceByQuantity(product.slug, DEFAULT_QUANTITY);
+  const unitPrice = getPriceByQuantity(getBaseSlug(product.slug), DEFAULT_QUANTITY);
   
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -454,10 +454,10 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
             {brandProducts.map((p, index) => {
               const uniqueKey = `${activeBrand}-${p.slug}-${index}`;
               const productName = stripDosageFromName(typeof p.name === "object" ? p.name.en || p.name.fr || "" : p.name);
-              const productCategory = normalizeText(p.category);
               const productDosage = normalizeText(p.dosage);
               const productForm = normalizeText(p.form);
               const productPackSize = normalizeText(p.pack_size);
+              const unitPrice = getPriceByQuantity(getBaseSlug(p.slug), 100);
               return (
                 <article
                   key={uniqueKey}
@@ -471,16 +471,6 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                   </div>
 
                   <div className="p-4 sm:p-5 md:p-6 flex flex-col gap-2.5 sm:gap-3 md:gap-4 flex-grow">
-                    <div className="min-h-[28px] flex items-center">
-                      <span
-                        className="inline-block text-[9px] sm:text-[10px] md:text-[11px] font-semibold px-2 py-0.5 sm:py-1 rounded-full border truncate max-w-full"
-                        style={{ borderColor: BRAND + "30", color: BRAND, backgroundColor: BRAND + "10" }}
-                        title={productCategory}
-                      >
-                        {productCategory}
-                      </span>
-                    </div>
-
                     <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-tight line-clamp-2 overflow-hidden">
                       {productName}
                     </h3>
@@ -498,6 +488,14 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                         <span className="font-semibold mr-1.5 shrink-0 whitespace-nowrap">{packLabel}</span>
                         <span className="truncate min-w-0" title={productPackSize}>{productPackSize}</span>
                       </span>
+                    </div>
+
+                    <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2">
+                      <span className="text-[11px] sm:text-xs text-emerald-700 font-semibold">Price: </span>
+                      <span className="text-sm sm:text-base font-bold text-emerald-800">
+                        €{Number(unitPrice || 0).toFixed(2)}
+                      </span>
+                      <span className="text-[11px] sm:text-xs text-emerald-700 ml-1">/ unit (100+ qty)</span>
                     </div>
 
                     <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 sm:gap-3">
