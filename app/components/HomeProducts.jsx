@@ -402,9 +402,6 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   const viewBrandText = viewBrandBase.replace('{brand}', brands[0].key.replace("ED ", ""));
   const detailsText = getTrans(homeProductsTrans?.productCard?.details, "Details");
   const enquireText = getTrans(homeProductsTrans?.productCard?.enquire, "Enquire");
-  const dosageLabel = getTrans(homeProductsTrans?.productCard?.dosage, "Dosage:");
-  const formLabel = getTrans(homeProductsTrans?.productCard?.form, "Form:");
-  const packLabel = getTrans(homeProductsTrans?.productCard?.pack, "Pack:");
 
   const handleProductMouseEnter = (productId) => setHoveredProductId(productId);
   const handleProductMouseLeave = () => setHoveredProductId(null);
@@ -476,16 +473,13 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                     </h3>
 
                     <div className="space-y-2 text-[11px] sm:text-xs md:text-sm text-slate-700">
-                      <span className="inline-flex w-full items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="font-semibold mr-1.5 shrink-0 whitespace-nowrap">{dosageLabel}</span>
+                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
                         <span className="truncate min-w-0" title={productDosage}>{productDosage}</span>
                       </span>
-                      <span className="inline-flex w-full items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="font-semibold mr-1.5 shrink-0 whitespace-nowrap">{formLabel}</span>
+                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
                         <span className="truncate min-w-0" title={productForm}>{productForm}</span>
                       </span>
-                      <span className="inline-flex w-full items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="font-semibold mr-1.5 shrink-0 whitespace-nowrap">{packLabel}</span>
+                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
                         <span className="truncate min-w-0" title={productPackSize}>{productPackSize}</span>
                       </span>
                     </div>
