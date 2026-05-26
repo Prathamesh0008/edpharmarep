@@ -293,7 +293,7 @@ const AddToCartButton = ({ product, themeColor }) => {
   const DEFAULT_QUANTITY = 100;
   
   const isInCart = cartItems.some(item => item.slug === product.slug);
-  const unitPrice = getPriceByQuantity(product.slug, DEFAULT_QUANTITY);
+  const unitPrice = getPriceByQuantity(getBaseSlug(product.slug), DEFAULT_QUANTITY);
   
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -402,12 +402,12 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   const viewBrandText = viewBrandBase.replace('{brand}', brands[0].key.replace("ED ", ""));
   const detailsText = getTrans(homeProductsTrans?.productCard?.details, "Details");
   const enquireText = getTrans(homeProductsTrans?.productCard?.enquire, "Enquire");
-  const dosageLabel = getTrans(homeProductsTrans?.productCard?.dosage, "Dosage:");
-  const formLabel = getTrans(homeProductsTrans?.productCard?.form, "Form:");
-  const packLabel = getTrans(homeProductsTrans?.productCard?.pack, "Pack:");
 
   const handleProductMouseEnter = (productId) => setHoveredProductId(productId);
   const handleProductMouseLeave = () => setHoveredProductId(null);
+  const normalizeText = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
+  const stripDosageFromName = (name) =>
+    normalizeText(name).replace(/\bmg\b/gi, "").replace(/\s+/g, " ").trim();
 
   // Show loading state
   if (loading) {
@@ -447,9 +447,14 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
         </div>
 
         {brandProducts.length > 0 ? (
-          <div className="mt-5 sm:mt-6 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2.5 sm:gap-3 md:gap-4">
+          <div className="mt-8 sm:mt-10 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-7">
             {brandProducts.map((p, index) => {
               const uniqueKey = `${activeBrand}-${p.slug}-${index}`;
+              const productName = stripDosageFromName(typeof p.name === "object" ? p.name.en || p.name.fr || "" : p.name);
+              const productDosage = normalizeText(p.dosage);
+              const productForm = normalizeText(p.form);
+              const productPackSize = normalizeText(p.pack_size);
+              const unitPrice = getPriceByQuantity(getBaseSlug(p.slug), 100);
               return (
                 <article
                   key={uniqueKey}
@@ -462,38 +467,33 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                     <SmoothProductImageGallery product={p} themeColor={BRAND} isCompact={true} />
                   </div>
 
-                  <div className="p-2.5 sm:p-3 md:p-4 flex flex-col gap-2 sm:gap-2.5 flex-grow">
-                    {/* <div className="min-h-[22px] flex items-center">
-                      <span
-                        className="inline-block text-[9px] sm:text-[10px] md:text-[11px] font-semibold px-2 py-0.5 sm:py-1 rounded-full border truncate max-w-full"
-                        style={{ borderColor: BRAND + "30", color: BRAND, backgroundColor: BRAND + "10" }}
-                        title={p.category}
-                      >
-                        {p.category}
-                      </span>
-                    </div> */}
-
-                    <h3 className="text-xs sm:text-sm md:text-base font-bold text-slate-900 leading-tight line-clamp-2 min-h-[2rem] sm:min-h-[2.5rem] overflow-hidden">
-                      {typeof p.name === 'object' ? p.name.en || p.name.fr || '' : p.name}
+                  <div className="p-4 sm:p-5 md:p-6 flex flex-col gap-2.5 sm:gap-3 md:gap-4 flex-grow">
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-slate-900 leading-tight line-clamp-2 overflow-hidden">
+                      {productName}
                     </h3>
 
-                    <div className="min-h-[54px] sm:min-h-[58px] flex flex-wrap gap-1 text-[10px] sm:text-[11px] md:text-xs text-slate-700">
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 py-0.5 sm:py-1 min-h-[22px] sm:min-h-[26px]">
-                        <span className="font-semibold mr-1.5 whitespace-nowrap">{dosageLabel}</span> 
-                        <span className="truncate max-w-[56px] sm:max-w-[70px] md:max-w-[90px]" title={p.dosage}>{p.dosage}</span>
+                    <div className="space-y-2 text-[11px] sm:text-xs md:text-sm text-slate-700">
+                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="truncate min-w-0" title={productDosage}>{productDosage}</span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 py-0.5 sm:py-1 min-h-[22px] sm:min-h-[26px]">
-                        <span className="font-semibold mr-1.5 whitespace-nowrap">{formLabel}</span> 
-                        <span className="truncate max-w-[56px] sm:max-w-[70px] md:max-w-[90px]" title={p.form}>{p.form}</span>
+                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="truncate min-w-0" title={productForm}>{productForm}</span>
                       </span>
-                      <span className="inline-flex items-center rounded-full bg-slate-100 px-1.5 sm:px-2 py-0.5 sm:py-1 min-h-[22px] sm:min-h-[26px]">
-                        <span className="font-semibold mr-1.5 whitespace-nowrap">{packLabel}</span> 
-                        <span className="truncate max-w-[56px] sm:max-w-[70px] md:max-w-[90px]" title={p.pack_size}>{p.pack_size}</span>
+                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
+                        <span className="truncate min-w-0" title={productPackSize}>{productPackSize}</span>
                       </span>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
-                      <Link href={`/product/${p.slug}`} className="flex items-center justify-center rounded-md sm:rounded-lg px-2 py-1.5 text-[10px] sm:text-xs font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: BRAND }}>
+                    <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2">
+                      <span className="text-[11px] sm:text-xs text-emerald-700 font-semibold">Price: </span>
+                      <span className="text-sm sm:text-base font-bold text-emerald-800">
+                        €{Number(unitPrice || 0).toFixed(2)}
+                      </span>
+                      <span className="text-[11px] sm:text-xs text-emerald-700 ml-1">/ unit (100+ qty)</span>
+                    </div>
+
+                    <div className="grid grid-cols-1 min-[420px]:grid-cols-2 gap-2 sm:gap-3">
+                      <Link href={`/product/${p.slug}`} className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: BRAND }}>
                         <span className="truncate whitespace-nowrap">{detailsText}</span>
                       </Link>
                       <Link href={`/contact?product=${encodeURIComponent(p.slug)}`} className="flex items-center justify-center rounded-md sm:rounded-lg px-2 py-1.5 text-[10px] sm:text-xs font-semibold border bg-white transition hover:bg-slate-50" style={{ borderColor: BRAND, color: BRAND }}>
