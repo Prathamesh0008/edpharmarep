@@ -117,6 +117,7 @@ const ImageWithLoading = ({ src, alt, fill, className, sizes, priority, loading 
         src={hasError ? "/placeholder.jpg" : src}
         alt={alt}
         fill={fill}
+        quality={100}
         className={`${className} transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         sizes={sizes}
         priority={priority}
@@ -207,15 +208,14 @@ const SmoothProductImageGallery = ({ product, themeColor, isCompact = false }) =
               src={imgSrc}
               alt={`${getProductName()} - View ${index + 1}`}
               fill
-              className="object-contain p-3 sm:p-4 md:p-5 lg:p-6 transition-transform duration-200 group-hover:scale-105"
-              sizes="(max-width: 640px) 50vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+              className="object-contain p-2 sm:p-3 transition-transform duration-200 group-hover:scale-105"
+              sizes="(max-width: 640px) 50vw, (max-width: 768px) 45vw, (max-width: 1024px) 33vw, 300px"
               priority={false}
               loading="lazy"
               themeColor={themeColor}
             />
           </div>
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none"></div>
         {images.length > 1 && (
           <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-30 flex gap-1">
             {images.map((_, index) => (
