@@ -4,9 +4,6 @@ import Product from "@/app/models/Product";
 const SITE_URL = "https://www.edpharma.co";
 
 export default async function sitemap() {
-  await dbConnect();
-
-  const products = await Product.find({}, { slug: 1, updatedAt: 1 }).lean();
   const now = new Date();
   const staticRoutes = [
     "",
@@ -18,6 +15,14 @@ export default async function sitemap() {
     "/products",
     "/terms",
   ];
+  let products = [];
+
+  try {
+    await dbConnect();
+    products = await Product.find({}, { slug: 1, updatedAt: 1 }).lean();
+  } catch (error) {
+    console.error("Sitemap product URLs skipped:", error.message);
+  }
 
   return [
     ...staticRoutes.map((route) => ({
