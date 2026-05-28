@@ -286,14 +286,12 @@ function LogoStrip({ activeBrand, setActiveBrand }) {
 }
 
 /* ---------------- COMPACT ADD TO CART BUTTON ---------------- */
-const AddToCartButton = ({ product, themeColor }) => {
+const AddToCartButton = ({ product, themeColor, quantity = 100 }) => {
   const { addToCart, cartItems } = useCart();
   const [isAdded, setIsAdded] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
-  const DEFAULT_QUANTITY = 100;
-  
   const isInCart = cartItems.some(item => item.slug === product.slug);
-  const unitPrice = getPriceByQuantity(getBaseSlug(product.slug), DEFAULT_QUANTITY);
+  const unitPrice = getPriceByQuantity(getBaseSlug(product.slug), quantity);
   
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -305,7 +303,7 @@ const AddToCartButton = ({ product, themeColor }) => {
       name: typeof product.name === 'object' ? product.name.en || product.name.fr || product.name : product.name,
       image: product.image || "/placeholder.jpg",
       price: unitPrice,
-      qty: DEFAULT_QUANTITY,
+      qty: quantity,
       brand: product.brand,
       category: product.category,
     };
@@ -347,11 +345,41 @@ const AddToCartButton = ({ product, themeColor }) => {
   );
 };
 
+const QuantitySelector = ({ value, onDecrease, onIncrease, themeColor }) => {
+  return (
+    <div
+      className="flex items-center justify-between rounded-md sm:rounded-lg border bg-white overflow-hidden"
+      style={{ borderColor: themeColor }}
+    >
+      <button
+        type="button"
+        onClick={onDecrease}
+        className="px-2 sm:px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+        aria-label="Decrease quantity"
+      >
+        -
+      </button>
+      <span className="text-[10px] sm:text-xs font-semibold text-slate-700 whitespace-nowrap">
+        Qty {value}
+      </span>
+      <button
+        type="button"
+        onClick={onIncrease}
+        className="px-2 sm:px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+        aria-label="Increase quantity"
+      >
+        +
+      </button>
+    </div>
+  );
+};
+
 /* ---------------- RESPONSIVE HOME PRODUCTS ---------------- */
 export default function HomeProducts({ activeBrand, setActiveBrand }) {
   const { t, language, products, loading } = useLanguage();
   const BRAND = "#0A2A73";
   const [hoveredProductId, setHoveredProductId] = useState(null);
+  const [productQuantities, setProductQuantities] = useState({});
 
   const getTrans = (transObj, fallback = '') => {
     if (!transObj) return fallback;
@@ -408,6 +436,27 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
   const normalizeText = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
   const stripDosageFromName = (name) =>
     normalizeText(name).replace(/\bmg\b/gi, "").replace(/\s+/g, " ").trim();
+  const getCompactDosage = (dosage) => {
+    const clean = normalizeText(dosage);
+    const match = clean.match(/\d+(?:\.\d+)?\s*(?:mg|mcg|g|gm|ml)\b/i);
+    return match ? match[0].replace(/\s+/g, "") : clean;
+  };
+  const formatPackSummary = (packSize, dosage, form) => {
+    const pack = normalizeText(packSize);
+    const dose = getCompactDosage(dosage);
+    const type = normalizeText(form);
+
+    if (pack && dose) return `${pack} of ${dose}`;
+    if (pack && type && dose) return `${pack} ${type} of ${dose}`;
+    return pack || dose || type;
+  };
+  const getQuantity = (slug) => productQuantities[slug] || 100;
+  const increaseQuantity = (slug) => {
+    setProductQuantities((prev) => ({ ...prev, [slug]: getQuantity(slug) + 100 }));
+  };
+  const decreaseQuantity = (slug) => {
+    setProductQuantities((prev) => ({ ...prev, [slug]: Math.max(100, getQuantity(slug) - 100) }));
+  };
 
   // Show loading state
   if (loading) {
@@ -454,6 +503,7 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
               const productDosage = normalizeText(p.dosage);
               const productForm = normalizeText(p.form);
               const productPackSize = normalizeText(p.pack_size);
+              const productPackSummary = formatPackSummary(productPackSize, productDosage, productForm);
               const unitPrice = getPriceByQuantity(getBaseSlug(p.slug), 100);
               return (
                 <article
@@ -472,15 +522,9 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       {productName}
                     </h3>
 
-                    <div className="space-y-2 text-[11px] sm:text-xs md:text-sm text-slate-700">
+                    <div className="text-[11px] sm:text-xs md:text-sm text-slate-700">
                       <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="truncate min-w-0" title={productDosage}>{productDosage}</span>
-                      </span>
-                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="truncate min-w-0" title={productForm}>{productForm}</span>
-                      </span>
-                      <span className="inline-flex w-fit max-w-full mx-1 items-center rounded-full bg-slate-100 px-2 sm:px-3 py-1 sm:py-1.5 min-h-[28px] sm:min-h-[32px]">
-                        <span className="truncate min-w-0" title={productPackSize}>{productPackSize}</span>
+                        <span className="truncate min-w-0" title={productPackSummary}>{productPackSummary}</span>
                       </span>
                     </div>
 
@@ -496,13 +540,23 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
                       <Link href={`/product/${p.slug}`} className="flex items-center justify-center rounded-lg px-2.5 py-1.5 sm:px-3 sm:py-1.5 md:px-3.5 md:py-2 text-[11px] sm:text-xs md:text-sm font-semibold text-white transition hover:opacity-90" style={{ backgroundColor: BRAND }}>
                         <span className="truncate whitespace-nowrap">{detailsText}</span>
                       </Link>
-                      <Link href={`/contact?product=${encodeURIComponent(p.slug)}`} className="flex items-center justify-center rounded-md sm:rounded-lg px-2 py-1.5 text-[10px] sm:text-xs font-semibold border bg-white transition hover:bg-slate-50" style={{ borderColor: BRAND, color: BRAND }}>
-                        <span className="truncate whitespace-nowrap">{enquireText}</span>
-                      </Link>
+                      <QuantitySelector
+                        value={getQuantity(p.slug)}
+                        onDecrease={() => decreaseQuantity(p.slug)}
+                        onIncrease={() => increaseQuantity(p.slug)}
+                        themeColor={BRAND}
+                      />
                     </div>
 
-                    <div>
-                      <AddToCartButton product={p} themeColor={BRAND} />
+                    <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                      <Link
+                        href={`/contact?product=${encodeURIComponent(p.slug)}`}
+                        className="w-full flex items-center justify-center rounded-lg px-2 py-2 text-[10px] sm:text-xs font-semibold border bg-white transition hover:bg-slate-50"
+                        style={{ borderColor: BRAND, color: BRAND }}
+                      >
+                        <span className="truncate whitespace-nowrap">{enquireText}</span>
+                      </Link>
+                      <AddToCartButton product={p} themeColor={BRAND} quantity={getQuantity(p.slug)} />
                     </div>
                   </div>
                 </article>

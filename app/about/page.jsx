@@ -376,20 +376,10 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Add the Read More button here */}
           <div className="mt-16 text-center">
             <p className="text-slate-600 mb-8 max-w-3xl mx-auto">
               {journey.description2 || "Long-term relationships with suppliers and customers help us maintain continuity of supply, transparent communication and clear expectations on quality, packaging and documentation."}
             </p>
-            
-            <Link
-              href="/about/journey"
-              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-full"
-              style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.accent} 100%)` }}
-            >
-              {journey.readMore || "Read more"}
-              <ChevronRight className="w-4 h-4" />
-            </Link>
           </div>
         </div>
       </section>
@@ -457,16 +447,6 @@ export default function AboutPage() {
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <Link
-              href="/about/how-we-work"
-              className="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 rounded-full"
-              style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.accent} 100%)` }}
-            >
-              {howWeWork.readMore || "Read more"}
-              <ChevronRight className="w-4 h-4" />
-            </Link>
-          </div>
         </div>
       </section>
 

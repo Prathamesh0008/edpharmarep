@@ -151,15 +151,13 @@ const EnhancedOrganizationSchema = {
 
 /* ---------------- METADATA ---------------- */
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.edpharma.co"),
   title: "ED Pharma – Europe's Trusted Sexual Health Medicine Distributor & Supplier",
   description: "ED Pharma is a Europe-to-Europe distributor & supplier of high-quality erectile dysfunction and sexual health medicines. Supplying pharmacies and wholesalers with trusted pharma brands.",
   icons: {
     icon: '/favicon.svg',
   },
   manifest: '/site.webmanifest',
-  alternates: {
-    canonical: "https://www.edpharma.co/",
-  },
   verification: {
     google: "Uk8jK5E0dWbzQ3cizBgWtDWZ5B0I48zZODiasyVJu5Y",
   },

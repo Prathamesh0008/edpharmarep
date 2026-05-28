@@ -3,7 +3,7 @@ import ProductsPageInner from "./ProductsPageInner";
 
 export const metadata = {
   alternates: {
-    canonical: "/products",
+    canonical: "https://www.edpharma.co/productsss",
   },
 };
 

@@ -236,6 +236,9 @@ const normalizeText = (text) => {
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
 };
+
+// Helper to clean user-facing text (collapse repeated spaces)
+const cleanDisplayText = (text) => String(text ?? "").replace(/\s+/g, " ").trim();
 // Helper function to remove language suffix from slug (en, ar, zh, etc.)
 const getBaseSlug = (slug) => {
   if (!slug) return slug;
@@ -1241,7 +1244,10 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                 <div className="grid grid-cols-1 gap-6 sm:gap-8">
                   {items.map((p, itemIndex) => {
                     const isEven = itemIndex % 2 === 0;
-                    const productName = getProductName(p);
+                    const productName = cleanDisplayText(getProductName(p));
+                    const dosageText = cleanDisplayText(p.dosage);
+                    const compositionText = cleanDisplayText(p.composition);
+                    const packSizeText = cleanDisplayText(p.pack_size);
                     const hasPricing = hasProductPricing(p.slug);
                     const isInStock = hasPricing;
                     const priceInfo = isInStock ? getProductPrice(p.slug) : null;
@@ -1325,35 +1331,35 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                                   </div>
                                 )}
                                 <div className="space-y-2">
-                                  {p.dosage && (
+                                  {dosageText && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
                                         {productCard.dosageLabel || "Dosage:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
-                                        {p.dosage}
+                                        {dosageText}
                                       </span>
                                     </div>
                                   )}
-                                  {p.composition && (
+                                  {compositionText && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
                                         {productCard.compositionLabel ||
                                           "Composition:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
-                                        {p.composition}
+                                        {compositionText}
                                       </span>
                                     </div>
                                   )}
-                                  {p.pack_size && (
+                                  {packSizeText && (
                                     <div className="flex items-start">
                                       <span className="text-xs sm:text-sm font-medium text-gray-700 min-w-[70px] sm:min-w-[80px]">
                                         {productCard.packSizeLabel ||
                                           "Pack Size:"}
                                       </span>
                                       <span className="text-xs sm:text-sm text-gray-600 ml-2">
-                                        {p.pack_size}
+                                        {packSizeText}
                                       </span>
                                     </div>
                                   )}
@@ -1421,33 +1427,33 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                                       {productName}
                                     </h3>
                                     <div className="space-y-2 sm:space-y-3">
-                                      {p.dosage && (
+                                      {dosageText && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
                                             {productCard.dosageLabel || "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
-                                            {p.dosage}
+                                            {dosageText}
                                           </span>
                                         </div>
                                       )}
-                                      {p.composition && (
+                                      {compositionText && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
                                             {productCard.compositionLabel || "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
-                                            {p.composition}
+                                            {compositionText}
                                           </span>
                                         </div>
                                       )}
-                                      {p.pack_size && (
+                                      {packSizeText && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
                                             {productCard.packSizeLabel || "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
-                                            {p.pack_size}
+                                            {packSizeText}
                                           </span>
                                         </div>
                                       )}
@@ -1556,33 +1562,33 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                                       {productName}
                                     </h3>
                                     <div className="space-y-2 sm:space-y-3">
-                                      {p.dosage && (
+                                      {dosageText && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
                                             {productCard.dosageLabel || "Dosage:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
-                                            {p.dosage}
+                                            {dosageText}
                                           </span>
                                         </div>
                                       )}
-                                      {p.composition && (
+                                      {compositionText && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
                                             {productCard.compositionLabel || "Composition:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
-                                            {p.composition}
+                                            {compositionText}
                                           </span>
                                         </div>
                                       )}
-                                      {p.pack_size && (
+                                      {packSizeText && (
                                         <div className="flex items-center">
                                           <span className="text-sm font-medium text-gray-700 min-w-[90px] sm:min-w-[100px]">
                                             {productCard.packSizeLabel || "Pack Size:"}
                                           </span>
                                           <span className="text-sm text-gray-600 ml-2 sm:ml-3">
-                                            {p.pack_size}
+                                            {packSizeText}
                                           </span>
                                         </div>
                                       )}
