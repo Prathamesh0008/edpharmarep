@@ -564,6 +564,9 @@ const smoothScrollCSS = `
   }
 `;
 
+const PRODUCT_QTY_STEP = 50;
+const PRODUCT_MIN_QTY = 100;
+
 export default function ProductsPageInner() {
   const { addToCart } = useCart();
   const searchParams = useSearchParams();
@@ -616,6 +619,7 @@ export default function ProductsPageInner() {
   );
   const [searchInput, setSearchInput] = useState("");
   const [debouncedSearch, setDebouncedSearch] = useState("");
+  const [productQuantities, setProductQuantities] = useState({});
   const [selectedCompound, setSelectedCompound] = useState("");
   const [categoryFilter, setCategoryFilter] = useState("All");
   const [isScrolled, setIsScrolled] = useState(false);
@@ -849,9 +853,23 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
   }, [filteredProductsByCompound]);
 
   // Handle Add to Cart click - only for in-stock products
+  const getProductQty = (slug) => productQuantities[slug] || PRODUCT_MIN_QTY;
+  const increaseProductQty = (slug) => {
+    setProductQuantities((prev) => ({
+      ...prev,
+      [slug]: getProductQty(slug) + PRODUCT_QTY_STEP,
+    }));
+  };
+  const decreaseProductQty = (slug) => {
+    setProductQuantities((prev) => ({
+      ...prev,
+      [slug]: Math.max(PRODUCT_MIN_QTY, getProductQty(slug) - PRODUCT_QTY_STEP),
+    }));
+  };
+
   const handleAddToCart = (product) => {
     if (hasProductPricing(product.slug)) {
-      addToCart(product, 100, false, true);
+      addToCart(product, getProductQty(product.slug));
     }
   };
 
@@ -1371,6 +1389,32 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                                       : p.description}
                                   </p>
                                 )}
+                                {isInStock && (
+                                  <div
+                                    className="flex items-center justify-between rounded-lg border bg-white overflow-hidden"
+                                    style={{ borderColor: theme.primary }}
+                                  >
+                                    <button
+                                      type="button"
+                                      onClick={() => decreaseProductQty(p.slug)}
+                                      className="px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
+                                      aria-label="Decrease quantity"
+                                    >
+                                      -
+                                    </button>
+                                    <span className="text-xs sm:text-sm font-semibold text-slate-700 whitespace-nowrap">
+                                      Qty {getProductQty(p.slug)}
+                                    </span>
+                                    <button
+                                      type="button"
+                                      onClick={() => increaseProductQty(p.slug)}
+                                      className="px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
+                                      aria-label="Increase quantity"
+                                    >
+                                      +
+                                    </button>
+                                  </div>
+                                )}
                                 <div className="flex flex-col gap-2 sm:gap-3 pt-3 sm:pt-4">
                                   {isInStock ? (
                                     <>
@@ -1515,6 +1559,32 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                                         </div>
                                       </div>
                                     )}
+                                    {isInStock && (
+                                      <div
+                                        className="max-w-xs flex items-center justify-between rounded-lg border bg-white overflow-hidden"
+                                        style={{ borderColor: theme.primary }}
+                                      >
+                                        <button
+                                          type="button"
+                                          onClick={() => decreaseProductQty(p.slug)}
+                                          className="px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
+                                          aria-label="Decrease quantity"
+                                        >
+                                          -
+                                        </button>
+                                        <span className="text-sm font-semibold text-slate-700 whitespace-nowrap">
+                                          Qty {getProductQty(p.slug)}
+                                        </span>
+                                        <button
+                                          type="button"
+                                          onClick={() => increaseProductQty(p.slug)}
+                                          className="px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
+                                          aria-label="Increase quantity"
+                                        >
+                                          +
+                                        </button>
+                                      </div>
+                                    )}
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">
                                       {isInStock ? (
                                         <>
@@ -1648,6 +1718,32 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
                                             Volume discounts
                                           </span>
                                         </div>
+                                      </div>
+                                    )}
+                                    {isInStock && (
+                                      <div
+                                        className="max-w-xs flex items-center justify-between rounded-lg border bg-white overflow-hidden"
+                                        style={{ borderColor: theme.primary }}
+                                      >
+                                        <button
+                                          type="button"
+                                          onClick={() => decreaseProductQty(p.slug)}
+                                          className="px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
+                                          aria-label="Decrease quantity"
+                                        >
+                                          -
+                                        </button>
+                                        <span className="text-sm font-semibold text-slate-700 whitespace-nowrap">
+                                          Qty {getProductQty(p.slug)}
+                                        </span>
+                                        <button
+                                          type="button"
+                                          onClick={() => increaseProductQty(p.slug)}
+                                          className="px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
+                                          aria-label="Increase quantity"
+                                        >
+                                          +
+                                        </button>
                                       </div>
                                     )}
                                     <div className="flex gap-3 sm:gap-4 pt-3 sm:pt-4">

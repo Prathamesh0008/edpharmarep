@@ -354,7 +354,7 @@ const QuantitySelector = ({ value, onDecrease, onIncrease, themeColor }) => {
       <button
         type="button"
         onClick={onDecrease}
-        className="px-2 sm:px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+        className="px-2 sm:px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
         aria-label="Decrease quantity"
       >
         -
@@ -365,7 +365,7 @@ const QuantitySelector = ({ value, onDecrease, onIncrease, themeColor }) => {
       <button
         type="button"
         onClick={onIncrease}
-        className="px-2 sm:px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+        className="px-2 sm:px-3 py-1.5 text-sm font-semibold text-slate-700 hover:bg-slate-50 cursor-pointer"
         aria-label="Increase quantity"
       >
         +
@@ -451,11 +451,13 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
     return pack || dose || type;
   };
   const getQuantity = (slug) => productQuantities[slug] || 100;
+  const QUANTITY_STEP = 50;
+  const MIN_QUANTITY = 100;
   const increaseQuantity = (slug) => {
-    setProductQuantities((prev) => ({ ...prev, [slug]: getQuantity(slug) + 100 }));
+    setProductQuantities((prev) => ({ ...prev, [slug]: getQuantity(slug) + QUANTITY_STEP }));
   };
   const decreaseQuantity = (slug) => {
-    setProductQuantities((prev) => ({ ...prev, [slug]: Math.max(100, getQuantity(slug) - 100) }));
+    setProductQuantities((prev) => ({ ...prev, [slug]: Math.max(MIN_QUANTITY, getQuantity(slug) - QUANTITY_STEP) }));
   };
 
   // Show loading state
