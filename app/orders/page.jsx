@@ -231,7 +231,7 @@ export default function OrdersPage() {
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder={ordersTranslations.search.placeholder}
-                className="w-full pl-10 pr-4 py-2 bg-transparent outline-none text-sm text-slate-700 placeholder-slate-400 focus:placeholder-slate-500 transition-colors"
+                className="w-full pl-10 pr-4 py-2 bg-white rounded-lg outline-none text-sm text-slate-700 placeholder-slate-400 focus:placeholder-slate-500 transition-colors"
               />
             </div>
           </div>
@@ -242,7 +242,7 @@ export default function OrdersPage() {
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 bg-transparent outline-none text-sm text-slate-700"
+                className="w-full pl-10 pr-4 py-2 bg-white rounded-lg outline-none text-sm text-slate-700"
               >
                 {statusOptions.map((option) => (
                   <option key={option.key} value={option.key}>

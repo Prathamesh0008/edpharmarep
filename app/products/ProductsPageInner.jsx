@@ -1047,11 +1047,11 @@ const productMatchesIdentifier = useCallback((product, identifier) => {
 
         {/* Hero Section */}
         <div className="mb-8 sm:mb-12">
-          <div className="text-center mb-6 sm:mb-10">
+          <div className="text-center mb-6 sm:mb-10 bg-white/88 border border-white/80 shadow-sm backdrop-blur-md rounded-xl sm:rounded-2xl px-4 py-5 sm:px-6 sm:py-7">
             <h1 className="text-3xl xs:text-4xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2 sm:mb-4">
               <span
-                className="bg-clip-text text-transparent drop-shadow-sm"
-                style={{ backgroundImage: theme.gradient }}
+                className="drop-shadow-sm"
+                style={{ color: theme.primary }}
               >
                 {theme.name}
               </span>{" "}

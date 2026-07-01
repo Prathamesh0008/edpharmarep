@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import Product from "@/app/models/Product";
-import { optimizeCloudinaryImage, optimizeCloudinaryImages } from "@/lib/cloudinaryImage";
+import { getProductImagePath, getProductImagePaths } from "@/lib/productImage";
 
 export async function GET(request) {
   try {
@@ -74,8 +74,8 @@ export async function GET(request) {
         composition: product.composition || "",
         form: product.form || "",
         pack_size: product.pack_size || "",
-        image: optimizeCloudinaryImage(product.image || "/placeholder.jpg", 1000),
-        additionalImages: optimizeCloudinaryImages(product.additionalImages || [], 1000),
+        image: getProductImagePath(product.image || "/placeholder.jpg"),
+        additionalImages: getProductImagePaths(product.additionalImages || []),
         description: localized.description || translations.en?.description || "",
         metaTitle: localized.metaTitle || translations.en?.metaTitle || "",
         metaDescription: localized.metaDescription || translations.en?.metaDescription || "",

@@ -482,14 +482,14 @@ export default function HomeProducts({ activeBrand, setActiveBrand }) {
         <LogoStrip activeBrand={activeBrand} setActiveBrand={setActiveBrand} />
 
         <div className="mt-10 sm:mt-12 relative">
-          <div className="absolute -inset-3 sm:-inset-4 md:-inset-6 bg-gradient-to-r from-blue-50/20 to-transparent backdrop-blur-xs sm:backdrop-blur-sm rounded-xl sm:rounded-2xl -z-10"></div>
+          <div className="absolute -inset-3 sm:-inset-4 md:-inset-6 bg-gradient-to-r from-blue-100/60 via-white/40 to-slate-100/40 backdrop-blur-sm rounded-xl sm:rounded-2xl -z-10"></div>
           
-          <div className="relative flex flex-col gap-4 sm:gap-5 md:gap-6 sm:flex-row sm:items-end sm:justify-between p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl">
+          <div className="relative flex flex-col gap-4 sm:gap-5 md:gap-6 sm:flex-row sm:items-end sm:justify-between p-4 sm:p-5 md:p-6 rounded-xl sm:rounded-2xl bg-white/88 border border-slate-200/80 shadow-sm backdrop-blur-md">
             <div className="flex-1">
-              <h2 className="text-xl sm:text-2xl md:text-3xl text-slate-900 leading-tight min-h-[32px] sm:min-h-[38px] md:min-h-[44px] flex items-center">
+              <h2 className="text-xl sm:text-2xl md:text-3xl text-slate-900 font-semibold leading-tight min-h-[32px] sm:min-h-[38px] md:min-h-[44px] flex items-center [text-shadow:0_1px_1px_rgba(255,255,255,0.7)]">
                 {activeBrand.replace("ED ", "")}
               </h2>
-              <p className="mt-1 text-xs sm:text-sm text-slate-600 min-h-[18px] sm:min-h-[20px] flex items-center">
+              <p className="mt-1 text-xs sm:text-sm text-slate-700 font-medium min-h-[18px] sm:min-h-[20px] flex items-center">
                 {showingAllText}
               </p>
             </div>

@@ -175,16 +175,6 @@ export default function AboutPage() {
           <div className={`space-y-8 transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}>
-            <div 
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full"
-              style={{ background: `linear-gradient(135deg, ${colors.primary} 0%, ${colors.accent} 100%)` }}
-            >
-              <div className="w-2 h-2 bg-white rounded-full"></div>
-              <span className="text-xs font-semibold text-white tracking-widest">
-                {hero.tag || "ABOUT US"}
-              </span>
-            </div>
-            
             <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
               <span 
                 className="bg-clip-text text-transparent"

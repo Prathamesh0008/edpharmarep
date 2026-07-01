@@ -1,6 +1,7 @@
 import ProductClient from "./ProductClient";
 import dbConnect from "@/lib/db";
 import Product from "@/app/models/Product";
+import { getProductImagePath, toAbsoluteProductImageUrl } from "@/lib/productImage";
 
 function formatProduct(product) {
   if (!product) return null;
@@ -11,7 +12,7 @@ function formatProduct(product) {
   return {
     slug: product.slug || "",
     name: localized.name || product.name || product.slug || "",
-    image: product.image || "/placeholder.jpg",
+    image: getProductImagePath(product.image || "/placeholder.jpg"),
     price: product.price || "",
     metaTitle: localized.metaTitle || "",
     metaDescription: localized.metaDescription || "",
@@ -27,9 +28,7 @@ async function getProductBySlug(slug) {
 }
 
 function generateProductSchema(product) {
-  const imageUrl = product.image?.startsWith("http")
-    ? product.image
-    : `https://www.edpharma.co${product.image}`;
+  const imageUrl = toAbsoluteProductImageUrl(product.image);
 
   return {
     "@context": "https://schema.org/",
@@ -108,6 +107,8 @@ export async function generateMetadata({ params }) {
       ? description.slice(0, 157) + "..." 
       : description;
 
+    const imageUrl = toAbsoluteProductImageUrl(product.image);
+
     return {
       title: title, // Your metaTitle already includes "| ED Pharma"
       description: truncatedDescription,
@@ -127,9 +128,9 @@ export async function generateMetadata({ params }) {
         description: truncatedDescription,
         type: 'website',
         url: `https://www.edpharma.co/product/${slug}`,
-        images: product.image ? [
+        images: imageUrl ? [
           {
-            url: product.image,
+            url: imageUrl,
             width: 800,
             height: 600,
             alt: product.name,
@@ -140,7 +141,7 @@ export async function generateMetadata({ params }) {
         card: 'summary_large_image',
         title: title,
         description: truncatedDescription,
-        images: product.image ? [product.image] : [],
+        images: imageUrl ? [imageUrl] : [],
       },
       alternates: {
         canonical: `https://www.edpharma.co/product/${slug}`,

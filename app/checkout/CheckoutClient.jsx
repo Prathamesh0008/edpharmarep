@@ -1133,7 +1133,7 @@ function Input({ icon, className = "", ...props }) {
       {icon && <span className="text-gray-400 shrink-0">{icon}</span>}
       <input
         {...props}
-        className="w-full bg-transparent outline-none text-sm text-slate-900 placeholder:text-slate-400"
+        className="w-full bg-white outline-none text-sm text-slate-900 placeholder:text-slate-400 rounded-md px-1"
       />
     </div>
   );
